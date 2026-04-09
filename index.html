@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宇宙歷史時間軸 · Cosmic Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+TC:wght@300;400;500&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #050810;
+  --bg2: #0a0e1a;
+  --text: #ddd8c8;
+  --text-muted: rgba(221,216,200,0.45);
+  --axis-color: rgba(255,255,255,0.15);
+  --cosmos:   #a78bfa;
+  --earth:    #60a5fa;
+  --life:     #34d399;
+  --human:    #fbbf24;
+  --east:     #f87171;
+  --west:     #c084fc;
+  --cross:    #e2e8f0;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif TC', serif;
+  overflow: hidden;
+  height: 100vh;
+  cursor: crosshair;
+  user-select: none;
+}
+
+/* ─── STARS ─── */
+#stars-canvas {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+}
+
+/* ─── HEADER ─── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  padding: 16px 28px 12px;
+  background: linear-gradient(to bottom, rgba(5,8,16,0.97) 60%, transparent);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+#header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.22em; color: var(--text);
+  white-space: nowrap;
+}
+#header p {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+/* ─── AXIS LEGEND ─── */
+#legend {
+  position: fixed; top: 54px; left: 0; right: 0; z-index: 49;
+  display: flex; align-items: center; justify-content: center; gap: 18px;
+  padding: 6px 24px;
+  background: linear-gradient(to bottom, rgba(5,8,16,0.6) 0%, transparent);
+}
+.leg {
+  display: flex; align-items: center; gap: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em;
+  color: var(--text-muted); opacity: 0.85;
+  cursor: pointer; transition: opacity .2s;
+}
+.leg:hover { opacity: 1; }
+.leg-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── MAIN CANVAS ─── */
+#timeline-canvas {
+  position: fixed; inset: 0; z-index: 10;
+  display: block;
+}
+
+/* ─── TIME DISPLAY ─── */
+#time-display {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 50;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 0.15em;
+  color: var(--text-muted);
+  background: rgba(5,8,16,0.75);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 5px 16px; border-radius: 20px;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+/* ─── ZOOM HINT ─── */
+#hint {
+  position: fixed; bottom: 20px; right: 24px; z-index: 50;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em;
+  color: rgba(221,216,200,0.2);
+  line-height: 1.9; text-align: right;
+  pointer-events: none;
+}
+
+/* ─── ZOOM BAR ─── */
+#zoom-indicator {
+  position: fixed; bottom: 20px; left: 24px; z-index: 50;
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; color: rgba(221,216,200,0.3); letter-spacing: 0.1em;
+}
+.zoom-track {
+  width: 72px; height: 2px;
+  background: rgba(255,255,255,0.08); border-radius: 1px;
+}
+.zoom-fill {
+  height: 100%; border-radius: 1px;
+  background: rgba(255,255,255,0.3);
+  transition: width 0.15s;
+}
+
+/* ─── TOOLTIP ─── */
+#tooltip {
+  position: fixed; z-index: 200;
+  pointer-events: none;
+  opacity: 0; transition: opacity .18s;
+  max-width: 220px;
+  transform: translateY(-4px);
+}
+#tooltip.show { opacity: 1; transform: translateY(0); }
+.tt-box {
+  background: rgba(5,8,16,0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 10px 13px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+.tt-era {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.15em;
+  text-transform: uppercase; margin-bottom: 5px;
+}
+.tt-zh { font-size: 14px; font-weight: 500; margin-bottom: 1px; line-height: 1.3; }
+.tt-en { font-size: 9px; font-style: italic; color: var(--text-muted); margin-bottom: 6px; font-family: 'Space Mono', monospace; }
+.tt-time { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--text-muted); }
+
+/* ─── POPUP ─── */
+#popup-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(5,8,16,0.7);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s;
+}
+#popup-overlay.show { opacity: 1; pointer-events: all; }
+#popup {
+  background: rgba(10,14,26,0.98);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  width: min(560px, 92vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.8);
+  transform: translateY(12px) scale(0.97);
+  transition: transform .25s;
+}
+#popup-overlay.show #popup { transform: translateY(0) scale(1); }
+
+.popup-img {
+  width: 100%; height: 220px; object-fit: cover;
+  border-radius: 13px 13px 0 0;
+  background: #0a0e1a;
+  display: block;
+}
+.popup-img-placeholder {
+  width: 100%; height: 220px;
+  border-radius: 13px 13px 0 0;
+  background: linear-gradient(135deg, #0a0e1a 0%, #131929 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.popup-img-placeholder svg { opacity: 0.15; }
+
+.popup-body { padding: 20px 24px 24px; }
+.popup-axis-tag {
+  display: inline-block; margin-bottom: 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 12px;
+  border: 1px solid;
+}
+.popup-title-zh {
+  font-size: 22px; font-weight: 500;
+  line-height: 1.3; margin-bottom: 3px;
+}
+.popup-title-en {
+  font-size: 12px; font-style: italic;
+  color: var(--text-muted);
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 14px;
+}
+.popup-time {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; color: var(--text-muted);
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.popup-desc-zh { font-size: 14px; line-height: 1.9; margin-bottom: 8px; }
+.popup-desc-en { font-size: 12px; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; }
+.popup-links {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.popup-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 14px; border-radius: 20px;
+  text-decoration: none; cursor: pointer;
+  transition: all .2s; background: transparent;
+}
+.popup-link:hover {
+  color: var(--text); border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+}
+.popup-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 30px; height: 30px;
+  background: rgba(5,8,16,0.8); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: 14px;
+  transition: all .2s; z-index: 10;
+  font-family: monospace;
+}
+.popup-close:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
+#popup-overlay { position: fixed; }
+#popup { position: relative; }
+</style>
+</head>
+<body>
+
+<canvas id="stars-canvas"></canvas>
+
+<div id="header">
+  <h1>COSMIC TIMELINE · 宇宙歷史時間軸</h1>
+  <p>138億年 · 13.8 BILLION YEARS</p>
+</div>
+
+<div id="legend">
+  <div class="leg" data-axis="cosmos">
+    <div class="leg-dot" style="background:var(--cosmos)"></div>宇宙 Cosmos
+  </div>
+  <div class="leg" data-axis="earth">
+    <div class="leg-dot" style="background:var(--earth)"></div>地球 Earth
+  </div>
+  <div class="leg" data-axis="life">
+    <div class="leg-dot" style="background:var(--life)"></div>生命 Life
+  </div>
+  <div class="leg" data-axis="human-evo">
+    <div class="leg-dot" style="background:var(--human)"></div>人類 Human
+  </div>
+  <div class="leg" data-axis="east">
+    <div class="leg-dot" style="background:var(--east)"></div>東方 East
+  </div>
+  <div class="leg" data-axis="west">
+    <div class="leg-dot" style="background:var(--west)"></div>西方 West
+  </div>
+  <div class="leg" data-axis="cross">
+    <div class="leg-dot" style="background:var(--cross)"></div>跨文明 Cross
+  </div>
+</div>
+
+<canvas id="timeline-canvas"></canvas>
+
+<div id="time-display">— —</div>
+<div id="hint">
+  滾輪 縮放<br>
+  拖曳 平移<br>
+  點擊 詳情
+</div>
+<div id="zoom-indicator">
+  ZOOM
+  <div class="zoom-track"><div class="zoom-fill" id="zoom-fill" style="width:20%"></div></div>
+</div>
+
+<div id="tooltip">
+  <div class="tt-box">
+    <div class="tt-era" id="tt-era"></div>
+    <div class="tt-zh" id="tt-zh"></div>
+    <div class="tt-en" id="tt-en"></div>
+    <div class="tt-time" id="tt-time"></div>
+  </div>
+</div>
+
+<div id="popup-overlay">
+  <div id="popup">
+    <button class="popup-close" id="popup-close">✕</button>
+    <div id="popup-img-wrap"></div>
+    <div class="popup-body">
+      <div class="popup-axis-tag" id="popup-tag"></div>
+      <div class="popup-title-zh" id="popup-zh"></div>
+      <div class="popup-title-en" id="popup-en"></div>
+      <div class="popup-time" id="popup-time"></div>
+      <div class="popup-desc-zh" id="popup-desc-zh"></div>
+      <div class="popup-desc-en" id="popup-desc-en"></div>
+      <div class="popup-links" id="popup-links"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════
+//  CONSTANTS & CONFIG
+// ════════════════════════════════════════════
+const TOTAL_YEARS = 13_800_000_000;
+const NOW = 2026;
+const TIMELINE_START = -TOTAL_YEARS; // -13.8B
+const TIMELINE_END   =  NOW;
+
+const AXIS_COLORS = {
+  cosmos:    '#a78bfa',
+  earth:     '#60a5fa',
+  life:      '#34d399',
+  'human-evo':'#fbbf24',
+  east:      '#f87171',
+  west:      '#c084fc',
+  cross:     '#e2e8f0'
+};
+
+const AXIS_LABELS = {
+  cosmos:    '宇宙',
+  earth:     '地球',
+  life:      '生命',
+  'human-evo':'人類演化',
+  east:      '東方文明',
+  west:      '西方文明',
+  cross:     '跨文明'
+};
+
+// Track vertical positions (0–1, mapped to canvas height band)
+const AXIS_Y = {
+  cosmos:    0.22,
+  earth:     0.35,
+  life:      0.48,
+  'human-evo':0.57,
+  east:      0.67,
+  cross:     0.76,
+  west:      0.85
+};
+
+// ════════════════════════════════════════════
+//  STATE
+// ════════════════════════════════════════════
+let events = [];
+let viewStart = TIMELINE_START; // year value at left edge
+let viewEnd   = TIMELINE_END;   // year value at right edge
+let isDragging = false;
+let dragStartX = 0;
+let dragViewStart = 0;
+let hoveredEvent = null;
+let canvasW = 0, canvasH = 0;
+let dpr = window.devicePixelRatio || 1;
+let hiddenAxes = new Set();
+let lastFrameTime = 0;
+
+// ════════════════════════════════════════════
+//  CANVAS SETUP
+// ════════════════════════════════════════════
+const starsCanvas = document.getElementById('stars-canvas');
+const starsCtx = starsCanvas.getContext('2d');
+const canvas = document.getElementById('timeline-canvas');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  canvasW = window.innerWidth;
+  canvasH = window.innerHeight;
+  canvas.width  = canvasW * dpr;
+  canvas.height = canvasH * dpr;
+  canvas.style.width  = canvasW + 'px';
+  canvas.style.height = canvasH + 'px';
+  ctx.scale(dpr, dpr);
+  starsCanvas.width  = canvasW * dpr;
+  starsCanvas.height = canvasH * dpr;
+  starsCanvas.style.width  = canvasW + 'px';
+  starsCanvas.style.height = canvasH + 'px';
+  starsCtx.scale(dpr, dpr);
+  drawStars();
+}
+
+// ════════════════════════════════════════════
+//  STARS BACKGROUND
+// ════════════════════════════════════════════
+function drawStars() {
+  starsCtx.clearRect(0, 0, canvasW, canvasH);
+  const rng = mulberry32(42);
+  for (let i = 0; i < 320; i++) {
+    const x = rng() * canvasW;
+    const y = rng() * canvasH;
+    const r = rng() * 1.1 + 0.2;
+    const a = rng() * 0.5 + 0.1;
+    starsCtx.beginPath();
+    starsCtx.arc(x, y, r, 0, Math.PI * 2);
+    starsCtx.fillStyle = `rgba(255,255,255,${a})`;
+    starsCtx.fill();
+  }
+}
+function mulberry32(seed) {
+  return function() {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// ════════════════════════════════════════════
+//  COORDINATE HELPERS
+// ════════════════════════════════════════════
+function yearToX(year) {
+  return ((year - viewStart) / (viewEnd - viewStart)) * canvasW;
+}
+function xToYear(x) {
+  return viewStart + (x / canvasW) * (viewEnd - viewStart);
+}
+function axisY(axisId, subtrack = 0) {
+  const base = (AXIS_Y[axisId] || 0.5) * canvasH;
+  const spread = 18;
+  return base + subtrack * spread;
+}
+
+// ════════════════════════════════════════════
+//  ZOOM LEVEL → event visibility
+// ════════════════════════════════════════════
+function currentZoom() {
+  // 0 = fully zoomed out (138B yrs), 1 = max zoom
+  const span = viewEnd - viewStart;
+  const maxSpan = TOTAL_YEARS + NOW;
+  return 1 - Math.log(span) / Math.log(maxSpan);
+}
+function eventVisible(ev) {
+  if (hiddenAxes.has(ev.axis)) return false;
+  const zoom = currentZoom();
+  if (ev.level === 1) return true;
+  if (ev.level === 2) return zoom > 0.25;
+  if (ev.level === 3) return zoom > 0.55;
+  return zoom > 0.7;
+}
+function dotRadius(ev) {
+  const zoom = currentZoom();
+  const base = ev.level === 1 ? 6 : ev.level === 2 ? 4.5 : 3;
+  return base + zoom * 2;
+}
+
+// ════════════════════════════════════════════
+//  FORMAT YEAR
+// ════════════════════════════════════════════
+function formatYear(y) {
+  const abs = Math.abs(y);
+  if (abs >= 1_000_000_000) return (y < 0 ? '' : '+') + (abs / 1e9).toFixed(1) + ' 億年前';
+  if (abs >= 1_000_000)    return (y < 0 ? '' : '+') + (abs / 1e6).toFixed(1) + ' 百萬年前';
+  if (abs >= 1_000)        return (y < 0 ? '' : '+') + Math.abs(y).toFixed(0) + ' 年前';
+  if (y < 0)               return `西元前 ${Math.abs(y)} 年`;
+  if (y === 0)             return '西元元年';
+  return `西元 ${y} 年`;
+}
+function formatYearShort(y) {
+  const abs = Math.abs(y);
+  if (abs >= 1_000_000_000) return (abs / 1e9).toFixed(1) + 'B yr';
+  if (abs >= 1_000_000)    return (abs / 1e6).toFixed(0) + 'M yr';
+  if (abs >= 1_000)        return (abs / 1e3).toFixed(0) + 'K yr';
+  if (y < 0)               return `${Math.abs(y)} BC`;
+  return `AD ${y}`;
+}
+
+// ════════════════════════════════════════════
+//  DRAW ERA BANDS
+// ════════════════════════════════════════════
+const ERA_BANDS = [
+  { start: -13800000000, end: -4600000000, color: 'rgba(120,60,200,0.04)', label: 'Cosmic Dawn' },
+  { start: -4600000000,  end:  -541000000, color: 'rgba(40,90,180,0.04)',  label: 'Earth & Life' },
+  { start:  -541000000,  end:   -2600000,  color: 'rgba(30,140,80,0.04)',  label: 'Complex Life' },
+  { start:   -2600000,   end:    -10000,   color: 'rgba(180,130,20,0.04)', label: 'Human Evolution' },
+  { start:    -10000,    end:     -500,    color: 'rgba(180,60,20,0.07)',  label: '古代 Ancient' },
+  { start:     -500,     end:      500,    color: 'rgba(160,60,60,0.07)',  label: '古典 Classical' },
+  { start:      500,     end:     1400,    color: 'rgba(40,60,120,0.07)',  label: '中世紀 Medieval' },
+  { start:     1400,     end:     1800,    color: 'rgba(80,40,120,0.07)',  label: '近代 Early Modern' },
+  { start:     1800,     end:     1950,    color: 'rgba(20,80,100,0.09)',  label: '工業時代 Industrial' },
+  { start:     1950,     end:     2026,    color: 'rgba(20,100,120,0.11)', label: '當代 Contemporary' },
+];
+
+function drawEraBands() {
+  const zoom = currentZoom();
+  const bandOpacity = Math.min(1, zoom * 2.5);
+  ERA_BANDS.forEach(band => {
+    const x1 = yearToX(band.start);
+    const x2 = yearToX(band.end);
+    if (x2 < -10 || x1 > canvasW + 10) return;
+    const rx1 = Math.max(0, x1);
+    const rx2 = Math.min(canvasW, x2);
+    const w = rx2 - rx1;
+    if (w < 1) return;
+    ctx.fillStyle = band.color;
+    ctx.globalAlpha = bandOpacity;
+    ctx.fillRect(rx1, 80, w, canvasH - 80);
+    ctx.globalAlpha = 1;
+
+    // Band label at higher zoom
+    if (zoom > 0.4 && w > 80) {
+      ctx.save();
+      ctx.font = '9px "Space Mono", monospace';
+      ctx.fillStyle = `rgba(221,216,200,${0.2 * bandOpacity})`;
+      ctx.textAlign = 'center';
+      ctx.fillText(band.label.toUpperCase(), rx1 + w / 2, 90);
+      ctx.restore();
+    }
+  });
+}
+
+// ════════════════════════════════════════════
+//  DRAW AXIS LINES
+// ════════════════════════════════════════════
+function drawAxisLines() {
+  Object.entries(AXIS_Y).forEach(([id, yFrac]) => {
+    if (hiddenAxes.has(id)) return;
+    const y = yFrac * canvasH;
+    const color = AXIS_COLORS[id];
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(canvasW, y);
+    ctx.strokeStyle = color + '22';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 8]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Axis label on left
+    ctx.font = '10px "Space Mono", monospace';
+    ctx.fillStyle = color + '66';
+    ctx.textAlign = 'left';
+    ctx.fillText(AXIS_LABELS[id], 8, y - 5);
+  });
+}
+
+// ════════════════════════════════════════════
+//  DRAW TIME RULER
+// ════════════════════════════════════════════
+function drawRuler() {
+  const span = viewEnd - viewStart;
+  const targets = [
+    1e10, 5e9, 2e9, 1e9, 5e8, 2e8, 1e8,
+    5e7, 2e7, 1e7, 5e6, 1e6, 5e5, 1e5,
+    1e4, 5e3, 1e3, 500, 200, 100, 50, 10, 5, 1
+  ];
+  let step = targets.find(t => span / t < 12) || 1e10;
+
+  const startTick = Math.ceil(viewStart / step) * step;
+  const rulerY = canvasH - 38;
+
+  ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+  ctx.lineWidth = 1;
+  ctx.font = '9px "Space Mono", monospace';
+  ctx.fillStyle = 'rgba(221,216,200,0.3)';
+  ctx.textAlign = 'center';
+
+  for (let y = startTick; y <= viewEnd; y += step) {
+    const x = yearToX(y);
+    if (x < 0 || x > canvasW) continue;
+    ctx.beginPath();
+    ctx.moveTo(x, rulerY);
+    ctx.lineTo(x, rulerY + 8);
+    ctx.stroke();
+    ctx.fillText(formatYearShort(y), x, rulerY + 20);
+  }
+
+  // Ruler base line
+  ctx.beginPath();
+  ctx.moveTo(0, rulerY);
+  ctx.lineTo(canvasW, rulerY);
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+  ctx.stroke();
+}
+
+// ════════════════════════════════════════════
+//  DRAW BRANCH LINES (parallel events)
+// ════════════════════════════════════════════
+function drawBranchLines(eventsInView) {
+  // Group events with same parallel_group
+  const groups = {};
+  eventsInView.forEach(ev => {
+    if (ev.parallel_group) {
+      if (!groups[ev.parallel_group]) groups[ev.parallel_group] = [];
+      groups[ev.parallel_group].push(ev);
+    }
+  });
+
+  Object.values(groups).forEach(group => {
+    if (group.length < 2) return;
+    const sorted = group.sort((a, b) => a.year - b.year);
+    const startX = yearToX(sorted[0].year);
+    const endX   = yearToX(sorted[sorted.length - 1].year);
+    const baseY  = axisY(sorted[0].axis, sorted[0].sub_track || 0);
+
+    ctx.save();
+    ctx.strokeStyle = (AXIS_COLORS[sorted[0].axis] || '#fff') + '30';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 6]);
+    ctx.beginPath();
+    ctx.moveTo(startX, baseY);
+    ctx.lineTo(endX, baseY);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
+  });
+}
+
+// ════════════════════════════════════════════
+//  DRAW EVENTS
+// ════════════════════════════════════════════
+function drawEvents(eventsInView) {
+  const zoom = currentZoom();
+
+  eventsInView.forEach(ev => {
+    if (!eventVisible(ev)) return;
+    const x = yearToX(ev.year);
+    if (x < -20 || x > canvasW + 20) return;
+
+    const st = ev.sub_track || ev.track || 0;
+    const y = axisY(ev.axis, st);
+    const r = dotRadius(ev);
+    const color = AXIS_COLORS[ev.axis] || '#fff';
+    const isHovered = hoveredEvent && hoveredEvent.id === ev.id;
+
+    // Vertical connector line to ruler
+    if (ev.level === 1 && zoom > 0.1) {
+      const rulerY = canvasH - 38;
+      ctx.beginPath();
+      ctx.moveTo(x, y + r);
+      ctx.lineTo(x, rulerY);
+      ctx.strokeStyle = color + '18';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 5]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Glow for hovered / level 1
+    if (isHovered || ev.level === 1) {
+      ctx.beginPath();
+      ctx.arc(x, y, r + (isHovered ? 8 : 4), 0, Math.PI * 2);
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, r + (isHovered ? 8 : 4));
+      grad.addColorStop(0, color + '40');
+      grad.addColorStop(1, color + '00');
+      ctx.fillStyle = grad;
+      ctx.fill();
+    }
+
+    // Dot
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = isHovered ? color : color + 'cc';
+    ctx.fill();
+
+    if (ev.level === 1) {
+      ctx.beginPath();
+      ctx.arc(x, y, r + 2, 0, Math.PI * 2);
+      ctx.strokeStyle = color + '55';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Label — show at higher zoom or for level 1
+    const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.35) || (ev.level === 3 && zoom > 0.6);
+    if (showLabel && !isHovered) {
+      const labelY = y - r - 7;
+      ctx.font = ev.level === 1
+        ? '500 11px "Noto Serif TC", serif'
+        : '10px "Noto Serif TC", serif';
+      ctx.textAlign = 'center';
+      ctx.fillStyle = isHovered ? color : `rgba(221,216,200,${ev.level === 1 ? 0.85 : 0.55})`;
+      ctx.fillText(ev.zh, x, labelY);
+    }
+  });
+}
+
+// ════════════════════════════════════════════
+//  MAIN DRAW
+// ════════════════════════════════════════════
+function draw() {
+  ctx.clearRect(0, 0, canvasW, canvasH);
+
+  drawEraBands();
+  drawAxisLines();
+
+  const vis = events.filter(ev => {
+    const x = yearToX(ev.year);
+    return x > -100 && x < canvasW + 100;
+  });
+
+  drawBranchLines(vis);
+  drawEvents(vis);
+  drawRuler();
+
+  // Zoom fill
+  const z = Math.min(100, Math.max(5, currentZoom() * 100));
+  document.getElementById('zoom-fill').style.width = z + '%';
+
+  // Time display
+  const midYear = (viewStart + viewEnd) / 2;
+  document.getElementById('time-display').textContent = formatYear(midYear);
+}
+
+// ════════════════════════════════════════════
+//  WHEEL ZOOM
+// ════════════════════════════════════════════
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const mouseX = e.clientX;
+  const mouseYear = xToYear(mouseX);
+  const span = viewEnd - viewStart;
+  const factor = e.deltaY > 0 ? 1.12 : 0.89;
+  let newSpan = span * factor;
+  // Clamp
+  const minSpan = 2;
+  const maxSpan = TOTAL_YEARS + NOW + 1e9;
+  newSpan = Math.min(Math.max(newSpan, minSpan), maxSpan);
+  // Keep mouse position fixed
+  const ratio = (mouseYear - viewStart) / span;
+  viewStart = mouseYear - ratio * newSpan;
+  viewEnd   = viewStart + newSpan;
+  draw();
+}, { passive: false });
+
+// ════════════════════════════════════════════
+//  DRAG PAN
+// ════════════════════════════════════════════
+canvas.addEventListener('pointerdown', e => {
+  if (e.button !== 0) return;
+  isDragging = true;
+  dragStartX = e.clientX;
+  dragViewStart = viewStart;
+  canvas.setPointerCapture(e.pointerId);
+  canvas.style.cursor = 'grabbing';
+});
+
+canvas.addEventListener('pointermove', e => {
+  if (isDragging) {
+    const dx = e.clientX - dragStartX;
+    const span = viewEnd - viewStart;
+    const yearDx = -(dx / canvasW) * span;
+    viewStart = dragViewStart + yearDx;
+    viewEnd   = viewStart + span;
+    draw();
+  } else {
+    handleHover(e.clientX, e.clientY);
+  }
+});
+
+canvas.addEventListener('pointerup', e => {
+  if (isDragging) {
+    isDragging = false;
+    canvas.style.cursor = 'crosshair';
+    // Check if it was a click (minimal movement)
+    if (Math.abs(e.clientX - dragStartX) < 5) {
+      handleClick(e.clientX, e.clientY);
+    }
+  }
+});
+
+// ════════════════════════════════════════════
+//  HOVER
+// ════════════════════════════════════════════
+function findEventAt(mx, my) {
+  let best = null, bestDist = Infinity;
+  events.forEach(ev => {
+    if (!eventVisible(ev)) return;
+    const x = yearToX(ev.year);
+    const y = axisY(ev.axis, ev.sub_track || ev.track || 0);
+    const dist = Math.hypot(mx - x, my - y);
+    const threshold = Math.max(14, dotRadius(ev) + 8);
+    if (dist < threshold && dist < bestDist) {
+      best = ev; bestDist = dist;
+    }
+  });
+  return best;
+}
+
+function handleHover(mx, my) {
+  const ev = findEventAt(mx, my);
+  const tooltip = document.getElementById('tooltip');
+  if (ev) {
+    if (!hoveredEvent || hoveredEvent.id !== ev.id) {
+      hoveredEvent = ev;
+      draw();
+    }
+    canvas.style.cursor = 'pointer';
+    document.getElementById('tt-era').textContent = AXIS_LABELS[ev.axis] || ev.axis;
+    document.getElementById('tt-era').style.color = AXIS_COLORS[ev.axis];
+    document.getElementById('tt-zh').textContent  = ev.zh;
+    document.getElementById('tt-en').textContent  = ev.en;
+    document.getElementById('tt-time').textContent = formatYear(ev.year);
+
+    let tx = mx + 16, ty = my - 10;
+    if (tx + 230 > canvasW) tx = mx - 230;
+    if (ty + 120 > canvasH) ty = my - 120;
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top  = ty + 'px';
+    tooltip.classList.add('show');
+  } else {
+    if (hoveredEvent) { hoveredEvent = null; draw(); }
+    canvas.style.cursor = 'crosshair';
+    tooltip.classList.remove('show');
+  }
+}
+
+// ════════════════════════════════════════════
+//  CLICK → POPUP
+// ════════════════════════════════════════════
+function handleClick(mx, my) {
+  const ev = findEventAt(mx, my);
+  if (ev) showPopup(ev);
+}
+
+function showPopup(ev) {
+  const overlay = document.getElementById('popup-overlay');
+  const color = AXIS_COLORS[ev.axis] || '#fff';
+
+  // Image
+  const imgWrap = document.getElementById('popup-img-wrap');
+  if (ev.image) {
+    imgWrap.innerHTML = `<img class="popup-img" src="${ev.image}" alt="${ev.zh}"
+      onerror="this.parentNode.innerHTML='<div class=\'popup-img-placeholder\'><svg width=\'64\' height=\'64\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20\'/></svg></div>'"
+    >`;
+  } else {
+    imgWrap.innerHTML = `<div class="popup-img-placeholder"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>`;
+  }
+
+  // Tag
+  const tag = document.getElementById('popup-tag');
+  tag.textContent = (AXIS_LABELS[ev.axis] || ev.axis).toUpperCase();
+  tag.style.color = color;
+  tag.style.borderColor = color + '44';
+  tag.style.background = color + '11';
+
+  document.getElementById('popup-zh').textContent = ev.zh;
+  document.getElementById('popup-en').textContent = ev.en;
+  document.getElementById('popup-time').textContent = formatYear(ev.year);
+  document.getElementById('popup-desc-zh').textContent = ev.desc_zh || '';
+  document.getElementById('popup-desc-en').textContent = ev.desc_en || '';
+
+  // Links
+  const linksEl = document.getElementById('popup-links');
+  linksEl.innerHTML = '';
+  if (ev.wiki_zh) {
+    const a = document.createElement('a');
+    a.className = 'popup-link';
+    a.href = ev.wiki_zh;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.innerHTML = '📖 中文 Wikipedia';
+    linksEl.appendChild(a);
+  }
+  if (ev.wiki_en) {
+    const a = document.createElement('a');
+    a.className = 'popup-link';
+    a.href = ev.wiki_en;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.innerHTML = '🌐 EN Wikipedia';
+    linksEl.appendChild(a);
+  }
+
+  overlay.classList.add('show');
+}
+
+document.getElementById('popup-close').addEventListener('click', () => {
+  document.getElementById('popup-overlay').classList.remove('show');
+});
+document.getElementById('popup-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('popup-overlay')) {
+    document.getElementById('popup-overlay').classList.remove('show');
+  }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('popup-overlay').classList.remove('show');
+});
+
+// ════════════════════════════════════════════
+//  LEGEND TOGGLE
+// ════════════════════════════════════════════
+document.querySelectorAll('.leg').forEach(el => {
+  el.addEventListener('click', () => {
+    const axis = el.dataset.axis;
+    if (hiddenAxes.has(axis)) {
+      hiddenAxes.delete(axis);
+      el.style.opacity = '0.85';
+    } else {
+      hiddenAxes.add(axis);
+      el.style.opacity = '0.25';
+    }
+    draw();
+  });
+});
+
+// ════════════════════════════════════════════
+//  LOAD DATA
+// ════════════════════════════════════════════
+async function loadEvents() {
+  try {
+    const res = await fetch('data/events.json');
+    const data = await res.json();
+    events = data.events;
+  } catch (err) {
+    console.warn('Could not load events.json, using inline fallback');
+    events = FALLBACK_EVENTS;
+  }
+  draw();
+}
+
+// ════════════════════════════════════════════
+//  FALLBACK — minimal events if JSON fails
+// ════════════════════════════════════════════
+const FALLBACK_EVENTS = [
+  { id:'big-bang',     year:-13800000000, zh:'宇宙大爆炸', en:'Big Bang',      axis:'cosmos',    level:1, track:0, desc_zh:'宇宙誕生', desc_en:'Universe begins', wiki_zh:'https://zh.wikipedia.org/wiki/大爆炸', wiki_en:'https://en.wikipedia.org/wiki/Big_Bang' },
+  { id:'earth-forms',  year:-4540000000,  zh:'地球形成',   en:'Earth Forms',   axis:'earth',     level:1, track:0, desc_zh:'地球誕生', desc_en:'Earth forms',    wiki_zh:'https://zh.wikipedia.org/wiki/地球',   wiki_en:'https://en.wikipedia.org/wiki/Earth' },
+  { id:'first-life',   year:-3800000000,  zh:'生命出現',   en:'First Life',    axis:'earth',     level:1, track:0, desc_zh:'生命誕生', desc_en:'Life begins',    wiki_zh:'https://zh.wikipedia.org/wiki/生命起源', wiki_en:'https://en.wikipedia.org/wiki/Abiogenesis' },
+  { id:'dinosaurs',    year:-230000000,   zh:'恐龍出現',   en:'Dinosaurs',     axis:'life',      level:1, track:0, desc_zh:'恐龍時代', desc_en:'Age of dinosaurs', wiki_zh:'https://zh.wikipedia.org/wiki/恐龍', wiki_en:'https://en.wikipedia.org/wiki/Dinosaur' },
+  { id:'kt',           year:-66000000,    zh:'恐龍滅絕',   en:'Dino Extinct',  axis:'life',      level:1, track:0, desc_zh:'隕石撞擊', desc_en:'Asteroid impact', wiki_zh:'https://zh.wikipedia.org/wiki/白堊紀-古近紀滅絕事件', wiki_en:'https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event' },
+  { id:'homo-sapiens', year:-300000,      zh:'智人出現',   en:'Homo sapiens',  axis:'human-evo', level:1, track:0, desc_zh:'現代人類', desc_en:'Modern humans',  wiki_zh:'https://zh.wikipedia.org/wiki/智人', wiki_en:'https://en.wikipedia.org/wiki/Homo_sapiens' },
+  { id:'agriculture',  year:-10000,       zh:'農業革命',   en:'Agriculture',   axis:'cross',     level:1, track:0, desc_zh:'農耕定居', desc_en:'Farming begins', wiki_zh:'https://zh.wikipedia.org/wiki/農業起源', wiki_en:'https://en.wikipedia.org/wiki/History_of_agriculture' },
+  { id:'ww2',          year:1939,         zh:'二戰',       en:'World War II',  axis:'cross',     level:1, track:0, desc_zh:'人類最大戰爭', desc_en:'Deadliest war', wiki_zh:'https://zh.wikipedia.org/wiki/第二次世界大戰', wiki_en:'https://en.wikipedia.org/wiki/World_War_II' },
+  { id:'internet',     year:1991,         zh:'網際網路',   en:'World Wide Web',axis:'cross',     level:1, track:0, desc_zh:'資訊時代', desc_en:'Information age', wiki_zh:'https://zh.wikipedia.org/wiki/全球資訊網', wiki_en:'https://en.wikipedia.org/wiki/World_Wide_Web' },
+];
+
+// ════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════
+window.addEventListener('resize', () => { resize(); draw(); });
+resize();
+loadEvents();
+</script>
+</body>
+</html>
