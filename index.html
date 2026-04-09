@@ -87,7 +87,7 @@ body {
 
 /* ─── TIME DISPLAY ─── */
 #time-display {
-  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  position: fixed; bottom: 56px; left: 50%; transform: translateX(-50%);
   z-index: 50;
   font-family: 'Space Mono', monospace;
   font-size: 11px; letter-spacing: 0.15em;
@@ -97,65 +97,83 @@ body {
   padding: 5px 16px; border-radius: 20px;
   pointer-events: none;
   backdrop-filter: blur(6px);
-}
-
-/* ─── ZOOM HINT ─── */
-#hint {
-  position: fixed; bottom: 20px; right: 24px; z-index: 50;
-  font-family: 'Space Mono', monospace;
-  font-size: 9px; letter-spacing: 0.1em;
-  color: rgba(221,216,200,0.2);
-  line-height: 1.9; text-align: right;
-  pointer-events: none;
+  white-space: nowrap;
 }
 
 /* ─── SCALE BAR ─── */
 #scale-bar {
-  position: fixed; bottom: 20px; left: 24px; z-index: 50;
+  position: fixed; bottom: 56px; left: 24px; z-index: 50;
   display: flex; flex-direction: column; gap: 4px;
   pointer-events: none;
 }
-#scale-line-wrap {
-  display: flex; align-items: center; gap: 0;
-}
 #scale-label {
   font-family: 'Space Mono', monospace;
-  font-size: 10px; color: rgba(221,216,200,0.5);
+  font-size: 10px; color: rgba(221,216,200,0.45);
   letter-spacing: 0.1em; margin-bottom: 2px;
 }
-.scale-cap {
-  width: 1px; height: 8px;
-  background: rgba(221,216,200,0.4);
-  display: inline-block;
-}
-#scale-line {
-  height: 2px; background: rgba(221,216,200,0.4);
-  display: inline-block; min-width: 60px; max-width: 200px;
-}
+#scale-line-wrap { display: flex; align-items: center; }
+.scale-cap { width: 1px; height: 8px; background: rgba(221,216,200,0.35); display: inline-block; }
+#scale-line { height: 2px; background: rgba(221,216,200,0.35); display: inline-block; }
 
-/* ─── NAV BUTTONS ─── */
-#nav-btns {
-  position: fixed; bottom: 20px; right: 24px; z-index: 50;
-  display: flex; gap: 6px; align-items: center;
+/* ─── ZOOM SLIDER PANEL ─── */
+#zoom-panel {
+  position: fixed; right: 18px; top: 50%; transform: translateY(-50%);
+  z-index: 50;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  background: rgba(5,8,16,0.8);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 20px;
+  padding: 10px 8px;
+  backdrop-filter: blur(8px);
 }
-.nav-btn {
-  width: 32px; height: 32px;
-  background: rgba(10,14,26,0.85);
+.zoom-panel-label {
+  font-size: 14px; color: rgba(221,216,200,0.4);
+  line-height: 1; user-select: none;
+  font-family: monospace;
+}
+#zoom-slider {
+  -webkit-appearance: slider-vertical;
+  appearance: slider-vertical;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 4px; height: 140px;
+  cursor: pointer;
+  accent-color: rgba(167,139,250,0.8);
+  background: transparent;
+}
+#btn-reset {
+  width: 26px; height: 26px;
+  background: transparent;
   border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 6px; cursor: pointer;
+  border-radius: 50%; cursor: pointer;
+  color: rgba(221,216,200,0.45); font-size: 13px;
   display: flex; align-items: center; justify-content: center;
-  color: rgba(221,216,200,0.6);
-  font-size: 14px;
-  transition: all .15s;
-  user-select: none;
-  backdrop-filter: blur(6px);
+  transition: all .15s; line-height: 1;
 }
-.nav-btn:hover {
-  background: rgba(30,40,70,0.9);
-  border-color: rgba(255,255,255,0.25);
-  color: rgba(221,216,200,0.9);
+#btn-reset:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
+
+/* ─── BOTTOM SCROLLBAR ─── */
+#bottom-bar {
+  position: fixed; bottom: 0; left: 0; right: 52px;
+  height: 42px; z-index: 50;
+  display: flex; align-items: center;
+  padding: 0 16px;
+  background: linear-gradient(to top, rgba(5,8,16,0.92) 60%, transparent);
 }
-.nav-btn:active { transform: scale(0.93); }
+#scrollbar-track {
+  position: relative;
+  width: 100%; height: 6px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 3px; cursor: pointer;
+}
+#scrollbar-thumb {
+  position: absolute; top: 0; height: 100%;
+  background: rgba(255,255,255,0.22);
+  border-radius: 3px; cursor: grab; min-width: 24px;
+  transition: background .15s;
+}
+#scrollbar-thumb:hover { background: rgba(255,255,255,0.38); }
+#scrollbar-thumb.dragging { background: rgba(167,139,250,0.6); cursor: grabbing; }
 
 /* ─── TOOLTIP ─── */
 #tooltip {
@@ -314,11 +332,8 @@ body {
 <canvas id="timeline-canvas"></canvas>
 
 <div id="time-display">— —</div>
-<div id="hint">
-  滾輪 縮放<br>
-  拖曳 平移<br>
-  點擊 詳情
-</div>
+
+<!-- Scale bar bottom-left -->
 <div id="scale-bar">
   <div id="scale-label">— —</div>
   <div id="scale-line-wrap">
@@ -328,11 +343,20 @@ body {
   </div>
 </div>
 
-<div id="nav-btns">
-  <button class="nav-btn" id="btn-left" title="向左 (←)">◀</button>
-  <button class="nav-btn" id="btn-zoom-out" title="縮小 (-)">−</button>
-  <button class="nav-btn" id="btn-zoom-in" title="放大 (+)">＋</button>
-  <button class="nav-btn" id="btn-right" title="向右 (→)">▶</button>
+<!-- Zoom slider — right side vertical -->
+<div id="zoom-panel">
+  <div class="zoom-panel-label">＋</div>
+  <input type="range" id="zoom-slider" min="0" max="100" value="5"
+         orient="vertical" style="writing-mode:vertical-lr; direction:rtl;">
+  <div class="zoom-panel-label">−</div>
+  <button id="btn-reset" title="全覽">⊙</button>
+</div>
+
+<!-- Bottom scrollbar -->
+<div id="bottom-bar">
+  <div id="scrollbar-track">
+    <div id="scrollbar-thumb"></div>
+  </div>
 </div>
 
 <div id="tooltip">
@@ -795,10 +819,46 @@ function draw() {
   // Time display
   const midYear = (viewStart + viewEnd) / 2;
   document.getElementById('time-display').textContent = formatYear(midYear);
+
+  // Sync zoom slider (0=zoomed out, 100=zoomed in)
+  const totalSpan = TOTAL_YEARS + NOW;
+  const curSpan   = viewEnd - viewStart;
+  // Use log scale so slider feels linear
+  const logMin = Math.log(2);
+  const logMax = Math.log(totalSpan);
+  const logCur = Math.log(Math.max(2, curSpan));
+  const sliderVal = Math.round(100 * (1 - (logCur - logMin) / (logMax - logMin)));
+  const sl = document.getElementById('zoom-slider');
+  if (!sl._dragging) sl.value = Math.max(0, Math.min(100, sliderVal));
+
+  // Sync bottom scrollbar thumb
+  updateScrollbar();
 }
 
 // ════════════════════════════════════════════
-//  PAN HELPER
+//  SCROLLBAR SYNC
+// ════════════════════════════════════════════
+function updateScrollbar() {
+  const totalSpan = TOTAL_YEARS + NOW;
+  const curSpan   = viewEnd - viewStart;
+  const track = document.getElementById('scrollbar-track');
+  const thumb = document.getElementById('scrollbar-thumb');
+  const trackW = track.clientWidth;
+
+  // Thumb width proportional to zoom
+  const thumbW = Math.max(24, Math.min(trackW - 4, (curSpan / totalSpan) * trackW));
+  // Thumb position: how far viewStart is into full range
+  const fullStart = TIMELINE_START;
+  const maxPan    = totalSpan - curSpan;
+  const panFrac   = maxPan > 0 ? Math.max(0, Math.min(1, (viewStart - fullStart) / maxPan)) : 0;
+  const thumbLeft = panFrac * (trackW - thumbW);
+
+  thumb.style.width = thumbW + 'px';
+  thumb.style.left  = thumbLeft + 'px';
+}
+
+// ════════════════════════════════════════════
+//  PAN & ZOOM HELPERS
 // ════════════════════════════════════════════
 function panBy(fraction) {
   const span = viewEnd - viewStart;
@@ -807,6 +867,7 @@ function panBy(fraction) {
   viewEnd   += shift;
   draw();
 }
+
 function zoomBy(factor, centerX) {
   const cx = centerX !== undefined ? centerX : canvasW / 2;
   const mouseYear = xToYear(cx);
@@ -820,17 +881,100 @@ function zoomBy(factor, centerX) {
   draw();
 }
 
+function zoomToSpan(newSpan) {
+  const mid = (viewStart + viewEnd) / 2;
+  newSpan = Math.max(2, Math.min(TOTAL_YEARS + NOW + 1e9, newSpan));
+  viewStart = mid - newSpan / 2;
+  viewEnd   = mid + newSpan / 2;
+  draw();
+}
+
+// ════════════════════════════════════════════
+//  ZOOM SLIDER
+// ════════════════════════════════════════════
+const zoomSlider = document.getElementById('zoom-slider');
+zoomSlider.addEventListener('input', () => {
+  zoomSlider._dragging = true;
+  const val = parseInt(zoomSlider.value); // 0=out, 100=in
+  const totalSpan = TOTAL_YEARS + NOW;
+  const logMin = Math.log(2);
+  const logMax = Math.log(totalSpan);
+  const logTarget = logMax - (val / 100) * (logMax - logMin);
+  zoomToSpan(Math.exp(logTarget));
+});
+zoomSlider.addEventListener('pointerup', () => { zoomSlider._dragging = false; });
+zoomSlider.addEventListener('pointercancel', () => { zoomSlider._dragging = false; });
+
+// Reset button → full view
+document.getElementById('btn-reset').addEventListener('click', () => {
+  viewStart = TIMELINE_START;
+  viewEnd   = TIMELINE_END;
+  draw();
+});
+
+// ════════════════════════════════════════════
+//  BOTTOM SCROLLBAR DRAG
+// ════════════════════════════════════════════
+{
+  const track = document.getElementById('scrollbar-track');
+  const thumb = document.getElementById('scrollbar-thumb');
+  let sbDragging = false, sbStartX = 0, sbStartLeft = 0;
+
+  thumb.addEventListener('pointerdown', e => {
+    e.stopPropagation();
+    sbDragging = true;
+    sbStartX = e.clientX;
+    sbStartLeft = parseFloat(thumb.style.left) || 0;
+    thumb.classList.add('dragging');
+    thumb.setPointerCapture(e.pointerId);
+  });
+
+  thumb.addEventListener('pointermove', e => {
+    if (!sbDragging) return;
+    const trackW  = track.clientWidth;
+    const thumbW  = parseFloat(thumb.style.width) || 40;
+    const maxLeft = trackW - thumbW;
+    const newLeft = Math.max(0, Math.min(maxLeft, sbStartLeft + e.clientX - sbStartX));
+    const frac = maxLeft > 0 ? newLeft / maxLeft : 0;
+
+    const totalSpan = TOTAL_YEARS + NOW;
+    const curSpan   = viewEnd - viewStart;
+    const maxPan    = totalSpan - curSpan;
+    viewStart = TIMELINE_START + frac * maxPan;
+    viewEnd   = viewStart + curSpan;
+    draw();
+  });
+
+  thumb.addEventListener('pointerup', () => {
+    sbDragging = false;
+    thumb.classList.remove('dragging');
+  });
+
+  // Click on track (not thumb) → jump
+  track.addEventListener('pointerdown', e => {
+    if (e.target === thumb) return;
+    const rect = track.getBoundingClientRect();
+    const clickFrac = (e.clientX - rect.left) / rect.width;
+    const totalSpan = TOTAL_YEARS + NOW;
+    const curSpan   = viewEnd - viewStart;
+    const maxPan    = totalSpan - curSpan;
+    viewStart = TIMELINE_START + clickFrac * totalSpan - curSpan / 2;
+    viewEnd   = viewStart + curSpan;
+    draw();
+  });
+}
+
 // ════════════════════════════════════════════
 //  KEYBOARD NAVIGATION
 // ════════════════════════════════════════════
 document.addEventListener('keydown', e => {
-  // Don't fire if popup is open and user is clicking links
   if (document.getElementById('popup-overlay').classList.contains('show') && e.key !== 'Escape') return;
   switch(e.key) {
     case 'ArrowLeft':  e.preventDefault(); panBy(-0.2); break;
     case 'ArrowRight': e.preventDefault(); panBy( 0.2); break;
     case '+': case '=': e.preventDefault(); zoomBy(0.6); break;
     case '-': case '_': e.preventDefault(); zoomBy(1.6); break;
+    case 'Escape': document.getElementById('popup-overlay').classList.remove('show'); break;
   }
 });
 
@@ -842,14 +986,6 @@ canvas.addEventListener('wheel', e => {
   const factor = e.deltaY > 0 ? 1.12 : 0.89;
   zoomBy(factor, e.clientX);
 }, { passive: false });
-
-// ════════════════════════════════════════════
-//  BUTTON NAV
-// ════════════════════════════════════════════
-document.getElementById('btn-left').addEventListener('click',     () => panBy(-0.3));
-document.getElementById('btn-right').addEventListener('click',    () => panBy( 0.3));
-document.getElementById('btn-zoom-in').addEventListener('click',  () => zoomBy(0.55));
-document.getElementById('btn-zoom-out').addEventListener('click', () => zoomBy(1.8));
 
 // ════════════════════════════════════════════
 //  DRAG PAN
