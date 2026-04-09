@@ -109,22 +109,53 @@ body {
   pointer-events: none;
 }
 
-/* ─── ZOOM BAR ─── */
-#zoom-indicator {
+/* ─── SCALE BAR ─── */
+#scale-bar {
   position: fixed; bottom: 20px; left: 24px; z-index: 50;
-  display: flex; align-items: center; gap: 8px;
+  display: flex; flex-direction: column; gap: 4px;
+  pointer-events: none;
+}
+#scale-line-wrap {
+  display: flex; align-items: center; gap: 0;
+}
+#scale-label {
   font-family: 'Space Mono', monospace;
-  font-size: 9px; color: rgba(221,216,200,0.3); letter-spacing: 0.1em;
+  font-size: 10px; color: rgba(221,216,200,0.5);
+  letter-spacing: 0.1em; margin-bottom: 2px;
 }
-.zoom-track {
-  width: 72px; height: 2px;
-  background: rgba(255,255,255,0.08); border-radius: 1px;
+.scale-cap {
+  width: 1px; height: 8px;
+  background: rgba(221,216,200,0.4);
+  display: inline-block;
 }
-.zoom-fill {
-  height: 100%; border-radius: 1px;
-  background: rgba(255,255,255,0.3);
-  transition: width 0.15s;
+#scale-line {
+  height: 2px; background: rgba(221,216,200,0.4);
+  display: inline-block; min-width: 60px; max-width: 200px;
 }
+
+/* ─── NAV BUTTONS ─── */
+#nav-btns {
+  position: fixed; bottom: 20px; right: 24px; z-index: 50;
+  display: flex; gap: 6px; align-items: center;
+}
+.nav-btn {
+  width: 32px; height: 32px;
+  background: rgba(10,14,26,0.85);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(221,216,200,0.6);
+  font-size: 14px;
+  transition: all .15s;
+  user-select: none;
+  backdrop-filter: blur(6px);
+}
+.nav-btn:hover {
+  background: rgba(30,40,70,0.9);
+  border-color: rgba(255,255,255,0.25);
+  color: rgba(221,216,200,0.9);
+}
+.nav-btn:active { transform: scale(0.93); }
 
 /* ─── TOOLTIP ─── */
 #tooltip {
@@ -288,9 +319,20 @@ body {
   拖曳 平移<br>
   點擊 詳情
 </div>
-<div id="zoom-indicator">
-  ZOOM
-  <div class="zoom-track"><div class="zoom-fill" id="zoom-fill" style="width:20%"></div></div>
+<div id="scale-bar">
+  <div id="scale-label">— —</div>
+  <div id="scale-line-wrap">
+    <div class="scale-cap"></div>
+    <div id="scale-line"></div>
+    <div class="scale-cap"></div>
+  </div>
+</div>
+
+<div id="nav-btns">
+  <button class="nav-btn" id="btn-left" title="向左 (←)">◀</button>
+  <button class="nav-btn" id="btn-zoom-out" title="縮小 (-)">−</button>
+  <button class="nav-btn" id="btn-zoom-in" title="放大 (+)">＋</button>
+  <button class="nav-btn" id="btn-right" title="向右 (→)">▶</button>
 </div>
 
 <div id="tooltip">
@@ -535,20 +577,34 @@ function drawAxisLines() {
     if (hiddenAxes.has(id)) return;
     const y = yFrac * canvasH;
     const color = AXIS_COLORS[id];
+
+    // Solid axis line — full width, clearly visible
     ctx.beginPath();
     ctx.moveTo(0, y);
     ctx.lineTo(canvasW, y);
-    ctx.strokeStyle = color + '22';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([4, 8]);
-    ctx.stroke();
+    ctx.strokeStyle = color + '55';
+    ctx.lineWidth = 1.5;
     ctx.setLineDash([]);
+    ctx.stroke();
 
-    // Axis label on left
-    ctx.font = '10px "Space Mono", monospace';
-    ctx.fillStyle = color + '66';
+    // Left-side axis label badge
+    const label = AXIS_LABELS[id];
+    const pad = 7;
+    ctx.font = '500 10px "Space Mono", monospace';
+    const tw = ctx.measureText(label).width;
+    // Badge background
+    ctx.fillStyle = 'rgba(5,8,16,0.75)';
+    ctx.beginPath();
+    ctx.roundRect(4, y - 11, tw + pad * 2, 14, 3);
+    ctx.fill();
+    // Badge border
+    ctx.strokeStyle = color + '44';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+    // Label text
+    ctx.fillStyle = color + 'cc';
     ctx.textAlign = 'left';
-    ctx.fillText(AXIS_LABELS[id], 8, y - 5);
+    ctx.fillText(label, 4 + pad, y - 1);
   });
 }
 
@@ -557,38 +613,63 @@ function drawAxisLines() {
 // ════════════════════════════════════════════
 function drawRuler() {
   const span = viewEnd - viewStart;
+
+  // ── Tick marks along bottom ──
   const targets = [
     1e10, 5e9, 2e9, 1e9, 5e8, 2e8, 1e8,
     5e7, 2e7, 1e7, 5e6, 1e6, 5e5, 1e5,
     1e4, 5e3, 1e3, 500, 200, 100, 50, 10, 5, 1
   ];
-  let step = targets.find(t => span / t < 12) || 1e10;
-
+  let step = targets.find(t => span / t < 10) || 1e10;
   const startTick = Math.ceil(viewStart / step) * step;
-  const rulerY = canvasH - 38;
-
-  ctx.strokeStyle = 'rgba(255,255,255,0.07)';
-  ctx.lineWidth = 1;
-  ctx.font = '9px "Space Mono", monospace';
-  ctx.fillStyle = 'rgba(221,216,200,0.3)';
-  ctx.textAlign = 'center';
-
-  for (let y = startTick; y <= viewEnd; y += step) {
-    const x = yearToX(y);
-    if (x < 0 || x > canvasW) continue;
-    ctx.beginPath();
-    ctx.moveTo(x, rulerY);
-    ctx.lineTo(x, rulerY + 8);
-    ctx.stroke();
-    ctx.fillText(formatYearShort(y), x, rulerY + 20);
-  }
+  const rulerY = canvasH - 44;
 
   // Ruler base line
   ctx.beginPath();
   ctx.moveTo(0, rulerY);
   ctx.lineTo(canvasW, rulerY);
-  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+  ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([]);
   ctx.stroke();
+
+  ctx.font = '9px "Space Mono", monospace';
+  ctx.fillStyle = 'rgba(221,216,200,0.35)';
+  ctx.textAlign = 'center';
+
+  for (let y = startTick; y <= viewEnd; y += step) {
+    const x = yearToX(y);
+    if (x < 10 || x > canvasW - 10) continue;
+    ctx.beginPath();
+    ctx.moveTo(x, rulerY);
+    ctx.lineTo(x, rulerY + 7);
+    ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.fillText(formatYearShort(y), x, rulerY + 18);
+  }
+
+  // ── Scale bar (bottom-left) ──
+  // Pick a nice round number whose pixel width is 60–200px
+  const niceSteps = [1e10,5e9,2e9,1e9,5e8,2e8,1e8,5e7,2e7,1e7,5e6,1e6,
+                     5e5,1e5,5e4,1e4,5e3,1e3,500,200,100,50,20,10,5,2,1];
+  let scaleYears = niceSteps.find(s => {
+    const px = (s / span) * canvasW;
+    return px >= 60 && px <= 200;
+  }) || step;
+  const scalePx = Math.round((scaleYears / span) * canvasW);
+
+  // Update DOM scale bar
+  document.getElementById('scale-line').style.width = scalePx + 'px';
+  document.getElementById('scale-label').textContent = formatScaleBar(scaleYears);
+}
+
+function formatScaleBar(years) {
+  const abs = Math.abs(years);
+  if (abs >= 1e9) return (abs / 1e9).toFixed(abs >= 5e9 ? 0 : 1) + ' 億年';
+  if (abs >= 1e6) return (abs / 1e6).toFixed(abs >= 5e6 ? 0 : 1) + ' 百萬年';
+  if (abs >= 1e3) return (abs / 1e3).toFixed(0) + ' 千年';
+  return abs + ' 年';
 }
 
 // ════════════════════════════════════════════
@@ -711,35 +792,64 @@ function draw() {
   drawEvents(vis);
   drawRuler();
 
-  // Zoom fill
-  const z = Math.min(100, Math.max(5, currentZoom() * 100));
-  document.getElementById('zoom-fill').style.width = z + '%';
-
   // Time display
   const midYear = (viewStart + viewEnd) / 2;
   document.getElementById('time-display').textContent = formatYear(midYear);
 }
 
 // ════════════════════════════════════════════
-//  WHEEL ZOOM
+//  PAN HELPER
 // ════════════════════════════════════════════
-canvas.addEventListener('wheel', e => {
-  e.preventDefault();
-  const mouseX = e.clientX;
-  const mouseYear = xToYear(mouseX);
+function panBy(fraction) {
   const span = viewEnd - viewStart;
-  const factor = e.deltaY > 0 ? 1.12 : 0.89;
+  const shift = span * fraction;
+  viewStart += shift;
+  viewEnd   += shift;
+  draw();
+}
+function zoomBy(factor, centerX) {
+  const cx = centerX !== undefined ? centerX : canvasW / 2;
+  const mouseYear = xToYear(cx);
+  const span = viewEnd - viewStart;
   let newSpan = span * factor;
-  // Clamp
-  const minSpan = 2;
-  const maxSpan = TOTAL_YEARS + NOW + 1e9;
+  const minSpan = 2, maxSpan = TOTAL_YEARS + NOW + 1e9;
   newSpan = Math.min(Math.max(newSpan, minSpan), maxSpan);
-  // Keep mouse position fixed
   const ratio = (mouseYear - viewStart) / span;
   viewStart = mouseYear - ratio * newSpan;
   viewEnd   = viewStart + newSpan;
   draw();
+}
+
+// ════════════════════════════════════════════
+//  KEYBOARD NAVIGATION
+// ════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  // Don't fire if popup is open and user is clicking links
+  if (document.getElementById('popup-overlay').classList.contains('show') && e.key !== 'Escape') return;
+  switch(e.key) {
+    case 'ArrowLeft':  e.preventDefault(); panBy(-0.2); break;
+    case 'ArrowRight': e.preventDefault(); panBy( 0.2); break;
+    case '+': case '=': e.preventDefault(); zoomBy(0.6); break;
+    case '-': case '_': e.preventDefault(); zoomBy(1.6); break;
+  }
+});
+
+// ════════════════════════════════════════════
+//  WHEEL ZOOM
+// ════════════════════════════════════════════
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const factor = e.deltaY > 0 ? 1.12 : 0.89;
+  zoomBy(factor, e.clientX);
 }, { passive: false });
+
+// ════════════════════════════════════════════
+//  BUTTON NAV
+// ════════════════════════════════════════════
+document.getElementById('btn-left').addEventListener('click',     () => panBy(-0.3));
+document.getElementById('btn-right').addEventListener('click',    () => panBy( 0.3));
+document.getElementById('btn-zoom-in').addEventListener('click',  () => zoomBy(0.55));
+document.getElementById('btn-zoom-out').addEventListener('click', () => zoomBy(1.8));
 
 // ════════════════════════════════════════════
 //  DRAG PAN
@@ -890,9 +1000,6 @@ document.getElementById('popup-overlay').addEventListener('click', e => {
   if (e.target === document.getElementById('popup-overlay')) {
     document.getElementById('popup-overlay').classList.remove('show');
   }
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') document.getElementById('popup-overlay').classList.remove('show');
 });
 
 // ════════════════════════════════════════════
