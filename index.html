@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>宇宙歷史時間軸 · Cosmic Timeline</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+TC:wght@300;400;500&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #050810;
@@ -27,7 +27,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Noto Sans TC', sans-serif;
   overflow: hidden;
   height: 100vh;
   cursor: crosshair;
@@ -48,14 +48,14 @@ body {
   gap: 16px;
 }
 #header h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 14px; font-weight: 600;
-  letter-spacing: 0.22em; color: var(--text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.18em; color: var(--text);
   white-space: nowrap;
 }
 #header p {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px; letter-spacing: 0.18em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px; letter-spacing: 0.15em;
   color: var(--text-muted);
 }
 
@@ -68,8 +68,8 @@ body {
 }
 .leg {
   display: flex; align-items: center; gap: 5px;
-  font-family: 'Space Mono', monospace;
-  font-size: 9px; letter-spacing: 0.1em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px; letter-spacing: 0.05em;
   color: var(--text-muted); opacity: 0.85;
   cursor: pointer; transition: opacity .2s;
 }
@@ -89,8 +89,8 @@ body {
 #time-display {
   position: fixed; bottom: 56px; left: 50%; transform: translateX(-50%);
   z-index: 50;
-  font-family: 'Space Mono', monospace;
-  font-size: 11px; letter-spacing: 0.15em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px; letter-spacing: 0.12em;
   color: var(--text-muted);
   background: rgba(5,8,16,0.75);
   border: 1px solid rgba(255,255,255,0.07);
@@ -107,9 +107,9 @@ body {
   pointer-events: none;
 }
 #scale-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Noto Sans TC', sans-serif;
   font-size: 10px; color: rgba(221,216,200,0.45);
-  letter-spacing: 0.1em; margin-bottom: 2px;
+  letter-spacing: 0.08em; margin-bottom: 2px;
 }
 #scale-line-wrap { display: flex; align-items: center; }
 .scale-cap { width: 1px; height: 8px; background: rgba(221,216,200,0.35); display: inline-block; }
@@ -129,7 +129,7 @@ body {
 .zoom-panel-label {
   font-size: 14px; color: rgba(221,216,200,0.4);
   line-height: 1; user-select: none;
-  font-family: monospace;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 #zoom-slider {
   -webkit-appearance: slider-vertical;
@@ -139,6 +139,28 @@ body {
   width: 4px; height: 140px;
   cursor: pointer;
   accent-color: rgba(167,139,250,0.8);
+  background: transparent;
+}
+/* Divider between H and V sliders */
+.slider-divider {
+  width: 20px; height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 2px 0;
+}
+.zoom-panel-sublabel {
+  font-size: 8px; color: rgba(221,216,200,0.25);
+  letter-spacing: 0.05em;
+  font-family: 'Noto Sans TC', sans-serif;
+  writing-mode: horizontal-tb;
+}
+#yzoom-slider {
+  -webkit-appearance: slider-vertical;
+  appearance: slider-vertical;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 4px; height: 80px;
+  cursor: pointer;
+  accent-color: rgba(96,165,250,0.8);
   background: transparent;
 }
 #btn-reset {
@@ -192,13 +214,13 @@ body {
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
 .tt-era {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px; letter-spacing: 0.15em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 9px; letter-spacing: 0.12em;
   text-transform: uppercase; margin-bottom: 5px;
 }
 .tt-zh { font-size: 14px; font-weight: 500; margin-bottom: 1px; line-height: 1.3; }
-.tt-en { font-size: 9px; font-style: italic; color: var(--text-muted); margin-bottom: 6px; font-family: 'Space Mono', monospace; }
-.tt-time { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--text-muted); }
+.tt-en { font-size: 10px; color: var(--text-muted); margin-bottom: 6px; }
+.tt-time { font-family: 'Noto Sans TC', sans-serif; font-size: 9px; color: var(--text-muted); }
 
 /* ─── POPUP ─── */
 #popup-overlay {
@@ -240,8 +262,8 @@ body {
 .popup-body { padding: 20px 24px 24px; }
 .popup-axis-tag {
   display: inline-block; margin-bottom: 12px;
-  font-family: 'Space Mono', monospace;
-  font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
   padding: 3px 9px; border-radius: 12px;
   border: 1px solid;
 }
@@ -250,13 +272,12 @@ body {
   line-height: 1.3; margin-bottom: 3px;
 }
 .popup-title-en {
-  font-size: 12px; font-style: italic;
+  font-size: 12px;
   color: var(--text-muted);
-  font-family: 'Space Mono', monospace;
   margin-bottom: 14px;
 }
 .popup-time {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Noto Sans TC', sans-serif;
   font-size: 10px; color: var(--text-muted);
   margin-bottom: 14px;
   padding-bottom: 14px;
@@ -269,8 +290,8 @@ body {
 }
 .popup-link {
   display: inline-flex; align-items: center; gap: 6px;
-  font-family: 'Space Mono', monospace;
-  font-size: 10px; letter-spacing: 0.08em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px; letter-spacing: 0.05em;
   color: var(--text-muted);
   border: 1px solid rgba(255,255,255,0.12);
   padding: 6px 14px; border-radius: 20px;
@@ -349,6 +370,10 @@ body {
   <input type="range" id="zoom-slider" min="0" max="100" value="5"
          orient="vertical" style="writing-mode:vertical-lr; direction:rtl;">
   <div class="zoom-panel-label">−</div>
+  <div class="slider-divider"></div>
+  <div class="zoom-panel-sublabel">縱</div>
+  <input type="range" id="yzoom-slider" min="10" max="400" value="100"
+         orient="vertical" style="writing-mode:vertical-lr; direction:rtl;">
   <button id="btn-reset" title="全覽">⊙</button>
 </div>
 
@@ -428,12 +453,14 @@ const AXIS_Y = {
 //  STATE
 // ════════════════════════════════════════════
 let events = [];
-let viewStart = TIMELINE_START; // year value at left edge
-let viewEnd   = TIMELINE_END;   // year value at right edge
+let viewStart = TIMELINE_START;
+let viewEnd   = TIMELINE_END;
+let yScale    = 1.0;   // vertical spacing multiplier
 let isDragging = false;
 let dragStartX = 0;
 let dragViewStart = 0;
 let hoveredEvent = null;
+let mouseX = -1, mouseY = -1;  // cursor position for crosshair line
 let canvasW = 0, canvasH = 0;
 let dpr = window.devicePixelRatio || 1;
 let hiddenAxes = new Set();
@@ -500,9 +527,14 @@ function xToYear(x) {
   return viewStart + (x / canvasW) * (viewEnd - viewStart);
 }
 function axisY(axisId, subtrack = 0) {
-  const base = (AXIS_Y[axisId] || 0.5) * canvasH;
-  const spread = 18;
-  return base + subtrack * spread;
+  const baseFrac  = AXIS_Y[axisId] || 0.5;
+  const centerFrac = 0.54;
+  const effectiveH = canvasH - 130; // usable height between header and ruler
+  const topMargin  = 90;
+  const y = topMargin + effectiveH * centerFrac
+          + (baseFrac - centerFrac) * effectiveH * yScale
+          + subtrack * 20 * yScale;
+  return y;
 }
 
 // ════════════════════════════════════════════
@@ -584,7 +616,7 @@ function drawEraBands() {
     // Band label at higher zoom
     if (zoom > 0.4 && w > 80) {
       ctx.save();
-      ctx.font = '9px "Space Mono", monospace';
+      ctx.font = '9px "Noto Sans TC", sans-serif';
       ctx.fillStyle = `rgba(221,216,200,${0.2 * bandOpacity})`;
       ctx.textAlign = 'center';
       ctx.fillText(band.label.toUpperCase(), rx1 + w / 2, 90);
@@ -599,10 +631,9 @@ function drawEraBands() {
 function drawAxisLines() {
   Object.entries(AXIS_Y).forEach(([id, yFrac]) => {
     if (hiddenAxes.has(id)) return;
-    const y = yFrac * canvasH;
+    const y = axisY(id, 0);
     const color = AXIS_COLORS[id];
 
-    // Solid axis line — full width, clearly visible
     ctx.beginPath();
     ctx.moveTo(0, y);
     ctx.lineTo(canvasW, y);
@@ -611,21 +642,17 @@ function drawAxisLines() {
     ctx.setLineDash([]);
     ctx.stroke();
 
-    // Left-side axis label badge
     const label = AXIS_LABELS[id];
     const pad = 7;
-    ctx.font = '500 10px "Space Mono", monospace';
+    ctx.font = '500 10px "Noto Sans TC", sans-serif';
     const tw = ctx.measureText(label).width;
-    // Badge background
     ctx.fillStyle = 'rgba(5,8,16,0.75)';
     ctx.beginPath();
     ctx.roundRect(4, y - 11, tw + pad * 2, 14, 3);
     ctx.fill();
-    // Badge border
     ctx.strokeStyle = color + '44';
     ctx.lineWidth = 0.5;
     ctx.stroke();
-    // Label text
     ctx.fillStyle = color + 'cc';
     ctx.textAlign = 'left';
     ctx.fillText(label, 4 + pad, y - 1);
@@ -657,7 +684,7 @@ function drawRuler() {
   ctx.setLineDash([]);
   ctx.stroke();
 
-  ctx.font = '9px "Space Mono", monospace';
+  ctx.font = '9px "Noto Sans TC", sans-serif';
   ctx.fillStyle = 'rgba(221,216,200,0.35)';
   ctx.textAlign = 'center';
 
@@ -789,8 +816,8 @@ function drawEvents(eventsInView) {
     if (showLabel && !isHovered) {
       const labelY = y - r - 7;
       ctx.font = ev.level === 1
-        ? '500 11px "Noto Serif TC", serif'
-        : '10px "Noto Serif TC", serif';
+        ? '500 11px "Noto Sans TC", sans-serif'
+        : '10px "Noto Sans TC", sans-serif';
       ctx.textAlign = 'center';
       ctx.fillStyle = isHovered ? color : `rgba(221,216,200,${ev.level === 1 ? 0.85 : 0.55})`;
       ctx.fillText(ev.zh, x, labelY);
@@ -815,15 +842,15 @@ function draw() {
   drawBranchLines(vis);
   drawEvents(vis);
   drawRuler();
+  drawCursorLine();  // ← 游標縱線
 
   // Time display
   const midYear = (viewStart + viewEnd) / 2;
   document.getElementById('time-display').textContent = formatYear(midYear);
 
-  // Sync zoom slider (0=zoomed out, 100=zoomed in)
+  // Sync zoom slider
   const totalSpan = TOTAL_YEARS + NOW;
   const curSpan   = viewEnd - viewStart;
-  // Use log scale so slider feels linear
   const logMin = Math.log(2);
   const logMax = Math.log(totalSpan);
   const logCur = Math.log(Math.max(2, curSpan));
@@ -831,8 +858,53 @@ function draw() {
   const sl = document.getElementById('zoom-slider');
   if (!sl._dragging) sl.value = Math.max(0, Math.min(100, sliderVal));
 
-  // Sync bottom scrollbar thumb
+  // Sync Y zoom slider
+  const yzsl = document.getElementById('yzoom-slider');
+  if (!yzsl._dragging) yzsl.value = Math.round(yScale * 100);
+
   updateScrollbar();
+}
+
+// ════════════════════════════════════════════
+//  CURSOR VERTICAL LINE
+// ════════════════════════════════════════════
+function drawCursorLine() {
+  if (mouseX < 0 || isDragging) return;
+  const rulerY = canvasH - 44;
+
+  // Vertical line
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(mouseX, 78);
+  ctx.lineTo(mouseX, rulerY);
+  ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 4]);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Year label at top of line
+  const year = xToYear(mouseX);
+  const label = formatYear(year);
+  ctx.font = '500 10px "Noto Sans TC", sans-serif';
+  const tw = ctx.measureText(label).width;
+  const lx = Math.max(tw / 2 + 6, Math.min(canvasW - tw / 2 - 6, mouseX));
+  const ly = 100;
+
+  // Label background pill
+  ctx.fillStyle = 'rgba(5,8,16,0.85)';
+  ctx.beginPath();
+  ctx.roundRect(lx - tw / 2 - 7, ly - 13, tw + 14, 17, 8);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+  ctx.lineWidth = 0.5;
+  ctx.stroke();
+
+  // Label text
+  ctx.fillStyle = 'rgba(221,216,200,0.85)';
+  ctx.textAlign = 'center';
+  ctx.fillText(label, lx, ly);
+  ctx.restore();
 }
 
 // ════════════════════════════════════════════
@@ -890,6 +962,18 @@ function zoomToSpan(newSpan) {
 }
 
 // ════════════════════════════════════════════
+//  Y ZOOM SLIDER
+// ════════════════════════════════════════════
+const yzoomSlider = document.getElementById('yzoom-slider');
+yzoomSlider.addEventListener('input', () => {
+  yzoomSlider._dragging = true;
+  yScale = parseInt(yzoomSlider.value) / 100;
+  draw();
+});
+yzoomSlider.addEventListener('pointerup', () => { yzoomSlider._dragging = false; });
+yzoomSlider.addEventListener('pointercancel', () => { yzoomSlider._dragging = false; });
+
+// ════════════════════════════════════════════
 //  ZOOM SLIDER
 // ════════════════════════════════════════════
 const zoomSlider = document.getElementById('zoom-slider');
@@ -905,10 +989,11 @@ zoomSlider.addEventListener('input', () => {
 zoomSlider.addEventListener('pointerup', () => { zoomSlider._dragging = false; });
 zoomSlider.addEventListener('pointercancel', () => { zoomSlider._dragging = false; });
 
-// Reset button → full view
+// Reset button → full view + reset Y zoom
 document.getElementById('btn-reset').addEventListener('click', () => {
   viewStart = TIMELINE_START;
   viewEnd   = TIMELINE_END;
+  yScale    = 1.0;
   draw();
 });
 
@@ -981,10 +1066,19 @@ document.addEventListener('keydown', e => {
 // ════════════════════════════════════════════
 //  WHEEL ZOOM
 // ════════════════════════════════════════════
+//  WHEEL — horizontal zoom / Ctrl+wheel vertical zoom
+// ════════════════════════════════════════════
 canvas.addEventListener('wheel', e => {
   e.preventDefault();
-  const factor = e.deltaY > 0 ? 1.12 : 0.89;
-  zoomBy(factor, e.clientX);
+  if (e.ctrlKey || e.shiftKey) {
+    // Ctrl/Shift + wheel → vertical zoom
+    const factor = e.deltaY > 0 ? 1.15 : 0.87;
+    yScale = Math.max(0.3, Math.min(4.0, yScale * factor));
+    draw();
+  } else {
+    const factor = e.deltaY > 0 ? 1.12 : 0.89;
+    zoomBy(factor, e.clientX);
+  }
 }, { passive: false });
 
 // ════════════════════════════════════════════
@@ -1000,6 +1094,8 @@ canvas.addEventListener('pointerdown', e => {
 });
 
 canvas.addEventListener('pointermove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
   if (isDragging) {
     const dx = e.clientX - dragStartX;
     const span = viewEnd - viewStart;
@@ -1009,7 +1105,13 @@ canvas.addEventListener('pointermove', e => {
     draw();
   } else {
     handleHover(e.clientX, e.clientY);
+    draw();  // redraw for cursor line
   }
+});
+
+canvas.addEventListener('pointerleave', () => {
+  mouseX = -1; mouseY = -1;
+  draw();
 });
 
 canvas.addEventListener('pointerup', e => {
