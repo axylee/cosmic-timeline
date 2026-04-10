@@ -1210,19 +1210,20 @@ function drawPill(ev, y, opts = {}) {
 
   ctx.restore();
 
-  // ── ℹ button (hover only) ──
+  // ── ℹ button (hover only) — placed inside pill, left of right edge ──
   if (isHov) {
     const infoR = 7;
-    const infoX = Math.min(rx2 - infoR - 4, canvasW - infoR - 4);
+    // Place ℹ at right edge of VISIBLE pill area, with enough gap from edge
+    const infoX = Math.min(rx2 - infoR - 6, canvasW - infoR - 8);
     const infoY = y;
     ctx.save();
     ctx.beginPath();
     ctx.arc(infoX, infoY, infoR, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(5,8,16,0.85)';
+    ctx.fillStyle = 'rgba(5,8,16,0.90)';
     ctx.fill();
     ctx.strokeStyle = color;
-    ctx.lineWidth = 1;
-    ctx.globalAlpha = 0.8;
+    ctx.lineWidth = 1.2;
+    ctx.globalAlpha = 0.9;
     ctx.stroke();
     ctx.globalAlpha = 1;
     ctx.font = `bold 9px "Noto Sans TC", sans-serif`;
@@ -1234,13 +1235,13 @@ function drawPill(ev, y, opts = {}) {
     ctx.restore();
   }
 
-  // ── Label ──
-  const showLabel = ev.level === 1 || zoom > 0.20;
+  // ── Label — always show for child pills; use zoom threshold for others ──
+  const showLabel = isChild || ev.level === 1 || zoom > 0.20;
   if (showLabel) {
     ctx.save();
-    const fs      = ev.level === 1 ? 11 : 10;
-    const infoGap = isHov ? 20 : 0;
-    ctx.font      = `${ev.level === 1 ? '500 ' : ''}${fs}px "Noto Sans TC", sans-serif`;
+    const fs      = isChild ? 10 : (ev.level === 1 ? 11 : 10);
+    const infoGap = isHov ? 22 : 0;
+    ctx.font      = `${ev.level === 1 && !isChild ? '500 ' : ''}${fs}px "Noto Sans TC", sans-serif`;
     const tw      = ctx.measureText(ev.zh).width;
     const midX    = (rx1 + rx2) / 2;
     const cx      = Math.max(tw / 2 + 4, Math.min(rx2 - tw / 2 - infoGap - 4, midX));
@@ -1257,7 +1258,7 @@ function drawPill(ev, y, opts = {}) {
         ctx.fill();
       }
       ctx.fillStyle = isHov ? color : (inside && py === prefY
-        ? `rgba(255,255,255,${ev.level === 1 ? 0.9 : 0.75})`
+        ? `rgba(255,255,255,${isChild ? 0.85 : ev.level === 1 ? 0.9 : 0.75})`
         : `rgba(221,216,200,${ev.level === 1 ? 0.9 : 0.65})`);
       ctx.textAlign = 'center';
       ctx.fillText(ev.zh, cx, py);
@@ -1897,7 +1898,14 @@ function findEventsAt(mx, my) {
   const results  = [];
   events.forEach(ev => {
     if (!eventVisible(ev)) return;
-    const y = axisY(ev.axis);
+
+    // Determine Y — child pills are rendered at offset Y when parent is expanded
+    let y = axisY(ev.axis);
+    if (ev.parentEvent && expandedEvents.has(ev.parentEvent)) {
+      const parent = events.find(e => e.id === ev.parentEvent);
+      if (parent) y = childRowY(axisY(parent.axis), 1);
+    }
+
     if (ev.endYear) {
       const x1 = yearToX(ev.year), x2 = yearToX(ev.endYear);
       if (mx >= x1 - 4 && mx <= x2 + 4 && Math.abs(my - y) <= HIT_PILL + 4) {
@@ -2000,12 +2008,9 @@ function isInfoClick(ev, mx, my) {
 }
 
 function getPillY(ev) {
-  // Check if this is a child pill that's been rendered at offset Y
-  if (ev.parentEvent) {
+  if (ev.parentEvent && expandedEvents.has(ev.parentEvent)) {
     const parent = events.find(e => e.id === ev.parentEvent);
-    if (parent && expandedEvents.has(parent.id)) {
-      return childRowY(axisY(parent.axis), 1);
-    }
+    if (parent) return childRowY(axisY(parent.axis), 1);
   }
   return axisY(ev.axis);
 }

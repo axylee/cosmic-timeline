@@ -170,7 +170,8 @@
       "desc_zh": "地球最早期，地表熔融，隕石轟炸頻繁，大氣以水蒸氣、二氧化碳為主，無生命。",
       "desc_en": "Earth's earliest period: molten surface, frequent meteorite bombardment, no life.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/冥古宙",
-      "wiki_en": "https://en.wikipedia.org/wiki/Hadean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Hadean",
+      "parentEvent": "archean"
     },
     {
       "id": "moon-forms-event",
@@ -240,7 +241,8 @@
       "desc_zh": "地球史上最早、最嚴重的冰河期之一，由大氧化事件導致溫室氣體甲烷破壞而引發，持續3億年。",
       "desc_en": "One of Earth's earliest and most severe glaciations, triggered by the Great Oxidation Event destroying methane greenhouse gas; lasted 300 million years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/休倫冰期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Huronian_glaciation"
+      "wiki_en": "https://en.wikipedia.org/wiki/Huronian_glaciation",
+      "parentEvent": "great-oxidation-event"
     },
     {
       "id": "great-oxidation-event",
@@ -790,7 +792,8 @@
       "desc_zh": "臺灣原住民族多達16族，發展出豐富多元的文化，在平原、山地與東部各自建立部落社會。",
       "desc_en": "Over 16 indigenous tribes develop rich and diverse cultures across Taiwan's plains, mountains, and eastern coast.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣原住民族",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples",
+      "parentEvent": "tw-dapenkeng"
     },
     {
       "id": "trojan-war",
@@ -850,7 +853,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Confucius_Tang_Dynasty.jpg/640px-Confucius_Tang_Dynasty.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/春秋時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Spring_and_Autumn_period",
-      "endYear": -475
+      "endYear": -475,
+      "parentEvent": "western-zhou"
     },
     {
       "id": "zhou-states",
@@ -864,7 +868,8 @@
       "desc_en": "After Zhou moved east, rival states dominated: Five Hegemons in Spring & Autumn, Seven Kingdoms in Warring States.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/東周",
       "wiki_en": "https://en.wikipedia.org/wiki/Eastern_Zhou",
-      "endYear": -221
+      "endYear": -221,
+      "parentEvent": "spring-autumn"
     },
     {
       "id": "confucius-birth",
@@ -938,7 +943,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warring_States_Map.png/640px-Warring_States_Map.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/戰國時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Warring_States_period",
-      "endYear": -221
+      "endYear": -221,
+      "parentEvent": "spring-autumn"
     },
     {
       "id": "alexander",
@@ -1074,7 +1080,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Three_Kingdoms.png/640px-Three_Kingdoms.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
       "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
-      "endYear": 280
+      "endYear": 280,
+      "parentEvent": "han"
     },
     {
       "id": "three-kingdoms-wei",
@@ -1088,7 +1095,8 @@
       "desc_en": "Three Kingdoms: Cao Wei in the north, Shu Han in the southwest, Eastern Wu in the southeast.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
       "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
-      "endYear": 280
+      "endYear": 280,
+      "parentEvent": "three-kingdoms"
     },
     {
       "id": "yamato",
@@ -1118,7 +1126,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Jin_dynasty_280_CE.png/640px-Jin_dynasty_280_CE.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/晉朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Jin_dynasty_(265%E2%80%93420)",
-      "endYear": 420
+      "endYear": 420,
+      "parentEvent": "three-kingdoms"
     },
     {
       "id": "sixteen-kingdoms",
@@ -1147,7 +1156,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/NorthernSouthernDynasties.png/640px-NorthernSouthernDynasties.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南北朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Northern_and_Southern_dynasties",
-      "endYear": 581
+      "endYear": 581,
+      "parentEvent": "jin-dynasty"
     },
     {
       "id": "roman-empire-fall",
@@ -1222,7 +1232,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Heian_period_map.png/640px-Heian_period_map.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/平安時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Heian_period",
-      "endYear": 1185
+      "endYear": 1185,
+      "parentEvent": "yamato"
     },
     {
       "id": "viking-age",
@@ -1253,7 +1264,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Five_Dynasties_Ten_Kingdoms_953_CE.png/640px-Five_Dynasties_Ten_Kingdoms_953_CE.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五代十國",
       "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
-      "endYear": 960
+      "endYear": 960,
+      "parentEvent": "tang"
     },
     {
       "id": "five-dynasties-kingdoms",
@@ -1267,7 +1279,8 @@
       "desc_en": "Five successive dynasties in the north; ten independent kingdoms in the south for fifty turbulent years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五代十國",
       "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
-      "endYear": 960
+      "endYear": 960,
+      "parentEvent": "five-dynasties"
     },
     {
       "id": "song",
@@ -1312,7 +1325,8 @@
       "desc_en": "Southern Song in the south, Jin in the north, and rising Mongols — three powers before Yuan unification.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南宋",
       "wiki_en": "https://en.wikipedia.org/wiki/Southern_Song_dynasty",
-      "endYear": 1279
+      "endYear": 1279,
+      "parentEvent": "song"
     },
     {
       "id": "samurai-era",
@@ -1327,7 +1341,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Samurai_in_armour.jpg/640px-Samurai_in_armour.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/武士",
       "wiki_en": "https://en.wikipedia.org/wiki/Samurai",
-      "endYear": 1868
+      "endYear": 1868,
+      "parentEvent": "nara-heian"
     },
     {
       "id": "mongol-empire",
@@ -1420,7 +1435,8 @@
       "desc_en": "Johannes Gutenberg invents the movable-type printing press, enabling mass production of books and revolutionizing the spread of knowledge.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/640px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古騰堡聖經",
-      "wiki_en": "https://en.wikipedia.org/wiki/Gutenberg_Bible"
+      "wiki_en": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
+      "parentEvent": "renaissance"
     },
     {
       "id": "columbus",
@@ -1450,7 +1466,8 @@
       "desc_en": "Martin Luther posts his 95 Theses, triggering the Protestant Reformation and breaking the Catholic Church's religious monopoly in Europe.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Luther95Theses.jpg/640px-Luther95Theses.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/宗教改革",
-      "wiki_en": "https://en.wikipedia.org/wiki/Reformation"
+      "wiki_en": "https://en.wikipedia.org/wiki/Reformation",
+      "parentEvent": "renaissance"
     },
     {
       "id": "tw-dadu-kingdom",
@@ -1478,7 +1495,8 @@
       "desc_en": "Copernicus proposes the heliocentric model, overturning geocentrism and sparking the Scientific Revolution.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nikolaus_Kopernikus.jpg/640px-Nikolaus_Kopernikus.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/尼古拉·哥白尼",
-      "wiki_en": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus"
+      "wiki_en": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus",
+      "parentEvent": "renaissance"
     },
     {
       "id": "tw-formosa-named",
@@ -1505,7 +1523,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Tokugawa_Ieyasu2.jpg/640px-Tokugawa_Ieyasu2.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/江戶時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Edo_period",
-      "endYear": 1868
+      "endYear": 1868,
+      "parentEvent": "samurai-era"
     },
     {
       "id": "tw-dutch",
@@ -1519,7 +1538,8 @@
       "desc_en": "The Dutch East India Company occupies southwestern Taiwan, builds Fort Zeelandia, introduces agriculture and trade, systematically developing the island.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Fort_Zeelandia_by_Johannes_Vingboons.jpg/1280px-Fort_Zeelandia_by_Johannes_Vingboons.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/荷蘭統治台灣時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+      "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Formosa",
+      "parentEvent": "tw-formosa-named"
     },
     {
       "id": "tw-spanish",
@@ -1532,7 +1552,8 @@
       "desc_zh": "西班牙佔領雞籠（基隆）與淡水，建聖薩爾瓦多城，1642年被荷蘭人驅逐。",
       "desc_en": "Spain occupies Keelung and Tamsui, builds Fort San Salvador; expelled by the Dutch in 1642.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/西班牙統治台灣時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa"
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa",
+      "parentEvent": "tw-dutch"
     },
     {
       "id": "qing",
@@ -1590,7 +1611,8 @@
       "desc_en": "Newton publishes Principia Mathematica, establishing classical mechanics and unifying terrestrial and celestial physics.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg/640px-Portrait_of_Sir_Isaac_Newton%2C_1689.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/艾薩克·牛頓",
-      "wiki_en": "https://en.wikipedia.org/wiki/Isaac_Newton"
+      "wiki_en": "https://en.wikipedia.org/wiki/Isaac_Newton",
+      "parentEvent": "renaissance"
     },
     {
       "id": "industrial-revolution",
@@ -1873,7 +1895,8 @@
       "desc_zh": "中華民國宣布戒嚴，長達38年，是世界上持續時間最長的戒嚴之一，限制人民自由與政治活動。",
       "desc_en": "Martial law lasting 38 years — one of the world's longest — restricts civil liberties and political activities.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣戒嚴時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law",
+      "parentEvent": "tw-roc"
     },
     {
       "id": "dna-discovery",
@@ -1901,7 +1924,8 @@
       "desc_zh": "臺灣從農業經濟快速轉型為出口導向工業，成為亞洲四小龍之一，人均所得大幅提升。",
       "desc_en": "Taiwan rapidly transforms from agriculture to export-oriented industry, becoming one of the Four Asian Tigers with dramatically rising living standards.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣經濟奇蹟",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_Miracle"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_Miracle",
+      "parentEvent": "tw-roc"
     },
     {
       "id": "moon-landing",
