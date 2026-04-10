@@ -44,22 +44,76 @@ body {
 /* ─── HEADER ─── */
 #header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  padding: 16px 28px 12px;
+  padding: 12px 20px 10px;
   background: linear-gradient(to bottom, rgba(5,8,16,0.97) 60%, transparent);
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px;
+  display: flex; align-items: center; gap: 16px;
 }
 #header h1 {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 14px; font-weight: 700;
   letter-spacing: 0.18em; color: var(--text);
-  white-space: nowrap;
+  white-space: nowrap; flex-shrink: 0;
 }
 #header p {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 10px; letter-spacing: 0.15em;
-  color: var(--text-muted);
+  color: var(--text-muted); white-space: nowrap;
 }
+
+/* ── SEARCH BOX ── */
+#search-wrap {
+  flex: 1; max-width: 360px; position: relative;
+}
+#search-input {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 6px 14px 6px 34px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 12px; color: var(--text);
+  outline: none; transition: all .2s;
+}
+#search-input::placeholder { color: rgba(221,216,200,0.3); }
+#search-input:focus {
+  border-color: rgba(167,139,250,0.5);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 3px rgba(167,139,250,0.12);
+}
+#search-icon {
+  position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+  color: rgba(221,216,200,0.3); font-size: 13px; pointer-events: none;
+}
+#search-clear {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  color: rgba(221,216,200,0.35); font-size: 14px; cursor: pointer;
+  display: none; background: none; border: none; padding: 0; line-height: 1;
+}
+#search-clear:hover { color: var(--text); }
+#search-results {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+  background: rgba(8,12,24,0.97);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  max-height: 340px; overflow-y: auto;
+  display: none; z-index: 200;
+}
+#search-results.show { display: block; }
+.sr-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 14px; cursor: pointer;
+  transition: background .1s; border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.sr-item:last-child { border-bottom: none; }
+.sr-item:hover, .sr-item.active { background: rgba(255,255,255,0.06); }
+.sr-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.sr-main { flex: 1; min-width: 0; }
+.sr-zh { font-size: 13px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sr-zh mark { background: none; color: #a78bfa; font-weight: 600; }
+.sr-en { font-size: 10px; color: rgba(221,216,200,0.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sr-meta { font-size: 10px; color: rgba(221,216,200,0.3); white-space: nowrap; flex-shrink: 0; }
+.sr-empty { padding: 16px 14px; color: rgba(221,216,200,0.3); font-size: 12px; text-align: center; }
 
 /* ─── AXIS LEGEND ─── */
 #legend {
@@ -611,6 +665,12 @@ body {
 
 <div id="header">
   <h1>COSMIC TIMELINE · 宇宙歷史時間軸</h1>
+  <div id="search-wrap">
+    <span id="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="搜尋事件… 例如：牛頓、Newton、1687" autocomplete="off" spellcheck="false">
+    <button id="search-clear" onclick="clearSearch()">✕</button>
+    <div id="search-results"></div>
+  </div>
   <p>138億年 · 13.8 BILLION YEARS</p>
 </div>
 
@@ -3221,6 +3281,172 @@ function updateCategoryIndicator() {
 
 // Hook updateCategoryIndicator into draw — called at end of draw()
 // (see draw() function above — updateCategoryIndicator() added there directly)
+
+// ════════════════════════════════════════════
+//  SEARCH
+// ════════════════════════════════════════════
+let _searchIdx = -1;  // keyboard selection index
+
+function searchEvents(query) {
+  if (!query || query.length < 1) return [];
+  const q = query.toLowerCase().trim();
+  return events.filter(ev => {
+    if (ev.zh?.toLowerCase().includes(q)) return true;
+    if (ev.en?.toLowerCase().includes(q)) return true;
+    // Year search: e.g. "1687" or "-300"
+    if (q.match(/^-?\d+$/) && String(ev.year).includes(q)) return true;
+    return false;
+  }).slice(0, 20);
+}
+
+function highlightMatch(text, query) {
+  if (!text) return '';
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(`(${q})`, 'gi'), '<mark>$1</mark>');
+}
+
+function formatYearShort(y) {
+  if (!y && y !== 0) return '';
+  const abs = Math.abs(y);
+  if (abs >= 1e9)  return (y < 0 ? '-' : '') + (abs/1e9).toFixed(1) + '億年';
+  if (abs >= 1e6)  return (y < 0 ? '-' : '') + (abs/1e6).toFixed(1) + '百萬年';
+  if (abs >= 1e4)  return (y < 0 ? (abs/1e4).toFixed(1)+'萬年前' : '西元 '+y);
+  return y < 0 ? Math.abs(y)+'年前' : '西元 '+y+'年';
+}
+
+function renderSearchResults(query) {
+  const box = document.getElementById('search-results');
+  const matches = searchEvents(query);
+  _searchIdx = -1;
+
+  if (!query.trim()) { box.classList.remove('show'); return; }
+
+  if (matches.length === 0) {
+    box.innerHTML = '<div class="sr-empty">找不到相關事件</div>';
+    box.classList.add('show');
+    return;
+  }
+
+  box.innerHTML = matches.map((ev, i) => {
+    const ax    = AXES[ev.axis];
+    const color = axisEffectiveColor(ev.axis);
+    const zh    = highlightMatch(ev.zh || '', query);
+    const en    = highlightMatch(ev.en || '', query);
+    const meta  = formatYearShort(ev.year);
+    return `<div class="sr-item" data-idx="${i}" onmousedown="selectSearchResult(${i})">
+      <div class="sr-dot" style="background:${color}"></div>
+      <div class="sr-main">
+        <div class="sr-zh">${zh}</div>
+        ${ev.en ? `<div class="sr-en">${en}</div>` : ''}
+      </div>
+      <div class="sr-meta">${ax?.label||ev.axis} · ${meta}</div>
+    </div>`;
+  }).join('');
+  box.classList.add('show');
+  box._matches = matches;
+}
+
+function selectSearchResult(idx) {
+  const box = document.getElementById('search-results');
+  const matches = box._matches || [];
+  const ev = matches[idx];
+  if (!ev) return;
+  navigateToEvent(ev);
+  closeSearch();
+}
+
+function navigateToEvent(ev) {
+  // Calculate target span based on event type
+  const span = ev.endYear
+    ? Math.abs(ev.endYear - ev.year) * 4
+    : Math.max(200, Math.abs(ev.year) * 0.001 + 100);
+
+  const targetCenter = ev.endYear
+    ? (ev.year + ev.endYear) / 2
+    : ev.year;
+
+  const targetStart = targetCenter - span / 2;
+  const targetEnd   = targetCenter + span / 2;
+
+  // Animate zoom + pan
+  animateToView(targetStart, targetEnd, () => {
+    // After navigation, show popup
+    const found = events.find(e => e.id === ev.id);
+    if (found) showPopup(found);
+  });
+}
+
+function animateToView(targetStart, targetEnd, onDone) {
+  const startVS = viewStart, startVE = viewEnd;
+  const dur = 600, t0 = performance.now();
+
+  function ease(t) { return t < .5 ? 2*t*t : -1+(4-2*t)*t; }
+
+  function step(now) {
+    const t = Math.min(1, (now - t0) / dur);
+    const e = ease(t);
+    viewStart = startVS + (targetStart - startVS) * e;
+    viewEnd   = startVE + (targetEnd   - startVE) * e;
+    clampView();
+    draw();
+    if (t < 1) requestAnimationFrame(step);
+    else if (onDone) onDone();
+  }
+  requestAnimationFrame(step);
+}
+
+function closeSearch() {
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-results').classList.remove('show');
+  document.getElementById('search-clear').style.display = 'none';
+  _searchIdx = -1;
+}
+
+function clearSearch() {
+  closeSearch();
+  document.getElementById('search-input').focus();
+}
+
+// Wire up search input
+document.getElementById('search-input').addEventListener('input', e => {
+  const q = e.target.value;
+  document.getElementById('search-clear').style.display = q ? '' : 'none';
+  renderSearchResults(q);
+});
+
+document.getElementById('search-input').addEventListener('keydown', e => {
+  const box = document.getElementById('search-results');
+  const items = box.querySelectorAll('.sr-item');
+  const matches = box._matches || [];
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    _searchIdx = Math.min(_searchIdx + 1, items.length - 1);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    _searchIdx = Math.max(_searchIdx - 1, 0);
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (_searchIdx >= 0) selectSearchResult(_searchIdx);
+    else if (matches.length > 0) selectSearchResult(0);
+    return;
+  } else if (e.key === 'Escape') {
+    closeSearch(); return;
+  }
+
+  // Highlight active item
+  items.forEach((item, i) => {
+    item.classList.toggle('active', i === _searchIdx);
+    if (i === _searchIdx) item.scrollIntoView({ block: 'nearest' });
+  });
+});
+
+// Close on outside click
+document.addEventListener('click', e => {
+  if (!document.getElementById('search-wrap').contains(e.target)) {
+    document.getElementById('search-results').classList.remove('show');
+  }
+});
 
 // ════════════════════════════════════════════
 //  INIT
