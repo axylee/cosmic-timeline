@@ -852,12 +852,12 @@ function buildAxes(axesArray) {
 // Groups defined here (visual logic, not data)
 // group membership comes from axes[].group in JSON
 const AXIS_GROUP_DEFS = {
-  natural:      { label:'自然科學', color:'#818cf8' },
-  human:        { label:'人文',     color:'#fb923c' },
-  arts:         { label:'藝術文化', color:'#f9a8d4' },
-  religion:     { label:'宗教',     color:'#e879f9' },
-  civilization: { label:'文明',     color:'#f87171' },
-  nation:       { label:'國家地區', color:'#fbbf24' },
+  natural:      { label:'自然科學', color:'#818cf8' },  // 靛藍
+  human:        { label:'人文',     color:'#e2e8f0' },  // 白銀（跨文明色）
+  arts:         { label:'藝術文化', color:'#f472b6' },  // 玫瑰桃
+  religion:     { label:'宗教',     color:'#fde68a' },  // 淡金（宗教統一淡色）
+  civilization: { label:'文明',     color:'#f97316' },  // 橙（東方暖色代表）
+  nation:       { label:'國家地區', color:'#3b82f6' },  // 藍（歐洲/西方）
 };
 
 // These are rebuilt after axes load

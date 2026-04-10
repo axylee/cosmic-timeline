@@ -75,7 +75,7 @@
     {
       "id": "arts",
       "label": "藝術文化",
-      "color": "#f9a8d4",
+      "color": "#f472b6",
       "order": 6,
       "parent": "cross",
       "startYear": -800,
@@ -86,7 +86,7 @@
     {
       "id": "east",
       "label": "東方文明",
-      "color": "#f87171",
+      "color": "#f97316",
       "order": 7,
       "parent": "cross",
       "startYear": -3500,
@@ -97,7 +97,7 @@
     {
       "id": "mideast",
       "label": "中東",
-      "color": "#fde68a",
+      "color": "#f59e0b",
       "order": 8,
       "parent": "east",
       "startYear": -3500,
@@ -108,7 +108,7 @@
     {
       "id": "judaism",
       "label": "猶太教",
-      "color": "#fcd34d",
+      "color": "#fde68a",
       "order": 9,
       "parent": "mideast",
       "startYear": -2000,
@@ -119,7 +119,7 @@
     {
       "id": "christianity",
       "label": "基督教",
-      "color": "#f0abfc",
+      "color": "#c4b5fd",
       "order": 10,
       "parent": "judaism",
       "startYear": -6,
@@ -130,7 +130,7 @@
     {
       "id": "islam",
       "label": "伊斯蘭教",
-      "color": "#6ee7b7",
+      "color": "#d9f99d",
       "order": 11,
       "parent": "mideast",
       "startYear": 570,
@@ -141,7 +141,7 @@
     {
       "id": "india",
       "label": "印度",
-      "color": "#86efac",
+      "color": "#fb923c",
       "order": 12,
       "parent": "east",
       "startYear": -2600,
@@ -152,7 +152,7 @@
     {
       "id": "hinduism",
       "label": "印度教",
-      "color": "#fbbf24",
+      "color": "#fed7aa",
       "order": 13,
       "parent": "india",
       "startYear": -1500,
@@ -163,7 +163,7 @@
     {
       "id": "buddhism",
       "label": "佛教",
-      "color": "#fda4af",
+      "color": "#fecaca",
       "order": 14,
       "parent": "hinduism",
       "startYear": -490,
@@ -174,7 +174,7 @@
     {
       "id": "china",
       "label": "中國",
-      "color": "#fca5a5",
+      "color": "#ef4444",
       "order": 15,
       "parent": "east",
       "startYear": -5000,
@@ -185,7 +185,7 @@
     {
       "id": "china-b",
       "label": "並立政權",
-      "color": "#fb923c",
+      "color": "#dc2626",
       "order": 16,
       "parent": "china",
       "startYear": -771,
@@ -196,7 +196,7 @@
     {
       "id": "taoism",
       "label": "道教",
-      "color": "#a7f3d0",
+      "color": "#fca5a5",
       "order": 17,
       "parent": "china",
       "startYear": -550,
@@ -207,7 +207,7 @@
     {
       "id": "taiwan",
       "label": "臺灣",
-      "color": "#fbcfe8",
+      "color": "#f43f5e",
       "order": 18,
       "parent": "east",
       "startYear": -30000,
@@ -218,7 +218,7 @@
     {
       "id": "japan",
       "label": "日本",
-      "color": "#fdba74",
+      "color": "#fb7185",
       "order": 19,
       "parent": "east",
       "startYear": -300,
@@ -229,7 +229,7 @@
     {
       "id": "west",
       "label": "西方文明",
-      "color": "#c084fc",
+      "color": "#7c3aed",
       "order": 20,
       "parent": "cross",
       "startYear": -3500,
@@ -240,7 +240,7 @@
     {
       "id": "greece",
       "label": "希臘羅馬",
-      "color": "#c4b5fd",
+      "color": "#8b5cf6",
       "order": 21,
       "parent": "west",
       "startYear": -1600,
@@ -251,7 +251,7 @@
     {
       "id": "europe",
       "label": "歐洲",
-      "color": "#a5b4fc",
+      "color": "#3b82f6",
       "order": 22,
       "parent": "west",
       "startYear": 500,
@@ -262,7 +262,7 @@
     {
       "id": "americas",
       "label": "美洲",
-      "color": "#93c5fd",
+      "color": "#60a5fa",
       "order": 23,
       "parent": "west",
       "startYear": 1492,
