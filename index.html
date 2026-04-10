@@ -528,12 +528,19 @@ const LANE_GAP_BASE = 54;   // 預設每條軸的高度間距（px）
 const TOP_MARGIN    = 138;  // 頂部保留給時代標籤
 
 // ── 計算可見軸清單（已排序）──
+// 如果目前視窗右邊界超過 endYear，且 zoom 夠深看到子軸層，就隱藏該已消亡文明
 function getVisibleAxes() {
   const zoom = currentZoom();
+  // 當 zoom 夠深（子軸可見），用 viewEnd 判斷文明是否已消亡
+  const checkEnd = zoom >= 0.58;
+
   return Object.entries(AXES)
     .filter(([id, ax]) => {
       if (hiddenAxes.has(id)) return false;
+      // 子軸 zoom 門檻
       if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
+      // 消亡判斷：zoom 夠深 + 有 endYear + 視窗左邊界已超過 endYear → 隱藏
+      if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
       return true;
     })
     .sort((a, b) => a[1].order - b[1].order);
@@ -675,7 +682,10 @@ function eventVisible(ev) {
   const ax = AXES[ev.axis];
   if (!ax) return false;
   if (hiddenAxes.has(ev.axis)) return false;
+  // Use same visibility logic as getVisibleAxes
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
+  const checkEnd = zoom >= 0.58;
+  if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
   if (ev.level === 1) return true;
   if (ev.level === 2) return zoom > 0.25;
   if (ev.level === 3) return zoom > 0.55;
