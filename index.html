@@ -303,13 +303,15 @@ body {
 #popup-overlay.show #popup { transform: translateY(0) scale(1); }
 
 .popup-img {
-  width: 100%; height: 220px; object-fit: cover;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
   border-radius: 13px 13px 0 0;
-  background: #0a0e1a;
+  background: #070b18;
   display: block;
 }
 .popup-img-placeholder {
-  width: 100%; height: 220px;
+  width: 100%; height: 160px;
   border-radius: 13px 13px 0 0;
   background: linear-gradient(135deg, #0a0e1a 0%, #131929 100%);
   display: flex; align-items: center; justify-content: center;
@@ -2198,18 +2200,24 @@ document.addEventListener('pointerdown', e => {
 // Check if click is on the ℹ button of a hovered pill
 function isInfoClick(ev, mx, my) {
   if (!ev.endYear) return false;
-  const x2     = yearToX(ev.endYear);
-  const y      = getPillY(ev);
-  const infoX  = Math.min(x2 - 11, canvasW - 11);
-  return Math.hypot(mx - infoX, my - y) <= 10;
+  // Use the same rx2 as drawPill (clamped to canvas)
+  const x2    = yearToX(ev.endYear);
+  const rx2   = Math.min(canvasW + 40, x2);
+  const y     = getPillY(ev);
+  const infoX = Math.min(rx2 - 11, canvasW - 11);
+  return Math.hypot(mx - infoX, my - y) <= 12;
 }
 
 function getPillY(ev) {
+  // Child pills expanded below parent
   if (resolvedParent(ev) && expandedEvents.has(resolvedParent(ev))) {
     const parent = events.find(e => e.id === resolvedParent(ev));
     if (parent) return childRowY(axisY(parent.axis), 1);
   }
-  return axisY(ev.axis);
+  // Apply stacking offset for partial-overlap pills
+  const offsets = getPillOffsets();
+  const base = axisY(ev.axis);
+  return base + (offsets.get(ev.id) ?? 0);
 }
 
 function handleClick(mx, my) {
