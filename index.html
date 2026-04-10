@@ -74,9 +74,19 @@ body {
   cursor: pointer; transition: opacity .2s;
 }
 .leg:hover { opacity: 1; }
+.leg-sub {
+  font-size: 9px; opacity: 0.45;
+}
 .leg-dot {
   width: 7px; height: 7px; border-radius: 50%;
   flex-shrink: 0;
+}
+.leg-sub .leg-dot { width: 5px; height: 5px; }
+#legend-zoom-hint {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 8px; color: rgba(221,216,200,0.2);
+  letter-spacing: 0.05em; padding: 0 4px;
+  pointer-events: none;
 }
 
 /* ─── MAIN CANVAS ─── */
@@ -358,27 +368,21 @@ body {
 </div>
 
 <div id="legend">
-  <div class="leg" data-axis="cosmos">
-    <div class="leg-dot" style="background:var(--cosmos)"></div>宇宙 Cosmos
-  </div>
-  <div class="leg" data-axis="earth">
-    <div class="leg-dot" style="background:var(--earth)"></div>地球 Earth
-  </div>
-  <div class="leg" data-axis="life">
-    <div class="leg-dot" style="background:var(--life)"></div>生命 Life
-  </div>
-  <div class="leg" data-axis="human-evo">
-    <div class="leg-dot" style="background:var(--human)"></div>人類 Human
-  </div>
-  <div class="leg" data-axis="east">
-    <div class="leg-dot" style="background:var(--east)"></div>東方 East
-  </div>
-  <div class="leg" data-axis="west">
-    <div class="leg-dot" style="background:var(--west)"></div>西方 West
-  </div>
-  <div class="leg" data-axis="cross">
-    <div class="leg-dot" style="background:var(--cross)"></div>跨文明 Cross
-  </div>
+  <div class="leg" data-axis="cosmos"><div class="leg-dot" style="background:#a78bfa"></div>宇宙</div>
+  <div class="leg" data-axis="earth"><div class="leg-dot" style="background:#60a5fa"></div>地球</div>
+  <div class="leg" data-axis="life"><div class="leg-dot" style="background:#34d399"></div>生命</div>
+  <div class="leg" data-axis="human-evo"><div class="leg-dot" style="background:#fbbf24"></div>人類演化</div>
+  <div class="leg" data-axis="cross"><div class="leg-dot" style="background:#e2e8f0"></div>跨文明</div>
+  <div class="leg" data-axis="east"><div class="leg-dot" style="background:#f87171"></div>東方</div>
+  <div class="leg" data-axis="west"><div class="leg-dot" style="background:#c084fc"></div>西方</div>
+  <span id="legend-zoom-hint">← zoom in 展開子軸</span>
+  <div class="leg leg-sub" data-axis="china"><div class="leg-dot" style="background:#fca5a5"></div>中國</div>
+  <div class="leg leg-sub" data-axis="japan"><div class="leg-dot" style="background:#fdba74"></div>日本</div>
+  <div class="leg leg-sub" data-axis="mideast"><div class="leg-dot" style="background:#fde68a"></div>中東</div>
+  <div class="leg leg-sub" data-axis="india"><div class="leg-dot" style="background:#86efac"></div>印度</div>
+  <div class="leg leg-sub" data-axis="greece"><div class="leg-dot" style="background:#c4b5fd"></div>希臘羅馬</div>
+  <div class="leg leg-sub" data-axis="europe"><div class="leg-dot" style="background:#a5b4fc"></div>歐洲</div>
+  <div class="leg leg-sub" data-axis="americas"><div class="leg-dot" style="background:#93c5fd"></div>美洲</div>
 </div>
 
 <canvas id="timeline-canvas"></canvas>
@@ -460,36 +464,59 @@ const NOW = 2026;
 const TIMELINE_START = -TOTAL_YEARS; // -13.8B
 const TIMELINE_END   =  NOW;
 
-const AXIS_COLORS = {
-  cosmos:    '#a78bfa',
-  earth:     '#60a5fa',
-  life:      '#34d399',
-  'human-evo':'#fbbf24',
-  east:      '#f87171',
-  west:      '#c084fc',
-  cross:     '#e2e8f0'
+// ════════════════════════════════════════════
+//  AXIS TREE — 樹狀軸線結構
+//  每個軸有：color, label, startYear, parentAxis,
+//  baseY(0-1), zoomThreshold(子軸顯示最低zoom)
+// ════════════════════════════════════════════
+const AXES = {
+  // ── 主幹軸 ──
+  cosmos:     { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, parent:null,     baseY:0.14, zoomMin:0 },
+  earth:      { color:'#60a5fa', label:'地球',     startYear:-4540000000,  parent:'cosmos', baseY:0.26, zoomMin:0 },
+  life:       { color:'#34d399', label:'生命',     startYear:-3800000000,  parent:'earth',  baseY:0.38, zoomMin:0 },
+  'human-evo':{ color:'#fbbf24', label:'人類演化', startYear:-4000000,     parent:'life',   baseY:0.50, zoomMin:0 },
+  cross:      { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       parent:'human-evo', baseY:0.60, zoomMin:0 },
+  east:       { color:'#f87171', label:'東方文明', startYear:-3500,        parent:'cross',  baseY:0.70, zoomMin:0 },
+  west:       { color:'#c084fc', label:'西方文明', startYear:-3500,        parent:'cross',  baseY:0.84, zoomMin:0 },
+
+  // ── 東方子軸 (zoom > 0.65 才顯示) ──
+  china:      { color:'#fca5a5', label:'中國',     startYear:-2070,        parent:'east',   baseY:0.655, zoomMin:0.65 },
+  japan:      { color:'#fdba74', label:'日本',     startYear:-660,         parent:'east',   baseY:0.685, zoomMin:0.65 },
+  mideast:    { color:'#fde68a', label:'中東',     startYear:-3000,        parent:'east',   baseY:0.715, zoomMin:0.65 },
+  india:      { color:'#86efac', label:'印度',     startYear:-2600,        parent:'east',   baseY:0.745, zoomMin:0.65 },
+
+  // ── 西方子軸 (zoom > 0.65 才顯示) ──
+  greece:     { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         parent:'west',   baseY:0.820, zoomMin:0.65 },
+  europe:     { color:'#a5b4fc', label:'歐洲',     startYear:500,          parent:'west',   baseY:0.850, zoomMin:0.65 },
+  americas:   { color:'#93c5fd', label:'美洲',     startYear:1492,         parent:'west',   baseY:0.880, zoomMin:0.65 },
 };
 
-const AXIS_LABELS = {
-  cosmos:    '宇宙',
-  earth:     '地球',
-  life:      '生命',
-  'human-evo':'人類演化',
-  east:      '東方文明',
-  west:      '西方文明',
-  cross:     '跨文明'
-};
+// Which axes are currently visible (computed each frame)
+function getVisibleAxes() {
+  const zoom = currentZoom();
+  return Object.entries(AXES).filter(([id, ax]) => {
+    if (hiddenAxes.has(id)) return false;
+    if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
+    return true;
+  });
+}
 
-// Track vertical positions (0–1, mapped to canvas height band)
-const AXIS_Y = {
-  cosmos:    0.22,
-  earth:     0.35,
-  life:      0.48,
-  'human-evo':0.57,
-  east:      0.67,
-  cross:     0.76,
-  west:      0.85
-};
+// Get Y position for an axis
+function getAxisY(id) {
+  const ax = AXES[id];
+  if (!ax) return canvasH * 0.5;
+  const centerFrac = 0.50;
+  const effectiveH = canvasH - 140;
+  const topMargin  = 90;
+  return topMargin + effectiveH * centerFrac
+       + (ax.baseY - centerFrac) * effectiveH * yScale
+       + yOffset;
+}
+
+// Legacy helper used by events
+function axisY(axisId, subtrack = 0) {
+  return getAxisY(axisId) + subtrack * 18 * Math.max(1, yScale);
+}
 
 // ════════════════════════════════════════════
 //  STATE
@@ -497,8 +524,8 @@ const AXIS_Y = {
 let events = [];
 let viewStart = TIMELINE_START;
 let viewEnd   = TIMELINE_END;
-let yScale    = 1.0;   // vertical spacing multiplier
-let yOffset   = 0;     // vertical pan offset in pixels
+let yScale    = 1.0;
+let yOffset   = 0;
 let isDragging = false;
 let dragStartX = 0;
 let dragViewStart = 0;
@@ -508,10 +535,6 @@ let canvasW = 0, canvasH = 0;
 let dpr = window.devicePixelRatio || 1;
 let hiddenAxes = new Set();
 let lastFrameTime = 0;
-
-// ════════════════════════════════════════════
-//  CANVAS SETUP
-// ════════════════════════════════════════════
 const starsCanvas = document.getElementById('stars-canvas');
 const starsCtx = starsCanvas.getContext('2d');
 const canvas = document.getElementById('timeline-canvas');
@@ -569,23 +592,6 @@ function yearToX(year) {
 function xToYear(x) {
   return viewStart + (x / canvasW) * (viewEnd - viewStart);
 }
-function axisY(axisId, subtrack = 0) {
-  const baseFrac   = AXIS_Y[axisId] || 0.5;
-  const centerFrac = 0.54;
-  const effectiveH = canvasH - 140;
-  const topMargin  = 90;
-  const y = topMargin + effectiveH * centerFrac
-          + (baseFrac - centerFrac) * effectiveH * yScale
-          + subtrack * 20 * yScale
-          + yOffset;
-  return y;
-}
-
-// Total content height when yScale > 1
-function contentHeight() {
-  return (canvasH - 140) * yScale + 140;
-}
-
 // ════════════════════════════════════════════
 //  ZOOM LEVEL → event visibility
 // ════════════════════════════════════════════
@@ -596,8 +602,11 @@ function currentZoom() {
   return 1 - Math.log(span) / Math.log(maxSpan);
 }
 function eventVisible(ev) {
-  if (hiddenAxes.has(ev.axis)) return false;
   const zoom = currentZoom();
+  const ax = AXES[ev.axis];
+  if (!ax) return false;
+  if (hiddenAxes.has(ev.axis)) return false;
+  if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   if (ev.level === 1) return true;
   if (ev.level === 2) return zoom > 0.25;
   if (ev.level === 3) return zoom > 0.55;
@@ -607,6 +616,9 @@ function dotRadius(ev) {
   const zoom = currentZoom();
   const base = ev.level === 1 ? 6 : ev.level === 2 ? 4.5 : 3;
   return base + zoom * 2;
+}
+function contentHeight() {
+  return (canvasH - 140) * Math.max(1, yScale) + 140;
 }
 
 // ════════════════════════════════════════════
@@ -631,80 +643,167 @@ function formatYearShort(y) {
 }
 
 // ════════════════════════════════════════════
-//  DRAW ERA BANDS
+//  DRAW ERA BANDS — 高對比時代色塊
 // ════════════════════════════════════════════
 const ERA_BANDS = [
-  { start: -13800000000, end: -4600000000, color: 'rgba(120,60,200,0.04)', label: 'Cosmic Dawn' },
-  { start: -4600000000,  end:  -541000000, color: 'rgba(40,90,180,0.04)',  label: 'Earth & Life' },
-  { start:  -541000000,  end:   -2600000,  color: 'rgba(30,140,80,0.04)',  label: 'Complex Life' },
-  { start:   -2600000,   end:    -10000,   color: 'rgba(180,130,20,0.04)', label: 'Human Evolution' },
-  { start:    -10000,    end:     -500,    color: 'rgba(180,60,20,0.07)',  label: '古代 Ancient' },
-  { start:     -500,     end:      500,    color: 'rgba(160,60,60,0.07)',  label: '古典 Classical' },
-  { start:      500,     end:     1400,    color: 'rgba(40,60,120,0.07)',  label: '中世紀 Medieval' },
-  { start:     1400,     end:     1800,    color: 'rgba(80,40,120,0.07)',  label: '近代 Early Modern' },
-  { start:     1800,     end:     1950,    color: 'rgba(20,80,100,0.09)',  label: '工業時代 Industrial' },
-  { start:     1950,     end:     2026,    color: 'rgba(20,100,120,0.11)', label: '當代 Contemporary' },
+  { start:-13800000000, end:-4600000000, color:[120,50,220],  zh:'宇宙誕生',       en:'COSMIC DAWN'    },
+  { start:-4600000000,  end:-541000000,  color:[30,80,200],   zh:'地球與生命',     en:'EARTH & LIFE'   },
+  { start:-541000000,   end:-2600000,    color:[20,150,80],   zh:'複雜生命',       en:'COMPLEX LIFE'   },
+  { start:-2600000,     end:-10000,      color:[180,140,10],  zh:'人類演化',       en:'HUMAN EVOLUTION'},
+  { start:-10000,       end:-3000,       color:[200,80,20],   zh:'史前文明',       en:'PREHISTORIC'    },
+  { start:-3000,        end:-500,        color:[200,50,40],   zh:'古代',           en:'ANCIENT'        },
+  { start:-500,         end:500,         color:[160,40,90],   zh:'古典時代',       en:'CLASSICAL'      },
+  { start:500,          end:1400,        color:[40,60,170],   zh:'中世紀',         en:'MEDIEVAL'       },
+  { start:1400,         end:1800,        color:[80,40,160],   zh:'文藝復興·大航海', en:'RENAISSANCE'    },
+  { start:1800,         end:1950,        color:[10,100,120],  zh:'工業時代',       en:'INDUSTRIAL'     },
+  { start:1950,         end:2026,        color:[10,120,150],  zh:'當代',           en:'CONTEMPORARY'   },
 ];
 
 function drawEraBands() {
   const zoom = currentZoom();
-  const bandOpacity = Math.min(1, zoom * 2.5);
   ERA_BANDS.forEach(band => {
     const x1 = yearToX(band.start);
     const x2 = yearToX(band.end);
     if (x2 < -10 || x1 > canvasW + 10) return;
     const rx1 = Math.max(0, x1);
     const rx2 = Math.min(canvasW, x2);
-    const w = rx2 - rx1;
+    const w   = rx2 - rx1;
     if (w < 1) return;
-    ctx.fillStyle = band.color;
-    ctx.globalAlpha = bandOpacity;
-    ctx.fillRect(rx1, 80, w, canvasH - 80);
-    ctx.globalAlpha = 1;
+    const [r,g,b] = band.color;
 
-    // Band label at higher zoom
-    if (zoom > 0.4 && w > 80) {
+    // Background fill — always present, stronger when zoomed
+    const fillAlpha = 0.08 + zoom * 0.1;
+    ctx.fillStyle = `rgba(${r},${g},${b},${fillAlpha})`;
+    ctx.fillRect(rx1, 0, w, canvasH);
+
+    // Vertical border line at start of each era
+    if (x1 > 2 && x1 < canvasW - 2) {
+      ctx.beginPath();
+      ctx.moveTo(x1, 0);
+      ctx.lineTo(x1, canvasH);
+      ctx.strokeStyle = `rgba(${r+80},${g+80},${b+80},${0.25 + zoom * 0.3})`;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([]);
+      ctx.stroke();
+    }
+
+    // Era label banner — always visible regardless of zoom
+    if (w > 30) {
+      const cx = Math.max(rx1 + 6, Math.min(rx2 - 6, rx1 + w / 2));
       ctx.save();
-      ctx.font = '9px "Noto Sans TC", sans-serif';
-      ctx.fillStyle = `rgba(221,216,200,${0.2 * bandOpacity})`;
+      ctx.beginPath();
+      ctx.rect(rx1, 0, w, canvasH);
+      ctx.clip();
+
+      // Top colour accent strip
+      ctx.fillStyle = `rgba(${r},${g},${b},${0.35 + zoom * 0.2})`;
+      ctx.fillRect(rx1, 78, w, 32);
+
+      // Chinese label
+      const bigSz = Math.min(16, Math.max(10, w / 10));
+      ctx.font = `700 ${bigSz}px "Noto Sans TC", sans-serif`;
+      ctx.fillStyle = `rgba(255,255,255,0.92)`;
       ctx.textAlign = 'center';
-      ctx.fillText(band.label.toUpperCase(), rx1 + w / 2, 90);
+      ctx.fillText(band.zh, cx, 93);
+
+      // English sublabel
+      if (w > 60) {
+        ctx.font = `400 ${Math.max(8, bigSz - 4)}px "Noto Sans TC", sans-serif`;
+        ctx.fillStyle = `rgba(255,255,255,0.55)`;
+        ctx.fillText(band.en, cx, 93 + bigSz);
+      }
       ctx.restore();
     }
   });
 }
 
 // ════════════════════════════════════════════
-//  DRAW AXIS LINES
+//  DRAW AXIS LINES — dynamic start + mind-map branches
 // ════════════════════════════════════════════
 function drawAxisLines() {
-  Object.entries(AXIS_Y).forEach(([id, yFrac]) => {
-    if (hiddenAxes.has(id)) return;
-    const y = axisY(id, 0);
-    const color = AXIS_COLORS[id];
+  const visAxes = getVisibleAxes();
+  const zoom = currentZoom();
+
+  // Draw branches first (under the lines)
+  visAxes.forEach(([id, ax]) => {
+    if (!ax.parent || !AXES[ax.parent]) return;
+    const parentVisible = visAxes.find(([pid]) => pid === ax.parent);
+    if (!parentVisible) return;
+
+    const color    = ax.color;
+    const y        = getAxisY(id);
+    const parentY  = getAxisY(ax.parent);
+    const startX   = yearToX(ax.startYear);
+    if (startX > canvasW || Math.abs(y - parentY) < 2) return;
+
+    const forkX = Math.max(-40, startX);
+
+    // Mind-map S-curve: starts horizontal from parent, curves down to child
+    const dy = y - parentY;
+    const bendW = Math.min(Math.abs(dy) * 1.2, 80);
 
     ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(canvasW, y);
-    ctx.strokeStyle = color + '55';
-    ctx.lineWidth = 1.5;
+    ctx.moveTo(forkX, parentY);
+    ctx.bezierCurveTo(
+      forkX + bendW,       parentY,       // control 1: go right from parent
+      forkX + bendW * 0.4, y,             // control 2: arrive at child level
+      forkX + bendW * 1.1, y              // end: on child axis
+    );
+    ctx.strokeStyle = color + '70';
+    ctx.lineWidth = ax.zoomMin > 0 ? 1 : 1.4;
     ctx.setLineDash([]);
     ctx.stroke();
 
-    const label = AXIS_LABELS[id];
-    const pad = 7;
-    ctx.font = '500 10px "Noto Sans TC", sans-serif';
-    const tw = ctx.measureText(label).width;
-    ctx.fillStyle = 'rgba(5,8,16,0.75)';
+    // Small circle at fork point on parent line
+    if (forkX > 0 && forkX < canvasW) {
+      ctx.beginPath();
+      ctx.arc(forkX, parentY, 3, 0, Math.PI * 2);
+      ctx.fillStyle = color + '99';
+      ctx.fill();
+    }
+  });
+
+  // Draw axis lines
+  visAxes.forEach(([id, ax]) => {
+    const color   = ax.color;
+    const y       = getAxisY(id);
+    const startX  = yearToX(ax.startYear);
+    if (startX > canvasW) return;
+
+    const lineFrom = Math.max(0, startX);
+
+    // Fade in opacity for sub-axes based on how far past their zoomMin we are
+    let lineAlpha = 0.55;
+    if (ax.zoomMin > 0) {
+      const fadeIn = Math.min(1, (currentZoom() - ax.zoomMin) / 0.08);
+      lineAlpha = 0.35 * fadeIn;
+    }
+
     ctx.beginPath();
-    ctx.roundRect(4, y - 11, tw + pad * 2, 14, 3);
+    ctx.moveTo(lineFrom, y);
+    ctx.lineTo(canvasW + 20, y);
+    ctx.strokeStyle = color + Math.round(lineAlpha * 255).toString(16).padStart(2,'0');
+    ctx.lineWidth = ax.zoomMin > 0 ? 1 : 1.5;
+    ctx.setLineDash([]);
+    ctx.stroke();
+
+    // Label badge — sticks to left edge or near startX
+    const labelX = Math.max(4, Math.min(startX + 2, canvasW - 90));
+    const label  = ax.label;
+    const pad    = 6;
+    ctx.font = `500 ${ax.zoomMin > 0 ? 9 : 10}px "Noto Sans TC", sans-serif`;
+    const tw = ctx.measureText(label).width;
+
+    ctx.fillStyle = 'rgba(5,8,16,0.85)';
+    ctx.beginPath();
+    ctx.roundRect(labelX, y - 11, tw + pad * 2, 14, 3);
     ctx.fill();
-    ctx.strokeStyle = color + '44';
+    ctx.strokeStyle = color + '55';
     ctx.lineWidth = 0.5;
     ctx.stroke();
-    ctx.fillStyle = color + 'cc';
+    ctx.fillStyle = color + 'ee';
     ctx.textAlign = 'left';
-    ctx.fillText(label, 4 + pad, y - 1);
+    ctx.fillText(label, labelX + pad, y - 1);
   });
 }
 
@@ -793,7 +892,7 @@ function drawBranchLines(eventsInView) {
     const baseY  = axisY(sorted[0].axis, sorted[0].sub_track || 0);
 
     ctx.save();
-    ctx.strokeStyle = (AXIS_COLORS[sorted[0].axis] || '#fff') + '30';
+    ctx.strokeStyle = (( AXES[sorted[0].axis] && AXES[sorted[0].axis].color ) || '#fff' || '#fff') + '30';
     ctx.lineWidth = 1;
     ctx.setLineDash([3, 6]);
     ctx.beginPath();
@@ -819,7 +918,7 @@ function drawEvents(eventsInView) {
     const st = ev.sub_track || ev.track || 0;
     const y = axisY(ev.axis, st);
     const r = dotRadius(ev);
-    const color = AXIS_COLORS[ev.axis] || '#fff';
+    const color = ( AXES[ev.axis] && AXES[ev.axis].color ) || '#fff' || '#fff';
     const isHovered = hoveredEvent && hoveredEvent.id === ev.id;
 
     // Vertical connector line to ruler
@@ -1291,8 +1390,8 @@ function handleHover(mx, my) {
       draw();
     }
     canvas.style.cursor = 'pointer';
-    document.getElementById('tt-era').textContent = AXIS_LABELS[ev.axis] || ev.axis;
-    document.getElementById('tt-era').style.color = AXIS_COLORS[ev.axis];
+    document.getElementById('tt-era').textContent = ( AXES[ev.axis] && AXES[ev.axis].label ) || ev.axis || ev.axis;
+    document.getElementById('tt-era').style.color = ( AXES[ev.axis] && AXES[ev.axis].color ) || '#fff';
     document.getElementById('tt-zh').textContent  = ev.zh;
     document.getElementById('tt-en').textContent  = ev.en;
     document.getElementById('tt-time').textContent = formatYear(ev.year);
@@ -1320,7 +1419,7 @@ function handleClick(mx, my) {
 
 function showPopup(ev) {
   const overlay = document.getElementById('popup-overlay');
-  const color = AXIS_COLORS[ev.axis] || '#fff';
+  const color = ( AXES[ev.axis] && AXES[ev.axis].color ) || '#fff' || '#fff';
 
   // Image
   const imgWrap = document.getElementById('popup-img-wrap');
@@ -1334,7 +1433,7 @@ function showPopup(ev) {
 
   // Tag
   const tag = document.getElementById('popup-tag');
-  tag.textContent = (AXIS_LABELS[ev.axis] || ev.axis).toUpperCase();
+  tag.textContent = (( AXES[ev.axis] && AXES[ev.axis].label ) || ev.axis || ev.axis).toUpperCase();
   tag.style.color = color;
   tag.style.borderColor = color + '44';
   tag.style.background = color + '11';
