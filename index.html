@@ -435,17 +435,17 @@ body {
 <!-- Bottom bar: era jumps + H-scrollbar + H-zoom slider -->
 <div id="bottom-bar">
   <div id="era-jumps">
-    <button class="era-btn" style="color:#a78bfa;border-color:#a78bfa55" onclick="jumpTo(-13800000000, -4000000000)">宇宙誕生</button>
-    <button class="era-btn" style="color:#60a5fa;border-color:#60a5fa55" onclick="jumpTo(-4600000000, -500000000)">地球生命</button>
-    <button class="era-btn" style="color:#34d399;border-color:#34d39955" onclick="jumpTo(-250000000, -50000000)">恐龍時代</button>
-    <button class="era-btn" style="color:#fbbf24;border-color:#fbbf2455" onclick="jumpTo(-4000000, -100000)">人類演化</button>
-    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" onclick="jumpTo(-12000, 500)">史前文明</button>
-    <button class="era-btn" style="color:#fde68a;border-color:#fde68a55" onclick="jumpTo(-3500, -500)">古代東方</button>
-    <button class="era-btn" style="color:#c4b5fd;border-color:#c4b5fd55" onclick="jumpTo(-800, 500)">古典西方</button>
-    <button class="era-btn" style="color:#a5b4fc;border-color:#a5b4fc55" onclick="jumpTo(500, 1500)">中世紀</button>
-    <button class="era-btn" style="color:#c084fc;border-color:#c084fc55" onclick="jumpTo(1400, 1800)">文藝復興</button>
-    <button class="era-btn" style="color:#93c5fd;border-color:#93c5fd55" onclick="jumpTo(1750, 1950)">工業革命</button>
-    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" onclick="jumpTo(1900, 2030)">現代</button>
+    <button class="era-btn" style="color:#a78bfa;border-color:#a78bfa55" data-start="-13800000000" data-end="-4000000000">宇宙誕生</button>
+    <button class="era-btn" style="color:#60a5fa;border-color:#60a5fa55" data-start="-4600000000" data-end="-500000000">地球生命</button>
+    <button class="era-btn" style="color:#34d399;border-color:#34d39955" data-start="-250000000" data-end="-50000000">恐龍時代</button>
+    <button class="era-btn" style="color:#fbbf24;border-color:#fbbf2455" data-start="-4000000" data-end="-100000">人類演化</button>
+    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="-12000" data-end="500">史前文明</button>
+    <button class="era-btn" style="color:#fde68a;border-color:#fde68a55" data-start="-3500" data-end="-500">古代東方</button>
+    <button class="era-btn" style="color:#c4b5fd;border-color:#c4b5fd55" data-start="-800" data-end="500">古典西方</button>
+    <button class="era-btn" style="color:#a5b4fc;border-color:#a5b4fc55" data-start="500" data-end="1500">中世紀</button>
+    <button class="era-btn" style="color:#c084fc;border-color:#c084fc55" data-start="1400" data-end="1800">文藝復興</button>
+    <button class="era-btn" style="color:#93c5fd;border-color:#93c5fd55" data-start="1750" data-end="1950">工業革命</button>
+    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="1900" data-end="2030">現代</button>
   </div>
   <div id="hscroll-row">
     <div id="scrollbar-track">
@@ -688,7 +688,7 @@ function dotRadius(ev) {
 }
 function contentHeight() {
   const visCount = getVisibleAxes().length;
-  const gap = LANE_BASE_GAP * Math.max(1, yScale);
+  const gap = LANE_GAP_BASE * Math.max(1, yScale);
   return TOP_MARGIN + visCount * gap + 80;
 }
 
@@ -1740,6 +1740,17 @@ const FALLBACK_EVENTS = [
   { id:'ww2',          year:1939,         zh:'二戰',       en:'World War II',  axis:'cross',     level:1, track:0, desc_zh:'人類最大戰爭', desc_en:'Deadliest war', wiki_zh:'https://zh.wikipedia.org/wiki/第二次世界大戰', wiki_en:'https://en.wikipedia.org/wiki/World_War_II' },
   { id:'internet',     year:1991,         zh:'網際網路',   en:'World Wide Web',axis:'cross',     level:1, track:0, desc_zh:'資訊時代', desc_en:'Information age', wiki_zh:'https://zh.wikipedia.org/wiki/全球資訊網', wiki_en:'https://en.wikipedia.org/wiki/World_Wide_Web' },
 ];
+
+// ════════════════════════════════════════════
+//  ERA JUMP BUTTONS
+// ════════════════════════════════════════════
+document.querySelectorAll('.era-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const start = parseFloat(btn.dataset.start);
+    const end   = parseFloat(btn.dataset.end);
+    jumpTo(start, end);
+  });
+});
 
 // ════════════════════════════════════════════
 //  INIT
