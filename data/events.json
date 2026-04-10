@@ -621,6 +621,30 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cave_painting"
     },
     {
+      "id": "tw-changbin",
+      "year": -30000,
+      "zh": "長濱文化（舊石器）",
+      "en": "Changbin Culture",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺東長濱八仙洞遺址，是目前所知臺灣最古老的文化，距今約三萬年，以打製石器為特徵。",
+      "desc_en": "The Changbin Culture at Baxian Cave in Taitung is Taiwan's oldest known culture (~30,000 years ago), characterized by chipped stone tools.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/長濱文化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Changbin_culture"
+    },
+    {
+      "id": "tw-zuozhen",
+      "year": -20000,
+      "zh": "左鎮人",
+      "en": "Zuozhen Man",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺南左鎮出土的人類化石，是迄今發現最早的臺灣人類遺骸，距今約兩萬年。",
+      "desc_en": "Human fossil remains found in Zuozhen, Tainan, the earliest human remains discovered in Taiwan (~20,000 years ago).",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/左鎮人",
+      "wiki_en": "https://en.wikipedia.org/wiki/Zuozhen_Man"
+    },
+    {
       "id": "agriculture-event",
       "year": -10000,
       "zh": "農業革命",
@@ -633,6 +657,32 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Oldest_writing_Louvre.jpg/640px-Oldest_writing_Louvre.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/農業起源",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_agriculture"
+    },
+    {
+      "id": "tw-dapenkeng",
+      "year": -5000,
+      "endYear": -2500,
+      "zh": "大坌坑文化（新石器）",
+      "en": "Dapenkeng Culture",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺灣新石器時代早期文化，已有農耕與陶器，被認為是南島語族的祖先文化。",
+      "desc_en": "Taiwan's early Neolithic culture with farming and pottery, considered the ancestral culture of Austronesian peoples.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大坌坑文化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Dapenkeng_culture"
+    },
+    {
+      "id": "tw-austronesian",
+      "year": -5000,
+      "zh": "南島語族起源地",
+      "en": "Austronesian Homeland",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "語言學與遺傳學研究顯示，臺灣可能是南島語族的發源地，其後裔擴散至太平洋、印度洋各島嶼。",
+      "desc_en": "Linguistic and genetic research suggests Taiwan may be the homeland of Austronesian peoples, whose descendants spread across the Pacific and Indian Oceans.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Austronesian_languages.png/1280px-Austronesian_languages.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南島語族",
+      "wiki_en": "https://en.wikipedia.org/wiki/Austronesian_peoples"
     },
     {
       "id": "mesopotamia",
@@ -695,6 +745,19 @@
       "endYear": -1600
     },
     {
+      "id": "tw-shisanhang",
+      "year": -1800,
+      "endYear": 500,
+      "zh": "十三行文化",
+      "en": "Shisanhang Culture",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺灣北部金屬器時代文化，已使用鐵器，被認為是凱達格蘭族的祖先。",
+      "desc_en": "Iron Age culture in northern Taiwan, believed to be ancestors of the Ketagalan people.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/十三行文化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Shisanhang_culture"
+    },
+    {
       "id": "hammurabi",
       "year": -1754,
       "zh": "漢摩拉比法典",
@@ -723,6 +786,19 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/商朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Shang_dynasty",
       "endYear": -1046
+    },
+    {
+      "id": "tw-aboriginal",
+      "year": -1500,
+      "endYear": 1624,
+      "zh": "原住民族時期",
+      "en": "Indigenous Peoples Period",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺灣原住民族多達16族，發展出豐富多元的文化，在平原、山地與東部各自建立部落社會。",
+      "desc_en": "Over 16 indigenous tribes develop rich and diverse cultures across Taiwan's plains, mountains, and eastern coast.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣原住民族",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples"
     },
     {
       "id": "trojan-war",
@@ -1385,6 +1461,19 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Reformation"
     },
     {
+      "id": "tw-dadu-kingdom",
+      "year": 1540,
+      "endYear": 1732,
+      "zh": "大肚王國",
+      "en": "Kingdom of Middag",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺灣中部超部落聯盟，由巴布拉族與巴則海族組成，曾抵抗荷蘭與鄭氏政權，1732年遭清朝鎮壓瓦解。",
+      "desc_en": "A confederation of tribes in central Taiwan, resisting Dutch and Ming-Zheng rule; dissolved after Qing suppression in 1732.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大肚王國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Middag"
+    },
+    {
       "id": "copernicus",
       "year": 1543,
       "zh": "日心說",
@@ -1398,6 +1487,18 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nikolaus_Kopernikus.jpg/640px-Nikolaus_Kopernikus.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/尼古拉·哥白尼",
       "wiki_en": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus"
+    },
+    {
+      "id": "tw-formosa-named",
+      "year": 1544,
+      "zh": "葡萄牙人命名「福爾摩沙」",
+      "en": "Named Ilha Formosa",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "葡萄牙航海者航經臺灣海峽，驚嘆其美景而命名「Ilha Formosa（美麗之島）」，此名沿用至今。",
+      "desc_en": "Portuguese sailors, passing through the Taiwan Strait, name the island 'Ilha Formosa' (Beautiful Isle), a name still used today.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/福爾摩沙",
+      "wiki_en": "https://en.wikipedia.org/wiki/Formosa"
     },
     {
       "id": "edo",
@@ -1415,6 +1516,33 @@
       "endYear": 1868
     },
     {
+      "id": "tw-dutch",
+      "year": 1624,
+      "endYear": 1662,
+      "zh": "荷蘭統治時期",
+      "en": "Dutch Rule",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "荷蘭東印度公司佔據臺灣西南部，建熱蘭遮城，引進農業技術與外來物種，開始系統化開發臺灣。",
+      "desc_en": "The Dutch East India Company occupies southwestern Taiwan, builds Fort Zeelandia, introduces agriculture and trade, systematically developing the island.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Fort_Zeelandia_by_Johannes_Vingboons.jpg/1280px-Fort_Zeelandia_by_Johannes_Vingboons.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/荷蘭統治台灣時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+    },
+    {
+      "id": "tw-spanish",
+      "year": 1626,
+      "endYear": 1642,
+      "zh": "西班牙佔據北臺灣",
+      "en": "Spanish Northern Taiwan",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "西班牙佔領雞籠（基隆）與淡水，建聖薩爾瓦多城，1642年被荷蘭人驅逐。",
+      "desc_en": "Spain occupies Keelung and Tamsui, builds Fort San Salvador; expelled by the Dutch in 1642.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/西班牙統治台灣時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa"
+    },
+    {
       "id": "qing",
       "year": 1644,
       "zh": "清朝",
@@ -1428,6 +1556,34 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/清朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Qing_dynasty",
       "endYear": 1912
+    },
+    {
+      "id": "tw-koxinga",
+      "year": 1662,
+      "endYear": 1683,
+      "zh": "明鄭時期（鄭成功）",
+      "en": "Ming-Zheng Rule",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "鄭成功驅逐荷蘭人，在臺建立第一個漢人政權，推行屯田政策，大量漢人移民來臺。",
+      "desc_en": "Koxinga (Zheng Chenggong) expels the Dutch, establishes Taiwan's first Han Chinese government, and promotes Han immigration.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Koxinga.jpg/640px-Koxinga.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/明鄭時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Tungning"
+    },
+    {
+      "id": "tw-qing",
+      "year": 1683,
+      "endYear": 1895,
+      "zh": "清治時期",
+      "en": "Qing Rule",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "施琅攻台，明鄭降清。清朝統治212年，臺灣從福建省一府三縣逐步發展為獨立建省，人口大增。",
+      "desc_en": "Shi Lang's naval victory ends Ming-Zheng rule. Qing governs Taiwan for 212 years, eventually making it a separate province.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Taiwan_Qing_dynasty.png/640px-Taiwan_Qing_dynasty.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/清治台灣時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"
     },
     {
       "id": "newton",
@@ -1505,6 +1661,45 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Meiji_Restoration"
     },
     {
+      "id": "tw-province",
+      "year": 1885,
+      "zh": "臺灣建省",
+      "en": "Taiwan Province Established",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "清法戰爭後，臺灣從福建省獨立出來成為臺灣省，劉銘傳就任首任巡撫，積極推動現代化建設。",
+      "desc_en": "After the Sino-French War, Taiwan becomes a separate province; Liu Mingchuan becomes its first governor and modernizes the island.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣省",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"
+    },
+    {
+      "id": "tw-shimonoseki",
+      "year": 1895,
+      "zh": "馬關條約·割讓臺灣",
+      "en": "Treaty of Shimonoseki",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "甲午戰爭清朝戰敗，與日本簽訂馬關條約，將臺灣、澎湖割讓予日本，臺灣民主國短暫抵抗失敗。",
+      "desc_en": "China loses the First Sino-Japanese War and cedes Taiwan to Japan via the Treaty of Shimonoseki; the Taiwan Republic briefly resists.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Treaty_of_Shimonoseki.jpg/1280px-Treaty_of_Shimonoseki.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馬關條約",
+      "wiki_en": "https://en.wikipedia.org/wiki/Treaty_of_Shimonoseki"
+    },
+    {
+      "id": "tw-japanese",
+      "year": 1895,
+      "endYear": 1945,
+      "zh": "日治時期",
+      "en": "Japanese Rule",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "日本統治臺灣50年，推行現代化建設（鐵路、醫療、教育），也實施殖民壓迫與皇民化政策。",
+      "desc_en": "Japan rules Taiwan for 50 years, modernizing infrastructure (railways, medicine, education) while implementing colonial oppression and Japanization policies.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Taiwan_Sotokufu_1906.jpg/640px-Taiwan_Sotokufu_1906.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/日治台灣時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    },
+    {
       "id": "republic-china",
       "year": 1912,
       "zh": "中華民國建立",
@@ -1562,6 +1757,19 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/May_fourth_movement.jpg/800px-May_fourth_movement.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五四運動",
       "wiki_en": "https://en.wikipedia.org/wiki/May_Fourth_Movement"
+    },
+    {
+      "id": "tw-wushe",
+      "year": 1930,
+      "zh": "霧社事件",
+      "en": "Wushe Incident",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "賽德克族首領莫那魯道率族人武裝抗日，是日治時期最大規模的原住民武裝起義。",
+      "desc_en": "Seediq chief Mona Rudao leads an armed uprising against Japanese rule, the largest indigenous resistance during Japanese occupation.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Mona_Rudao.jpg/640px-Mona_Rudao.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/霧社事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Wushe_incident"
     },
     {
       "id": "ww2",
@@ -1623,6 +1831,19 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Surrender_of_Japan"
     },
     {
+      "id": "tw-228",
+      "year": 1947,
+      "zh": "二二八事件",
+      "en": "228 Incident",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "1947年2月28日爆發的省民反抗國民政府事件，遭武力鎮壓，數萬人罹難，影響臺灣社會深遠。",
+      "desc_en": "On Feb. 28, 1947, an uprising against the KMT government is violently suppressed; tens of thousands die, leaving a deep scar on Taiwanese society.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/228_incident.jpg/640px-228_incident.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/二二八事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/228_incident"
+    },
+    {
       "id": "prc",
       "year": 1949,
       "zh": "中華人民共和國成立",
@@ -1635,6 +1856,33 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/640px-Flag_of_the_People%27s_Republic_of_China.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華人民共和國",
       "wiki_en": "https://en.wikipedia.org/wiki/China"
+    },
+    {
+      "id": "tw-roc",
+      "year": 1949,
+      "endYear": null,
+      "zh": "中華民國遷臺",
+      "en": "ROC Government in Taiwan",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "國共內戰失利後，中華民國政府播遷臺灣，帶來大量軍民與文物，開始長期統治臺灣。",
+      "desc_en": "After losing the Civil War, the ROC government retreats to Taiwan, bringing large numbers of soldiers, civilians, and cultural artifacts.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/640px-Flag_of_the_Republic_of_China.svg.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中華民國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan"
+    },
+    {
+      "id": "tw-martial-law",
+      "year": 1949,
+      "endYear": 1987,
+      "zh": "戒嚴時期",
+      "en": "Martial Law Period",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "中華民國宣布戒嚴，長達38年，是世界上持續時間最長的戒嚴之一，限制人民自由與政治活動。",
+      "desc_en": "Martial law lasting 38 years — one of the world's longest — restricts civil liberties and political activities.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣戒嚴時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law"
     },
     {
       "id": "dna-discovery",
@@ -1652,6 +1900,19 @@
       "sub_track": 0
     },
     {
+      "id": "tw-economic-miracle",
+      "year": 1960,
+      "endYear": 1990,
+      "zh": "臺灣經濟奇蹟",
+      "en": "Taiwan Economic Miracle",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "臺灣從農業經濟快速轉型為出口導向工業，成為亞洲四小龍之一，人均所得大幅提升。",
+      "desc_en": "Taiwan rapidly transforms from agriculture to export-oriented industry, becoming one of the Four Asian Tigers with dramatically rising living standards.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣經濟奇蹟",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_Miracle"
+    },
+    {
       "id": "moon-landing",
       "year": 1969,
       "zh": "人類登月",
@@ -1667,6 +1928,31 @@
       "sub_track": 0
     },
     {
+      "id": "tw-martial-law-lift",
+      "year": 1987,
+      "zh": "解除戒嚴",
+      "en": "Martial Law Lifted",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "蔣經國宣布解除戒嚴，臺灣開始民主化歷程，開放黨禁、報禁，走向自由民主社會。",
+      "desc_en": "Chiang Ching-kuo lifts martial law, beginning Taiwan's democratization: lifting bans on political parties and press freedom.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣解嚴",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law"
+    },
+    {
+      "id": "tw-semiconductor",
+      "year": 1987,
+      "zh": "台積電成立",
+      "en": "TSMC Founded",
+      "axis": "taiwan",
+      "level": 2,
+      "desc_zh": "張忠謀創立台灣積體電路製造公司（台積電），開創晶圓代工模式，成為全球半導體產業核心。",
+      "desc_en": "Morris Chang founds TSMC, pioneering the semiconductor foundry model; TSMC becomes the world's most critical chipmaker.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/TSMC_logo.svg/640px-TSMC_logo.svg.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/台灣積體電路製造公司",
+      "wiki_en": "https://en.wikipedia.org/wiki/TSMC"
+    },
+    {
       "id": "internet",
       "year": 1991,
       "zh": "網際網路誕生",
@@ -1680,6 +1966,19 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/全球資訊網",
       "wiki_en": "https://en.wikipedia.org/wiki/World_Wide_Web",
       "sub_track": 0
+    },
+    {
+      "id": "tw-first-election",
+      "year": 1996,
+      "zh": "首次總統直選",
+      "en": "First Direct Presidential Election",
+      "axis": "taiwan",
+      "level": 1,
+      "desc_zh": "臺灣舉行首次總統直接選舉，李登輝當選，是華人社會第一次民主直選總統，具有重大歷史意義。",
+      "desc_en": "Taiwan holds its first direct presidential election; Lee Teng-hui wins in a historic milestone for Chinese-speaking democracies.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Lee_Teng-hui_1996_presidential_election.jpg/640px-Lee_Teng-hui_1996_presidential_election.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/1996年中華民國總統選舉",
+      "wiki_en": "https://en.wikipedia.org/wiki/1996_Taiwanese_presidential_election"
     },
     {
       "id": "human-genome",

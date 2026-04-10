@@ -393,6 +393,7 @@ body {
   <div class="leg" data-axis="west"><div class="leg-dot" style="background:#c084fc"></div>西方</div>
   <span id="legend-zoom-hint">← zoom in 展開子軸</span>
   <div class="leg leg-sub" data-axis="china"><div class="leg-dot" style="background:#fca5a5"></div>中國</div>
+  <div class="leg leg-sub" data-axis="taiwan"><div class="leg-dot" style="background:#f9a8d4"></div>臺灣</div>
   <div class="leg leg-sub" data-axis="japan"><div class="leg-dot" style="background:#fdba74"></div>日本</div>
   <div class="leg leg-sub" data-axis="mideast"><div class="leg-dot" style="background:#fde68a"></div>中東</div>
   <div class="leg leg-sub" data-axis="india"><div class="leg-dot" style="background:#86efac"></div>印度</div>
@@ -516,13 +517,14 @@ const AXES = {
   china:     { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null,  parent:'east',      order: 8,  zoomMin:0.58 },
   // 中國並立政權子軸（zoom 更深才顯示，用於春秋戰國/三國/五代十國等分裂時期）
   'china-b': { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null,  parent:'china',     order: 9,  zoomMin:0.75 },
-  japan:     { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null,  parent:'east',      order:10,  zoomMin:0.58 },
+  taiwan:    { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null,  parent:'east',      order:10,  zoomMin:0.58 },
+  japan:     { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null,  parent:'east',      order:11,  zoomMin:0.58 },
 
   // ── 西方文明 + 子軸 ──
-  west:      { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null,  parent:'cross',     order:11,  zoomMin:0    },
-  greece:    { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,   parent:'west',      order:12,  zoomMin:0.58 },
-  europe:    { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null,  parent:'west',      order:13,  zoomMin:0.58 },
-  americas:  { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null,  parent:'west',      order:14,  zoomMin:0.58 },
+  west:      { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null,  parent:'cross',     order:12,  zoomMin:0    },
+  greece:    { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,   parent:'west',      order:13,  zoomMin:0.58 },
+  europe:    { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null,  parent:'west',      order:14,  zoomMin:0.58 },
+  americas:  { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null,  parent:'west',      order:15,  zoomMin:0.58 },
 };
 
 // ── 間距常數 ──
