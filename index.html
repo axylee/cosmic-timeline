@@ -923,10 +923,20 @@ function eventVisible(ev) {
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   const checkEnd = zoom >= 0.58;
   if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
-  // ALL point events always visible (just shrink when zoomed out)
-  // Period pills (endYear) keep their zoom thresholds
+
+  // Point events always visible (shrink but never disappear)
   if (!ev.endYear) return true;
+
+  // Period pills: always show level 1
   if (ev.level === 1) return true;
+
+  // For level 2/3 pills, use pixel width as the threshold instead of zoom.
+  // A pill is worth showing if it's at least 8px wide on screen, OR
+  // if zoom passes the original threshold — whichever comes first.
+  if (ev.endYear) {
+    const pixelW = Math.abs(yearToX(ev.endYear) - yearToX(ev.year));
+    if (pixelW >= 8) return true;
+  }
   if (ev.level === 2) return zoom > 0.10;
   if (ev.level === 3) return zoom > 0.55;
   return zoom > 0.7;
@@ -935,6 +945,12 @@ function eventVisible(ev) {
 // Whether to show label for this event at current zoom
 function labelVisible(ev) {
   const zoom = currentZoom();
+  // For pills, show label if the pill is wide enough to hold text
+  if (ev.endYear) {
+    const pixelW = Math.abs(yearToX(ev.endYear) - yearToX(ev.year));
+    if (pixelW >= 40) return true;  // wide enough → always show
+    if (pixelW < 8)   return false; // too thin → never show
+  }
   if (ev.level === 1) return true;
   if (ev.level === 2) return zoom > 0.20;
   if (ev.level === 3) return zoom > 0.55;

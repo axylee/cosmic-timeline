@@ -98,7 +98,7 @@
       "sub_track": 0,
       "desc_zh": "宇宙從極度高溫高密度的奇點爆炸膨脹，時間、空間與物質同時誕生。",
       "desc_en": "The universe exploded from an infinitely dense singularity, creating space, time, and matter.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CMB_Timeline300_no_WMAP.jpg/960px-CMB_Timeline300_no_WMAP.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CMB_Timeline300_no_WMAP.jpg/1280px-CMB_Timeline300_no_WMAP.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大爆炸",
       "wiki_en": "https://en.wikipedia.org/wiki/Big_Bang"
     },
@@ -112,7 +112,7 @@
       "sub_track": 0,
       "desc_zh": "宇宙大爆炸後約2億年，第一批恆星在氫氦雲中點燃，結束宇宙黑暗時代。",
       "desc_en": "About 200 million years after the Big Bang, the first stars ignite in clouds of hydrogen and helium.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Triangle_of_everything_-_Stellar_Evolution.png/960px-Triangle_of_everything_-_Stellar_Evolution.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Triangle_of_everything_-_Stellar_Evolution.png/1280px-Triangle_of_everything_-_Stellar_Evolution.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/恆星演化",
       "wiki_en": "https://en.wikipedia.org/wiki/Stellar_evolution"
     },
@@ -126,7 +126,7 @@
       "sub_track": 0,
       "desc_zh": "我們的銀河系逐漸形成，包含超過2000億顆恆星，直徑約10萬光年。",
       "desc_en": "Our Milky Way galaxy gradually assembles, containing over 200 billion stars.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/960px-ESO-VLT-Laser-phot-33a-07.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/1280px-ESO-VLT-Laser-phot-33a-07.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/銀河系",
       "wiki_en": "https://en.wikipedia.org/wiki/Milky_Way"
     },
@@ -140,7 +140,7 @@
       "sub_track": 0,
       "desc_zh": "太陽由星際氣體雲坍縮形成，周圍塵埃盤逐漸凝聚成八大行星。",
       "desc_en": "The Sun condenses from a molecular cloud; surrounding dust forms the planets.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Solar_System_true_color_%28captions%29.jpg/960px-Solar_System_true_color_%28captions%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Solar_System_true_color_%28captions%29.jpg/1280px-Solar_System_true_color_%28captions%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/太陽系",
       "wiki_en": "https://en.wikipedia.org/wiki/Solar_System"
     },
@@ -154,7 +154,7 @@
       "sub_track": 0,
       "desc_zh": "地球由太陽系早期微行星不斷碰撞積聚而成，初期地表為熔融岩漿海洋。",
       "desc_en": "Earth accretes from colliding planetesimals; its surface is an ocean of molten magma.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Meteosat-12-fci-march-equinox-2025-noon.jpg/960px-Meteosat-12-fci-march-equinox-2025-noon.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Meteosat-12-fci-march-equinox-2025-noon.jpg/1280px-Meteosat-12-fci-march-equinox-2025-noon.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/地球",
       "wiki_en": "https://en.wikipedia.org/wiki/Earth"
     },
@@ -171,7 +171,7 @@
       "desc_en": "Earth's earliest period: molten surface, frequent meteorite bombardment, no life.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/冥古宙",
       "wiki_en": "https://en.wikipedia.org/wiki/Hadean",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Artist%27s_concept_of_collision_at_HD_172555.jpg/960px-Artist%27s_concept_of_collision_at_HD_172555.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Artist%27s_concept_of_collision_at_HD_172555.jpg/1280px-Artist%27s_concept_of_collision_at_HD_172555.jpg"
     },
     {
       "id": "moon-forms-event",
@@ -183,7 +183,7 @@
       "sub_track": 0,
       "desc_zh": "一顆火星大小的天體「忒伊亞」撞擊早期地球，噴出碎片凝聚成月球。",
       "desc_en": "A Mars-sized body called Theia collides with early Earth; ejected debris forms the Moon.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/960px-FullMoon2010.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1280px-FullMoon2010.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/月球",
       "wiki_en": "https://en.wikipedia.org/wiki/Moon"
     },
@@ -200,7 +200,7 @@
       "desc_en": "Earliest rocks and primitive prokaryotic life appear; oxygen-free atmosphere; cyanobacteria evolve.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/太古宙",
       "wiki_en": "https://en.wikipedia.org/wiki/Archean",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Archean.png/960px-Archean.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Archean.png/1280px-Archean.png"
     },
     {
       "id": "first-life-event",
@@ -212,7 +212,7 @@
       "sub_track": 0,
       "desc_zh": "最早的單細胞原核生物在海洋中出現，開啟地球生命38億年的歷程。",
       "desc_en": "The earliest single-celled prokaryotic life emerges in Earth's oceans, beginning 3.8 billion years of life.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Origin_of_life_stages.svg/960px-Origin_of_life_stages.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Origin_of_life_stages.svg/1280px-Origin_of_life_stages.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/生命起源",
       "wiki_en": "https://en.wikipedia.org/wiki/Abiogenesis"
     },
@@ -256,7 +256,7 @@
       "sub_track": 0,
       "desc_zh": "藍藻光合作用產生大量氧氣積累在大氣中，造成厭氧生物大滅絕，卻為複雜生命鋪路。",
       "desc_en": "Cyanobacteria produce vast oxygen that accumulates in the atmosphere, killing anaerobic life but enabling complex organisms.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Precambrian_Evolution_of_Life.png/960px-Precambrian_Evolution_of_Life.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Precambrian_Evolution_of_Life.png/1280px-Precambrian_Evolution_of_Life.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大氧化事件",
       "wiki_en": "https://en.wikipedia.org/wiki/Great_Oxidation_Event"
     },
@@ -299,7 +299,7 @@
       "sub_track": 0,
       "desc_zh": "地球幾乎完全被冰雪覆蓋，全球平均溫度降至零下50度，海洋表面結冰，持續近1億年。",
       "desc_en": "Earth almost entirely frozen; global temperatures drop to -50°C; ocean surfaces freeze for nearly 100 million years.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Snowball_Huronian.jpg/960px-Snowball_Huronian.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Snowball_Huronian.jpg/1280px-Snowball_Huronian.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/雪球地球",
       "wiki_en": "https://en.wikipedia.org/wiki/Snowball_Earth"
     },
@@ -329,7 +329,7 @@
       "sub_track": 0,
       "desc_zh": "幾乎所有現代動物門在短短數百萬年內同時出現，三葉蟲稱霸海洋，是生命演化的大爆發時代。",
       "desc_en": "Nearly all major animal phyla appear simultaneously; trilobites dominate the seas; the explosion of complex life.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Mollweide_Paleographic_Map_of_Earth%2C_510_Ma.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_510_Ma.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Mollweide_Paleographic_Map_of_Earth%2C_510_Ma.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_510_Ma.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/寒武紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Cambrian"
     },
@@ -346,7 +346,7 @@
       "desc_en": "Marine life flourishes; coral reefs appear; ends with Earth's second-largest extinction (85% of species lost).",
       "wiki_zh": "https://zh.wikipedia.org/wiki/奧陶紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Ordovician",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mollweide_Paleographic_Map_of_Earth%2C_465_Ma_%28Darriwilian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_465_Ma_%28Darriwilian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mollweide_Paleographic_Map_of_Earth%2C_465_Ma_%28Darriwilian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_465_Ma_%28Darriwilian_Age%29.png"
     },
     {
       "id": "silurian",
@@ -361,7 +361,7 @@
       "desc_en": "Jawed fish evolve; land plants colonize shore; coral reefs expand; relatively warm and stable climate.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/志留紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Silurian",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mollweide_Paleographic_Map_of_Earth%2C_430_Ma_%28Homerian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_430_Ma_%28Homerian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mollweide_Paleographic_Map_of_Earth%2C_430_Ma_%28Homerian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_430_Ma_%28Homerian_Age%29.png"
     },
     {
       "id": "devonian",
@@ -376,7 +376,7 @@
       "desc_en": "'Age of Fishes' — diverse fish species; tetrapods colonize land; fern forests appear; major extinction at end.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/泥盆紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Devonian",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mollweide_Paleographic_Map_of_Earth%2C_390_Ma_%28Eifelian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_390_Ma_%28Eifelian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mollweide_Paleographic_Map_of_Earth%2C_390_Ma_%28Eifelian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_390_Ma_%28Eifelian_Age%29.png"
     },
     {
       "id": "carboniferous",
@@ -391,7 +391,7 @@
       "desc_en": "Vast swamp forests cover continents; buried plants form today's coal deposits; first reptiles and winged insects appear.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石炭紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Carboniferous",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mollweide_Paleographic_Map_of_Earth%2C_330_Ma_%28Serpukhovian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_330_Ma_%28Serpukhovian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mollweide_Paleographic_Map_of_Earth%2C_330_Ma_%28Serpukhovian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_330_Ma_%28Serpukhovian_Age%29.png"
     },
     {
       "id": "permian",
@@ -406,7 +406,7 @@
       "desc_en": "Pangaea forms; ends with Earth's greatest extinction — 96% of marine species and 70% of land vertebrates lost.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/二疊紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Permian",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Mollweide_Paleographic_Map_of_Earth%2C_275_Ma_%28Kungurian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_275_Ma_%28Kungurian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Mollweide_Paleographic_Map_of_Earth%2C_275_Ma_%28Kungurian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_275_Ma_%28Kungurian_Age%29.png"
     },
     {
       "id": "permian-extinction",
@@ -418,7 +418,7 @@
       "sub_track": 0,
       "desc_zh": "地球史上最大規模物種滅絕事件，96%海洋物種與70%陸地脊椎動物滅絕，幾乎終結地球生命。",
       "desc_en": "Earth's greatest mass extinction: 96% of marine species and 70% of land vertebrates wiped out.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/960px-Extinction_intensity.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1280px-Extinction_intensity.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/二疊紀末滅絕事件",
       "wiki_en": "https://en.wikipedia.org/wiki/Permian%E2%80%93Triassic_extinction_event"
     },
@@ -450,7 +450,7 @@
       "desc_en": "Life recovers after Permian extinction; dinosaurs and mammals both evolve; Pangaea begins breaking apart.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Triassic",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png"
     },
     {
       "id": "jurassic",
@@ -463,7 +463,7 @@
       "sub_track": 0,
       "desc_zh": "恐龍稱霸陸地，超巨型蜥腳類恐龍出現，始祖鳥演化，盤古大陸持續分裂，氣候溫暖濕潤。",
       "desc_en": "Dinosaurs dominate land; giant sauropods appear; Archaeopteryx evolves; warm and humid climate.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_170_Ma_%28Bajocian_Age%29.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/侏羅紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Jurassic"
     },
@@ -480,7 +480,7 @@
       "desc_en": "Flowering plants explode in diversity; dinosaurs reach peak diversity; ends with asteroid impact extinction.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/白堊紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png"
     },
     {
       "id": "kt-event",
@@ -508,7 +508,7 @@
       "desc_en": "Mammals and birds diversify explosively; grasslands expand; primates evolve; culminates in humans.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新生代",
       "wiki_en": "https://en.wikipedia.org/wiki/Cenozoic",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Torre_Sant%27Andrea.jpg/960px-Torre_Sant%27Andrea.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Torre_Sant%27Andrea.jpg/1280px-Torre_Sant%27Andrea.jpg"
     },
     {
       "id": "bipedalism-event",
@@ -520,7 +520,7 @@
       "sub_track": 0,
       "desc_zh": "南方古猿開始直立行走，解放雙手，為大腦發展和工具使用創造條件。",
       "desc_en": "Australopithecus begins walking upright, freeing the hands for tool use and enabling brain expansion.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Mrs_Ples_Face.jpg/960px-Mrs_Ples_Face.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Mrs_Ples_Face.jpg/1280px-Mrs_Ples_Face.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南方古猿",
       "wiki_en": "https://en.wikipedia.org/wiki/Australopithecus"
     },
@@ -536,7 +536,7 @@
       "desc_en": "Ongoing ice age beginning 2.6 million years ago, with multiple glacial-interglacial cycles; humans evolved during this period.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/第四紀冰期",
       "wiki_en": "https://en.wikipedia.org/wiki/Quaternary_glaciation",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Iceage_north-glacial_hg.png/960px-Iceage_north-glacial_hg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Iceage_north-glacial_hg.png/1280px-Iceage_north-glacial_hg.png"
     },
     {
       "id": "stone-tools",
@@ -550,7 +550,7 @@
       "desc_en": "Homo habilis creates the earliest stone tools (Oldowan industry), marking the dawn of human technology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石器時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ggantija_Temples%2C_Xaghra%2C_Gozo.jpg/960px-Ggantija_Temples%2C_Xaghra%2C_Gozo.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ggantija_Temples%2C_Xaghra%2C_Gozo.jpg/1280px-Ggantija_Temples%2C_Xaghra%2C_Gozo.jpg"
     },
     {
       "id": "fire-event",
@@ -564,7 +564,7 @@
       "desc_en": "Homo erectus controls fire, transforming diet, promoting brain development, and providing protection.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/火的使用史",
       "wiki_en": "https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Font-de-Gaume.jpg/960px-Font-de-Gaume.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Font-de-Gaume.jpg/1280px-Font-de-Gaume.jpg"
     },
     {
       "id": "homo-sapiens-event",
@@ -593,7 +593,7 @@
       "desc_en": "Last glacial period; ice sheets cover North America and Europe; sea level drops 120m; humans cross into Americas via Bering land bridge.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/末次冰期",
       "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Period",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Approximate_chronology_of_Heinrich_events_vs_Dansgaard-Oeschger_events_and_Antarctic_Isotope_Maxima.png/960px-Approximate_chronology_of_Heinrich_events_vs_Dansgaard-Oeschger_events_and_Antarctic_Isotope_Maxima.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Approximate_chronology_of_Heinrich_events_vs_Dansgaard-Oeschger_events_and_Antarctic_Isotope_Maxima.png/1280px-Approximate_chronology_of_Heinrich_events_vs_Dansgaard-Oeschger_events_and_Antarctic_Isotope_Maxima.png"
     },
     {
       "id": "out-of-africa",
@@ -605,7 +605,7 @@
       "sub_track": 0,
       "desc_zh": "智人大規模走出非洲，向亞洲、歐洲、澳洲擴散，逐漸取代其他人屬物種。",
       "desc_en": "Homo sapiens migrates out of Africa en masse, spreading to Asia, Europe, and Australia, replacing other hominins.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/960px-Spreading_homo_sapiens_la.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1280px-Spreading_homo_sapiens_la.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人類走出非洲",
       "wiki_en": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans"
     },
@@ -619,7 +619,7 @@
       "sub_track": 0,
       "desc_zh": "人類開始創作洞穴壁畫（如法國拉斯科），展現抽象思維和藝術表達能力。",
       "desc_en": "Humans create cave paintings (e.g. Lascaux, France), demonstrating abstract thinking and artistic expression.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/SantaCruz-CuevaManos-P2210651b.jpg/960px-SantaCruz-CuevaManos-P2210651b.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/SantaCruz-CuevaManos-P2210651b.jpg/1280px-SantaCruz-CuevaManos-P2210651b.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/洞穴壁畫",
       "wiki_en": "https://en.wikipedia.org/wiki/Cave_painting"
     },
@@ -634,7 +634,7 @@
       "desc_en": "The Changbin Culture at Baxian Cave in Taitung is Taiwan's oldest known culture (~30,000 years ago), characterized by chipped stone tools.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/長濱文化",
       "wiki_en": "https://en.wikipedia.org/wiki/Changbin_culture",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg/960px-1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg/1280px-1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg"
     },
     {
       "id": "tw-zuozhen",
@@ -647,7 +647,7 @@
       "desc_en": "Human fossil remains found in Zuozhen, Tainan, the earliest human remains discovered in Taiwan (~20,000 years ago).",
       "wiki_zh": "https://zh.wikipedia.org/wiki/左鎮人",
       "wiki_en": "https://en.wikipedia.org/wiki/Zuozhen_Man",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Old_Taiwanese.jpg/960px-Old_Taiwanese.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Old_Taiwanese.jpg/1280px-Old_Taiwanese.jpg"
     },
     {
       "id": "agriculture-event",
@@ -659,7 +659,7 @@
       "sub_track": 0,
       "desc_zh": "人類在新月沃土開始種植小麥大麥，在中國種植稻米，從遊牧轉為定居農耕，文明由此展開。",
       "desc_en": "Humans begin cultivating wheat and barley in the Fertile Crescent, rice in China; civilization begins.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Maler_der_Grabkammer_des_Sennudem_001.jpg/960px-Maler_der_Grabkammer_des_Sennudem_001.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Maler_der_Grabkammer_des_Sennudem_001.jpg/1280px-Maler_der_Grabkammer_des_Sennudem_001.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/農業起源",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_agriculture"
     },
@@ -686,7 +686,7 @@
       "level": 1,
       "desc_zh": "語言學與遺傳學研究顯示，臺灣可能是南島語族的發源地，其後裔擴散至太平洋、印度洋各島嶼。",
       "desc_en": "Linguistic and genetic research suggests Taiwan may be the homeland of Austronesian peoples, whose descendants spread across the Pacific and Indian Oceans.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Taiwanese_aborigines.JPG/960px-Taiwanese_aborigines.JPG",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Taiwanese_aborigines.JPG/1280px-Taiwanese_aborigines.JPG",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南島語族",
       "wiki_en": "https://en.wikipedia.org/wiki/Austronesian_peoples"
     },
@@ -701,7 +701,7 @@
       "level": 1,
       "desc_zh": "蘇美人在底格里斯河與幼發拉底河流域建立城市文明，發明楔形文字，建造神廟。",
       "desc_en": "The Sumerians build urban civilizations between the Tigris and Euphrates rivers, inventing cuneiform writing and constructing ziggurats.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/N-Mesopotamia_and_Syria_english.svg/960px-N-Mesopotamia_and_Syria_english.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/N-Mesopotamia_and_Syria_english.svg/1280px-N-Mesopotamia_and_Syria_english.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/美索不達米亞",
       "wiki_en": "https://en.wikipedia.org/wiki/Mesopotamia"
     },
@@ -716,7 +716,7 @@
       "level": 1,
       "desc_zh": "美尼斯王統一上下埃及，建立法老王朝，尼羅河文明進入鼎盛時期。",
       "desc_en": "King Menes unifies Upper and Lower Egypt, establishing the Pharaonic dynasties and the golden age of Nile civilization.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/960px-Ancient_Egypt_map-en.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/1280px-Ancient_Egypt_map-en.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古埃及",
       "wiki_en": "https://en.wikipedia.org/wiki/Ancient_Egypt"
     },
@@ -745,7 +745,7 @@
       "sub_track": 0,
       "desc_zh": "中國第一個朝代，大禹建立，奠定中華文明基礎。",
       "desc_en": "China's first dynasty, founded by Yu the Great.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Xia_dynasty.svg/960px-Xia_dynasty.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Xia_dynasty.svg/1280px-Xia_dynasty.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/夏朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Xia_dynasty",
       "endYear": -1600
@@ -775,7 +775,7 @@
       "level": 2,
       "desc_zh": "巴比倫王漢摩拉比頒布世界上最早的成文法律之一，包含282條法律條文。",
       "desc_en": "Babylonian King Hammurabi promulgates one of the earliest written legal codes, comprising 282 laws.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/P1050763_Louvre_code_Hammurabi_face_rwk.JPG/960px-P1050763_Louvre_code_Hammurabi_face_rwk.JPG",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/P1050763_Louvre_code_Hammurabi_face_rwk.JPG",
       "wiki_zh": "https://zh.wikipedia.org/wiki/漢摩拉比法典",
       "wiki_en": "https://en.wikipedia.org/wiki/Code_of_Hammurabi"
     },
@@ -789,7 +789,7 @@
       "sub_track": 0,
       "desc_zh": "商朝創立甲骨文，青銅器文化達到頂峰，是有文字記載的最早朝代。",
       "desc_en": "The Shang Dynasty saw the creation of oracle bone script and the peak of Bronze Age culture.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Shang_dynasty.svg/960px-Shang_dynasty.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Shang_dynasty.svg/1280px-Shang_dynasty.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/商朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Shang_dynasty",
       "endYear": -1046
@@ -806,7 +806,7 @@
       "desc_en": "Over 16 indigenous tribes develop rich and diverse cultures across Taiwan's plains, mountains, and eastern coast.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣原住民族",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/08.15_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C2016%E4%B8%89%E5%9C%B0%E9%96%80%E9%84%89%E8%81%AF%E5%90%88%E6%94%B6%E7%A9%AB%E7%A5%AD%E3%80%8D_%2828706865630%29.jpg/960px-08.15_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C2016%E4%B8%89%E5%9C%B0%E9%96%80%E9%84%89%E8%81%AF%E5%90%88%E6%94%B6%E7%A9%AB%E7%A5%AD%E3%80%8D_%2828706865630%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/08.15_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C2016%E4%B8%89%E5%9C%B0%E9%96%80%E9%84%89%E8%81%AF%E5%90%88%E6%94%B6%E7%A9%AB%E7%A5%AD%E3%80%8D_%2828706865630%29.jpg/1280px-08.15_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C2016%E4%B8%89%E5%9C%B0%E9%96%80%E9%84%89%E8%81%AF%E5%90%88%E6%94%B6%E7%A9%AB%E7%A5%AD%E3%80%8D_%2828706865630%29.jpg"
     },
     {
       "id": "trojan-war",
@@ -819,7 +819,7 @@
       "level": 2,
       "desc_zh": "希臘城邦聯合攻打特洛伊城，這場傳奇戰爭被荷馬記錄於《伊里亞德》中。",
       "desc_en": "Greek city-states unite to besiege Troy, a legendary conflict immortalized by Homer in the Iliad.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg/960px-Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg/1280px-Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/特洛伊戰爭",
       "wiki_en": "https://en.wikipedia.org/wiki/Trojan_War"
     },
@@ -863,7 +863,7 @@
       "sub_track": 0,
       "desc_zh": "周室衰微，諸侯爭霸，孔子、老子等百家思想興起。",
       "desc_en": "Decline of Zhou; rise of competing states and the Hundred Schools of Thought.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chinese_plain_5c._BC-en.svg/960px-Chinese_plain_5c._BC-en.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chinese_plain_5c._BC-en.svg/1280px-Chinese_plain_5c._BC-en.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/春秋時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Spring_and_Autumn_period",
       "endYear": -475
@@ -923,7 +923,7 @@
       "level": 2,
       "desc_zh": "釋迦牟尼在菩提樹下悟道，創立佛教，影響後來亞洲文明超過兩千五百年。",
       "desc_en": "Siddhartha Gautama attains enlightenment under the Bodhi Tree, founding Buddhism, which would shape Asian civilization for millennia.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg/960px-Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/佛陀",
       "wiki_en": "https://en.wikipedia.org/wiki/Gautama_Buddha"
     },
@@ -952,7 +952,7 @@
       "sub_track": 0,
       "desc_zh": "七雄並立，諸子百家爭鳴，兵家、法家、縱橫家興盛。",
       "desc_en": "Seven major states vie for dominance; military strategy and philosophy flourish.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/EN-WarringStatesAll260BCE.jpg/960px-EN-WarringStatesAll260BCE.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/EN-WarringStatesAll260BCE.jpg/1280px-EN-WarringStatesAll260BCE.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/戰國時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Warring_States_period",
       "endYear": -221
@@ -967,7 +967,7 @@
       "level": 2,
       "desc_zh": "馬其頓的亞歷山大大帝東征，建立橫跨歐亞非的帝國，促進希臘文化與東方文化的交融。",
       "desc_en": "Alexander the Great conquers a vast empire from Greece to India, spreading Greek culture and facilitating East-West cultural exchange.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Alexander_Mosaic_detail_of_Alexander_the_Great_%283x4_cropped%29.jpg/960px-Alexander_Mosaic_detail_of_Alexander_the_Great_%283x4_cropped%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Alexander_Mosaic_detail_of_Alexander_the_Great_%283x4_cropped%29.jpg/1280px-Alexander_Mosaic_detail_of_Alexander_the_Great_%283x4_cropped%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/亞歷山大大帝",
       "wiki_en": "https://en.wikipedia.org/wiki/Alexander_the_Great",
       "sub_track": 0
@@ -982,7 +982,7 @@
       "sub_track": 0,
       "desc_zh": "水稻農業傳入日本，金屬工具出現，日本進入農耕文明。",
       "desc_en": "Rice agriculture arrives in Japan; metal tools appear; Japan enters agricultural civilization.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/YoshinogariIseki.jpg/960px-YoshinogariIseki.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/YoshinogariIseki.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/彌生時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Yayoi_period",
       "endYear": 250
@@ -998,7 +998,7 @@
       "level": 2,
       "desc_zh": "羅馬共和國透過布匿戰爭擊敗迦太基，逐步成為地中海地區的霸主。",
       "desc_en": "Rome defeats Carthage in the Punic Wars, gradually establishing dominance over the entire Mediterranean region.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Roman_republic%2C_territory_44_BC.svg/960px-Roman_republic%2C_territory_44_BC.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Roman_republic%2C_territory_44_BC.svg/1280px-Roman_republic%2C_territory_44_BC.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/羅馬共和國",
       "wiki_en": "https://en.wikipedia.org/wiki/Roman_Republic",
       "endYear": -27
@@ -1013,7 +1013,7 @@
       "sub_track": 0,
       "desc_zh": "秦始皇統一六國，建立中央集權制度，統一文字度量衡，修建長城。",
       "desc_en": "Qin Shi Huang unifies China, standardizes writing, weights, and builds the Great Wall.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Qin_dynasty_territory.svg/960px-Qin_dynasty_territory.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Qin_dynasty_territory.svg/1280px-Qin_dynasty_territory.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/秦朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Qin_dynasty",
       "endYear": -206
@@ -1028,7 +1028,7 @@
       "sub_track": 0,
       "desc_zh": "漢朝奠定中華民族主體，絲路開通，儒學立為國教，造紙術成熟。",
       "desc_en": "The Han Dynasty shapes Chinese national identity, opens the Silk Road, and adopts Confucianism as state doctrine.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Han_Dynasty_2_BC_%28cropped%29.svg/960px-Han_Dynasty_2_BC_%28cropped%29.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Han_Dynasty_2_BC_%28cropped%29.svg/1280px-Han_Dynasty_2_BC_%28cropped%29.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/漢朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Han_dynasty",
       "endYear": 220
@@ -1043,7 +1043,7 @@
       "level": 1,
       "desc_zh": "漢武帝派張騫出使西域，開拓絲綢之路，連接東西方，促進商業、文化與思想的交流。",
       "desc_en": "Emperor Wu of Han sends Zhang Qian westward, opening the Silk Road connecting East and West, enabling trade in silk, spices, and ideas.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Silk_road_Kazakhstan.svg/960px-Silk_road_Kazakhstan.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Silk_road_Kazakhstan.svg/1280px-Silk_road_Kazakhstan.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/絲綢之路",
       "wiki_en": "https://en.wikipedia.org/wiki/Silk_Road",
       "sub_track": 0
@@ -1059,7 +1059,7 @@
       "level": 2,
       "desc_zh": "尤利烏斯·凱撒在羅馬元老院被刺殺，引發內戰，最終導致羅馬共和國終結。",
       "desc_en": "Julius Caesar is assassinated in the Senate, triggering civil war and ultimately ending the Roman Republic.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/960px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/1280px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/尤利烏斯·凱撒",
       "wiki_en": "https://en.wikipedia.org/wiki/Julius_Caesar"
     },
@@ -1073,7 +1073,7 @@
       "level": 2,
       "desc_zh": "耶穌基督的誕生成為西方曆法紀元的起點，基督教信仰逐漸擴展至整個羅馬帝國。",
       "desc_en": "The birth of Jesus Christ marks the epoch of the Western calendar; Christianity gradually spreads throughout the Roman Empire.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg/960px-Spas_vsederzhitel_sinay_%28cropped1%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg/1280px-Spas_vsederzhitel_sinay_%28cropped1%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/耶穌",
       "wiki_en": "https://en.wikipedia.org/wiki/Jesus",
       "sub_track": 0
@@ -1088,7 +1088,7 @@
       "sub_track": 0,
       "desc_zh": "魏蜀吳三國鼎立，諸葛亮、曹操等人物成為千古傳奇。",
       "desc_en": "Wei, Shu, and Wu compete for dominance; legendary figures like Zhuge Liang and Cao Cao.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Three_Kingdoms_timelapse.gif/960px-Three_Kingdoms_timelapse.gif",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Three_Kingdoms_timelapse.gif",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
       "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
       "endYear": 280
@@ -1106,7 +1106,7 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
       "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
       "endYear": 280,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Three_Kingdoms_timelapse.gif/960px-Three_Kingdoms_timelapse.gif"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Three_Kingdoms_timelapse.gif"
     },
     {
       "id": "yamato",
@@ -1118,7 +1118,7 @@
       "sub_track": 0,
       "desc_zh": "大和政權統一日本，天皇制度確立，佛教自朝鮮傳入。",
       "desc_en": "Yamato state unifies Japan; imperial system established; Buddhism introduced from Korea.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yamato_Kingship_in_East_Asia.svg/960px-Yamato_Kingship_in_East_Asia.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yamato_Kingship_in_East_Asia.svg/1280px-Yamato_Kingship_in_East_Asia.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大和時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Yamato_period",
       "endYear": 710
@@ -1208,7 +1208,7 @@
       "sub_track": 0,
       "desc_zh": "唐朝是中國歷史黃金時代，長安為當時世界最大城市，詩詞藝術達到頂峰。",
       "desc_en": "Tang Dynasty is China's golden age; Chang'an is the world's largest city; poetry and arts flourish.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Tang_outline_map%2C_661.svg/960px-Tang_outline_map%2C_661.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Tang_outline_map%2C_661.svg/1280px-Tang_outline_map%2C_661.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/唐朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty",
       "endYear": 907
@@ -1223,7 +1223,7 @@
       "level": 1,
       "desc_zh": "穆罕默德創立伊斯蘭教，從麥地那向外傳播，在數十年內橫跨中東、北非與中亞。",
       "desc_en": "Muhammad founds Islam in Medina; within decades it spreads across the Middle East, North Africa, and Central Asia.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Kaaba_during_Hajj_-_edited.jpg/960px-The_Kaaba_during_Hajj_-_edited.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Kaaba_during_Hajj_-_edited.jpg/1280px-The_Kaaba_during_Hajj_-_edited.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊斯蘭教",
       "wiki_en": "https://en.wikipedia.org/wiki/Islam",
       "sub_track": 0
@@ -1238,7 +1238,7 @@
       "sub_track": 0,
       "desc_zh": "奈良建都，唐文化影響深遠；平安時代假名文字誕生，源氏物語等文學名著問世。",
       "desc_en": "Nara capital built under Tang influence; Heian era sees kana script and The Tale of Genji.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Map-of-Japan-1183-Heian-Genpei-War.png/960px-Map-of-Japan-1183-Heian-Genpei-War.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Map-of-Japan-1183-Heian-Genpei-War.png/1280px-Map-of-Japan-1183-Heian-Genpei-War.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/平安時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Heian_period",
       "endYear": 1185
@@ -1254,7 +1254,7 @@
       "level": 2,
       "desc_zh": "北歐維京人開始大規模航海探險，劫掠、貿易和殖民，最遠到達北美洲。",
       "desc_en": "Norse Vikings begin extensive sea voyages for raiding, trading, and colonization, reaching as far as North America.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bildsten_fr%C3%A5n_Smiss%2C_Gotland.jpg/960px-Bildsten_fr%C3%A5n_Smiss%2C_Gotland.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bildsten_fr%C3%A5n_Smiss%2C_Gotland.jpg/1280px-Bildsten_fr%C3%A5n_Smiss%2C_Gotland.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/維京人",
       "wiki_en": "https://en.wikipedia.org/wiki/Viking_Age",
       "endYear": 1100
@@ -1299,7 +1299,7 @@
       "sub_track": 0,
       "desc_zh": "宋朝活字印刷、火藥、指南針廣泛應用，商業繁榮，是科技黃金時代。",
       "desc_en": "Song Dynasty sees widespread use of movable type, gunpowder, and compass; commercial and technological golden age.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/China_-_Song_Dynasty-en.svg/960px-China_-_Song_Dynasty-en.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/China_-_Song_Dynasty-en.svg/1280px-China_-_Song_Dynasty-en.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/宋朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Song_dynasty",
       "endYear": 1279
@@ -1333,7 +1333,7 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/南宋",
       "wiki_en": "https://en.wikipedia.org/wiki/Southern_Song_dynasty",
       "endYear": 1279,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/China_-_Song_Dynasty-en.svg/960px-China_-_Song_Dynasty-en.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/China_-_Song_Dynasty-en.svg/1280px-China_-_Song_Dynasty-en.svg.png"
     },
     {
       "id": "samurai-era",
@@ -1345,7 +1345,7 @@
       "sub_track": 0,
       "desc_zh": "鎌倉幕府建立，武士階級崛起，日本進入武家政治時代。",
       "desc_en": "Kamakura shogunate established; samurai class rises; Japan enters warrior-governed era.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Samurai_on_horseback0.jpg/960px-Samurai_on_horseback0.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Samurai_on_horseback0.jpg/1280px-Samurai_on_horseback0.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/武士",
       "wiki_en": "https://en.wikipedia.org/wiki/Samurai",
       "endYear": 1868
@@ -1360,7 +1360,7 @@
       "level": 1,
       "desc_zh": "成吉思汗統一蒙古各部，建立史上最大的連續陸地帝國，橫跨歐亞大陸。",
       "desc_en": "Genghis Khan unifies the Mongol tribes and builds the largest contiguous land empire in history, spanning from East Asia to Eastern Europe.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif/960px-Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif/1280px-Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蒙古帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_Empire",
       "sub_track": 0,
@@ -1376,7 +1376,7 @@
       "sub_track": 0,
       "desc_zh": "蒙古忽必烈建立元朝，統治全中國，馬可波羅來訪，東西方交流空前。",
       "desc_en": "Kublai Khan establishes Yuan; Marco Polo visits; unprecedented East-West exchange.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Yuan_Dynasty_revised.png/960px-Yuan_Dynasty_revised.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Yuan_Dynasty_revised.png/1280px-Yuan_Dynasty_revised.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/元朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Yuan_dynasty",
       "endYear": 1368
@@ -1391,7 +1391,7 @@
       "level": 1,
       "desc_zh": "鼠疫從中亞蔓延至歐洲，奪走歐洲三分之一至二分之一的人口，深刻改變歐洲社會結構。",
       "desc_en": "Bubonic plague spreads from Central Asia to Europe, killing a third to half of Europe's population and transforming medieval society.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1346-1353_spread_of_the_Black_Death_in_Europe_map.svg/960px-1346-1353_spread_of_the_Black_Death_in_Europe_map.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/1346-1353_spread_of_the_Black_Death_in_Europe_map.svg/1280px-1346-1353_spread_of_the_Black_Death_in_Europe_map.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/黑死病",
       "wiki_en": "https://en.wikipedia.org/wiki/Black_Death",
       "sub_track": 0,
@@ -1407,7 +1407,7 @@
       "sub_track": 0,
       "desc_zh": "明朝建立，鄭和七下西洋，萬里長城達今日形態，北京紫禁城建成。",
       "desc_en": "Ming Dynasty established; Zheng He's voyages; Great Wall takes modern form; Forbidden City built.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Map_of_Ming_Chinese_empire_1415_%28cropped_2%29.jpg/960px-Map_of_Ming_Chinese_empire_1415_%28cropped_2%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Map_of_Ming_Chinese_empire_1415_%28cropped_2%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/明朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty",
       "endYear": 1644
@@ -1423,7 +1423,7 @@
       "level": 1,
       "desc_zh": "文藝復興在義大利興起，人文主義思想復甦，達文西、米開朗基羅等藝術大師輩出。",
       "desc_en": "The Renaissance begins in Italy, reviving humanism and producing towering figures like Leonardo da Vinci and Michelangelo.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/El_nacimiento_de_Venus%2C_por_Sandro_Botticelli.jpg/960px-El_nacimiento_de_Venus%2C_por_Sandro_Botticelli.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/El_nacimiento_de_Venus%2C_por_Sandro_Botticelli.jpg/1280px-El_nacimiento_de_Venus%2C_por_Sandro_Botticelli.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/文藝復興",
       "wiki_en": "https://en.wikipedia.org/wiki/Renaissance",
       "endYear": 1600
@@ -1439,7 +1439,7 @@
       "level": 2,
       "desc_zh": "約翰尼斯·古騰堡發明活字印刷術，使書籍大量生產成為可能，知識的傳播速度革命性提升。",
       "desc_en": "Johannes Gutenberg invents the movable-type printing press, enabling mass production of books and revolutionizing the spread of knowledge.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/960px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/1280px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古騰堡聖經",
       "wiki_en": "https://en.wikipedia.org/wiki/Gutenberg_Bible"
     },
@@ -1453,7 +1453,7 @@
       "level": 1,
       "desc_zh": "哥倫布抵達美洲，開啟大航海時代，東西半球永久連結，世界格局徹底改變。",
       "desc_en": "Columbus reaches the Americas, beginning the Age of Exploration and permanently connecting the Eastern and Western hemispheres.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg/960px-Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg/1280px-Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/克里斯托弗·哥倫布",
       "wiki_en": "https://en.wikipedia.org/wiki/Christopher_Columbus",
       "sub_track": 0
@@ -1498,7 +1498,7 @@
       "level": 2,
       "desc_zh": "哥白尼提出日心說，推翻地心說，開啟科學革命，人類對宇宙的認識根本改變。",
       "desc_en": "Copernicus proposes the heliocentric model, overturning geocentrism and sparking the Scientific Revolution.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Nikolaus_Kopernikus_MOT.jpg/960px-Nikolaus_Kopernikus_MOT.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Nikolaus_Kopernikus_MOT.jpg/1280px-Nikolaus_Kopernikus_MOT.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/尼古拉·哥白尼",
       "wiki_en": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus"
     },
@@ -1525,7 +1525,7 @@
       "sub_track": 0,
       "desc_zh": "德川幕府建立，鎖國政策，和平繁榮265年，浮世繪、歌舞伎等文化繁盛。",
       "desc_en": "Tokugawa shogunate; sakoku isolation policy; 265 years of peace; ukiyo-e and kabuki culture flourish.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mitsubaaoi.svg/960px-Mitsubaaoi.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mitsubaaoi.svg/1280px-Mitsubaaoi.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/江戶時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Edo_period",
       "endYear": 1868
@@ -1540,7 +1540,7 @@
       "level": 1,
       "desc_zh": "荷蘭東印度公司佔據臺灣西南部，建熱蘭遮城，引進農業技術與外來物種，開始系統化開發臺灣。",
       "desc_en": "The Dutch East India Company occupies southwestern Taiwan, builds Fort Zeelandia, introduces agriculture and trade, systematically developing the island.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Flag_of_the_Dutch_East_India_Company.svg/960px-Flag_of_the_Dutch_East_India_Company.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Flag_of_the_Dutch_East_India_Company.svg/1280px-Flag_of_the_Dutch_East_India_Company.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/荷蘭統治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Formosa"
     },
@@ -1556,7 +1556,7 @@
       "desc_en": "Spain occupies Keelung and Tamsui, builds Fort San Salvador; expelled by the Dutch in 1642.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/西班牙統治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Dutch_and_Spanish_Taiwan_en.svg/960px-Dutch_and_Spanish_Taiwan_en.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Dutch_and_Spanish_Taiwan_en.svg/1280px-Dutch_and_Spanish_Taiwan_en.svg.png"
     },
     {
       "id": "qing",
@@ -1568,7 +1568,7 @@
       "sub_track": 0,
       "desc_zh": "滿族建立清朝，康雍乾三朝鼎盛，後遭列強入侵，鴉片戰爭開啟近代屈辱史。",
       "desc_en": "Manchu Qing Dynasty peaks under three emperors, then faces Western imperialism and the Opium Wars.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg/960px-Flag_of_China_%281889%E2%80%931912%29.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg/1280px-Flag_of_China_%281889%E2%80%931912%29.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/清朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Qing_dynasty",
       "endYear": 1912
@@ -1583,7 +1583,7 @@
       "level": 1,
       "desc_zh": "鄭成功驅逐荷蘭人，在臺建立第一個漢人政權，推行屯田政策，大量漢人移民來臺。",
       "desc_en": "Koxinga (Zheng Chenggong) expels the Dutch, establishes Taiwan's first Han Chinese government, and promotes Han immigration.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kingdom_of_Tungning.svg/960px-Kingdom_of_Tungning.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kingdom_of_Tungning.svg/1280px-Kingdom_of_Tungning.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/明鄭時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Tungning"
     },
@@ -1597,7 +1597,7 @@
       "level": 1,
       "desc_zh": "施琅攻台，明鄭降清。清朝統治212年，臺灣從福建省一府三縣逐步發展為獨立建省，人口大增。",
       "desc_en": "Shi Lang's naval victory ends Ming-Zheng rule. Qing governs Taiwan for 212 years, eventually making it a separate province.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg/960px-Flag_of_China_%281889%E2%80%931912%29.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg/1280px-Flag_of_China_%281889%E2%80%931912%29.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/清治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"
     },
@@ -1612,7 +1612,7 @@
       "level": 2,
       "desc_zh": "牛頓發表《自然哲學的數學原理》，建立經典力學體系，統一了地上與天上的物理規律。",
       "desc_en": "Newton publishes Principia Mathematica, establishing classical mechanics and unifying terrestrial and celestial physics.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/960px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/1280px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/艾薩克·牛頓",
       "wiki_en": "https://en.wikipedia.org/wiki/Isaac_Newton"
     },
@@ -1627,7 +1627,7 @@
       "level": 1,
       "desc_zh": "英國率先發生工業革命，蒸汽機改變生產方式，人類文明進入工業化時代。",
       "desc_en": "Britain leads the Industrial Revolution; the steam engine transforms production and ushers humanity into the industrial age.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Powerloom_weaving_in_1835.jpg/960px-Powerloom_weaving_in_1835.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Powerloom_weaving_in_1835.jpg/1280px-Powerloom_weaving_in_1835.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/工業革命",
       "wiki_en": "https://en.wikipedia.org/wiki/Industrial_Revolution",
       "endYear": 1900
@@ -1643,7 +1643,7 @@
       "level": 1,
       "desc_zh": "法國大革命推翻君主制，提出自由、平等、博愛的理念，深刻影響世界民主化進程。",
       "desc_en": "The French Revolution overthrows the monarchy, proclaiming liberty, equality, and fraternity, profoundly influencing global democratization.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Anonymous_-_Prise_de_la_Bastille.jpg/960px-Anonymous_-_Prise_de_la_Bastille.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Anonymous_-_Prise_de_la_Bastille.jpg/1280px-Anonymous_-_Prise_de_la_Bastille.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/法國大革命",
       "wiki_en": "https://en.wikipedia.org/wiki/French_Revolution"
     },
@@ -1657,7 +1657,7 @@
       "level": 2,
       "desc_zh": "達爾文發表《物種起源》，提出天擇演化論，徹底改變人類對生命起源的理解。",
       "desc_en": "Darwin publishes On the Origin of Species, proposing natural selection and fundamentally changing humanity's understanding of life.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/960px-Charles_Darwin_seated_crop.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/1280px-Charles_Darwin_seated_crop.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/查爾斯·達爾文",
       "wiki_en": "https://en.wikipedia.org/wiki/Charles_Darwin",
       "sub_track": 0
@@ -1672,7 +1672,7 @@
       "sub_track": 0,
       "desc_zh": "明治維新推行現代化改革，脫亞入歐，日本迅速崛起為亞洲強國。",
       "desc_en": "Meiji Restoration modernizes Japan along Western lines, rapidly making Japan a major power.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Emperor_Meiji_by_Takahashi_Yuichi.jpg/960px-Emperor_Meiji_by_Takahashi_Yuichi.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Emperor_Meiji_by_Takahashi_Yuichi.jpg/1280px-Emperor_Meiji_by_Takahashi_Yuichi.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/明治維新",
       "wiki_en": "https://en.wikipedia.org/wiki/Meiji_Restoration"
     },
@@ -1687,7 +1687,7 @@
       "desc_en": "After the Sino-French War, Taiwan becomes a separate province; Liu Mingchuan becomes its first governor and modernizes the island.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣省",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg/960px-Flag_of_China_%281889%E2%80%931912%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg/1280px-Flag_of_China_%281889%E2%80%931912%29.svg.png"
     },
     {
       "id": "tw-shimonoseki",
@@ -1698,7 +1698,7 @@
       "level": 1,
       "desc_zh": "甲午戰爭清朝戰敗，與日本簽訂馬關條約，將臺灣、澎湖割讓予日本，臺灣民主國短暫抵抗失敗。",
       "desc_en": "China loses the First Sino-Japanese War and cedes Taiwan to Japan via the Treaty of Shimonoseki; the Taiwan Republic briefly resists.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Japan_China_Peace_Treaty_17_April_1895.jpg/960px-Japan_China_Peace_Treaty_17_April_1895.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Japan_China_Peace_Treaty_17_April_1895.jpg/1280px-Japan_China_Peace_Treaty_17_April_1895.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/馬關條約",
       "wiki_en": "https://en.wikipedia.org/wiki/Treaty_of_Shimonoseki"
     },
@@ -1712,7 +1712,7 @@
       "level": 1,
       "desc_zh": "日本統治臺灣50年，推行現代化建設（鐵路、醫療、教育），也實施殖民壓迫與皇民化政策。",
       "desc_en": "Japan rules Taiwan for 50 years, modernizing infrastructure (railways, medicine, education) while implementing colonial oppression and Japanization policies.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Japan_%281870%E2%80%931999%29.svg/960px-Flag_of_Japan_%281870%E2%80%931999%29.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Japan_%281870%E2%80%931999%29.svg/1280px-Flag_of_Japan_%281870%E2%80%931999%29.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/日治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
     },
@@ -1726,7 +1726,7 @@
       "sub_track": 0,
       "desc_zh": "孫中山推翻清朝，建立中華民國，結束兩千年帝制。",
       "desc_en": "Sun Yat-sen overthrows the Qing, founding the Republic of China and ending imperial rule.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/960px-Flag_of_the_Republic_of_China.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1280px-Flag_of_the_Republic_of_China.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華民國",
       "wiki_en": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)",
       "endYear": 1949
@@ -1741,7 +1741,7 @@
       "level": 1,
       "desc_zh": "第一次世界大戰爆發，超過1700萬人死亡，四大帝國瓦解，重塑世界政治格局。",
       "desc_en": "World War I erupts, killing over 17 million people, dissolving four empires and reshaping the global political order.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bataille_de_Verdun_1916.jpg/960px-Bataille_de_Verdun_1916.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bataille_de_Verdun_1916.jpg/1280px-Bataille_de_Verdun_1916.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/第一次世界大戰",
       "wiki_en": "https://en.wikipedia.org/wiki/World_War_I",
       "sub_track": 0
@@ -1757,7 +1757,7 @@
       "level": 2,
       "desc_zh": "布爾什維克革命推翻沙皇政權，建立蘇聯，共產主義思想席捲世界。",
       "desc_en": "The Bolshevik Revolution overthrows the Tsar and establishes the Soviet Union, spreading communist ideology worldwide.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/%D0%9C%D0%B8%D1%82%D0%B8%D0%BD%D0%B3_%D0%BD%D0%B0_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B5_%281917%29.jpg/960px-%D0%9C%D0%B8%D1%82%D0%B8%D0%BD%D0%B3_%D0%BD%D0%B0_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B5_%281917%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/%D0%9C%D0%B8%D1%82%D0%B8%D0%BD%D0%B3_%D0%BD%D0%B0_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B5_%281917%29.jpg/1280px-%D0%9C%D0%B8%D1%82%D0%B8%D0%BD%D0%B3_%D0%BD%D0%B0_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B5_%281917%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/十月革命",
       "wiki_en": "https://en.wikipedia.org/wiki/Russian_Revolution"
     },
@@ -1771,7 +1771,7 @@
       "sub_track": 0,
       "desc_zh": "五四運動推動科學與民主，是中國近代史重要轉折點。",
       "desc_en": "The May Fourth Movement promotes science and democracy, a pivotal turning point in modern Chinese history.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chinese_protestors_march_against_the_Treaty_of_Versailles_%28May_4%2C_1919%29.jpg/960px-Chinese_protestors_march_against_the_Treaty_of_Versailles_%28May_4%2C_1919%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chinese_protestors_march_against_the_Treaty_of_Versailles_%28May_4%2C_1919%29.jpg/1280px-Chinese_protestors_march_against_the_Treaty_of_Versailles_%28May_4%2C_1919%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五四運動",
       "wiki_en": "https://en.wikipedia.org/wiki/May_Fourth_Movement"
     },
@@ -1813,7 +1813,7 @@
       "level": 1,
       "desc_zh": "美國在廣島和長崎投下原子彈，二戰結束，人類進入核武器時代。",
       "desc_en": "The US drops atomic bombs on Hiroshima and Nagasaki, ending WWII and ushering in the nuclear age.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/960px-Atomic_bombing_of_Japan.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/1280px-Atomic_bombing_of_Japan.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/廣島與長崎原子彈爆炸",
       "wiki_en": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
       "sub_track": 0
@@ -1828,7 +1828,7 @@
       "level": 2,
       "desc_zh": "二戰後51個國家簽署聯合國憲章，成立聯合國，致力於維護世界和平與安全。",
       "desc_en": "51 nations sign the UN Charter after WWII, founding the United Nations to maintain international peace and security.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_the_United_Nations.svg/960px-Flag_of_the_United_Nations.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_the_United_Nations.svg/1280px-Flag_of_the_United_Nations.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/聯合國",
       "wiki_en": "https://en.wikipedia.org/wiki/United_Nations",
       "sub_track": 0
@@ -1843,7 +1843,7 @@
       "sub_track": 0,
       "desc_zh": "日本在二戰中戰敗投降，隨後在美國協助下推行民主改革，創造經濟奇蹟。",
       "desc_en": "Japan surrenders in WWII, then undergoes democratic reform under US guidance and achieves economic miracle.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Mamoru_Shigemitsu_signs_the_Instrument_of_Surrender%2C_officially_ending_the_Second_World_War.jpg/960px-Mamoru_Shigemitsu_signs_the_Instrument_of_Surrender%2C_officially_ending_the_Second_World_War.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Mamoru_Shigemitsu_signs_the_Instrument_of_Surrender%2C_officially_ending_the_Second_World_War.jpg/1280px-Mamoru_Shigemitsu_signs_the_Instrument_of_Surrender%2C_officially_ending_the_Second_World_War.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/日本投降",
       "wiki_en": "https://en.wikipedia.org/wiki/Surrender_of_Japan"
     },
@@ -1856,7 +1856,7 @@
       "level": 1,
       "desc_zh": "1947年2月28日爆發的省民反抗國民政府事件，遭武力鎮壓，數萬人罹難，影響臺灣社會深遠。",
       "desc_en": "On Feb. 28, 1947, an uprising against the KMT government is violently suppressed; tens of thousands die, leaving a deep scar on Taiwanese society.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/228_Incident_h.jpg/960px-228_Incident_h.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/228_Incident_h.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/二二八事件",
       "wiki_en": "https://en.wikipedia.org/wiki/228_incident"
     },
@@ -1870,7 +1870,7 @@
       "sub_track": 0,
       "desc_zh": "毛澤東在天安門宣布中華人民共和國成立，中國進入新時代。",
       "desc_en": "Mao Zedong proclaims the PRC from Tiananmen, beginning a new era in Chinese history.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/960px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1280px-Flag_of_the_People%27s_Republic_of_China.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華人民共和國",
       "wiki_en": "https://en.wikipedia.org/wiki/China"
     },
@@ -1883,7 +1883,7 @@
       "level": 1,
       "desc_zh": "國共內戰失利後，中華民國政府播遷臺灣，帶來大量軍民與文物，開始長期統治臺灣。",
       "desc_en": "After losing the Civil War, the ROC government retreats to Taiwan, bringing large numbers of soldiers, civilians, and cultural artifacts.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/960px-Flag_of_the_Republic_of_China.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1280px-Flag_of_the_Republic_of_China.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華民國",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan"
     },
@@ -1911,7 +1911,7 @@
       "level": 1,
       "desc_zh": "沃森與克里克發現DNA雙螺旋結構，開創分子生物學，奠定現代生物技術的基礎。",
       "desc_en": "Watson and Crick discover the DNA double helix, founding molecular biology and laying the groundwork for modern biotechnology.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Chromosome_DNA_Gene_unannotated.svg/960px-Chromosome_DNA_Gene_unannotated.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Chromosome_DNA_Gene_unannotated.svg/1280px-Chromosome_DNA_Gene_unannotated.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/去氧核糖核酸",
       "wiki_en": "https://en.wikipedia.org/wiki/DNA",
       "sub_track": 0
@@ -1940,7 +1940,7 @@
       "level": 1,
       "desc_zh": "阿波羅11號太空人阿姆斯壯踏上月球，實現人類千年來的飛天夢想。",
       "desc_en": "Apollo 11 astronaut Neil Armstrong walks on the Moon, fulfilling humanity's age-old dream of reaching another world.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/960px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/1280px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿波羅11號",
       "wiki_en": "https://en.wikipedia.org/wiki/Apollo_11",
       "sub_track": 0
@@ -1967,7 +1967,7 @@
       "level": 2,
       "desc_zh": "張忠謀創立台灣積體電路製造公司（台積電），開創晶圓代工模式，成為全球半導體產業核心。",
       "desc_en": "Morris Chang founds TSMC, pioneering the semiconductor foundry model; TSMC becomes the world's most critical chipmaker.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/TSMC_Global_R%EF%BC%86D_Center_at_night.jpg/960px-TSMC_Global_R%EF%BC%86D_Center_at_night.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/TSMC_Global_R%EF%BC%86D_Center_at_night.jpg/1280px-TSMC_Global_R%EF%BC%86D_Center_at_night.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/台灣積體電路製造公司",
       "wiki_en": "https://en.wikipedia.org/wiki/TSMC"
     },
@@ -1981,7 +1981,7 @@
       "level": 1,
       "desc_zh": "提姆·伯納斯-李發明全球資訊網，網際網路向公眾開放，人類進入資訊時代。",
       "desc_en": "Tim Berners-Lee invents the World Wide Web, opening the internet to the public and ushering in the Information Age.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Chrome_on_Linux.png/960px-Chrome_on_Linux.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Chrome_on_Linux.png/1280px-Chrome_on_Linux.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/全球資訊網",
       "wiki_en": "https://en.wikipedia.org/wiki/World_Wide_Web",
       "sub_track": 0
@@ -1995,7 +1995,7 @@
       "level": 1,
       "desc_zh": "臺灣舉行首次總統直接選舉，李登輝當選，是華人社會第一次民主直選總統，具有重大歷史意義。",
       "desc_en": "Taiwan holds its first direct presidential election; Lee Teng-hui wins in a historic milestone for Chinese-speaking democracies.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/ROC_1996_Presidential_Election_County_level.svg/960px-ROC_1996_Presidential_Election_County_level.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/ROC_1996_Presidential_Election_County_level.svg/1280px-ROC_1996_Presidential_Election_County_level.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/1996年中華民國總統選舉",
       "wiki_en": "https://en.wikipedia.org/wiki/1996_Taiwanese_presidential_election"
     },
@@ -2009,7 +2009,7 @@
       "level": 2,
       "desc_zh": "人類基因組計畫完成，完整解讀人類約30億個DNA鹼基對，開啟精準醫療新時代。",
       "desc_en": "The Human Genome Project completes the full sequence of human DNA, opening a new era of precision medicine.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo_HGP.jpg/960px-Logo_HGP.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo_HGP.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人類基因組計畫",
       "wiki_en": "https://en.wikipedia.org/wiki/Human_Genome_Project",
       "sub_track": 0
@@ -2024,7 +2024,7 @@
       "level": 2,
       "desc_zh": "蘋果公司發布第一代iPhone，智慧型手機普及，行動網路改變人類生活方式。",
       "desc_en": "Apple releases the first iPhone, smartphones become ubiquitous, and mobile internet transforms how humanity lives and connects.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_17_Pro_Vector.svg/960px-IPhone_17_Pro_Vector.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_17_Pro_Vector.svg/1280px-IPhone_17_Pro_Vector.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/iPhone",
       "wiki_en": "https://en.wikipedia.org/wiki/iPhone",
       "sub_track": 0
@@ -2039,7 +2039,7 @@
       "level": 1,
       "desc_zh": "ChatGPT 等大型語言模型向公眾開放，人工智慧技術進入爆炸性發展階段，深刻改變各行各業。",
       "desc_en": "Large language models like ChatGPT become publicly available, triggering an AI revolution that begins transforming every industry.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/960px-OpenAI_logo_2025_%28symbol%29.svg.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/1280px-OpenAI_logo_2025_%28symbol%29.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/ChatGPT",
       "wiki_en": "https://en.wikipedia.org/wiki/ChatGPT",
       "sub_track": 0
@@ -2055,7 +2055,7 @@
       "desc_en": "10⁻³² seconds after the Big Bang, the universe expands exponentially from quantum to macroscopic scale.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/暴脹_(宇宙學)",
       "wiki_en": "https://en.wikipedia.org/wiki/Cosmic_inflation",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/960px-WMAP_2012.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/1280px-WMAP_2012.png"
     },
     {
       "id": "cosmic-recombination",
@@ -2068,7 +2068,7 @@
       "desc_en": "380,000 years after the Big Bang, electrons combine with protons; the universe becomes transparent; the CMB is released.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/宇宙微波背景輻射",
       "wiki_en": "https://en.wikipedia.org/wiki/Cosmic_microwave_background",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cosmic_Microwave_Background_%28CMB%29.jpeg/960px-Cosmic_Microwave_Background_%28CMB%29.jpeg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cosmic_Microwave_Background_%28CMB%29.jpeg/1280px-Cosmic_Microwave_Background_%28CMB%29.jpeg"
     },
     {
       "id": "dark-ages-cosmos",
@@ -2082,7 +2082,7 @@
       "desc_en": "Between recombination and the first stars, the universe contained no light sources — completely dark.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/宇宙黑暗時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Chronology_of_the_universe#Dark_Ages",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/960px-WMAP_2012.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/1280px-WMAP_2012.png"
     },
     {
       "id": "first-galaxies",
@@ -2095,7 +2095,7 @@
       "desc_en": "Early stars cluster together; the first primitive galaxies form; gravity becomes the dominant force shaping cosmic structure.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/星系形成與演化",
       "wiki_en": "https://en.wikipedia.org/wiki/Galaxy_formation_and_evolution",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/960px-WMAP_2012.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/1280px-WMAP_2012.png"
     },
     {
       "id": "jupiter-forms",
@@ -2108,7 +2108,7 @@
       "desc_en": "The solar system's largest planet forms first; its gravity dominates the solar system structure and shields inner planets.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/木星",
       "wiki_en": "https://en.wikipedia.org/wiki/Jupiter",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter_OPAL_2024.png/960px-Jupiter_OPAL_2024.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter_OPAL_2024.png/1280px-Jupiter_OPAL_2024.png"
     },
     {
       "id": "saturn-forms",
@@ -2121,7 +2121,7 @@
       "desc_en": "The second gas giant forms, famous for its spectacular ring system made of ice and rock.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/土星",
       "wiki_en": "https://en.wikipedia.org/wiki/Saturn",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/960px-Saturn_during_Equinox.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/1280px-Saturn_during_Equinox.jpg"
     },
     {
       "id": "liquid-water-ocean",
@@ -2134,7 +2134,7 @@
       "desc_en": "As Earth cools, water vapor condenses to form the first liquid oceans — a prerequisite for life.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/地球海洋的起源",
       "wiki_en": "https://en.wikipedia.org/wiki/Origin_of_water_on_Earth",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/BlueMarble-2001-2002.jpg/960px-BlueMarble-2001-2002.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/BlueMarble-2001-2002.jpg/1280px-BlueMarble-2001-2002.jpg"
     },
     {
       "id": "late-heavy-bombardment",
@@ -2147,7 +2147,7 @@
       "desc_en": "~4 billion years ago, intense asteroid bombardment; may have delivered water and organic molecules to Earth.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/後期重轟炸期",
       "wiki_en": "https://en.wikipedia.org/wiki/Late_Heavy_Bombardment",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Precambrian_Evolution_of_Life.png/960px-Precambrian_Evolution_of_Life.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Precambrian_Evolution_of_Life.png/1280px-Precambrian_Evolution_of_Life.png"
     },
     {
       "id": "first-continent",
@@ -2160,7 +2160,7 @@
       "desc_en": "The earliest continental crust fragments form; Acasta Gneiss in Canada is the oldest known intact rock.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿卡斯塔片麻岩",
       "wiki_en": "https://en.wikipedia.org/wiki/Acasta_Gneiss",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Acasta_gneiss.jpg/960px-Acasta_gneiss.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Acasta_gneiss.jpg"
     },
     {
       "id": "plate-tectonics",
@@ -2173,7 +2173,7 @@
       "desc_en": "Plate tectonic activity begins; continents drift, collide, and split, shaping today's geography and mountains.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/板塊構造論",
       "wiki_en": "https://en.wikipedia.org/wiki/Plate_tectonics",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Tectonic_plates_%282022%29.svg/960px-Tectonic_plates_%282022%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Tectonic_plates_%282022%29.svg/1280px-Tectonic_plates_%282022%29.svg.png"
     },
     {
       "id": "rodinia",
@@ -2200,7 +2200,7 @@
       "desc_en": "Stromatolites formed by cyanobacteria are the earliest rock record of life, found in Pilbara, Australia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/疊層石",
       "wiki_en": "https://en.wikipedia.org/wiki/Stromatolite",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg/960px-Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg/1280px-Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg"
     },
     {
       "id": "ediacaran",
@@ -2214,7 +2214,7 @@
       "desc_en": "After Snowball Earth, the first complex multicellular organisms appear — soft-bodied, boneless pioneers of animal evolution.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/埃迪卡拉紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Ediacaran",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mollweide_Paleographic_Map_of_Earth%2C_600_Ma_%28Ediacaran_Period%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_600_Ma_%28Ediacaran_Period%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mollweide_Paleographic_Map_of_Earth%2C_600_Ma_%28Ediacaran_Period%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_600_Ma_%28Ediacaran_Period%29.png"
     },
     {
       "id": "land-plants",
@@ -2253,7 +2253,7 @@
       "desc_en": "Early tetrapods like Tiktaalik crawl onto land — ancestors of all land vertebrates including humans.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/四足動物",
       "wiki_en": "https://en.wikipedia.org/wiki/Tetrapod",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tetrapoda.jpg/960px-Tetrapoda.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tetrapoda.jpg/1280px-Tetrapoda.jpg"
     },
     {
       "id": "first-reptiles",
@@ -2266,7 +2266,7 @@
       "desc_en": "Reptiles with amniotic eggs evolve, no longer needing water to reproduce, allowing conquest of dry inland environments.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/爬蟲類",
       "wiki_en": "https://en.wikipedia.org/wiki/Reptile",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TWC_Wildlife_Centre%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_8910.jpg/960px-TWC_Wildlife_Centre%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_8910.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TWC_Wildlife_Centre%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_8910.jpg/1280px-TWC_Wildlife_Centre%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_8910.jpg"
     },
     {
       "id": "first-mammals",
@@ -2279,7 +2279,7 @@
       "desc_en": "Early mammals evolve from therapsid reptiles in the Late Triassic — tiny, nocturnal, warm-blooded.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/哺乳類",
       "wiki_en": "https://en.wikipedia.org/wiki/Mammal",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Mammal_collage.png/960px-Mammal_collage.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Mammal_collage.png"
     },
     {
       "id": "first-birds",
@@ -2292,7 +2292,7 @@
       "desc_en": "Archaeopteryx in the Late Jurassic is the transitional species between dinosaurs and birds; modern birds are direct dinosaur descendants.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/始祖鳥",
       "wiki_en": "https://en.wikipedia.org/wiki/Archaeopteryx",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg/960px-Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg/1280px-Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg"
     },
     {
       "id": "flowering-plants",
@@ -2305,7 +2305,7 @@
       "desc_en": "Angiosperms explode in diversity in the Cretaceous, co-evolving with insects to become Earth's dominant plant group.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/被子植物",
       "wiki_en": "https://en.wikipedia.org/wiki/Flowering_plant",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ranunculus_repens_1_%28cropped%29.JPG/960px-Ranunculus_repens_1_%28cropped%29.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ranunculus_repens_1_%28cropped%29.JPG/1280px-Ranunculus_repens_1_%28cropped%29.JPG"
     },
     {
       "id": "first-primates",
@@ -2318,7 +2318,7 @@
       "desc_en": "After K-Pg extinction, mammals diversify; earliest primates evolve in tropical forests with stereoscopic vision and grasping hands.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/靈長目",
       "wiki_en": "https://en.wikipedia.org/wiki/Primate",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lemur_catta_001.jpg/960px-Lemur_catta_001.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lemur_catta_001.jpg/1280px-Lemur_catta_001.jpg"
     },
     {
       "id": "ape-monkey-split",
@@ -2331,7 +2331,7 @@
       "desc_en": "Apes diverge from Old World monkeys in the late Oligocene; the ape lineage eventually produces gibbons, orangutans, chimps, and humans.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/類人猿",
       "wiki_en": "https://en.wikipedia.org/wiki/Ape",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg/960px-013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg/1280px-013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"
     },
     {
       "id": "cuneiform",
@@ -2344,7 +2344,7 @@
       "desc_en": "The Sumerians invent humanity's earliest writing system, pressing reed styluses into clay tablets to record trade and administration.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/楔形文字",
       "wiki_en": "https://en.wikipedia.org/wiki/Cuneiform",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Xerxes_Cuneiform_Van.JPG/960px-Xerxes_Cuneiform_Van.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Xerxes_Cuneiform_Van.JPG/1280px-Xerxes_Cuneiform_Van.JPG"
     },
     {
       "id": "sumer-cities",
@@ -2358,7 +2358,7 @@
       "desc_en": "City-states like Uruk, Ur, and Lagash rise, building temples, palaces, and markets — the foundation of urban civilization.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蘇美",
       "wiki_en": "https://en.wikipedia.org/wiki/Sumer",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sumer_satellite_map.jpg/960px-Sumer_satellite_map.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sumer_satellite_map.jpg/1280px-Sumer_satellite_map.jpg"
     },
     {
       "id": "akkadian-empire",
@@ -2372,7 +2372,7 @@
       "desc_en": "Sargon of Akkad builds history's first empire, unifying Mesopotamia and establishing the precedent for centralized imperial rule.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿卡德帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Akkadian_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Empire_akkad.svg/960px-Empire_akkad.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Empire_akkad.svg/1280px-Empire_akkad.svg.png"
     },
     {
       "id": "ur-third",
@@ -2386,7 +2386,7 @@
       "desc_en": "The final flourishing of Sumerian civilization, known for sophisticated administration and arts; the Great Ziggurat of Ur built in this period.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/烏爾第三王朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Third_Dynasty_of_Ur",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ur_III.svg/960px-Ur_III.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ur_III.svg/1280px-Ur_III.svg.png"
     },
     {
       "id": "abraham",
@@ -2412,7 +2412,7 @@
       "desc_en": "Built by Pharaoh Khufu, 146m tall — the only surviving wonder of the ancient world; its construction methods remain mysterious.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/吉薩大金字塔",
       "wiki_en": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/1280px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg"
     },
     {
       "id": "egypt-new-kingdom",
@@ -2426,7 +2426,7 @@
       "desc_en": "The imperial expansion period with Thutmose III and Ramesses II; Battle of Kadesh and Abu Simbel temples belong to this era.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新王國時期",
       "wiki_en": "https://en.wikipedia.org/wiki/New_Kingdom_of_Egypt",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png/960px-Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png/1280px-Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png"
     },
     {
       "id": "hebrews-egypt",
@@ -2440,7 +2440,7 @@
       "desc_en": "The Hebrew people are enslaved in Egypt, building cities for Pharaoh; the prelude to the Exodus.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/出埃及記",
       "wiki_en": "https://en.wikipedia.org/wiki/The_Exodus",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/David_Roberts-IsraelitesLeavingEgypt_1828.jpg/960px-David_Roberts-IsraelitesLeavingEgypt_1828.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/David_Roberts-IsraelitesLeavingEgypt_1828.jpg/1280px-David_Roberts-IsraelitesLeavingEgypt_1828.jpg"
     },
     {
       "id": "moses-exodus",
@@ -2453,7 +2453,7 @@
       "desc_en": "Moses leads the Israelites out of Egypt through the Ten Plagues and Red Sea, receiving the Ten Commandments at Sinai — the founding event of Judaism.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/摩西",
       "wiki_en": "https://en.wikipedia.org/wiki/Moses",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg/960px-Rembrandt_Harmensz._van_Rijn_079.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg/1280px-Rembrandt_Harmensz._van_Rijn_079.jpg"
     },
     {
       "id": "ten-commandments",
@@ -2466,7 +2466,7 @@
       "desc_en": "Moses receives the Ten Commandments on Mount Sinai — the ethical and legal foundation of Judaism and Christianity.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/十誡",
       "wiki_en": "https://en.wikipedia.org/wiki/Ten_Commandments",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/0001_FL9694984.jpg/960px-0001_FL9694984.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/0001_FL9694984.jpg/1280px-0001_FL9694984.jpg"
     },
     {
       "id": "phoenician-alphabet",
@@ -2479,7 +2479,7 @@
       "desc_en": "The Phoenicians devise 22 consonant letters — the common ancestor of nearly all modern alphabets: Greek, Latin, Arabic, Hebrew.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/腓尼基字母",
       "wiki_en": "https://en.wikipedia.org/wiki/Phoenician_alphabet",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Phoenician_alphabet.svg/960px-Phoenician_alphabet.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Phoenician_alphabet.svg/1280px-Phoenician_alphabet.svg.png"
     },
     {
       "id": "david-kingdom",
@@ -2493,7 +2493,7 @@
       "desc_en": "King David unifies Israel, establishes Jerusalem as capital; his son Solomon later builds the First Temple.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大衛王",
       "wiki_en": "https://en.wikipedia.org/wiki/David",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/960px-King_David%2C_the_King_of_Israel.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/1280px-King_David%2C_the_King_of_Israel.jpg"
     },
     {
       "id": "solomon-temple",
@@ -2506,7 +2506,7 @@
       "desc_en": "The First Temple in Jerusalem houses the Ark of the Covenant; destroyed by Babylon in 586 BCE.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/所羅門聖殿",
       "wiki_en": "https://en.wikipedia.org/wiki/Solomon%27s_Temple",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg/960px-Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg/1280px-Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg"
     },
     {
       "id": "assyrian-empire",
@@ -2520,7 +2520,7 @@
       "desc_en": "History's first large-scale military empire; conquers the Middle East by force; builds Nineveh and its famous library.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/亞述",
       "wiki_en": "https://en.wikipedia.org/wiki/Assyria",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ashur_symbol_Nimrud.png/960px-Ashur_symbol_Nimrud.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ashur_symbol_Nimrud.png"
     },
     {
       "id": "babylon-captivity",
@@ -2533,7 +2533,7 @@
       "desc_en": "Nebuchadnezzar II destroys Jerusalem and the Temple, deporting Jews to Babylon; Judaism deepens during exile.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/巴比倫之囚",
       "wiki_en": "https://en.wikipedia.org/wiki/Babylonian_captivity",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Tissot_The_Flight_of_the_Prisoners.jpg/960px-Tissot_The_Flight_of_the_Prisoners.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Tissot_The_Flight_of_the_Prisoners.jpg/1280px-Tissot_The_Flight_of_the_Prisoners.jpg"
     },
     {
       "id": "neo-babylon",
@@ -2547,7 +2547,7 @@
       "desc_en": "Nebuchadnezzar II rebuilds Babylon; the legendary Hanging Gardens are one of the Seven Wonders of the Ancient World.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新巴比倫王國",
       "wiki_en": "https://en.wikipedia.org/wiki/Neo-Babylonian_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Neo-Babylonian_Empire_%28greatest_extent%29.svg/960px-Neo-Babylonian_Empire_%28greatest_extent%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Neo-Babylonian_Empire_%28greatest_extent%29.svg/1280px-Neo-Babylonian_Empire_%28greatest_extent%29.svg.png"
     },
     {
       "id": "cyrus-great",
@@ -2574,7 +2574,7 @@
       "desc_en": "A vast empire from Greece to India; Darius I establishes the satrapy system and builds Persepolis — one of antiquity's greatest empires.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿契美尼德王朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Achaemenid_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Achaemenid_Empire_500_BCE.jpg/960px-Achaemenid_Empire_500_BCE.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Achaemenid_Empire_500_BCE.jpg/1280px-Achaemenid_Empire_500_BCE.jpg"
     },
     {
       "id": "darius-persepolis",
@@ -2601,7 +2601,7 @@
       "desc_en": "The last pharaoh; political alliances with Caesar and Antony kept Egypt independent until her death ended 3,000 years of Egyptian civilization.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/克麗奧帕特拉七世",
       "wiki_en": "https://en.wikipedia.org/wiki/Cleopatra",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg/960px-Kleopatra-VII.-Altes-Museum-Berlin1.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg"
     },
     {
       "id": "sassanid-persia",
@@ -2615,7 +2615,7 @@
       "desc_en": "Iran's last pre-Islamic dynasty; Zoroastrianism as state religion; rivaled Rome and Byzantium for 400 years before falling to Islam.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/薩珊王朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Sasanian_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/The_Sasanian_Empire_at_its_apex_under_Khosrow_II.svg/960px-The_Sasanian_Empire_at_its_apex_under_Khosrow_II.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/The_Sasanian_Empire_at_its_apex_under_Khosrow_II.svg/1280px-The_Sasanian_Empire_at_its_apex_under_Khosrow_II.svg.png"
     },
     {
       "id": "muhammad-birth",
@@ -2641,7 +2641,7 @@
       "desc_en": "Muhammad receives the first revelation from angel Jibreel in the Cave of Hira; the first verse of the Quran is revealed — Islam officially begins.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊斯蘭教歷史",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_Islam",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Icon-religion.svg/960px-Icon-religion.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Icon-religion.svg/1280px-Icon-religion.svg.png"
     },
     {
       "id": "mecca-conquest",
@@ -2654,7 +2654,7 @@
       "desc_en": "Muhammad's forces enter Mecca nearly bloodlessly, destroy idols, and establish Islam as the dominant faith of the Arabian Peninsula.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/麥加征服",
       "wiki_en": "https://en.wikipedia.org/wiki/Conquest_of_Mecca",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Paris%2C_BnF%2C_Suppl%C3%A9ment_Persan_1030_fol._305v-306r_Muhammad_and_Ali_lead_destruction_of_Meccan_idols.jpg/960px-Paris%2C_BnF%2C_Suppl%C3%A9ment_Persan_1030_fol._305v-306r_Muhammad_and_Ali_lead_destruction_of_Meccan_idols.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Paris%2C_BnF%2C_Suppl%C3%A9ment_Persan_1030_fol._305v-306r_Muhammad_and_Ali_lead_destruction_of_Meccan_idols.jpg/1280px-Paris%2C_BnF%2C_Suppl%C3%A9ment_Persan_1030_fol._305v-306r_Muhammad_and_Ali_lead_destruction_of_Meccan_idols.jpg"
     },
     {
       "id": "quran-compiled",
@@ -2667,7 +2667,7 @@
       "desc_en": "Caliph Uthman standardizes the Quran text, establishing Islam's central scripture — the spiritual guide for over a billion Muslims.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古蘭經",
       "wiki_en": "https://en.wikipedia.org/wiki/Quran",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Birmingham_Quran_manuscript_full.jpg/960px-Birmingham_Quran_manuscript_full.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Birmingham_Quran_manuscript_full.jpg/1280px-Birmingham_Quran_manuscript_full.jpg"
     },
     {
       "id": "four-caliphs",
@@ -2681,7 +2681,7 @@
       "desc_en": "Four successors after Muhammad; Islam rapidly expands to Persia, Syria, and Egypt, laying the foundation of the Islamic world.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/哈里發",
       "wiki_en": "https://en.wikipedia.org/wiki/Rashidun_Caliphate",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Mohammad_adil-Rashidun-empire-at-its-peak-close.PNG/960px-Mohammad_adil-Rashidun-empire-at-its-peak-close.PNG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/Mohammad_adil-Rashidun-empire-at-its-peak-close.PNG"
     },
     {
       "id": "islam-conquers-persia",
@@ -2694,7 +2694,7 @@
       "desc_en": "Islamic forces defeat the Sassanid Empire; Persian civilization merges with the Islamic world, deeply influencing its culture and arts.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/穆斯林征服波斯",
       "wiki_en": "https://en.wikipedia.org/wiki/Muslim_conquest_of_Persia",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/IslamicConquestsIroon.png/960px-IslamicConquestsIroon.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/IslamicConquestsIroon.png"
     },
     {
       "id": "karbala",
@@ -2707,7 +2707,7 @@
       "desc_en": "The Prophet's grandson Husayn is killed at Karbala — this becomes the spiritual heart of Shia Islam and permanently deepens the Sunni-Shia split.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/卡爾巴拉戰役",
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Karbala",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Brooklyn_Museum_-_Battle_of_Karbala_-_Abbas_Al-Musavi_-_cropped.jpg/960px-Brooklyn_Museum_-_Battle_of_Karbala_-_Abbas_Al-Musavi_-_cropped.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Brooklyn_Museum_-_Battle_of_Karbala_-_Abbas_Al-Musavi_-_cropped.jpg/1280px-Brooklyn_Museum_-_Battle_of_Karbala_-_Abbas_Al-Musavi_-_cropped.jpg"
     },
     {
       "id": "umayyad",
@@ -2721,7 +2721,7 @@
       "desc_en": "Islam's first hereditary dynasty; territory stretches from Spain to Central Asia; capital Damascus; one of history's largest states.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/倭馬亞王朝",
       "wiki_en": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Umayyad_Caliphate_720_AD_%28orthographic_projection%29.svg/960px-Umayyad_Caliphate_720_AD_%28orthographic_projection%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Umayyad_Caliphate_720_AD_%28orthographic_projection%29.svg/1280px-Umayyad_Caliphate_720_AD_%28orthographic_projection%29.svg.png"
     },
     {
       "id": "islam-spain",
@@ -2734,7 +2734,7 @@
       "desc_en": "Islamic forces cross the Strait of Gibraltar and conquer the Iberian Peninsula within years, giving birth to the Andalusian civilization.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊比利亞半島的穆斯林統治",
       "wiki_en": "https://en.wikipedia.org/wiki/Umayyad_conquest_of_Hispania",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Conquistaislamicapeninsula2.svg/960px-Conquistaislamicapeninsula2.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Conquistaislamicapeninsula2.svg/1280px-Conquistaislamicapeninsula2.svg.png"
     },
     {
       "id": "abbasid-golden",
@@ -2748,7 +2748,7 @@
       "desc_en": "Baghdad becomes the world's center of knowledge; Arab scholars translate Greek texts, making great advances in algebra, astronomy, and medicine.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊斯蘭黃金時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Islamic_Golden_Age",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Al-Idrisi%27s_world_map.JPG/960px-Al-Idrisi%27s_world_map.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Al-Idrisi%27s_world_map.JPG/1280px-Al-Idrisi%27s_world_map.JPG"
     },
     {
       "id": "al-khwarizmi",
@@ -2787,7 +2787,7 @@
       "desc_en": "Persian physician; his Canon of Medicine synthesizes Greek and Islamic medical knowledge; used in Europe for over 600 years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊本·西拿",
       "wiki_en": "https://en.wikipedia.org/wiki/Avicenna",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Avicenna_Bust%2C_left_profile_%28cropped%29.jpg/960px-Avicenna_Bust%2C_left_profile_%28cropped%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Avicenna_Bust%2C_left_profile_%28cropped%29.jpg/1280px-Avicenna_Bust%2C_left_profile_%28cropped%29.jpg"
     },
     {
       "id": "saladin-jerusalem",
@@ -2800,7 +2800,7 @@
       "desc_en": "Kurdish leader Saladin unifies the Islamic world and recaptures Jerusalem from the Crusaders — a hero of the Islamic world.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/薩拉丁",
       "wiki_en": "https://en.wikipedia.org/wiki/Saladin",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Al-Nasir_I_Salah_al-Din_Yusuf_%28Saladin%29._AH_564-589_%281169-1193_CE%29_%C3%86_Dirham_%2830.1mm%2C_13.28_g%2C_6h%29._Without_mint-name._Dated_AH_586_%28AD_1190-91%29._Sultan_sitting_facing%2C_cross-legged%2C_on_high-backed_throne_%28obverse%29.jpg/960px-thumbnail.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Al-Nasir_I_Salah_al-Din_Yusuf_%28Saladin%29._AH_564-589_%281169-1193_CE%29_%C3%86_Dirham_%2830.1mm%2C_13.28_g%2C_6h%29._Without_mint-name._Dated_AH_586_%28AD_1190-91%29._Sultan_sitting_facing%2C_cross-legged%2C_on_high-backed_throne_%28obverse%29.jpg/1280px-thumbnail.jpg"
     },
     {
       "id": "mongol-baghdad",
@@ -2813,7 +2813,7 @@
       "desc_en": "Mongol Hulagu Khan sacks Baghdad; the last caliph is killed; library books thrown into the Tigris — the Islamic Golden Age ends.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蒙古攻陷巴格達",
       "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Baghdad_(1258)",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bagdad1258.jpg/960px-Bagdad1258.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bagdad1258.jpg/1280px-Bagdad1258.jpg"
     },
     {
       "id": "ottoman-empire",
@@ -2827,7 +2827,7 @@
       "desc_en": "A 600-year Islamic empire spanning three continents; controls Mecca and Medina; dominates Middle Eastern politics until after WWI.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/鄂圖曼帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Ottoman_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_of_the_Ottoman_Empire_%281844%E2%80%931922%29.svg/960px-Flag_of_the_Ottoman_Empire_%281844%E2%80%931922%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_of_the_Ottoman_Empire_%281844%E2%80%931922%29.svg/1280px-Flag_of_the_Ottoman_Empire_%281844%E2%80%931922%29.svg.png"
     },
     {
       "id": "ottoman-constantinople",
@@ -2840,7 +2840,7 @@
       "desc_en": "Mehmed II conquers Constantinople; the 1,000-year Eastern Roman Empire ends — a symbolic close of the Middle Ages.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/君士坦丁堡的陷落",
       "wiki_en": "https://en.wikipedia.org/wiki/Fall_of_Constantinople",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Le_si%C3%A8ge_de_Constantinople_%281453%29_by_Jean_Le_Tavernier_after_1455.jpg/960px-Le_si%C3%A8ge_de_Constantinople_%281453%29_by_Jean_Le_Tavernier_after_1455.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Le_si%C3%A8ge_de_Constantinople_%281453%29_by_Jean_Le_Tavernier_after_1455.jpg"
     },
     {
       "id": "ottoman-caliphate-end",
@@ -2853,7 +2853,7 @@
       "desc_en": "Atatürk abolishes the Ottoman caliphate; the Islamic world loses its unified religious-political leader; modern secular Turkey established.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/哈里發",
       "wiki_en": "https://en.wikipedia.org/wiki/Abolition_of_the_caliphate",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/UsulALFiqh.svg/960px-UsulALFiqh.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/UsulALFiqh.svg/1280px-UsulALFiqh.svg.png"
     },
     {
       "id": "israel-founded",
@@ -2866,7 +2866,7 @@
       "desc_en": "After WWII, Jews establish the State of Israel in Palestine, triggering the first Arab-Israeli War; the conflict continues to the present.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/以色列",
       "wiki_en": "https://en.wikipedia.org/wiki/Israel",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/960px-Flag_of_Israel.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/1280px-Flag_of_Israel.svg.png"
     },
     {
       "id": "iran-revolution",
@@ -2892,7 +2892,7 @@
       "desc_en": "Greek mathematician and philosopher; the Pythagorean theorem, the mysticism of numbers, and the mathematics of musical harmony.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/畢達哥拉斯",
       "wiki_en": "https://en.wikipedia.org/wiki/Pythagoras",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg/960px-Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg/1280px-Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg"
     },
     {
       "id": "hippocrates",
@@ -2918,7 +2918,7 @@
       "desc_en": "One of the most important founders of Western philosophy; established the Academy; the Theory of Forms influenced Western thought for two millennia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/柏拉圖",
       "wiki_en": "https://en.wikipedia.org/wiki/Plato",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/960px-Plato_Silanion_Musei_Capitolini_MC1377.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/1280px-Plato_Silanion_Musei_Capitolini_MC1377.png"
     },
     {
       "id": "aristotle",
@@ -2931,7 +2931,7 @@
       "desc_en": "The encyclopedic scholar who established logic, biology, politics, and ethics as disciplines — antiquity's most influential thinker.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/亞里斯多德",
       "wiki_en": "https://en.wikipedia.org/wiki/Aristotle",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/960px-Aristotle_Altemps_Inv8575.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/1280px-Aristotle_Altemps_Inv8575.jpg"
     },
     {
       "id": "euclid",
@@ -2944,7 +2944,7 @@
       "desc_en": "Elements systematizes geometry with an axiomatic deductive system — the most influential mathematical work in history, used for 2,000 years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/歐幾里得",
       "wiki_en": "https://en.wikipedia.org/wiki/Euclid",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jusepe_de_Ribera_-_Euclid_-_2001.26_-_J._Paul_Getty_Museum.jpg/960px-Jusepe_de_Ribera_-_Euclid_-_2001.26_-_J._Paul_Getty_Museum.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jusepe_de_Ribera_-_Euclid_-_2001.26_-_J._Paul_Getty_Museum.jpg/1280px-Jusepe_de_Ribera_-_Euclid_-_2001.26_-_J._Paul_Getty_Museum.jpg"
     },
     {
       "id": "archimedes",
@@ -2957,7 +2957,7 @@
       "desc_en": "The greatest mathematician and engineer of antiquity; discovered buoyancy, calculated pi, invented the Archimedean screw, founded statics.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿基米德",
       "wiki_en": "https://en.wikipedia.org/wiki/Archimedes",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Domenico-Fetti_Archimedes_1620.jpg/960px-Domenico-Fetti_Archimedes_1620.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Domenico-Fetti_Archimedes_1620.jpg/1280px-Domenico-Fetti_Archimedes_1620.jpg"
     },
     {
       "id": "roman-empire",
@@ -2971,7 +2971,7 @@
       "desc_en": "Augustus becomes emperor; Roman law, architecture, and Latin language lay the foundations of Western civilization — their influence endures today.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/羅馬帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Roman_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Roman_Empire_Trajan_117AD.png/960px-Roman_Empire_Trajan_117AD.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Roman_Empire_Trajan_117AD.png/1280px-Roman_Empire_Trajan_117AD.png"
     },
     {
       "id": "pompeii",
@@ -2984,7 +2984,7 @@
       "desc_en": "Vesuvius buries Pompeii, accidentally preserving a complete Roman city — now one of the most important archaeological sites in the world.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/龐貝",
       "wiki_en": "https://en.wikipedia.org/wiki/Pompeii",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Theathres_of_Pompeii.jpg/960px-Theathres_of_Pompeii.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Theathres_of_Pompeii.jpg/1280px-Theathres_of_Pompeii.jpg"
     },
     {
       "id": "christianity-legal",
@@ -2997,7 +2997,7 @@
       "desc_en": "Emperor Constantine issues the Edict of Milan, legalizing Christianity in the Roman Empire — the foundation for it becoming the state religion.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/米蘭詔書",
       "wiki_en": "https://en.wikipedia.org/wiki/Edict_of_Milan",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Constantine_Chiaramonti_Inv1749.jpg/960px-Constantine_Chiaramonti_Inv1749.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Constantine_Chiaramonti_Inv1749.jpg/1280px-Constantine_Chiaramonti_Inv1749.jpg"
     },
     {
       "id": "rome-splits",
@@ -3010,7 +3010,7 @@
       "desc_en": "After Theodosius I dies, the Empire permanently splits; the Western Empire falls 80 years later; the Eastern Empire (Byzantium) survives for 1,000 years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/羅馬帝國的分裂",
       "wiki_en": "https://en.wikipedia.org/wiki/Division_of_the_Roman_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Mapa_Imperio_Occidental_a%C3%B1o_418.svg/960px-Mapa_Imperio_Occidental_a%C3%B1o_418.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Mapa_Imperio_Occidental_a%C3%B1o_418.svg/1280px-Mapa_Imperio_Occidental_a%C3%B1o_418.svg.png"
     },
     {
       "id": "byzantine-empire",
@@ -3024,7 +3024,7 @@
       "desc_en": "The Eastern Roman Empire survives for 1,000 years in Constantinople, preserving Greco-Roman culture and bridging classical antiquity to medieval Europe.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/拜占庭帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Byzantine_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Justinian555AD.png/960px-Justinian555AD.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Justinian555AD.png/1280px-Justinian555AD.png"
     },
     {
       "id": "justinian",
@@ -3038,7 +3038,7 @@
       "desc_en": "Greatest Byzantine emperor; compiles Justinian's Code laying foundations of European law; builds Hagia Sophia; briefly restores Roman territory.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/查士丁尼一世",
       "wiki_en": "https://en.wikipedia.org/wiki/Justinian_I",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_%28Ravenna%29.jpg/960px-Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_%28Ravenna%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_%28Ravenna%29.jpg/1280px-Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_%28Ravenna%29.jpg"
     },
     {
       "id": "jesus-crucifixion",
@@ -3051,7 +3051,7 @@
       "desc_en": "Jesus is crucified in Jerusalem and resurrected three days later (according to Christian belief) — the core and founding event of Christianity.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/耶穌受難",
       "wiki_en": "https://en.wikipedia.org/wiki/Crucifixion_of_Jesus",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/960px-Cristo_crucificado.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/1280px-Cristo_crucificado.jpg"
     },
     {
       "id": "paul-missions",
@@ -3064,7 +3064,7 @@
       "desc_en": "Apostle Paul undertakes three major missionary journeys, spreading Christianity from Jewish communities to the Greco-Roman world.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/保羅書信",
       "wiki_en": "https://en.wikipedia.org/wiki/Pauline_Christianity",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Rembrandt_Harmensz._van_Rijn_163.jpg/960px-Rembrandt_Harmensz._van_Rijn_163.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Rembrandt_Harmensz._van_Rijn_163.jpg"
     },
     {
       "id": "nicaea-council",
@@ -3077,7 +3077,7 @@
       "desc_en": "The first ecumenical council establishes the Trinity doctrine and fixes Easter — laying the foundation of orthodox Christian theology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/第一次尼西亞公會議",
       "wiki_en": "https://en.wikipedia.org/wiki/First_Council_of_Nicaea",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/%CE%9C%CE%B9%CF%87%CE%B1%CE%AE%CE%BB_%CE%94%CE%B1%CE%BC%CE%B1%CF%83%CE%BA%CE%B7%CE%BD%CF%8C%CF%82_-_%CE%91%CE%84_%CE%9F%CE%B9%CE%BA%CE%BF%CF%85%CE%BC%CE%B5%CE%BD%CE%B9%CE%BA%CE%AE_%CE%A3%CF%8D%CE%BD%CE%BF%CE%B4%CE%BF%CF%82_7741.jpg/960px-%CE%9C%CE%B9%CF%87%CE%B1%CE%AE%CE%BB_%CE%94%CE%B1%CE%BC%CE%B1%CF%83%CE%BA%CE%B7%CE%BD%CF%8C%CF%82_-_%CE%91%CE%84_%CE%9F%CE%B9%CE%BA%CE%BF%CF%85%CE%BC%CE%B5%CE%BD%CE%B9%CE%BA%CE%AE_%CE%A3%CF%8D%CE%BD%CE%BF%CE%B4%CE%BF%CF%82_7741.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/%CE%9C%CE%B9%CF%87%CE%B1%CE%AE%CE%BB_%CE%94%CE%B1%CE%BC%CE%B1%CF%83%CE%BA%CE%B7%CE%BD%CF%8C%CF%82_-_%CE%91%CE%84_%CE%9F%CE%B9%CE%BA%CE%BF%CF%85%CE%BC%CE%B5%CE%BD%CE%B9%CE%BA%CE%AE_%CE%A3%CF%8D%CE%BD%CE%BF%CE%B4%CE%BF%CF%82_7741.jpg/1280px-%CE%9C%CE%B9%CF%87%CE%B1%CE%AE%CE%BB_%CE%94%CE%B1%CE%BC%CE%B1%CF%83%CE%BA%CE%B7%CE%BD%CF%8C%CF%82_-_%CE%91%CE%84_%CE%9F%CE%B9%CE%BA%CE%BF%CF%85%CE%BC%CE%B5%CE%BD%CE%B9%CE%BA%CE%AE_%CE%A3%CF%8D%CE%BD%CE%BF%CE%B4%CE%BF%CF%82_7741.jpg"
     },
     {
       "id": "christianity-state-religion",
@@ -3102,7 +3102,7 @@
       "desc_en": "The Roman Catholic and Eastern Orthodox churches permanently split, excommunicating each other — Christianity divided in two, with lasting consequences.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/東西教會大分裂",
       "wiki_en": "https://en.wikipedia.org/wiki/East%E2%80%93West_Schism",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Great_Schism_with_former_borders_%281054%29.png/960px-Great_Schism_with_former_borders_%281054%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Great_Schism_with_former_borders_%281054%29.png/1280px-Great_Schism_with_former_borders_%281054%29.png"
     },
     {
       "id": "calvin",
@@ -3128,7 +3128,7 @@
       "desc_en": "Ignatius of Loyola founds the Jesuits as the vanguard of the Counter-Reformation, spreading Christianity to Asia, Africa, and the Americas.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/耶穌會",
       "wiki_en": "https://en.wikipedia.org/wiki/Society_of_Jesus",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ihs-logo.svg/960px-Ihs-logo.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ihs-logo.svg/1280px-Ihs-logo.svg.png"
     },
     {
       "id": "henry-viii-church",
@@ -3141,7 +3141,7 @@
       "desc_en": "Henry VIII breaks with Rome over his divorce, founding the Church of England; the English Reformation continues for decades.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/英格蘭國教會",
       "wiki_en": "https://en.wikipedia.org/wiki/Church_of_England",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Logo_of_the_Church_of_England.svg/960px-Logo_of_the_Church_of_England.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Logo_of_the_Church_of_England.svg/1280px-Logo_of_the_Church_of_England.svg.png"
     },
     {
       "id": "vatican-ii",
@@ -3154,7 +3154,7 @@
       "desc_en": "Landmark Catholic modernization: Mass celebrated in vernacular languages; dialogue with other religions; affects one billion Catholics worldwide.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/第二次梵蒂岡大公會議",
       "wiki_en": "https://en.wikipedia.org/wiki/Second_Vatican_Council",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Petersdom_von_Engelsburg_gesehen.jpg/960px-Petersdom_von_Engelsburg_gesehen.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Petersdom_von_Engelsburg_gesehen.jpg/1280px-Petersdom_von_Engelsburg_gesehen.jpg"
     },
     {
       "id": "charlemagne",
@@ -3168,7 +3168,7 @@
       "desc_en": "Charlemagne unifies most of Western Europe; crowned Holy Roman Emperor in 800; called 'Father of Europe' — the prototype of modern Europe.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/查理曼",
       "wiki_en": "https://en.wikipedia.org/wiki/Charlemagne",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Charlemagne_denier_Mayence_812_814.jpg/960px-Charlemagne_denier_Mayence_812_814.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Charlemagne_denier_Mayence_812_814.jpg/1280px-Charlemagne_denier_Mayence_812_814.jpg"
     },
     {
       "id": "holy-roman-empire",
@@ -3182,7 +3182,7 @@
       "desc_en": "The core political structure of medieval Europe; Voltaire quipped it was 'neither holy, nor Roman, nor an empire.'",
       "wiki_zh": "https://zh.wikipedia.org/wiki/神聖羅馬帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Holy_Roman_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Banner_of_the_Holy_Roman_Emperor_with_haloes_%281430-1806%29.svg/960px-Banner_of_the_Holy_Roman_Emperor_with_haloes_%281430-1806%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Banner_of_the_Holy_Roman_Emperor_with_haloes_%281430-1806%29.svg/1280px-Banner_of_the_Holy_Roman_Emperor_with_haloes_%281430-1806%29.svg.png"
     },
     {
       "id": "norman-conquest",
@@ -3195,7 +3195,7 @@
       "desc_en": "William of Normandy defeats King Harold at Hastings, founding the English royal dynasty and infusing English with vast French vocabulary.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/征服者威廉",
       "wiki_en": "https://en.wikipedia.org/wiki/Norman_Conquest",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Norman-conquest-1066.svg/960px-Norman-conquest-1066.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Norman-conquest-1066.svg/1280px-Norman-conquest-1066.svg.png"
     },
     {
       "id": "magna-carta",
@@ -3208,7 +3208,7 @@
       "desc_en": "English barons force King John to sign, limiting royal power — one of the earliest documents of constitutionalism and rule of law.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大憲章",
       "wiki_en": "https://en.wikipedia.org/wiki/Magna_Carta",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Magna_Carta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg/960px-Magna_Carta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Magna_Carta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg/1280px-Magna_Carta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg"
     },
     {
       "id": "hundred-years-war",
@@ -3222,7 +3222,7 @@
       "desc_en": "A prolonged war for the French throne; Joan of Arc turns the tide; ultimately awakens French national identity.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/百年戰爭",
       "wiki_en": "https://en.wikipedia.org/wiki/Hundred_Years%27_War",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Schlacht_von_Azincourt.jpg/960px-Schlacht_von_Azincourt.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Schlacht_von_Azincourt.jpg/1280px-Schlacht_von_Azincourt.jpg"
     },
     {
       "id": "galileo",
@@ -3235,7 +3235,7 @@
       "desc_en": "Galileo improves the telescope and turns it skyward; discovers Jupiter's moons and Venus phases; defends heliocentrism with experiment, founding modern science.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伽利略·伽利萊",
       "wiki_en": "https://en.wikipedia.org/wiki/Galileo_Galilei",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Galileo_Galilei_%281564-1642%29_RMG_BHC2700.tiff/lossy-page1-960px-Galileo_Galilei_%281564-1642%29_RMG_BHC2700.tiff.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Galileo_Galilei_%281564-1642%29_RMG_BHC2700.tiff/lossy-page1-1280px-Galileo_Galilei_%281564-1642%29_RMG_BHC2700.tiff.jpg"
     },
     {
       "id": "kepler",
@@ -3248,7 +3248,7 @@
       "desc_en": "Kepler discovers the three laws of planetary motion — planets orbit in ellipses; the crucial foundation for Newton's law of gravitation.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/克卜勒定律",
       "wiki_en": "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kepler_laws_diagram.svg/960px-Kepler_laws_diagram.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kepler_laws_diagram.svg/1280px-Kepler_laws_diagram.svg.png"
     },
     {
       "id": "harvey-circulation",
@@ -3275,7 +3275,7 @@
       "desc_en": "Europe's most devastating religious war; Central Europe loses a third of its population; the Peace of Westphalia establishes the modern sovereign state system.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三十年戰爭",
       "wiki_en": "https://en.wikipedia.org/wiki/Thirty_Years%27_War",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carl_Friedrich_Lessing_-_The_Siege_%28Defense_of_a_Church_Courtyard_During_the_Thirty_Years%E2%80%99_War%29_-_Google_Art_Project.jpg/960px-Carl_Friedrich_Lessing_-_The_Siege_%28Defense_of_a_Church_Courtyard_During_the_Thirty_Years%E2%80%99_War%29_-_Google_Art_Project.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carl_Friedrich_Lessing_-_The_Siege_%28Defense_of_a_Church_Courtyard_During_the_Thirty_Years%E2%80%99_War%29_-_Google_Art_Project.jpg/1280px-Carl_Friedrich_Lessing_-_The_Siege_%28Defense_of_a_Church_Courtyard_During_the_Thirty_Years%E2%80%99_War%29_-_Google_Art_Project.jpg"
     },
     {
       "id": "glorious-revolution",
@@ -3288,7 +3288,7 @@
       "desc_en": "A bloodless coup overthrows James II; parliamentary sovereignty confirmed; the Bill of Rights establishes constitutional monarchy, influencing the US Constitution.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/光榮革命",
       "wiki_en": "https://en.wikipedia.org/wiki/Glorious_Revolution",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/William_of_Orange_III_and_his_Dutch_army_land_in_Brixham%2C_1688.jpg/960px-William_of_Orange_III_and_his_Dutch_army_land_in_Brixham%2C_1688.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/William_of_Orange_III_and_his_Dutch_army_land_in_Brixham%2C_1688.jpg/1280px-William_of_Orange_III_and_his_Dutch_army_land_in_Brixham%2C_1688.jpg"
     },
     {
       "id": "lavoisier",
@@ -3315,7 +3315,7 @@
       "desc_en": "Napoleon rises from the Revolution, conquers much of Europe; the Napoleonic Code reshapes global law; finally defeated at Waterloo.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/拿破崙·波拿巴",
       "wiki_en": "https://en.wikipedia.org/wiki/Napoleon",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/960px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/1280px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"
     },
     {
       "id": "faraday-maxwell",
@@ -3341,7 +3341,7 @@
       "desc_en": "Russian chemist Mendeleev publishes the periodic table, predicting the existence of undiscovered elements — the most important classification system in chemistry.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/元素週期表",
       "wiki_en": "https://en.wikipedia.org/wiki/Periodic_table",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Colour_18-col_PT_with_labels.svg/960px-Colour_18-col_PT_with_labels.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Colour_18-col_PT_with_labels.svg/1280px-Colour_18-col_PT_with_labels.svg.png"
     },
     {
       "id": "german-unification",
@@ -3354,7 +3354,7 @@
       "desc_en": "Bismarck unifies German states through 'blood and iron,' establishing the German Empire — reshaping European power and sowing seeds of WWI.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/德意志統一",
       "wiki_en": "https://en.wikipedia.org/wiki/Unification_of_Germany",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Deutsches_Reich_%281871-1918%29-en.png/960px-Deutsches_Reich_%281871-1918%29-en.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Deutsches_Reich_%281871-1918%29-en.png/1280px-Deutsches_Reich_%281871-1918%29-en.png"
     },
     {
       "id": "leonardo",
@@ -3367,7 +3367,7 @@
       "desc_en": "Renaissance polymath; painter of the Mona Lisa and Last Supper; simultaneously studied anatomy, flying machines, and hydraulics — a genius centuries ahead of his time.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/李奧納多·達文西",
       "wiki_en": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png/960px-Francesco_Melzi_-_Portrait_of_Leonardo.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png/1280px-Francesco_Melzi_-_Portrait_of_Leonardo.png"
     },
     {
       "id": "magellan",
@@ -3381,7 +3381,7 @@
       "desc_en": "Ferdinand Magellan's expedition completes the first circumnavigation of Earth, proving beyond doubt that the world is round.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/麥哲倫-埃爾卡諾遠征",
       "wiki_en": "https://en.wikipedia.org/wiki/Magellan%E2%80%93Elcano_expedition",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Detail_from_a_map_of_Ortelius_-_Magellan%27s_ship_Victoria.png/960px-Detail_from_a_map_of_Ortelius_-_Magellan%27s_ship_Victoria.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Detail_from_a_map_of_Ortelius_-_Magellan%27s_ship_Victoria.png/1280px-Detail_from_a_map_of_Ortelius_-_Magellan%27s_ship_Victoria.png"
     },
     {
       "id": "nazi-germany",
@@ -3395,7 +3395,7 @@
       "desc_en": "Hitler seizes power, building a totalitarian state; WWII kills 50 million; the Holocaust is one of history's darkest crimes.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/納粹德國",
       "wiki_en": "https://en.wikipedia.org/wiki/Nazi_Germany",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Germany_%281935%E2%80%931945%29.svg/960px-Flag_of_Germany_%281935%E2%80%931945%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Germany_%281935%E2%80%931945%29.svg/1280px-Flag_of_Germany_%281935%E2%80%931945%29.svg.png"
     },
     {
       "id": "european-union",
@@ -3408,7 +3408,7 @@
       "desc_en": "Six nations sign the Treaty of Rome, creating the European Economic Community — the EU's predecessor and a historic experiment in voluntary sovereignty integration.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/歐洲聯盟",
       "wiki_en": "https://en.wikipedia.org/wiki/European_Union",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/960px-Flag_of_Europe.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1280px-Flag_of_Europe.svg.png"
     },
     {
       "id": "berlin-wall-fall",
@@ -3421,7 +3421,7 @@
       "desc_en": "East Germany opens its borders; the Berlin Wall falls — the symbolic end of the Cold War, followed by German reunification and the Soviet collapse.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/柏林圍牆",
       "wiki_en": "https://en.wikipedia.org/wiki/Berlin_Wall",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Berlinermauer.jpg/960px-Berlinermauer.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Berlinermauer.jpg"
     },
     {
       "id": "soviet-collapse",
@@ -3447,7 +3447,7 @@
       "desc_en": "Einstein publishes special relativity; E=mc² transforms our understanding of time, space, and energy — the foundation of nuclear energy and modern cosmology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/相對論",
       "wiki_en": "https://en.wikipedia.org/wiki/Theory_of_relativity",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BBH_gravitational_lensing_of_gw150914.webm/960px--BBH_gravitational_lensing_of_gw150914.webm.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BBH_gravitational_lensing_of_gw150914.webm/1280px--BBH_gravitational_lensing_of_gw150914.webm.jpg"
     },
     {
       "id": "quantum-mechanics",
@@ -3460,7 +3460,7 @@
       "desc_en": "Bohr, Heisenberg, Schrödinger establish quantum mechanics, revealing the uncertainty of the microscopic world — the theoretical basis of semiconductors, lasers, and nuclear technology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/量子力學",
       "wiki_en": "https://en.wikipedia.org/wiki/Quantum_mechanics",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Hydrogen_Density_Plots.png/960px-Hydrogen_Density_Plots.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Hydrogen_Density_Plots.png/1280px-Hydrogen_Density_Plots.png"
     },
     {
       "id": "nine-chapters",
@@ -3486,7 +3486,7 @@
       "desc_en": "Chinese invent silk cultivation; silk becomes China's most important export and gives the Silk Road its name.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/絲綢",
       "wiki_en": "https://en.wikipedia.org/wiki/Silk",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Silk_raw_01a.jpg/960px-Silk_raw_01a.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Silk_raw_01a.jpg/1280px-Silk_raw_01a.jpg"
     },
     {
       "id": "dujiangyan",
@@ -3499,7 +3499,7 @@
       "desc_en": "Built by Li Bing in Sichuan; a damless irrigation system still in use today — one of the world's oldest and most sustainable water projects.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/都江堰",
       "wiki_en": "https://en.wikipedia.org/wiki/Dujiangyan",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Dujiang_Weir.jpg/960px-Dujiang_Weir.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Dujiang_Weir.jpg/1280px-Dujiang_Weir.jpg"
     },
     {
       "id": "steel-china",
@@ -3512,7 +3512,7 @@
       "desc_en": "Han Dynasty develops blast furnace iron production on a large scale — about 1,000 years ahead of Europe — supporting imperial agriculture and military expansion.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中國冶金史",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_metallurgy_in_China",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg/960px-Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg/1280px-Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg"
     },
     {
       "id": "papermaking",
@@ -3525,7 +3525,7 @@
       "desc_en": "Cai Lun improves papermaking using bark and hemp; cheap paper revolutionizes knowledge transmission — one of China's Four Great Inventions.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/造紙術",
       "wiki_en": "https://en.wikipedia.org/wiki/Papermaking",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Papiermuseum_Basel_2008_%2838%29.jpg/960px-Papiermuseum_Basel_2008_%2838%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Papiermuseum_Basel_2008_%2838%29.jpg"
     },
     {
       "id": "zhang-heng-seismograph",
@@ -3538,7 +3538,7 @@
       "desc_en": "Zhang Heng invents the world's first seismoscope; a bronze ball drops into a toad's mouth to indicate earthquake direction — 1,700 years before European equivalents.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/地動儀",
       "wiki_en": "https://en.wikipedia.org/wiki/Zhang_Heng",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/20251004_Tomb_of_Zhang_Heng_03.jpg/960px-20251004_Tomb_of_Zhang_Heng_03.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/20251004_Tomb_of_Zhang_Heng_03.jpg"
     },
     {
       "id": "zhang-heng-armillary",
@@ -3551,7 +3551,7 @@
       "desc_en": "Zhang Heng builds a water-powered armillary sphere to precisely measure celestial positions and predict the movements of the sun and moon.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/渾天儀",
       "wiki_en": "https://en.wikipedia.org/wiki/Armillary_sphere",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Armillary_sphere_with_astronomical_clock.jpg/960px-Armillary_sphere_with_astronomical_clock.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Armillary_sphere_with_astronomical_clock.jpg/1280px-Armillary_sphere_with_astronomical_clock.jpg"
     },
     {
       "id": "hua-tuo",
@@ -3577,7 +3577,7 @@
       "desc_en": "Liu Hui calculates π≈3.14159 using an iterative polygon method — embedding the concept of limits, a major achievement in mathematical history.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/劉徽",
       "wiki_en": "https://en.wikipedia.org/wiki/Liu_Hui%27s_%CF%80_algorithm",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Cutcircle2.svg/960px-Cutcircle2.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Cutcircle2.svg/1280px-Cutcircle2.svg.png"
     },
     {
       "id": "huangdi-neijing",
@@ -3603,7 +3603,7 @@
       "desc_en": "Song Dynasty Chinese develop variolation against smallpox — the predecessor of modern vaccination; introduced to Europe in the 17th century, inspiring Jenner's vaccine.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人痘接種法",
       "wiki_en": "https://en.wikipedia.org/wiki/Variolation",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Queens_of_Mysore_%28detail%29%2C_Thomas_Hickey%2C_1805.jpg/960px-Queens_of_Mysore_%28detail%29%2C_Thomas_Hickey%2C_1805.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Queens_of_Mysore_%28detail%29%2C_Thomas_Hickey%2C_1805.jpg/1280px-Queens_of_Mysore_%28detail%29%2C_Thomas_Hickey%2C_1805.jpg"
     },
     {
       "id": "bi-sheng-movable-type",
@@ -3616,7 +3616,7 @@
       "desc_en": "Bi Sheng invents ceramic movable type — 400 years before Gutenberg — a major technological revolution in the history of knowledge dissemination.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/畢昇",
       "wiki_en": "https://en.wikipedia.org/wiki/Bi_Sheng",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Beijing.Musee_imprimerie.caracteres_mobiles.Bisheng.jpg/960px-Beijing.Musee_imprimerie.caracteres_mobiles.Bisheng.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Beijing.Musee_imprimerie.caracteres_mobiles.Bisheng.jpg/1280px-Beijing.Musee_imprimerie.caracteres_mobiles.Bisheng.jpg"
     },
     {
       "id": "compass-china",
@@ -3629,7 +3629,7 @@
       "desc_en": "Chinese apply the compass from feng shui to maritime navigation; this technology reaches Europe and directly enables the Age of Exploration.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/指南針",
       "wiki_en": "https://en.wikipedia.org/wiki/Compass",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2016_Busola.JPG/960px-2016_Busola.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2016_Busola.JPG/1280px-2016_Busola.JPG"
     },
     {
       "id": "yang-hui-triangle",
@@ -3654,7 +3654,7 @@
       "desc_en": "Zu Chongzhi calculates π to 7 decimal places (3.1415926) — a world record held for ~1,000 years and a landmark in mathematical history.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/祖沖之",
       "wiki_en": "https://en.wikipedia.org/wiki/Zu_Chongzhi",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg/960px-%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg/1280px-%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg"
     },
     {
       "id": "gunpowder",
@@ -3667,7 +3667,7 @@
       "desc_en": "Tang Dynasty Taoist alchemists accidentally discover gunpowder; it later transforms warfare and, reaching Europe, changes medieval combat forever.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/火藥",
       "wiki_en": "https://en.wikipedia.org/wiki/Gunpowder",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Black_Powder-1.JPG/960px-Black_Powder-1.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Black_Powder-1.JPG/1280px-Black_Powder-1.JPG"
     },
     {
       "id": "grand-canal",
@@ -3680,7 +3680,7 @@
       "desc_en": "Emperor Yang of Sui builds the 2,700km Grand Canal connecting north and south China — the world's longest artificial waterway, facilitating grain and trade.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/京杭大運河",
       "wiki_en": "https://en.wikipedia.org/wiki/Grand_Canal_(China)",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Wanning_Bridge_1.jpg/960px-Wanning_Bridge_1.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Wanning_Bridge_1.jpg/1280px-Wanning_Bridge_1.jpg"
     },
     {
       "id": "yi-xing-meridian",
@@ -3693,7 +3693,7 @@
       "desc_en": "Tang monk Yi Xing leads the world's first large-scale geodetic survey, measuring the arc of a meridian — a landmark in scientific history.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/一行",
       "wiki_en": "https://en.wikipedia.org/wiki/Yi_Xing",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_I_Hsing_Cropped.jpg/960px-Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_I_Hsing_Cropped.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_I_Hsing_Cropped.jpg/1280px-Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_I_Hsing_Cropped.jpg"
     },
     {
       "id": "guo-shoujing-calendar",
@@ -3706,7 +3706,7 @@
       "desc_en": "Yuan astronomer Guo Shoujing's Shoushi Calendar sets the year at 365.2425 days — identical to the modern Gregorian calendar — more accurate than any contemporary European calendar.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/郭守敬",
       "wiki_en": "https://en.wikipedia.org/wiki/Guo_Shoujing",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Guo_Shoujing-beijing.JPG/960px-Guo_Shoujing-beijing.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Guo_Shoujing-beijing.JPG/1280px-Guo_Shoujing-beijing.JPG"
     },
     {
       "id": "bencao-gangmu",
@@ -3732,7 +3732,7 @@
       "desc_en": "Ming geographer Xu Xiake surveys China's landscape on foot; his travel notes are a pioneering work of Chinese empirical geography.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/徐霞客",
       "wiki_en": "https://en.wikipedia.org/wiki/Xu_Xiake",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Jiangyin_Xu_Xiake_Guju_2015.04.24_09-34-58.jpg/960px-Jiangyin_Xu_Xiake_Guju_2015.04.24_09-34-58.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Jiangyin_Xu_Xiake_Guju_2015.04.24_09-34-58.jpg/1280px-Jiangyin_Xu_Xiake_Guju_2015.04.24_09-34-58.jpg"
     },
     {
       "id": "zheng-he-voyages",

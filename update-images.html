@@ -5,74 +5,38 @@
 <title>Cosmic Timeline — 圖片更新工具</title>
 <style>
   :root {
-    --bg: #05080f;
-    --surface: #0c1020;
-    --border: rgba(255,255,255,0.08);
-    --text: #ddd8c8;
-    --muted: rgba(221,216,200,0.45);
-    --accent: #60a5fa;
-    --green: #34d399;
-    --red: #f87171;
-    --yellow: #fbbf24;
+    --bg: #05080f; --surface: #0c1020;
+    --border: rgba(255,255,255,0.08); --text: #ddd8c8;
+    --muted: rgba(221,216,200,0.45); --accent: #60a5fa;
+    --green: #34d399; --red: #f87171; --yellow: #fbbf24;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg); color: var(--text);
-    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
-    font-size: 13px; min-height: 100vh;
-    padding: 32px 24px;
-  }
+  body { background: var(--bg); color: var(--text); font-family: 'Noto Sans TC','Noto Sans',sans-serif; font-size: 13px; min-height: 100vh; padding: 32px 24px; }
   h1 { font-size: 18px; font-weight: 500; margin-bottom: 6px; color: #fff; }
   .subtitle { color: var(--muted); font-size: 12px; margin-bottom: 28px; }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 20px;
-  }
-  .card-title { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
-
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; }
+  .card-title { font-size: 11px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
   .row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
   label { font-size: 11px; color: var(--muted); display: block; margin-bottom: 5px; }
-  input, select {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border);
-    border-radius: 6px; color: var(--text);
-    padding: 8px 12px; font-size: 13px;
-    font-family: inherit; outline: none;
-    transition: border-color .15s;
-  }
-  input:focus, select:focus { border-color: rgba(255,255,255,0.25); }
+  input { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 8px 12px; font-size: 13px; font-family: inherit; outline: none; transition: border-color .15s; }
+  input:focus { border-color: rgba(255,255,255,0.25); }
   input[type=text] { width: 380px; }
-
-  button {
-    padding: 9px 20px; border-radius: 8px; border: none;
-    font-family: inherit; font-size: 13px; font-weight: 500;
-    cursor: pointer; transition: all .15s; white-space: nowrap;
-  }
+  button { padding: 9px 20px; border-radius: 8px; border: none; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: all .15s; white-space: nowrap; }
   .btn-primary { background: rgba(96,165,250,0.2); color: var(--accent); border: 1px solid rgba(96,165,250,0.3); }
   .btn-primary:hover { background: rgba(96,165,250,0.35); }
-  .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-primary:disabled { opacity: .4; cursor: not-allowed; }
   .btn-success { background: rgba(52,211,153,0.2); color: var(--green); border: 1px solid rgba(52,211,153,0.3); }
   .btn-success:hover { background: rgba(52,211,153,0.35); }
-  .btn-success:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-warn { background: rgba(251,191,36,0.15); color: var(--yellow); border: 1px solid rgba(251,191,36,0.3); }
+  .btn-warn:hover { background: rgba(251,191,36,0.28); }
   .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
   .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
 
-  /* Progress */
   .progress-wrap { margin: 14px 0; }
-  .progress-bar-bg {
-    background: rgba(255,255,255,0.06); border-radius: 4px; height: 6px; overflow: hidden;
-  }
-  .progress-bar-fill {
-    height: 100%; background: var(--accent); border-radius: 4px;
-    transition: width 0.3s ease; width: 0%;
-  }
+  .progress-bar-bg { background: rgba(255,255,255,0.06); border-radius: 4px; height: 6px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width .3s; width: 0; }
   .progress-text { font-size: 11px; color: var(--muted); margin-top: 6px; }
 
-  /* Stats */
   .stats { display: flex; gap: 20px; margin: 14px 0; flex-wrap: wrap; }
   .stat { text-align: center; }
   .stat-num { font-size: 24px; font-weight: 300; }
@@ -81,58 +45,50 @@
   .stat-num.red { color: var(--red); }
   .stat-num.yellow { color: var(--yellow); }
 
-  /* Log */
-  #log {
-    height: 320px; overflow-y: auto; padding: 12px;
-    background: rgba(0,0,0,0.3); border-radius: 8px;
-    font-family: 'Courier New', monospace; font-size: 11px;
-    line-height: 1.7;
-  }
+  #log { height: 280px; overflow-y: auto; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 8px; font-family: 'Courier New',monospace; font-size: 11px; line-height: 1.7; }
   .log-ok   { color: var(--green); }
+  .log-ok2  { color: #86efac; }
   .log-fail { color: var(--red); }
   .log-info { color: var(--muted); }
   .log-warn { color: var(--yellow); }
 
-  /* Result table */
   #result-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-  #result-table th {
-    text-align: left; padding: 8px 10px;
-    color: var(--muted); font-weight: 400; font-size: 10px;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    border-bottom: 1px solid var(--border);
-  }
-  #result-table td {
-    padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.04);
-    vertical-align: middle;
-  }
+  #result-table th { text-align: left; padding: 8px 10px; color: var(--muted); font-weight: 400; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+  #result-table td { padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: middle; }
   #result-table img { width: 48px; height: 32px; object-fit: cover; border-radius: 4px; }
-  .badge {
-    display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px;
-  }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; }
   .badge-ok   { background: rgba(52,211,153,0.15); color: var(--green); }
+  .badge-ok2  { background: rgba(134,239,172,0.12); color: #86efac; }
   .badge-fail { background: rgba(248,113,113,0.15); color: var(--red); }
   .badge-skip { background: rgba(255,255,255,0.06); color: var(--muted); }
 
-  #drop-zone {
-    border: 2px dashed rgba(255,255,255,0.12);
-    border-radius: 10px; padding: 28px; text-align: center;
-    color: var(--muted); cursor: pointer; transition: all .2s;
-    margin-bottom: 14px;
-  }
-  #drop-zone:hover, #drop-zone.drag-over {
-    border-color: var(--accent); color: var(--accent);
-    background: rgba(96,165,250,0.05);
-  }
+  /* Missing list */
+  #missing-list { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 8px; margin-top: 12px; max-height: 480px; overflow-y: auto; }
+  .missing-item { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; gap: 10px; }
+  .missing-item-left { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+  .missing-zh { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .missing-axis { font-size: 10px; color: var(--muted); }
+  .missing-links { display: flex; gap: 5px; flex-shrink: 0; }
+  .wiki-btn { padding: 4px 9px; border-radius: 6px; font-size: 10px; font-family: inherit; cursor: pointer; text-decoration: none; white-space: nowrap; border: 1px solid; transition: all .12s; }
+  .wiki-btn.zh { border-color: rgba(252,165,165,0.35); color: #fca5a5; background: transparent; }
+  .wiki-btn.zh:hover { background: rgba(252,165,165,0.12); }
+  .wiki-btn.en { border-color: rgba(147,197,253,0.35); color: #93c5fd; background: transparent; }
+  .wiki-btn.en:hover { background: rgba(147,197,253,0.12); }
+
+  #drop-zone { border: 2px dashed rgba(255,255,255,0.12); border-radius: 10px; padding: 28px; text-align: center; color: var(--muted); cursor: pointer; transition: all .2s; margin-bottom: 14px; }
+  #drop-zone:hover, #drop-zone.drag-over { border-color: var(--accent); color: var(--accent); background: rgba(96,165,250,0.05); }
   #drop-zone input { display: none; }
   .spacer { height: 8px; }
   .hide { display: none !important; }
+  .source-tag { font-size: 9px; padding: 1px 5px; border-radius: 4px; margin-left: 6px; background: rgba(52,211,153,0.15); color: var(--green); vertical-align: middle; }
+  .source-tag.og { background: rgba(251,191,36,0.15); color: var(--yellow); }
 </style>
 </head>
 <body>
 <h1>🌌 Cosmic Timeline — 圖片更新工具</h1>
-<p class="subtitle">自動從 Wikipedia 頁面抓取圖片 URL，更新 events.json</p>
+<p class="subtitle">自動從 Wikipedia API 抓取圖片 URL，更新 events.json</p>
 
-<!-- Step 1: Load JSON -->
+<!-- Load -->
 <div class="card" id="step-load">
   <div class="card-title">步驟 1 — 載入 events.json</div>
   <div id="drop-zone" onclick="document.getElementById('file-input').click()">
@@ -142,7 +98,7 @@
   <div class="row">
     <div>
       <label>或從 GitHub 直接載入</label>
-      <input type="text" id="url-input" value="https://raw.githubusercontent.com/axylee/cosmic-timeline/main/data/events.json" placeholder="JSON URL">
+      <input type="text" id="url-input" value="https://raw.githubusercontent.com/axylee/cosmic-timeline/main/data/events.json">
     </div>
     <button class="btn-primary" onclick="loadFromUrl()">從 URL 載入</button>
   </div>
@@ -150,17 +106,28 @@
   <div id="load-status" class="log-info"></div>
 </div>
 
-<!-- Step 2: Run -->
-<div class="card hide" id="step-run">
-  <div class="card-title">步驟 2 — 抓取圖片</div>
+<!-- Missing events inspector -->
+<div class="card hide" id="step-missing">
+  <div class="card-title">🔍 缺少圖片的事件</div>
+  <div class="row" style="margin-bottom:10px;">
+    <button class="btn-warn" onclick="showMissing()">列出缺圖事件</button>
+    <button class="btn-ghost" onclick="hideMissing()">收起</button>
+    <span id="missing-count" style="font-size:12px;color:var(--muted);align-self:center;"></span>
+  </div>
+  <p style="font-size:11px;color:var(--muted);margin-bottom:8px;">點擊連結會在新分頁開啟 Wikipedia 頁面，你可以手動複製圖片 URL，再用主程式的 ✏ 編輯功能填入。</p>
+  <div id="missing-list"></div>
+</div>
 
+<!-- Run -->
+<div class="card hide" id="step-run">
+  <div class="card-title">步驟 2 — 批量抓取圖片</div>
   <div class="stats">
     <div class="stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">總事件</div></div>
-    <div class="stat"><div class="stat-num green" id="stat-ok">0</div><div class="stat-label">成功</div></div>
+    <div class="stat"><div class="stat-num green" id="stat-ok">0</div><div class="stat-label">Wiki API ✓</div></div>
+    <div class="stat"><div class="stat-num" style="color:#86efac" id="stat-og">0</div><div class="stat-label">original ✓</div></div>
     <div class="stat"><div class="stat-num red" id="stat-fail">0</div><div class="stat-label">失敗</div></div>
     <div class="stat"><div class="stat-num yellow" id="stat-skip">0</div><div class="stat-label">略過</div></div>
   </div>
-
   <div class="row" style="margin-bottom:12px;">
     <button class="btn-primary" id="btn-run" onclick="runUpdate()">▶ 開始更新圖片</button>
     <button class="btn-ghost" id="btn-stop" onclick="stopUpdate()" style="display:none">⬛ 停止</button>
@@ -168,96 +135,115 @@
       <input type="checkbox" id="chk-overwrite"> 覆蓋已有的圖片
     </label>
     <label style="margin:0;display:flex;align-items:center;gap:6px;cursor:pointer;">
-      <input type="checkbox" id="chk-zh" checked> 優先用中文 Wikipedia
+      <input type="checkbox" id="chk-zh" checked> 優先中文 Wikipedia
+    </label>
+    <label style="margin:0;display:flex;align-items:center;gap:6px;cursor:pointer;">
+      <input type="checkbox" id="chk-original" checked> 備案：原始圖片
     </label>
   </div>
-
+  <div style="font-size:11px;color:var(--muted);margin-bottom:10px;">
+    ⚠ 不勾「覆蓋已有的圖片」時，有圖片的事件會直接略過，不會被修改。
+  </div>
   <div class="progress-wrap" id="progress-wrap" style="display:none">
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
     <div class="progress-text" id="progress-text"></div>
   </div>
-
   <div id="log"></div>
 </div>
 
-<!-- Step 3: Download -->
+<!-- Download -->
 <div class="card hide" id="step-download">
   <div class="card-title">步驟 3 — 下載更新後的 JSON</div>
   <div class="row">
     <button class="btn-success" onclick="downloadJson()">⬇ 下載 events.json</button>
-    <button class="btn-ghost" onclick="showTable()">📋 查看結果清單</button>
+    <button class="btn-ghost" onclick="toggleTable()">📋 查看結果清單</button>
   </div>
   <div class="spacer"></div>
   <div id="result-wrap" style="display:none;overflow-x:auto;">
     <table id="result-table">
-      <thead><tr><th>事件</th><th>狀態</th><th>圖片預覽</th><th>URL</th></tr></thead>
+      <thead><tr><th>事件</th><th>狀態</th><th>來源</th><th>預覽</th><th>URL</th></tr></thead>
       <tbody id="result-body"></tbody>
     </table>
   </div>
 </div>
 
 <script>
-let eventsData = null;
-let results = [];
-let shouldStop = false;
+let eventsData = null, results = [], shouldStop = false;
 
-// ── Drag & drop ──
+// ── File loading ──
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
-
 dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
 dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
-dropZone.addEventListener('drop', e => {
-  e.preventDefault(); dropZone.classList.remove('drag-over');
-  const file = e.dataTransfer.files[0];
-  if (file) readFile(file);
-});
-fileInput.addEventListener('change', e => { if (e.target.files[0]) readFile(e.target.files[0]); });
+dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('drag-over'); const f = e.dataTransfer.files[0]; if(f) readFile(f); });
+fileInput.addEventListener('change', e => { if(e.target.files[0]) readFile(e.target.files[0]); });
 
 function readFile(file) {
-  const reader = new FileReader();
-  reader.onload = e => {
-    try {
-      eventsData = JSON.parse(e.target.result);
-      onLoaded(file.name);
-    } catch(err) {
-      document.getElementById('load-status').textContent = '✗ JSON 解析失敗: ' + err.message;
-    }
+  const r = new FileReader();
+  r.onload = e => {
+    try { eventsData = JSON.parse(e.target.result); onLoaded(file.name); }
+    catch(err) { document.getElementById('load-status').textContent = '✗ 解析失敗: ' + err.message; }
   };
-  reader.readAsText(file);
+  r.readAsText(file);
 }
-
 async function loadFromUrl() {
   const url = document.getElementById('url-input').value.trim();
   document.getElementById('load-status').textContent = '載入中...';
-  try {
-    const res = await fetch(url);
-    eventsData = await res.json();
-    onLoaded(url.split('/').pop());
-  } catch(err) {
-    document.getElementById('load-status').textContent = '✗ 載入失敗: ' + err.message;
-  }
+  try { const res = await fetch(url); eventsData = await res.json(); onLoaded(url.split('/').pop()); }
+  catch(err) { document.getElementById('load-status').textContent = '✗ 載入失敗: ' + err.message; }
 }
-
 function onLoaded(name) {
   const n = eventsData.events.length;
-  document.getElementById('load-status').innerHTML = `<span style="color:var(--green)">✓ 載入成功：${name}，共 ${n} 個事件</span>`;
+  const noImg = eventsData.events.filter(e => !e.image).length;
+  document.getElementById('load-status').innerHTML =
+    `<span style="color:var(--green)">✓ 載入成功：${name}，共 ${n} 個事件</span>` +
+    (noImg ? `<span style="color:var(--yellow);margin-left:14px">⚠ ${noImg} 個缺少圖片</span>` : `<span style="color:var(--green);margin-left:14px">✓ 所有事件都有圖片</span>`);
   document.getElementById('stat-total').textContent = n;
+  document.getElementById('step-missing').classList.remove('hide');
   document.getElementById('step-run').classList.remove('hide');
 }
 
-// ── Wikipedia API ──
-async function getWikiImage(wikiUrl) {
-  if (!wikiUrl || !wikiUrl.includes('wikipedia.org/wiki/')) return null;
+// ── Missing list ──
+function formatYear(y) {
+  if (!y && y !== 0) return '';
+  return y > 0 ? `西元 ${y} 年` : `${Math.abs(y).toLocaleString()} 年前`;
+}
+
+function showMissing() {
+  const missing = eventsData.events.filter(e => !e.image);
+  const countEl = document.getElementById('missing-count');
+  const listEl  = document.getElementById('missing-list');
+  countEl.textContent = missing.length > 0 ? `共 ${missing.length} 個缺圖` : '✓ 全部有圖片';
+  if (!missing.length) { listEl.innerHTML = '<p style="color:var(--green);padding:10px 0">🎉 所有事件都有圖片！</p>'; return; }
+  listEl.innerHTML = '';
+  missing.forEach(ev => {
+    const item = document.createElement('div');
+    item.className = 'missing-item';
+    item.innerHTML = `
+      <div class="missing-item-left">
+        <span class="missing-zh">${ev.zh}</span>
+        <span class="missing-axis">${ev.axis} · ${formatYear(ev.year)}</span>
+      </div>
+      <div class="missing-links">
+        ${ev.wiki_zh ? `<a class="wiki-btn zh" href="${ev.wiki_zh}" target="_blank" rel="noopener">中文</a>` : ''}
+        ${ev.wiki_en ? `<a class="wiki-btn en" href="${ev.wiki_en}" target="_blank" rel="noopener">EN</a>` : ''}
+        ${!ev.wiki_zh && !ev.wiki_en ? '<span style="font-size:10px;color:var(--red)">無連結</span>' : ''}
+      </div>`;
+    listEl.appendChild(item);
+  });
+}
+function hideMissing() { document.getElementById('missing-list').innerHTML = ''; document.getElementById('missing-count').textContent = ''; }
+
+// ── Wikipedia image fetch ──
+// Method 1: pageimages API — thumbnail (fast, reliable)
+async function getWikiThumb(wikiUrl, size=1200) {
+  if (!wikiUrl?.includes('wikipedia.org/wiki/')) return null;
   try {
     const lang  = wikiUrl.split('//')[1].split('.wikipedia')[0];
     const title = decodeURIComponent(wikiUrl.split('/wiki/')[1].split('#')[0]);
-    const params = new URLSearchParams({
-      action: 'query', titles: title,
-      prop: 'pageimages', pithumbsize: '800',
-      format: 'json', redirects: '1', origin: '*'
-    });
-    const res = await fetch(`https://${lang}.wikipedia.org/w/api.php?${params}`);
+    const p = new URLSearchParams({ action:'query', titles:title, prop:'pageimages',
+      pithumbsize: String(size), format:'json', redirects:'1', origin:'*' });
+    const res = await fetch(`https://${lang}.wikipedia.org/w/api.php?${p}`);
     const data = await res.json();
     for (const page of Object.values(data.query?.pages || {})) {
       if (page.thumbnail?.source) return page.thumbnail.source;
@@ -266,9 +252,49 @@ async function getWikiImage(wikiUrl) {
   return null;
 }
 
-// ── Run update ──
-let statOk = 0, statFail = 0, statSkip = 0;
+// Method 2: pageimages original — full-size original image via action API (CORS-safe)
+async function getWikiOriginal(wikiUrl) {
+  if (!wikiUrl?.includes('wikipedia.org/wiki/')) return null;
+  try {
+    const lang  = wikiUrl.split('//')[1].split('.wikipedia')[0];
+    const title = decodeURIComponent(wikiUrl.split('/wiki/')[1].split('#')[0]);
+    const p = new URLSearchParams({ action:'query', titles:title,
+      prop:'pageimages', piprop:'original', format:'json', redirects:'1', origin:'*' });
+    const res = await fetch(`https://${lang}.wikipedia.org/w/api.php?${p}`);
+    const data = await res.json();
+    for (const page of Object.values(data.query?.pages || {})) {
+      if (page.original?.source) return page.original.source;
+    }
+  } catch(e) {}
+  return null;
+}
 
+async function fetchImage(ev, zhFirst, useOriginal) {
+  const urls = (zhFirst ? [ev.wiki_zh, ev.wiki_en] : [ev.wiki_en, ev.wiki_zh]).filter(Boolean);
+
+  // Method 1: thumbnail (1200px)
+  for (const url of urls) {
+    const img = await getWikiThumb(url, 1200);
+    if (img) return { url: img, source: 'wiki-thumb' };
+    await delay(80);
+  }
+
+  // Method 2: original full-size image
+  if (useOriginal) {
+    for (const url of urls) {
+      const img = await getWikiOriginal(url);
+      if (img) return { url: img, source: 'wiki-original' };
+      await delay(80);
+    }
+  }
+
+  return null;
+}
+
+const delay = ms => new Promise(r => setTimeout(r, ms));
+
+// ── Run update ──
+let statOk=0, statOg=0, statFail=0, statSkip=0;
 function log(msg, cls='log-info') {
   const el = document.getElementById('log');
   el.innerHTML += `<div class="${cls}">${msg}</div>`;
@@ -277,9 +303,7 @@ function log(msg, cls='log-info') {
 
 async function runUpdate() {
   if (!eventsData) return;
-  shouldStop = false;
-  statOk = statFail = statSkip = 0;
-  results = [];
+  shouldStop = false; statOk = statOg = statFail = statSkip = 0; results = [];
   document.getElementById('log').innerHTML = '';
   document.getElementById('btn-run').disabled = true;
   document.getElementById('btn-stop').style.display = '';
@@ -288,95 +312,78 @@ async function runUpdate() {
 
   const overwrite = document.getElementById('chk-overwrite').checked;
   const zhFirst   = document.getElementById('chk-zh').checked;
+  const useOriginal = document.getElementById('chk-original').checked;
   const events    = eventsData.events;
 
   for (let i = 0; i < events.length; i++) {
     if (shouldStop) { log('— 已停止 —', 'log-warn'); break; }
-
     const ev = events[i];
-    const pct = Math.round((i / events.length) * 100);
-    document.getElementById('progress-fill').style.width = pct + '%';
-    document.getElementById('progress-text').textContent = `${i + 1} / ${events.length}`;
+    document.getElementById('progress-fill').style.width = Math.round(i/events.length*100)+'%';
+    document.getElementById('progress-text').textContent = `${i+1} / ${events.length}  ${ev.zh}`;
 
-    // Skip if has image and not overwriting
+    // Has image and not overwriting → skip without touching the data
     if (ev.image && !overwrite) {
-      statSkip++;
-      document.getElementById('stat-skip').textContent = statSkip;
-      results.push({ ev, status: 'skip', img: ev.image });
+      statSkip++; document.getElementById('stat-skip').textContent = statSkip;
+      results.push({ ev, status:'skip', source:'', img: ev.image });
       continue;
     }
 
-    const urls = zhFirst
-      ? [ev.wiki_zh, ev.wiki_en].filter(Boolean)
-      : [ev.wiki_en, ev.wiki_zh].filter(Boolean);
-
-    let img = null;
-    for (const url of urls) {
-      img = await getWikiImage(url);
-      if (img) break;
-      await new Promise(r => setTimeout(r, 80)); // polite delay
+    if (!ev.wiki_zh && !ev.wiki_en) {
+      statFail++; document.getElementById('stat-fail').textContent = statFail;
+      log(`✗ ${ev.zh}（無 Wikipedia 連結）`, 'log-fail');
+      results.push({ ev, status:'fail', source:'', img: null });
+      continue;
     }
 
-    if (img) {
-      ev.image = img;
-      statOk++;
-      document.getElementById('stat-ok').textContent = statOk;
-      log(`✓ <span style="color:var(--text)">${ev.zh}</span>`, 'log-ok');
-      results.push({ ev, status: 'ok', img });
+    const result = await fetchImage(ev, zhFirst, useOriginal);
+    if (result) {
+      ev.image = result.url;
+      const isOg = result.source === 'wiki-original';
+      if (isOg) { statOg++; document.getElementById('stat-og').textContent = statOg; }
+      else       { statOk++; document.getElementById('stat-ok').textContent = statOk; }
+      const tag = `<span class="source-tag${isOg?' og':''}">${isOg?'original':'thumb'}</span>`;
+      log(`✓ <span style="color:var(--text)">${ev.zh}</span>${tag}`, isOg?'log-ok2':'log-ok');
+      results.push({ ev, status:'ok', source: result.source, img: result.url });
     } else {
-      statFail++;
-      document.getElementById('stat-fail').textContent = statFail;
-      log(`✗ ${ev.zh}（無圖片）`, 'log-fail');
-      results.push({ ev, status: 'fail', img: ev.image || null });
+      statFail++; document.getElementById('stat-fail').textContent = statFail;
+      log(`✗ ${ev.zh}（兩種方式均失敗）`, 'log-fail');
+      results.push({ ev, status:'fail', source:'', img: ev.image||null });
     }
-
-    await new Promise(r => setTimeout(r, 50));
+    await delay(50);
   }
 
   document.getElementById('progress-fill').style.width = '100%';
   document.getElementById('progress-text').textContent = '完成！';
   document.getElementById('btn-run').disabled = false;
   document.getElementById('btn-stop').style.display = 'none';
-  log(`─── 完成：成功 ${statOk}，失敗 ${statFail}，略過 ${statSkip} ───`, 'log-warn');
+  log(`─── 完成：縮圖 ${statOk}，原始圖 ${statOg}，失敗 ${statFail}，略過 ${statSkip} ───`, 'log-warn');
   document.getElementById('step-download').classList.remove('hide');
+  showMissing(); // refresh missing list
 }
 
 function stopUpdate() { shouldStop = true; }
 
-// ── Download ──
 function downloadJson() {
-  const blob = new Blob([JSON.stringify(eventsData, null, 2)], { type: 'application/json' });
+  const blob = new Blob([JSON.stringify(eventsData, null, 2)], { type:'application/json' });
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'events.json';
-  a.click();
+  a.href = URL.createObjectURL(blob); a.download = 'events.json'; a.click();
   URL.revokeObjectURL(a.href);
 }
 
-// ── Result table ──
-function showTable() {
+function toggleTable() {
   const wrap = document.getElementById('result-wrap');
-  wrap.style.display = wrap.style.display === 'none' ? '' : 'none';
-  if (wrap.style.display === 'none') return;
+  wrap.style.display = wrap.style.display==='none' ? '' : 'none';
+  if (wrap.style.display==='none') return;
   const tbody = document.getElementById('result-body');
   tbody.innerHTML = '';
-  for (const { ev, status, img } of results) {
-    const badge = status === 'ok'   ? '<span class="badge badge-ok">✓ 成功</span>' :
-                  status === 'fail' ? '<span class="badge badge-fail">✗ 失敗</span>' :
-                                     '<span class="badge badge-skip">略過</span>';
-    const imgHtml = img
-      ? `<img src="${img}" onerror="this.style.display='none'">`
-      : '<span style="color:var(--muted)">—</span>';
-    const urlHtml = img
-      ? `<span style="color:var(--muted);word-break:break-all;font-size:10px">${img.substring(0,80)}…</span>`
-      : '';
-    tbody.innerHTML += `<tr>
-      <td>${ev.zh}</td>
-      <td>${badge}</td>
-      <td>${imgHtml}</td>
-      <td>${urlHtml}</td>
-    </tr>`;
-  }
+  results.filter(r => r.status!=='skip').forEach(({ ev, status, source, img }) => {
+    const badge = status==='fail' ? '<span class="badge badge-fail">✗ 失敗</span>' :
+                  source==='wiki-original' ? '<span class="badge badge-ok2">✓ original</span>' :
+                  '<span class="badge badge-ok">✓ wiki</span>';
+    const imgHtml = img ? `<img src="${img}" onerror="this.style.display='none'">` : '—';
+    const urlHtml = img ? `<span style="color:var(--muted);word-break:break-all;font-size:10px">${img.substring(0,70)}…</span>` : '';
+    tbody.innerHTML += `<tr><td>${ev.zh}</td><td>${badge}</td><td style="color:var(--muted)">${source||'—'}</td><td>${imgHtml}</td><td>${urlHtml}</td></tr>`;
+  });
 }
 </script>
 </body>
