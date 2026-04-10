@@ -373,6 +373,72 @@ body {
 #popup-overlay { position: fixed; }
 #popup { position: relative; }
 
+/* Edit panel */
+.popup-edit-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px; letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 14px; border-radius: 20px;
+  cursor: pointer; transition: all .2s; background: transparent;
+}
+.popup-edit-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
+
+#edit-panel {
+  display: none;
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+#edit-panel.show { display: block; }
+.edit-row { margin-bottom: 12px; }
+.edit-label {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px; color: var(--text-muted);
+  letter-spacing: 0.08em; margin-bottom: 5px;
+}
+.edit-input {
+  width: 100%; padding: 8px 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px; color: var(--text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 13px; box-sizing: border-box;
+  transition: border-color .15s;
+}
+.edit-input:focus { outline: none; border-color: rgba(255,255,255,0.3); }
+.edit-textarea { min-height: 72px; resize: vertical; }
+.edit-img-preview {
+  width: 100%; height: 100px; object-fit: cover;
+  border-radius: 6px; margin-top: 6px; display: none;
+}
+.edit-actions {
+  display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;
+}
+.edit-save-btn {
+  flex: 1; padding: 8px 16px; border-radius: 8px; cursor: pointer;
+  font-family: 'Noto Sans TC', sans-serif; font-size: 12px; font-weight: 500;
+  border: none; background: rgba(96,165,250,0.2); color: #60a5fa;
+  border: 1px solid rgba(96,165,250,0.3); transition: all .15s;
+}
+.edit-save-btn:hover { background: rgba(96,165,250,0.35); }
+.edit-export-btn {
+  flex: 1; padding: 8px 16px; border-radius: 8px; cursor: pointer;
+  font-family: 'Noto Sans TC', sans-serif; font-size: 12px; font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.15); background: transparent;
+  color: var(--text-muted); transition: all .15s;
+}
+.edit-export-btn:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+.edit-modified-badge {
+  font-family: 'Noto Sans TC', sans-serif; font-size: 10px;
+  color: #fbbf24; letter-spacing: 0.06em; display: none;
+  align-items: center; gap: 4px;
+}
+.edit-modified-badge.show { display: flex; }
+
 /* Overlap picker menu */
 #overlap-menu {
   position: fixed;
@@ -524,6 +590,48 @@ body {
       <div class="popup-desc-zh" id="popup-desc-zh"></div>
       <div class="popup-desc-en" id="popup-desc-en"></div>
       <div class="popup-links" id="popup-links"></div>
+
+      <!-- Edit panel -->
+      <div style="display:flex;align-items:center;gap:10px;margin-top:14px;">
+        <button class="popup-edit-btn" id="popup-edit-btn">✏ 編輯</button>
+        <span class="edit-modified-badge" id="edit-modified-badge">● 已修改</span>
+        <button class="edit-export-btn" id="popup-export-btn" style="flex:none;padding:6px 12px;font-size:11px;">⬇ 匯出 JSON</button>
+      </div>
+
+      <div id="edit-panel">
+        <div class="edit-row">
+          <div class="edit-label">圖片 URL</div>
+          <input class="edit-input" id="edit-image" type="text" placeholder="https://upload.wikimedia.org/...">
+          <img class="edit-img-preview" id="edit-img-preview">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">中文名稱</div>
+          <input class="edit-input" id="edit-zh" type="text">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">英文名稱</div>
+          <input class="edit-input" id="edit-en" type="text">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">中文描述</div>
+          <textarea class="edit-input edit-textarea" id="edit-desc-zh"></textarea>
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">英文描述</div>
+          <textarea class="edit-input edit-textarea" id="edit-desc-en"></textarea>
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">中文 Wikipedia URL</div>
+          <input class="edit-input" id="edit-wiki-zh" type="text">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">英文 Wikipedia URL</div>
+          <input class="edit-input" id="edit-wiki-en" type="text">
+        </div>
+        <div class="edit-actions">
+          <button class="edit-save-btn" id="edit-save-btn">✓ 儲存修改</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -2137,7 +2245,10 @@ function handleClick(mx, my) {
 
 function showPopup(ev) {
   const overlay = document.getElementById('popup-overlay');
-  const color = ( AXES[ev.axis] && AXES[ev.axis].color ) || '#fff' || '#fff';
+  const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
+
+  // Track which event is being edited
+  _editingEventId = ev.id;
 
   // Image
   const imgWrap = document.getElementById('popup-img-wrap');
@@ -2151,16 +2262,41 @@ function showPopup(ev) {
 
   // Tag
   const tag = document.getElementById('popup-tag');
-  tag.textContent = (( AXES[ev.axis] && AXES[ev.axis].label ) || ev.axis || ev.axis).toUpperCase();
+  tag.textContent = ((AXES[ev.axis] && AXES[ev.axis].label) || ev.axis).toUpperCase();
   tag.style.color = color;
   tag.style.borderColor = color + '44';
   tag.style.background = color + '11';
 
   document.getElementById('popup-zh').textContent = ev.zh;
   document.getElementById('popup-en').textContent = ev.en;
-  document.getElementById('popup-time').textContent = formatYear(ev.year);
+  document.getElementById('popup-time').textContent = ev.endYear
+    ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
+    : formatYear(ev.year);
   document.getElementById('popup-desc-zh').textContent = ev.desc_zh || '';
   document.getElementById('popup-desc-en').textContent = ev.desc_en || '';
+
+  // Populate edit fields
+  document.getElementById('edit-image').value   = ev.image   || '';
+  document.getElementById('edit-zh').value      = ev.zh      || '';
+  document.getElementById('edit-en').value      = ev.en      || '';
+  document.getElementById('edit-desc-zh').value = ev.desc_zh || '';
+  document.getElementById('edit-desc-en').value = ev.desc_en || '';
+  document.getElementById('edit-wiki-zh').value = ev.wiki_zh || '';
+  document.getElementById('edit-wiki-en').value = ev.wiki_en || '';
+
+  // Image preview
+  const preview = document.getElementById('edit-img-preview');
+  if (ev.image) { preview.src = ev.image; preview.style.display = 'block'; }
+  else { preview.style.display = 'none'; }
+
+  // Modified badge
+  const n = countEdits();
+  const badge = document.getElementById('edit-modified-badge');
+  if (n > 0) { badge.textContent = `● ${n} 筆已修改`; badge.classList.add('show'); }
+  else { badge.classList.remove('show'); }
+
+  // Close edit panel when switching events
+  document.getElementById('edit-panel').classList.remove('show');
 
   // Links
   const linksEl = document.getElementById('popup-links');
@@ -2277,6 +2413,7 @@ async function loadEvents() {
     events = FALLBACK_EVENTS;
   }
   buildParentTree();
+  applyEdits();   // apply any localStorage overrides
   draw();
 }
 
@@ -2294,6 +2431,110 @@ const FALLBACK_EVENTS = [
   { id:'ww2',          year:1939,         zh:'二戰',       en:'World War II',  axis:'cross',     level:1, track:0, desc_zh:'人類最大戰爭', desc_en:'Deadliest war', wiki_zh:'https://zh.wikipedia.org/wiki/第二次世界大戰', wiki_en:'https://en.wikipedia.org/wiki/World_War_II' },
   { id:'internet',     year:1991,         zh:'網際網路',   en:'World Wide Web',axis:'cross',     level:1, track:0, desc_zh:'資訊時代', desc_en:'Information age', wiki_zh:'https://zh.wikipedia.org/wiki/全球資訊網', wiki_en:'https://en.wikipedia.org/wiki/World_Wide_Web' },
 ];
+
+// ════════════════════════════════════════════
+//  EDIT SYSTEM — localStorage persistence + JSON export
+// ════════════════════════════════════════════
+const EDIT_KEY = 'cosmic-timeline-edits';  // localStorage key
+
+// Load overrides from localStorage
+function loadEdits() {
+  try {
+    const raw = localStorage.getItem(EDIT_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch { return {}; }
+}
+
+// Save override for one event
+function saveEdit(id, fields) {
+  const edits = loadEdits();
+  edits[id] = { ...(edits[id] || {}), ...fields };
+  localStorage.setItem(EDIT_KEY, JSON.stringify(edits));
+}
+
+// Apply all saved edits to events array
+function applyEdits() {
+  const edits = loadEdits();
+  events.forEach(ev => {
+    const ov = edits[ev.id];
+    if (!ov) return;
+    Object.assign(ev, ov);
+  });
+}
+
+// Export merged events.json
+function exportJSON() {
+  const edits = loadEdits();
+  // Deep clone and apply edits
+  const merged = events.map(ev => {
+    const clone = { ...ev };
+    delete clone._autoParent;  // remove runtime-only field
+    if (edits[clone.id]) Object.assign(clone, edits[clone.id]);
+    return clone;
+  });
+  const blob = new Blob([JSON.stringify({ meta: { title_zh:'宇宙歷史時間軸', title_en:'Cosmic Timeline', total_years:13800000000, created:'2026' }, events: merged }, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'events.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// Count modified events
+function countEdits() {
+  return Object.keys(loadEdits()).length;
+}
+
+// ── Edit panel wiring ──
+let _editingEventId = null;
+
+document.getElementById('popup-edit-btn').addEventListener('click', () => {
+  const panel = document.getElementById('edit-panel');
+  panel.classList.toggle('show');
+});
+
+document.getElementById('popup-export-btn').addEventListener('click', exportJSON);
+
+// Image URL preview
+document.getElementById('edit-image').addEventListener('input', e => {
+  const preview = document.getElementById('edit-img-preview');
+  const url = e.target.value.trim();
+  if (url) {
+    preview.src = url;
+    preview.style.display = 'block';
+    preview.onerror = () => { preview.style.display = 'none'; };
+  } else {
+    preview.style.display = 'none';
+  }
+});
+
+document.getElementById('edit-save-btn').addEventListener('click', () => {
+  if (!_editingEventId) return;
+  const fields = {
+    image:   document.getElementById('edit-image').value.trim() || undefined,
+    zh:      document.getElementById('edit-zh').value.trim() || undefined,
+    en:      document.getElementById('edit-en').value.trim() || undefined,
+    desc_zh: document.getElementById('edit-desc-zh').value.trim() || undefined,
+    desc_en: document.getElementById('edit-desc-en').value.trim() || undefined,
+    wiki_zh: document.getElementById('edit-wiki-zh').value.trim() || undefined,
+    wiki_en: document.getElementById('edit-wiki-en').value.trim() || undefined,
+  };
+  // Remove undefined fields
+  Object.keys(fields).forEach(k => fields[k] === undefined && delete fields[k]);
+  saveEdit(_editingEventId, fields);
+
+  // Apply to live event object immediately
+  const ev = events.find(e => e.id === _editingEventId);
+  if (ev) Object.assign(ev, fields);
+
+  // Update badge
+  document.getElementById('edit-modified-badge').classList.add('show');
+  document.getElementById('edit-modified-badge').textContent = `● ${countEdits()} 筆已修改`;
+
+  // Refresh popup display
+  showPopup(ev);
+  draw();
+});
 
 // ════════════════════════════════════════════
 //  ERA JUMP BUTTONS

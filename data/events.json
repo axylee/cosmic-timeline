@@ -170,7 +170,8 @@
       "desc_zh": "地球最早期，地表熔融，隕石轟炸頻繁，大氣以水蒸氣、二氧化碳為主，無生命。",
       "desc_en": "Earth's earliest period: molten surface, frequent meteorite bombardment, no life.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/冥古宙",
-      "wiki_en": "https://en.wikipedia.org/wiki/Hadean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Hadean",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/800px-The_Earth_seen_from_Apollo_17.jpg"
     },
     {
       "id": "moon-forms-event",
@@ -198,7 +199,8 @@
       "desc_zh": "最早的岩石與最原始生命（原核生物）出現，大氣無氧，藍藻開始演化。",
       "desc_en": "Earliest rocks and primitive prokaryotic life appear; oxygen-free atmosphere; cyanobacteria evolve.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/太古宙",
-      "wiki_en": "https://en.wikipedia.org/wiki/Archean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Archean",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Stromatolites_Pilbara.jpg/800px-Stromatolites_Pilbara.jpg"
     },
     {
       "id": "first-life-event",
@@ -226,7 +228,8 @@
       "desc_zh": "大氧化事件、多次雪球地球冰河期、真核細胞與多細胞生物出現，生命急速複雜化。",
       "desc_en": "Great Oxidation Event, Snowball Earth glaciations, eukaryotes and multicellular life appear.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/元古宙",
-      "wiki_en": "https://en.wikipedia.org/wiki/Proterozoic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Proterozoic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Stromatolites_in_Shark_Bay.jpg/800px-Stromatolites_in_Shark_Bay.jpg"
     },
     {
       "id": "huronian-glaciation",
@@ -240,7 +243,8 @@
       "desc_zh": "地球史上最早、最嚴重的冰河期之一，由大氧化事件導致溫室氣體甲烷破壞而引發，持續3億年。",
       "desc_en": "One of Earth's earliest and most severe glaciations, triggered by the Great Oxidation Event destroying methane greenhouse gas; lasted 300 million years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/休倫冰期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Huronian_glaciation"
+      "wiki_en": "https://en.wikipedia.org/wiki/Huronian_glaciation",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Snowball_Earth.jpg/800px-Snowball_Earth.jpg"
     },
     {
       "id": "great-oxidation-event",
@@ -267,7 +271,8 @@
       "desc_zh": "具有細胞核的真核細胞出現，這是生命複雜化的關鍵一步，奠定所有高等生物的基礎。",
       "desc_en": "Cells with a true nucleus emerge, a critical leap toward complex life and the ancestor of all higher organisms.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/真核生物",
-      "wiki_en": "https://en.wikipedia.org/wiki/Eukaryote"
+      "wiki_en": "https://en.wikipedia.org/wiki/Eukaryote",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Biological_cell.svg/800px-Biological_cell.svg.png"
     },
     {
       "id": "multicellular",
@@ -280,7 +285,8 @@
       "desc_zh": "最早的多細胞生物演化出現，細胞開始分工合作，為複雜動植物的演化奠基。",
       "desc_en": "The first multicellular organisms evolve; cells begin to specialize, laying the groundwork for complex life.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/多細胞生物",
-      "wiki_en": "https://en.wikipedia.org/wiki/Multicellular_organism"
+      "wiki_en": "https://en.wikipedia.org/wiki/Multicellular_organism",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dickinsonia_costata.jpg/800px-Dickinsonia_costata.jpg"
     },
     {
       "id": "snowball-earth-event",
@@ -309,7 +315,8 @@
       "desc_zh": "生命從海洋到陸地的偉大征程，包含寒武紀大爆發、魚類時代、第一批陸地植物與動物，以二疊紀大滅絕終結。",
       "desc_en": "Life's great journey from sea to land: Cambrian explosion, Age of Fishes, first land plants and animals, ending with the Permian extinction.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古生代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paleozoic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleozoic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Radiodont_frontalappendages.jpg/800px-Radiodont_frontalappendages.jpg"
     },
     {
       "id": "cambrian",
@@ -338,7 +345,8 @@
       "desc_zh": "海洋生物空前繁盛，珊瑚礁出現，末期發生地球第二大滅絕事件（奧陶紀大滅絕），85%物種消失。",
       "desc_en": "Marine life flourishes; coral reefs appear; ends with Earth's second-largest extinction (85% of species lost).",
       "wiki_zh": "https://zh.wikipedia.org/wiki/奧陶紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ordovician"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ordovician",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Ordovician_Sea.jpg/800px-Ordovician_Sea.jpg"
     },
     {
       "id": "silurian",
@@ -352,7 +360,8 @@
       "desc_zh": "有頜魚類演化出現，陸地植物開始定居，珊瑚礁大量發展，氣候相對溫和穩定。",
       "desc_en": "Jawed fish evolve; land plants colonize shore; coral reefs expand; relatively warm and stable climate.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/志留紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Silurian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Silurian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Silurian_sea_floor.jpg/800px-Silurian_sea_floor.jpg"
     },
     {
       "id": "devonian",
@@ -366,7 +375,8 @@
       "desc_zh": "「魚類的時代」——各類魚種繁盛，四足動物登陸，蕨類森林出現，末期發生大滅絕。",
       "desc_en": "'Age of Fishes' — diverse fish species; tetrapods colonize land; fern forests appear; major extinction at end.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/泥盆紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Devonian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Devonian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Dunkleosteus_BW.jpg/800px-Dunkleosteus_BW.jpg"
     },
     {
       "id": "carboniferous",
@@ -380,7 +390,8 @@
       "desc_zh": "巨大沼澤森林覆蓋大陸，大量植物埋入地層形成今日煤礦，第一批爬蟲類與有翅昆蟲出現。",
       "desc_en": "Vast swamp forests cover continents; buried plants form today's coal deposits; first reptiles and winged insects appear.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石炭紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Carboniferous"
+      "wiki_en": "https://en.wikipedia.org/wiki/Carboniferous",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Carboniferous_Swamp_Forest.jpg/800px-Carboniferous_Swamp_Forest.jpg"
     },
     {
       "id": "permian",
@@ -394,7 +405,8 @@
       "desc_zh": "盤古大陸形成，以史上最大滅絕事件結束——96%海洋物種與70%陸地脊椎動物消失。",
       "desc_en": "Pangaea forms; ends with Earth's greatest extinction — 96% of marine species and 70% of land vertebrates lost.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/二疊紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Permian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Permian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pangaea_animation.gif/400px-Pangaea_animation.gif"
     },
     {
       "id": "permian-extinction",
@@ -422,7 +434,8 @@
       "desc_zh": "恐龍主宰大地的時代，包含三疊紀、侏羅紀、白堊紀，哺乳類與鳥類也在此期間演化出現。",
       "desc_en": "The age of dinosaurs: Triassic, Jurassic, and Cretaceous periods; mammals and birds also evolve.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中生代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mesozoic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mesozoic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Jurassic_dinosaurs.jpg/800px-Jurassic_dinosaurs.jpg"
     },
     {
       "id": "triassic",
@@ -436,7 +449,8 @@
       "desc_zh": "二疊紀大滅絕後生命復甦，恐龍與哺乳類同時演化出現，盤古大陸開始分裂。",
       "desc_en": "Life recovers after Permian extinction; dinosaurs and mammals both evolve; Pangaea begins breaking apart.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Triassic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Triassic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Triassic_fauna.jpg/800px-Triassic_fauna.jpg"
     },
     {
       "id": "jurassic",
@@ -465,7 +479,8 @@
       "desc_zh": "開花植物大爆發，恐龍多樣性達到頂峰，以隕石撞擊引發的大滅絕事件結束。",
       "desc_en": "Flowering plants explode in diversity; dinosaurs reach peak diversity; ends with asteroid impact extinction.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/白堊紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous"
+      "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Triceratops_liveDB.jpg/800px-Triceratops_liveDB.jpg"
     },
     {
       "id": "kt-event",
@@ -492,7 +507,8 @@
       "desc_zh": "哺乳類與鳥類大輻射演化，草原擴張，靈長類出現，最終演化出人類，延續至今。",
       "desc_en": "Mammals and birds diversify explosively; grasslands expand; primates evolve; culminates in humans.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新生代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cenozoic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Cenozoic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Cenozoic_fauna.png/800px-Cenozoic_fauna.png"
     },
     {
       "id": "bipedalism-event",
@@ -519,7 +535,8 @@
       "desc_zh": "260萬年前開始、至今仍在持續的冰河期，包含多次冰期與間冰期，人類在此期間演化。",
       "desc_en": "Ongoing ice age beginning 2.6 million years ago, with multiple glacial-interglacial cycles; humans evolved during this period.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/第四紀冰期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Quaternary_glaciation"
+      "wiki_en": "https://en.wikipedia.org/wiki/Quaternary_glaciation",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Last_Glacial_Maximum_Map.png/800px-Last_Glacial_Maximum_Map.png"
     },
     {
       "id": "stone-tools",
@@ -532,7 +549,8 @@
       "desc_zh": "能人製造最早的石器工具（奧杜萬工業），標誌人類技術文明的起點。",
       "desc_en": "Homo habilis creates the earliest stone tools (Oldowan industry), marking the dawn of human technology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石器時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age"
+      "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bifaz_de_El_Sartalejo.jpg/640px-Bifaz_de_El_Sartalejo.jpg"
     },
     {
       "id": "fire-event",
@@ -545,7 +563,8 @@
       "desc_zh": "直立人學會控制和使用火，改變飲食方式，促進大腦發育，並提供保護。",
       "desc_en": "Homo erectus controls fire, transforming diet, promoting brain development, and providing protection.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/火的使用史",
-      "wiki_en": "https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans"
+      "wiki_en": "https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Campfire_at_Backbone_Rock.jpg/640px-Campfire_at_Backbone_Rock.jpg"
     },
     {
       "id": "homo-sapiens-event",
@@ -573,7 +592,8 @@
       "desc_zh": "最後一次冰河期，冰蓋覆蓋北美、歐洲大部，海平面下降120公尺，人類通過白令陸橋進入美洲。",
       "desc_en": "Last glacial period; ice sheets cover North America and Europe; sea level drops 120m; humans cross into Americas via Bering land bridge.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/末次冰期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Period",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Last_Glacial_Maximum_Map.png/800px-Last_Glacial_Maximum_Map.png"
     },
     {
       "id": "out-of-africa",
@@ -613,7 +633,8 @@
       "desc_zh": "臺東長濱八仙洞遺址，是目前所知臺灣最古老的文化，距今約三萬年，以打製石器為特徵。",
       "desc_en": "The Changbin Culture at Baxian Cave in Taitung is Taiwan's oldest known culture (~30,000 years ago), characterized by chipped stone tools.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/長濱文化",
-      "wiki_en": "https://en.wikipedia.org/wiki/Changbin_culture"
+      "wiki_en": "https://en.wikipedia.org/wiki/Changbin_culture",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Changbin_Archaeological_Site.jpg/640px-Changbin_Archaeological_Site.jpg"
     },
     {
       "id": "tw-zuozhen",
@@ -625,7 +646,8 @@
       "desc_zh": "臺南左鎮出土的人類化石，是迄今發現最早的臺灣人類遺骸，距今約兩萬年。",
       "desc_en": "Human fossil remains found in Zuozhen, Tainan, the earliest human remains discovered in Taiwan (~20,000 years ago).",
       "wiki_zh": "https://zh.wikipedia.org/wiki/左鎮人",
-      "wiki_en": "https://en.wikipedia.org/wiki/Zuozhen_Man"
+      "wiki_en": "https://en.wikipedia.org/wiki/Zuozhen_Man",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/National_Taiwan_Museum.jpg/640px-National_Taiwan_Museum.jpg"
     },
     {
       "id": "agriculture-event",
@@ -652,7 +674,8 @@
       "desc_zh": "臺灣新石器時代早期文化，已有農耕與陶器，被認為是南島語族的祖先文化。",
       "desc_en": "Taiwan's early Neolithic culture with farming and pottery, considered the ancestral culture of Austronesian peoples.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大坌坑文化",
-      "wiki_en": "https://en.wikipedia.org/wiki/Dapenkeng_culture"
+      "wiki_en": "https://en.wikipedia.org/wiki/Dapenkeng_culture",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Neolithic_pottery_Taiwan.jpg/640px-Neolithic_pottery_Taiwan.jpg"
     },
     {
       "id": "tw-austronesian",
@@ -738,7 +761,8 @@
       "desc_zh": "臺灣北部金屬器時代文化，已使用鐵器，被認為是凱達格蘭族的祖先。",
       "desc_en": "Iron Age culture in northern Taiwan, believed to be ancestors of the Ketagalan people.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/十三行文化",
-      "wiki_en": "https://en.wikipedia.org/wiki/Shisanhang_culture"
+      "wiki_en": "https://en.wikipedia.org/wiki/Shisanhang_culture",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Shisanhang_Museum_of_Archaeology.jpg/640px-Shisanhang_Museum_of_Archaeology.jpg"
     },
     {
       "id": "hammurabi",
@@ -781,7 +805,8 @@
       "desc_zh": "臺灣原住民族多達16族，發展出豐富多元的文化，在平原、山地與東部各自建立部落社會。",
       "desc_en": "Over 16 indigenous tribes develop rich and diverse cultures across Taiwan's plains, mountains, and eastern coast.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣原住民族",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Taiwanese_Aborigines_image.jpg/640px-Taiwanese_Aborigines_image.jpg"
     },
     {
       "id": "trojan-war",
@@ -855,7 +880,8 @@
       "desc_en": "After Zhou moved east, rival states dominated: Five Hegemons in Spring & Autumn, Seven Kingdoms in Warring States.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/東周",
       "wiki_en": "https://en.wikipedia.org/wiki/Eastern_Zhou",
-      "endYear": -221
+      "endYear": -221,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Warring_States_Map.png/640px-Warring_States_Map.png"
     },
     {
       "id": "confucius-birth",
@@ -1079,7 +1105,8 @@
       "desc_en": "Three Kingdoms: Cao Wei in the north, Shu Han in the southwest, Eastern Wu in the southeast.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
       "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
-      "endYear": 280
+      "endYear": 280,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Three_Kingdoms.png/800px-Three_Kingdoms.png"
     },
     {
       "id": "yamato",
@@ -1123,7 +1150,8 @@
       "desc_en": "Five northern ethnic groups establish sixteen states; coexist with Eastern Jin in the south.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五胡十六國",
       "wiki_en": "https://en.wikipedia.org/wiki/Sixteen_Kingdoms",
-      "endYear": 439
+      "endYear": 439,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Sixteen_Kingdoms_304-439_CE.png/640px-Sixteen_Kingdoms_304-439_CE.png"
     },
     {
       "id": "northern-southern",
@@ -1258,7 +1286,8 @@
       "desc_en": "Five successive dynasties in the north; ten independent kingdoms in the south for fifty turbulent years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五代十國",
       "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
-      "endYear": 960
+      "endYear": 960,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Five_Dynasties_Ten_Kingdoms_953_CE.png/640px-Five_Dynasties_Ten_Kingdoms_953_CE.png"
     },
     {
       "id": "song",
@@ -1303,7 +1332,8 @@
       "desc_en": "Southern Song in the south, Jin in the north, and rising Mongols — three powers before Yuan unification.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南宋",
       "wiki_en": "https://en.wikipedia.org/wiki/Southern_Song_dynasty",
-      "endYear": 1279
+      "endYear": 1279,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Southern_Song_Dynasty_1142.png/640px-Southern_Song_Dynasty_1142.png"
     },
     {
       "id": "samurai-era",
@@ -1454,7 +1484,8 @@
       "desc_zh": "臺灣中部超部落聯盟，由巴布拉族與巴則海族組成，曾抵抗荷蘭與鄭氏政權，1732年遭清朝鎮壓瓦解。",
       "desc_en": "A confederation of tribes in central Taiwan, resisting Dutch and Ming-Zheng rule; dissolved after Qing suppression in 1732.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大肚王國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Middag"
+      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Middag",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Formosa_1654_Vingboons.jpg/640px-Formosa_1654_Vingboons.jpg"
     },
     {
       "id": "copernicus",
@@ -1481,7 +1512,8 @@
       "desc_zh": "葡萄牙航海者航經臺灣海峽，驚嘆其美景而命名「Ilha Formosa（美麗之島）」，此名沿用至今。",
       "desc_en": "Portuguese sailors, passing through the Taiwan Strait, name the island 'Ilha Formosa' (Beautiful Isle), a name still used today.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/福爾摩沙",
-      "wiki_en": "https://en.wikipedia.org/wiki/Formosa"
+      "wiki_en": "https://en.wikipedia.org/wiki/Formosa",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Formosa_Nova_Descriptio_1640.jpg/640px-Formosa_Nova_Descriptio_1640.jpg"
     },
     {
       "id": "edo",
@@ -1523,7 +1555,8 @@
       "desc_zh": "西班牙佔領雞籠（基隆）與淡水，建聖薩爾瓦多城，1642年被荷蘭人驅逐。",
       "desc_en": "Spain occupies Keelung and Tamsui, builds Fort San Salvador; expelled by the Dutch in 1642.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/西班牙統治台灣時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa"
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/San_Salvador_Fort_Keelung.jpg/640px-San_Salvador_Fort_Keelung.jpg"
     },
     {
       "id": "qing",
@@ -1653,7 +1686,8 @@
       "desc_zh": "清法戰爭後，臺灣從福建省獨立出來成為臺灣省，劉銘傳就任首任巡撫，積極推動現代化建設。",
       "desc_en": "After the Sino-French War, Taiwan becomes a separate province; Liu Mingchuan becomes its first governor and modernizes the island.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣省",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Liu_Mingchuan_1884.jpg/640px-Liu_Mingchuan_1884.jpg"
     },
     {
       "id": "tw-shimonoseki",
@@ -1864,7 +1898,8 @@
       "desc_zh": "中華民國宣布戒嚴，長達38年，是世界上持續時間最長的戒嚴之一，限制人民自由與政治活動。",
       "desc_en": "Martial law lasting 38 years — one of the world's longest — restricts civil liberties and political activities.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣戒嚴時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/ROCAF_soldiers_228.jpg/640px-ROCAF_soldiers_228.jpg"
     },
     {
       "id": "dna-discovery",
@@ -1892,7 +1927,8 @@
       "desc_zh": "臺灣從農業經濟快速轉型為出口導向工業，成為亞洲四小龍之一，人均所得大幅提升。",
       "desc_en": "Taiwan rapidly transforms from agriculture to export-oriented industry, becoming one of the Four Asian Tigers with dramatically rising living standards.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣經濟奇蹟",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_Miracle"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_Miracle",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Taipei_skyline.jpg/800px-Taipei_skyline.jpg"
     },
     {
       "id": "moon-landing",
@@ -1919,7 +1955,8 @@
       "desc_zh": "蔣經國宣布解除戒嚴，臺灣開始民主化歷程，開放黨禁、報禁，走向自由民主社會。",
       "desc_en": "Chiang Ching-kuo lifts martial law, beginning Taiwan's democratization: lifting bans on political parties and press freedom.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣解嚴",
-      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law"
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Chiang_Ching-kuo_official.jpg/640px-Chiang_Ching-kuo_official.jpg"
     },
     {
       "id": "tw-semiconductor",
