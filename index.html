@@ -372,6 +372,48 @@ body {
 .popup-close:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
 #popup-overlay { position: fixed; }
 #popup { position: relative; }
+
+/* Overlap picker menu */
+#overlap-menu {
+  position: fixed;
+  display: none;
+  min-width: 220px;
+  max-width: 320px;
+  background: rgba(8,12,24,0.96);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 10px;
+  padding: 10px 0 8px;
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+}
+#overlap-menu.show { display: block; }
+#overlap-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  color: rgba(221,216,200,0.4);
+  letter-spacing: 0.08em;
+  padding: 0 14px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 4px;
+}
+.overlap-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background .12s;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.overlap-item:hover { background: rgba(255,255,255,0.06); }
+.overlap-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.overlap-zh { font-size: 13px; color: rgba(221,216,200,0.9); }
+.overlap-time { font-size: 10px; color: rgba(221,216,200,0.4); margin-left: auto; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -485,6 +527,12 @@ body {
   </div>
 </div>
 
+<!-- Overlap picker — shown when clicking a crowded area -->
+<div id="overlap-menu">
+  <div id="overlap-title">此處有多個事件</div>
+  <div id="overlap-list"></div>
+</div>
+
 <script>
 // ════════════════════════════════════════════
 //  CONSTANTS & CONFIG
@@ -497,46 +545,24 @@ const TIMELINE_END   = FUTURE_END;
 
 // ════════════════════════════════════════════
 //  AXIS TREE
-//  order   : 全局排序（越小越靠上），同父軸按 startYear 自動排
-//  endYear : 文明消失年份（null = 延續至今）
-//  zoomMin : 子軸出現最低 zoom
-//  parent  : 父軸 id（null = 根軸）
 // ════════════════════════════════════════════
 const AXES = {
-  // ── 主幹 ──
-  cosmos:         { color:'#a78bfa', label:'宇宙',      startYear:-13800000000, endYear:null, parent:null,         order: 0,  zoomMin:0    },
-  earth:          { color:'#60a5fa', label:'地球',      startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 1,  zoomMin:0    },
-  // 地球子軸
-  'earth-early':  { color:'#93c5fd', label:'早期地球',  startYear:-4540000000,  endYear:null, parent:'earth',      order: 2,  zoomMin:0.15 },
-  'earth-ice':    { color:'#bfdbfe', label:'冰河事件',  startYear:-2400000000,  endYear:null, parent:'earth',      order: 3,  zoomMin:0.20 },
-
-  life:           { color:'#34d399', label:'生命',      startYear:-3800000000,  endYear:null, parent:'earth',      order: 4,  zoomMin:0    },
-  // 生命子軸
-  'paleozoic-ax': { color:'#6ee7b7', label:'古生代細節', startYear:-541000000,  endYear:-252000000, parent:'life', order: 5,  zoomMin:0.30 },
-  'mesozoic-ax':  { color:'#a7f3d0', label:'中生代細節', startYear:-252000000,  endYear:-66000000,  parent:'life', order: 6,  zoomMin:0.30 },
-
-  'human-evo':    { color:'#fbbf24', label:'人類演化',  startYear:-4000000,     endYear:null, parent:'life',       order: 7,  zoomMin:0    },
-  // 人類演化子軸
-  'homo-detail':  { color:'#fde68a', label:'人屬細節',  startYear:-2600000,     endYear:null, parent:'human-evo',  order: 8,  zoomMin:0.45 },
-
-  cross:          { color:'#e2e8f0', label:'跨文明',    startYear:-10000,       endYear:null, parent:'human-evo',  order: 9,  zoomMin:0    },
-
-  // ── 東方文明 + 子軸 ──
-  east:           { color:'#f87171', label:'東方文明',  startYear:-3500,        endYear:null, parent:'cross',      order:10,  zoomMin:0    },
-  mideast:        { color:'#fde68a', label:'中東',      startYear:-3500,        endYear:null, parent:'east',       order:11,  zoomMin:0.58 },
-  india:          { color:'#86efac', label:'印度',      startYear:-2600,        endYear:null, parent:'east',       order:12,  zoomMin:0.58 },
-  china:          { color:'#fca5a5', label:'中國',      startYear:-2070,        endYear:null, parent:'east',       order:13,  zoomMin:0.58 },
-  'china-b':      { color:'#fb923c', label:'並立政權',  startYear:-771,         endYear:null, parent:'china',      order:14,  zoomMin:0.75 },
-  'china-rel':    { color:'#fcd34d', label:'思想宗教',  startYear:-551,         endYear:null, parent:'china',      order:15,  zoomMin:0.80 },
-  taiwan:         { color:'#f9a8d4', label:'臺灣',      startYear:-30000,       endYear:null, parent:'east',       order:16,  zoomMin:0.58 },
-  japan:          { color:'#fdba74', label:'日本',      startYear:-300,         endYear:null, parent:'east',       order:17,  zoomMin:0.58 },
-
-  // ── 西方文明 + 子軸 ──
-  west:           { color:'#c084fc', label:'西方文明',  startYear:-3500,        endYear:null, parent:'cross',      order:18,  zoomMin:0    },
-  greece:         { color:'#c4b5fd', label:'希臘羅馬',  startYear:-800,         endYear:476,  parent:'west',       order:19,  zoomMin:0.58 },
-  europe:         { color:'#a5b4fc', label:'歐洲',      startYear:500,          endYear:null, parent:'west',       order:20,  zoomMin:0.58 },
-  'europe-sci':   { color:'#818cf8', label:'科學革命',  startYear:1543,         endYear:1800, parent:'europe',     order:21,  zoomMin:0.80 },
-  americas:       { color:'#93c5fd', label:'美洲',      startYear:1492,         endYear:null, parent:'west',       order:22,  zoomMin:0.58 },
+  cosmos:      { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null, parent:null,         order: 0, zoomMin:0    },
+  earth:       { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 1, zoomMin:0    },
+  life:        { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null, parent:'earth',      order: 2, zoomMin:0    },
+  'human-evo': { color:'#fbbf24', label:'人類演化', startYear:-4000000,     endYear:null, parent:'life',       order: 3, zoomMin:0    },
+  cross:       { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null, parent:'human-evo',  order: 4, zoomMin:0    },
+  east:        { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null, parent:'cross',      order: 5, zoomMin:0    },
+  mideast:     { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null, parent:'east',       order: 6, zoomMin:0.58 },
+  india:       { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null, parent:'east',       order: 7, zoomMin:0.58 },
+  china:       { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null, parent:'east',       order: 8, zoomMin:0.58 },
+  'china-b':   { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null, parent:'china',      order: 9, zoomMin:0.75 },
+  taiwan:      { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null, parent:'east',       order:10, zoomMin:0.58 },
+  japan:       { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null, parent:'east',       order:11, zoomMin:0.58 },
+  west:        { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null, parent:'cross',      order:12, zoomMin:0    },
+  greece:      { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,  parent:'west',       order:13, zoomMin:0.58 },
+  europe:      { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null, parent:'west',       order:14, zoomMin:0.58 },
+  americas:    { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null, parent:'west',       order:15, zoomMin:0.58 },
 };
 
 // ── 間距常數 ──
@@ -1776,38 +1802,30 @@ canvas.addEventListener('pointerup', e => {
 // ════════════════════════════════════════════
 //  HOVER
 // ════════════════════════════════════════════
-function findEventAt(mx, my) {
-  let best = null, bestDist = Infinity;
-
+// Find ALL events near click (for overlap detection)
+function findEventsAt(mx, my) {
+  const HIT_DOT  = 18;
+  const HIT_PILL = 12;
+  const results  = [];
   events.forEach(ev => {
     if (!eventVisible(ev)) return;
     const y = axisY(ev.axis);
-
     if (ev.endYear) {
-      // Period block hit test — click anywhere inside the block
-      const x1  = yearToX(ev.year);
-      const x2  = yearToX(ev.endYear);
-      const blockH = 10;
-      if (mx >= x1 - 4 && mx <= x2 + 4 && Math.abs(my - y) <= blockH + 4) {
-        // Use distance to midpoint for priority (prefer smaller blocks)
-        const midX = (x1 + x2) / 2;
-        const dist = Math.abs(mx - midX) + Math.abs(my - y) * 2;
-        if (dist < bestDist) {
-          best = ev; bestDist = dist;
-        }
+      const x1 = yearToX(ev.year), x2 = yearToX(ev.endYear);
+      if (mx >= x1 - 4 && mx <= x2 + 4 && Math.abs(my - y) <= HIT_PILL + 4) {
+        const span = Math.abs(x2 - x1) || 1;
+        results.push({ ev, dist: Math.abs(my - y) * 2 + 1 / span });
       }
     } else {
-      // Point event hit test
-      const x    = yearToX(ev.year);
-      const dist = Math.hypot(mx - x, my - y);
-      const threshold = Math.max(14, dotRadius(ev) + 8);
-      if (dist < threshold && dist < bestDist) {
-        best = ev; bestDist = dist;
-      }
+      const x = yearToX(ev.year), d = Math.hypot(mx - x, my - y);
+      if (d <= Math.max(HIT_DOT, dotRadius(ev) + 8)) results.push({ ev, dist: d });
     }
   });
-  return best;
+  results.sort((a, b) => a.dist - b.dist);
+  return results.map(r => r.ev);
 }
+
+function findEventAt(mx, my) { return findEventsAt(mx, my)[0] || null; }
 
 function handleHover(mx, my) {
   const ev = findEventAt(mx, my);
@@ -1841,11 +1859,51 @@ function handleHover(mx, my) {
 }
 
 // ════════════════════════════════════════════
-//  CLICK → POPUP
+//  OVERLAP MENU
+// ════════════════════════════════════════════
+const overlapMenu = document.getElementById('overlap-menu');
+
+function showOverlapMenu(evList, mx, my) {
+  const list = document.getElementById('overlap-list');
+  list.innerHTML = '';
+  evList.forEach(ev => {
+    const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
+    const timeStr = ev.endYear
+      ? formatYear(ev.year) + ' — ' + formatYear(ev.endYear)
+      : formatYear(ev.year);
+    const item = document.createElement('div');
+    item.className = 'overlap-item';
+    item.innerHTML = '<div class="overlap-dot" style="background:' + color + '"></div>'
+      + '<span class="overlap-zh">' + ev.zh + '</span>'
+      + '<span class="overlap-time">' + timeStr + '</span>';
+    item.addEventListener('click', e => { e.stopPropagation(); hideOverlapMenu(); showPopup(ev); });
+    list.appendChild(item);
+  });
+  overlapMenu.classList.add('show');
+  const mw = overlapMenu.offsetWidth || 260;
+  const mh = overlapMenu.offsetHeight || evList.length * 38 + 50;
+  let left = mx + 12, top = my + 12;
+  if (left + mw > window.innerWidth  - 10) left = mx - mw - 12;
+  if (top  + mh > window.innerHeight - 10) top  = my - mh - 12;
+  overlapMenu.style.left = Math.max(4, left) + 'px';
+  overlapMenu.style.top  = Math.max(4, top)  + 'px';
+}
+
+function hideOverlapMenu() { overlapMenu.classList.remove('show'); }
+
+document.addEventListener('pointerdown', e => {
+  if (!overlapMenu.contains(e.target) && e.target !== canvas) hideOverlapMenu();
+});
+
+// ════════════════════════════════════════════
+//  CLICK → POPUP (with overlap detection)
 // ════════════════════════════════════════════
 function handleClick(mx, my) {
-  const ev = findEventAt(mx, my);
-  if (ev) showPopup(ev);
+  hideOverlapMenu();
+  const hits = findEventsAt(mx, my);
+  if (hits.length === 0) return;
+  if (hits.length === 1) { showPopup(hits[0]); }
+  else { showOverlapMenu(hits, mx, my); }
 }
 
 function showPopup(ev) {
