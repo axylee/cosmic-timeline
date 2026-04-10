@@ -5,6 +5,272 @@
     "total_years": 13800000000,
     "created": "2026"
   },
+  "axes": [
+    {
+      "id": "cosmos",
+      "label": "宇宙",
+      "color": "#a78bfa",
+      "order": 0,
+      "parent": null,
+      "startYear": -13800000000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "solar-system",
+      "label": "太陽系",
+      "color": "#818cf8",
+      "order": 1,
+      "parent": "cosmos",
+      "startYear": -4600000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "earth",
+      "label": "地球",
+      "color": "#60a5fa",
+      "order": 2,
+      "parent": "cosmos",
+      "startYear": -4540000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "life",
+      "label": "生命",
+      "color": "#34d399",
+      "order": 3,
+      "parent": "earth",
+      "startYear": -3800000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "human-evo",
+      "label": "人類演化",
+      "color": "#fbbf24",
+      "order": 4,
+      "parent": "life",
+      "startYear": -4000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "cross",
+      "label": "跨文明",
+      "color": "#e2e8f0",
+      "order": 5,
+      "parent": "human-evo",
+      "startYear": -10000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "human"
+    },
+    {
+      "id": "arts",
+      "label": "藝術文化",
+      "color": "#f9a8d4",
+      "order": 6,
+      "parent": "cross",
+      "startYear": -800,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "arts"
+    },
+    {
+      "id": "east",
+      "label": "東方文明",
+      "color": "#f87171",
+      "order": 7,
+      "parent": "cross",
+      "startYear": -3500,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "civilization"
+    },
+    {
+      "id": "mideast",
+      "label": "中東",
+      "color": "#fde68a",
+      "order": 8,
+      "parent": "east",
+      "startYear": -3500,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "civilization"
+    },
+    {
+      "id": "judaism",
+      "label": "猶太教",
+      "color": "#fcd34d",
+      "order": 9,
+      "parent": "mideast",
+      "startYear": -2000,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "religion"
+    },
+    {
+      "id": "christianity",
+      "label": "基督教",
+      "color": "#f0abfc",
+      "order": 10,
+      "parent": "judaism",
+      "startYear": -6,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "religion"
+    },
+    {
+      "id": "islam",
+      "label": "伊斯蘭教",
+      "color": "#6ee7b7",
+      "order": 11,
+      "parent": "mideast",
+      "startYear": 570,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "religion"
+    },
+    {
+      "id": "india",
+      "label": "印度",
+      "color": "#86efac",
+      "order": 12,
+      "parent": "east",
+      "startYear": -2600,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "civilization"
+    },
+    {
+      "id": "hinduism",
+      "label": "印度教",
+      "color": "#fbbf24",
+      "order": 13,
+      "parent": "india",
+      "startYear": -1500,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "religion"
+    },
+    {
+      "id": "buddhism",
+      "label": "佛教",
+      "color": "#fda4af",
+      "order": 14,
+      "parent": "hinduism",
+      "startYear": -490,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "religion"
+    },
+    {
+      "id": "china",
+      "label": "中國",
+      "color": "#fca5a5",
+      "order": 15,
+      "parent": "east",
+      "startYear": -5000,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "china-b",
+      "label": "並立政權",
+      "color": "#fb923c",
+      "order": 16,
+      "parent": "china",
+      "startYear": -771,
+      "endYear": null,
+      "zoomMin": 0.75,
+      "group": "nation"
+    },
+    {
+      "id": "taoism",
+      "label": "道教",
+      "color": "#a7f3d0",
+      "order": 17,
+      "parent": "china",
+      "startYear": -550,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "religion"
+    },
+    {
+      "id": "taiwan",
+      "label": "臺灣",
+      "color": "#fbcfe8",
+      "order": 18,
+      "parent": "east",
+      "startYear": -30000,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "japan",
+      "label": "日本",
+      "color": "#fdba74",
+      "order": 19,
+      "parent": "east",
+      "startYear": -300,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "west",
+      "label": "西方文明",
+      "color": "#c084fc",
+      "order": 20,
+      "parent": "cross",
+      "startYear": -3500,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "civilization"
+    },
+    {
+      "id": "greece",
+      "label": "希臘羅馬",
+      "color": "#c4b5fd",
+      "order": 21,
+      "parent": "west",
+      "startYear": -1600,
+      "endYear": 476,
+      "zoomMin": 0.58,
+      "group": "civilization"
+    },
+    {
+      "id": "europe",
+      "label": "歐洲",
+      "color": "#a5b4fc",
+      "order": 22,
+      "parent": "west",
+      "startYear": 500,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "americas",
+      "label": "美洲",
+      "color": "#93c5fd",
+      "order": 23,
+      "parent": "west",
+      "startYear": 1492,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    }
+  ],
   "era_bands": [
     {
       "id": "cosmos",
@@ -2317,7 +2583,7 @@
     },
     {
       "id": "cosmic-inflation",
-      "year": -13799800000000,
+      "year": -13799900000000,
       "zh": "宇宙暴脹",
       "en": "Cosmic Inflation",
       "axis": "cosmos",
