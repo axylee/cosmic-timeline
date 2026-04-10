@@ -7,8 +7,8 @@
   :root {
     --bg:#05080f; --surface:#0c1020; --border:rgba(255,255,255,0.08);
     --text:#ddd8c8; --muted:rgba(221,216,200,0.45); --accent:#60a5fa;
-    --green:#34d399; --red:#f87171; --yellow:#fbbf24; --orange:#fb923c;
-    --purple:#a78bfa; --pink:#f0abfc;
+    --green:#34d399; --red:#f87171; --yellow:#fbbf24;
+    --purple:#a78bfa; --cyan:#67e8f9;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans',sans-serif;font-size:13px;min-height:100vh;padding:32px 24px}
@@ -31,6 +31,8 @@
   .btn-warn:hover{background:rgba(251,191,36,0.28)}
   .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
   .btn-ghost:hover{color:var(--text);border-color:rgba(255,255,255,0.2)}
+  .btn-skip{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border);font-size:12px;padding:7px 14px}
+  .btn-skip:hover{color:var(--text)}
 
   .progress-wrap{margin:14px 0}
   .progress-bar-bg{background:rgba(255,255,255,0.06);border-radius:4px;height:6px;overflow:hidden}
@@ -42,65 +44,113 @@
   .stat-num{font-size:22px;font-weight:300}
   .stat-label{font-size:9px;color:var(--muted);margin-top:2px;white-space:nowrap}
 
-  #log{height:260px;overflow-y:auto;padding:12px;background:rgba(0,0,0,0.3);border-radius:8px;font-family:'Courier New',monospace;font-size:11px;line-height:1.7}
-  .log-ok    {color:var(--green)}
-  .log-nasa  {color:#67e8f9}
-  .log-wikidata{color:var(--purple)}
-  .log-orig  {color:#86efac}
-  .log-fail  {color:var(--red)}
-  .log-info  {color:var(--muted)}
-  .log-warn  {color:var(--yellow)}
+  #log{height:200px;overflow-y:auto;padding:12px;background:rgba(0,0,0,0.3);border-radius:8px;font-family:'Courier New',monospace;font-size:11px;line-height:1.7}
+  .log-ok{color:var(--green)} .log-auto{color:#86efac}
+  .log-fail{color:var(--red)} .log-info{color:var(--muted)} .log-warn{color:var(--yellow)}
 
-  /* Source legend */
-  .source-legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;font-size:11px}
-  .sl-item{display:flex;align-items:center;gap:5px}
-  .sl-dot{width:8px;height:8px;border-radius:50%}
-
-  /* Source strategy table */
-  .strategy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin-top:10px}
-  .strat-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:10px 12px}
-  .strat-cat{font-size:11px;color:var(--text);font-weight:500;margin-bottom:4px}
-  .strat-order{font-size:10px;color:var(--muted);line-height:1.6}
-
-  /* Result table */
-  #result-table{width:100%;border-collapse:collapse;font-size:12px}
-  #result-table th{text-align:left;padding:8px 10px;color:var(--muted);font-weight:400;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--border)}
-  #result-table td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
-  #result-table img{width:48px;height:32px;object-fit:cover;border-radius:4px}
   .badge{display:inline-block;padding:2px 7px;border-radius:8px;font-size:10px}
-  .badge-ok    {background:rgba(52,211,153,0.15);color:var(--green)}
-  .badge-nasa  {background:rgba(103,232,249,0.12);color:#67e8f9}
-  .badge-wd    {background:rgba(167,139,250,0.12);color:var(--purple)}
-  .badge-orig  {background:rgba(134,239,172,0.10);color:#86efac}
-  .badge-fail  {background:rgba(248,113,113,0.15);color:var(--red)}
-  .badge-skip  {background:rgba(255,255,255,0.06);color:var(--muted)}
+  .badge-ok{background:rgba(52,211,153,0.15);color:var(--green)}
+  .badge-skip{background:rgba(255,255,255,0.06);color:var(--muted)}
+  .badge-fail{background:rgba(248,113,113,0.15);color:var(--red)}
+  .badge-manual{background:rgba(96,165,250,0.15);color:var(--accent)}
 
-  /* Missing list */
-  #missing-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;margin-top:12px;max-height:400px;overflow-y:auto}
+  /* ── PICKER overlay ── */
+  #picker-overlay{
+    position:fixed;inset:0;z-index:999;
+    background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  #picker-overlay.hide{display:none}
+  #picker-box{
+    background:#0c1020;border:1px solid rgba(255,255,255,0.12);
+    border-radius:16px;padding:24px;max-width:960px;width:100%;
+    max-height:90vh;overflow-y:auto;
+  }
+  #picker-title{font-size:16px;font-weight:500;color:#fff;margin-bottom:4px}
+  #picker-meta{font-size:11px;color:var(--muted);margin-bottom:16px}
+  #picker-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:12px;margin-bottom:20px;
+  }
+  .pick-item{
+    border:2px solid rgba(255,255,255,0.08);border-radius:10px;
+    overflow:hidden;cursor:pointer;transition:all .15s;
+    background:rgba(255,255,255,0.03);
+  }
+  .pick-item:hover{border-color:var(--accent);transform:scale(1.02)}
+  .pick-item.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+  .pick-item img{width:100%;height:130px;object-fit:cover;display:block;background:#070b18}
+  .pick-item .pick-label{
+    padding:7px 10px;font-size:10px;
+    border-top:1px solid rgba(255,255,255,0.06);
+  }
+  .pick-source{color:var(--muted)}
+  .pick-item.pick-none{border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;height:172px;gap:6px;color:var(--muted);font-size:12px}
+  .pick-item.pick-none:hover{border-color:var(--red);color:var(--red)}
+  /* custom URL row */
+  #picker-custom{display:flex;gap:8px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+  #picker-custom input{flex:1;min-width:200px}
+  #picker-custom-preview{width:60px;height:40px;object-fit:cover;border-radius:6px;display:none;border:1px solid rgba(255,255,255,0.1)}
+  #picker-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+  /* missing list */
+  #missing-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;margin-top:12px;max-height:360px;overflow-y:auto}
   .missing-item{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;gap:10px}
   .missing-item-left{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
   .missing-zh{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .missing-axis{font-size:10px;color:var(--muted)}
   .missing-links{display:flex;gap:5px;flex-shrink:0}
-  .wiki-btn{padding:4px 9px;border-radius:6px;font-size:10px;font-family:inherit;cursor:pointer;text-decoration:none;white-space:nowrap;border:1px solid;transition:all .12s}
+  .wiki-btn{padding:4px 9px;border-radius:6px;font-size:10px;cursor:pointer;text-decoration:none;white-space:nowrap;border:1px solid;transition:all .12s}
   .wiki-btn.zh{border-color:rgba(252,165,165,0.35);color:#fca5a5;background:transparent}
   .wiki-btn.zh:hover{background:rgba(252,165,165,0.12)}
   .wiki-btn.en{border-color:rgba(147,197,253,0.35);color:#93c5fd;background:transparent}
   .wiki-btn.en:hover{background:rgba(147,197,253,0.12)}
 
+  /* result table */
+  #result-table{width:100%;border-collapse:collapse;font-size:12px}
+  #result-table th{text-align:left;padding:7px 10px;color:var(--muted);font-weight:400;font-size:10px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border)}
+  #result-table td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+  #result-table img{width:48px;height:32px;object-fit:cover;border-radius:4px}
+
   #drop-zone{border:2px dashed rgba(255,255,255,0.12);border-radius:10px;padding:28px;text-align:center;color:var(--muted);cursor:pointer;transition:all .2s;margin-bottom:14px}
   #drop-zone:hover,#drop-zone.drag-over{border-color:var(--accent);color:var(--accent);background:rgba(96,165,250,0.05)}
   #drop-zone input{display:none}
-  .spacer{height:8px}
-  .hide{display:none!important}
-  .source-tag{font-size:9px;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:middle}
+  .spacer{height:8px} .hide{display:none!important}
 </style>
 </head>
 <body>
-<h1>🌌 Cosmic Timeline — 圖片更新工具</h1>
-<p class="subtitle">多來源自動抓取 · 依事件分類智慧選擇最佳圖片來源</p>
 
-<!-- Load -->
+<!-- ══ PICKER OVERLAY ══ -->
+<div id="picker-overlay" class="hide">
+  <div id="picker-box">
+    <div id="picker-title"></div>
+    <div id="picker-meta"></div>
+
+    <!-- Candidate images grid -->
+    <div id="picker-grid"></div>
+
+    <!-- Custom URL input -->
+    <div style="font-size:11px;color:var(--muted);margin-bottom:8px">或輸入自訂圖片 URL：</div>
+    <div id="picker-custom">
+      <input type="text" id="picker-url-input" placeholder="https://upload.wikimedia.org/...">
+      <button class="btn-ghost" onclick="previewCustom()">預覽</button>
+      <img id="picker-custom-preview">
+    </div>
+
+    <div id="picker-actions">
+      <button class="btn-success" id="picker-confirm" onclick="pickerConfirm()">✓ 使用選取的圖片</button>
+      <button class="btn-skip" onclick="pickerSkip()">略過此事件</button>
+      <button class="btn-ghost" onclick="pickerKeep()">保留原有圖片</button>
+      <span id="picker-status" style="font-size:11px;color:var(--muted)"></span>
+    </div>
+  </div>
+</div>
+
+<h1>🌌 Cosmic Timeline — 圖片更新工具</h1>
+<p class="subtitle">多來源抓取 · 自動選取或手動挑選最佳圖片</p>
+
+<!-- Step 1: Load -->
 <div class="card">
   <div class="card-title">步驟 1 — 載入 events.json</div>
   <div id="drop-zone" onclick="document.getElementById('file-input').click()">
@@ -118,19 +168,6 @@
   <div id="load-status" class="log-info"></div>
 </div>
 
-<!-- Source strategy info -->
-<div class="card hide" id="step-strategy">
-  <div class="card-title">📡 圖片來源策略（依分類自動選擇）</div>
-  <div class="source-legend">
-    <div class="sl-item"><div class="sl-dot" style="background:#67e8f9"></div>NASA Images API</div>
-    <div class="sl-item"><div class="sl-dot" style="background:var(--purple)"></div>Wikidata P18</div>
-    <div class="sl-item"><div class="sl-dot" style="background:var(--green)"></div>Wikipedia pageimages</div>
-    <div class="sl-item"><div class="sl-dot" style="background:#86efac"></div>Wikipedia original</div>
-    <div class="sl-item"><div class="sl-dot" style="background:var(--red)"></div>失敗</div>
-  </div>
-  <div class="strategy-grid" id="strategy-grid"></div>
-</div>
-
 <!-- Missing events -->
 <div class="card hide" id="step-missing">
   <div class="card-title">🔍 缺少圖片的事件</div>
@@ -143,31 +180,31 @@
   <div id="missing-list"></div>
 </div>
 
-<!-- Run -->
+<!-- Step 2: Run -->
 <div class="card hide" id="step-run">
   <div class="card-title">步驟 2 — 批量抓取圖片</div>
   <div class="stats">
     <div class="stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">總事件</div></div>
-    <div class="stat"><div class="stat-num" style="color:#67e8f9" id="stat-nasa">0</div><div class="stat-label">NASA ✓</div></div>
-    <div class="stat"><div class="stat-num" style="color:var(--purple)" id="stat-wd">0</div><div class="stat-label">Wikidata ✓</div></div>
-    <div class="stat"><div class="stat-num green" id="stat-wiki">0</div><div class="stat-label">Wiki API ✓</div></div>
-    <div class="stat"><div class="stat-num" style="color:#86efac" id="stat-orig">0</div><div class="stat-label">Original ✓</div></div>
-    <div class="stat"><div class="stat-num red" id="stat-fail">0</div><div class="stat-label">失敗</div></div>
-    <div class="stat"><div class="stat-num yellow" id="stat-skip">0</div><div class="stat-label">略過</div></div>
+    <div class="stat"><div class="stat-num green" id="stat-ok">0</div><div class="stat-label">自動 ✓</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--accent)" id="stat-manual">0</div><div class="stat-label">手選 ✓</div></div>
+    <div class="stat"><div class="stat-num red" id="stat-fail">0</div><div class="stat-label">失敗/略過</div></div>
+    <div class="stat"><div class="stat-num yellow" id="stat-skip">0</div><div class="stat-label">有圖略過</div></div>
   </div>
+
   <div class="row" style="margin-bottom:10px">
     <button class="btn-primary" id="btn-run" onclick="runUpdate()">▶ 開始更新圖片</button>
     <button class="btn-ghost" id="btn-stop" onclick="stopUpdate()" style="display:none">⬛ 停止</button>
     <label style="margin:0;display:flex;align-items:center;gap:6px;cursor:pointer">
-      <input type="checkbox" id="chk-overwrite"> 覆蓋已有的圖片
+      <input type="checkbox" id="chk-overwrite"> 覆蓋已有的圖片（未勾選時有圖片的事件直接略過）
     </label>
     <label style="margin:0;display:flex;align-items:center;gap:6px;cursor:pointer">
       <input type="checkbox" id="chk-zh" checked> 優先中文 Wikipedia
     </label>
   </div>
-  <div style="font-size:11px;color:var(--muted);margin-bottom:10px">
-    ⚠ 不勾「覆蓋已有的圖片」時，有圖片的事件直接略過，不會被修改。
+  <div style="font-size:11px;color:var(--muted);margin-bottom:12px;line-height:1.6">
+    📌 <strong style="color:var(--text)">覆蓋模式</strong>：所有來源同時抓取，若取得多張候選圖片則<strong style="color:var(--accent)">暫停讓你選擇</strong>，只有一張時自動套用。
   </div>
+
   <div class="progress-wrap" id="progress-wrap" style="display:none">
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
     <div class="progress-text" id="progress-text"></div>
@@ -175,7 +212,7 @@
   <div id="log"></div>
 </div>
 
-<!-- Download -->
+<!-- Step 3: Download -->
 <div class="card hide" id="step-download">
   <div class="card-title">步驟 3 — 下載更新後的 JSON</div>
   <div class="row">
@@ -185,7 +222,7 @@
   <div class="spacer"></div>
   <div id="result-wrap" style="display:none;overflow-x:auto">
     <table id="result-table">
-      <thead><tr><th>事件</th><th>分類</th><th>來源</th><th>狀態</th><th>預覽</th><th>URL</th></tr></thead>
+      <thead><tr><th>事件</th><th>狀態</th><th>預覽</th><th>URL</th></tr></thead>
       <tbody id="result-body"></tbody>
     </table>
   </div>
@@ -193,405 +230,344 @@
 
 <script>
 let eventsData = null, results = [], shouldStop = false;
+let statOk=0, statManual=0, statFail=0, statSkip=0;
 
-// ══════════════════════════════════════════════
-//  SOURCE STRATEGY — per category
-// ══════════════════════════════════════════════
-// Priority order per category: list of source names to try in order
-const SOURCE_STRATEGY = {
-  astronomy:    ['nasa', 'wikidata', 'wiki-thumb', 'wiki-orig'],
-  geology:      ['nasa', 'wikidata', 'wiki-thumb', 'wiki-orig'],
-  biology:      ['wikidata', 'wiki-thumb', 'wiki-orig', 'nasa'],
-  science:      ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  civilization: ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  politics:     ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  war:          ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  religion:     ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  philosophy:   ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  culture:      ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  exploration:  ['nasa', 'wikidata', 'wiki-thumb', 'wiki-orig'],
-  medicine:     ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  math:         ['wikidata', 'wiki-thumb', 'wiki-orig'],
-  _default:     ['wikidata', 'wiki-thumb', 'wiki-orig'],
-};
-
-// Human-readable strategy labels
-const STRATEGY_LABELS = {
-  'nasa':       { label:'NASA',        color:'#67e8f9' },
-  'wikidata':   { label:'Wikidata P18',color:'#a78bfa' },
-  'wiki-thumb': { label:'Wiki 縮圖',   color:'#34d399' },
-  'wiki-orig':  { label:'Wiki 原圖',   color:'#86efac' },
-};
-
-function buildStrategyGrid() {
-  const grid = document.getElementById('strategy-grid');
-  const cats = Object.keys(SOURCE_STRATEGY).filter(k => k !== '_default');
-  grid.innerHTML = '';
-  cats.forEach(cat => {
-    const order = SOURCE_STRATEGY[cat];
-    const el = document.createElement('div');
-    el.className = 'strat-item';
-    const dots = order.map(s => {
-      const info = STRATEGY_LABELS[s] || { label: s, color: '#fff' };
-      return `<span style="color:${info.color}">●</span> ${info.label}`;
-    }).join(' → ');
-    el.innerHTML = `<div class="strat-cat">${cat}</div><div class="strat-order">${dots}</div>`;
-    grid.appendChild(el);
-  });
-}
-
-// ══════════════════════════════════════════════
-//  FILE LOADING
-// ══════════════════════════════════════════════
+// ══ FILE LOADING ══
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
-dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
-dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
-dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('drag-over'); const f = e.dataTransfer.files[0]; if(f) readFile(f); });
-fileInput.addEventListener('change', e => { if(e.target.files[0]) readFile(e.target.files[0]); });
+dropZone.addEventListener('dragover', e=>{e.preventDefault();dropZone.classList.add('drag-over')});
+dropZone.addEventListener('dragleave', ()=>dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e=>{e.preventDefault();dropZone.classList.remove('drag-over');const f=e.dataTransfer.files[0];if(f)readFile(f)});
+fileInput.addEventListener('change', e=>{if(e.target.files[0])readFile(e.target.files[0])});
 
 function readFile(file) {
   const r = new FileReader();
   r.onload = e => {
-    try { eventsData = JSON.parse(e.target.result); onLoaded(file.name); }
-    catch(err) { document.getElementById('load-status').textContent = '✗ 解析失敗: ' + err.message; }
+    try { eventsData=JSON.parse(e.target.result); onLoaded(file.name); }
+    catch(err) { document.getElementById('load-status').textContent='✗ 解析失敗: '+err.message; }
   };
   r.readAsText(file);
 }
-
 async function loadFromUrl() {
   const url = document.getElementById('url-input').value.trim();
   document.getElementById('load-status').textContent = '載入中...';
-  try {
-    const res = await fetch(url);
-    eventsData = await res.json();
-    onLoaded(url.split('/').pop());
-  } catch(err) {
-    document.getElementById('load-status').textContent = '✗ 載入失敗: ' + err.message;
-  }
+  try { const r=await fetch(url); eventsData=await r.json(); onLoaded(url.split('/').pop()); }
+  catch(e) { document.getElementById('load-status').textContent='✗ 載入失敗: '+e.message; }
 }
-
 function onLoaded(name) {
-  const n = eventsData.events.length;
-  const noImg = eventsData.events.filter(e => !e.image).length;
-  document.getElementById('load-status').innerHTML =
-    `<span style="color:var(--green)">✓ 載入成功：${name}，共 ${n} 個事件</span>` +
-    (noImg ? `<span style="color:var(--yellow);margin-left:14px">⚠ ${noImg} 個缺少圖片</span>`
-           : `<span style="color:var(--green);margin-left:14px">✓ 所有事件都有圖片</span>`);
-  document.getElementById('stat-total').textContent = n;
-  buildStrategyGrid();
-  ['step-strategy','step-missing','step-run'].forEach(id =>
-    document.getElementById(id).classList.remove('hide'));
+  const n=eventsData.events.length, noImg=eventsData.events.filter(e=>!e.image).length;
+  document.getElementById('load-status').innerHTML=
+    `<span style="color:var(--green)">✓ 載入成功：${name}，共 ${n} 個事件</span>`+
+    (noImg?`<span style="color:var(--yellow);margin-left:14px">⚠ ${noImg} 個缺少圖片</span>`:'');
+  document.getElementById('stat-total').textContent=n;
+  ['step-missing','step-run'].forEach(id=>document.getElementById(id).classList.remove('hide'));
 }
 
-// ══════════════════════════════════════════════
-//  MISSING LIST
-// ══════════════════════════════════════════════
-function formatYear(y) {
-  if (!y && y !== 0) return '';
-  return y > 0 ? `西元 ${y} 年` : `${Math.abs(y).toLocaleString()} 年前`;
-}
-
+// ══ MISSING LIST ══
+function formatYear(y){return y>0?`西元 ${y} 年`:`${Math.abs(y).toLocaleString()} 年前`}
 function showMissing() {
-  const missing = eventsData.events.filter(e => !e.image);
-  const countEl = document.getElementById('missing-count');
-  const listEl  = document.getElementById('missing-list');
-  countEl.textContent = missing.length > 0 ? `共 ${missing.length} 個缺圖` : '✓ 全部有圖';
-  if (!missing.length) { listEl.innerHTML = '<p style="color:var(--green);padding:10px 0">🎉 所有事件都有圖片！</p>'; return; }
-  listEl.innerHTML = '';
-  missing.forEach(ev => {
-    const item = document.createElement('div');
-    item.className = 'missing-item';
-    item.innerHTML = `
-      <div class="missing-item-left">
-        <span class="missing-zh">${ev.zh}</span>
-        <span class="missing-axis">${ev.axis} · ${ev.category||''} · ${formatYear(ev.year)}</span>
-      </div>
-      <div class="missing-links">
-        ${ev.wiki_zh ? `<a class="wiki-btn zh" href="${ev.wiki_zh}" target="_blank" rel="noopener">中文</a>` : ''}
-        ${ev.wiki_en ? `<a class="wiki-btn en" href="${ev.wiki_en}" target="_blank" rel="noopener">EN</a>` : ''}
-        ${!ev.wiki_zh && !ev.wiki_en ? '<span style="font-size:10px;color:var(--red)">無連結</span>' : ''}
-      </div>`;
+  const missing=eventsData.events.filter(e=>!e.image);
+  document.getElementById('missing-count').textContent=missing.length?`共 ${missing.length} 個缺圖`:'✓ 全部有圖';
+  const listEl=document.getElementById('missing-list');
+  if(!missing.length){listEl.innerHTML='<p style="color:var(--green);padding:10px 0">🎉 所有事件都有圖片！</p>';return}
+  listEl.innerHTML='';
+  missing.forEach(ev=>{
+    const item=document.createElement('div'); item.className='missing-item';
+    item.innerHTML=`<div class="missing-item-left"><span class="missing-zh">${ev.zh}</span><span class="missing-axis">${ev.axis} · ${formatYear(ev.year)}</span></div>
+    <div class="missing-links">
+      ${ev.wiki_zh?`<a class="wiki-btn zh" href="${ev.wiki_zh}" target="_blank" rel="noopener">中文</a>`:''}
+      ${ev.wiki_en?`<a class="wiki-btn en" href="${ev.wiki_en}" target="_blank" rel="noopener">EN</a>`:''}
+      ${!ev.wiki_zh&&!ev.wiki_en?'<span style="font-size:10px;color:var(--red)">無連結</span>':''}
+    </div>`;
     listEl.appendChild(item);
   });
 }
 
-// ══════════════════════════════════════════════
-//  IMAGE SOURCES
-// ══════════════════════════════════════════════
-
-// Helper: extract lang + title from Wikipedia URL
-function parseWikiUrl(url) {
-  if (!url?.includes('wikipedia.org/wiki/')) return null;
-  const lang  = url.split('//')[1].split('.wikipedia')[0];
-  const title = decodeURIComponent(url.split('/wiki/')[1].split('#')[0]);
-  return { lang, title };
+// ══ IMAGE SOURCES ══
+function parseWiki(url) {
+  if(!url?.includes('wikipedia.org/wiki/')) return null;
+  return { lang:url.split('//')[1].split('.wikipedia')[0], title:decodeURIComponent(url.split('/wiki/')[1].split('#')[0]) };
 }
 
-// Source 1: NASA Images API
-async function fetchNasa(ev) {
-  const query = ev.en || ev.zh;
-  if (!query) return null;
+async function fetchNasaCandidates(ev, n=5) {
   try {
-    const url = `https://images-api.nasa.gov/search?q=${encodeURIComponent(query)}&media_type=image&page_size=5`;
-    const res  = await fetch(url);
-    const data = await res.json();
-    const items = data.collection?.items;
-    if (!items?.length) return null;
-    // Pick first item with a preview image
-    for (const item of items) {
-      const link = item.links?.find(l => l.rel === 'preview');
-      // Get the full-size version by replacing thumb with large
-      if (link?.href) {
-        const large = link.href.replace('~thumb.jpg','~orig.jpg').replace('~small.jpg','~large.jpg');
-        return large;
-      }
-    }
-  } catch(e) {}
-  return null;
+    const q=encodeURIComponent(ev.en||ev.zh);
+    const r=await fetch(`https://images-api.nasa.gov/search?q=${q}&media_type=image&page_size=${n}`);
+    const d=await r.json();
+    return (d.collection?.items||[]).slice(0,n).flatMap(item=>{
+      const link=item.links?.find(l=>l.rel==='preview');
+      if(!link?.href) return [];
+      const large=link.href.replace('~thumb.jpg','~orig.jpg').replace('~small.jpg','~large.jpg');
+      return [{url:large, label:item.data?.[0]?.title||'NASA', source:'NASA'}];
+    });
+  } catch(e){ return []; }
 }
 
-// Source 2: Wikidata P18 (image property)
 async function fetchWikidata(ev) {
-  const wikiUrl = ev.wiki_en || ev.wiki_zh;
-  if (!wikiUrl) return null;
-  const parsed = parseWikiUrl(wikiUrl);
-  if (!parsed) return null;
+  const wikiUrl=ev.wiki_en||ev.wiki_zh; if(!wikiUrl) return null;
+  const w=parseWiki(wikiUrl); if(!w) return null;
   try {
-    const lang = parsed.lang === 'zh' ? 'zhwiki' : 'enwiki';
-    const params = new URLSearchParams({
-      action: 'wbgetentities', sites: lang, titles: parsed.title,
-      props: 'claims', format: 'json', origin: '*'
-    });
-    const res  = await fetch(`https://www.wikidata.org/w/api.php?${params}`);
-    const data = await res.json();
-    const entities = data.entities || {};
-    for (const entity of Object.values(entities)) {
-      const p18 = entity.claims?.P18;
-      if (p18?.[0]) {
-        const filename = p18[0].mainsnak?.datavalue?.value;
-        if (filename) {
-          // Convert filename to Wikimedia Commons URL
-          const encoded = encodeURIComponent(filename.replace(/ /g,'_'));
-          // Get actual URL via imageinfo API
-          const p = new URLSearchParams({
-            action:'query', titles:`File:${filename}`, prop:'imageinfo',
-            iiprop:'url', iiurlwidth:'1200', format:'json', origin:'*'
-          });
-          const r2   = await fetch(`https://commons.wikimedia.org/w/api.php?${p}`);
-          const d2   = await r2.json();
-          for (const page of Object.values(d2.query?.pages || {})) {
-            const url = page.imageinfo?.[0]?.thumburl || page.imageinfo?.[0]?.url;
-            if (url) return url;
-          }
+    const lang=w.lang==='zh'?'zhwiki':'enwiki';
+    const p=new URLSearchParams({action:'wbgetentities',sites:lang,titles:w.title,props:'claims',format:'json',origin:'*'});
+    const d=await (await fetch(`https://www.wikidata.org/w/api.php?${p}`)).json();
+    for(const ent of Object.values(d.entities||{})){
+      const fn=ent.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
+      if(fn){
+        const p2=new URLSearchParams({action:'query',titles:`File:${fn}`,prop:'imageinfo',iiprop:'url',iiurlwidth:'1200',format:'json',origin:'*'});
+        const d2=await (await fetch(`https://commons.wikimedia.org/w/api.php?${p2}`)).json();
+        for(const pg of Object.values(d2.query?.pages||{})){
+          const u=pg.imageinfo?.[0]?.thumburl||pg.imageinfo?.[0]?.url;
+          if(u) return {url:u,label:'Wikidata P18',source:'Wikidata'};
         }
       }
     }
-  } catch(e) {}
+  } catch(e){}
   return null;
 }
 
-// Source 3: Wikipedia pageimages thumb (1200px)
-async function fetchWikiThumb(wikiUrl) {
-  const parsed = parseWikiUrl(wikiUrl);
-  if (!parsed) return null;
+async function fetchWikiThumb(wikiUrl, size=1200) {
+  const w=parseWiki(wikiUrl); if(!w) return null;
   try {
-    const p = new URLSearchParams({
-      action:'query', titles:parsed.title, prop:'pageimages',
-      pithumbsize:'1200', format:'json', redirects:'1', origin:'*'
-    });
-    const res  = await fetch(`https://${parsed.lang}.wikipedia.org/w/api.php?${p}`);
-    const data = await res.json();
-    for (const page of Object.values(data.query?.pages || {})) {
-      if (page.thumbnail?.source) return page.thumbnail.source;
-    }
-  } catch(e) {}
+    const p=new URLSearchParams({action:'query',titles:w.title,prop:'pageimages',pithumbsize:String(size),format:'json',redirects:'1',origin:'*'});
+    const d=await (await fetch(`https://${w.lang}.wikipedia.org/w/api.php?${p}`)).json();
+    for(const pg of Object.values(d.query?.pages||{})) if(pg.thumbnail?.source) return pg.thumbnail.source;
+  } catch(e){}
   return null;
 }
 
-// Source 4: Wikipedia pageimages original
 async function fetchWikiOrig(wikiUrl) {
-  const parsed = parseWikiUrl(wikiUrl);
-  if (!parsed) return null;
+  const w=parseWiki(wikiUrl); if(!w) return null;
   try {
-    const p = new URLSearchParams({
-      action:'query', titles:parsed.title, prop:'pageimages',
-      piprop:'original', format:'json', redirects:'1', origin:'*'
-    });
-    const res  = await fetch(`https://${parsed.lang}.wikipedia.org/w/api.php?${p}`);
-    const data = await res.json();
-    for (const page of Object.values(data.query?.pages || {})) {
-      if (page.original?.source) return page.original.source;
+    const p=new URLSearchParams({action:'query',titles:w.title,prop:'pageimages',piprop:'original',format:'json',redirects:'1',origin:'*'});
+    const d=await (await fetch(`https://${w.lang}.wikipedia.org/w/api.php?${p}`)).json();
+    for(const pg of Object.values(d.query?.pages||{})) if(pg.original?.source) return pg.original.source;
+  } catch(e){}
+  return null;
+}
+
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+
+// Fetch ALL candidates from all sources simultaneously
+async function fetchAllCandidates(ev, zhFirst) {
+  const wikiUrls=(zhFirst?[ev.wiki_zh,ev.wiki_en]:[ev.wiki_en,ev.wiki_zh]).filter(Boolean);
+  const candidates=[];
+  const seen=new Set();
+  const add=(c)=>{ if(c?.url && !seen.has(c.url)){seen.add(c.url);candidates.push(c);} };
+
+  const isNaturalSci=['astronomy','geology','biology'].includes(ev.category);
+
+  // Run all in parallel
+  const tasks=[];
+  if(isNaturalSci) tasks.push(fetchNasaCandidates(ev,4).then(arr=>arr.forEach(add)));
+  tasks.push(fetchWikidata(ev).then(r=>add(r)));
+  tasks.push(...wikiUrls.map(u=>fetchWikiThumb(u).then(url=>add(url?{url,label:'Wiki 縮圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Thumb'}:null))));
+  tasks.push(...wikiUrls.map(u=>fetchWikiOrig(u).then(url=>add(url?{url,label:'Wiki 原圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null))));
+
+  await Promise.allSettled(tasks);
+  return candidates;
+}
+
+// ══ PICKER ══
+let _pickerResolve=null;
+let _selectedPickerUrl=null;
+
+function showPicker(ev, candidates) {
+  return new Promise(resolve=>{
+    _pickerResolve=resolve;
+    _selectedPickerUrl=null;
+
+    document.getElementById('picker-title').textContent=ev.zh+(ev.en?' — '+ev.en:'');
+    document.getElementById('picker-meta').textContent=
+      `${ev.axis} · ${formatYear(ev.year)} · 共找到 ${candidates.length} 張候選圖片`;
+    document.getElementById('picker-url-input').value='';
+    document.getElementById('picker-custom-preview').style.display='none';
+    document.getElementById('picker-status').textContent='';
+
+    const grid=document.getElementById('picker-grid');
+    grid.innerHTML='';
+
+    // Current image if any
+    if(ev.image){
+      const cur=document.createElement('div'); cur.className='pick-item';
+      cur.innerHTML=`<img src="${ev.image}" onerror="this.src='data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\'/>'" style="height:130px;object-fit:cover;width:100%">
+        <div class="pick-label"><span style="color:var(--yellow)">★ 現有圖片</span><br><span class="pick-source">保留原本</span></div>`;
+      cur.addEventListener('click',()=>selectPickerItem(cur,ev.image));
+      grid.appendChild(cur);
     }
-  } catch(e) {}
-  return null;
+
+    candidates.forEach(c=>{
+      const item=document.createElement('div'); item.className='pick-item';
+      item.dataset.url=c.url;
+      item.innerHTML=`<img src="${c.url}" onerror="this.parentElement.style.display='none'" style="height:130px;object-fit:cover;width:100%">
+        <div class="pick-label"><span style="color:var(--text)">${c.label||c.source}</span><br>
+        <span class="pick-source">${c.source}</span></div>`;
+      item.addEventListener('click',()=>selectPickerItem(item,c.url));
+      grid.appendChild(item);
+    });
+
+    // "None" option
+    const none=document.createElement('div'); none.className='pick-item pick-none';
+    none.innerHTML='<span style="font-size:20px">🚫</span><span>略過 / 不設圖片</span>';
+    none.addEventListener('click',()=>{selectPickerItem(none,null);document.getElementById('picker-confirm').textContent='✓ 確認略過';});
+    grid.appendChild(none);
+
+    document.getElementById('picker-overlay').classList.remove('hide');
+    document.getElementById('picker-confirm').textContent='✓ 使用選取的圖片';
+  });
 }
 
-const delay = ms => new Promise(r => setTimeout(r, ms));
-
-// Master fetch: try sources in strategy order
-async function fetchBest(ev, zhFirst) {
-  const cat      = ev.category || '_default';
-  const strategy = SOURCE_STRATEGY[cat] || SOURCE_STRATEGY._default;
-  const wikiUrls = zhFirst
-    ? [ev.wiki_zh, ev.wiki_en].filter(Boolean)
-    : [ev.wiki_en, ev.wiki_zh].filter(Boolean);
-
-  for (const source of strategy) {
-    let url = null;
-    try {
-      if (source === 'nasa') {
-        url = await fetchNasa(ev);
-      } else if (source === 'wikidata') {
-        url = await fetchWikidata(ev);
-      } else if (source === 'wiki-thumb') {
-        for (const w of wikiUrls) {
-          url = await fetchWikiThumb(w);
-          if (url) break;
-          await delay(60);
-        }
-      } else if (source === 'wiki-orig') {
-        for (const w of wikiUrls) {
-          url = await fetchWikiOrig(w);
-          if (url) break;
-          await delay(60);
-        }
-      }
-    } catch(e) {}
-
-    if (url) return { url, source };
-    await delay(80);
+function selectPickerItem(el, url) {
+  document.querySelectorAll('.pick-item').forEach(i=>i.classList.remove('selected'));
+  el.classList.add('selected');
+  _selectedPickerUrl=url;
+  document.getElementById('picker-status').textContent=url?'已選取':'已選擇略過';
+  // Also clear custom input if clicking grid
+  if(!el.closest('#picker-custom')){
+    document.getElementById('picker-url-input').value='';
+    document.getElementById('picker-custom-preview').style.display='none';
   }
-  return null;
 }
 
-// ══════════════════════════════════════════════
-//  RUN UPDATE
-// ══════════════════════════════════════════════
-let statNasa=0, statWd=0, statWiki=0, statOrig=0, statFail=0, statSkip=0;
-
-const SOURCE_STAT = {
-  'nasa':       () => { statNasa++; document.getElementById('stat-nasa').textContent = statNasa; },
-  'wikidata':   () => { statWd++;   document.getElementById('stat-wd').textContent   = statWd;   },
-  'wiki-thumb': () => { statWiki++; document.getElementById('stat-wiki').textContent = statWiki; },
-  'wiki-orig':  () => { statOrig++; document.getElementById('stat-orig').textContent = statOrig; },
-};
-const SOURCE_COLOR = {
-  'nasa':'#67e8f9','wikidata':'#a78bfa','wiki-thumb':'#34d399','wiki-orig':'#86efac'
-};
-const SOURCE_ZH = {
-  'nasa':'NASA','wikidata':'Wikidata','wiki-thumb':'Wiki縮圖','wiki-orig':'Wiki原圖'
-};
-
-function log(msg, cls='log-info') {
-  const el = document.getElementById('log');
-  el.innerHTML += `<div class="${cls}">${msg}</div>`;
-  el.scrollTop = el.scrollHeight;
+function previewCustom() {
+  const url=document.getElementById('picker-url-input').value.trim();
+  const img=document.getElementById('picker-custom-preview');
+  if(!url){img.style.display='none';return;}
+  img.src=url; img.style.display='block';
+  _selectedPickerUrl=url;
+  document.querySelectorAll('.pick-item').forEach(i=>i.classList.remove('selected'));
 }
 
+function pickerConfirm() {
+  document.getElementById('picker-overlay').classList.add('hide');
+  // Check custom input first
+  const customUrl=document.getElementById('picker-url-input').value.trim();
+  if(customUrl) _selectedPickerUrl=customUrl;
+  if(_pickerResolve) _pickerResolve({action:'set', url:_selectedPickerUrl});
+  _pickerResolve=null;
+}
+function pickerSkip() {
+  document.getElementById('picker-overlay').classList.add('hide');
+  if(_pickerResolve) _pickerResolve({action:'skip'});
+  _pickerResolve=null;
+}
+function pickerKeep() {
+  document.getElementById('picker-overlay').classList.add('hide');
+  if(_pickerResolve) _pickerResolve({action:'keep'});
+  _pickerResolve=null;
+}
+
+// ══ LOG ══
+function log(msg,cls='log-info'){
+  const el=document.getElementById('log');
+  el.innerHTML+=`<div class="${cls}">${msg}</div>`;
+  el.scrollTop=el.scrollHeight;
+}
+
+// ══ RUN UPDATE ══
 async function runUpdate() {
-  if (!eventsData) return;
-  shouldStop = false;
-  statNasa = statWd = statWiki = statOrig = statFail = statSkip = 0;
-  results = [];
-  document.getElementById('log').innerHTML = '';
-  document.getElementById('btn-run').disabled = true;
-  document.getElementById('btn-stop').style.display = '';
-  document.getElementById('progress-wrap').style.display = '';
+  if(!eventsData) return;
+  shouldStop=false; statOk=statManual=statFail=statSkip=0; results=[];
+  document.getElementById('log').innerHTML='';
+  document.getElementById('btn-run').disabled=true;
+  document.getElementById('btn-stop').style.display='';
+  document.getElementById('progress-wrap').style.display='';
   document.getElementById('step-download').classList.add('hide');
 
-  const overwrite = document.getElementById('chk-overwrite').checked;
-  const zhFirst   = document.getElementById('chk-zh').checked;
-  const evList    = eventsData.events;
+  const overwrite=document.getElementById('chk-overwrite').checked;
+  const zhFirst=document.getElementById('chk-zh').checked;
+  const evList=eventsData.events;
 
-  for (let i = 0; i < evList.length; i++) {
-    if (shouldStop) { log('— 已停止 —', 'log-warn'); break; }
-    const ev  = evList[i];
-    const pct = Math.round(i / evList.length * 100);
-    document.getElementById('progress-fill').style.width = pct + '%';
-    document.getElementById('progress-text').textContent = `${i+1} / ${evList.length}  ${ev.zh}`;
+  for(let i=0;i<evList.length;i++){
+    if(shouldStop){log('— 已停止 —','log-warn');break;}
+    const ev=evList[i];
+    const pct=Math.round(i/evList.length*100);
+    document.getElementById('progress-fill').style.width=pct+'%';
+    document.getElementById('progress-text').textContent=`${i+1} / ${evList.length}  ${ev.zh}`;
 
-    // Skip if has image and not overwriting
-    if (ev.image && !overwrite) {
-      statSkip++;
-      document.getElementById('stat-skip').textContent = statSkip;
-      results.push({ ev, status:'skip', source:'', img: ev.image });
+    // Has image + not overwriting → skip entirely
+    if(ev.image && !overwrite){
+      statSkip++; document.getElementById('stat-skip').textContent=statSkip;
+      results.push({ev,status:'skip',img:ev.image});
       continue;
     }
 
-    if (!ev.wiki_zh && !ev.wiki_en && (ev.category !== 'astronomy' && ev.category !== 'geology')) {
-      statFail++;
-      document.getElementById('stat-fail').textContent = statFail;
-      log(`✗ ${ev.zh}（無 Wikipedia 連結）`, 'log-fail');
-      results.push({ ev, status:'fail', source:'', img:null });
+    if(!ev.wiki_zh && !ev.wiki_en && ev.category!=='astronomy' && ev.category!=='geology'){
+      statFail++; document.getElementById('stat-fail').textContent=statFail;
+      log(`✗ ${ev.zh}（無來源連結）`,'log-fail');
+      results.push({ev,status:'fail',img:null});
       continue;
     }
 
-    const result = await fetchBest(ev, zhFirst);
+    log(`⏳ ${ev.zh} 抓取中...`,'log-info');
 
-    if (result) {
-      ev.image = result.url;
-      (SOURCE_STAT[result.source] || (() => {}))();
-      const col = SOURCE_COLOR[result.source] || '#fff';
-      const lbl = SOURCE_ZH[result.source] || result.source;
-      const cls = result.source === 'nasa' ? 'log-nasa' :
-                  result.source === 'wikidata' ? 'log-wikidata' :
-                  result.source === 'wiki-orig' ? 'log-orig' : 'log-ok';
-      log(`✓ <span style="color:var(--text)">${ev.zh}</span><span style="color:${col};font-size:9px;margin-left:6px">[${lbl}]</span>`, cls);
-      results.push({ ev, status:'ok', source: result.source, img: result.url });
+    const candidates=await fetchAllCandidates(ev,zhFirst);
+
+    if(candidates.length===0){
+      statFail++; document.getElementById('stat-fail').textContent=statFail;
+      log(`✗ ${ev.zh}（找不到任何圖片）`,'log-fail');
+      results.push({ev,status:'fail',img:null});
+      continue;
+    }
+
+    if(candidates.length===1 && !ev.image){
+      // Only one candidate and no existing image → auto-apply
+      ev.image=candidates[0].url;
+      statOk++; document.getElementById('stat-ok').textContent=statOk;
+      log(`✓ ${ev.zh} <span style="color:#86efac;font-size:9px">[自動 · ${candidates[0].source}]</span>`,'log-auto');
+      results.push({ev,status:'auto',img:ev.image});
     } else {
-      statFail++;
-      document.getElementById('stat-fail').textContent = statFail;
-      log(`✗ ${ev.zh}`, 'log-fail');
-      results.push({ ev, status:'fail', source:'', img: ev.image || null });
+      // Multiple candidates OR has existing image → show picker
+      log(`🔍 ${ev.zh}（${candidates.length} 張候選，請選擇）`,'log-info');
+      const choice=await showPicker(ev,candidates);
+
+      if(choice.action==='set' && choice.url){
+        ev.image=choice.url;
+        statManual++; document.getElementById('stat-manual').textContent=statManual;
+        log(`✓ ${ev.zh} <span style="color:var(--accent);font-size:9px">[手動選取]</span>`,'log-ok');
+        results.push({ev,status:'manual',img:ev.image});
+      } else if(choice.action==='keep'){
+        log(`— ${ev.zh}（保留原圖）`,'log-info');
+        results.push({ev,status:'kept',img:ev.image});
+      } else {
+        statFail++; document.getElementById('stat-fail').textContent=statFail;
+        log(`— ${ev.zh}（略過）`,'log-info');
+        results.push({ev,status:'skipped',img:null});
+      }
     }
-    await delay(50);
+    await delay(30);
   }
 
-  document.getElementById('progress-fill').style.width = '100%';
-  document.getElementById('progress-text').textContent = '完成！';
-  document.getElementById('btn-run').disabled = false;
-  document.getElementById('btn-stop').style.display = 'none';
-  log(`─── 完成：NASA ${statNasa} · Wikidata ${statWd} · Wiki縮圖 ${statWiki} · Wiki原圖 ${statOrig} · 失敗 ${statFail} · 略過 ${statSkip} ───`, 'log-warn');
+  document.getElementById('progress-fill').style.width='100%';
+  document.getElementById('progress-text').textContent='完成！';
+  document.getElementById('btn-run').disabled=false;
+  document.getElementById('btn-stop').style.display='none';
+  log(`─── 完成：自動 ${statOk} · 手選 ${statManual} · 失敗/略過 ${statFail} · 有圖略過 ${statSkip} ───`,'log-warn');
   document.getElementById('step-download').classList.remove('hide');
   showMissing();
 }
 
-function stopUpdate() { shouldStop = true; }
+function stopUpdate(){shouldStop=true;}
 
-// ══════════════════════════════════════════════
-//  DOWNLOAD + TABLE
-// ══════════════════════════════════════════════
-function downloadJson() {
-  const blob = new Blob([JSON.stringify(eventsData, null, 2)], { type:'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob); a.download = 'events.json'; a.click();
+// ══ DOWNLOAD ══
+function downloadJson(){
+  const blob=new Blob([JSON.stringify(eventsData,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='events.json'; a.click();
   URL.revokeObjectURL(a.href);
 }
 
-function toggleTable() {
-  const wrap = document.getElementById('result-wrap');
-  wrap.style.display = wrap.style.display === 'none' ? '' : 'none';
-  if (wrap.style.display === 'none') return;
-  const tbody = document.getElementById('result-body');
-  tbody.innerHTML = '';
-  results.filter(r => r.status !== 'skip').forEach(({ ev, status, source, img }) => {
-    const badge =
-      status === 'fail'           ? '<span class="badge badge-fail">✗ 失敗</span>' :
-      source === 'nasa'           ? '<span class="badge badge-nasa">NASA</span>' :
-      source === 'wikidata'       ? '<span class="badge badge-wd">Wikidata</span>' :
-      source === 'wiki-orig'      ? '<span class="badge badge-orig">Wiki原圖</span>' :
-                                    '<span class="badge badge-ok">Wiki縮圖</span>';
-    const imgHtml = img ? `<img src="${img}" onerror="this.style.display='none'">` : '—';
-    const urlHtml = img ? `<span style="color:var(--muted);word-break:break-all;font-size:10px">${img.substring(0,60)}…</span>` : '';
-    tbody.innerHTML += `<tr>
-      <td>${ev.zh}</td>
-      <td style="color:var(--muted);font-size:10px">${ev.category||'—'}</td>
-      <td>${badge}</td>
-      <td>${badge}</td>
-      <td>${imgHtml}</td>
-      <td>${urlHtml}</td>
-    </tr>`;
+function toggleTable(){
+  const wrap=document.getElementById('result-wrap');
+  wrap.style.display=wrap.style.display==='none'?'':'none';
+  if(wrap.style.display==='none') return;
+  const tbody=document.getElementById('result-body'); tbody.innerHTML='';
+  results.filter(r=>r.status!=='skip').forEach(({ev,status,img})=>{
+    const badge=status==='auto'?'<span class="badge badge-ok">自動</span>':
+                status==='manual'?'<span class="badge badge-manual">手選</span>':
+                status==='kept'?'<span class="badge badge-skip">保留</span>':
+                '<span class="badge badge-skip">略過</span>';
+    const imgHtml=img?`<img src="${img}" onerror="this.style.display='none'">`:'—';
+    const urlHtml=img?`<span style="color:var(--muted);word-break:break-all;font-size:10px">${img.substring(0,70)}…</span>`:'';
+    tbody.innerHTML+=`<tr><td>${ev.zh}</td><td>${badge}</td><td>${imgHtml}</td><td>${urlHtml}</td></tr>`;
   });
 }
 </script>
