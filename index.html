@@ -1076,71 +1076,80 @@ function drawBranchLines(eventsInView) {
 function drawEvents(eventsInView) {
   const zoom = currentZoom();
 
-  // ── Pass 1: period blocks (drawn under dots) ──
+  // ── Pass 1: period blocks (rounded pill style) ──
   eventsInView.forEach(ev => {
     if (!eventVisible(ev)) return;
-    if (!ev.endYear) return;          // only period events
+    if (!ev.endYear) return;
 
     const x1 = yearToX(ev.year);
     const x2 = yearToX(ev.endYear);
     if (x2 < -10 || x1 > canvasW + 10) return;
 
-    const y      = axisY(ev.axis);
-    const color  = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
-    const isHov  = hoveredEvent && hoveredEvent.id === ev.id;
-    const rx1    = Math.max(-10, x1);
-    const rx2    = Math.min(canvasW + 10, x2);
-    const w      = rx2 - rx1;
+    const y     = axisY(ev.axis);
+    const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
+    const isHov = hoveredEvent && hoveredEvent.id === ev.id;
+    const rx1   = Math.max(-40, x1);   // allow slight overflow for radius
+    const rx2   = Math.min(canvasW + 40, x2);
+    const w     = rx2 - rx1;
     if (w < 2) return;
 
-    const blockH = isHov ? 9 : 6;   // half-height of block
-    const alpha  = isHov ? 0.55 : 0.32;
+    // Height of the pill — scales with zoom level, min 5px
+    const pillH  = isHov ? 10 : Math.max(5, Math.min(10, 5 + zoom * 8));
+    const radius = pillH;  // full round ends
+    // Clamp radius so it doesn't exceed half-width
+    const r      = Math.min(radius, w / 2);
 
     ctx.save();
 
-    // ── Filled band (method B) ──
+    // ── Pill fill — 50% transparent ──
+    ctx.beginPath();
+    ctx.roundRect(rx1, y - pillH, w, pillH * 2, r);
     ctx.fillStyle = color;
-    ctx.globalAlpha = alpha;
-    ctx.fillRect(rx1, y - blockH, w, blockH * 2);
+    ctx.globalAlpha = isHov ? 0.55 : 0.35;
+    ctx.fill();
 
-    // ── Thick border line on top of axis (method A feel) ──
+    // ── Pill border (slightly more opaque) ──
+    ctx.strokeStyle = color;
+    ctx.lineWidth   = isHov ? 1.5 : 1;
     ctx.globalAlpha = isHov ? 0.9 : 0.65;
-    ctx.fillStyle = color;
-    ctx.fillRect(rx1, y - 1.5, w, 3);
+    ctx.stroke();
 
-    // ── Left end-cap | ──
-    if (x1 > -5 && x1 < canvasW + 5) {
-      ctx.globalAlpha = isHov ? 1 : 0.8;
-      ctx.fillRect(x1 - 1, y - blockH - 2, 2, (blockH + 2) * 2);
-    }
-    // ── Right end-cap | ──
-    if (x2 > -5 && x2 < canvasW + 5) {
-      ctx.globalAlpha = isHov ? 1 : 0.8;
-      ctx.fillRect(x2 - 1, y - blockH - 2, 2, (blockH + 2) * 2);
-    }
+    // ── Centre spine line ──
+    ctx.beginPath();
+    ctx.moveTo(rx1 + r, y);
+    ctx.lineTo(rx2 - r, y);
+    ctx.strokeStyle = color;
+    ctx.lineWidth   = isHov ? 2 : 1.5;
+    ctx.globalAlpha = isHov ? 1 : 0.8;
+    ctx.stroke();
 
     ctx.restore();
 
-    // ── Label inside or above the block ──
+    // ── Label — inside pill if wide enough, otherwise above ──
     const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.35) || (ev.level === 3 && zoom > 0.6);
     if (showLabel) {
       ctx.save();
       const fontSize = ev.level === 1 ? 11 : 10;
       ctx.font = `${ev.level === 1 ? '500 ' : ''}${fontSize}px "Noto Sans TC", sans-serif`;
-      const tw = ctx.measureText(ev.zh).width;
+      const tw     = ctx.measureText(ev.zh).width;
+      const midX   = Math.max(rx1 + r, Math.min(rx2 - r, (rx1 + rx2) / 2));
+      const clampX = Math.max(tw / 2 + 4, Math.min(canvasW - tw / 2 - 4, midX));
 
-      // Try to place label centred inside block; fall back to above
-      const midX    = Math.max(rx1, Math.min(rx2, (rx1 + rx2) / 2));
-      const clampX  = Math.max(tw / 2 + 4, Math.min(canvasW - tw / 2 - 4, midX));
-      const labelY  = y - blockH - 6;
+      // Place inside pill if it fits, otherwise above
+      const fitsInside = w > tw + 16;
+      const labelY     = fitsInside ? y + fontSize * 0.35 : y - pillH - 5;
 
-      // Label background
-      ctx.fillStyle = 'rgba(5,8,16,0.78)';
-      ctx.beginPath();
-      ctx.roundRect(clampX - tw / 2 - 4, labelY - fontSize, tw + 8, fontSize + 3, 3);
-      ctx.fill();
+      if (!fitsInside) {
+        // Small label background above pill
+        ctx.fillStyle = 'rgba(5,8,16,0.78)';
+        ctx.beginPath();
+        ctx.roundRect(clampX - tw / 2 - 4, labelY - fontSize, tw + 8, fontSize + 3, 3);
+        ctx.fill();
+      }
 
-      ctx.fillStyle = isHov ? color : `rgba(221,216,200,${ev.level === 1 ? 0.9 : 0.65})`;
+      ctx.fillStyle = isHov ? color : (fitsInside
+        ? `rgba(255,255,255,${ev.level === 1 ? 0.9 : 0.7})`
+        : `rgba(221,216,200,${ev.level === 1 ? 0.9 : 0.65})`);
       ctx.textAlign = 'center';
       ctx.fillText(ev.zh, clampX, labelY);
       ctx.restore();
