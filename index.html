@@ -1142,8 +1142,9 @@ function labelVisible(ev) {
 
 function dotRadius(ev) {
   const zoom = currentZoom();
-  // Minimum 2px so dots never fully disappear
-  const base = ev.level === 1 ? 6 : ev.level === 2 ? 4.5 : 3;
+  // level 1 = large dot, level 2 = medium, level 3 = small
+  // Size distinguishes importance; outer ring is reserved for clusters only
+  const base = ev.level === 1 ? 8 : ev.level === 2 ? 4.5 : 3;
   return Math.max(2, base * Math.min(1, zoom * 3 + 0.3) + zoom * 1.5);
 }
 
@@ -1949,11 +1950,11 @@ function drawEvents(eventsInView) {
       ctx.setLineDash([]);
     }
 
-    // Glow for hovered or level 1
-    if (isHov || rep.level === 1) {
+    // Glow for hovered only (removed level 1 unconditional glow — size handles importance now)
+    if (isHov) {
       ctx.beginPath();
-      ctx.arc(x, y, r + (isHov ? 8 : 4), 0, Math.PI * 2);
-      const grad = ctx.createRadialGradient(x, y, 0, x, y, r + (isHov ? 8 : 4));
+      ctx.arc(x, y, r + 8, 0, Math.PI * 2);
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, r + 8);
       grad.addColorStop(0, color + '40');
       grad.addColorStop(1, color + '00');
       ctx.fillStyle = grad;
@@ -1966,26 +1967,18 @@ function drawEvents(eventsInView) {
     ctx.fillStyle = isHov ? color : color + 'cc';
     ctx.fill();
 
-    // Inner ring for level 1 solo events
-    if (!isCluster && rep.level === 1) {
-      ctx.beginPath();
-      ctx.arc(x, y, r + 2, 0, Math.PI * 2);
-      ctx.strokeStyle = color + '55';
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    }
-
-    // Cluster indicator: outer ring + count
+    // Cluster indicator: outer ring + count (ONLY for clusters — not for level 1)
     if (isCluster) {
       const ringR = r + 4;
       ctx.beginPath();
       ctx.arc(x, y, ringR, 0, Math.PI * 2);
       ctx.strokeStyle = color;
-      ctx.lineWidth   = isHov ? 1.5 : 1;
-      ctx.globalAlpha = catA * (isHov ? 0.9 : 0.6);
+      ctx.lineWidth   = isHov ? 2 : 1.2;
+      ctx.globalAlpha = catA * (isHov ? 1.0 : 0.7);
       ctx.stroke();
       ctx.globalAlpha = catA;
-      if (evs.length > 2 && r >= 3) {
+      // Show count for 2+ events
+      if (evs.length >= 2 && r >= 3) {
         ctx.font = `bold ${Math.max(8, Math.round(r * 1.1))}px sans-serif`;
         ctx.fillStyle = color;
         ctx.textAlign = 'center';
