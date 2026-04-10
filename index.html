@@ -1150,15 +1150,65 @@ function getChildEvents(parentId) {
 }
 
 function hasChildren(ev) {
-  return events.some(e => resolvedParent(e) === ev.id);
+  // Only period events (with endYear) count as expandable children
+  return events.some(e => resolvedParent(e) === ev.id && e.endYear);
 }
 
 // Y offset for an expanded child row below its parent
-// depth = 1 for first level, 2 for second, etc.
-const EXPAND_ROW_H = 36;  // px per expansion row
+const EXPAND_ROW_H = 36;
 
 function childRowY(parentY, depth) {
   return parentY + depth * EXPAND_ROW_H * Math.max(1, yScale);
+}
+
+// Compute vertical offset for pills on the same axis that partially overlap
+// Returns a Map<eventId, offsetPx>
+let _pillOffsetCache = null;
+let _pillOffsetFrame = -2;
+
+function getPillOffsets() {
+  if (_pillOffsetFrame === _frameCounter) return _pillOffsetCache;
+  const map = new Map();
+
+  // Group pills by axis
+  const byAxis = {};
+  events.forEach(ev => {
+    if (!ev.endYear || !eventVisible(ev)) return;
+    if (resolvedParent(ev)) return;   // children handled separately
+    if (!byAxis[ev.axis]) byAxis[ev.axis] = [];
+    byAxis[ev.axis].push(ev);
+  });
+
+  const PILL_H = 10;
+  const OFFSET = PILL_H * 2 + 4;   // vertical offset per overlap row
+
+  Object.values(byAxis).forEach(pills => {
+    // Sort by start year
+    pills.sort((a, b) => a.year - b.year);
+    // Assign rows to avoid vertical overlap
+    const rows = [];  // each row is array of {year, endYear}
+    pills.forEach(ev => {
+      let placed = false;
+      for (let row = 0; row < rows.length; row++) {
+        const last = rows[row][rows[row].length - 1];
+        // No overlap if new pill starts at or after last ends
+        if (ev.year >= last.endYear) {
+          rows[row].push(ev);
+          map.set(ev.id, row * OFFSET);
+          placed = true;
+          break;
+        }
+      }
+      if (!placed) {
+        rows.push([ev]);
+        map.set(ev.id, rows.length - 1 === 0 ? 0 : (rows.length - 1) * OFFSET);
+      }
+    });
+  });
+
+  _pillOffsetCache = map;
+  _pillOffsetFrame = _frameCounter;
+  return map;
 }
 
 // ════════════════════════════════════════════
@@ -1312,13 +1362,15 @@ function drawEvents(eventsInView) {
   const sorted = [...eventsInView].sort((a, b) => (a.level||3) - (b.level||3));
 
   // ── Pass 1: period pills (skip children — they're drawn by their parent) ──
+  const offsets = getPillOffsets();
   sorted.forEach(ev => {
     if (!eventVisible(ev)) return;
     if (!ev.endYear) return;
     if (resolvedParent(ev)) return;   // drawn by parent's expand logic
 
-    const y = axisY(ev.axis);
-    drawPill(ev, y, { depth: 0, isChild: false });
+    const baseY  = axisY(ev.axis);
+    const offset = offsets.get(ev.id) ?? 0;
+    drawPill(ev, baseY + offset, { depth: 0, isChild: false });
   });
 
   // ── Pass 2: point events ──
@@ -1917,11 +1969,17 @@ function findEventsAt(mx, my) {
   const HIT_DOT  = 18;
   const HIT_PILL = 12;
   const results  = [];
+  const offsets  = getPillOffsets();
+
   events.forEach(ev => {
     if (!eventVisible(ev)) return;
 
-    // Determine Y — child pills are rendered at offset Y when parent is expanded
     let y = axisY(ev.axis);
+    // Apply stacking offset for partial overlaps
+    if (ev.endYear && !resolvedParent(ev)) {
+      y += offsets.get(ev.id) ?? 0;
+    }
+    // Child pills rendered at childRowY when parent is expanded
     if (resolvedParent(ev) && expandedEvents.has(resolvedParent(ev))) {
       const parent = events.find(e => e.id === resolvedParent(ev));
       if (parent) y = childRowY(axisY(parent.axis), 1);
@@ -2158,7 +2216,9 @@ document.querySelectorAll('.leg').forEach(el => {
 //  4. Pick the SMALLEST containing parent (most specific)
 // ════════════════════════════════════════════
 function buildParentTree() {
-  // Index period events by axis for faster lookup
+  // Only period events (those with endYear) can be children.
+  // Point events (no endYear) are never hidden under a parent pill —
+  // they always render as dots on the axis line.
   const periodsByAxis = {};
   events.forEach(ev => {
     if (!ev.endYear) return;
@@ -2167,20 +2227,21 @@ function buildParentTree() {
   });
 
   events.forEach(child => {
-    const childEnd  = child.endYear ?? child.year;
-    const peers     = periodsByAxis[child.axis] || [];
-    let bestParent  = null;
-    let bestSpan    = Infinity;
+    child._autoParent = null;
+    if (!child.endYear) return;   // ← point events never get a parent
+
+    const peers    = periodsByAxis[child.axis] || [];
+    const cSpan    = child.endYear - child.year;
+    let bestParent = null;
+    let bestSpan   = Infinity;
 
     peers.forEach(parent => {
       if (parent.id === child.id) return;
       const pSpan = parent.endYear - parent.year;
-      const cSpan = childEnd - child.year;
-      if (pSpan <= cSpan) return;  // parent must be strictly larger
+      if (pSpan <= cSpan) return;   // parent must be strictly larger
 
-      // Strict containment: child fits inside parent
-      if (child.year >= parent.year && childEnd <= parent.endYear) {
-        // Prefer smallest containing parent (most specific)
+      // Strict containment (not just touching at boundary)
+      if (child.year > parent.year && child.endYear < parent.endYear) {
         if (pSpan < bestSpan) {
           bestParent = parent;
           bestSpan   = pSpan;
