@@ -1170,38 +1170,35 @@ function getPillOffsets() {
   if (_pillOffsetFrame === _frameCounter) return _pillOffsetCache;
   const map = new Map();
 
-  // Group pills by axis
+  // Group ROOT pills by axis (exclude children — they render under parent)
   const byAxis = {};
   events.forEach(ev => {
     if (!ev.endYear || !eventVisible(ev)) return;
-    if (resolvedParent(ev)) return;   // children handled separately
+    if (resolvedParent(ev)) return;   // children handled by parent expand
     if (!byAxis[ev.axis]) byAxis[ev.axis] = [];
     byAxis[ev.axis].push(ev);
   });
 
   const PILL_H = 10;
-  const OFFSET = PILL_H * 2 + 4;   // vertical offset per overlap row
+  const OFFSET = PILL_H * 2 + 6;
 
   Object.values(byAxis).forEach(pills => {
-    // Sort by start year
     pills.sort((a, b) => a.year - b.year);
-    // Assign rows to avoid vertical overlap
-    const rows = [];  // each row is array of {year, endYear}
+    // Row assignment: rows[i] = endYear of last pill in that row
+    const rowEnds = [];
     pills.forEach(ev => {
       let placed = false;
-      for (let row = 0; row < rows.length; row++) {
-        const last = rows[row][rows[row].length - 1];
-        // No overlap if new pill starts at or after last ends
-        if (ev.year >= last.endYear) {
-          rows[row].push(ev);
+      for (let row = 0; row < rowEnds.length; row++) {
+        if (ev.year >= rowEnds[row]) {
+          rowEnds[row] = ev.endYear;
           map.set(ev.id, row * OFFSET);
           placed = true;
           break;
         }
       }
       if (!placed) {
-        rows.push([ev]);
-        map.set(ev.id, rows.length - 1 === 0 ? 0 : (rows.length - 1) * OFFSET);
+        map.set(ev.id, rowEnds.length * OFFSET);
+        rowEnds.push(ev.endYear);
       }
     });
   });
@@ -1499,10 +1496,23 @@ function draw() {
   drawFutureZone();
   drawAxisLines();
 
-  const vis = events.filter(ev => {
+  // Include events in view, plus children of visible expanded parents
+  const visSet = new Set();
+  events.forEach(ev => {
     const x = yearToX(ev.year);
-    return x > -100 && x < canvasW + 100;
+    if (x > -100 && x < canvasW + 100) visSet.add(ev.id);
+    // Also include if it's an endYear pill partially in view
+    if (ev.endYear) {
+      const x2 = yearToX(ev.endYear);
+      if (x2 > -100 && x < canvasW + 100) visSet.add(ev.id);
+    }
   });
+  // Include children of expanded parents even if off-screen
+  expandedEvents.forEach(parentId => {
+    events.filter(e => resolvedParent(e) === parentId && e.endYear)
+      .forEach(child => visSet.add(child.id));
+  });
+  const vis = events.filter(ev => visSet.has(ev.id));
 
   drawBranchLines(vis);
   drawEvents(vis);
