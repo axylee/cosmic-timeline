@@ -324,7 +324,8 @@
       "desc_en": "Nearly all major animal phyla appear simultaneously; trilobites dominate the seas; the explosion of complex life.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Radiodont_frontalappendages.jpg/800px-Radiodont_frontalappendages.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/寒武紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cambrian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Cambrian",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "ordovician",
@@ -338,7 +339,8 @@
       "desc_zh": "海洋生物空前繁盛，珊瑚礁出現，末期發生地球第二大滅絕事件（奧陶紀大滅絕），85%物種消失。",
       "desc_en": "Marine life flourishes; coral reefs appear; ends with Earth's second-largest extinction (85% of species lost).",
       "wiki_zh": "https://zh.wikipedia.org/wiki/奧陶紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ordovician"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ordovician",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "silurian",
@@ -352,7 +354,8 @@
       "desc_zh": "有頜魚類演化出現，陸地植物開始定居，珊瑚礁大量發展，氣候相對溫和穩定。",
       "desc_en": "Jawed fish evolve; land plants colonize shore; coral reefs expand; relatively warm and stable climate.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/志留紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Silurian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Silurian",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "devonian",
@@ -366,7 +369,8 @@
       "desc_zh": "「魚類的時代」——各類魚種繁盛，四足動物登陸，蕨類森林出現，末期發生大滅絕。",
       "desc_en": "'Age of Fishes' — diverse fish species; tetrapods colonize land; fern forests appear; major extinction at end.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/泥盆紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Devonian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Devonian",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "carboniferous",
@@ -380,7 +384,8 @@
       "desc_zh": "巨大沼澤森林覆蓋大陸，大量植物埋入地層形成今日煤礦，第一批爬蟲類與有翅昆蟲出現。",
       "desc_en": "Vast swamp forests cover continents; buried plants form today's coal deposits; first reptiles and winged insects appear.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石炭紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Carboniferous"
+      "wiki_en": "https://en.wikipedia.org/wiki/Carboniferous",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "permian",
@@ -394,7 +399,8 @@
       "desc_zh": "盤古大陸形成，以史上最大滅絕事件結束——96%海洋物種與70%陸地脊椎動物消失。",
       "desc_en": "Pangaea forms; ends with Earth's greatest extinction — 96% of marine species and 70% of land vertebrates lost.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/二疊紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Permian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Permian",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "permian-extinction",
@@ -436,7 +442,8 @@
       "desc_zh": "二疊紀大滅絕後生命復甦，恐龍與哺乳類同時演化出現，盤古大陸開始分裂。",
       "desc_en": "Life recovers after Permian extinction; dinosaurs and mammals both evolve; Pangaea begins breaking apart.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Triassic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Triassic",
+      "parentEvent": "mesozoic"
     },
     {
       "id": "jurassic",
@@ -451,7 +458,8 @@
       "desc_en": "Dinosaurs dominate land; giant sauropods appear; Archaeopteryx evolves; warm and humid climate.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Diplodocus_carnegii_hatcher.jpg/1280px-Diplodocus_carnegii_hatcher.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/侏羅紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Jurassic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Jurassic",
+      "parentEvent": "mesozoic"
     },
     {
       "id": "cretaceous",
@@ -465,7 +473,8 @@
       "desc_zh": "開花植物大爆發，恐龍多樣性達到頂峰，以隕石撞擊引發的大滅絕事件結束。",
       "desc_en": "Flowering plants explode in diversity; dinosaurs reach peak diversity; ends with asteroid impact extinction.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/白堊紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous"
+      "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous",
+      "parentEvent": "mesozoic"
     },
     {
       "id": "kt-event",
