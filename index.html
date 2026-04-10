@@ -460,66 +460,103 @@ body {
 //  CONSTANTS & CONFIG
 // ════════════════════════════════════════════
 const TOTAL_YEARS = 13_800_000_000;
-const NOW = 2026;
-const TIMELINE_START = -TOTAL_YEARS; // -13.8B
-const TIMELINE_END   =  NOW;
+const NOW         = 2026;
+const FUTURE_END  = NOW + 500;        // 右邊硬邊界
+const TIMELINE_START = -TOTAL_YEARS;
+const TIMELINE_END   = FUTURE_END;
 
 // ════════════════════════════════════════════
-//  AXIS TREE — 樹狀軸線結構
-//  每個軸有：color, label, startYear, parentAxis,
-//  baseY(0-1), zoomThreshold(子軸顯示最低zoom)
+//  AXIS TREE
+//  order   : 全局排序（越小越靠上），同父軸按 startYear 自動排
+//  endYear : 文明消失年份（null = 延續至今）
+//  zoomMin : 子軸出現最低 zoom
+//  parent  : 父軸 id（null = 根軸）
 // ════════════════════════════════════════════
 const AXES = {
-  // ── 主幹軸 ──
-  cosmos:     { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, parent:null,     baseY:0.14, zoomMin:0 },
-  earth:      { color:'#60a5fa', label:'地球',     startYear:-4540000000,  parent:'cosmos', baseY:0.26, zoomMin:0 },
-  life:       { color:'#34d399', label:'生命',     startYear:-3800000000,  parent:'earth',  baseY:0.38, zoomMin:0 },
-  'human-evo':{ color:'#fbbf24', label:'人類演化', startYear:-4000000,     parent:'life',   baseY:0.50, zoomMin:0 },
-  cross:      { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       parent:'human-evo', baseY:0.60, zoomMin:0 },
-  east:       { color:'#f87171', label:'東方文明', startYear:-3500,        parent:'cross',  baseY:0.70, zoomMin:0 },
-  west:       { color:'#c084fc', label:'西方文明', startYear:-3500,        parent:'cross',  baseY:0.84, zoomMin:0 },
+  // ── 主幹 ── (zoomMin:0 = 永遠顯示)
+  cosmos:    { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null,  parent:null,        order: 0,  zoomMin:0    },
+  earth:     { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null,  parent:'cosmos',    order: 1,  zoomMin:0    },
+  life:      { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null,  parent:'earth',     order: 2,  zoomMin:0    },
+  'human-evo':{ color:'#fbbf24', label:'人類演化', startYear:-4000000,    endYear:null,  parent:'life',      order: 3,  zoomMin:0    },
+  cross:     { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null,  parent:'human-evo', order: 4,  zoomMin:0    },
 
-  // ── 東方子軸 (zoom > 0.65 才顯示) ──
-  china:      { color:'#fca5a5', label:'中國',     startYear:-2070,        parent:'east',   baseY:0.655, zoomMin:0.65 },
-  japan:      { color:'#fdba74', label:'日本',     startYear:-660,         parent:'east',   baseY:0.685, zoomMin:0.65 },
-  mideast:    { color:'#fde68a', label:'中東',     startYear:-3000,        parent:'east',   baseY:0.715, zoomMin:0.65 },
-  india:      { color:'#86efac', label:'印度',     startYear:-2600,        parent:'east',   baseY:0.745, zoomMin:0.65 },
+  // ── 東方文明 + 子軸（order 按 startYear 早→晚從上到下）──
+  east:      { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null,  parent:'cross',     order: 5,  zoomMin:0    },
+  mideast:   { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null,  parent:'east',      order: 6,  zoomMin:0.58 },
+  india:     { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null,  parent:'east',      order: 7,  zoomMin:0.58 },
+  china:     { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null,  parent:'east',      order: 8,  zoomMin:0.58 },
+  japan:     { color:'#fdba74', label:'日本',     startYear:-660,         endYear:null,  parent:'east',      order: 9,  zoomMin:0.58 },
 
-  // ── 西方子軸 (zoom > 0.65 才顯示) ──
-  greece:     { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         parent:'west',   baseY:0.820, zoomMin:0.65 },
-  europe:     { color:'#a5b4fc', label:'歐洲',     startYear:500,          parent:'west',   baseY:0.850, zoomMin:0.65 },
-  americas:   { color:'#93c5fd', label:'美洲',     startYear:1492,         parent:'west',   baseY:0.880, zoomMin:0.65 },
+  // ── 西方文明 + 子軸 ──
+  west:      { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null,  parent:'cross',     order:10,  zoomMin:0    },
+  greece:    { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,   parent:'west',      order:11,  zoomMin:0.58 },
+  europe:    { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null,  parent:'west',      order:12,  zoomMin:0.58 },
+  americas:  { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null,  parent:'west',      order:13,  zoomMin:0.58 },
 };
 
-// Which axes are currently visible (computed each frame)
+// ── 間距常數 ──
+const LANE_GAP_BASE = 54;   // 預設每條軸的高度間距（px）
+const TOP_MARGIN    = 138;  // 頂部保留給時代標籤
+
+// ── 計算可見軸清單（已排序）──
 function getVisibleAxes() {
   const zoom = currentZoom();
-  return Object.entries(AXES).filter(([id, ax]) => {
-    if (hiddenAxes.has(id)) return false;
-    if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
-    return true;
+  return Object.entries(AXES)
+    .filter(([id, ax]) => {
+      if (hiddenAxes.has(id)) return false;
+      if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
+      return true;
+    })
+    .sort((a, b) => a[1].order - b[1].order);
+}
+
+// ── 子軸 fade-in alpha（zoom 超過 zoomMin 後漸入）──
+function subAxisAlpha(ax) {
+  if (ax.zoomMin === 0) return 1;
+  return Math.min(1, (currentZoom() - ax.zoomMin) / 0.06);
+}
+
+// ── 人類演化線 fade-out（子文明出現後逐漸淡化）──
+function humanEvoAlpha() {
+  const zoom = currentZoom();
+  // 完全淡出在 zoom > 0.72
+  if (zoom < 0.58) return 1;
+  if (zoom > 0.72) return 0.15;
+  return 1 - (zoom - 0.58) / 0.14 * 0.85;
+}
+
+// ── 每幀計算 axis Y 位置（cache by frame）──
+let _axisYCache = new Map();
+let _axisYFrame = -1;
+let _frameCounter = 0;
+
+function getAxisYMap() {
+  if (_axisYFrame === _frameCounter) return _axisYCache;
+  const vis = getVisibleAxes();
+  const gap = LANE_GAP_BASE * Math.max(1, yScale);
+  const map = new Map();
+  vis.forEach(([id], i) => {
+    map.set(id, TOP_MARGIN + i * gap + yOffset);
   });
+  _axisYCache = map;
+  _axisYFrame = _frameCounter;
+  return map;
 }
 
-// Get Y position for an axis
 function getAxisY(id) {
-  const ax = AXES[id];
-  if (!ax) return canvasH * 0.5;
-  const centerFrac = 0.50;
-  const effectiveH = canvasH - 140;
-  const topMargin  = 90;
-  return topMargin + effectiveH * centerFrac
-       + (ax.baseY - centerFrac) * effectiveH * yScale
-       + yOffset;
+  return getAxisYMap().get(id) ?? (canvasH * 0.5 + yOffset);
 }
 
-// Legacy helper used by events
 function axisY(axisId, subtrack = 0) {
-  return getAxisY(axisId) + subtrack * 18 * Math.max(1, yScale);
+  const gap = LANE_GAP_BASE * Math.max(1, yScale);
+  return getAxisY(axisId) + subtrack * Math.min(gap * 0.35, 18);
 }
 
-// ════════════════════════════════════════════
-//  STATE
+function contentHeight() {
+  const n = getVisibleAxes().length;
+  const gap = LANE_GAP_BASE * Math.max(1, yScale);
+  return TOP_MARGIN + n * gap + 100;
+}
 // ════════════════════════════════════════════
 let events = [];
 let viewStart = TIMELINE_START;
@@ -535,6 +572,7 @@ let canvasW = 0, canvasH = 0;
 let dpr = window.devicePixelRatio || 1;
 let hiddenAxes = new Set();
 let lastFrameTime = 0;
+// _frameCounter declared above in AXES section
 const starsCanvas = document.getElementById('stars-canvas');
 const starsCtx = starsCanvas.getContext('2d');
 const canvas = document.getElementById('timeline-canvas');
@@ -618,7 +656,9 @@ function dotRadius(ev) {
   return base + zoom * 2;
 }
 function contentHeight() {
-  return (canvasH - 140) * Math.max(1, yScale) + 140;
+  const visCount = getVisibleAxes().length;
+  const gap = LANE_BASE_GAP * Math.max(1, yScale);
+  return TOP_MARGIN + visCount * gap + 80;
 }
 
 // ════════════════════════════════════════════
@@ -718,92 +758,124 @@ function drawEraBands() {
 }
 
 // ════════════════════════════════════════════
-//  DRAW AXIS LINES — dynamic start + mind-map branches
+//  DRAW AXIS LINES
 // ════════════════════════════════════════════
 function drawAxisLines() {
+  const yMap    = getAxisYMap();
   const visAxes = getVisibleAxes();
-  const zoom = currentZoom();
+  const zoom    = currentZoom();
 
-  // Draw branches first (under the lines)
+  // ── Pass 1: branch curves (drawn UNDER the axis lines) ──
   visAxes.forEach(([id, ax]) => {
-    if (!ax.parent || !AXES[ax.parent]) return;
-    const parentVisible = visAxes.find(([pid]) => pid === ax.parent);
-    if (!parentVisible) return;
+    if (!ax.parent) return;
+    const parentAx = AXES[ax.parent];
+    if (!parentAx) return;
+    if (!yMap.has(ax.parent)) return;   // parent not visible
 
-    const color    = ax.color;
-    const y        = getAxisY(id);
-    const parentY  = getAxisY(ax.parent);
-    const startX   = yearToX(ax.startYear);
-    if (startX > canvasW || Math.abs(y - parentY) < 2) return;
+    const y       = yMap.get(id);
+    const parentY = yMap.get(ax.parent);
+    if (Math.abs(y - parentY) < 3) return;
 
-    const forkX = Math.max(-40, startX);
+    const startX  = yearToX(ax.startYear);
+    if (startX > canvasW + 60) return;
 
-    // Mind-map S-curve: starts horizontal from parent, curves down to child
-    const dy = y - parentY;
-    const bendW = Math.min(Math.abs(dy) * 1.2, 80);
+    const alpha   = subAxisAlpha(ax);
+    const color   = ax.color;
+    const forkX   = Math.max(-80, startX);
+    const dy      = y - parentY;
+    // Bend width proportional to vertical distance, capped
+    const bendW   = Math.min(Math.abs(dy) * 0.9, 70);
 
+    ctx.save();
+    ctx.globalAlpha = alpha * 0.75;
     ctx.beginPath();
     ctx.moveTo(forkX, parentY);
     ctx.bezierCurveTo(
-      forkX + bendW,       parentY,       // control 1: go right from parent
-      forkX + bendW * 0.4, y,             // control 2: arrive at child level
-      forkX + bendW * 1.1, y              // end: on child axis
+      forkX + bendW,        parentY,
+      forkX + bendW * 0.5,  y,
+      forkX + bendW * 1.2,  y
     );
-    ctx.strokeStyle = color + '70';
-    ctx.lineWidth = ax.zoomMin > 0 ? 1 : 1.4;
+    ctx.strokeStyle = color;
+    ctx.lineWidth   = ax.zoomMin > 0 ? 1.0 : 1.4;
     ctx.setLineDash([]);
     ctx.stroke();
 
-    // Small circle at fork point on parent line
-    if (forkX > 0 && forkX < canvasW) {
+    // Fork dot on parent line
+    if (forkX > -10 && forkX < canvasW + 10) {
       ctx.beginPath();
-      ctx.arc(forkX, parentY, 3, 0, Math.PI * 2);
-      ctx.fillStyle = color + '99';
+      ctx.arc(forkX, parentY, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = color;
       ctx.fill();
     }
+    ctx.restore();
   });
 
-  // Draw axis lines
+  // ── Pass 2: axis lines ──
   visAxes.forEach(([id, ax]) => {
-    const color   = ax.color;
-    const y       = getAxisY(id);
-    const startX  = yearToX(ax.startYear);
-    if (startX > canvasW) return;
+    const y      = yMap.get(id);
+    const color  = ax.color;
+    const startX = yearToX(ax.startYear);
+    const endX   = ax.endYear != null ? yearToX(ax.endYear) : canvasW + 20;
+
+    if (startX > canvasW || endX < 0) return;
 
     const lineFrom = Math.max(0, startX);
+    const lineTo   = Math.min(canvasW + 20, endX);
 
-    // Fade in opacity for sub-axes based on how far past their zoomMin we are
-    let lineAlpha = 0.55;
-    if (ax.zoomMin > 0) {
-      const fadeIn = Math.min(1, (currentZoom() - ax.zoomMin) / 0.08);
-      lineAlpha = 0.35 * fadeIn;
-    }
+    // Alpha — sub-axis fade in, human-evo fade out, ended civilisations fade out
+    let alpha = ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65;
+    if (id === 'human-evo') alpha *= humanEvoAlpha();
 
+    ctx.save();
+    ctx.globalAlpha = alpha;
     ctx.beginPath();
     ctx.moveTo(lineFrom, y);
-    ctx.lineTo(canvasW + 20, y);
-    ctx.strokeStyle = color + Math.round(lineAlpha * 255).toString(16).padStart(2,'0');
-    ctx.lineWidth = ax.zoomMin > 0 ? 1 : 1.5;
+    ctx.lineTo(lineTo, y);
+    ctx.strokeStyle = color;
+    ctx.lineWidth   = ax.zoomMin > 0 ? 1.1 : 1.6;
     ctx.setLineDash([]);
     ctx.stroke();
 
-    // Label badge — sticks to left edge or near startX
-    const labelX = Math.max(4, Math.min(startX + 2, canvasW - 90));
-    const label  = ax.label;
-    const pad    = 6;
-    ctx.font = `500 ${ax.zoomMin > 0 ? 9 : 10}px "Noto Sans TC", sans-serif`;
-    const tw = ctx.measureText(label).width;
+    // Ended civilisation — dashed tail after endYear
+    if (ax.endYear != null) {
+      const fadeX = yearToX(ax.endYear);
+      if (fadeX < canvasW && fadeX > 0) {
+        ctx.beginPath();
+        ctx.moveTo(fadeX, y);
+        ctx.lineTo(Math.min(canvasW, fadeX + 60), y);
+        ctx.strokeStyle = color;
+        ctx.lineWidth   = 0.8;
+        ctx.globalAlpha = alpha * 0.25;
+        ctx.setLineDash([3, 6]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+    ctx.restore();
 
-    ctx.fillStyle = 'rgba(5,8,16,0.85)';
+    // ── Label badge — appears RIGHT AT startX (or left edge if off-screen) ──
+    const labelX    = Math.max(4, Math.min(startX + 4, canvasW - 100));
+    const label     = ax.label;
+    const fontSize  = ax.zoomMin > 0 ? 9 : 10;
+    const pad       = 5;
+    const labelAlpha = ax.zoomMin > 0 ? subAxisAlpha(ax) : 1;
+    if (labelAlpha < 0.05) return;
+
+    ctx.save();
+    ctx.globalAlpha = labelAlpha;
+    ctx.font = `500 ${fontSize}px "Noto Sans TC", sans-serif`;
+    const tw = ctx.measureText(label).width;
+    ctx.fillStyle = 'rgba(5,8,16,0.88)';
     ctx.beginPath();
-    ctx.roundRect(labelX, y - 11, tw + pad * 2, 14, 3);
+    ctx.roundRect(labelX, y - 10, tw + pad * 2, 13, 3);
     ctx.fill();
-    ctx.strokeStyle = color + '55';
+    ctx.strokeStyle = color + '66';
     ctx.lineWidth = 0.5;
     ctx.stroke();
-    ctx.fillStyle = color + 'ee';
+    ctx.fillStyle = color;
     ctx.textAlign = 'left';
     ctx.fillText(label, labelX + pad, y - 1);
+    ctx.restore();
   });
 }
 
@@ -974,12 +1046,60 @@ function drawEvents(eventsInView) {
 }
 
 // ════════════════════════════════════════════
+//  DRAW FUTURE ZONE  (NOW → NOW+500)
+// ════════════════════════════════════════════
+function drawFutureZone() {
+  const x1 = yearToX(NOW);
+  const x2 = yearToX(FUTURE_END);
+  if (x2 < 0 || x1 > canvasW) return;
+  const rx1 = Math.max(0, x1);
+  const rx2 = Math.min(canvasW, x2);
+
+  // Light grey wash
+  ctx.fillStyle = 'rgba(200,210,220,0.07)';
+  ctx.fillRect(rx1, 0, rx2 - rx1, canvasH);
+
+  // Left boundary line
+  if (x1 > 0 && x1 < canvasW) {
+    ctx.beginPath();
+    ctx.moveTo(x1, 0);
+    ctx.lineTo(x1, canvasH);
+    ctx.strokeStyle = 'rgba(200,210,220,0.35)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([6, 4]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    // "今日" label
+    ctx.font = '500 10px "Noto Sans TC", sans-serif';
+    ctx.fillStyle = 'rgba(200,210,220,0.6)';
+    ctx.textAlign = 'center';
+    ctx.fillText('今日', x1, 158);
+  }
+
+  // Right hard boundary
+  if (x2 > 0 && x2 < canvasW) {
+    ctx.beginPath();
+    ctx.moveTo(x2, 0);
+    ctx.lineTo(x2, canvasH);
+    ctx.strokeStyle = 'rgba(200,210,220,0.2)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.font = '500 10px "Noto Sans TC", sans-serif';
+    ctx.fillStyle = 'rgba(200,210,220,0.35)';
+    ctx.textAlign = 'center';
+    ctx.fillText('未來 500 年', x2 - 30, 158);
+  }
+}
+
+// ════════════════════════════════════════════
 //  MAIN DRAW
 // ════════════════════════════════════════════
 function draw() {
+  _frameCounter++;
   ctx.clearRect(0, 0, canvasW, canvasH);
 
   drawEraBands();
+  drawFutureZone();
   drawAxisLines();
 
   const vis = events.filter(ev => {
