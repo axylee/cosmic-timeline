@@ -194,15 +194,31 @@ body {
 }
 #btn-reset:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
 
-/* ─── BOTTOM BAR: H-scrollbar + H-zoom ─── */
+/* ─── BOTTOM BAR: H-scrollbar + H-zoom + era jumps ─── */
 #bottom-bar {
   position: fixed; bottom: 0; left: 0; right: 36px;
-  height: 64px; z-index: 50;
+  height: 88px; z-index: 50;
   display: flex; flex-direction: column; align-items: stretch;
   padding: 0 20px;
-  background: linear-gradient(to top, rgba(5,8,16,0.95) 70%, transparent);
-  gap: 6px; justify-content: flex-end; padding-bottom: 10px;
+  background: linear-gradient(to top, rgba(5,8,16,0.97) 80%, transparent);
+  gap: 5px; justify-content: flex-end; padding-bottom: 8px;
 }
+
+/* Era jump buttons row */
+#era-jumps {
+  display: flex; align-items: center; justify-content: center;
+  gap: 5px; flex-wrap: nowrap; overflow-x: auto;
+}
+.era-btn {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px; font-weight: 500;
+  padding: 3px 10px; border-radius: 12px;
+  border: 1px solid; cursor: pointer;
+  background: transparent;
+  transition: all .15s; white-space: nowrap;
+  opacity: 0.65;
+}
+.era-btn:hover { opacity: 1; filter: brightness(1.3); }
 
 /* H scrollbar row */
 #hscroll-row {
@@ -416,8 +432,21 @@ body {
   <button id="btn-reset" title="全覽">⊙</button>
 </div>
 
-<!-- Bottom bar: H-scrollbar + H-zoom slider -->
+<!-- Bottom bar: era jumps + H-scrollbar + H-zoom slider -->
 <div id="bottom-bar">
+  <div id="era-jumps">
+    <button class="era-btn" style="color:#a78bfa;border-color:#a78bfa55" onclick="jumpTo(-13800000000, -4000000000)">宇宙誕生</button>
+    <button class="era-btn" style="color:#60a5fa;border-color:#60a5fa55" onclick="jumpTo(-4600000000, -500000000)">地球生命</button>
+    <button class="era-btn" style="color:#34d399;border-color:#34d39955" onclick="jumpTo(-250000000, -50000000)">恐龍時代</button>
+    <button class="era-btn" style="color:#fbbf24;border-color:#fbbf2455" onclick="jumpTo(-4000000, -100000)">人類演化</button>
+    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" onclick="jumpTo(-12000, 500)">史前文明</button>
+    <button class="era-btn" style="color:#fde68a;border-color:#fde68a55" onclick="jumpTo(-3500, -500)">古代東方</button>
+    <button class="era-btn" style="color:#c4b5fd;border-color:#c4b5fd55" onclick="jumpTo(-800, 500)">古典西方</button>
+    <button class="era-btn" style="color:#a5b4fc;border-color:#a5b4fc55" onclick="jumpTo(500, 1500)">中世紀</button>
+    <button class="era-btn" style="color:#c084fc;border-color:#c084fc55" onclick="jumpTo(1400, 1800)">文藝復興</button>
+    <button class="era-btn" style="color:#93c5fd;border-color:#93c5fd55" onclick="jumpTo(1750, 1950)">工業革命</button>
+    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" onclick="jumpTo(1900, 2030)">現代</button>
+  </div>
   <div id="hscroll-row">
     <div id="scrollbar-track">
       <div id="scrollbar-thumb"></div>
@@ -560,12 +589,14 @@ function contentHeight() {
 // ════════════════════════════════════════════
 let events = [];
 let viewStart = TIMELINE_START;
-let viewEnd   = TIMELINE_END;
+let viewEnd   = NOW + 100;   // 初始顯示到今日，不顯示未來區
 let yScale    = 1.0;
 let yOffset   = 0;
-let isDragging = false;
-let dragStartX = 0;
+let isDragging    = false;
+let dragStartX    = 0;
+let dragStartY    = 0;
 let dragViewStart = 0;
+let dragYOffset   = 0;
 let hoveredEvent = null;
 let mouseX = -1, mouseY = -1;
 let canvasW = 0, canvasH = 0;
@@ -810,7 +841,7 @@ function drawAxisLines() {
     ctx.restore();
   });
 
-  // ── Pass 2: axis lines ──
+  // ── Pass 2: axis lines — start from branch landing point ──
   visAxes.forEach(([id, ax]) => {
     const y      = yMap.get(id);
     const color  = ax.color;
@@ -819,8 +850,20 @@ function drawAxisLines() {
 
     if (startX > canvasW || endX < 0) return;
 
-    const lineFrom = Math.max(0, startX);
-    const lineTo   = Math.min(canvasW + 20, endX);
+    // Compute where the branch curve lands — line must start there
+    let lineFrom;
+    if (ax.parent && yMap.has(ax.parent)) {
+      const parentY = yMap.get(ax.parent);
+      const dy      = y - parentY;
+      const bendW   = Math.min(Math.abs(dy) * 0.9, 70);
+      const forkX   = Math.max(-80, startX);
+      const branchLanding = forkX + bendW * 1.2;
+      lineFrom = Math.max(0, branchLanding);
+    } else {
+      lineFrom = Math.max(0, startX);
+    }
+
+    const lineTo = Math.min(canvasW + 20, endX);
 
     // Alpha — sub-axis fade in, human-evo fade out, ended civilisations fade out
     let alpha = ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65;
@@ -853,8 +896,8 @@ function drawAxisLines() {
     }
     ctx.restore();
 
-    // ── Label badge — appears RIGHT AT startX (or left edge if off-screen) ──
-    const labelX    = Math.max(4, Math.min(startX + 4, canvasW - 100));
+    // ── Label badge — placed right after branch landing (= where line starts) ──
+    const labelX = Math.min(lineFrom + 4, canvasW - 100);
     const label     = ax.label;
     const fontSize  = ax.zoomMin > 0 ? 9 : 10;
     const pad       = 5;
@@ -1117,10 +1160,10 @@ function draw() {
   document.getElementById('time-display').textContent = formatYear(midYear);
 
   // Sync zoom slider
-  const totalSpan = TOTAL_YEARS + NOW;
+  const fullRange = FUTURE_END - TIMELINE_START;
   const curSpan   = viewEnd - viewStart;
   const logMin = Math.log(2);
-  const logMax = Math.log(totalSpan);
+  const logMax = Math.log(fullRange);
   const logCur = Math.log(Math.max(2, curSpan));
   const sliderVal = Math.round(100 * (1 - (logCur - logMin) / (logMax - logMin)));
   const sl = document.getElementById('zoom-slider');
@@ -1207,18 +1250,16 @@ function updateVScrollbar() {
   thumb.style.top = thumbTop + 'px';
 }
 function updateScrollbar() {
-  const totalSpan = TOTAL_YEARS + NOW;
-  const curSpan   = viewEnd - viewStart;
+  const fullRange  = FUTURE_END - TIMELINE_START;
+  const curSpan    = viewEnd - viewStart;
   const track = document.getElementById('scrollbar-track');
   const thumb = document.getElementById('scrollbar-thumb');
+  if (!track || !thumb) return;
   const trackW = track.clientWidth;
 
-  // Thumb width proportional to zoom
-  const thumbW = Math.max(24, Math.min(trackW - 4, (curSpan / totalSpan) * trackW));
-  // Thumb position: how far viewStart is into full range
-  const fullStart = TIMELINE_START;
-  const maxPan    = totalSpan - curSpan;
-  const panFrac   = maxPan > 0 ? Math.max(0, Math.min(1, (viewStart - fullStart) / maxPan)) : 0;
+  const thumbW   = Math.max(24, Math.min(trackW - 4, (curSpan / fullRange) * trackW));
+  const maxPan   = fullRange - curSpan;
+  const panFrac  = maxPan > 0 ? Math.max(0, Math.min(1, (viewStart - TIMELINE_START) / maxPan)) : 0;
   const thumbLeft = panFrac * (trackW - thumbW);
 
   thumb.style.width = thumbW + 'px';
@@ -1228,11 +1269,28 @@ function updateScrollbar() {
 // ════════════════════════════════════════════
 //  PAN & ZOOM HELPERS
 // ════════════════════════════════════════════
+
+// Hard boundary clamp — never go outside [TIMELINE_START, FUTURE_END]
+function clampView() {
+  const span = viewEnd - viewStart;
+  if (viewStart < TIMELINE_START) {
+    viewStart = TIMELINE_START;
+    viewEnd   = TIMELINE_START + span;
+  }
+  if (viewEnd > FUTURE_END) {
+    viewEnd   = FUTURE_END;
+    viewStart = FUTURE_END - span;
+  }
+  // Extra safety: if span > full range, fit exactly
+  if (viewStart < TIMELINE_START) viewStart = TIMELINE_START;
+}
+
 function panBy(fraction) {
   const span = viewEnd - viewStart;
   const shift = span * fraction;
   viewStart += shift;
   viewEnd   += shift;
+  clampView();
   draw();
 }
 
@@ -1240,21 +1298,50 @@ function zoomBy(factor, centerX) {
   const cx = centerX !== undefined ? centerX : canvasW / 2;
   const mouseYear = xToYear(cx);
   const span = viewEnd - viewStart;
+  const fullRange = FUTURE_END - TIMELINE_START;
   let newSpan = span * factor;
-  const minSpan = 2, maxSpan = TOTAL_YEARS + NOW + 1e9;
-  newSpan = Math.min(Math.max(newSpan, minSpan), maxSpan);
+  const minSpan = 2;
+  newSpan = Math.min(Math.max(newSpan, minSpan), fullRange);
   const ratio = (mouseYear - viewStart) / span;
   viewStart = mouseYear - ratio * newSpan;
   viewEnd   = viewStart + newSpan;
+  clampView();
   draw();
 }
 
 function zoomToSpan(newSpan) {
   const mid = (viewStart + viewEnd) / 2;
-  newSpan = Math.max(2, Math.min(TOTAL_YEARS + NOW + 1e9, newSpan));
+  const fullRange = FUTURE_END - TIMELINE_START;
+  newSpan = Math.max(2, Math.min(fullRange, newSpan));
   viewStart = mid - newSpan / 2;
   viewEnd   = mid + newSpan / 2;
+  clampView();
   draw();
+}
+
+// Jump to a specific time range with smooth animation
+function jumpTo(start, end) {
+  const padding = (end - start) * 0.15;
+  const targetStart = start - padding;
+  const targetEnd   = end   + padding;
+
+  // Animate over ~400ms
+  const fromStart = viewStart;
+  const fromEnd   = viewEnd;
+  const t0 = performance.now();
+  const dur = 420;
+
+  function step(now) {
+    const t = Math.min(1, (now - t0) / dur);
+    // Ease in-out cubic
+    const e = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+    viewStart = fromStart + (targetStart - fromStart) * e;
+    viewEnd   = fromEnd   + (targetEnd   - fromEnd)   * e;
+    clampView();
+    draw();
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
 }
 
 // ════════════════════════════════════════════
@@ -1326,20 +1413,20 @@ yzoomSlider.addEventListener('pointercancel', () => { yzoomSlider._dragging = fa
 const zoomSlider = document.getElementById('zoom-slider');
 zoomSlider.addEventListener('input', () => {
   zoomSlider._dragging = true;
-  const val = parseInt(zoomSlider.value); // 0=out, 100=in
-  const totalSpan = TOTAL_YEARS + NOW;
+  const val = parseInt(zoomSlider.value);
+  const fullRange = FUTURE_END - TIMELINE_START;
   const logMin = Math.log(2);
-  const logMax = Math.log(totalSpan);
+  const logMax = Math.log(fullRange);
   const logTarget = logMax - (val / 100) * (logMax - logMin);
   zoomToSpan(Math.exp(logTarget));
 });
-zoomSlider.addEventListener('pointerup', () => { zoomSlider._dragging = false; });
-zoomSlider.addEventListener('pointercancel', () => { zoomSlider._dragging = false; });
+zoomSlider.addEventListener('pointerup',    () => { zoomSlider._dragging = false; });
+zoomSlider.addEventListener('pointercancel',() => { zoomSlider._dragging = false; });
 
 // Reset button → full view + reset Y zoom + reset Y scroll
 document.getElementById('btn-reset').addEventListener('click', () => {
   viewStart = TIMELINE_START;
-  viewEnd   = TIMELINE_END;
+  viewEnd   = NOW + 100;
   yScale    = 1.0;
   yOffset   = 0;
   draw();
@@ -1370,11 +1457,12 @@ document.getElementById('btn-reset').addEventListener('click', () => {
     const newLeft = Math.max(0, Math.min(maxLeft, sbStartLeft + e.clientX - sbStartX));
     const frac = maxLeft > 0 ? newLeft / maxLeft : 0;
 
-    const totalSpan = TOTAL_YEARS + NOW;
+    const fullRange = FUTURE_END - TIMELINE_START;
     const curSpan   = viewEnd - viewStart;
-    const maxPan    = totalSpan - curSpan;
+    const maxPan    = fullRange - curSpan;
     viewStart = TIMELINE_START + frac * maxPan;
     viewEnd   = viewStart + curSpan;
+    clampView();
     draw();
   });
 
@@ -1388,11 +1476,11 @@ document.getElementById('btn-reset').addEventListener('click', () => {
     if (e.target === thumb) return;
     const rect = track.getBoundingClientRect();
     const clickFrac = (e.clientX - rect.left) / rect.width;
-    const totalSpan = TOTAL_YEARS + NOW;
+    const fullRange = FUTURE_END - TIMELINE_START;
     const curSpan   = viewEnd - viewStart;
-    const maxPan    = totalSpan - curSpan;
-    viewStart = TIMELINE_START + clickFrac * totalSpan - curSpan / 2;
+    viewStart = TIMELINE_START + clickFrac * fullRange - curSpan / 2;
     viewEnd   = viewStart + curSpan;
+    clampView();
     draw();
   });
 }
@@ -1440,13 +1528,15 @@ canvas.addEventListener('wheel', e => {
 }, { passive: false });
 
 // ════════════════════════════════════════════
-//  DRAG PAN
+//  DRAG PAN (X + Y)
 // ════════════════════════════════════════════
 canvas.addEventListener('pointerdown', e => {
   if (e.button !== 0) return;
   isDragging = true;
-  dragStartX = e.clientX;
+  dragStartX    = e.clientX;
+  dragStartY    = e.clientY;
   dragViewStart = viewStart;
+  dragYOffset   = yOffset;
   canvas.setPointerCapture(e.pointerId);
   canvas.style.cursor = 'grabbing';
 });
@@ -1456,14 +1546,20 @@ canvas.addEventListener('pointermove', e => {
   mouseY = e.clientY;
   if (isDragging) {
     const dx = e.clientX - dragStartX;
-    const span = viewEnd - viewStart;
-    const yearDx = -(dx / canvasW) * span;
+    const dy = e.clientY - dragStartY;
+    // Horizontal pan
+    const span    = viewEnd - viewStart;
+    const yearDx  = -(dx / canvasW) * span;
     viewStart = dragViewStart + yearDx;
     viewEnd   = viewStart + span;
+    clampView();
+    // Vertical pan
+    yOffset = dragYOffset + dy;
+    clampYOffset();
     draw();
   } else {
     handleHover(e.clientX, e.clientY);
-    draw();  // redraw for cursor line
+    draw();
   }
 });
 
