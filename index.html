@@ -2,7 +2,9 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>宇宙歷史時間軸 · Cosmic Timeline</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -482,11 +484,92 @@ body {
 }
 .overlap-zh { font-size: 13px; color: rgba(221,216,200,0.9); }
 .overlap-time { font-size: 10px; color: rgba(221,216,200,0.4); margin-left: auto; white-space: nowrap; }
+
+/* ═══════════════════════════════════════
+   MOBILE / TOUCH  styles
+═══════════════════════════════════════ */
+
+/* Landscape hint — shown on portrait phones */
+#landscape-hint {
+  display: none;
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(5,8,16,0.97);
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px; color: rgba(221,216,200,0.8);
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: center; padding: 24px;
+}
+#landscape-hint .hint-icon { font-size: 48px; animation: rotate90 1.2s ease-in-out infinite alternate; }
+@keyframes rotate90 { from { transform: rotate(0deg); } to { transform: rotate(90deg); } }
+#landscape-hint p { font-size: 15px; line-height: 1.6; }
+#landscape-hint small { font-size: 12px; color: rgba(221,216,200,0.4); }
+#landscape-hint button {
+  margin-top: 8px; padding: 10px 24px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px; color: rgba(221,216,200,0.8);
+  font-family: inherit; font-size: 13px; cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Show landscape hint on portrait */
+  @media (orientation: portrait) {
+    #landscape-hint { display: flex; }
+  }
+
+  /* Popup full-screen on mobile */
+  #popup {
+    width: 100vw !important;
+    max-height: 90vh;
+    border-radius: 16px 16px 0 0;
+    position: fixed;
+    bottom: 0; left: 0;
+  }
+  #popup-overlay {
+    align-items: flex-end;
+  }
+  #popup-overlay.show #popup {
+    transform: translateY(0) scale(1);
+  }
+  #popup-overlay #popup {
+    transform: translateY(100%);
+    transition: transform .3s cubic-bezier(0.32,0.72,0,1);
+  }
+  #popup-overlay.show #popup {
+    transform: translateY(0);
+  }
+
+  /* Era buttons — scrollable, bigger tap targets */
+  #era-jumps { justify-content: flex-start; padding-bottom: 2px; }
+  .era-btn { padding: 6px 12px; font-size: 11px; }
+
+  /* Zoom slider wider on mobile */
+  #zoom-slider { width: 200px; }
+
+  /* Bottom bar taller for finger taps */
+  #bottom-bar { height: 96px; padding-bottom: 10px; }
+
+  /* Overlap menu wider */
+  #overlap-menu { min-width: 260px; }
+  .overlap-item { padding: 10px 14px; }
+  .overlap-zh { font-size: 14px; }
+
+  /* Edit panel inputs easier to tap */
+  .edit-input { padding: 10px 12px; font-size: 15px; }
+  .edit-save-btn, .edit-export-btn { padding: 12px 16px; font-size: 13px; }
+}
 </style>
 </head>
 <body>
 
 <canvas id="stars-canvas"></canvas>
+
+<!-- Mobile landscape hint -->
+<div id="landscape-hint">
+  <div class="hint-icon">📱</div>
+  <p>請將手機<strong>橫向</strong>使用<br>以獲得最佳體驗</p>
+  <small>Rotate your device to landscape</small>
+  <button onclick="document.getElementById('landscape-hint').style.display='none'">繼續直向瀏覽</button>
+</div>
 
 <div id="header">
   <h1>COSMIC TIMELINE · 宇宙歷史時間軸</h1>
@@ -2030,8 +2113,129 @@ canvas.addEventListener('wheel', e => {
 }, { passive: false });
 
 // ════════════════════════════════════════════
-//  DRAG PAN (X + Y)
+//  TOUCH SUPPORT — pinch zoom + single-finger pan
 // ════════════════════════════════════════════
+let _touches = {};          // active touches by identifier
+let _pinchDist0 = null;     // initial pinch distance
+let _pinchMid0  = null;     // initial pinch midpoint X
+let _pinchView0 = null;     // viewStart/End at pinch start
+let _tapStartX  = 0;
+let _tapStartY  = 0;
+let _tapStartTime = 0;
+
+function _touchDist(t1, t2) {
+  return Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+}
+function _touchMidX(t1, t2) {
+  return (t1.clientX + t2.clientX) / 2;
+}
+
+canvas.addEventListener('touchstart', e => {
+  e.preventDefault();
+  for (const t of e.changedTouches) _touches[t.identifier] = t;
+  const ids = Object.keys(_touches);
+
+  if (ids.length === 1) {
+    // Single finger — start pan
+    const t = _touches[ids[0]];
+    isDragging    = true;
+    dragStartX    = t.clientX;
+    dragStartY    = t.clientY;
+    dragViewStart = viewStart;
+    dragYOffset   = yOffset;
+    _tapStartX    = t.clientX;
+    _tapStartY    = t.clientY;
+    _tapStartTime = Date.now();
+    _pinchDist0   = null;
+  } else if (ids.length === 2) {
+    // Two fingers — start pinch
+    isDragging = false;
+    const [t1, t2] = ids.map(id => _touches[id]);
+    _pinchDist0  = _touchDist(t1, t2);
+    _pinchMid0   = _touchMidX(t1, t2);
+    _pinchView0  = { start: viewStart, end: viewEnd };
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  for (const t of e.changedTouches) _touches[t.identifier] = t;
+  const ids = Object.keys(_touches);
+
+  if (ids.length === 2 && _pinchDist0 !== null) {
+    // Pinch zoom
+    const [t1, t2] = ids.map(id => _touches[id]);
+    const dist = _touchDist(t1, t2);
+    const midX = _touchMidX(t1, t2);
+    const scale = _pinchDist0 / dist;   // >1 = zoom out, <1 = zoom in
+
+    const span0  = _pinchView0.end - _pinchView0.start;
+    let newSpan  = span0 * scale;
+    newSpan      = Math.max(2, Math.min(globalViewSpan(), newSpan));
+
+    // Keep midpoint year fixed
+    const midYear0 = _pinchView0.start + (_pinchMid0 / canvasW) * span0;
+    const ratio    = midX / canvasW;
+    viewStart = midYear0 - ratio * newSpan;
+    viewEnd   = viewStart + newSpan;
+
+    // Pan horizontally with midpoint drift
+    const panDx   = midX - _pinchMid0;
+    const yearDx  = -(panDx / canvasW) * newSpan;
+    viewStart += yearDx * 0.5;
+    viewEnd    = viewStart + newSpan;
+
+    clampView();
+    draw();
+
+  } else if (ids.length === 1 && isDragging && _pinchDist0 === null) {
+    // Single finger pan
+    const t  = _touches[ids[0]];
+    const dx = t.clientX - dragStartX;
+    const dy = t.clientY - dragStartY;
+    const span   = viewEnd - viewStart;
+    viewStart = dragViewStart - (dx / canvasW) * span;
+    viewEnd   = viewStart + span;
+    clampView();
+    yOffset   = dragYOffset + dy;
+    clampYOffset();
+    draw();
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchend', e => {
+  e.preventDefault();
+  for (const t of e.changedTouches) delete _touches[t.identifier];
+  const remaining = Object.keys(_touches).length;
+
+  if (remaining === 0) {
+    // Check for tap
+    const dt = Date.now() - _tapStartTime;
+    if (isDragging && dt < 250 &&
+        Math.hypot(e.changedTouches[0].clientX - _tapStartX,
+                   e.changedTouches[0].clientY - _tapStartY) < 10) {
+      handleClick(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+    }
+    isDragging  = false;
+    _pinchDist0 = null;
+    draw();
+  } else if (remaining === 1) {
+    // Went from 2 fingers to 1 — restart pan from current position
+    _pinchDist0 = null;
+    const id = Object.keys(_touches)[0];
+    const t  = _touches[id];
+    isDragging    = true;
+    dragStartX    = t.clientX;
+    dragStartY    = t.clientY;
+    dragViewStart = viewStart;
+    dragYOffset   = yOffset;
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchcancel', e => {
+  for (const t of e.changedTouches) delete _touches[t.identifier];
+  isDragging = false; _pinchDist0 = null;
+}, { passive: false });
 canvas.addEventListener('pointerdown', e => {
   if (e.button !== 0) return;
   isDragging = true;
@@ -2059,7 +2263,8 @@ canvas.addEventListener('pointermove', e => {
     yOffset = dragYOffset + dy;
     clampYOffset();
     draw();
-  } else {
+  } else if (e.pointerType !== 'touch') {
+    // Only show hover tooltip on non-touch devices
     handleHover(e.clientX, e.clientY);
     draw();
   }
@@ -2086,8 +2291,9 @@ canvas.addEventListener('pointerup', e => {
 // ════════════════════════════════════════════
 // Find ALL events near click (for overlap detection)
 function findEventsAt(mx, my) {
-  const HIT_DOT  = 18;
-  const HIT_PILL = 12;
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+  const HIT_DOT  = isTouchDevice ? 28 : 18;
+  const HIT_PILL = isTouchDevice ? 20 : 12;
   const results  = [];
   const offsets  = getPillOffsets();
 
