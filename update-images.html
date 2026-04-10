@@ -115,6 +115,16 @@
   #result-table td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
   #result-table img{width:48px;height:32px;object-fit:cover;border-radius:4px}
 
+  /* broken image list */
+  .broken-item{display:flex;align-items:center;gap:10px;padding:9px 12px;background:rgba(248,113,113,0.05);border:1px solid rgba(248,113,113,0.2);border-radius:8px}
+  .broken-thumb{width:56px;height:38px;object-fit:cover;border-radius:5px;flex-shrink:0;background:rgba(255,255,255,0.05)}
+  .broken-info{flex:1;min-width:0}
+  .broken-zh{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .broken-url{font-size:9px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+  .broken-actions{display:flex;gap:6px;flex-shrink:0}
+  .btn-clear{padding:4px 10px;border-radius:6px;font-size:10px;font-family:inherit;cursor:pointer;background:rgba(248,113,113,0.15);color:var(--red);border:1px solid rgba(248,113,113,0.3)}
+  .btn-clear:hover{background:rgba(248,113,113,0.3)}
+
   #drop-zone{border:2px dashed rgba(255,255,255,0.12);border-radius:10px;padding:28px;text-align:center;color:var(--muted);cursor:pointer;transition:all .2s;margin-bottom:14px}
   #drop-zone:hover,#drop-zone.drag-over{border-color:var(--accent);color:var(--accent);background:rgba(96,165,250,0.05)}
   #drop-zone input{display:none}
@@ -168,6 +178,31 @@
   </div>
   <div class="spacer"></div>
   <div id="load-status" class="log-info"></div>
+</div>
+
+<!-- Validate existing images -->
+<div class="card hide" id="step-validate">
+  <div class="card-title">🔎 檢查現有圖片連結有效性</div>
+  <div class="row" style="margin-bottom:12px">
+    <button class="btn-warn" id="btn-validate" onclick="validateExistingImages()">▶ 開始檢查</button>
+    <button class="btn-ghost" id="btn-validate-stop" onclick="validateStop()" style="display:none">⬛ 停止</button>
+    <span id="validate-status" style="font-size:12px;color:var(--muted);align-self:center"></span>
+  </div>
+  <div class="progress-wrap" id="validate-progress" style="display:none">
+    <div class="progress-bar-bg"><div class="progress-bar-fill" id="validate-fill"></div></div>
+    <div class="progress-text" id="validate-text"></div>
+  </div>
+  <!-- Broken list -->
+  <div id="validate-broken-wrap" style="display:none;margin-top:14px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+      <span id="validate-broken-count" style="font-size:13px;color:var(--red)"></span>
+      <div style="display:flex;gap:8px">
+        <button class="btn-warn" onclick="clearAllBroken()">⚠ 清除全部失效連結</button>
+        <button class="btn-ghost" onclick="document.getElementById('validate-broken-wrap').style.display='none'">收起</button>
+      </div>
+    </div>
+    <div id="validate-broken-list" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:8px;max-height:420px;overflow-y:auto"></div>
+  </div>
 </div>
 
 <!-- Missing events -->
@@ -262,7 +297,7 @@ function onLoaded(name) {
     `<span style="color:var(--green)">✓ 載入成功：${name}，共 ${n} 個事件</span>`+
     (noImg?`<span style="color:var(--yellow);margin-left:14px">⚠ ${noImg} 個缺少圖片</span>`:'');
   document.getElementById('stat-total').textContent=n;
-  ['step-missing','step-run'].forEach(id=>document.getElementById(id).classList.remove('hide'));
+  ['step-validate','step-missing','step-run'].forEach(id=>document.getElementById(id).classList.remove('hide'));
 }
 
 // ══ MISSING LIST ══
@@ -386,6 +421,25 @@ function testImageLoad(url, timeoutMs=5000) {
   });
 }
 
+// Search Wikipedia by title (fallback when no wiki URL)
+async function fetchWikiByTitle(title, lang='en') {
+  if (!title) return null;
+  try {
+    const p = new URLSearchParams({
+      action:'query', titles:title, prop:'pageimages',
+      pithumbsize:'1200', piprop:'original|thumbnail',
+      format:'json', redirects:'1', origin:'*'
+    });
+    const d = await (await fetch(`https://${lang}.wikipedia.org/w/api.php?${p}`)).json();
+    for (const pg of Object.values(d.query?.pages||{})) {
+      if (pg.pageid === -1) continue; // page not found
+      const url = pg.original?.source || pg.thumbnail?.source;
+      if (url) return sanitizeImageUrl(url);
+    }
+  } catch(e) {}
+  return null;
+}
+
 // Fetch ALL candidates from all sources simultaneously
 async function fetchAllCandidates(ev, zhFirst) {
   const wikiUrls=(zhFirst?[ev.wiki_zh,ev.wiki_en]:[ev.wiki_en,ev.wiki_zh]).filter(Boolean);
@@ -395,18 +449,30 @@ async function fetchAllCandidates(ev, zhFirst) {
 
   const isNaturalSci=['astronomy','geology','biology'].includes(ev.category);
 
-  // Run all in parallel
   const tasks=[];
+  // NASA for science events
   if(isNaturalSci) tasks.push(fetchNasaCandidates(ev,4).then(arr=>arr.forEach(add)));
+  // Wikidata P18
   tasks.push(fetchWikidata(ev).then(r=>{ if(r) r.url=sanitizeImageUrl(r.url); add(r); }));
+  // Wiki pageimages from known URLs
   tasks.push(...wikiUrls.map(u=>fetchWikiThumb(u).then(url=>{
     url=sanitizeImageUrl(url);
-    add(url?{url,label:'Wiki 縮圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Thumb'}:null);
+    add(url?{url,label:'Wiki縮圖('+parseWiki(u)?.lang+')',source:'Wiki-Thumb'}:null);
   })));
   tasks.push(...wikiUrls.map(u=>fetchWikiOrig(u).then(url=>{
     url=sanitizeImageUrl(url);
-    add(url?{url,label:'Wiki 原圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null);
+    add(url?{url,label:'Wiki原圖('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null);
   })));
+  // Fallback: search by event name on Wikipedia (en + zh)
+  // This helps events like 三十年戰爭 that have wiki URLs but also catches others
+  if (ev.en) tasks.push(fetchWikiByTitle(ev.en,'en').then(url=>{
+    url=sanitizeImageUrl(url);
+    add(url?{url,label:'Wiki搜尋(en: '+ev.en+')',source:'Wiki-Search'}:null);
+  }));
+  if (ev.zh) tasks.push(fetchWikiByTitle(ev.zh,'zh').then(url=>{
+    url=sanitizeImageUrl(url);
+    add(url?{url,label:'Wiki搜尋(zh: '+ev.zh+')',source:'Wiki-Search'}:null);
+  }));
 
   await Promise.allSettled(tasks);
   return candidates;
@@ -530,6 +596,104 @@ function pickerKeep() {
   _pickerResolve=null;
 }
 
+// ══ VALIDATE EXISTING IMAGES ══
+let _validateStop = false;
+let _brokenEvents = [];
+
+async function validateExistingImages() {
+  if (!eventsData) return;
+  _validateStop = false;
+  _brokenEvents = [];
+  const withImg = eventsData.events.filter(e => e.image);
+  const total = withImg.length;
+
+  document.getElementById('btn-validate').disabled = true;
+  document.getElementById('btn-validate-stop').style.display = '';
+  document.getElementById('validate-progress').style.display = '';
+  document.getElementById('validate-broken-wrap').style.display = 'none';
+  document.getElementById('validate-status').textContent = `檢查中... 0 / ${total}`;
+
+  const BATCH = 8; // parallel checks per batch
+  for (let i = 0; i < withImg.length; i += BATCH) {
+    if (_validateStop) break;
+    const batch = withImg.slice(i, Math.min(i+BATCH, withImg.length));
+    await Promise.all(batch.map(async ev => {
+      const ok = await testImageLoad(ev.image, 6000);
+      if (!ok) _brokenEvents.push(ev);
+    }));
+    const done = Math.min(i + BATCH, withImg.length);
+    const pct = Math.round(done / total * 100);
+    document.getElementById('validate-fill').style.width = pct + '%';
+    document.getElementById('validate-text').textContent = `${done} / ${total}`;
+    document.getElementById('validate-status').textContent =
+      `檢查中... ${done} / ${total}${_brokenEvents.length ? `　⚠ 已發現 ${_brokenEvents.length} 個失效` : ''}`;
+  }
+
+  document.getElementById('btn-validate').disabled = false;
+  document.getElementById('btn-validate-stop').style.display = 'none';
+  document.getElementById('validate-fill').style.width = '100%';
+
+  if (_brokenEvents.length === 0) {
+    document.getElementById('validate-status').textContent = `✓ 全部 ${total} 個圖片連結有效！`;
+    return;
+  }
+
+  document.getElementById('validate-status').textContent =
+    `完成：${total} 個中發現 ${_brokenEvents.length} 個失效連結`;
+  renderBrokenList();
+}
+
+function validateStop() { _validateStop = true; }
+
+function renderBrokenList() {
+  const listEl = document.getElementById('validate-broken-list');
+  const countEl = document.getElementById('validate-broken-count');
+  const wrap = document.getElementById('validate-broken-wrap');
+  countEl.textContent = `⚠ 發現 ${_brokenEvents.length} 個失效圖片連結`;
+  listEl.innerHTML = '';
+  _brokenEvents.forEach(ev => {
+    const item = document.createElement('div');
+    item.className = 'broken-item';
+    item.id = 'broken-' + ev.id;
+    item.innerHTML = `
+      <img class="broken-thumb" src="${ev.image}" onerror="this.style.opacity='0.2'">
+      <div class="broken-info">
+        <div class="broken-zh">${ev.zh}</div>
+        <div class="broken-url">${ev.image}</div>
+      </div>
+      <div class="broken-actions">
+        <button class="btn-clear" onclick="clearOneBroken('${ev.id}')">清除</button>
+      </div>`;
+    listEl.appendChild(item);
+  });
+  wrap.style.display = '';
+}
+
+function clearOneBroken(id) {
+  const ev = eventsData.events.find(e => e.id === id);
+  if (ev) { delete ev.image; }
+  _brokenEvents = _brokenEvents.filter(e => e.id !== id);
+  const item = document.getElementById('broken-' + id);
+  if (item) item.remove();
+  document.getElementById('validate-broken-count').textContent =
+    `⚠ 發現 ${_brokenEvents.length} 個失效圖片連結${_brokenEvents.length===0?' — 已全部清除':''}`;
+  if (_brokenEvents.length === 0)
+    document.getElementById('validate-status').textContent = '✓ 所有失效連結已清除，記得下載更新後的 JSON';
+}
+
+function clearAllBroken() {
+  _brokenEvents.forEach(ev => {
+    const e = eventsData.events.find(x => x.id === ev.id);
+    if (e) delete e.image;
+  });
+  _brokenEvents = [];
+  document.getElementById('validate-broken-list').innerHTML =
+    '<p style="color:var(--green);padding:10px">✓ 已清除所有失效連結，記得下載更新後的 JSON</p>';
+  document.getElementById('validate-broken-count').textContent = '✓ 全部清除完成';
+  document.getElementById('validate-status').textContent = '✓ 所有失效連結已清除，記得下載更新後的 JSON';
+  document.getElementById('step-download').classList.remove('hide');
+}
+
 // ══ LOG ══
 function log(msg,cls='log-info'){
   const el=document.getElementById('log');
@@ -565,9 +729,9 @@ async function runUpdate() {
       continue;
     }
 
-    if(!ev.wiki_zh && !ev.wiki_en && ev.category!=='astronomy' && ev.category!=='geology'){
+    if(!ev.wiki_zh && !ev.wiki_en && !ev.en && !ev.zh){
       statFail++; document.getElementById('stat-fail').textContent=statFail;
-      log(`✗ ${ev.zh}（無來源連結）`,'log-fail');
+      log(`✗ ${ev.zh}（無任何來源可搜尋）`,'log-fail');
       results.push({ev,status:'fail',img:null});
       continue;
     }
