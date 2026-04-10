@@ -741,22 +741,35 @@ const TIMELINE_END   = FUTURE_END;
 //  AXIS TREE
 // ════════════════════════════════════════════
 const AXES = {
-  cosmos:      { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null, parent:null,         order: 0, zoomMin:0    },
-  earth:       { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 1, zoomMin:0    },
-  life:        { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null, parent:'earth',      order: 2, zoomMin:0    },
-  'human-evo': { color:'#fbbf24', label:'人類演化', startYear:-4000000,     endYear:null, parent:'life',       order: 3, zoomMin:0    },
-  cross:       { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null, parent:'human-evo',  order: 4, zoomMin:0    },
-  east:        { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null, parent:'cross',      order: 5, zoomMin:0    },
-  mideast:     { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null, parent:'east',       order: 6, zoomMin:0.58 },
-  india:       { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null, parent:'east',       order: 7, zoomMin:0.58 },
-  china:       { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null, parent:'east',       order: 8, zoomMin:0.58 },
-  'china-b':   { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null, parent:'china',      order: 9, zoomMin:0.75 },
-  taiwan:      { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null, parent:'east',       order:10, zoomMin:0.58 },
-  japan:       { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null, parent:'east',       order:11, zoomMin:0.58 },
-  west:        { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null, parent:'cross',      order:12, zoomMin:0    },
-  greece:      { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,  parent:'west',       order:13, zoomMin:0.58 },
-  europe:      { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null, parent:'west',       order:14, zoomMin:0.58 },
-  americas:    { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null, parent:'west',       order:15, zoomMin:0.58 },
+  cosmos:       { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null, parent:null,         order: 0,  zoomMin:0    },
+  'solar-system':{ color:'#818cf8', label:'太陽系',   startYear:-4600000000,  endYear:null, parent:'cosmos',     order: 1,  zoomMin:0.15 },
+  earth:        { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 2,  zoomMin:0    },
+  life:         { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null, parent:'earth',      order: 3,  zoomMin:0    },
+  'human-evo':  { color:'#fbbf24', label:'人類演化', startYear:-4000000,     endYear:null, parent:'life',       order: 4,  zoomMin:0    },
+  cross:        { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null, parent:'human-evo',  order: 5,  zoomMin:0    },
+
+  // ── 東方文明 ──
+  east:         { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null, parent:'cross',      order: 6,  zoomMin:0    },
+  mideast:      { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null, parent:'east',       order: 7,  zoomMin:0.58 },
+  india:        { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null, parent:'east',       order: 8,  zoomMin:0.58 },
+  china:        { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null, parent:'east',       order: 9,  zoomMin:0.58 },
+  'china-b':    { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null, parent:'china',      order:10,  zoomMin:0.75 },
+  taiwan:       { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null, parent:'east',       order:11,  zoomMin:0.58 },
+  japan:        { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null, parent:'east',       order:12,  zoomMin:0.58 },
+
+  // ── 西方文明 ──
+  west:         { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null, parent:'cross',      order:13,  zoomMin:0    },
+  greece:       { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,  parent:'west',       order:14,  zoomMin:0.58 },
+  europe:       { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null, parent:'west',       order:15,  zoomMin:0.58 },
+  americas:     { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null, parent:'west',       order:16,  zoomMin:0.58 },
+
+  // ── 宗教軸 ──
+  judaism:      { color:'#fcd34d', label:'猶太教',   startYear:-2000,        endYear:null, parent:'mideast',    order:17,  zoomMin:0.58 },
+  christianity: { color:'#f0abfc', label:'基督教',   startYear:30,           endYear:null, parent:'greece',     order:18,  zoomMin:0.58 },
+  islam:        { color:'#6ee7b7', label:'伊斯蘭教', startYear:610,          endYear:null, parent:'mideast',    order:19,  zoomMin:0.58 },
+  buddhism:     { color:'#fda4af', label:'佛教',     startYear:-490,         endYear:null, parent:'india',      order:20,  zoomMin:0.58 },
+  hinduism:     { color:'#fbbf24', label:'印度教',   startYear:-1500,        endYear:null, parent:'india',      order:21,  zoomMin:0.65 },
+  taoism:       { color:'#86efac', label:'道教',     startYear:-550,         endYear:null, parent:'china',      order:22,  zoomMin:0.65 },
 };
 
 // ── 間距常數 ──
@@ -1096,7 +1109,7 @@ function drawAxisLines() {
     if (!ax.parent) return;
     const parentAx = AXES[ax.parent];
     if (!parentAx) return;
-    if (!yMap.has(ax.parent)) return;   // parent not visible
+    if (!yMap.has(ax.parent)) return;
 
     const y       = yMap.get(id);
     const parentY = yMap.get(ax.parent);
@@ -1109,21 +1122,32 @@ function drawAxisLines() {
     const color   = ax.color;
     const forkX   = Math.max(-80, startX);
     const dy      = y - parentY;
-    // Bend width proportional to vertical distance, capped
-    const bendW   = Math.min(Math.abs(dy) * 0.9, 70);
+
+    // Corner radius — smaller when dy is small
+    const r = Math.min(Math.abs(dy) * 0.45, 18);
 
     ctx.save();
     ctx.globalAlpha = alpha * 0.75;
-    ctx.beginPath();
-    ctx.moveTo(forkX, parentY);
-    ctx.bezierCurveTo(
-      forkX + bendW,        parentY,
-      forkX + bendW * 0.5,  y,
-      forkX + bendW * 1.2,  y
-    );
     ctx.strokeStyle = color;
     ctx.lineWidth   = ax.zoomMin > 0 ? 1.0 : 1.4;
     ctx.setLineDash([]);
+    ctx.beginPath();
+
+    // Start on parent line at forkX
+    // Go straight down (or up) to near child Y, then curve right
+    if (dy > 0) {
+      // Child is below parent
+      ctx.moveTo(forkX, parentY);
+      ctx.lineTo(forkX, y - r);
+      ctx.arcTo(forkX, y, forkX + r, y, r);
+      ctx.lineTo(forkX + r * 2.5, y);
+    } else {
+      // Child is above parent
+      ctx.moveTo(forkX, parentY);
+      ctx.lineTo(forkX, y + r);
+      ctx.arcTo(forkX, y, forkX + r, y, r);
+      ctx.lineTo(forkX + r * 2.5, y);
+    }
     ctx.stroke();
 
     // Fork dot on parent line
@@ -1131,6 +1155,7 @@ function drawAxisLines() {
       ctx.beginPath();
       ctx.arc(forkX, parentY, 2.5, 0, Math.PI * 2);
       ctx.fillStyle = color;
+      ctx.globalAlpha = alpha * 0.9;
       ctx.fill();
     }
     ctx.restore();
@@ -1145,16 +1170,14 @@ function drawAxisLines() {
 
     if (startX > canvasW || endX < 0) return;
 
-    // When zoomed out, if startYear is off-screen to the right,
-    // draw a ghost line from left edge so the axis is always visible
     let lineFrom;
     if (ax.parent && yMap.has(ax.parent)) {
       const parentY = yMap.get(ax.parent);
       const dy      = y - parentY;
-      const bendW   = Math.min(Math.abs(dy) * 0.9, 70);
+      const r       = Math.min(Math.abs(dy) * 0.45, 18);
       const forkX   = Math.max(-80, startX);
-      const branchLanding = forkX + bendW * 1.2;
-      lineFrom = Math.max(0, branchLanding);
+      // Line starts right after the corner
+      lineFrom = Math.max(0, forkX + r * 2.5);
     } else {
       lineFrom = Math.max(0, startX);
     }
@@ -1184,13 +1207,32 @@ function drawAxisLines() {
       ctx.globalAlpha = alpha;
     }
 
+    const nowX  = yearToX(NOW);
+    // Clamp solid line to NOW (or endYear if earlier)
+    const solidTo = Math.min(lineTo, nowX);
+
     ctx.beginPath();
     ctx.moveTo(lineFrom, y);
-    ctx.lineTo(lineTo, y);
+    ctx.lineTo(solidTo, y);
     ctx.strokeStyle = color;
     ctx.lineWidth   = ax.zoomMin > 0 ? 1.1 : 1.6;
     ctx.setLineDash([]);
     ctx.stroke();
+
+    // Future portion — only draw if this axis has events after NOW
+    const hasFutureEvents = events.some(ev => ev.axis === id && ev.year > NOW);
+    if (hasFutureEvents && nowX < lineTo && nowX < canvasW) {
+      ctx.beginPath();
+      ctx.moveTo(Math.max(nowX, lineFrom), y);
+      ctx.lineTo(lineTo, y);
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = ax.zoomMin > 0 ? 0.9 : 1.2;
+      ctx.globalAlpha = alpha * 0.35;
+      ctx.setLineDash([4, 6]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.globalAlpha = alpha;
+    }
 
     // Ended civilisation — dashed tail after endYear
     if (ax.endYear != null) {
