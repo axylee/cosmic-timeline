@@ -686,12 +686,12 @@ function eventVisible(ev) {
   const ax = AXES[ev.axis];
   if (!ax) return false;
   if (hiddenAxes.has(ev.axis)) return false;
-  // Use same visibility logic as getVisibleAxes
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   const checkEnd = zoom >= 0.58;
   if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
   if (ev.level === 1) return true;
-  if (ev.level === 2) return zoom > 0.25;
+  // Level 2: show when span < 10 billion years (reasonable zoom for geological scale)
+  if (ev.level === 2) return zoom > 0.10;
   if (ev.level === 3) return zoom > 0.55;
   return zoom > 0.7;
 }
@@ -712,25 +712,33 @@ function contentHeight() {
 function formatYear(y) {
   const abs = Math.abs(y);
   if (y < 0) {
-    // 過去
-    if (abs >= 1_000_000_000) return (abs / 1e9).toFixed(1) + ' 億年前';
-    if (abs >= 1_000_000)     return (abs / 1e6).toFixed(1) + ' 百萬年前';
-    if (abs >= 10_000)        return (abs / 10000).toFixed(1) + ' 萬年前';
-    if (abs >= 1_000)         return Math.round(abs / 1000) + ' 千年前';
+    if (abs >= 1_000_000_000) {
+      const v = abs / 1e9;
+      return (v >= 10 ? v.toFixed(0) : v.toFixed(1)) + ' 億年前';
+    }
+    if (abs >= 100_000_000)  return (abs / 1e8).toFixed(1) + ' 千萬年前';
+    if (abs >= 10_000_000)   return (abs / 1e6).toFixed(0) + ' 百萬年前';
+    if (abs >= 1_000_000)    return (abs / 1e6).toFixed(1) + ' 百萬年前';
+    if (abs >= 10_000)       return (abs / 10000).toFixed(1) + ' 萬年前';
+    if (abs >= 1_000)        return Math.round(abs / 1000) + ' 千年前';
     return `西元前 ${Math.round(abs)} 年`;
   }
   if (y === 0) return '西元元年';
-  // 未來或現代
   if (y > NOW) return `西元 ${Math.round(y)} 年（未來）`;
   return `西元 ${Math.round(y)} 年`;
 }
+
 function formatYearShort(y) {
   const abs = Math.abs(y);
   if (y < 0) {
-    if (abs >= 1_000_000_000) return (abs / 1e9).toFixed(1) + 'B yr';
-    if (abs >= 1_000_000)     return (abs / 1e6).toFixed(0) + 'M yr';
-    if (abs >= 10_000)        return (abs / 10000).toFixed(1) + '萬年前';
-    if (abs >= 1_000)         return Math.round(abs / 1000) + 'K BC';
+    if (abs >= 1_000_000_000) {
+      const v = abs / 1e9;
+      return (v >= 10 ? v.toFixed(0) : v.toFixed(1)) + '億yr';
+    }
+    if (abs >= 100_000_000)  return (abs / 1e8).toFixed(0) + '千萬yr';
+    if (abs >= 1_000_000)    return (abs / 1e6).toFixed(0) + 'Myr';
+    if (abs >= 10_000)       return (abs / 10000).toFixed(1) + '萬BC';
+    if (abs >= 1_000)        return Math.round(abs / 1000) + 'K BC';
     return Math.round(abs) + ' BC';
   }
   if (y === 0) return 'AD 0';

@@ -89,21 +89,6 @@
   ],
   "events": [
     {
-      "id": "big-bang",
-      "year": -13800000000,
-      "zh": "宇宙大爆炸",
-      "en": "The Big Bang",
-      "axis": "cosmos",
-      "track": 0,
-      "level": 1,
-      "desc_zh": "宇宙從一個極度高溫、高密度的奇點爆炸膨脹，時間、空間與物質同時誕生。",
-      "desc_en": "The universe exploded from an infinitely dense singularity, creating space, time, and matter in an instant.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CMB_Timeline300_no_WMAP.jpg/1280px-CMB_Timeline300_no_WMAP.jpg",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/大爆炸",
-      "wiki_en": "https://en.wikipedia.org/wiki/Big_Bang",
-      "sub_track": 0
-    },
-    {
       "id": "big-bang-event",
       "year": -13800000000,
       "zh": "宇宙大爆炸",
@@ -499,7 +484,6 @@
     {
       "id": "cenozoic",
       "year": -66000000,
-      "endYear": null,
       "zh": "新生代（至今）",
       "en": "Cenozoic Era (to present)",
       "axis": "life",
@@ -527,7 +511,6 @@
     {
       "id": "quaternary-glaciation",
       "year": -2600000,
-      "endYear": null,
       "zh": "第四紀冰河期（至今）",
       "en": "Quaternary Glaciation (ongoing)",
       "axis": "earth",
@@ -1860,7 +1843,6 @@
     {
       "id": "tw-roc",
       "year": 1949,
-      "endYear": null,
       "zh": "中華民國遷臺",
       "en": "ROC Government in Taiwan",
       "axis": "taiwan",
