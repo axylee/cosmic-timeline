@@ -779,35 +779,44 @@ const TIMELINE_END   = FUTURE_END;
 //  AXIS TREE
 // ════════════════════════════════════════════
 const AXES = {
-  cosmos:       { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null, parent:null,         order: 0,  zoomMin:0    },
+  // ── 自然科學 ──
+  cosmos:        { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null, parent:null,         order: 0,  zoomMin:0    },
   'solar-system':{ color:'#818cf8', label:'太陽系',   startYear:-4600000000,  endYear:null, parent:'cosmos',     order: 1,  zoomMin:0    },
-  earth:        { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 2,  zoomMin:0    },
-  life:         { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null, parent:'earth',      order: 3,  zoomMin:0    },
-  'human-evo':  { color:'#fbbf24', label:'人類演化', startYear:-4000000,     endYear:null, parent:'life',       order: 4,  zoomMin:0    },
-  cross:        { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null, parent:'human-evo',  order: 5,  zoomMin:0    },
+  earth:         { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 2,  zoomMin:0    },
+  life:          { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null, parent:'earth',      order: 3,  zoomMin:0    },
+  'human-evo':   { color:'#fbbf24', label:'人類演化', startYear:-4000000,     endYear:null, parent:'life',       order: 4,  zoomMin:0    },
+
+  // ── 跨文明 ──
+  cross:         { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null, parent:'human-evo',  order: 5,  zoomMin:0    },
 
   // ── 東方文明 ──
-  east:         { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null, parent:'cross',      order: 6,  zoomMin:0    },
-  mideast:      { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null, parent:'east',       order: 7,  zoomMin:0.58 },
-  india:        { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null, parent:'east',       order: 8,  zoomMin:0.58 },
-  china:        { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null, parent:'east',       order: 9,  zoomMin:0.58 },
-  'china-b':    { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null, parent:'china',      order:10,  zoomMin:0.75 },
-  taiwan:       { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null, parent:'east',       order:11,  zoomMin:0.58 },
-  japan:        { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null, parent:'east',       order:12,  zoomMin:0.58 },
+  east:          { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null, parent:'cross',      order: 6,  zoomMin:0    },
+
+  // 中東 + 宗教
+  mideast:       { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null, parent:'east',       order: 7,  zoomMin:0.58 },
+  judaism:       { color:'#fcd34d', label:'猶太教',   startYear:-2000,        endYear:null, parent:'mideast',    order: 8,  zoomMin:0.58 },
+  christianity:  { color:'#f0abfc', label:'基督教',   startYear:30,           endYear:null, parent:'judaism',    order: 9,  zoomMin:0.58 },
+  islam:         { color:'#6ee7b7', label:'伊斯蘭教', startYear:610,          endYear:null, parent:'mideast',    order:10,  zoomMin:0.58 },
+
+  // 印度 + 宗教
+  india:         { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null, parent:'east',       order:11,  zoomMin:0.58 },
+  hinduism:      { color:'#fbbf24', label:'印度教',   startYear:-1500,        endYear:null, parent:'india',      order:12,  zoomMin:0.65 },
+  buddhism:      { color:'#fda4af', label:'佛教',     startYear:-490,         endYear:null, parent:'hinduism',   order:13,  zoomMin:0.58 },
+
+  // 中國 + 宗教
+  china:         { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null, parent:'east',       order:14,  zoomMin:0.58 },
+  'china-b':     { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null, parent:'china',      order:15,  zoomMin:0.75 },
+  taoism:        { color:'#86efac', label:'道教',     startYear:-550,         endYear:null, parent:'china',      order:16,  zoomMin:0.65 },
+
+  // 其他東方
+  taiwan:        { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null, parent:'east',       order:17,  zoomMin:0.58 },
+  japan:         { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null, parent:'east',       order:18,  zoomMin:0.58 },
 
   // ── 西方文明 ──
-  west:         { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null, parent:'cross',      order:13,  zoomMin:0    },
-  greece:       { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,  parent:'west',       order:14,  zoomMin:0.58 },
-  europe:       { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null, parent:'west',       order:15,  zoomMin:0.58 },
-  americas:     { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null, parent:'west',       order:16,  zoomMin:0.58 },
-
-  // ── 宗教軸 ──
-  judaism:      { color:'#fcd34d', label:'猶太教',   startYear:-2000,        endYear:null, parent:'mideast',    order:17,  zoomMin:0.58 },
-  christianity: { color:'#f0abfc', label:'基督教',   startYear:30,           endYear:null, parent:'greece',     order:18,  zoomMin:0.58 },
-  islam:        { color:'#6ee7b7', label:'伊斯蘭教', startYear:610,          endYear:null, parent:'mideast',    order:19,  zoomMin:0.58 },
-  buddhism:     { color:'#fda4af', label:'佛教',     startYear:-490,         endYear:null, parent:'india',      order:20,  zoomMin:0.58 },
-  hinduism:     { color:'#fbbf24', label:'印度教',   startYear:-1500,        endYear:null, parent:'india',      order:21,  zoomMin:0.65 },
-  taoism:       { color:'#86efac', label:'道教',     startYear:-550,         endYear:null, parent:'china',      order:22,  zoomMin:0.65 },
+  west:          { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null, parent:'cross',      order:19,  zoomMin:0    },
+  greece:        { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,  parent:'west',       order:20,  zoomMin:0.58 },
+  europe:        { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null, parent:'west',       order:21,  zoomMin:0.58 },
+  americas:      { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null, parent:'west',       order:22,  zoomMin:0.58 },
 };
 
 // ════════════════════════════════════════════
@@ -816,36 +825,11 @@ const AXES = {
 // Five category groups — each has a distinct hue family
 // Individual axis colors stay within their group's hue range
 const AXIS_GROUPS = {
-  // 自然科學 — 藍紫色系
-  natural: {
-    label: '自然科學',
-    color: '#818cf8',   // indigo — shown at zoom out
-    axes: ['cosmos','solar-system','earth','life'],
-  },
-  // 人文 — 琥珀黃橙色系
-  human: {
-    label: '人文',
-    color: '#fb923c',   // orange
-    axes: ['human-evo','cross'],
-  },
-  // 宗教 — 粉紫玫瑰色系
-  religion: {
-    label: '宗教',
-    color: '#e879f9',   // fuchsia
-    axes: ['judaism','christianity','islam','buddhism','hinduism','taoism'],
-  },
-  // 文明 — 紅珊瑚色系（大文明圈）
-  civilization: {
-    label: '文明',
-    color: '#f87171',   // coral red
-    axes: ['east','west','mideast','india','greece'],
-  },
-  // 國家地區 — 各自保留現有顏色，統一標記為此組
-  nation: {
-    label: '國家地區',
-    color: '#fbbf24',   // amber
-    axes: ['china','china-b','taiwan','japan','europe','americas'],
-  },
+  natural:      { label:'自然科學', color:'#818cf8', axes:['cosmos','solar-system','earth','life'] },
+  human:        { label:'人文',     color:'#fb923c', axes:['human-evo','cross'] },
+  religion:     { label:'宗教',     color:'#e879f9', axes:['judaism','christianity','islam','buddhism','hinduism','taoism'] },
+  civilization: { label:'文明',     color:'#f87171', axes:['east','west','mideast','india','greece'] },
+  nation:       { label:'國家地區', color:'#fbbf24', axes:['china','china-b','taiwan','japan','europe','americas'] },
 };
 
 // Build reverse map: axisId → groupKey
