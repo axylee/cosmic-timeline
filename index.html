@@ -2253,11 +2253,17 @@ function showPopup(ev) {
   // Image
   const imgWrap = document.getElementById('popup-img-wrap');
   if (ev.image) {
-    imgWrap.innerHTML = `<img class="popup-img" src="${ev.image}" alt="${ev.zh}"
-      onerror="this.parentNode.innerHTML='<div class=\'popup-img-placeholder\'><svg width=\'64\' height=\'64\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20\'/></svg></div>'"
-    >`;
+    imgWrap.innerHTML = '';
+    const img = document.createElement('img');
+    img.className = 'popup-img';
+    img.src = ev.image;
+    img.alt = ev.zh;
+    img.onerror = () => {
+      imgWrap.innerHTML = '<div class="popup-img-placeholder"><div style="text-align:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><div style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-family:sans-serif">圖片無法載入，點 ✏ 編輯更換 URL</div></div></div>';
+    };
+    imgWrap.appendChild(img);
   } else {
-    imgWrap.innerHTML = `<div class="popup-img-placeholder"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>`;
+    imgWrap.innerHTML = '<div class="popup-img-placeholder"><div style="text-align:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><div style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-family:sans-serif">尚無圖片，點 ✏ 編輯加入 URL</div></div></div>';
   }
 
   // Tag
