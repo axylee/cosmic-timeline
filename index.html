@@ -1375,19 +1375,27 @@ function updateScrollbar() {
 //  PAN & ZOOM HELPERS
 // ════════════════════════════════════════════
 
-// Hard boundary clamp — never go outside [TIMELINE_START, FUTURE_END]
+// Hard boundary clamp
+// Left:  TIMELINE_START (big bang) never goes past screen centre
+// Right: FUTURE_END never goes past screen centre
 function clampView() {
-  const span = viewEnd - viewStart;
-  if (viewStart < TIMELINE_START) {
-    viewStart = TIMELINE_START;
-    viewEnd   = TIMELINE_START + span;
+  const span = viewStart === viewEnd ? 1 : viewEnd - viewStart;
+  const half = span / 2;
+
+  // Left limit: viewStart must be >= TIMELINE_START - half
+  // (big bang is at screen centre when viewStart = TIMELINE_START - half)
+  const leftLimit = TIMELINE_START - half;
+  // Right limit: viewEnd must be <= FUTURE_END + half
+  const rightLimit = FUTURE_END + half;
+
+  if (viewStart < leftLimit) {
+    viewStart = leftLimit;
+    viewEnd   = viewStart + span;
   }
-  if (viewEnd > FUTURE_END) {
-    viewEnd   = FUTURE_END;
-    viewStart = FUTURE_END - span;
+  if (viewEnd > rightLimit) {
+    viewEnd   = rightLimit;
+    viewStart = viewEnd - span;
   }
-  // Extra safety: if span > full range, fit exactly
-  if (viewStart < TIMELINE_START) viewStart = TIMELINE_START;
 }
 
 function panBy(fraction) {
