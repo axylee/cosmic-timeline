@@ -2217,8 +2217,6 @@ document.querySelectorAll('.leg').forEach(el => {
 // ════════════════════════════════════════════
 function buildParentTree() {
   // Only period events (those with endYear) can be children.
-  // Point events (no endYear) are never hidden under a parent pill —
-  // they always render as dots on the axis line.
   const periodsByAxis = {};
   events.forEach(ev => {
     if (!ev.endYear) return;
@@ -2228,20 +2226,21 @@ function buildParentTree() {
 
   events.forEach(child => {
     child._autoParent = null;
-    if (!child.endYear) return;   // ← point events never get a parent
+    if (!child.endYear) return;   // point events never get a parent
 
-    const peers    = periodsByAxis[child.axis] || [];
-    const cSpan    = child.endYear - child.year;
+    const peers = periodsByAxis[child.axis] || [];
+    const cSpan = child.endYear - child.year;
     let bestParent = null;
     let bestSpan   = Infinity;
 
     peers.forEach(parent => {
       if (parent.id === child.id) return;
       const pSpan = parent.endYear - parent.year;
-      if (pSpan <= cSpan) return;   // parent must be strictly larger
+      if (pSpan <= cSpan) return;   // parent must be strictly larger span
 
-      // Strict containment (not just touching at boundary)
-      if (child.year > parent.year && child.endYear < parent.endYear) {
+      // Containment: child fits within parent (boundaries may be equal)
+      // but parent span must be strictly larger (already checked above)
+      if (child.year >= parent.year && child.endYear <= parent.endYear) {
         if (pSpan < bestSpan) {
           bestParent = parent;
           bestSpan   = pSpan;
