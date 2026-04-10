@@ -503,28 +503,40 @@ const TIMELINE_END   = FUTURE_END;
 //  parent  : 父軸 id（null = 根軸）
 // ════════════════════════════════════════════
 const AXES = {
-  // ── 主幹 ── (zoomMin:0 = 永遠顯示)
-  cosmos:    { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null,  parent:null,        order: 0,  zoomMin:0    },
-  earth:     { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null,  parent:'cosmos',    order: 1,  zoomMin:0    },
-  life:      { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null,  parent:'earth',     order: 2,  zoomMin:0    },
-  'human-evo':{ color:'#fbbf24', label:'人類演化', startYear:-4000000,    endYear:null,  parent:'life',      order: 3,  zoomMin:0    },
-  cross:     { color:'#e2e8f0', label:'跨文明',   startYear:-10000,       endYear:null,  parent:'human-evo', order: 4,  zoomMin:0    },
+  // ── 主幹 ──
+  cosmos:         { color:'#a78bfa', label:'宇宙',      startYear:-13800000000, endYear:null, parent:null,         order: 0,  zoomMin:0    },
+  earth:          { color:'#60a5fa', label:'地球',      startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 1,  zoomMin:0    },
+  // 地球子軸
+  'earth-early':  { color:'#93c5fd', label:'早期地球',  startYear:-4540000000,  endYear:null, parent:'earth',      order: 2,  zoomMin:0.15 },
+  'earth-ice':    { color:'#bfdbfe', label:'冰河事件',  startYear:-2400000000,  endYear:null, parent:'earth',      order: 3,  zoomMin:0.20 },
 
-  // ── 東方文明 + 子軸（order 按 startYear 早→晚從上到下）──
-  east:      { color:'#f87171', label:'東方文明', startYear:-3500,        endYear:null,  parent:'cross',     order: 5,  zoomMin:0    },
-  mideast:   { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null,  parent:'east',      order: 6,  zoomMin:0.58 },
-  india:     { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null,  parent:'east',      order: 7,  zoomMin:0.58 },
-  china:     { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null,  parent:'east',      order: 8,  zoomMin:0.58 },
-  // 中國並立政權子軸（zoom 更深才顯示，用於春秋戰國/三國/五代十國等分裂時期）
-  'china-b': { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null,  parent:'china',     order: 9,  zoomMin:0.75 },
-  taiwan:    { color:'#f9a8d4', label:'臺灣',     startYear:-30000,       endYear:null,  parent:'east',      order:10,  zoomMin:0.58 },
-  japan:     { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null,  parent:'east',      order:11,  zoomMin:0.58 },
+  life:           { color:'#34d399', label:'生命',      startYear:-3800000000,  endYear:null, parent:'earth',      order: 4,  zoomMin:0    },
+  // 生命子軸
+  'paleozoic-ax': { color:'#6ee7b7', label:'古生代細節', startYear:-541000000,  endYear:-252000000, parent:'life', order: 5,  zoomMin:0.30 },
+  'mesozoic-ax':  { color:'#a7f3d0', label:'中生代細節', startYear:-252000000,  endYear:-66000000,  parent:'life', order: 6,  zoomMin:0.30 },
+
+  'human-evo':    { color:'#fbbf24', label:'人類演化',  startYear:-4000000,     endYear:null, parent:'life',       order: 7,  zoomMin:0    },
+  // 人類演化子軸
+  'homo-detail':  { color:'#fde68a', label:'人屬細節',  startYear:-2600000,     endYear:null, parent:'human-evo',  order: 8,  zoomMin:0.45 },
+
+  cross:          { color:'#e2e8f0', label:'跨文明',    startYear:-10000,       endYear:null, parent:'human-evo',  order: 9,  zoomMin:0    },
+
+  // ── 東方文明 + 子軸 ──
+  east:           { color:'#f87171', label:'東方文明',  startYear:-3500,        endYear:null, parent:'cross',      order:10,  zoomMin:0    },
+  mideast:        { color:'#fde68a', label:'中東',      startYear:-3500,        endYear:null, parent:'east',       order:11,  zoomMin:0.58 },
+  india:          { color:'#86efac', label:'印度',      startYear:-2600,        endYear:null, parent:'east',       order:12,  zoomMin:0.58 },
+  china:          { color:'#fca5a5', label:'中國',      startYear:-2070,        endYear:null, parent:'east',       order:13,  zoomMin:0.58 },
+  'china-b':      { color:'#fb923c', label:'並立政權',  startYear:-771,         endYear:null, parent:'china',      order:14,  zoomMin:0.75 },
+  'china-rel':    { color:'#fcd34d', label:'思想宗教',  startYear:-551,         endYear:null, parent:'china',      order:15,  zoomMin:0.80 },
+  taiwan:         { color:'#f9a8d4', label:'臺灣',      startYear:-30000,       endYear:null, parent:'east',       order:16,  zoomMin:0.58 },
+  japan:          { color:'#fdba74', label:'日本',      startYear:-300,         endYear:null, parent:'east',       order:17,  zoomMin:0.58 },
 
   // ── 西方文明 + 子軸 ──
-  west:      { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null,  parent:'cross',     order:12,  zoomMin:0    },
-  greece:    { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,   parent:'west',      order:13,  zoomMin:0.58 },
-  europe:    { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null,  parent:'west',      order:14,  zoomMin:0.58 },
-  americas:  { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null,  parent:'west',      order:15,  zoomMin:0.58 },
+  west:           { color:'#c084fc', label:'西方文明',  startYear:-3500,        endYear:null, parent:'cross',      order:18,  zoomMin:0    },
+  greece:         { color:'#c4b5fd', label:'希臘羅馬',  startYear:-800,         endYear:476,  parent:'west',       order:19,  zoomMin:0.58 },
+  europe:         { color:'#a5b4fc', label:'歐洲',      startYear:500,          endYear:null, parent:'west',       order:20,  zoomMin:0.58 },
+  'europe-sci':   { color:'#818cf8', label:'科學革命',  startYear:1543,         endYear:1800, parent:'europe',     order:21,  zoomMin:0.80 },
+  americas:       { color:'#93c5fd', label:'美洲',      startYear:1492,         endYear:null, parent:'west',       order:22,  zoomMin:0.58 },
 };
 
 // ── 間距常數 ──
@@ -1070,14 +1082,48 @@ function drawBranchLines(eventsInView) {
   });
 }
 
+
+// ════════════════════════════════════════════
+//  LABEL COLLISION REGISTRY  (reset each frame)
+// ════════════════════════════════════════════
+let _labelReg = [];
+
+function _regClear() { _labelReg = []; }
+
+function _regTest(x1, y1, x2, y2) {
+  for (const r of _labelReg) {
+    if (x1 < r.x2 + 2 && x2 > r.x1 - 2 && y1 < r.y2 + 2 && y2 > r.y1 - 2) return true;
+  }
+  return false;
+}
+
+function _regAdd(x1, y1, x2, y2) { _labelReg.push({x1, y1, x2, y2}); }
+
+// Try to place label at prefY; if blocked try alternates. Returns placed Y or null.
+function _tryPlace(cx, prefY, tw, th, alts) {
+  const hw = tw / 2 + 4;
+  for (const dy of [0, ...alts]) {
+    const y = prefY + dy;
+    if (!_regTest(cx - hw, y - th, cx + hw, y + 2)) {
+      _regAdd(cx - hw, y - th, cx + hw, y + 2);
+      return y;
+    }
+  }
+  return null;
+}
+
 // ════════════════════════════════════════════
 //  DRAW EVENTS — points + period blocks
 // ════════════════════════════════════════════
 function drawEvents(eventsInView) {
   const zoom = currentZoom();
+  _regClear();
 
-  // ── Pass 1: period blocks (rounded pill style) ──
-  eventsInView.forEach(ev => {
+  // Sort: level 1 first so they claim label space before level 2/3
+  const sorted = [...eventsInView].sort((a, b) => (a.level||3) - (b.level||3));
+
+  // ── Pass 1: period pill blocks ──
+  sorted.forEach(ev => {
     if (!eventVisible(ev)) return;
     if (!ev.endYear) return;
 
@@ -1088,33 +1134,30 @@ function drawEvents(eventsInView) {
     const y     = axisY(ev.axis);
     const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
     const isHov = hoveredEvent && hoveredEvent.id === ev.id;
-    const rx1   = Math.max(-40, x1);   // allow slight overflow for radius
+    const rx1   = Math.max(-40, x1);
     const rx2   = Math.min(canvasW + 40, x2);
     const w     = rx2 - rx1;
     if (w < 2) return;
 
-    // Height of the pill — scales with zoom level, min 5px
-    const pillH  = isHov ? 10 : Math.max(5, Math.min(10, 5 + zoom * 8));
-    const radius = pillH;  // full round ends
-    // Clamp radius so it doesn't exceed half-width
-    const r      = Math.min(radius, w / 2);
+    const pillH = isHov ? 10 : Math.max(5, Math.min(10, 5 + zoom * 8));
+    const r     = Math.min(pillH, w / 2);
 
     ctx.save();
 
-    // ── Pill fill — 50% transparent ──
+    // Pill fill 50% transparent
     ctx.beginPath();
     ctx.roundRect(rx1, y - pillH, w, pillH * 2, r);
     ctx.fillStyle = color;
     ctx.globalAlpha = isHov ? 0.55 : 0.35;
     ctx.fill();
 
-    // ── Pill border (slightly more opaque) ──
+    // Pill border
     ctx.strokeStyle = color;
     ctx.lineWidth   = isHov ? 1.5 : 1;
     ctx.globalAlpha = isHov ? 0.9 : 0.65;
     ctx.stroke();
 
-    // ── Centre spine line ──
+    // Centre spine
     ctx.beginPath();
     ctx.moveTo(rx1 + r, y);
     ctx.lineTo(rx2 - r, y);
@@ -1125,56 +1168,55 @@ function drawEvents(eventsInView) {
 
     ctx.restore();
 
-    // ── Label — inside pill if wide enough, otherwise above ──
-    const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.35) || (ev.level === 3 && zoom > 0.6);
-    if (showLabel) {
-      ctx.save();
-      const fontSize = ev.level === 1 ? 11 : 10;
-      ctx.font = `${ev.level === 1 ? '500 ' : ''}${fontSize}px "Noto Sans TC", sans-serif`;
-      const tw     = ctx.measureText(ev.zh).width;
-      const midX   = Math.max(rx1 + r, Math.min(rx2 - r, (rx1 + rx2) / 2));
-      const clampX = Math.max(tw / 2 + 4, Math.min(canvasW - tw / 2 - 4, midX));
+    // Label with collision detection
+    const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.20) || (ev.level === 3 && zoom > 0.6);
+    if (!showLabel) return;
 
-      // Place inside pill if it fits, otherwise above
-      const fitsInside = w > tw + 16;
-      const labelY     = fitsInside ? y + fontSize * 0.35 : y - pillH - 5;
+    ctx.save();
+    const fs = ev.level === 1 ? 11 : 10;
+    ctx.font = `${ev.level === 1 ? '500 ' : ''}${fs}px "Noto Sans TC", sans-serif`;
+    const tw     = ctx.measureText(ev.zh).width;
+    const midX   = (rx1 + rx2) / 2;
+    const cx     = Math.max(tw / 2 + 4, Math.min(canvasW - tw / 2 - 4, midX));
+    const inside = w > tw + 16;
+    const prefY  = inside ? y + fs * 0.35 : y - pillH - 5;
+    const alts   = inside ? [] : [-14, 14, -28, 28];
+    const py     = _tryPlace(cx, prefY, tw, fs + 4, alts);
 
-      if (!fitsInside) {
-        // Small label background above pill
-        ctx.fillStyle = 'rgba(5,8,16,0.78)';
+    if (py !== null) {
+      if (!inside || py !== prefY) {
+        ctx.fillStyle = 'rgba(5,8,16,0.80)';
         ctx.beginPath();
-        ctx.roundRect(clampX - tw / 2 - 4, labelY - fontSize, tw + 8, fontSize + 3, 3);
+        ctx.roundRect(cx - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
         ctx.fill();
       }
-
-      ctx.fillStyle = isHov ? color : (fitsInside
-        ? `rgba(255,255,255,${ev.level === 1 ? 0.9 : 0.7})`
+      ctx.fillStyle = isHov ? color : (inside && py === prefY
+        ? `rgba(255,255,255,${ev.level === 1 ? 0.9 : 0.75})`
         : `rgba(221,216,200,${ev.level === 1 ? 0.9 : 0.65})`);
       ctx.textAlign = 'center';
-      ctx.fillText(ev.zh, clampX, labelY);
-      ctx.restore();
+      ctx.fillText(ev.zh, cx, py);
     }
+    ctx.restore();
   });
 
-  // ── Pass 2: point events (no endYear) ──
-  eventsInView.forEach(ev => {
+  // ── Pass 2: point events ──
+  sorted.forEach(ev => {
     if (!eventVisible(ev)) return;
-    if (ev.endYear) return;           // skip period events
+    if (ev.endYear) return;
 
-    const x = yearToX(ev.year);
+    const x  = yearToX(ev.year);
     if (x < -20 || x > canvasW + 20) return;
 
-    const y        = axisY(ev.axis);
-    const r        = dotRadius(ev);
-    const color    = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
-    const isHovered = hoveredEvent && hoveredEvent.id === ev.id;
+    const y     = axisY(ev.axis);
+    const r     = dotRadius(ev);
+    const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
+    const isHov = hoveredEvent && hoveredEvent.id === ev.id;
 
-    // Connector line to ruler for level 1
+    // Connector to ruler (level 1 only)
     if (ev.level === 1 && zoom > 0.1) {
-      const rulerY = canvasH - 38;
       ctx.beginPath();
       ctx.moveTo(x, y + r);
-      ctx.lineTo(x, rulerY);
+      ctx.lineTo(x, canvasH - 38);
       ctx.strokeStyle = color + '18';
       ctx.lineWidth = 1;
       ctx.setLineDash([2, 5]);
@@ -1183,10 +1225,10 @@ function drawEvents(eventsInView) {
     }
 
     // Glow
-    if (isHovered || ev.level === 1) {
+    if (isHov || ev.level === 1) {
       ctx.beginPath();
-      ctx.arc(x, y, r + (isHovered ? 8 : 4), 0, Math.PI * 2);
-      const grad = ctx.createRadialGradient(x, y, 0, x, y, r + (isHovered ? 8 : 4));
+      ctx.arc(x, y, r + (isHov ? 8 : 4), 0, Math.PI * 2);
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, r + (isHov ? 8 : 4));
       grad.addColorStop(0, color + '40');
       grad.addColorStop(1, color + '00');
       ctx.fillStyle = grad;
@@ -1196,7 +1238,7 @@ function drawEvents(eventsInView) {
     // Dot
     ctx.beginPath();
     ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fillStyle = isHovered ? color : color + 'cc';
+    ctx.fillStyle = isHov ? color : color + 'cc';
     ctx.fill();
 
     if (ev.level === 1) {
@@ -1207,17 +1249,28 @@ function drawEvents(eventsInView) {
       ctx.stroke();
     }
 
-    // Label
-    const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.35) || (ev.level === 3 && zoom > 0.6);
-    if (showLabel) {
-      const labelY = y - r - 7;
-      ctx.font = ev.level === 1
-        ? '500 11px "Noto Sans TC", sans-serif'
-        : '10px "Noto Sans TC", sans-serif';
+    // Label with collision detection
+    const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.20) || (ev.level === 3 && zoom > 0.6);
+    if (!showLabel) return;
+
+    ctx.save();
+    const fs = ev.level === 1 ? 11 : 10;
+    ctx.font = ev.level === 1
+      ? '500 11px "Noto Sans TC", sans-serif'
+      : '10px "Noto Sans TC", sans-serif';
+    const tw  = ctx.measureText(ev.zh).width;
+    const py  = _tryPlace(x, y - r - 8, tw, fs + 4, [-13, 13, -26, 26, -39]);
+
+    if (py !== null) {
+      ctx.fillStyle = 'rgba(5,8,16,0.72)';
+      ctx.beginPath();
+      ctx.roundRect(x - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
+      ctx.fill();
+      ctx.fillStyle = isHov ? color : `rgba(221,216,200,${ev.level === 1 ? 0.88 : 0.60})`;
       ctx.textAlign = 'center';
-      ctx.fillStyle = isHovered ? color : `rgba(221,216,200,${ev.level === 1 ? 0.85 : 0.55})`;
-      ctx.fillText(ev.zh, x, labelY);
+      ctx.fillText(ev.zh, x, py);
     }
+    ctx.restore();
   });
 }
 
