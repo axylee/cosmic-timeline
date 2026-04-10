@@ -709,20 +709,30 @@ function contentHeight() {
 // ════════════════════════════════════════════
 function formatYear(y) {
   const abs = Math.abs(y);
-  if (abs >= 1_000_000_000) return (y < 0 ? '' : '+') + (abs / 1e9).toFixed(1) + ' 億年前';
-  if (abs >= 1_000_000)    return (y < 0 ? '' : '+') + (abs / 1e6).toFixed(1) + ' 百萬年前';
-  if (abs >= 1_000)        return (y < 0 ? '' : '+') + Math.abs(y).toFixed(0) + ' 年前';
-  if (y < 0)               return `西元前 ${Math.abs(y)} 年`;
-  if (y === 0)             return '西元元年';
-  return `西元 ${y} 年`;
+  if (y < 0) {
+    // 過去
+    if (abs >= 1_000_000_000) return (abs / 1e9).toFixed(1) + ' 億年前';
+    if (abs >= 1_000_000)     return (abs / 1e6).toFixed(1) + ' 百萬年前';
+    if (abs >= 10_000)        return (abs / 10000).toFixed(1) + ' 萬年前';
+    if (abs >= 1_000)         return Math.round(abs / 1000) + ' 千年前';
+    return `西元前 ${Math.round(abs)} 年`;
+  }
+  if (y === 0) return '西元元年';
+  // 未來或現代
+  if (y > NOW) return `西元 ${Math.round(y)} 年（未來）`;
+  return `西元 ${Math.round(y)} 年`;
 }
 function formatYearShort(y) {
   const abs = Math.abs(y);
-  if (abs >= 1_000_000_000) return (abs / 1e9).toFixed(1) + 'B yr';
-  if (abs >= 1_000_000)    return (abs / 1e6).toFixed(0) + 'M yr';
-  if (abs >= 1_000)        return (abs / 1e3).toFixed(0) + 'K yr';
-  if (y < 0)               return `${Math.abs(y)} BC`;
-  return `AD ${y}`;
+  if (y < 0) {
+    if (abs >= 1_000_000_000) return (abs / 1e9).toFixed(1) + 'B yr';
+    if (abs >= 1_000_000)     return (abs / 1e6).toFixed(0) + 'M yr';
+    if (abs >= 10_000)        return (abs / 10000).toFixed(1) + '萬年前';
+    if (abs >= 1_000)         return Math.round(abs / 1000) + 'K BC';
+    return Math.round(abs) + ' BC';
+  }
+  if (y === 0) return 'AD 0';
+  return 'AD ' + Math.round(y);
 }
 
 // ════════════════════════════════════════════
