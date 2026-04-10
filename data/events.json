@@ -4247,7 +4247,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/The_Nine_Chapters_on_the_Mathematical_Art",
       "category": "math",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/%E4%B9%9D%E7%AB%A0%E7%AE%97%E8%A1%93%E7%B4%B0%E8%8D%89%E5%9C%96%E8%AA%AA.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/%E4%B9%9D%E7%AB%A0%E7%AE%97%E8%A1%93%E7%B4%B0%E8%8D%89%E5%9C%96%E8%AA%AA.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "silk-origin",
@@ -4278,7 +4279,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Dujiangyan",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dujiang_Weir.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dujiang_Weir.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "steel-china",
@@ -4293,7 +4295,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_metallurgy_in_China",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "papermaking",
@@ -4340,7 +4343,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Armillary_sphere",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Armillary_sphere_with_astronomical_clock.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Armillary_sphere_with_astronomical_clock.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "hua-tuo",
@@ -4371,7 +4375,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Liu_Hui%27s_%CF%80_algorithm",
       "category": "math",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Cutcircle2.svg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Cutcircle2.svg",
+      "crossRef": "cross"
     },
     {
       "id": "huangdi-neijing",
@@ -4386,7 +4391,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Huangdi_Neijing",
       "category": "medicine",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Koteidaikei_Myodo.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Koteidaikei_Myodo.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "variolation",
@@ -4449,7 +4455,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Pascal%27s_triangle",
       "category": "math",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif",
+      "crossRef": "cross"
     },
     {
       "id": "zu-chongzhi-pi",
@@ -4464,7 +4471,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Zu_Chongzhi",
       "category": "math",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "gunpowder",
@@ -4495,7 +4503,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Grand_Canal_(China)",
       "category": "civilization",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/%E5%A4%A7%E9%81%8B%E6%B2%B3.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/%E5%A4%A7%E9%81%8B%E6%B2%B3.png",
+      "crossRef": "cross"
     },
     {
       "id": "yi-xing-meridian",
@@ -4510,7 +4519,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Yi_Xing",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Beijing_Ancient_Observatory_20090715-22.jpg/1280px-Beijing_Ancient_Observatory_20090715-22.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Beijing_Ancient_Observatory_20090715-22.jpg/1280px-Beijing_Ancient_Observatory_20090715-22.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "guo-shoujing-calendar",
@@ -4525,7 +4535,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Guo_Shoujing",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Guo_Shoujing-beijing.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Guo_Shoujing-beijing.JPG",
+      "crossRef": "cross"
     },
     {
       "id": "bencao-gangmu",
@@ -4556,7 +4567,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Xu_Xiake",
       "category": "exploration",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Travels_of_Xu_Xiake.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Travels_of_Xu_Xiake.png",
+      "crossRef": "cross"
     },
     {
       "id": "zheng-he-voyages",
