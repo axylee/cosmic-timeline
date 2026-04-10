@@ -514,13 +514,15 @@ const AXES = {
   mideast:   { color:'#fde68a', label:'中東',     startYear:-3500,        endYear:null,  parent:'east',      order: 6,  zoomMin:0.58 },
   india:     { color:'#86efac', label:'印度',     startYear:-2600,        endYear:null,  parent:'east',      order: 7,  zoomMin:0.58 },
   china:     { color:'#fca5a5', label:'中國',     startYear:-2070,        endYear:null,  parent:'east',      order: 8,  zoomMin:0.58 },
-  japan:     { color:'#fdba74', label:'日本',     startYear:-660,         endYear:null,  parent:'east',      order: 9,  zoomMin:0.58 },
+  // 中國並立政權子軸（zoom 更深才顯示，用於春秋戰國/三國/五代十國等分裂時期）
+  'china-b': { color:'#fb923c', label:'並立政權', startYear:-771,         endYear:null,  parent:'china',     order: 9,  zoomMin:0.75 },
+  japan:     { color:'#fdba74', label:'日本',     startYear:-300,         endYear:null,  parent:'east',      order:10,  zoomMin:0.58 },
 
   // ── 西方文明 + 子軸 ──
-  west:      { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null,  parent:'cross',     order:10,  zoomMin:0    },
-  greece:    { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,   parent:'west',      order:11,  zoomMin:0.58 },
-  europe:    { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null,  parent:'west',      order:12,  zoomMin:0.58 },
-  americas:  { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null,  parent:'west',      order:13,  zoomMin:0.58 },
+  west:      { color:'#c084fc', label:'西方文明', startYear:-3500,        endYear:null,  parent:'cross',     order:11,  zoomMin:0    },
+  greece:    { color:'#c4b5fd', label:'希臘羅馬', startYear:-800,         endYear:476,   parent:'west',      order:12,  zoomMin:0.58 },
+  europe:    { color:'#a5b4fc', label:'歐洲',     startYear:500,          endYear:null,  parent:'west',      order:13,  zoomMin:0.58 },
+  americas:  { color:'#93c5fd', label:'美洲',     startYear:1492,         endYear:null,  parent:'west',      order:14,  zoomMin:0.58 },
 };
 
 // ── 間距常數 ──
@@ -583,9 +585,9 @@ function getAxisY(id) {
   return getAxisYMap().get(id) ?? (canvasH * 0.5 + yOffset);
 }
 
+// Events always sit exactly ON their axis line — sub_track ignored
 function axisY(axisId, subtrack = 0) {
-  const gap = LANE_GAP_BASE * Math.max(1, yScale);
-  return getAxisY(axisId) + subtrack * Math.min(gap * 0.35, 18);
+  return getAxisY(axisId);
 }
 
 function contentHeight() {
