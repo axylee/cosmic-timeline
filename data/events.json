@@ -565,7 +565,8 @@
       "desc_en": "China's first dynasty, founded by Yu the Great.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/China_Xia_dynasty.svg/640px-China_Xia_dynasty.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/夏朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Xia_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Xia_dynasty",
+      "endYear": -1600
     },
     {
       "id": "hammurabi",
@@ -594,7 +595,8 @@
       "desc_en": "The Shang Dynasty saw the creation of oracle bone script and the peak of Bronze Age culture.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Shang_dynasty_oracle_bone.jpg/640px-Shang_dynasty_oracle_bone.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/商朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Shang_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Shang_dynasty",
+      "endYear": -1046
     },
     {
       "id": "trojan-war",
@@ -623,7 +625,8 @@
       "desc_en": "Zhou Wuwang overthrew the Shang and established the feudal system.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Zhou_dynasty_territories.png/640px-Zhou_dynasty_territories.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/西周",
-      "wiki_en": "https://en.wikipedia.org/wiki/Western_Zhou"
+      "wiki_en": "https://en.wikipedia.org/wiki/Western_Zhou",
+      "endYear": -771
     },
     {
       "id": "homer",
@@ -652,7 +655,8 @@
       "desc_en": "Decline of Zhou; rise of competing states and the Hundred Schools of Thought.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Confucius_Tang_Dynasty.jpg/640px-Confucius_Tang_Dynasty.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/春秋時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Spring_and_Autumn_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Spring_and_Autumn_period",
+      "endYear": -475
     },
     {
       "id": "zhou-states",
@@ -665,7 +669,8 @@
       "desc_zh": "周室東遷後諸侯林立，春秋五霸、戰國七雄先後稱霸。",
       "desc_en": "After Zhou moved east, rival states dominated: Five Hegemons in Spring & Autumn, Seven Kingdoms in Warring States.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/東周",
-      "wiki_en": "https://en.wikipedia.org/wiki/Eastern_Zhou"
+      "wiki_en": "https://en.wikipedia.org/wiki/Eastern_Zhou",
+      "endYear": -221
     },
     {
       "id": "confucius-birth",
@@ -738,7 +743,8 @@
       "desc_en": "Seven major states vie for dominance; military strategy and philosophy flourish.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warring_States_Map.png/640px-Warring_States_Map.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/戰國時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/Warring_States_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Warring_States_period",
+      "endYear": -221
     },
     {
       "id": "alexander",
@@ -767,7 +773,8 @@
       "desc_en": "Rice agriculture arrives in Japan; metal tools appear; Japan enters agricultural civilization.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Yayoi_period_map.png/640px-Yayoi_period_map.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/彌生時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Yayoi_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Yayoi_period",
+      "endYear": 250
     },
     {
       "id": "roman-republic",
@@ -782,7 +789,8 @@
       "desc_en": "Rome defeats Carthage in the Punic Wars, gradually establishing dominance over the entire Mediterranean region.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Roman-colosseum-2.jpg/800px-Roman-colosseum-2.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/羅馬共和國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Roman_Republic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Roman_Republic",
+      "endYear": -27
     },
     {
       "id": "qin",
@@ -796,7 +804,8 @@
       "desc_en": "Qin Shi Huang unifies China, standardizes writing, weights, and builds the Great Wall.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Qinshihuang.jpg/640px-Qinshihuang.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/秦朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Qin_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Qin_dynasty",
+      "endYear": -206
     },
     {
       "id": "han",
@@ -810,7 +819,8 @@
       "desc_en": "The Han Dynasty shapes Chinese national identity, opens the Silk Road, and adopts Confucianism as state doctrine.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Han_dynasty_china.png/640px-Han_dynasty_china.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/漢朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Han_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Han_dynasty",
+      "endYear": 220
     },
     {
       "id": "silk-road",
@@ -869,7 +879,8 @@
       "desc_en": "Wei, Shu, and Wu compete for dominance; legendary figures like Zhuge Liang and Cao Cao.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Three_Kingdoms.png/640px-Three_Kingdoms.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms"
+      "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
+      "endYear": 280
     },
     {
       "id": "three-kingdoms-wei",
@@ -882,7 +893,8 @@
       "desc_zh": "三國鼎立：曹魏佔北方，蜀漢據西南，孫吳控東南，群雄爭霸。",
       "desc_en": "Three Kingdoms: Cao Wei in the north, Shu Han in the southwest, Eastern Wu in the southeast.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms"
+      "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
+      "endYear": 280
     },
     {
       "id": "yamato",
@@ -896,7 +908,8 @@
       "desc_en": "Yamato state unifies Japan; imperial system established; Buddhism introduced from Korea.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Yamato_period.png/640px-Yamato_period.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大和時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Yamato_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Yamato_period",
+      "endYear": 710
     },
     {
       "id": "jin-dynasty",
@@ -910,7 +923,8 @@
       "desc_en": "Brief reunification under Jin Wudi, followed by fragmentation and the Sixteen Kingdoms in the north.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Jin_dynasty_280_CE.png/640px-Jin_dynasty_280_CE.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/晉朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Jin_dynasty_(265%E2%80%93420)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Jin_dynasty_(265%E2%80%93420)",
+      "endYear": 420
     },
     {
       "id": "sixteen-kingdoms",
@@ -923,7 +937,8 @@
       "desc_zh": "北方五個少數民族建立十六個政權，與東晉南北對峙。",
       "desc_en": "Five northern ethnic groups establish sixteen states; coexist with Eastern Jin in the south.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五胡十六國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Sixteen_Kingdoms"
+      "wiki_en": "https://en.wikipedia.org/wiki/Sixteen_Kingdoms",
+      "endYear": 439
     },
     {
       "id": "northern-southern",
@@ -937,7 +952,8 @@
       "desc_en": "North-south division; Buddhism flourishes; Emperor Xiaowen of Northern Wei promotes Sinicization.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/NorthernSouthernDynasties.png/640px-NorthernSouthernDynasties.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南北朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Northern_and_Southern_dynasties"
+      "wiki_en": "https://en.wikipedia.org/wiki/Northern_and_Southern_dynasties",
+      "endYear": 581
     },
     {
       "id": "roman-empire-fall",
@@ -966,7 +982,8 @@
       "desc_en": "Reunification of China; Grand Canal constructed; imperial examination system established.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sui_dynasty_circa_605_CE.png/640px-Sui_dynasty_circa_605_CE.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/隋朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Sui_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Sui_dynasty",
+      "endYear": 618
     },
     {
       "id": "tang",
@@ -980,7 +997,8 @@
       "desc_en": "Tang Dynasty is China's golden age; Chang'an is the world's largest city; poetry and arts flourish.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Tang_Dynasty_circa_700_CE.png/640px-Tang_Dynasty_circa_700_CE.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/唐朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty",
+      "endYear": 907
     },
     {
       "id": "islam",
@@ -1009,7 +1027,8 @@
       "desc_en": "Nara capital built under Tang influence; Heian era sees kana script and The Tale of Genji.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Heian_period_map.png/640px-Heian_period_map.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/平安時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Heian_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Heian_period",
+      "endYear": 1185
     },
     {
       "id": "viking-age",
@@ -1024,7 +1043,8 @@
       "desc_en": "Norse Vikings begin extensive sea voyages for raiding, trading, and colonization, reaching as far as North America.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Oseberg_skib_1_retouched.jpg/800px-Oseberg_skib_1_retouched.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/維京人",
-      "wiki_en": "https://en.wikipedia.org/wiki/Viking_Age"
+      "wiki_en": "https://en.wikipedia.org/wiki/Viking_Age",
+      "endYear": 1100
     },
     {
       "id": "five-dynasties",
@@ -1038,7 +1058,8 @@
       "desc_en": "After the Tang, five dynasties succeed in the north while ten kingdoms coexist in the south.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Five_Dynasties_Ten_Kingdoms_953_CE.png/640px-Five_Dynasties_Ten_Kingdoms_953_CE.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五代十國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
+      "endYear": 960
     },
     {
       "id": "five-dynasties-kingdoms",
@@ -1051,7 +1072,8 @@
       "desc_zh": "北方五朝更迭，南方十個獨立政權並立，政治動盪五十年。",
       "desc_en": "Five successive dynasties in the north; ten independent kingdoms in the south for fifty turbulent years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/五代十國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
+      "endYear": 960
     },
     {
       "id": "song",
@@ -1065,7 +1087,8 @@
       "desc_en": "Song Dynasty sees widespread use of movable type, gunpowder, and compass; commercial and technological golden age.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/JikjiType.jpg/640px-JikjiType.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/宋朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Song_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Song_dynasty",
+      "endYear": 1279
     },
     {
       "id": "crusades",
@@ -1080,7 +1103,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/CrusadersBesiegingJerusalem.jpg/800px-CrusadersBesiegingJerusalem.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/十字軍東征",
       "wiki_en": "https://en.wikipedia.org/wiki/Crusades",
-      "sub_track": 0
+      "sub_track": 0,
+      "endYear": 1291
     },
     {
       "id": "liao-jin-song",
@@ -1093,7 +1117,8 @@
       "desc_zh": "南宋偏安江南，金國控北方，蒙古崛起前的三國並立局面。",
       "desc_en": "Southern Song in the south, Jin in the north, and rising Mongols — three powers before Yuan unification.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南宋",
-      "wiki_en": "https://en.wikipedia.org/wiki/Southern_Song_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Southern_Song_dynasty",
+      "endYear": 1279
     },
     {
       "id": "samurai-era",
@@ -1107,7 +1132,8 @@
       "desc_en": "Kamakura shogunate established; samurai class rises; Japan enters warrior-governed era.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Samurai_in_armour.jpg/640px-Samurai_in_armour.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/武士",
-      "wiki_en": "https://en.wikipedia.org/wiki/Samurai"
+      "wiki_en": "https://en.wikipedia.org/wiki/Samurai",
+      "endYear": 1868
     },
     {
       "id": "mongol-empire",
@@ -1122,7 +1148,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Genghis_Khan_at_age_60.jpg/640px-Genghis_Khan_at_age_60.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蒙古帝國",
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_Empire",
-      "sub_track": 0
+      "sub_track": 0,
+      "endYear": 1368
     },
     {
       "id": "yuan",
@@ -1136,7 +1163,8 @@
       "desc_en": "Kublai Khan establishes Yuan; Marco Polo visits; unprecedented East-West exchange.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Yuan_Dynasty_1294.png/640px-Yuan_Dynasty_1294.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/元朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Yuan_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Yuan_dynasty",
+      "endYear": 1368
     },
     {
       "id": "black-death",
@@ -1151,7 +1179,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Danse_macabre_by_Michael_Wolgemut.jpg/800px-Danse_macabre_by_Michael_Wolgemut.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/黑死病",
       "wiki_en": "https://en.wikipedia.org/wiki/Black_Death",
-      "sub_track": 0
+      "sub_track": 0,
+      "endYear": 1353
     },
     {
       "id": "ming",
@@ -1165,7 +1194,8 @@
       "desc_en": "Ming Dynasty established; Zheng He's voyages; Great Wall takes modern form; Forbidden City built.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Yongle_Emperor%281.jpg/640px-Yongle_Emperor%281.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/明朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty",
+      "endYear": 1644
     },
     {
       "id": "renaissance",
@@ -1180,7 +1210,8 @@
       "desc_en": "The Renaissance begins in Italy, reviving humanism and producing towering figures like Leonardo da Vinci and Michelangelo.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/640px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/文藝復興",
-      "wiki_en": "https://en.wikipedia.org/wiki/Renaissance"
+      "wiki_en": "https://en.wikipedia.org/wiki/Renaissance",
+      "endYear": 1600
     },
     {
       "id": "printing-press",
@@ -1254,7 +1285,8 @@
       "desc_en": "Tokugawa shogunate; sakoku isolation policy; 265 years of peace; ukiyo-e and kabuki culture flourish.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Tokugawa_Ieyasu2.jpg/640px-Tokugawa_Ieyasu2.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/江戶時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Edo_period"
+      "wiki_en": "https://en.wikipedia.org/wiki/Edo_period",
+      "endYear": 1868
     },
     {
       "id": "qing",
@@ -1268,7 +1300,8 @@
       "desc_en": "Manchu Qing Dynasty peaks under three emperors, then faces Western imperialism and the Opium Wars.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Qian_Long.jpg/640px-Qian_Long.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/清朝",
-      "wiki_en": "https://en.wikipedia.org/wiki/Qing_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Qing_dynasty",
+      "endYear": 1912
     },
     {
       "id": "newton",
@@ -1298,7 +1331,8 @@
       "desc_en": "Britain leads the Industrial Revolution; the steam engine transforms production and ushers humanity into the industrial age.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Maquina_vapor_Watt_ETSIIM.jpg/800px-Maquina_vapor_Watt_ETSIIM.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/工業革命",
-      "wiki_en": "https://en.wikipedia.org/wiki/Industrial_Revolution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Industrial_Revolution",
+      "endYear": 1900
     },
     {
       "id": "french-revolution",
@@ -1356,7 +1390,8 @@
       "desc_en": "Sun Yat-sen overthrows the Qing, founding the Republic of China and ending imperial rule.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sun_Yat-sen_1912.jpg/640px-Sun_Yat-sen_1912.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華民國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)",
+      "endYear": 1949
     },
     {
       "id": "ww1",
