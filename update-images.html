@@ -88,6 +88,8 @@
   .pick-source{color:var(--muted)}
   .pick-item.pick-none{border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;height:172px;gap:6px;color:var(--muted);font-size:12px}
   .pick-item.pick-none:hover{border-color:var(--red);color:var(--red)}
+  .pick-item.img-broken{opacity:0.4;border-color:var(--red);}
+  .pick-item.img-broken::after{content:'⚠ 圖片無法載入';display:block;padding:8px;font-size:10px;color:var(--red);text-align:center;}
   /* custom URL row */
   #picker-custom{display:flex;gap:8px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
   #picker-custom input{flex:1;min-width:200px}
@@ -347,6 +349,43 @@ async function fetchWikiOrig(wikiUrl) {
 
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 
+// ══ URL 清理 + 驗證 ══
+
+// 把不穩定的 Wikimedia SVG縮圖URL 轉成更穩定的格式
+function sanitizeImageUrl(url) {
+  if (!url) return url;
+
+  // 問題格式: .../thumb/x/xx/File.svg/640px-File.svg.png
+  // 這種 SVG 縮圖 URL 不穩定，改用更大尺寸或原始格式
+  if (url.includes('.svg/') && url.endsWith('.svg.png')) {
+    // 把寬度改為 1200px 並嘗試更穩定的路徑
+    url = url.replace(/\/\d+px-/, '/1200px-');
+    return url;
+  }
+
+  // 其他縮圖：確保寬度夠大（至少 800px）
+  if (url.includes('/thumb/') && url.match(/\/\d+px-/)) {
+    const w = parseInt(url.match(/\/(\d+)px-/)[1]);
+    if (w < 640) {
+      url = url.replace(/\/\d+px-/, '/1200px-');
+    }
+  }
+
+  return url;
+}
+
+// 實際測試圖片能否載入（帶 timeout）
+function testImageLoad(url, timeoutMs=5000) {
+  return new Promise(resolve => {
+    if (!url) { resolve(false); return; }
+    const img = new Image();
+    const timer = setTimeout(() => { img.src=''; resolve(false); }, timeoutMs);
+    img.onload  = () => { clearTimeout(timer); resolve(true); };
+    img.onerror = () => { clearTimeout(timer); resolve(false); };
+    img.src = url;
+  });
+}
+
 // Fetch ALL candidates from all sources simultaneously
 async function fetchAllCandidates(ev, zhFirst) {
   const wikiUrls=(zhFirst?[ev.wiki_zh,ev.wiki_en]:[ev.wiki_en,ev.wiki_zh]).filter(Boolean);
@@ -359,9 +398,15 @@ async function fetchAllCandidates(ev, zhFirst) {
   // Run all in parallel
   const tasks=[];
   if(isNaturalSci) tasks.push(fetchNasaCandidates(ev,4).then(arr=>arr.forEach(add)));
-  tasks.push(fetchWikidata(ev).then(r=>add(r)));
-  tasks.push(...wikiUrls.map(u=>fetchWikiThumb(u).then(url=>add(url?{url,label:'Wiki 縮圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Thumb'}:null))));
-  tasks.push(...wikiUrls.map(u=>fetchWikiOrig(u).then(url=>add(url?{url,label:'Wiki 原圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null))));
+  tasks.push(fetchWikidata(ev).then(r=>{ if(r) r.url=sanitizeImageUrl(r.url); add(r); }));
+  tasks.push(...wikiUrls.map(u=>fetchWikiThumb(u).then(url=>{
+    url=sanitizeImageUrl(url);
+    add(url?{url,label:'Wiki 縮圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Thumb'}:null);
+  })));
+  tasks.push(...wikiUrls.map(u=>fetchWikiOrig(u).then(url=>{
+    url=sanitizeImageUrl(url);
+    add(url?{url,label:'Wiki 原圖 ('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null);
+  })));
 
   await Promise.allSettled(tasks);
   return candidates;
@@ -398,8 +443,10 @@ function showPicker(ev, candidates) {
     candidates.forEach(c=>{
       const item=document.createElement('div'); item.className='pick-item';
       item.dataset.url=c.url;
-      item.innerHTML=`<img src="${c.url}" onerror="this.parentElement.style.display='none'" style="height:130px;object-fit:cover;width:100%">
-        <div class="pick-label"><span style="color:var(--text)">${c.label||c.source}</span><br>
+      const isSvgThumb = c.url.includes('.svg.png') || c.url.includes('.svg/');
+      const warn = isSvgThumb ? '<span style="font-size:9px;color:var(--yellow);margin-left:4px">⚠ SVG</span>' : '';
+      item.innerHTML=`<img src="${c.url}" onerror="this.parentElement.classList.add('img-broken');this.parentElement.querySelector('img').style.display='none'" style="height:130px;object-fit:cover;width:100%">
+        <div class="pick-label"><span style="color:var(--text)">${c.label||c.source}</span>${warn}<br>
         <span class="pick-source">${c.source}</span></div>`;
       item.addEventListener('click',()=>selectPickerItem(item,c.url));
       grid.appendChild(item);
@@ -437,13 +484,40 @@ function previewCustom() {
   document.querySelectorAll('.pick-item').forEach(i=>i.classList.remove('selected'));
 }
 
-function pickerConfirm() {
-  document.getElementById('picker-overlay').classList.add('hide');
+async function pickerConfirm() {
   // Check custom input first
-  const customUrl=document.getElementById('picker-url-input').value.trim();
-  if(customUrl) _selectedPickerUrl=customUrl;
-  if(_pickerResolve) _pickerResolve({action:'set', url:_selectedPickerUrl});
-  _pickerResolve=null;
+  const customUrl = document.getElementById('picker-url-input').value.trim();
+  if (customUrl) _selectedPickerUrl = sanitizeImageUrl(customUrl);
+
+  if (!_selectedPickerUrl) {
+    // Nothing selected — treat as skip
+    document.getElementById('picker-overlay').classList.add('hide');
+    if (_pickerResolve) _pickerResolve({action:'skip'});
+    _pickerResolve = null;
+    return;
+  }
+
+  // Validate: test if image actually loads
+  const statusEl = document.getElementById('picker-status');
+  statusEl.textContent = '⏳ 驗證圖片中...';
+  statusEl.style.color = 'var(--muted)';
+  document.getElementById('picker-confirm').disabled = true;
+
+  const ok = await testImageLoad(_selectedPickerUrl);
+  document.getElementById('picker-confirm').disabled = false;
+
+  if (!ok) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = '⚠ 此圖片無法載入！請重新選擇或輸入其他 URL';
+    return; // Don't close picker, let user pick again
+  }
+
+  statusEl.style.color = 'var(--green)';
+  statusEl.textContent = '✓ 圖片驗證成功';
+
+  document.getElementById('picker-overlay').classList.add('hide');
+  if (_pickerResolve) _pickerResolve({action:'set', url: _selectedPickerUrl});
+  _pickerResolve = null;
 }
 function pickerSkip() {
   document.getElementById('picker-overlay').classList.add('hide');
