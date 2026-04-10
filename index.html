@@ -712,11 +712,12 @@ function contentHeight() {
 function formatYear(y) {
   const abs = Math.abs(y);
   if (y < 0) {
-    if (abs >= 1_000_000_000) {
-      const v = abs / 1e9;
-      return (v >= 10 ? v.toFixed(0) : v.toFixed(1)) + ' 億年前';
+    if (abs >= 100_000_000) {           // ≥ 1億 → 億年前
+      const v = abs / 1e9;              // in units of 10億
+      const yi = abs / 1e8;             // in units of 1億
+      // 138億: yi=138 → "138億", 13.8億: yi=13.8 → "13.8億", 5.4億: yi=5.4 → "5.4億"
+      return (yi >= 100 ? yi.toFixed(0) : yi >= 10 ? yi.toFixed(1) : yi.toFixed(2)) + ' 億年前';
     }
-    if (abs >= 100_000_000)  return (abs / 1e8).toFixed(1) + ' 千萬年前';
     if (abs >= 10_000_000)   return (abs / 1e6).toFixed(0) + ' 百萬年前';
     if (abs >= 1_000_000)    return (abs / 1e6).toFixed(1) + ' 百萬年前';
     if (abs >= 10_000)       return (abs / 10000).toFixed(1) + ' 萬年前';
@@ -731,11 +732,10 @@ function formatYear(y) {
 function formatYearShort(y) {
   const abs = Math.abs(y);
   if (y < 0) {
-    if (abs >= 1_000_000_000) {
-      const v = abs / 1e9;
-      return (v >= 10 ? v.toFixed(0) : v.toFixed(1)) + '億yr';
+    if (abs >= 100_000_000) {
+      const yi = abs / 1e8;
+      return (yi >= 100 ? yi.toFixed(0) : yi >= 10 ? yi.toFixed(1) : yi.toFixed(2)) + '億yr';
     }
-    if (abs >= 100_000_000)  return (abs / 1e8).toFixed(0) + '千萬yr';
     if (abs >= 1_000_000)    return (abs / 1e6).toFixed(0) + 'Myr';
     if (abs >= 10_000)       return (abs / 10000).toFixed(1) + '萬BC';
     if (abs >= 1_000)        return Math.round(abs / 1000) + 'K BC';
