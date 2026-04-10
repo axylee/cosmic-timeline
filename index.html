@@ -923,16 +923,29 @@ function eventVisible(ev) {
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   const checkEnd = zoom >= 0.58;
   if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
+  // ALL point events always visible (just shrink when zoomed out)
+  // Period pills (endYear) keep their zoom thresholds
+  if (!ev.endYear) return true;
   if (ev.level === 1) return true;
-  // Level 2: show when span < 10 billion years (reasonable zoom for geological scale)
   if (ev.level === 2) return zoom > 0.10;
   if (ev.level === 3) return zoom > 0.55;
   return zoom > 0.7;
 }
+
+// Whether to show label for this event at current zoom
+function labelVisible(ev) {
+  const zoom = currentZoom();
+  if (ev.level === 1) return true;
+  if (ev.level === 2) return zoom > 0.20;
+  if (ev.level === 3) return zoom > 0.55;
+  return zoom > 0.7;
+}
+
 function dotRadius(ev) {
   const zoom = currentZoom();
+  // Minimum 2px so dots never fully disappear
   const base = ev.level === 1 ? 6 : ev.level === 2 ? 4.5 : 3;
-  return base + zoom * 2;
+  return Math.max(2, base * Math.min(1, zoom * 3 + 0.3) + zoom * 1.5);
 }
 function contentHeight() {
   const visCount = getVisibleAxes().length;
@@ -1563,20 +1576,57 @@ function drawEvents(eventsInView) {
     drawPill(ev, baseY + offset, { depth: 0, isChild: false });
   });
 
-  // ── Pass 2: point events ──
+  // ── Pass 2: point events — with cluster detection ──
+  // Group nearby dots on the same axis into clusters
+  const CLUSTER_PX = 12;  // px threshold to merge into cluster
+
+  // Build clusters per axis
+  const axisGroups = {};
   sorted.forEach(ev => {
     if (!eventVisible(ev)) return;
     if (ev.endYear) return;
-
-    const x  = yearToX(ev.year);
+    const x = yearToX(ev.year);
     if (x < -20 || x > canvasW + 20) return;
+    if (!axisGroups[ev.axis]) axisGroups[ev.axis] = [];
+    axisGroups[ev.axis].push({ ev, x });
+  });
 
-    const y     = axisY(ev.axis);
-    const r     = dotRadius(ev);
-    const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
-    const isHov = hoveredEvent && hoveredEvent.id === ev.id;
+  // For each axis, merge events within CLUSTER_PX of each other
+  const clusters = [];    // { events[], x, y, axis }
+  const clustered = new Set();
 
-    if (ev.level === 1 && zoom > 0.1) {
+  Object.entries(axisGroups).forEach(([axis, items]) => {
+    items.sort((a, b) => a.x - b.x);
+    items.forEach((item, i) => {
+      if (clustered.has(item.ev.id)) return;
+      const group = [item];
+      clustered.add(item.ev.id);
+      // Merge nearby items
+      for (let j = i + 1; j < items.length; j++) {
+        if (clustered.has(items[j].ev.id)) continue;
+        if (Math.abs(items[j].x - item.x) <= CLUSTER_PX) {
+          group.push(items[j]);
+          clustered.add(items[j].ev.id);
+        }
+      }
+      const cx = group.reduce((s, g) => s + g.x, 0) / group.length;
+      clusters.push({ events: group.map(g => g.ev), x: cx,
+                      y: axisY(axis), axis });
+    });
+  });
+
+  // Draw each cluster
+  clusters.forEach(cl => {
+    const { events: evs, x, y, axis } = cl;
+    const isCluster = evs.length > 1;
+    // Representative event = highest priority (lowest level number)
+    const rep     = evs.reduce((a, b) => (a.level||3) <= (b.level||3) ? a : b);
+    const color   = (AXES[axis] && AXES[axis].color) || '#fff';
+    const isHov   = evs.some(e => hoveredEvent && hoveredEvent.id === e.id);
+    const r       = dotRadius(rep);
+
+    // Connector to ruler (level 1 only, when zoomed in enough)
+    if (rep.level === 1 && zoom > 0.1) {
       ctx.beginPath();
       ctx.moveTo(x, y + r);
       ctx.lineTo(x, canvasH - 38);
@@ -1587,7 +1637,8 @@ function drawEvents(eventsInView) {
       ctx.setLineDash([]);
     }
 
-    if (isHov || ev.level === 1) {
+    // Glow for hovered or level 1
+    if (isHov || rep.level === 1) {
       ctx.beginPath();
       ctx.arc(x, y, r + (isHov ? 8 : 4), 0, Math.PI * 2);
       const grad = ctx.createRadialGradient(x, y, 0, x, y, r + (isHov ? 8 : 4));
@@ -1597,12 +1648,14 @@ function drawEvents(eventsInView) {
       ctx.fill();
     }
 
+    // Main dot
     ctx.beginPath();
     ctx.arc(x, y, r, 0, Math.PI * 2);
     ctx.fillStyle = isHov ? color : color + 'cc';
     ctx.fill();
 
-    if (ev.level === 1) {
+    // Inner ring for level 1 solo events
+    if (!isCluster && rep.level === 1) {
       ctx.beginPath();
       ctx.arc(x, y, r + 2, 0, Math.PI * 2);
       ctx.strokeStyle = color + '55';
@@ -1610,25 +1663,46 @@ function drawEvents(eventsInView) {
       ctx.stroke();
     }
 
-    const showLabel = ev.level === 1 || (ev.level === 2 && zoom > 0.20) || (ev.level === 3 && zoom > 0.6);
-    if (!showLabel) return;
-
-    ctx.save();
-    const fs = ev.level === 1 ? 11 : 10;
-    ctx.font = ev.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
-    const tw  = ctx.measureText(ev.zh).width;
-    const py  = _tryPlace(x, y - r - 8, tw, fs + 4, [-13, 13, -26, 26, -39]);
-
-    if (py !== null) {
-      ctx.fillStyle = 'rgba(5,8,16,0.72)';
+    // Cluster indicator: outer ring + count
+    if (isCluster) {
+      const ringR = r + 4;
       ctx.beginPath();
-      ctx.roundRect(x - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
-      ctx.fill();
-      ctx.fillStyle = isHov ? color : `rgba(221,216,200,${ev.level === 1 ? 0.88 : 0.60})`;
-      ctx.textAlign = 'center';
-      ctx.fillText(ev.zh, x, py);
+      ctx.arc(x, y, ringR, 0, Math.PI * 2);
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = isHov ? 1.5 : 1;
+      ctx.globalAlpha = isHov ? 0.9 : 0.6;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+
+      // Count badge (only show when > 2 and zoomed out enough)
+      if (evs.length > 2 && r >= 3) {
+        ctx.font = `bold ${Math.max(8, Math.round(r * 1.1))}px sans-serif`;
+        ctx.fillStyle = color;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(evs.length, x, y);
+        ctx.textBaseline = 'alphabetic';
+      }
     }
-    ctx.restore();
+
+    // Label — only when zoomed in enough and not a cluster
+    if (!isCluster && labelVisible(rep)) {
+      ctx.save();
+      const fs = rep.level === 1 ? 11 : 10;
+      ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
+      const tw  = ctx.measureText(rep.zh).width;
+      const py  = _tryPlace(x, y - r - 8, tw, fs + 4, [-13, 13, -26, 26, -39]);
+      if (py !== null) {
+        ctx.fillStyle = 'rgba(5,8,16,0.72)';
+        ctx.beginPath();
+        ctx.roundRect(x - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
+        ctx.fill();
+        ctx.fillStyle = isHov ? color : `rgba(221,216,200,${rep.level === 1 ? 0.88 : 0.60})`;
+        ctx.textAlign = 'center';
+        ctx.fillText(rep.zh, x, py);
+      }
+      ctx.restore();
+    }
   });
 }
 
@@ -2319,7 +2393,8 @@ function findEventsAt(mx, my) {
       }
     } else {
       const x = yearToX(ev.year), d = Math.hypot(mx - x, my - y);
-      if (d <= Math.max(HIT_DOT, dotRadius(ev) + 8)) results.push({ ev, dist: d });
+      // Expand hit radius to catch cluster-merged dots
+      if (d <= Math.max(HIT_DOT, dotRadius(ev) + 12)) results.push({ ev, dist: d });
     }
   });
   results.sort((a, b) => a.dist - b.dist);
