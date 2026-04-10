@@ -489,6 +489,39 @@ body {
    MOBILE / TOUCH  styles
 ═══════════════════════════════════════ */
 
+/* ── Category Indicator ── */
+#cat-indicator {
+  position: fixed;
+  top: 14px; right: 14px;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s;
+}
+#cat-indicator.visible { opacity: 1; pointer-events: all; }
+#cat-indicator-inner {
+  background: rgba(5,8,16,0.88);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+  backdrop-filter: blur(8px);
+  min-width: 130px;
+}
+.cat-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 3px 6px; border-radius: 6px;
+  cursor: pointer; transition: background .12s;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px; color: rgba(221,216,200,0.75);
+  white-space: nowrap;
+}
+.cat-item:hover { background: rgba(255,255,255,0.07); color: #fff; }
+.cat-item.active { background: rgba(255,255,255,0.10); color: #fff; }
+.cat-item.dimmed { opacity: 0.35; }
+.cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.cat-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3px 0; }
+
 /* Landscape hint — shown on portrait phones */
 #landscape-hint {
   display: none;
@@ -562,6 +595,11 @@ body {
 <body>
 
 <canvas id="stars-canvas"></canvas>
+
+<!-- Category colour indicator (top-right) -->
+<div id="cat-indicator">
+  <div id="cat-indicator-inner"></div>
+</div>
 
 <!-- Mobile landscape hint -->
 <div id="landscape-hint">
@@ -742,7 +780,7 @@ const TIMELINE_END   = FUTURE_END;
 // ════════════════════════════════════════════
 const AXES = {
   cosmos:       { color:'#a78bfa', label:'宇宙',     startYear:-13800000000, endYear:null, parent:null,         order: 0,  zoomMin:0    },
-  'solar-system':{ color:'#818cf8', label:'太陽系',   startYear:-4600000000,  endYear:null, parent:'cosmos',     order: 1,  zoomMin:0.15 },
+  'solar-system':{ color:'#818cf8', label:'太陽系',   startYear:-4600000000,  endYear:null, parent:'cosmos',     order: 1,  zoomMin:0    },
   earth:        { color:'#60a5fa', label:'地球',     startYear:-4540000000,  endYear:null, parent:'cosmos',     order: 2,  zoomMin:0    },
   life:         { color:'#34d399', label:'生命',     startYear:-3800000000,  endYear:null, parent:'earth',      order: 3,  zoomMin:0    },
   'human-evo':  { color:'#fbbf24', label:'人類演化', startYear:-4000000,     endYear:null, parent:'life',       order: 4,  zoomMin:0    },
@@ -976,6 +1014,56 @@ function dotRadius(ev) {
   const base = ev.level === 1 ? 6 : ev.level === 2 ? 4.5 : 3;
   return Math.max(2, base * Math.min(1, zoom * 3 + 0.3) + zoom * 1.5);
 }
+
+// ── Category colour system ──────────────────────
+const CATEGORY_BROAD_COLORS = {
+  natural: '#a78bfa',   // purple
+  human:   '#f87171',   // red
+};
+const CATEGORY_COLORS = {
+  astronomy:   '#a78bfa',  // purple
+  geology:     '#60a5fa',  // blue
+  biology:     '#34d399',  // green
+  science:     '#fbbf24',  // yellow
+  civilization:'#f87171',  // red
+  politics:    '#fb923c',  // orange
+  war:         '#ef4444',  // deep red
+  religion:    '#f0abfc',  // pink-purple
+  philosophy:  '#e2e8f0',  // white
+  culture:     '#fda4af',  // pink
+  exploration: '#fde68a',  // light yellow
+  medicine:    '#86efac',  // light green
+  math:        '#93c5fd',  // light blue
+};
+
+// Zoom thresholds for colour layers
+const ZOOM_BROAD    = 0.25;   // < this → broad 2-colour
+const ZOOM_CATEGORY = 0.55;   // < this → category 10-colour
+                               // ≥ this → axis colour
+
+// Highlighted category (for indicator clicks)
+let highlightedCategory = null;
+
+function eventColor(ev) {
+  const zoom = currentZoom();
+  const axisColor = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
+  if (zoom >= ZOOM_CATEGORY) return axisColor;
+  if (zoom >= ZOOM_BROAD) {
+    return CATEGORY_COLORS[ev.category] || axisColor;
+  }
+  return CATEGORY_BROAD_COLORS[ev.category_broad] || axisColor;
+}
+
+// Alpha modifier when a category is highlighted
+function categoryAlpha(ev) {
+  if (!highlightedCategory) return 1;
+  const zoom = currentZoom();
+  if (zoom >= ZOOM_CATEGORY) return 1;
+  const match = zoom >= ZOOM_BROAD
+    ? ev.category === highlightedCategory
+    : ev.category_broad === highlightedCategory;
+  return match ? 1 : 0.12;
+}
 function contentHeight() {
   const visCount = getVisibleAxes().length;
   const gap = LANE_GAP_BASE * Math.max(1, yScale);
@@ -1126,6 +1214,9 @@ function drawAxisLines() {
     // Corner radius — smaller when dy is small
     const r = Math.min(Math.abs(dy) * 0.45, 18);
 
+    const nowX    = yearToX(NOW);
+    const tailEnd = Math.min(forkX + r * 2.5, nowX);
+
     ctx.save();
     ctx.globalAlpha = alpha * 0.75;
     ctx.strokeStyle = color;
@@ -1133,20 +1224,16 @@ function drawAxisLines() {
     ctx.setLineDash([]);
     ctx.beginPath();
 
-    // Start on parent line at forkX
-    // Go straight down (or up) to near child Y, then curve right
     if (dy > 0) {
-      // Child is below parent
       ctx.moveTo(forkX, parentY);
       ctx.lineTo(forkX, y - r);
       ctx.arcTo(forkX, y, forkX + r, y, r);
-      ctx.lineTo(forkX + r * 2.5, y);
+      ctx.lineTo(tailEnd, y);
     } else {
-      // Child is above parent
       ctx.moveTo(forkX, parentY);
       ctx.lineTo(forkX, y + r);
       ctx.arcTo(forkX, y, forkX + r, y, r);
-      ctx.lineTo(forkX + r * 2.5, y);
+      ctx.lineTo(tailEnd, y);
     }
     ctx.stroke();
 
@@ -1166,7 +1253,9 @@ function drawAxisLines() {
     const y      = yMap.get(id);
     const color  = ax.color;
     const startX = yearToX(ax.startYear);
-    const endX   = ax.endYear != null ? yearToX(ax.endYear) : canvasW + 20;
+    // For open-ended axes, cap at FUTURE_END pixel (not canvasW+20 which ignores NOW)
+    const axEndYear = ax.endYear != null ? ax.endYear : FUTURE_END;
+    const endX   = yearToX(axEndYear);
 
     if (startX > canvasW || endX < 0) return;
 
@@ -1176,8 +1265,9 @@ function drawAxisLines() {
       const dy      = y - parentY;
       const r       = Math.min(Math.abs(dy) * 0.45, 18);
       const forkX   = Math.max(-80, startX);
-      // Line starts right after the corner
-      lineFrom = Math.max(0, forkX + r * 2.5);
+      const nowX2   = yearToX(NOW);
+      // Line starts right after the corner, but never past NOW
+      lineFrom = Math.max(0, Math.min(forkX + r * 2.5, nowX2));
     } else {
       lineFrom = Math.max(0, startX);
     }
@@ -1677,11 +1767,15 @@ function drawEvents(eventsInView) {
   clusters.forEach(cl => {
     const { events: evs, x, y, axis } = cl;
     const isCluster = evs.length > 1;
-    // Representative event = highest priority (lowest level number)
     const rep     = evs.reduce((a, b) => (a.level||3) <= (b.level||3) ? a : b);
-    const color   = (AXES[axis] && AXES[axis].color) || '#fff';
+    const color   = eventColor(rep);
+    const axisCol = (AXES[axis] && AXES[axis].color) || '#fff';
     const isHov   = evs.some(e => hoveredEvent && hoveredEvent.id === e.id);
     const r       = dotRadius(rep);
+    const catA    = categoryAlpha(rep);
+
+    ctx.save();
+    ctx.globalAlpha = catA;
 
     // Connector to ruler (level 1 only, when zoomed in enough)
     if (rep.level === 1 && zoom > 0.1) {
@@ -1728,11 +1822,9 @@ function drawEvents(eventsInView) {
       ctx.arc(x, y, ringR, 0, Math.PI * 2);
       ctx.strokeStyle = color;
       ctx.lineWidth   = isHov ? 1.5 : 1;
-      ctx.globalAlpha = isHov ? 0.9 : 0.6;
+      ctx.globalAlpha = catA * (isHov ? 0.9 : 0.6);
       ctx.stroke();
-      ctx.globalAlpha = 1;
-
-      // Count badge (only show when > 2 and zoomed out enough)
+      ctx.globalAlpha = catA;
       if (evs.length > 2 && r >= 3) {
         ctx.font = `bold ${Math.max(8, Math.round(r * 1.1))}px sans-serif`;
         ctx.fillStyle = color;
@@ -1742,6 +1834,8 @@ function drawEvents(eventsInView) {
         ctx.textBaseline = 'alphabetic';
       }
     }
+
+    ctx.restore();
 
     // Label — only when zoomed in enough and not a cluster
     if (!isCluster && labelVisible(rep)) {
@@ -1762,6 +1856,63 @@ function drawEvents(eventsInView) {
       ctx.restore();
     }
   });
+
+  // ── Pass 3: crossRef lines — vertical connector to target axis ──
+  // Only show when zoomed in enough (otherwise too cluttered)
+  if (zoom >= 0.55) {
+    sorted.forEach(ev => {
+      if (!ev.crossRef) return;
+      if (!eventVisible(ev)) return;
+      if (ev.endYear) return;  // only point events
+
+      const targetAx = AXES[ev.crossRef];
+      if (!targetAx) return;
+      if (hiddenAxes.has(ev.crossRef)) return;
+      if (hiddenAxes.has(ev.axis)) return;
+
+      const x      = yearToX(ev.year);
+      if (x < -20 || x > canvasW + 20) return;
+
+      const y1     = axisY(ev.axis);
+      const y2     = axisY(ev.crossRef);
+      if (Math.abs(y1 - y2) < 4) return;
+
+      const color  = eventColor(ev);
+      const catA   = categoryAlpha(ev);
+      const r      = dotRadius(ev);
+      const isHov  = hoveredEvent && hoveredEvent.id === ev.id;
+
+      ctx.save();
+      ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35);
+
+      // Vertical dashed line between the two axes
+      ctx.beginPath();
+      ctx.moveTo(x, Math.min(y1, y2) + r);
+      ctx.lineTo(x, Math.max(y1, y2) - r);
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = isHov ? 1.5 : 1;
+      ctx.setLineDash([3, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Hollow circle on target axis
+      ctx.globalAlpha = catA * (isHov ? 0.9 : 0.55);
+      ctx.beginPath();
+      ctx.arc(x, y2, r * 0.85, 0, Math.PI * 2);
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = isHov ? 2 : 1.5;
+      ctx.stroke();
+
+      // Small filled dot in center of hollow circle
+      ctx.beginPath();
+      ctx.arc(x, y2, r * 0.3, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.globalAlpha = catA * (isHov ? 0.9 : 0.5);
+      ctx.fill();
+
+      ctx.restore();
+    });
+  }
 }
 
 // ════════════════════════════════════════════
@@ -2428,16 +2579,15 @@ function findEventsAt(mx, my) {
   const HIT_PILL = isTouchDevice ? 20 : 12;
   const results  = [];
   const offsets  = getPillOffsets();
+  const zoom     = currentZoom();
 
   events.forEach(ev => {
     if (!eventVisible(ev)) return;
 
     let y = axisY(ev.axis);
-    // Apply stacking offset for partial overlaps
     if (ev.endYear && !resolvedParent(ev)) {
       y += offsets.get(ev.id) ?? 0;
     }
-    // Child pills rendered at childRowY when parent is expanded
     if (resolvedParent(ev) && expandedEvents.has(resolvedParent(ev))) {
       const parent = events.find(e => e.id === resolvedParent(ev));
       if (parent) y = childRowY(axisY(parent.axis), 1);
@@ -2451,12 +2601,25 @@ function findEventsAt(mx, my) {
       }
     } else {
       const x = yearToX(ev.year), d = Math.hypot(mx - x, my - y);
-      // Expand hit radius to catch cluster-merged dots
       if (d <= Math.max(HIT_DOT, dotRadius(ev) + 12)) results.push({ ev, dist: d });
+
+      // Also hit-test crossRef hollow circle on target axis
+      if (ev.crossRef && zoom >= 0.55 && !hiddenAxes.has(ev.crossRef)) {
+        const y2 = axisY(ev.crossRef);
+        const d2 = Math.hypot(mx - x, my - y2);
+        if (d2 <= Math.max(HIT_DOT, dotRadius(ev) + 12)) {
+          results.push({ ev, dist: d2 + 0.1 }); // slight penalty vs original
+        }
+      }
     }
   });
   results.sort((a, b) => a.dist - b.dist);
-  return results.map(r => r.ev);
+  // Deduplicate (same ev can appear twice from crossRef)
+  const seen = new Set();
+  return results.filter(r => {
+    if (seen.has(r.ev.id)) return false;
+    seen.add(r.ev.id); return true;
+  }).map(r => r.ev);
 }
 
 function findEventAt(mx, my) { return findEventsAt(mx, my)[0] || null; }
@@ -2917,6 +3080,100 @@ document.querySelectorAll('.era-btn[data-start]').forEach(btn => {
     jumpTo(start, end);
   });
 });
+
+// ════════════════════════════════════════════
+//  CATEGORY INDICATOR
+// ════════════════════════════════════════════
+const BROAD_ITEMS = [
+  { key:'natural', label:'自然 / 科學', color:'#a78bfa' },
+  { key:'human',   label:'人文 / 文明', color:'#f87171' },
+];
+const CAT_ITEMS = [
+  { key:'astronomy',   label:'天文',   color:'#a78bfa' },
+  { key:'geology',     label:'地質',   color:'#60a5fa' },
+  { key:'biology',     label:'生命演化',color:'#34d399' },
+  { key:'science',     label:'科學技術',color:'#fbbf24' },
+  null, // divider
+  { key:'civilization',label:'文明興起',color:'#f87171' },
+  { key:'politics',    label:'政治制度',color:'#fb923c' },
+  { key:'war',         label:'戰爭衝突',color:'#ef4444' },
+  { key:'religion',    label:'宗教',   color:'#f0abfc' },
+  { key:'philosophy',  label:'哲學思想',color:'#e2e8f0' },
+  { key:'culture',     label:'文化藝術',color:'#fda4af' },
+  { key:'exploration', label:'探索貿易',color:'#fde68a' },
+  { key:'medicine',    label:'醫學',   color:'#86efac' },
+  { key:'math',        label:'數學',   color:'#93c5fd' },
+];
+
+let _lastIndicatorMode = null;
+
+function updateCategoryIndicator() {
+  const zoom = currentZoom();
+  const ind  = document.getElementById('cat-indicator');
+  const inner = document.getElementById('cat-indicator-inner');
+
+  // Hide in axis-colour mode
+  if (zoom >= ZOOM_CATEGORY) {
+    ind.classList.remove('visible');
+    _lastIndicatorMode = null;
+    return;
+  }
+
+  const isBroad = zoom < ZOOM_BROAD;
+  const mode = isBroad ? 'broad' : 'category';
+
+  // Only rebuild DOM if mode changed
+  if (mode !== _lastIndicatorMode) {
+    _lastIndicatorMode = mode;
+    inner.innerHTML = '';
+    const items = isBroad ? BROAD_ITEMS : CAT_ITEMS;
+    items.forEach(item => {
+      if (!item) {
+        const d = document.createElement('div');
+        d.className = 'cat-divider';
+        inner.appendChild(d);
+        return;
+      }
+      const el = document.createElement('div');
+      el.className = 'cat-item';
+      el.dataset.key = item.key;
+      el.innerHTML = `<span class="cat-dot" style="background:${item.color}"></span>${item.label}`;
+      el.addEventListener('click', () => {
+        if (highlightedCategory === item.key) {
+          highlightedCategory = null;
+        } else {
+          highlightedCategory = item.key;
+        }
+        updateCategoryIndicator();
+        draw();
+      });
+      inner.appendChild(el);
+    });
+  }
+
+  // Update active/dimmed state
+  inner.querySelectorAll('.cat-item').forEach(el => {
+    const key = el.dataset.key;
+    if (!highlightedCategory) {
+      el.classList.remove('active','dimmed');
+    } else if (key === highlightedCategory) {
+      el.classList.add('active');
+      el.classList.remove('dimmed');
+    } else {
+      el.classList.add('dimmed');
+      el.classList.remove('active');
+    }
+  });
+
+  ind.classList.add('visible');
+}
+
+// Hook into draw cycle
+const _origDraw = draw;
+function draw() {
+  _origDraw();
+  updateCategoryIndicator();
+}
 
 // ════════════════════════════════════════════
 //  INIT
