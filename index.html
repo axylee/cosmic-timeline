@@ -882,7 +882,8 @@ function drawAxisLines() {
 
     if (startX > canvasW || endX < 0) return;
 
-    // Compute where the branch curve lands — line must start there
+    // When zoomed out, if startYear is off-screen to the right,
+    // draw a ghost line from left edge so the axis is always visible
     let lineFrom;
     if (ax.parent && yMap.has(ax.parent)) {
       const parentY = yMap.get(ax.parent);
@@ -903,6 +904,23 @@ function drawAxisLines() {
 
     ctx.save();
     ctx.globalAlpha = alpha;
+
+    // If the real startX is off-screen to the right, draw a dashed stub from
+    // the left edge so the label and line are always visible at any zoom
+    if (lineFrom > canvasW - 120 && startX > canvasW * 0.85) {
+      // Draw short stub on left as placeholder
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(80, y);
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = ax.zoomMin > 0 ? 1.1 : 1.6;
+      ctx.globalAlpha = alpha * 0.35;
+      ctx.setLineDash([3, 5]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.globalAlpha = alpha;
+    }
+
     ctx.beginPath();
     ctx.moveTo(lineFrom, y);
     ctx.lineTo(lineTo, y);
@@ -928,8 +946,9 @@ function drawAxisLines() {
     }
     ctx.restore();
 
-    // ── Label badge — placed right after branch landing (= where line starts) ──
-    const labelX = Math.min(lineFrom + 4, canvasW - 100);
+    // ── Label badge — always pinned to left edge for readability ──
+    // When axis starts off-screen right, label still shows on left
+    const labelX    = 4;
     const label     = ax.label;
     const fontSize  = ax.zoomMin > 0 ? 9 : 10;
     const pad       = 5;
