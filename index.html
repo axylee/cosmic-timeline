@@ -102,7 +102,7 @@ body {
 
 /* ─── SCALE BAR ─── */
 #scale-bar {
-  position: fixed; bottom: 56px; left: 24px; z-index: 50;
+  position: fixed; bottom: 68px; left: 20px; z-index: 50;
   display: flex; flex-direction: column; gap: 4px;
   pointer-events: none;
 }
@@ -115,76 +115,91 @@ body {
 .scale-cap { width: 1px; height: 8px; background: rgba(221,216,200,0.35); display: inline-block; }
 #scale-line { height: 2px; background: rgba(221,216,200,0.35); display: inline-block; }
 
-/* ─── ZOOM SLIDER PANEL ─── */
-#zoom-panel {
-  position: fixed; right: 18px; top: 50%; transform: translateY(-50%);
-  z-index: 50;
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  background: rgba(5,8,16,0.8);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 20px;
-  padding: 10px 8px;
+/* ─── RIGHT PANEL: V-zoom + V-scrollbar ─── */
+#right-panel {
+  position: fixed; right: 0; top: 80px; bottom: 80px;
+  width: 36px; z-index: 50;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0;
+  background: rgba(5,8,16,0.75);
+  border-left: 1px solid rgba(255,255,255,0.07);
   backdrop-filter: blur(8px);
 }
-.zoom-panel-label {
-  font-size: 14px; color: rgba(221,216,200,0.4);
+
+/* V-zoom slider top portion */
+#vzoom-wrap {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 4px; padding: 8px 0;
+  flex: 0 0 auto;
+}
+.vpanel-label {
+  font-size: 11px; color: rgba(221,216,200,0.35);
   line-height: 1; user-select: none;
-  font-family: 'Noto Sans TC', sans-serif;
-}
-#zoom-slider {
-  -webkit-appearance: slider-vertical;
-  appearance: slider-vertical;
-  writing-mode: vertical-lr;
-  direction: rtl;
-  width: 4px; height: 140px;
-  cursor: pointer;
-  accent-color: rgba(167,139,250,0.8);
-  background: transparent;
-}
-/* Divider between H and V sliders */
-.slider-divider {
-  width: 20px; height: 1px;
-  background: rgba(255,255,255,0.1);
-  margin: 2px 0;
-}
-.zoom-panel-sublabel {
-  font-size: 8px; color: rgba(221,216,200,0.25);
-  letter-spacing: 0.05em;
-  font-family: 'Noto Sans TC', sans-serif;
-  writing-mode: horizontal-tb;
 }
 #yzoom-slider {
   -webkit-appearance: slider-vertical;
   appearance: slider-vertical;
   writing-mode: vertical-lr;
   direction: rtl;
-  width: 4px; height: 80px;
+  width: 6px;
   cursor: pointer;
-  accent-color: rgba(96,165,250,0.8);
+  accent-color: rgba(96,165,250,0.7);
   background: transparent;
 }
+.vpanel-divider {
+  width: 20px; height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 4px 0; flex-shrink: 0;
+}
+
+/* V-scrollbar lower portion */
+#vscroll-wrap {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; padding: 4px 0; min-height: 0;
+}
+#vscroll-track {
+  flex: 1; width: 6px; position: relative;
+  background: rgba(255,255,255,0.07);
+  border-radius: 3px; cursor: pointer;
+  min-height: 40px;
+}
+#vscroll-thumb {
+  position: absolute; left: 0; width: 100%;
+  background: rgba(255,255,255,0.22);
+  border-radius: 3px; cursor: grab; min-height: 20px;
+  transition: background .15s;
+}
+#vscroll-thumb:hover { background: rgba(255,255,255,0.38); }
+#vscroll-thumb.dragging { background: rgba(96,165,250,0.6); cursor: grabbing; }
+
+/* Reset button */
 #btn-reset {
-  width: 26px; height: 26px;
+  width: 26px; height: 26px; flex-shrink: 0;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 50%; cursor: pointer;
-  color: rgba(221,216,200,0.45); font-size: 13px;
+  color: rgba(221,216,200,0.4); font-size: 12px;
   display: flex; align-items: center; justify-content: center;
-  transition: all .15s; line-height: 1;
+  transition: all .15s; margin: 6px 0;
 }
 #btn-reset:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
 
-/* ─── BOTTOM SCROLLBAR ─── */
+/* ─── BOTTOM BAR: H-scrollbar + H-zoom ─── */
 #bottom-bar {
-  position: fixed; bottom: 0; left: 0; right: 52px;
-  height: 42px; z-index: 50;
-  display: flex; align-items: center;
-  padding: 0 16px;
-  background: linear-gradient(to top, rgba(5,8,16,0.92) 60%, transparent);
+  position: fixed; bottom: 0; left: 0; right: 36px;
+  height: 64px; z-index: 50;
+  display: flex; flex-direction: column; align-items: stretch;
+  padding: 0 20px;
+  background: linear-gradient(to top, rgba(5,8,16,0.95) 70%, transparent);
+  gap: 6px; justify-content: flex-end; padding-bottom: 10px;
+}
+
+/* H scrollbar row */
+#hscroll-row {
+  display: flex; align-items: center; gap: 8px;
 }
 #scrollbar-track {
-  position: relative;
-  width: 100%; height: 6px;
+  position: relative; flex: 1; height: 6px;
   background: rgba(255,255,255,0.07);
   border-radius: 3px; cursor: pointer;
 }
@@ -196,6 +211,22 @@ body {
 }
 #scrollbar-thumb:hover { background: rgba(255,255,255,0.38); }
 #scrollbar-thumb.dragging { background: rgba(167,139,250,0.6); cursor: grabbing; }
+
+/* H zoom slider row — centred, 2× wider */
+#hzoom-row {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.hzoom-label {
+  font-size: 12px; color: rgba(221,216,200,0.35);
+  user-select: none; line-height: 1;
+}
+#zoom-slider {
+  width: 280px; height: 4px;
+  cursor: pointer;
+  accent-color: rgba(167,139,250,0.8);
+  -webkit-appearance: auto;
+  appearance: auto;
+}
 
 /* ─── TOOLTIP ─── */
 #tooltip {
@@ -364,23 +395,34 @@ body {
   </div>
 </div>
 
-<!-- Zoom slider — right side vertical -->
-<div id="zoom-panel">
-  <div class="zoom-panel-label">＋</div>
-  <input type="range" id="zoom-slider" min="0" max="100" value="5"
-         orient="vertical" style="writing-mode:vertical-lr; direction:rtl;">
-  <div class="zoom-panel-label">−</div>
-  <div class="slider-divider"></div>
-  <div class="zoom-panel-sublabel">縱</div>
-  <input type="range" id="yzoom-slider" min="10" max="400" value="100"
-         orient="vertical" style="writing-mode:vertical-lr; direction:rtl;">
+<!-- Right panel: V-zoom slider + V-scrollbar -->
+<div id="right-panel">
+  <div id="vzoom-wrap">
+    <div class="vpanel-label">＋</div>
+    <input type="range" id="yzoom-slider" min="10" max="400" value="100"
+           orient="vertical" style="writing-mode:vertical-lr;direction:rtl;height:140px;">
+    <div class="vpanel-label">−</div>
+  </div>
+  <div class="vpanel-divider"></div>
+  <div id="vscroll-wrap">
+    <div id="vscroll-track">
+      <div id="vscroll-thumb"></div>
+    </div>
+  </div>
   <button id="btn-reset" title="全覽">⊙</button>
 </div>
 
-<!-- Bottom scrollbar -->
+<!-- Bottom bar: H-scrollbar + H-zoom slider -->
 <div id="bottom-bar">
-  <div id="scrollbar-track">
-    <div id="scrollbar-thumb"></div>
+  <div id="hscroll-row">
+    <div id="scrollbar-track">
+      <div id="scrollbar-thumb"></div>
+    </div>
+  </div>
+  <div id="hzoom-row">
+    <span class="hzoom-label">−</span>
+    <input type="range" id="zoom-slider" min="0" max="100" value="5">
+    <span class="hzoom-label">＋</span>
   </div>
 </div>
 
@@ -456,11 +498,12 @@ let events = [];
 let viewStart = TIMELINE_START;
 let viewEnd   = TIMELINE_END;
 let yScale    = 1.0;   // vertical spacing multiplier
+let yOffset   = 0;     // vertical pan offset in pixels
 let isDragging = false;
 let dragStartX = 0;
 let dragViewStart = 0;
 let hoveredEvent = null;
-let mouseX = -1, mouseY = -1;  // cursor position for crosshair line
+let mouseX = -1, mouseY = -1;
 let canvasW = 0, canvasH = 0;
 let dpr = window.devicePixelRatio || 1;
 let hiddenAxes = new Set();
@@ -527,14 +570,20 @@ function xToYear(x) {
   return viewStart + (x / canvasW) * (viewEnd - viewStart);
 }
 function axisY(axisId, subtrack = 0) {
-  const baseFrac  = AXIS_Y[axisId] || 0.5;
+  const baseFrac   = AXIS_Y[axisId] || 0.5;
   const centerFrac = 0.54;
-  const effectiveH = canvasH - 130; // usable height between header and ruler
+  const effectiveH = canvasH - 140;
   const topMargin  = 90;
   const y = topMargin + effectiveH * centerFrac
           + (baseFrac - centerFrac) * effectiveH * yScale
-          + subtrack * 20 * yScale;
+          + subtrack * 20 * yScale
+          + yOffset;
   return y;
+}
+
+// Total content height when yScale > 1
+function contentHeight() {
+  return (canvasH - 140) * yScale + 140;
 }
 
 // ════════════════════════════════════════════
@@ -863,6 +912,7 @@ function draw() {
   if (!yzsl._dragging) yzsl.value = Math.round(yScale * 100);
 
   updateScrollbar();
+  updateVScrollbar();
 }
 
 // ════════════════════════════════════════════
@@ -908,8 +958,35 @@ function drawCursorLine() {
 }
 
 // ════════════════════════════════════════════
-//  SCROLLBAR SYNC
+//  VERTICAL SCROLLBAR SYNC
 // ════════════════════════════════════════════
+function clampYOffset() {
+  const ch = contentHeight();
+  const visible = canvasH - 140;
+  const maxScroll = Math.max(0, ch - visible);
+  yOffset = Math.max(-maxScroll, Math.min(0, yOffset));
+}
+
+function updateVScrollbar() {
+  const track = document.getElementById('vscroll-track');
+  const thumb = document.getElementById('vscroll-thumb');
+  if (!track || !thumb) return;
+  const trackH = track.clientHeight;
+  const ch = contentHeight();
+  const visible = canvasH - 140;
+
+  if (ch <= visible) {
+    thumb.style.height = trackH + 'px';
+    thumb.style.top = '0px';
+    return;
+  }
+  const thumbH = Math.max(20, Math.min(trackH - 4, (visible / ch) * trackH));
+  const maxScroll = ch - visible;
+  const scrollFrac = (-yOffset) / maxScroll;
+  const thumbTop = scrollFrac * (trackH - thumbH);
+  thumb.style.height = thumbH + 'px';
+  thumb.style.top = thumbTop + 'px';
+}
 function updateScrollbar() {
   const totalSpan = TOTAL_YEARS + NOW;
   const curSpan   = viewEnd - viewStart;
@@ -968,10 +1045,61 @@ const yzoomSlider = document.getElementById('yzoom-slider');
 yzoomSlider.addEventListener('input', () => {
   yzoomSlider._dragging = true;
   yScale = parseInt(yzoomSlider.value) / 100;
+  clampYOffset();
   draw();
 });
 yzoomSlider.addEventListener('pointerup', () => { yzoomSlider._dragging = false; });
 yzoomSlider.addEventListener('pointercancel', () => { yzoomSlider._dragging = false; });
+
+// ════════════════════════════════════════════
+//  VERTICAL SCROLLBAR DRAG
+// ════════════════════════════════════════════
+{
+  const vtrack = document.getElementById('vscroll-track');
+  const vthumb = document.getElementById('vscroll-thumb');
+  let vDragging = false, vStartY = 0, vStartTop = 0;
+
+  vthumb.addEventListener('pointerdown', e => {
+    e.stopPropagation();
+    vDragging = true;
+    vStartY = e.clientY;
+    vStartTop = parseFloat(vthumb.style.top) || 0;
+    vthumb.classList.add('dragging');
+    vthumb.setPointerCapture(e.pointerId);
+  });
+
+  vthumb.addEventListener('pointermove', e => {
+    if (!vDragging) return;
+    const trackH = vtrack.clientHeight;
+    const thumbH = parseFloat(vthumb.style.height) || 20;
+    const maxTop = trackH - thumbH;
+    const newTop = Math.max(0, Math.min(maxTop, vStartTop + e.clientY - vStartY));
+    const frac = maxTop > 0 ? newTop / maxTop : 0;
+    const ch = contentHeight();
+    const visible = canvasH - 140;
+    const maxScroll = Math.max(0, ch - visible);
+    yOffset = -(frac * maxScroll);
+    draw();
+  });
+
+  vthumb.addEventListener('pointerup', () => {
+    vDragging = false;
+    vthumb.classList.remove('dragging');
+  });
+
+  // Click track to jump
+  vtrack.addEventListener('pointerdown', e => {
+    if (e.target === vthumb) return;
+    const rect = vtrack.getBoundingClientRect();
+    const frac = (e.clientY - rect.top) / rect.height;
+    const ch = contentHeight();
+    const visible = canvasH - 140;
+    const maxScroll = Math.max(0, ch - visible);
+    yOffset = -(frac * maxScroll);
+    clampYOffset();
+    draw();
+  });
+}
 
 // ════════════════════════════════════════════
 //  ZOOM SLIDER
@@ -989,11 +1117,12 @@ zoomSlider.addEventListener('input', () => {
 zoomSlider.addEventListener('pointerup', () => { zoomSlider._dragging = false; });
 zoomSlider.addEventListener('pointercancel', () => { zoomSlider._dragging = false; });
 
-// Reset button → full view + reset Y zoom
+// Reset button → full view + reset Y zoom + reset Y scroll
 document.getElementById('btn-reset').addEventListener('click', () => {
   viewStart = TIMELINE_START;
   viewEnd   = TIMELINE_END;
   yScale    = 1.0;
+  yOffset   = 0;
   draw();
 });
 
@@ -1057,6 +1186,8 @@ document.addEventListener('keydown', e => {
   switch(e.key) {
     case 'ArrowLeft':  e.preventDefault(); panBy(-0.2); break;
     case 'ArrowRight': e.preventDefault(); panBy( 0.2); break;
+    case 'ArrowUp':    e.preventDefault(); yOffset += 60; clampYOffset(); draw(); break;
+    case 'ArrowDown':  e.preventDefault(); yOffset -= 60; clampYOffset(); draw(); break;
     case '+': case '=': e.preventDefault(); zoomBy(0.6); break;
     case '-': case '_': e.preventDefault(); zoomBy(1.6); break;
     case 'Escape': document.getElementById('popup-overlay').classList.remove('show'); break;
@@ -1064,18 +1195,26 @@ document.addEventListener('keydown', e => {
 });
 
 // ════════════════════════════════════════════
-//  WHEEL ZOOM
-// ════════════════════════════════════════════
-//  WHEEL — horizontal zoom / Ctrl+wheel vertical zoom
+//  WHEEL — normal=H-zoom on cursor, Ctrl=V-zoom, Shift=V-scroll
 // ════════════════════════════════════════════
 canvas.addEventListener('wheel', e => {
   e.preventDefault();
-  if (e.ctrlKey || e.shiftKey) {
-    // Ctrl/Shift + wheel → vertical zoom
+  if (e.ctrlKey) {
+    // Ctrl+wheel → vertical zoom, keep mouseY fixed
     const factor = e.deltaY > 0 ? 1.15 : 0.87;
+    const oldScale = yScale;
     yScale = Math.max(0.3, Math.min(4.0, yScale * factor));
+    // Anchor: keep the content under mouseY in place
+    yOffset = (yOffset - (e.clientY - 90)) * (yScale / oldScale) + (e.clientY - 90);
+    clampYOffset();
+    draw();
+  } else if (e.shiftKey) {
+    // Shift+wheel → vertical scroll
+    yOffset -= e.deltaY * 0.8;
+    clampYOffset();
     draw();
   } else {
+    // Normal wheel → horizontal zoom centered on mouseX
     const factor = e.deltaY > 0 ? 1.12 : 0.89;
     zoomBy(factor, e.clientX);
   }
