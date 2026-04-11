@@ -212,7 +212,7 @@
       "parent": "africa",
       "startYear": 300,
       "endYear": null,
-      "zoomMin": 0.65,
+      "zoomMin": 0.58,
       "group": "nation"
     },
     {
@@ -223,7 +223,7 @@
       "parent": "africa",
       "startYear": 100,
       "endYear": null,
-      "zoomMin": 0.65,
+      "zoomMin": 0.58,
       "group": "nation"
     },
     {
