@@ -799,6 +799,25 @@ body {
           <select class="edit-input" id="edit-axis" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row">
+          <div class="edit-label">CrossRef（連到軸線）</div>
+          <select class="edit-input" id="edit-crossref" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
+        </div>
+        <div class="edit-row" id="edit-axis-settings-row" style="flex-direction:column;gap:8px">
+          <div class="edit-label" style="color:rgba(167,139,250,0.8)">── 軸線設定（改這條軸線）──</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div class="edit-label" style="width:80px;flex-shrink:0">父軸</div>
+            <select class="edit-input" id="edit-axis-parent" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 10px;font-size:12px;font-family:inherit;flex:1;cursor:pointer"></select>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div class="edit-label" style="width:80px;flex-shrink:0">顯示門檻</div>
+            <input type="range" id="edit-zoommin" min="0" max="1" step="0.01" value="0"
+              style="flex:1;cursor:pointer;accent-color:#a78bfa"
+              oninput="document.getElementById('edit-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
+            <span id="edit-zoommin-val" style="font-size:11px;color:var(--text-muted);min-width:28px">0.00</span>
+          </div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.3)">0 = 全局顯示 · 0.58 = zoom in 才出現</div>
+        </div>
+        <div class="edit-row">
           <div class="edit-label">圖片 URL</div>
           <input class="edit-input" id="edit-image" type="text" placeholder="https://upload.wikimedia.org/...">
           <img class="edit-img-preview" id="edit-img-preview">
@@ -3054,11 +3073,19 @@ function showPopup(ev) {
 
   document.getElementById('popup-zh').textContent = ev.zh;
   document.getElementById('popup-en').textContent = ev.en;
-  const axLabel = (AXES[ev.axis] && AXES[ev.axis].label) || ev.axis;
+  const axObj   = AXES[ev.axis];
+  const axLabel = (axObj && axObj.label) || ev.axis;
+  const parentLabel = axObj?.parent ? ((AXES[axObj.parent]?.label) || axObj.parent) : null;
   const timeStr = ev.endYear
     ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
     : formatYear(ev.year);
-  document.getElementById('popup-time').textContent = `${axLabel} · ${timeStr}`;
+  // Show: 父軸 › 軸線 · 年份  (+crossRef if any)
+  let metaStr = parentLabel ? `${parentLabel} › ${axLabel}` : axLabel;
+  if (ev.crossRef) {
+    const crLabel = (AXES[ev.crossRef]?.label) || ev.crossRef;
+    metaStr += `  ⤴ ${crLabel}`;
+  }
+  document.getElementById('popup-time').textContent = `${metaStr} · ${timeStr}`;
   document.getElementById('popup-desc-zh').textContent = ev.desc_zh || '';
   document.getElementById('popup-desc-en').textContent = ev.desc_en || '';
 
@@ -3072,6 +3099,33 @@ function showPopup(ev) {
     if (id === ev.axis) opt.selected = true;
     axSelect.appendChild(opt);
   });
+
+  // Populate crossRef select (with "none" option)
+  const crSelect = document.getElementById('edit-crossref');
+  crSelect.innerHTML = '<option value="">— 無 —</option>';
+  Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = `${ax.label} (${id})`;
+    if (id === (ev.crossRef||'')) opt.selected = true;
+    crSelect.appendChild(opt);
+  });
+
+  // Populate axis parent select and zoomMin for the CURRENT axis
+  const curAx = AXES[ev.axis];
+  const parentSel = document.getElementById('edit-axis-parent');
+  parentSel.innerHTML = '<option value="">— 無（頂層）—</option>';
+  Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
+    if (id === ev.axis) return; // can't be own parent
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = `${ax.label} (${id})`;
+    if (id === (curAx?.parent||'')) opt.selected = true;
+    parentSel.appendChild(opt);
+  });
+  const zm = curAx?.zoomMin ?? 0;
+  document.getElementById('edit-zoommin').value = zm;
+  document.getElementById('edit-zoommin-val').textContent = zm.toFixed(2);
 
   // Populate edit fields
   document.getElementById('edit-image').value   = ev.image   || '';
@@ -3192,11 +3246,10 @@ async function loadEvents() {
   try {
     const res  = await fetch('data/events.json');
     const data = await res.json();
-    // Load axes from JSON if present, else keep hardcoded fallback
-    if (data.axes && data.axes.length > 0) {
-      buildAxes(data.axes);
-    }
+    if (data.axes && data.axes.length > 0) buildAxes(data.axes);
     events = data.events;
+    // Store raw era_bands for export
+    window._eraBandsRaw = data.era_bands || [];
   } catch (err) {
     console.warn('Could not load events.json, using inline fallback');
     events = FALLBACK_EVENTS;
@@ -3224,14 +3277,17 @@ const FALLBACK_EVENTS = [
 // ════════════════════════════════════════════
 //  EDIT SYSTEM — localStorage persistence + JSON export
 // ════════════════════════════════════════════
-const EDIT_KEY = 'cosmic-timeline-edits';  // localStorage key
+const EDIT_KEY      = 'cosmic-timeline-edits';       // event edits
+const AXES_EDIT_KEY = 'cosmic-timeline-axes-edits';  // axis edits
 
 // Load overrides from localStorage
 function loadEdits() {
-  try {
-    const raw = localStorage.getItem(EDIT_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch { return {}; }
+  try { const r=localStorage.getItem(EDIT_KEY); return r?JSON.parse(r):{}; }
+  catch { return {}; }
+}
+function loadAxesEdits() {
+  try { const r=localStorage.getItem(AXES_EDIT_KEY); return r?JSON.parse(r):{}; }
+  catch { return {}; }
 }
 
 // Save override for one event
@@ -3239,6 +3295,15 @@ function saveEdit(id, fields) {
   const edits = loadEdits();
   edits[id] = { ...(edits[id] || {}), ...fields };
   localStorage.setItem(EDIT_KEY, JSON.stringify(edits));
+}
+
+// Save axis override (parent, zoomMin)
+function saveAxisEdit(axId, fields) {
+  const edits = loadAxesEdits();
+  edits[axId] = { ...(edits[axId] || {}), ...fields };
+  localStorage.setItem(AXES_EDIT_KEY, JSON.stringify(edits));
+  // Apply immediately to live AXES
+  if (AXES[axId]) Object.assign(AXES[axId], fields);
 }
 
 // Apply all saved edits to events array
@@ -3249,19 +3314,55 @@ function applyEdits() {
     if (!ov) return;
     Object.assign(ev, ov);
   });
+  // Apply axes edits
+  const axEdits = loadAxesEdits();
+  Object.entries(axEdits).forEach(([axId, fields]) => {
+    if (AXES[axId]) Object.assign(AXES[axId], fields);
+  });
 }
 
-// Export merged events.json
+// Export merged events.json (includes axes + era_bands)
 function exportJSON() {
-  const edits = loadEdits();
-  // Deep clone and apply edits
-  const merged = events.map(ev => {
+  const edits    = loadEdits();
+  const axEdits  = loadAxesEdits();
+
+  // Merge event edits
+  const mergedEvents = events.map(ev => {
     const clone = { ...ev };
-    delete clone._autoParent;  // remove runtime-only field
+    delete clone._autoParent;
     if (edits[clone.id]) Object.assign(clone, edits[clone.id]);
+    // clean up undefined crossRef
+    if (clone.crossRef === '' || clone.crossRef === undefined) delete clone.crossRef;
     return clone;
   });
-  const blob = new Blob([JSON.stringify({ meta: { title_zh:'宇宙歷史時間軸', title_en:'Cosmic Timeline', total_years:13800000000, created:'2026' }, events: merged }, null, 2)], { type: 'application/json' });
+
+  // Merge axes edits — use live AXES (already updated) sorted by order
+  const mergedAxes = Object.entries(AXES)
+    .sort((a,b) => a[1].order - b[1].order)
+    .map(([id, ax]) => {
+      const base = {
+        id,
+        label:     ax.label,
+        color:     ax.color,
+        order:     ax.order,
+        parent:    ax.parent ?? null,
+        startYear: ax.startYear,
+        endYear:   ax.endYear ?? null,
+        zoomMin:   ax.zoomMin ?? 0,
+        group:     ax.group || 'nation',
+      };
+      if (axEdits[id]) Object.assign(base, axEdits[id]);
+      return base;
+    });
+
+  const out = {
+    meta: { title_zh:'宇宙歷史時間軸', title_en:'Cosmic Timeline', total_years:13800000000, created:'2026' },
+    axes: mergedAxes,
+    era_bands: window._eraBandsRaw || [],
+    events: mergedEvents,
+  };
+
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type:'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'events.json';
@@ -3271,7 +3372,7 @@ function exportJSON() {
 
 // Count modified events
 function countEdits() {
-  return Object.keys(loadEdits()).length;
+  return Object.keys(loadEdits()).length + Object.keys(loadAxesEdits()).length;
 }
 
 // ── Edit panel wiring ──
@@ -3299,36 +3400,57 @@ document.getElementById('edit-image').addEventListener('input', e => {
 
 document.getElementById('edit-save-btn').addEventListener('click', () => {
   if (!_editingEventId) return;
+
+  // ── Event field edits ──
+  const crossRefVal = document.getElementById('edit-crossref').value;
   const fields = {
-    axis:    document.getElementById('edit-axis').value || undefined,
-    image:   document.getElementById('edit-image').value.trim() || undefined,
-    zh:      document.getElementById('edit-zh').value.trim() || undefined,
-    en:      document.getElementById('edit-en').value.trim() || undefined,
-    desc_zh: document.getElementById('edit-desc-zh').value.trim() || undefined,
-    desc_en: document.getElementById('edit-desc-en').value.trim() || undefined,
-    wiki_zh: document.getElementById('edit-wiki-zh').value.trim() || undefined,
-    wiki_en: document.getElementById('edit-wiki-en').value.trim() || undefined,
+    axis:     document.getElementById('edit-axis').value || undefined,
+    crossRef: crossRefVal || undefined,  // empty string = remove crossRef
+    image:    document.getElementById('edit-image').value.trim() || undefined,
+    zh:       document.getElementById('edit-zh').value.trim() || undefined,
+    en:       document.getElementById('edit-en').value.trim() || undefined,
+    desc_zh:  document.getElementById('edit-desc-zh').value.trim() || undefined,
+    desc_en:  document.getElementById('edit-desc-en').value.trim() || undefined,
+    wiki_zh:  document.getElementById('edit-wiki-zh').value.trim() || undefined,
+    wiki_en:  document.getElementById('edit-wiki-en').value.trim() || undefined,
   };
-  // Remove undefined fields
+  // crossRef='' means user cleared it — keep as empty string so exportJSON removes it
+  if (crossRefVal === '') fields.crossRef = '';
   Object.keys(fields).forEach(k => fields[k] === undefined && delete fields[k]);
   saveEdit(_editingEventId, fields);
 
-  // Apply to live event object immediately
+  // Apply to live event immediately
   const ev = events.find(e => e.id === _editingEventId);
-  if (ev) Object.assign(ev, fields);
+  if (ev) {
+    Object.assign(ev, fields);
+    if (fields.crossRef === '') delete ev.crossRef;
+  }
+
+  // ── Axis setting edits (parent + zoomMin) ──
+  const axId      = document.getElementById('edit-axis').value;
+  const newParent = document.getElementById('edit-axis-parent').value || null;
+  const newZoomMin = parseFloat(document.getElementById('edit-zoommin').value);
+  if (axId) {
+    const axFields = { parent: newParent, zoomMin: newZoomMin };
+    saveAxisEdit(axId, axFields);
+    // Rebuild axis group map and legend after parent change
+    buildAxisGroupMap();
+    buildLegend();
+  }
 
   // Update badge
   document.getElementById('edit-modified-badge').classList.add('show');
   document.getElementById('edit-modified-badge').textContent = `● ${countEdits()} 筆已修改`;
 
-  // Refresh popup display
-  showPopup(ev);
+  // Refresh popup
+  if (ev) showPopup(ev);
   draw();
 });
 
 function clearAllEdits() {
-  if (!confirm('確定要清除所有本地修改嗎？這會移除 localStorage 中的所有編輯記錄，並重新整理頁面。')) return;
-  localStorage.removeItem('cosmic-timeline-edits');
+  if (!confirm('確定要清除所有本地修改嗎？這會移除所有編輯記錄並重新整理頁面。')) return;
+  localStorage.removeItem(EDIT_KEY);
+  localStorage.removeItem(AXES_EDIT_KEY);
   location.reload();
 }
 
