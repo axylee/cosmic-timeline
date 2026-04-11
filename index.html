@@ -2516,34 +2516,39 @@ function panBy(fraction) {
 function zoomBy(factor, centerX) {
   const cx = centerX !== undefined ? centerX : canvasW / 2;
   const mouseYear = xToYear(cx);
+  const cy = mouseY >= 0 ? mouseY : canvasH / 2;
   const span = viewEnd - viewStart;
   let newSpan = span * factor;
   newSpan = Math.min(Math.max(newSpan, 2), globalViewSpan());
 
-  // ── Snapshot axis count before zoom ──
-  const visCountBefore = getVisibleAxes().length;
+  // ── Before zoom: find which axis is under the cursor ──
+  // and remember its Y position relative to cursor
+  const yMapBefore = getAxisYMap();
+  let anchorAxisId = null;
+  let minDist = Infinity;
+  yMapBefore.forEach((y, id) => {
+    const d = Math.abs(y - cy);
+    if (d < minDist) { minDist = d; anchorAxisId = id; }
+  });
+  const anchorYBefore = anchorAxisId ? yMapBefore.get(anchorAxisId) : cy;
 
+  // ── Apply horizontal zoom ──
   const ratio = (mouseYear - viewStart) / span;
   viewStart = mouseYear - ratio * newSpan;
   viewEnd   = viewStart + newSpan;
   clampView();
 
-  // ── Compensate yOffset when axis count changes ──
-  // Find the axis closest to mouseY before and after, keep it pinned
-  const visCountAfter = getVisibleAxes().length;
-  if (visCountBefore !== visCountAfter && visCountBefore > 0) {
-    // Anchor: the axis at mouseY should stay at mouseY
-    // Gap before → gap after: adjust yOffset to compensate
-    const gap = LANE_GAP_BASE * Math.max(1, yScale);
-    const mouseYPos = mouseY >= 0 ? mouseY : canvasH / 2;
-    // Which row index was under mouse before?
-    const rowBefore = Math.round((mouseYPos - TOP_MARGIN - yOffset) / gap);
-    // After zoom the same row should still be at mouseYPos
-    // New gap is the same (yScale unchanged), but rowBefore might now map differently
-    // Simple fix: scale yOffset proportionally to new axis count
-    if (visCountBefore > 0) {
-      yOffset = yOffset * (visCountAfter / visCountBefore);
+  // ── After zoom: find anchor axis new Y and compensate yOffset ──
+  // Force cache invalidation so getAxisYMap() recalculates with new zoom
+  _axisYFrame = -1;
+  if (anchorAxisId) {
+    const yMapAfter = getAxisYMap();
+    const anchorYAfter = yMapAfter.get(anchorAxisId);
+    if (anchorYAfter !== undefined) {
+      // Shift yOffset so anchor axis stays at same screen Y as before
+      yOffset += anchorYBefore - anchorYAfter;
       clampYOffset();
+      _axisYFrame = -1; // invalidate again after yOffset change
     }
   }
 
@@ -3652,19 +3657,16 @@ function navigateToEvent(ev) {
   const ax = AXES[ev.axis];
   const axZoomMin = ax?.zoomMin ?? 0;
 
-  // Calculate required span so that currentZoom() >= axZoomMin + 0.05
-  // currentZoom = 1 - log(span)/log(maxSpan)  →  span = maxSpan^(1 - targetZoom)
+  // Calculate required span so zoom >= axZoomMin + 0.06
   const maxSpan = TOTAL_YEARS + NOW;
   const targetZoom = Math.max(axZoomMin + 0.06, 0.65);
   const maxAllowedSpan = Math.pow(maxSpan, 1 - targetZoom);
 
-  // For pill events, fit the pill width with padding; for points use a fixed window
   let span;
   if (ev.endYear) {
     const pillSpan = Math.abs(ev.endYear - ev.year);
     span = Math.min(pillSpan * 3 + 200, maxAllowedSpan);
   } else {
-    // point event: use a window that's deep enough to show the axis
     span = Math.min(Math.max(200, Math.abs(ev.year) * 0.0005 + 50), maxAllowedSpan);
   }
   span = Math.max(span, 2);
@@ -3674,6 +3676,16 @@ function navigateToEvent(ev) {
   const targetEnd    = targetCenter + span / 2;
 
   animateToView(targetStart, targetEnd, () => {
+    // ── After horizontal navigation, center the axis vertically ──
+    _axisYFrame = -1; // invalidate Y cache
+    const axisYPos = getAxisY(ev.axis);
+    if (axisYPos !== undefined) {
+      const targetY = canvasH / 2; // bring axis to vertical center
+      yOffset += targetY - axisYPos;
+      clampYOffset();
+      _axisYFrame = -1;
+    }
+    draw();
     const found = events.find(e => e.id === ev.id);
     if (found) showPopup(found);
   });
