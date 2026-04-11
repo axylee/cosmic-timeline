@@ -1011,6 +1011,7 @@ function buildAxes(axesArray) {
       parent:    ax.parent ?? null,
       order:     ax.order,
       zoomMin:   ax.zoomMin ?? 0,
+      group:     ax.group || 'nation',
     };
   });
   // Rebuild AXIS_GROUP_MAP after axes are loaded
