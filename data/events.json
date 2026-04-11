@@ -2461,12 +2461,12 @@
       "level": 1,
       "desc_zh": "阿波羅11號太空人阿姆斯壯踏上月球，實現人類千年來的飛天夢想。",
       "desc_en": "Apollo 11 astronaut Neil Armstrong walks on the Moon, fulfilling humanity's age-old dream of reaching another world.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿波羅11號",
       "wiki_en": "https://en.wikipedia.org/wiki/Apollo_11",
       "sub_track": 0,
       "category": "science",
-      "category_broad": "human"
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/960px-Aldrin_Apollo_11_original.jpg"
     },
     {
       "id": "tw-martial-law-lift",
