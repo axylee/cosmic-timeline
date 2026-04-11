@@ -33,7 +33,7 @@
       "label": "太陽系",
       "color": "#818cf8",
       "order": 2,
-      "parent": "cosmos",
+      "parent": "galaxy",
       "startYear": -4600000000,
       "endYear": null,
       "zoomMin": 0,
