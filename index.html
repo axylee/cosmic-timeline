@@ -1932,7 +1932,7 @@ function drawPill(ev, y, opts = {}) {
   if (w < 2) return;
 
   // Pill height — children are slightly shorter
-  const baseH = isChild ? 7 : Math.max(5, Math.min(10, 5 + zoom * 8));
+  const baseH = isChild ? Math.max(2.5, Math.min(4, 2.5 + zoom * 3)) : Math.max(3.5, Math.min(6, 3.5 + zoom * 5));
   const pillH = isHov ? baseH + 2 : baseH;
   const r     = Math.min(pillH, w / 2);
 
