@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>Cosmic Timeline — 新增事件 / 軸線</title>
+<style>
+:root {
+  --bg:#05080f; --surface:#0c1020; --surface2:#111827;
+  --border:rgba(255,255,255,0.08); --text:#ddd8c8;
+  --muted:rgba(221,216,200,0.45); --accent:#60a5fa;
+  --green:#34d399; --red:#f87171; --yellow:#fbbf24; --purple:#a78bfa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans',sans-serif;font-size:13px;min-height:100vh;padding:28px 24px}
+h1{font-size:18px;font-weight:500;color:#fff;margin-bottom:4px}
+.subtitle{color:var(--muted);font-size:12px;margin-bottom:24px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:18px}
+.card-title{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.tabs{display:flex;gap:2px;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:0}
+.tab{padding:8px 20px;border-radius:8px 8px 0 0;cursor:pointer;font-size:13px;font-family:inherit;
+  background:transparent;border:none;color:var(--muted);transition:all .15s;border:1px solid transparent;border-bottom:none}
+.tab.active{background:var(--surface);color:#fff;border-color:var(--border)}
+.tab:hover:not(.active){color:var(--text)}
+label{font-size:11px;color:var(--muted);display:block;margin-bottom:4px}
+input,select,textarea{background:rgba(255,255,255,0.05);border:1px solid var(--border);
+  border-radius:6px;color:var(--text);padding:8px 12px;font-size:13px;
+  font-family:inherit;outline:none;transition:border-color .15s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.25)}
+textarea{min-height:72px;resize:vertical}
+select{cursor:pointer}
+.grid{display:grid;gap:14px}
+.grid-2{grid-template-columns:1fr 1fr}
+.grid-3{grid-template-columns:1fr 1fr 1fr}
+.form-group{display:flex;flex-direction:column;gap:4px}
+.required{color:var(--red);margin-left:2px}
+button{padding:9px 20px;border-radius:8px;border:none;font-family:inherit;
+  font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;white-space:nowrap}
+.btn-primary{background:rgba(96,165,250,0.2);color:var(--accent);border:1px solid rgba(96,165,250,0.3)}
+.btn-primary:hover{background:rgba(96,165,250,0.35)}
+.btn-success{background:rgba(52,211,153,0.2);color:var(--green);border:1px solid rgba(52,211,153,0.3)}
+.btn-success:hover{background:rgba(52,211,153,0.35)}
+.btn-warn{background:rgba(251,191,36,0.15);color:var(--yellow);border:1px solid rgba(251,191,36,0.3)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.btn-ghost:hover{color:var(--text);border-color:rgba(255,255,255,0.2)}
+.btn-danger{background:rgba(248,113,113,0.12);color:var(--red);border:1px solid rgba(248,113,113,0.25);padding:5px 12px;font-size:11px}
+.row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.section-sep{border:none;border-top:1px solid var(--border);margin:16px 0}
+.info-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:8px;padding:10px 14px;font-size:11px;color:var(--muted);line-height:1.7}
+.info-box.axis-info{border-color:rgba(167,139,250,0.2);background:rgba(167,139,250,0.05)}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;margin-right:4px}
+.badge-event{background:rgba(52,211,153,0.15);color:var(--green)}
+.badge-axis{background:rgba(167,139,250,0.15);color:var(--purple)}
+/* Preview list */
+#preview-list{margin-top:14px;display:flex;flex-direction:column;gap:6px;max-height:360px;overflow-y:auto}
+.preview-item{display:flex;align-items:center;justify-content:space-between;
+  padding:9px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:8px;gap:10px}
+.preview-left{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.preview-zh{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.preview-meta{font-size:10px;color:var(--muted)}
+/* Color picker */
+.color-row{display:flex;gap:8px;align-items:center}
+.color-row input[type=color]{width:40px;height:36px;padding:2px;border-radius:6px;cursor:pointer;flex-shrink:0}
+.color-row input[type=text]{flex:1}
+/* Zoom slider */
+.zoom-row{display:flex;gap:8px;align-items:center}
+.zoom-row input[type=range]{flex:1;accent-color:var(--purple);cursor:pointer}
+.zoom-val{font-size:11px;color:var(--muted);min-width:32px}
+/* Validation */
+.field-error{border-color:var(--red)!important}
+.err-msg{font-size:10px;color:var(--red);margin-top:3px}
+#load-status{font-size:12px;margin-top:8px}
+#drop-zone{border:2px dashed rgba(255,255,255,0.12);border-radius:10px;padding:24px;
+  text-align:center;color:var(--muted);cursor:pointer;transition:all .2s;margin-bottom:14px}
+#drop-zone:hover,#drop-zone.drag-over{border-color:var(--accent);color:var(--accent);background:rgba(96,165,250,0.05)}
+#drop-zone input{display:none}
+.hide{display:none!important}
+.spacer{height:8px}
+</style>
+</head>
+<body>
+<h1>🌌 Cosmic Timeline — 新增事件 / 軸線</h1>
+<p class="subtitle">載入 events.json → 新增事件或軸線 → 下載更新後的 JSON</p>
+
+<!-- Load -->
+<div class="card">
+  <div class="card-title">步驟 1 — 載入 events.json</div>
+  <div id="drop-zone" onclick="document.getElementById('file-input').click()">
+    <input type="file" id="file-input" accept=".json">
+    📂 點擊選擇檔案，或拖曳 events.json 到這裡
+  </div>
+  <div class="row">
+    <div style="flex:1">
+      <label>或從 GitHub 載入</label>
+      <input type="text" id="url-input" value="https://raw.githubusercontent.com/axylee/cosmic-timeline/main/data/events.json">
+    </div>
+    <button class="btn-primary" onclick="loadFromUrl()" style="align-self:flex-end">從 URL 載入</button>
+  </div>
+  <div id="load-status"></div>
+</div>
+
+<!-- Editor -->
+<div class="hide" id="editor">
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('event')">➕ 新增事件</button>
+    <button class="tab" onclick="switchTab('axis')">🔗 新增軸線</button>
+  </div>
+
+  <!-- EVENT FORM -->
+  <div id="tab-event">
+    <div class="card">
+      <div class="card-title">定位</div>
+      <div class="grid">
+        <div class="form-group">
+          <label>所在軸線 <span class="required">*</span></label>
+          <select id="ev-axis" onchange="onAxisChange()"></select>
+        </div>
+        <div class="info-box axis-info" id="ev-axis-info">← 選擇軸線後顯示父軸和門檻</div>
+        <div class="form-group">
+          <label>顯示門檻（zoomMin）— 改這條軸線的</label>
+          <div class="zoom-row">
+            <input type="range" id="ev-zoommin" min="0" max="1" step="0.01" value="0.58"
+              oninput="document.getElementById('ev-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
+            <span class="zoom-val" id="ev-zoommin-val">0.58</span>
+          </div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.3);margin-top:2px">0 = 全局顯示 · 0.58 = zoom in才出現 · 0.75 = 深度zoom in</div>
+        </div>
+        <div class="form-group">
+          <label>CrossRef（連到軸線）</label>
+          <select id="ev-crossref"><option value="">— 無 —</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">基本資料</div>
+      <div class="grid grid-2">
+        <div class="form-group">
+          <label>中文名稱 <span class="required">*</span></label>
+          <input type="text" id="ev-zh" placeholder="例：鄭成功登台">
+        </div>
+        <div class="form-group">
+          <label>英文名稱</label>
+          <input type="text" id="ev-en" placeholder="e.g. Koxinga Takes Taiwan">
+        </div>
+        <div class="form-group">
+          <label>開始年份 <span class="required">*</span> （負數=BC）</label>
+          <input type="number" id="ev-year" placeholder="例：1661 或 -3000">
+        </div>
+        <div class="form-group">
+          <label>結束年份（有填=pill，沒填=點事件）</label>
+          <input type="number" id="ev-endyear" placeholder="選填">
+        </div>
+        <div class="form-group">
+          <label>重要程度 <span class="required">*</span></label>
+          <select id="ev-level">
+            <option value="1">Level 1 — 大事件（大圓點）</option>
+            <option value="2" selected>Level 2 — 一般事件</option>
+            <option value="3">Level 3 — 小事件（小圓點）</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>分類</label>
+          <select id="ev-category">
+            <option value="civilization">文明</option>
+            <option value="politics">政治</option>
+            <option value="war">戰爭</option>
+            <option value="science">科學技術</option>
+            <option value="religion">宗教</option>
+            <option value="philosophy">哲學</option>
+            <option value="culture">文化藝術</option>
+            <option value="exploration">探索</option>
+            <option value="medicine">醫學</option>
+            <option value="astronomy">天文</option>
+            <option value="geology">地質</option>
+            <option value="biology">生物</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">描述</div>
+      <div class="grid">
+        <div class="form-group">
+          <label>中文描述</label>
+          <textarea id="ev-desc-zh" placeholder="選填"></textarea>
+        </div>
+        <div class="form-group">
+          <label>英文描述</label>
+          <textarea id="ev-desc-en" placeholder="Optional"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">連結與圖片</div>
+      <div class="grid grid-2">
+        <div class="form-group">
+          <label>中文 Wikipedia URL</label>
+          <input type="text" id="ev-wiki-zh" placeholder="https://zh.wikipedia.org/wiki/...">
+        </div>
+        <div class="form-group">
+          <label>英文 Wikipedia URL</label>
+          <input type="text" id="ev-wiki-en" placeholder="https://en.wikipedia.org/wiki/...">
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="form-group">
+        <label>圖片 URL（選填，可之後用 update-images.html 補）</label>
+        <div class="row">
+          <input type="text" id="ev-image" placeholder="https://upload.wikimedia.org/...">
+          <button class="btn-ghost" onclick="previewImage()" style="flex-shrink:0">預覽</button>
+        </div>
+        <img id="ev-img-preview" style="display:none;max-height:100px;border-radius:6px;margin-top:8px;object-fit:cover">
+      </div>
+    </div>
+
+    <div id="ev-error" class="hide" style="color:var(--red);font-size:12px;margin-bottom:10px;padding:10px 14px;background:rgba(248,113,113,0.08);border-radius:8px;border:1px solid rgba(248,113,113,0.2)"></div>
+    <button class="btn-success" onclick="addEvent()" style="width:100%;padding:12px">✓ 加入事件</button>
+  </div>
+
+  <!-- AXIS FORM -->
+  <div id="tab-axis" class="hide">
+    <div class="card">
+      <div class="card-title">軸線基本設定</div>
+      <div class="grid grid-2">
+        <div class="form-group">
+          <label>ID <span class="required">*</span>（英文小寫 + 連字號）</label>
+          <input type="text" id="ax-id" placeholder="例：korea 或 east-europe" oninput="validateAxId()">
+          <div class="err-msg hide" id="ax-id-err"></div>
+        </div>
+        <div class="form-group">
+          <label>中文標籤 <span class="required">*</span></label>
+          <input type="text" id="ax-label" placeholder="例：韓國">
+        </div>
+        <div class="form-group">
+          <label>父軸 <span class="required">*</span></label>
+          <select id="ax-parent"></select>
+        </div>
+        <div class="form-group">
+          <label>分類群組 <span class="required">*</span></label>
+          <select id="ax-group">
+            <option value="natural">自然科學</option>
+            <option value="human">人文</option>
+            <option value="science">科學技術</option>
+            <option value="arts">藝術文化</option>
+            <option value="religion">宗教</option>
+            <option value="civilization">文明</option>
+            <option value="nation" selected>國家地區</option>
+          </select>
+        </div>
+      </div>
+      <hr class="section-sep">
+      <div class="grid grid-2">
+        <div class="form-group">
+          <label>顏色 <span class="required">*</span></label>
+          <div class="color-row">
+            <input type="color" id="ax-color-picker" value="#60a5fa" oninput="document.getElementById('ax-color').value=this.value">
+            <input type="text" id="ax-color" value="#60a5fa" placeholder="#rrggbb" oninput="syncColor()">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>顯示門檻（zoomMin）</label>
+          <div class="zoom-row">
+            <input type="range" id="ax-zoommin" min="0" max="1" step="0.01" value="0.58"
+              oninput="document.getElementById('ax-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
+            <span class="zoom-val" id="ax-zoommin-val">0.58</span>
+          </div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.3);margin-top:2px">0 = 全局 · 0.58 = zoom in · 0.75 = 深度zoom</div>
+        </div>
+        <div class="form-group">
+          <label>開始年份 <span class="required">*</span>（負數=BC）</label>
+          <input type="number" id="ax-startyear" placeholder="例：1392">
+        </div>
+        <div class="form-group">
+          <label>結束年份（消亡的文明才需要）</label>
+          <input type="number" id="ax-endyear" placeholder="選填">
+        </div>
+      </div>
+    </div>
+    <div id="ax-error" class="hide" style="color:var(--red);font-size:12px;margin-bottom:10px;padding:10px 14px;background:rgba(248,113,113,0.08);border-radius:8px;border:1px solid rgba(248,113,113,0.2)"></div>
+    <button class="btn-success" onclick="addAxis()" style="width:100%;padding:12px">✓ 加入軸線</button>
+  </div>
+
+  <!-- Preview list -->
+  <div class="card" id="preview-card" style="margin-top:18px">
+    <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+      <span>待加入清單 <span id="preview-count" style="color:var(--accent)">0 項</span></span>
+      <button class="btn-ghost" onclick="clearPreview()" style="padding:4px 10px;font-size:10px">清除全部</button>
+    </div>
+    <div id="preview-list"><p style="color:var(--muted);font-size:12px">尚未加入任何項目</p></div>
+  </div>
+
+  <!-- Download -->
+  <div style="margin-top:16px">
+    <button class="btn-success" onclick="downloadJson()" style="width:100%;padding:14px;font-size:14px">⬇ 下載 events.json</button>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center">下載後直接上傳 GitHub，無需其他步驟</p>
+  </div>
+</div>
+
+<script>
+let eventsData = null;
+let pendingItems = []; // { type: 'event'|'axis', data: {...} }
+
+// ── File loading ──
+const dropZone = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+dropZone.addEventListener('dragover', e=>{e.preventDefault();dropZone.classList.add('drag-over')});
+dropZone.addEventListener('dragleave', ()=>dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e=>{e.preventDefault();dropZone.classList.remove('drag-over');if(e.dataTransfer.files[0])readFile(e.dataTransfer.files[0])});
+fileInput.addEventListener('change', e=>{if(e.target.files[0])readFile(e.target.files[0])});
+
+function readFile(file) {
+  const r = new FileReader();
+  r.onload = e => {
+    try { eventsData = JSON.parse(e.target.result); onLoaded(file.name); }
+    catch(err) { setStatus('✗ 解析失敗: ' + err.message, 'red'); }
+  };
+  r.readAsText(file);
+}
+async function loadFromUrl() {
+  const url = document.getElementById('url-input').value.trim();
+  setStatus('載入中…', '');
+  try { const r = await fetch(url); eventsData = await r.json(); onLoaded(url.split('/').pop()); }
+  catch(e) { setStatus('✗ 載入失敗: ' + e.message, 'red'); }
+}
+function setStatus(msg, color) {
+  const el = document.getElementById('load-status');
+  el.textContent = msg;
+  el.style.color = color === 'red' ? 'var(--red)' : color === 'green' ? 'var(--green)' : 'var(--muted)';
+}
+function onLoaded(name) {
+  const n = eventsData.events.length;
+  const axes = eventsData.axes || [];
+  setStatus(`✓ 載入成功：${name}，${n} 個事件，${axes.length} 條軸線`, 'green');
+  document.getElementById('editor').classList.remove('hide');
+  populateAxisSelects();
+}
+
+// ── Axis selects ──
+function getAxesSorted() {
+  const base = (eventsData.axes || []).slice().sort((a,b)=>a.order-b.order);
+  // Add pending axis items
+  const pending = pendingItems.filter(p=>p.type==='axis').map(p=>p.data);
+  return [...base, ...pending];
+}
+
+function populateAxisSelects() {
+  const axes = getAxesSorted();
+  const selects = ['ev-axis','ev-crossref','ax-parent'];
+  selects.forEach(sid => {
+    const sel = document.getElementById(sid);
+    const prev = sel.value;
+    sel.innerHTML = sid === 'ev-crossref' ? '<option value="">— 無 —</option>' : '';
+    axes.forEach(ax => {
+      const opt = document.createElement('option');
+      opt.value = ax.id;
+      opt.textContent = `${ax.label} (${ax.id})`;
+      sel.appendChild(opt);
+    });
+    if (prev) sel.value = prev;
+  });
+  onAxisChange();
+}
+
+function onAxisChange() {
+  const id = document.getElementById('ev-axis').value;
+  const axes = getAxesSorted();
+  const ax = axes.find(a=>a.id===id);
+  if (!ax) return;
+  const parentAx = ax.parent ? axes.find(a=>a.id===ax.parent) : null;
+  document.getElementById('ev-axis-info').innerHTML =
+    `<strong style="color:var(--purple)">${ax.label}</strong><br>` +
+    `父軸：${parentAx ? parentAx.label + ' (' + ax.parent + ')' : '— 頂層 —'}<br>` +
+    `目前顯示門檻：${ax.zoomMin ?? 0}`;
+  document.getElementById('ev-zoommin').value = ax.zoomMin ?? 0.58;
+  document.getElementById('ev-zoommin-val').textContent = (ax.zoomMin ?? 0.58).toFixed(2);
+}
+
+// ── Tab switch ──
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active', (i===0&&tab==='event')||(i===1&&tab==='axis')));
+  document.getElementById('tab-event').classList.toggle('hide', tab!=='event');
+  document.getElementById('tab-axis').classList.toggle('hide', tab!=='axis');
+}
+
+// ── Color sync ──
+function syncColor() {
+  const v = document.getElementById('ax-color').value;
+  if (/^#[0-9a-fA-F]{6}$/.test(v)) document.getElementById('ax-color-picker').value = v;
+}
+
+// ── Image preview ──
+function previewImage() {
+  const url = document.getElementById('ev-image').value.trim();
+  const img = document.getElementById('ev-img-preview');
+  if (!url) { img.style.display='none'; return; }
+  img.src = url; img.style.display = 'block';
+  img.onerror = ()=>{ img.style.display='none'; };
+}
+
+// ── Validate axis ID ──
+function validateAxId() {
+  const id = document.getElementById('ax-id').value.trim();
+  const errEl = document.getElementById('ax-id-err');
+  const inp = document.getElementById('ax-id');
+  const existing = getAxesSorted().map(a=>a.id);
+  if (!id) { showErr(inp, errEl, ''); return false; }
+  if (!/^[a-z0-9-]+$/.test(id)) { showErr(inp, errEl, 'ID 只能用英文小寫、數字、連字號'); return false; }
+  if (existing.includes(id)) { showErr(inp, errEl, `ID "${id}" 已存在`); return false; }
+  clearErr(inp, errEl); return true;
+}
+function showErr(inp, errEl, msg) { inp.classList.add('field-error'); errEl.textContent=msg; errEl.classList.toggle('hide',!msg); }
+function clearErr(inp, errEl) { inp.classList.remove('field-error'); errEl.classList.add('hide'); }
+
+// ── Generate ID from Chinese ──
+function makeId(zh) {
+  // simple slugify: keep alphanumeric, replace spaces with -
+  return zh.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').substring(0,30)
+    || 'event-' + Date.now();
+}
+
+// ── Add event ──
+function addEvent() {
+  const errEl = document.getElementById('ev-error');
+  errEl.classList.add('hide');
+  const zh = document.getElementById('ev-zh').value.trim();
+  const year = document.getElementById('ev-year').value.trim();
+  const axis = document.getElementById('ev-axis').value;
+  const errs = [];
+  if (!zh) errs.push('中文名稱為必填');
+  if (!year) errs.push('開始年份為必填');
+  if (!axis) errs.push('所在軸線為必填');
+  if (errs.length) { errEl.textContent = errs.join('、'); errEl.classList.remove('hide'); return; }
+
+  const endYear = document.getElementById('ev-endyear').value.trim();
+  const crossRef = document.getElementById('ev-crossref').value;
+  const image = document.getElementById('ev-image').value.trim();
+
+  const ev = {
+    id:   makeId(zh),
+    year: parseInt(year),
+    zh,
+    en:   document.getElementById('ev-en').value.trim() || undefined,
+    axis,
+    level: parseInt(document.getElementById('ev-level').value),
+    category: document.getElementById('ev-category').value,
+    category_broad: 'human',
+  };
+  if (endYear)  ev.endYear  = parseInt(endYear);
+  if (crossRef) ev.crossRef = crossRef;
+  if (image)    ev.image    = image;
+  const descZh = document.getElementById('ev-desc-zh').value.trim();
+  const descEn = document.getElementById('ev-desc-en').value.trim();
+  const wikiZh = document.getElementById('ev-wiki-zh').value.trim();
+  const wikiEn = document.getElementById('ev-wiki-en').value.trim();
+  if (descZh) ev.desc_zh = descZh;
+  if (descEn) ev.desc_en = descEn;
+  if (wikiZh) ev.wiki_zh = wikiZh;
+  if (wikiEn) ev.wiki_en = wikiEn;
+
+  // Update zoomMin for the selected axis in pending if changed
+  const zmVal = parseFloat(document.getElementById('ev-zoommin').value);
+  const existingAx = (eventsData.axes||[]).find(a=>a.id===axis);
+  if (existingAx && Math.abs((existingAx.zoomMin??0) - zmVal) > 0.001) {
+    existingAx.zoomMin = zmVal; // modify in place
+  }
+
+  pendingItems.push({ type: 'event', data: ev });
+  renderPreview();
+  clearEventForm();
+}
+
+// ── Add axis ──
+function addAxis() {
+  const errEl = document.getElementById('ax-error');
+  errEl.classList.add('hide');
+  if (!validateAxId()) { errEl.textContent = document.getElementById('ax-id-err').textContent || 'ID 不合法'; errEl.classList.remove('hide'); return; }
+  const label = document.getElementById('ax-label').value.trim();
+  const parent = document.getElementById('ax-parent').value;
+  const startYear = document.getElementById('ax-startyear').value.trim();
+  const errs = [];
+  if (!label) errs.push('中文標籤為必填');
+  if (!parent) errs.push('父軸為必填');
+  if (!startYear) errs.push('開始年份為必填');
+  if (errs.length) { errEl.textContent = errs.join('、'); errEl.classList.remove('hide'); return; }
+
+  const color = document.getElementById('ax-color').value.trim() || '#60a5fa';
+  const endYear = document.getElementById('ax-endyear').value.trim();
+
+  // Calculate order: max order + 1
+  const maxOrder = Math.max(...getAxesSorted().map(a=>a.order??0));
+
+  const ax = {
+    id:        document.getElementById('ax-id').value.trim(),
+    label,
+    color:     /^#[0-9a-fA-F]{6}$/.test(color) ? color : '#60a5fa',
+    order:     maxOrder + 1,
+    parent,
+    startYear: parseInt(startYear),
+    endYear:   endYear ? parseInt(endYear) : null,
+    zoomMin:   parseFloat(document.getElementById('ax-zoommin').value),
+    group:     document.getElementById('ax-group').value,
+  };
+
+  pendingItems.push({ type: 'axis', data: ax });
+  populateAxisSelects(); // new axis immediately available
+  renderPreview();
+  clearAxisForm();
+}
+
+// ── Render preview list ──
+function renderPreview() {
+  const list = document.getElementById('preview-list');
+  const count = document.getElementById('preview-count');
+  count.textContent = pendingItems.length + ' 項';
+  if (!pendingItems.length) {
+    list.innerHTML = '<p style="color:var(--muted);font-size:12px">尚未加入任何項目</p>';
+    return;
+  }
+  list.innerHTML = '';
+  pendingItems.forEach((item, i) => {
+    const d = item.data;
+    const isAxis = item.type === 'axis';
+    const div = document.createElement('div');
+    div.className = 'preview-item';
+    div.innerHTML = `
+      <div class="preview-left">
+        <span class="preview-zh">
+          <span class="badge ${isAxis ? 'badge-axis' : 'badge-event'}">${isAxis ? '軸線' : '事件'}</span>
+          ${d.zh || d.label}
+        </span>
+        <span class="preview-meta">
+          ${isAxis ? `id: ${d.id} · 父軸: ${d.parent} · zoomMin: ${d.zoomMin}` :
+            `${d.axis} · ${d.year}年${d.endYear?' ~ '+d.endYear+'年':''} · level ${d.level}`}
+        </span>
+      </div>
+      <button class="btn-danger" onclick="removeItem(${i})">移除</button>`;
+    list.appendChild(div);
+  });
+}
+
+function removeItem(i) {
+  pendingItems.splice(i, 1);
+  populateAxisSelects();
+  renderPreview();
+}
+function clearPreview() {
+  if (pendingItems.length && !confirm('確定清除全部待加入項目？')) return;
+  pendingItems = [];
+  renderPreview();
+}
+
+// ── Clear forms ──
+function clearEventForm() {
+  ['ev-zh','ev-en','ev-year','ev-endyear','ev-desc-zh','ev-desc-en','ev-wiki-zh','ev-wiki-en','ev-image'].forEach(id=>{
+    document.getElementById(id).value='';
+  });
+  document.getElementById('ev-crossref').value='';
+  document.getElementById('ev-img-preview').style.display='none';
+  document.getElementById('ev-error').classList.add('hide');
+}
+function clearAxisForm() {
+  ['ax-id','ax-label','ax-startyear','ax-endyear'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('ax-color').value='#60a5fa';
+  document.getElementById('ax-color-picker').value='#60a5fa';
+  document.getElementById('ax-zoommin').value='0.58';
+  document.getElementById('ax-zoommin-val').textContent='0.58';
+  document.getElementById('ax-error').classList.add('hide');
+  document.getElementById('ax-id-err').classList.add('hide');
+}
+
+// ── Download ──
+function downloadJson() {
+  if (!eventsData) return;
+
+  // Merge pending axes
+  const newAxes = pendingItems.filter(p=>p.type==='axis').map(p=>p.data);
+  const mergedAxes = [...(eventsData.axes||[]), ...newAxes];
+
+  // Merge pending events
+  const newEvents = pendingItems.filter(p=>p.type==='event').map(p=>{
+    const ev = {...p.data};
+    // clean undefined
+    Object.keys(ev).forEach(k=>ev[k]===undefined&&delete ev[k]);
+    return ev;
+  });
+  const mergedEvents = [...eventsData.events, ...newEvents];
+
+  const out = {
+    meta: eventsData.meta || { title_zh:'宇宙歷史時間軸', title_en:'Cosmic Timeline', total_years:13800000000, created:'2026' },
+    axes: mergedAxes,
+    era_bands: eventsData.era_bands || [],
+    events: mergedEvents,
+  };
+
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'events.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>

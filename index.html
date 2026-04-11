@@ -59,6 +59,15 @@ body {
   font-size: 10px; letter-spacing: 0.15em;
   color: var(--text-muted); white-space: nowrap;
 }
+#lang-toggle {
+  padding: 4px 10px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(221,216,200,0.7); font-size: 10px; font-family: inherit;
+  cursor: pointer; letter-spacing: 0.05em; transition: all .15s;
+  white-space: nowrap;
+}
+#lang-toggle:hover { background: rgba(255,255,255,0.14); color: #fff; }
+#lang-toggle.en-active { border-color: rgba(96,165,250,0.4); color: #93c5fd; }
 
 /* ── SEARCH BOX ── */
 #search-wrap {
@@ -688,7 +697,8 @@ body {
     <button id="search-clear" onclick="clearSearch()">✕</button>
     <div id="search-results"></div>
   </div>
-  <p>138億年 · 13.8 BILLION YEARS</p>
+  <button id="lang-toggle" onclick="toggleLang()" title="Switch language">中/EN</button>
+  <p id="header-sub">138億年 · 13.8 BILLION YEARS</p>
 </div>
 
 <div id="legend">
@@ -816,6 +826,19 @@ body {
           <div class="edit-label">父軸</div>
           <select class="edit-input" id="edit-axis-parent" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
+        <div class="edit-row" style="flex-direction:column;gap:6px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div>
+              <div class="edit-label" style="margin-bottom:4px">軸線起始年份</div>
+              <input class="edit-input" id="edit-axis-startyear" type="number" placeholder="例：-800 或 1776" style="font-size:12px">
+            </div>
+            <div>
+              <div class="edit-label" style="margin-bottom:4px">消亡年份（空白=至今）</div>
+              <input class="edit-input" id="edit-axis-endyear" type="number" placeholder="例：476（西羅馬滅亡）" style="font-size:12px">
+            </div>
+          </div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.25)">起始年份決定分支線起點 · 有消亡年份則線會在該年終止</div>
+        </div>
         <div class="edit-row">
           <div class="edit-label">圖片 URL</div>
           <input class="edit-input" id="edit-image" type="text" placeholder="https://upload.wikimedia.org/...">
@@ -860,6 +883,42 @@ body {
 </div>
 
 <script>
+// ════════════════════════════════════════════
+//  LANGUAGE SYSTEM
+// ════════════════════════════════════════════
+let lang = localStorage.getItem('cosmic-lang') || 'zh';
+
+function toggleLang() {
+  lang = lang === 'zh' ? 'en' : 'zh';
+  localStorage.setItem('cosmic-lang', lang);
+  applyLang();
+  draw();
+  // Refresh open popup if any
+  if (_editingEventId || document.getElementById('popup-overlay').classList.contains('show')) {
+    const ev = events.find(e => e.id === _editingEventId);
+    if (ev) showPopup(ev);
+  }
+}
+
+function applyLang() {
+  const btn = document.getElementById('lang-toggle');
+  const sub = document.getElementById('header-sub');
+  if (lang === 'en') {
+    btn.textContent = 'EN / 中';
+    btn.classList.add('en-active');
+    if (sub) sub.textContent = '13.8 Billion Years · Cosmic Timeline';
+    document.getElementById('search-input').placeholder = 'Search events… e.g. Newton, 1687';
+  } else {
+    btn.textContent = '中 / EN';
+    btn.classList.remove('en-active');
+    if (sub) sub.textContent = '138億年 · 13.8 BILLION YEARS';
+    document.getElementById('search-input').placeholder = '搜尋事件… 例如：牛頓、Newton、1687';
+  }
+}
+
+// Helper: get display text based on lang
+function T(zh, en) { return lang === 'en' && en ? en : zh; }
+
 // ════════════════════════════════════════════
 //  CONSTANTS & CONFIG
 // ════════════════════════════════════════════
@@ -1422,15 +1481,15 @@ function drawEraBanners() {
     ctx.fillStyle = `rgba(${r},${g},${b},${0.35 + zoom * 0.2})`;
     ctx.fillRect(rx1, 78, w, 32);
 
-    // Chinese label
+    // Era label
     const bigSz = Math.min(16, Math.max(10, w / 10));
     ctx.font = `700 ${bigSz}px "Noto Sans TC", sans-serif`;
     ctx.fillStyle = `rgba(255,255,255,0.92)`;
     ctx.textAlign = 'center';
-    ctx.fillText(band.zh, cx, 93);
+    ctx.fillText(T(band.zh, band.en), cx, 93);
 
-    // English sublabel
-    if (w > 60) {
+    // Sublabel (opposite lang)
+    if (w > 60 && lang === 'zh') {
       ctx.font = `400 ${Math.max(8, bigSz - 4)}px "Noto Sans TC", sans-serif`;
       ctx.fillStyle = `rgba(255,255,255,0.55)`;
       ctx.fillText(band.en, cx, 93 + bigSz);
@@ -1609,7 +1668,7 @@ function drawAxisLines() {
     // ── Label badge — always pinned to left edge for readability ──
     // When axis starts off-screen right, label still shows on left
     const labelX    = 4;
-    const label     = ax.label;
+    const label     = T(ax.label, ax.label_en || ax.label);
     const fontSize  = ax.zoomMin > 0 ? 9 : 10;
     const pad       = 5;
     const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
@@ -1936,7 +1995,7 @@ function drawPill(ev, y, opts = {}) {
     const fs      = isChild ? 10 : (ev.level === 1 ? 11 : 10);
     const infoGap = isHov ? 22 : 0;
     ctx.font      = `${ev.level === 1 && !isChild ? '500 ' : ''}${fs}px "Noto Sans TC", sans-serif`;
-    const tw      = ctx.measureText(ev.zh).width;
+    const tw      = ctx.measureText(T(ev.zh, ev.en)).width;
     const midX    = (rx1 + rx2) / 2;
     const cx      = Math.max(tw / 2 + 4, Math.min(rx2 - tw / 2 - infoGap - 4, midX));
     const inside  = w > tw + 16 + infoGap;
@@ -1955,7 +2014,7 @@ function drawPill(ev, y, opts = {}) {
         ? `rgba(255,255,255,${(isChild ? 0.85 : ev.level === 1 ? 0.9 : 0.75) * soloMul})`
         : `rgba(221,216,200,${(ev.level === 1 ? 0.9 : 0.65) * soloMul})`);
       ctx.textAlign = 'center';
-      ctx.fillText(ev.zh, cx, py);
+      ctx.fillText(T(ev.zh, ev.en), cx, py);
     }
     ctx.restore();
   }
@@ -2127,7 +2186,7 @@ function drawEvents(eventsInView) {
       const evSoloMul = (_soloAxis && !_soloSet.has(rep.axis)) ? _soloDimAlpha : 1;
       const fs = rep.level === 1 ? 11 : 10;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
-      const tw  = ctx.measureText(rep.zh).width;
+      const tw  = ctx.measureText(T(rep.zh, rep.en)).width;
       const py  = _tryPlace(x, y - r - 8, tw, fs + 4, [-13, 13, -26, 26, -39]);
       if (py !== null) {
         ctx.fillStyle = `rgba(5,8,16,${0.72 * evSoloMul})`;
@@ -2136,7 +2195,7 @@ function drawEvents(eventsInView) {
         ctx.fill();
         ctx.fillStyle = isHov ? color : `rgba(221,216,200,${(rep.level === 1 ? 0.88 : 0.60) * evSoloMul})`;
         ctx.textAlign = 'center';
-        ctx.fillText(rep.zh, x, py);
+        ctx.fillText(T(rep.zh, rep.en), x, py);
       }
       ctx.restore();
     }
@@ -2460,10 +2519,34 @@ function zoomBy(factor, centerX) {
   const span = viewEnd - viewStart;
   let newSpan = span * factor;
   newSpan = Math.min(Math.max(newSpan, 2), globalViewSpan());
+
+  // ── Snapshot axis count before zoom ──
+  const visCountBefore = getVisibleAxes().length;
+
   const ratio = (mouseYear - viewStart) / span;
   viewStart = mouseYear - ratio * newSpan;
   viewEnd   = viewStart + newSpan;
   clampView();
+
+  // ── Compensate yOffset when axis count changes ──
+  // Find the axis closest to mouseY before and after, keep it pinned
+  const visCountAfter = getVisibleAxes().length;
+  if (visCountBefore !== visCountAfter && visCountBefore > 0) {
+    // Anchor: the axis at mouseY should stay at mouseY
+    // Gap before → gap after: adjust yOffset to compensate
+    const gap = LANE_GAP_BASE * Math.max(1, yScale);
+    const mouseYPos = mouseY >= 0 ? mouseY : canvasH / 2;
+    // Which row index was under mouse before?
+    const rowBefore = Math.round((mouseYPos - TOP_MARGIN - yOffset) / gap);
+    // After zoom the same row should still be at mouseYPos
+    // New gap is the same (yScale unchanged), but rowBefore might now map differently
+    // Simple fix: scale yOffset proportionally to new axis count
+    if (visCountBefore > 0) {
+      yOffset = yOffset * (visCountAfter / visCountBefore);
+      clampYOffset();
+    }
+  }
+
   draw();
 }
 
@@ -2922,8 +3005,8 @@ function handleHover(mx, my) {
     canvas.style.cursor = 'pointer';
     document.getElementById('tt-era').textContent = (AXES[ev.axis] && AXES[ev.axis].label) || ev.axis;
     document.getElementById('tt-era').style.color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
-    document.getElementById('tt-zh').textContent  = ev.zh;
-    document.getElementById('tt-en').textContent  = ev.en;
+    document.getElementById('tt-zh').textContent  = T(ev.zh, ev.en);
+    document.getElementById('tt-en').textContent  = lang === 'en' ? '' : (ev.en || '');
     const timeStr = ev.endYear
       ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
       : formatYear(ev.year);
@@ -3070,23 +3153,24 @@ function showPopup(ev) {
   tag.style.borderColor = color + '44';
   tag.style.background = color + '11';
 
-  document.getElementById('popup-zh').textContent = ev.zh;
-  document.getElementById('popup-en').textContent = ev.en;
+  // Title: in EN mode show EN title prominently
+  document.getElementById('popup-zh').textContent = lang === 'en' ? (ev.en || ev.zh) : ev.zh;
+  document.getElementById('popup-en').textContent = lang === 'en' ? '' : (ev.en || '');
   const axObj   = AXES[ev.axis];
   const axLabel = (axObj && axObj.label) || ev.axis;
   const parentLabel = axObj?.parent ? ((AXES[axObj.parent]?.label) || axObj.parent) : null;
   const timeStr = ev.endYear
     ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
     : formatYear(ev.year);
-  // Show: 父軸 › 軸線 · 年份  (+crossRef if any)
   let metaStr = parentLabel ? `${parentLabel} › ${axLabel}` : axLabel;
   if (ev.crossRef) {
     const crLabel = (AXES[ev.crossRef]?.label) || ev.crossRef;
     metaStr += `  ⤴ ${crLabel}`;
   }
   document.getElementById('popup-time').textContent = `${metaStr} · ${timeStr}`;
-  document.getElementById('popup-desc-zh').textContent = ev.desc_zh || '';
-  document.getElementById('popup-desc-en').textContent = ev.desc_en || '';
+  // Description: EN mode shows EN desc only; ZH mode shows both
+  document.getElementById('popup-desc-zh').textContent = lang === 'en' ? (ev.desc_en || ev.desc_zh || '') : (ev.desc_zh || '');
+  document.getElementById('popup-desc-en').textContent = lang === 'en' ? '' : (ev.desc_en || '');
 
   // Populate axis select
   const axSelect = document.getElementById('edit-axis');
@@ -3125,6 +3209,8 @@ function showPopup(ev) {
   const zm = curAx?.zoomMin ?? 0;
   document.getElementById('edit-zoommin').value = zm;
   document.getElementById('edit-zoommin-val').textContent = zm.toFixed(2);
+  document.getElementById('edit-axis-startyear').value = curAx?.startYear ?? '';
+  document.getElementById('edit-axis-endyear').value   = curAx?.endYear   ?? '';
 
   // Populate edit fields
   document.getElementById('edit-image').value   = ev.image   || '';
@@ -3255,6 +3341,7 @@ async function loadEvents() {
   }
   buildParentTree();
   applyEdits();
+  applyLang();
   draw();
 }
 
@@ -3425,14 +3512,20 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
     if (fields.crossRef === '') delete ev.crossRef;
   }
 
-  // ── Axis setting edits (parent + zoomMin) ──
-  const axId      = document.getElementById('edit-axis').value;
-  const newParent = document.getElementById('edit-axis-parent').value || null;
+  // ── Axis setting edits (parent + zoomMin + startYear + endYear) ──
+  const axId       = document.getElementById('edit-axis').value;
+  const newParent  = document.getElementById('edit-axis-parent').value || null;
   const newZoomMin = parseFloat(document.getElementById('edit-zoommin').value);
+  const syRaw      = document.getElementById('edit-axis-startyear').value.trim();
+  const eyRaw      = document.getElementById('edit-axis-endyear').value.trim();
   if (axId) {
-    const axFields = { parent: newParent, zoomMin: newZoomMin };
+    const axFields = {
+      parent:    newParent,
+      zoomMin:   newZoomMin,
+      startYear: syRaw !== '' ? parseInt(syRaw) : (AXES[axId]?.startYear ?? 0),
+      endYear:   eyRaw !== '' ? parseInt(eyRaw) : null,
+    };
     saveAxisEdit(axId, axFields);
-    // Rebuild axis group map and legend after parent change
     buildAxisGroupMap();
     buildLegend();
   }
@@ -3556,21 +3649,31 @@ function selectSearchResult(idx) {
 }
 
 function navigateToEvent(ev) {
-  // Calculate target span based on event type
-  const span = ev.endYear
-    ? Math.abs(ev.endYear - ev.year) * 4
-    : Math.max(200, Math.abs(ev.year) * 0.001 + 100);
+  const ax = AXES[ev.axis];
+  const axZoomMin = ax?.zoomMin ?? 0;
 
-  const targetCenter = ev.endYear
-    ? (ev.year + ev.endYear) / 2
-    : ev.year;
+  // Calculate required span so that currentZoom() >= axZoomMin + 0.05
+  // currentZoom = 1 - log(span)/log(maxSpan)  →  span = maxSpan^(1 - targetZoom)
+  const maxSpan = TOTAL_YEARS + NOW;
+  const targetZoom = Math.max(axZoomMin + 0.06, 0.65);
+  const maxAllowedSpan = Math.pow(maxSpan, 1 - targetZoom);
 
-  const targetStart = targetCenter - span / 2;
-  const targetEnd   = targetCenter + span / 2;
+  // For pill events, fit the pill width with padding; for points use a fixed window
+  let span;
+  if (ev.endYear) {
+    const pillSpan = Math.abs(ev.endYear - ev.year);
+    span = Math.min(pillSpan * 3 + 200, maxAllowedSpan);
+  } else {
+    // point event: use a window that's deep enough to show the axis
+    span = Math.min(Math.max(200, Math.abs(ev.year) * 0.0005 + 50), maxAllowedSpan);
+  }
+  span = Math.max(span, 2);
 
-  // Animate zoom + pan
+  const targetCenter = ev.endYear ? (ev.year + ev.endYear) / 2 : ev.year;
+  const targetStart  = targetCenter - span / 2;
+  const targetEnd    = targetCenter + span / 2;
+
   animateToView(targetStart, targetEnd, () => {
-    // After navigation, show popup
     const found = events.find(e => e.id === ev.id);
     if (found) showPopup(found);
   });

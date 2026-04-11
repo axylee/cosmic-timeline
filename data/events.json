@@ -123,7 +123,7 @@
       "order": 10,
       "parent": "mideast",
       "startYear": -3100,
-      "endYear": null,
+      "endYear": 641,
       "zoomMin": 0.58,
       "group": "nation"
     },
@@ -134,7 +134,7 @@
       "order": 11,
       "parent": "mideast",
       "startYear": -600,
-      "endYear": null,
+      "endYear": 651,
       "zoomMin": 0.65,
       "group": "nation"
     },
@@ -320,7 +320,7 @@
       "color": "#7c3aed",
       "order": 28,
       "parent": "cross",
-      "startYear": -3500,
+      "startYear": -800,
       "endYear": null,
       "zoomMin": 0,
       "group": "nation"
@@ -364,7 +364,7 @@
       "color": "#3b82f6",
       "order": 32,
       "parent": "americas",
-      "startYear": -13000,
+      "startYear": -2600,
       "endYear": null,
       "zoomMin": 0.65,
       "group": "nation"
