@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>Cosmic Timeline — 工具箱</title>
+<style>
+:root {
+  --bg:#05080f; --surface:#0c1020; --surface2:#111827;
+  --border:rgba(255,255,255,0.08); --text:#ddd8c8;
+  --muted:rgba(221,216,200,0.45); --accent:#60a5fa;
+  --green:#34d399; --red:#f87171; --yellow:#fbbf24; --purple:#a78bfa; --cyan:#67e8f9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans',sans-serif;font-size:13px;min-height:100vh;padding:24px}
+h1{font-size:18px;font-weight:500;color:#fff;margin-bottom:4px}
+.subtitle{color:var(--muted);font-size:12px;margin-bottom:20px}
+/* Top-level tabs */
+.top-tabs{display:flex;gap:2px;margin-bottom:0;border-bottom:1px solid var(--border)}
+.top-tab{padding:10px 24px;border-radius:8px 8px 0 0;cursor:pointer;font-size:13px;font-family:inherit;
+  background:transparent;border:1px solid transparent;border-bottom:none;color:var(--muted);transition:all .15s}
+.top-tab.active{background:var(--surface);color:#fff;border-color:var(--border)}
+.top-tab:hover:not(.active){color:var(--text)}
+.top-panel{display:none;padding-top:0}
+.top-panel.active{display:block}
+/* Card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:16px}
+.card-title{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+/* Sub-tabs (within add panel) */
+.tabs{display:flex;gap:2px;margin-bottom:16px;border-bottom:1px solid var(--border)}
+.tab{padding:7px 18px;border-radius:8px 8px 0 0;cursor:pointer;font-size:12px;font-family:inherit;
+  background:transparent;border:1px solid transparent;border-bottom:none;color:var(--muted)}
+.tab.active{background:var(--surface2);color:#fff;border-color:var(--border)}
+/* Form */
+label{font-size:11px;color:var(--muted);display:block;margin-bottom:4px}
+input,select,textarea{background:rgba(255,255,255,0.05);border:1px solid var(--border);
+  border-radius:6px;color:var(--text);padding:8px 12px;font-size:13px;font-family:inherit;
+  outline:none;transition:border-color .15s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.25)}
+textarea{min-height:68px;resize:vertical}
+select{cursor:pointer}
+.grid{display:grid;gap:12px}
+.grid-2{grid-template-columns:1fr 1fr}
+.grid-3{grid-template-columns:1fr 1fr 1fr}
+.form-group{display:flex;flex-direction:column;gap:4px}
+.required{color:var(--red);margin-left:2px}
+/* Buttons */
+button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;white-space:nowrap}
+.btn-primary{background:rgba(96,165,250,0.2);color:var(--accent);border:1px solid rgba(96,165,250,0.3)}
+.btn-primary:hover{background:rgba(96,165,250,0.35)} .btn-primary:disabled{opacity:.4;cursor:not-allowed}
+.btn-success{background:rgba(52,211,153,0.2);color:var(--green);border:1px solid rgba(52,211,153,0.3)}
+.btn-success:hover{background:rgba(52,211,153,0.35)}
+.btn-warn{background:rgba(251,191,36,0.15);color:var(--yellow);border:1px solid rgba(251,191,36,0.3)}
+.btn-warn:hover{background:rgba(251,191,36,0.28)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.btn-ghost:hover{color:var(--text);border-color:rgba(255,255,255,0.2)}
+.btn-skip{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border);font-size:12px;padding:6px 12px}
+.btn-danger{background:rgba(248,113,113,0.12);color:var(--red);border:1px solid rgba(248,113,113,0.25);padding:4px 10px;font-size:11px}
+.row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.sep{border:none;border-top:1px solid var(--border);margin:14px 0}
+/* Info / error boxes */
+.info-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:9px 13px;font-size:11px;color:var(--muted);line-height:1.7}
+.info-box.axis-info{border-color:rgba(167,139,250,0.2);background:rgba(167,139,250,0.05)}
+.err-box{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2);border-radius:8px;padding:9px 13px;font-size:12px;color:var(--red)}
+.err-msg{font-size:10px;color:var(--red);margin-top:2px}
+.field-error{border-color:var(--red)!important}
+/* Preview list */
+#preview-list{display:flex;flex-direction:column;gap:6px;max-height:320px;overflow-y:auto}
+.preview-item{display:flex;align-items:center;justify-content:space-between;padding:8px 13px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;gap:10px}
+.preview-left{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.preview-zh{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.preview-meta{font-size:10px;color:var(--muted)}
+.badge{display:inline-block;padding:2px 7px;border-radius:8px;font-size:10px;margin-right:4px}
+.badge-event{background:rgba(52,211,153,0.15);color:var(--green)}
+.badge-axis{background:rgba(167,139,250,0.15);color:var(--purple)}
+.badge-ok{background:rgba(52,211,153,0.15);color:var(--green)}
+.badge-skip{background:rgba(255,255,255,0.06);color:var(--muted)}
+.badge-fail{background:rgba(248,113,113,0.15);color:var(--red)}
+.badge-manual{background:rgba(96,165,250,0.15);color:var(--accent)}
+/* Zoom slider */
+.zoom-row{display:flex;gap:8px;align-items:center}
+.zoom-row input[type=range]{flex:1;accent-color:var(--purple);cursor:pointer}
+.zoom-val{font-size:11px;color:var(--muted);min-width:32px}
+/* Color picker */
+.color-row{display:flex;gap:8px;align-items:center}
+.color-row input[type=color]{width:40px;height:34px;padding:2px;border-radius:6px;cursor:pointer;flex-shrink:0}
+.color-row input[type=text]{flex:1}
+/* Drop zone */
+#drop-zone{border:2px dashed rgba(255,255,255,0.12);border-radius:10px;padding:20px;text-align:center;color:var(--muted);cursor:pointer;transition:all .2s;margin-bottom:12px}
+#drop-zone:hover,#drop-zone.drag-over{border-color:var(--accent);color:var(--accent);background:rgba(96,165,250,0.05)}
+#drop-zone input{display:none}
+/* Image tool */
+.progress-wrap{margin:10px 0}
+.progress-bar-bg{background:rgba(255,255,255,0.06);border-radius:4px;height:5px;overflow:hidden}
+.progress-bar-fill{height:100%;background:var(--accent);border-radius:4px;transition:width .3s;width:0}
+.progress-text{font-size:11px;color:var(--muted);margin-top:5px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin:12px 0}
+.stat{text-align:center;min-width:48px}
+.stat-num{font-size:20px;font-weight:300}
+.stat-label{font-size:9px;color:var(--muted);margin-top:2px}
+#log{height:180px;overflow-y:auto;padding:10px;background:rgba(0,0,0,0.3);border-radius:8px;font-family:'Courier New',monospace;font-size:11px;line-height:1.7}
+.log-ok{color:var(--green)} .log-auto{color:#86efac} .log-fail{color:var(--red)} .log-info{color:var(--muted)} .log-warn{color:var(--yellow)}
+.missing-item{display:flex;flex-direction:column;gap:5px;padding:9px 12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px}
+.missing-item-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.missing-item-left{display:flex;flex-direction:column;gap:2px}
+.missing-zh{font-size:13px}
+.missing-axis{font-size:10px;color:var(--muted)}
+.missing-links{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.wiki-btn{padding:3px 9px;border-radius:6px;font-size:11px;cursor:pointer;text-decoration:none;transition:all .15s}
+.wiki-btn.zh{background:rgba(251,191,36,0.12);color:var(--yellow);border:1px solid rgba(251,191,36,0.25)}
+.wiki-btn.en{background:rgba(96,165,250,0.12);color:var(--accent);border:1px solid rgba(96,165,250,0.25)}
+.missing-edit-row{display:flex;gap:8px}
+.missing-edit-row input{flex:1;font-size:12px;padding:6px 10px}
+.btn-apply{background:rgba(52,211,153,0.15);color:var(--green);border:1px solid rgba(52,211,153,0.3);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;flex-shrink:0}
+.missing-applied{display:none;font-size:11px;color:var(--green)}
+.broken-item{display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(248,113,113,0.05);border:1px solid rgba(248,113,113,0.15);border-radius:8px}
+.broken-thumb{width:50px;height:34px;object-fit:cover;border-radius:4px;flex-shrink:0}
+.broken-info{flex:1;min-width:0}
+.broken-zh{font-size:12px}
+.broken-url{font-size:9px;color:var(--red);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.broken-actions{flex-shrink:0}
+.btn-clear{background:rgba(248,113,113,0.12);color:var(--red);border:1px solid rgba(248,113,113,0.25);padding:4px 10px;border-radius:6px;cursor:pointer;font-size:11px}
+/* Result table */
+#result-table{width:100%;border-collapse:collapse;font-size:12px}
+#result-table th{text-align:left;padding:6px 10px;color:var(--muted);font-weight:400;font-size:10px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border)}
+#result-table td{padding:6px 10px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+#result-table img{width:46px;height:30px;object-fit:cover;border-radius:4px}
+/* Picker overlay */
+#picker-overlay{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px}
+#picker-overlay.hide{display:none}
+#picker-box{background:#0c1020;border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:22px;max-width:960px;width:100%;max-height:90vh;overflow-y:auto}
+#picker-title{font-size:16px;font-weight:500;color:#fff;margin-bottom:3px}
+#picker-meta{font-size:11px;color:var(--muted);margin-bottom:14px}
+#picker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-bottom:18px}
+.pick-item{border:2px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .15s;background:rgba(255,255,255,0.03)}
+.pick-item:hover{border-color:var(--accent);transform:scale(1.02)}
+.pick-item.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+.pick-item img{width:100%;height:120px;object-fit:cover;display:block;background:#070b18}
+.pick-item .pick-label{padding:6px 9px;font-size:10px;border-top:1px solid rgba(255,255,255,0.06)}
+.pick-source{color:var(--muted)}
+.pick-item.pick-none{border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;height:160px;gap:5px;color:var(--muted);font-size:12px}
+.pick-item.pick-none:hover{border-color:var(--red);color:var(--red)}
+.pick-item.img-broken{opacity:.4;border-color:var(--red)}
+#picker-custom{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+#picker-custom input{flex:1;min-width:200px}
+#picker-custom-preview{width:56px;height:38px;object-fit:cover;border-radius:5px;display:none;border:1px solid rgba(255,255,255,0.1)}
+#picker-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+/* Confirm modal */
+#confirm-overlay{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px}
+#confirm-overlay.hide{display:none}
+.hide{display:none!important}
+#confirm-box{background:#0c1020;border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto}
+#confirm-title{font-size:16px;font-weight:500;color:#fff;margin-bottom:4px}
+#confirm-subtitle{font-size:11px;color:var(--muted);margin-bottom:18px}
+.cl-section{margin-bottom:14px}
+.cl-section-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;padding-bottom:5px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.cl-item{display:flex;align-items:baseline;gap:8px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:12px}
+.cl-item:last-child{border-bottom:none}
+.cl-icon{font-size:11px;flex-shrink:0;width:16px}
+.cl-name{flex:1}
+.cl-meta{font-size:10px;color:var(--muted);flex-shrink:0}
+.cl-empty{font-size:12px;color:var(--muted);font-style:italic;padding:6px 0}
+.confirm-actions{display:flex;gap:10px;margin-top:18px;justify-content:flex-end}
+.changelog-badge{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;margin-left:6px}
+/* floating changelog indicator */
+#changelog-indicator{position:fixed;bottom:80px;right:20px;background:rgba(96,165,250,0.2);border:1px solid rgba(96,165,250,0.35);color:var(--accent);border-radius:20px;padding:6px 14px;font-size:12px;cursor:pointer;display:none;z-index:100;backdrop-filter:blur(6px)}
+#changelog-indicator:hover{background:rgba(96,165,250,0.35)}</style>
+</head>
+<body>
+
+<!-- Confirm modal -->
+<div id="confirm-overlay" class="hide">
+  <div id="confirm-box">
+    <div id="confirm-title">📋 輸出前確認變更清單</div>
+    <div id="confirm-subtitle"></div>
+    <div id="confirm-content"></div>
+    <div class="confirm-actions">
+      <button class="btn-ghost" onclick="closeConfirm()">✕ 取消</button>
+      <button class="btn-success" onclick="doDownload()">✓ 確認輸出 events.json</button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating changelog badge -->
+<div id="changelog-indicator" onclick="showConfirm()">📋 <span id="cl-badge-count">0</span> 項變更待輸出</div>
+
+<!-- Picker overlay (shared) -->
+<div id="picker-overlay" class="hide">
+  <div id="picker-box">
+    <div id="picker-title"></div>
+    <div id="picker-meta"></div>
+    <div id="picker-grid"></div>
+    <div id="picker-custom">
+      <label style="flex-shrink:0;margin:0">自訂 URL：</label>
+      <input type="text" id="picker-url-input" placeholder="貼上圖片 URL...">
+      <button class="btn-ghost" onclick="previewCustom()">預覽</button>
+      <img id="picker-custom-preview">
+    </div>
+    <div id="picker-actions">
+      <button class="btn-success" id="picker-confirm" onclick="pickerConfirm()">✓ 使用選取的圖片</button>
+      <button class="btn-skip" onclick="pickerSkip()">略過此事件</button>
+      <button class="btn-ghost" onclick="pickerKeep()">保留原有圖片</button>
+      <span id="picker-status" style="font-size:11px;color:var(--muted)"></span>
+    </div>
+  </div>
+</div>
+
+<h1>🌌 Cosmic Timeline 工具箱</h1>
+<p class="subtitle">新增事件 · 新增軸線 · 圖片管理 · 一個工具全搞定</p>
+
+<!-- Load card -->
+<div class="card">
+  <div class="card-title">步驟 1 — 載入 events.json</div>
+  <div id="drop-zone" onclick="document.getElementById('file-input').click()">
+    <input type="file" id="file-input" accept=".json">
+    📂 點擊選擇檔案，或拖曳 events.json 到這裡
+  </div>
+  <div class="row">
+    <div style="flex:1">
+      <label>或從 GitHub 載入</label>
+      <input type="text" id="url-input" value="https://raw.githubusercontent.com/axylee/cosmic-timeline/main/data/events.json">
+    </div>
+    <button class="btn-primary" onclick="loadFromUrl()">從 URL 載入</button>
+  </div>
+  <div id="load-status" style="margin-top:8px;font-size:12px"></div>
+</div>
+
+<!-- Main tool area -->
+<div class="hide" id="tool-area">
+
+  <!-- Top tabs -->
+  <div class="top-tabs">
+    <button class="top-tab active" onclick="switchTopTab('add')">➕ 新增事件 / 軸線</button>
+    <button class="top-tab" onclick="switchTopTab('images')">🖼 圖片管理</button>
+  </div>
+
+  <!-- ══ ADD PANEL ══ -->
+  <div class="top-panel active" id="panel-add" style="padding-top:16px">
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('event')">新增事件</button>
+      <button class="tab" onclick="switchTab('axis')">新增軸線</button>
+    </div>
+
+    <!-- EVENT FORM -->
+    <div id="tab-event">
+      <div class="card">
+        <div class="card-title">軸線定位</div>
+        <div class="grid">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>所在軸線 <span class="required">*</span></label>
+              <select id="ev-axis" onchange="onAxisChange()"></select>
+            </div>
+            <div class="form-group">
+              <label>父軸（修改這條軸線的父軸）</label>
+              <select id="ev-axis-parent" onchange="onParentChange()"></select>
+              <div id="ev-axis-info" style="font-size:10px;color:rgba(221,216,200,0.35);margin-top:3px"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>顯示門檻（zoomMin）— 調整這條軸線的</label>
+            <div class="zoom-row">
+              <input type="range" id="ev-zoommin" min="0" max="1" step="0.01" value="0.58"
+                oninput="document.getElementById('ev-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
+              <span class="zoom-val" id="ev-zoommin-val">0.58</span>
+            </div>
+            <div style="font-size:10px;color:rgba(221,216,200,0.25);margin-top:2px">0 = 全局顯示 · 0.58 = zoom in 才出現 · 0.75 = 深度 zoom in</div>
+          </div>
+          <div class="form-group">
+            <label>CrossRef（縱線連到哪條軸線）</label>
+            <select id="ev-crossref"><option value="">— 無 —</option></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">基本資料</div>
+        <div class="grid grid-2">
+          <div class="form-group">
+            <label>中文名稱 <span class="required">*</span></label>
+            <input type="text" id="ev-zh" placeholder="例：鄭成功登台">
+          </div>
+          <div class="form-group">
+            <label>英文名稱</label>
+            <input type="text" id="ev-en" placeholder="e.g. Koxinga Takes Taiwan">
+          </div>
+          <div class="form-group">
+            <label>開始年份 <span class="required">*</span>（負數 = BC）</label>
+            <input type="number" id="ev-year" placeholder="例：1661 或 -3000">
+          </div>
+          <div class="form-group">
+            <label>結束年份（有填 = pill，沒填 = 點事件）</label>
+            <input type="number" id="ev-endyear" placeholder="選填">
+          </div>
+          <div class="form-group">
+            <label>重要程度 <span class="required">*</span></label>
+            <select id="ev-level">
+              <option value="1">Level 1 — 大事件（大圓點）</option>
+              <option value="2" selected>Level 2 — 一般事件</option>
+              <option value="3">Level 3 — 小事件（小圓點）</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>分類</label>
+            <select id="ev-category">
+              <option value="civilization">文明</option><option value="politics">政治</option>
+              <option value="war">戰爭</option><option value="science">科學技術</option>
+              <option value="religion">宗教</option><option value="philosophy">哲學</option>
+              <option value="culture">文化藝術</option><option value="exploration">探索</option>
+              <option value="medicine">醫學</option><option value="astronomy">天文</option>
+              <option value="geology">地質</option><option value="biology">生物</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">描述 / 連結 / 圖片</div>
+        <div class="grid">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>中文描述</label>
+              <textarea id="ev-desc-zh" placeholder="選填"></textarea>
+            </div>
+            <div class="form-group">
+              <label>英文描述</label>
+              <textarea id="ev-desc-en" placeholder="Optional"></textarea>
+            </div>
+            <div class="form-group">
+              <label>中文 Wikipedia URL</label>
+              <input type="text" id="ev-wiki-zh" placeholder="https://zh.wikipedia.org/wiki/...">
+            </div>
+            <div class="form-group">
+              <label>英文 Wikipedia URL</label>
+              <input type="text" id="ev-wiki-en" placeholder="https://en.wikipedia.org/wiki/...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>圖片 URL（選填，可之後用圖片管理補）</label>
+            <div class="row">
+              <input type="text" id="ev-image" placeholder="https://upload.wikimedia.org/...">
+              <button class="btn-ghost" onclick="previewEventImage()" style="flex-shrink:0">預覽</button>
+            </div>
+            <img id="ev-img-preview" style="display:none;max-height:90px;border-radius:6px;margin-top:6px;object-fit:cover">
+          </div>
+        </div>
+      </div>
+
+      <div id="ev-error" class="hide err-box" style="margin-bottom:10px"></div>
+      <button class="btn-success" onclick="addEvent()" style="width:100%;padding:12px">✓ 加入事件</button>
+    </div>
+
+    <!-- AXIS FORM -->
+    <div id="tab-axis" class="hide">
+      <div class="card">
+        <div class="card-title">軸線定義</div>
+        <div class="grid grid-2">
+          <div class="form-group">
+            <label>ID <span class="required">*</span>（英文小寫 + 連字號）</label>
+            <input type="text" id="ax-id" placeholder="例：korea" oninput="validateAxId()">
+            <div class="err-msg hide" id="ax-id-err"></div>
+          </div>
+          <div class="form-group">
+            <label>中文標籤 <span class="required">*</span></label>
+            <input type="text" id="ax-label" placeholder="例：韓國">
+          </div>
+          <div class="form-group">
+            <label>父軸 <span class="required">*</span></label>
+            <select id="ax-parent"></select>
+          </div>
+          <div class="form-group">
+            <label>分類群組</label>
+            <select id="ax-group">
+              <option value="natural">自然科學</option><option value="human">人文</option>
+              <option value="science">科學技術</option><option value="arts">藝術文化</option>
+              <option value="religion">宗教</option><option value="civilization">文明</option>
+              <option value="nation" selected>國家地區</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>顏色 <span class="required">*</span></label>
+            <div class="color-row">
+              <input type="color" id="ax-color-picker" value="#60a5fa" oninput="document.getElementById('ax-color').value=this.value">
+              <input type="text" id="ax-color" value="#60a5fa" placeholder="#rrggbb" oninput="syncColor()">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>顯示門檻（zoomMin）</label>
+            <div class="zoom-row">
+              <input type="range" id="ax-zoommin" min="0" max="1" step="0.01" value="0.58"
+                oninput="document.getElementById('ax-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
+              <span class="zoom-val" id="ax-zoommin-val">0.58</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>起始年份 <span class="required">*</span></label>
+            <input type="number" id="ax-startyear" placeholder="例：-2000 或 1392">
+          </div>
+          <div class="form-group">
+            <label>消亡年份（空白 = 至今）</label>
+            <input type="number" id="ax-endyear" placeholder="例：476（已消亡的文明才填）">
+          </div>
+        </div>
+      </div>
+      <div id="ax-error" class="hide err-box" style="margin-bottom:10px"></div>
+      <button class="btn-success" onclick="addAxis()" style="width:100%;padding:12px">✓ 加入軸線</button>
+    </div>
+
+    <!-- Preview list -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title">
+        <span>待加入清單 <span id="preview-count" style="color:var(--accent)">0 項</span></span>
+        <button class="btn-ghost" onclick="clearPreview()" style="padding:3px 10px;font-size:10px">清除全部</button>
+      </div>
+      <div id="preview-list"><p style="color:var(--muted);font-size:12px">尚未加入任何項目</p></div>
+    </div>
+
+    <button class="btn-success" onclick="showConfirm()" style="width:100%;padding:13px;font-size:14px;margin-top:4px">📋 預覽變更並輸出</button>
+    <p style="font-size:11px;color:var(--muted);margin-top:6px;text-align:center">確認變更清單後輸出，直接覆蓋 data/events.json 並上傳 GitHub</p>
+  </div>
+
+  <!-- ══ IMAGE PANEL ══ -->
+  <div class="top-panel" id="panel-images" style="padding-top:16px">
+
+    <!-- Validate existing -->
+    <div class="card">
+      <div class="card-title">🔎 檢查現有圖片連結</div>
+      <div class="row" style="margin-bottom:10px">
+        <button class="btn-warn" id="btn-validate" onclick="validateExistingImages()">▶ 開始檢查</button>
+        <button class="btn-ghost" id="btn-validate-stop" onclick="validateStop()" style="display:none">⬛ 停止</button>
+        <span id="validate-status" style="font-size:12px;color:var(--muted);align-self:center"></span>
+      </div>
+      <div class="progress-wrap" id="validate-progress" style="display:none">
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="validate-fill"></div></div>
+        <div class="progress-text" id="validate-text"></div>
+      </div>
+      <div id="validate-broken-wrap" style="display:none;margin-top:12px">
+        <div class="row" style="margin-bottom:8px">
+          <span id="validate-broken-count" style="font-size:13px;color:var(--red);flex:1"></span>
+          <button class="btn-warn" onclick="clearAllBroken()">⚠ 清除全部失效連結</button>
+        </div>
+        <div id="validate-broken-list" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:7px;max-height:380px;overflow-y:auto"></div>
+      </div>
+    </div>
+
+    <!-- Missing images -->
+    <div class="card">
+      <div class="card-title">🔍 缺少圖片的事件</div>
+      <div class="row" style="margin-bottom:8px">
+        <button class="btn-warn" onclick="showMissing()">列出缺圖事件</button>
+        <span id="missing-count" style="font-size:12px;color:var(--muted);align-self:center"></span>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px">點擊 Wiki 連結開啟 Wikipedia，手動找圖後貼 URL 套用</p>
+      <div id="missing-list"></div>
+    </div>
+
+    <!-- Batch fetch -->
+    <div class="card">
+      <div class="card-title">🤖 批量抓取圖片</div>
+      <div class="stats">
+        <div class="stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">總事件</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--green)" id="stat-ok">0</div><div class="stat-label">自動 ✓</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--accent)" id="stat-manual">0</div><div class="stat-label">手選 ✓</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--red)" id="stat-fail">0</div><div class="stat-label">失敗/略過</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--yellow)" id="stat-skip">0</div><div class="stat-label">有圖略過</div></div>
+      </div>
+      <div class="row" style="margin-bottom:8px;flex-wrap:wrap;gap:8px">
+        <button class="btn-primary" id="btn-run" onclick="runUpdate()">▶ 開始更新圖片</button>
+        <button class="btn-ghost" id="btn-stop" onclick="stopUpdate()" style="display:none">⬛ 停止</button>
+        <label style="margin:0;display:flex;align-items:center;gap:5px;cursor:pointer;font-size:12px">
+          <input type="checkbox" id="chk-overwrite"> 覆蓋已有圖片
+        </label>
+        <label style="margin:0;display:flex;align-items:center;gap:5px;cursor:pointer;font-size:12px">
+          <input type="checkbox" id="chk-zh" checked> 優先中文 Wikipedia
+        </label>
+      </div>
+      <div class="progress-wrap" id="progress-wrap" style="display:none">
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+        <div class="progress-text" id="progress-text"></div>
+      </div>
+      <div id="log"></div>
+    </div>
+
+    <!-- Download -->
+    <div class="card">
+      <div class="card-title">下載</div>
+      <div class="row">
+        <button class="btn-success" onclick="showConfirm()">📋 預覽變更並輸出</button>
+        <button class="btn-ghost" onclick="toggleTable()">📋 查看批量更新結果</button>
+      </div>
+      <div id="result-wrap" style="display:none;overflow-x:auto;margin-top:12px">
+        <table id="result-table">
+          <thead><tr><th>事件</th><th>狀態</th><th>預覽</th><th>URL</th></tr></thead>
+          <tbody id="result-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tool-area -->
+
+<script>
+// ════════════════════════════════════════════
+//  SHARED STATE
+// ════════════════════════════════════════════
+let eventsData = null;
+let pendingItems = [];
+let changeLog = [];   // 所有變更記錄
+let results = [], shouldStop = false;
+let statOk=0, statManual=0, statFail=0, statSkip=0;
+
+function logChange(entry) {
+  changeLog.push(entry);
+  const ind = document.getElementById('changelog-indicator');
+  const badge = document.getElementById('cl-badge-count');
+  if (ind && badge) {
+    badge.textContent = changeLog.length;
+    ind.style.display = 'block';
+  }
+}
+
+// ════════════════════════════════════════════
+//  FILE LOADING
+// ════════════════════════════════════════════
+const dropZone = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+dropZone.addEventListener('dragover', e=>{e.preventDefault();dropZone.classList.add('drag-over')});
+dropZone.addEventListener('dragleave', ()=>dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e=>{e.preventDefault();dropZone.classList.remove('drag-over');if(e.dataTransfer.files[0])readFile(e.dataTransfer.files[0])});
+fileInput.addEventListener('change', e=>{if(e.target.files[0])readFile(e.target.files[0])});
+
+function readFile(file) {
+  const r = new FileReader();
+  r.onload = e => {
+    try { eventsData = JSON.parse(e.target.result); onLoaded(file.name); }
+    catch(err) { setLoadStatus('✗ 解析失敗: '+err.message,'red'); }
+  };
+  r.readAsText(file);
+}
+async function loadFromUrl() {
+  const url = document.getElementById('url-input').value.trim();
+  setLoadStatus('載入中…','');
+  try { const r = await fetch(url); eventsData = await r.json(); onLoaded(url.split('/').pop()); }
+  catch(e) { setLoadStatus('✗ 載入失敗: '+e.message,'red'); }
+}
+function setLoadStatus(msg, color) {
+  const el = document.getElementById('load-status');
+  el.textContent = msg;
+  el.style.color = color==='red'?'var(--red)':color==='green'?'var(--green)':'var(--muted)';
+}
+function onLoaded(name) {
+  const n = eventsData.events.length, noImg = eventsData.events.filter(e=>!e.image).length;
+  setLoadStatus(`✓ 載入成功：${name}，${n} 個事件，${(eventsData.axes||[]).length} 條軸線${noImg?`，⚠ ${noImg} 個缺圖`:''}`, 'green');
+  document.getElementById('tool-area').classList.remove('hide');
+  document.getElementById('stat-total').textContent = n;
+  populateAxisSelects();
+}
+
+// ════════════════════════════════════════════
+//  TAB SWITCHING
+// ════════════════════════════════════════════
+function switchTopTab(name) {
+  document.querySelectorAll('.top-tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&name==='add')||(i===1&&name==='images')));
+  document.getElementById('panel-add').classList.toggle('active', name==='add');
+  document.getElementById('panel-images').classList.toggle('active', name==='images');
+  document.getElementById('panel-add').style.display = name==='add'?'block':'none';
+  document.getElementById('panel-images').style.display = name==='images'?'block':'none';
+}
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&tab==='event')||(i===1&&tab==='axis')));
+  document.getElementById('tab-event').classList.toggle('hide', tab!=='event');
+  document.getElementById('tab-axis').classList.toggle('hide', tab!=='axis');
+}
+
+// ════════════════════════════════════════════
+//  ADD EVENTS / AXES
+// ════════════════════════════════════════════
+function getAxesSorted() {
+  const base = (eventsData.axes||[]).slice().sort((a,b)=>a.order-b.order);
+  return [...base, ...pendingItems.filter(p=>p.type==='axis').map(p=>p.data)];
+}
+function populateAxisSelects() {
+  const axes = getAxesSorted();
+  ['ev-axis','ev-crossref','ax-parent','ev-axis-parent'].forEach(sid=>{
+    const sel = document.getElementById(sid);
+    if (!sel) return;
+    const prev = sel.value;
+    if (sid==='ev-crossref') sel.innerHTML='<option value="">— 無 —</option>';
+    else if (sid==='ev-axis-parent') sel.innerHTML='<option value="">— 無（頂層）—</option>';
+    else sel.innerHTML='';
+    axes.forEach(ax=>{
+      if (sid==='ev-axis-parent' && ax.id===document.getElementById('ev-axis').value) return;
+      const opt=document.createElement('option');
+      opt.value=ax.id; opt.textContent=`${ax.label} (${ax.id})`;
+      sel.appendChild(opt);
+    });
+    if (prev) sel.value=prev;
+  });
+  onAxisChange();
+}
+function onAxisChange() {
+  const id = document.getElementById('ev-axis').value;
+  const ax = getAxesSorted().find(a=>a.id===id);
+  if (!ax) return;
+  const parentSel = document.getElementById('ev-axis-parent');
+  // Repopulate parent select excluding self
+  const prevParent = parentSel.value;
+  parentSel.innerHTML = '<option value="">— 無（頂層）—</option>';
+  getAxesSorted().forEach(a=>{
+    if (a.id===id) return;
+    const opt=document.createElement('option');
+    opt.value=a.id; opt.textContent=`${a.label} (${a.id})`;
+    parentSel.appendChild(opt);
+  });
+  parentSel.value = ax.parent || '';
+  document.getElementById('ev-axis-info').textContent =
+    `目前顯示門檻：${ax.zoomMin??0}`;
+  document.getElementById('ev-zoommin').value = ax.zoomMin??0.58;
+  document.getElementById('ev-zoommin-val').textContent = (ax.zoomMin??0.58).toFixed(2);
+}
+function onParentChange() {
+  // Will be applied when addEvent() is called — just track in changeLog at that point
+}
+function syncColor() {
+  const v=document.getElementById('ax-color').value;
+  if(/^#[0-9a-fA-F]{6}$/.test(v)) document.getElementById('ax-color-picker').value=v;
+}
+function previewEventImage() {
+  const url=document.getElementById('ev-image').value.trim();
+  const img=document.getElementById('ev-img-preview');
+  if(!url){img.style.display='none';return;}
+  img.src=url; img.style.display='block'; img.onerror=()=>{img.style.display='none'};
+}
+function validateAxId() {
+  const id=document.getElementById('ax-id').value.trim();
+  const errEl=document.getElementById('ax-id-err'), inp=document.getElementById('ax-id');
+  if(!id){clearErr(inp,errEl);return false;}
+  if(!/^[a-z0-9-]+$/.test(id)){showErr(inp,errEl,'ID 只能用英文小寫、數字、連字號');return false;}
+  if(getAxesSorted().map(a=>a.id).includes(id)){showErr(inp,errEl,`ID "${id}" 已存在`);return false;}
+  clearErr(inp,errEl); return true;
+}
+function showErr(inp,errEl,msg){inp.classList.add('field-error');errEl.textContent=msg;errEl.classList.toggle('hide',!msg)}
+function clearErr(inp,errEl){inp.classList.remove('field-error');errEl.classList.add('hide')}
+function makeId(zh){return zh.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').substring(0,30)||'event-'+Date.now()}
+
+function addEvent() {
+  const errEl=document.getElementById('ev-error'); errEl.classList.add('hide');
+  const zh=document.getElementById('ev-zh').value.trim();
+  const year=document.getElementById('ev-year').value.trim();
+  const axis=document.getElementById('ev-axis').value;
+  const errs=[];
+  if(!zh) errs.push('中文名稱為必填');
+  if(!year) errs.push('開始年份為必填');
+  if(!axis) errs.push('所在軸線為必填');
+  if(errs.length){errEl.textContent=errs.join('、');errEl.classList.remove('hide');return;}
+
+  const ev={id:makeId(zh),year:parseInt(year),zh,axis,level:parseInt(document.getElementById('ev-level').value),category:document.getElementById('ev-category').value,category_broad:'human'};
+  const endYear=document.getElementById('ev-endyear').value.trim(); if(endYear) ev.endYear=parseInt(endYear);
+  const crossRef=document.getElementById('ev-crossref').value; if(crossRef) ev.crossRef=crossRef;
+  const image=document.getElementById('ev-image').value.trim(); if(image) ev.image=image;
+  const en=document.getElementById('ev-en').value.trim(); if(en) ev.en=en;
+  const descZh=document.getElementById('ev-desc-zh').value.trim(); if(descZh) ev.desc_zh=descZh;
+  const descEn=document.getElementById('ev-desc-en').value.trim(); if(descEn) ev.desc_en=descEn;
+  const wikiZh=document.getElementById('ev-wiki-zh').value.trim(); if(wikiZh) ev.wiki_zh=wikiZh;
+  const wikiEn=document.getElementById('ev-wiki-en').value.trim(); if(wikiEn) ev.wiki_en=wikiEn;
+
+  // Update zoomMin and parent for axis if changed
+  const zmVal=parseFloat(document.getElementById('ev-zoommin').value);
+  const newParent=document.getElementById('ev-axis-parent').value||null;
+  const existAx=(eventsData.axes||[]).find(a=>a.id===axis);
+  if(existAx) {
+    if(Math.abs((existAx.zoomMin??0)-zmVal)>0.001) {
+      logChange({type:'edit-axis-zoommin', axId:axis, axLabel:existAx.label, oldVal:existAx.zoomMin??0, newVal:zmVal});
+      existAx.zoomMin=zmVal;
+    }
+    if(newParent !== (existAx.parent||null)) {
+      const oldParentLabel = existAx.parent ? (getAxesSorted().find(a=>a.id===existAx.parent)?.label||existAx.parent) : '（頂層）';
+      const newParentLabel = newParent ? (getAxesSorted().find(a=>a.id===newParent)?.label||newParent) : '（頂層）';
+      logChange({type:'edit-axis-parent', axId:axis, axLabel:existAx.label, oldVal:oldParentLabel, newVal:newParentLabel});
+      existAx.parent=newParent;
+    }
+  }
+
+  pendingItems.push({type:'event',data:ev});
+  logChange({type:'add-event', zh:ev.zh, axis, year:ev.year, endYear:ev.endYear});
+  renderPreview(); clearEventForm();
+}
+
+function addAxis() {
+  const errEl=document.getElementById('ax-error'); errEl.classList.add('hide');
+  if(!validateAxId()){errEl.textContent=document.getElementById('ax-id-err').textContent||'ID 不合法';errEl.classList.remove('hide');return;}
+  const label=document.getElementById('ax-label').value.trim();
+  const parent=document.getElementById('ax-parent').value;
+  const startYear=document.getElementById('ax-startyear').value.trim();
+  const errs=[];
+  if(!label) errs.push('中文標籤為必填');
+  if(!parent) errs.push('父軸為必填');
+  if(!startYear) errs.push('起始年份為必填');
+  if(errs.length){errEl.textContent=errs.join('、');errEl.classList.remove('hide');return;}
+
+  const color=document.getElementById('ax-color').value.trim()||'#60a5fa';
+  const endYear=document.getElementById('ax-endyear').value.trim();
+  const maxOrder=Math.max(...getAxesSorted().map(a=>a.order??0));
+  const ax={id:document.getElementById('ax-id').value.trim(),label,color:/^#[0-9a-fA-F]{6}$/.test(color)?color:'#60a5fa',order:maxOrder+1,parent,startYear:parseInt(startYear),endYear:endYear?parseInt(endYear):null,zoomMin:parseFloat(document.getElementById('ax-zoommin').value),group:document.getElementById('ax-group').value};
+
+  pendingItems.push({type:'axis',data:ax});
+  logChange({type:'add-axis', id:ax.id, label, parent, zoomMin:ax.zoomMin});
+  populateAxisSelects(); renderPreview(); clearAxisForm();
+}
+
+function renderPreview() {
+  const list=document.getElementById('preview-list');
+  document.getElementById('preview-count').textContent=pendingItems.length+' 項';
+  if(!pendingItems.length){list.innerHTML='<p style="color:var(--muted);font-size:12px">尚未加入任何項目</p>';return;}
+  list.innerHTML='';
+  pendingItems.forEach((item,i)=>{
+    const d=item.data, isAxis=item.type==='axis';
+    const div=document.createElement('div'); div.className='preview-item';
+    div.innerHTML=`<div class="preview-left"><span class="preview-zh"><span class="badge ${isAxis?'badge-axis':'badge-event'}">${isAxis?'軸線':'事件'}</span>${d.zh||d.label}</span><span class="preview-meta">${isAxis?`id:${d.id} · 父軸:${d.parent} · zoomMin:${d.zoomMin}`:`${d.axis} · ${d.year}年${d.endYear?' ~ '+d.endYear+'年':''} · level${d.level}`}</span></div><button class="btn-danger" onclick="removeItem(${i})">移除</button>`;
+    list.appendChild(div);
+  });
+}
+function removeItem(i){pendingItems.splice(i,1);populateAxisSelects();renderPreview();}
+function clearPreview(){if(pendingItems.length&&!confirm('確定清除全部？'))return;pendingItems=[];renderPreview();}
+
+function clearEventForm(){
+  ['ev-zh','ev-en','ev-year','ev-endyear','ev-desc-zh','ev-desc-en','ev-wiki-zh','ev-wiki-en','ev-image'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('ev-crossref').value='';
+  document.getElementById('ev-img-preview').style.display='none';
+  document.getElementById('ev-error').classList.add('hide');
+}
+function clearAxisForm(){
+  ['ax-id','ax-label','ax-startyear','ax-endyear'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('ax-color').value='#60a5fa';
+  document.getElementById('ax-color-picker').value='#60a5fa';
+  document.getElementById('ax-zoommin').value='0.58';
+  document.getElementById('ax-zoommin-val').textContent='0.58';
+  document.getElementById('ax-error').classList.add('hide');
+  document.getElementById('ax-id-err').classList.add('hide');
+}
+
+// ════════════════════════════════════════════
+//  CONFIRM MODAL + DOWNLOAD
+// ════════════════════════════════════════════
+function showConfirm() {
+  if (!eventsData) return;
+  const overlay = document.getElementById('confirm-overlay');
+  const content = document.getElementById('confirm-content');
+  const subtitle = document.getElementById('confirm-subtitle');
+
+  // Group changeLog by type
+  const addAxes    = changeLog.filter(c=>c.type==='add-axis');
+  const addEvents  = changeLog.filter(c=>c.type==='add-event');
+  const editAxes   = changeLog.filter(c=>c.type==='edit-axis-parent'||c.type==='edit-axis-zoommin');
+  const imgUpdates = changeLog.filter(c=>c.type==='image-auto'||c.type==='image-manual');
+  const imgClears  = changeLog.filter(c=>c.type==='image-clear');
+
+  const total = changeLog.length;
+  subtitle.textContent = total > 0
+    ? `共 ${total} 項變更，確認後輸出 events.json`
+    : '目前尚無記錄到的變更，仍可輸出當前版本';
+
+  let html = '';
+
+  function section(icon, title, items, renderFn) {
+    if (!items.length) return;
+    html += `<div class="cl-section">
+      <div class="cl-section-title">${icon} ${title}（${items.length}）</div>`;
+    items.forEach(item => { html += renderFn(item); });
+    html += '</div>';
+  }
+
+  section('🔗', '新增軸線', addAxes, c=>
+    `<div class="cl-item"><span class="cl-icon">+</span><span class="cl-name">${c.label} <span style="color:var(--muted);font-size:10px">(${c.id})</span></span><span class="cl-meta">父軸: ${c.parent||'頂層'} · zoomMin: ${c.zoomMin}</span></div>`);
+
+  section('➕', '新增事件', addEvents, c=>
+    `<div class="cl-item"><span class="cl-icon">+</span><span class="cl-name">${c.zh}</span><span class="cl-meta">${c.axis} · ${c.year}年${c.endYear?' ~ '+c.endYear+'年':''}</span></div>`);
+
+  section('🔧', '軸線設定修改', editAxes, c=>
+    `<div class="cl-item"><span class="cl-icon">✎</span><span class="cl-name">${c.axLabel}</span><span class="cl-meta">${c.type==='edit-axis-parent'?`父軸: ${c.oldVal} → ${c.newVal}`:`zoomMin: ${c.oldVal} → ${c.newVal}`}</span></div>`);
+
+  section('🖼', '圖片更新', imgUpdates, c=>
+    `<div class="cl-item"><span class="cl-icon">✓</span><span class="cl-name">${c.zh}</span><span class="cl-meta">${c.source||'手動'}</span></div>`);
+
+  section('🗑', '清除失效圖片', imgClears, c=>
+    `<div class="cl-item"><span class="cl-icon">×</span><span class="cl-name">${c.zh}</span><span class="cl-meta">圖片已清除</span></div>`);
+
+  if (!total) {
+    html = '<div class="cl-empty">尚無變更記錄。點「確認輸出」仍可下載當前版本。</div>';
+  }
+
+  content.innerHTML = html;
+  overlay.classList.remove('hide');
+}
+
+function closeConfirm() {
+  document.getElementById('confirm-overlay').classList.add('hide');
+}
+
+function doDownload() {
+  if (!eventsData) return;
+  const newAxes = pendingItems.filter(p=>p.type==='axis').map(p=>p.data);
+  const newEvents = pendingItems.filter(p=>p.type==='event').map(p=>{
+    const ev={...p.data}; Object.keys(ev).forEach(k=>ev[k]===undefined&&delete ev[k]); return ev;
+  });
+  const out = {
+    meta: eventsData.meta||{title_zh:'宇宙歷史時間軸',title_en:'Cosmic Timeline',total_years:13800000000,created:'2026'},
+    axes: [...(eventsData.axes||[]),...newAxes],
+    era_bands: eventsData.era_bands||[],
+    events: [...eventsData.events,...newEvents],
+  };
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='events.json'; a.click();
+  URL.revokeObjectURL(a.href);
+
+  // Reset after download
+  changeLog=[];
+  pendingItems=[];
+  renderPreview();
+  document.getElementById('changelog-indicator').style.display='none';
+  closeConfirm();
+  setLoadStatus(`✓ 已輸出！變更記錄已清除。如需繼續修改請重新載入 JSON。`, 'green');
+}
+
+// Keep downloadJson as alias for backward compat
+function downloadJson() { showConfirm(); }
+
+// ════════════════════════════════════════════
+//  IMAGE TOOL
+// ════════════════════════════════════════════
+function formatYear(y){return y>0?`西元 ${y} 年`:`${Math.abs(y).toLocaleString()} 年前`}
+
+function showMissing() {
+  const missing=eventsData.events.filter(e=>!e.image);
+  document.getElementById('missing-count').textContent=missing.length?`共 ${missing.length} 個缺圖`:'✓ 全部有圖';
+  const listEl=document.getElementById('missing-list');
+  if(!missing.length){listEl.innerHTML='<p style="color:var(--green);padding:8px">🎉 所有事件都有圖片！</p>';return;}
+  listEl.innerHTML='';
+  missing.forEach(ev=>{
+    const item=document.createElement('div'); item.className='missing-item'; item.id='missing-item-'+ev.id;
+    item.innerHTML=`<div class="missing-item-top"><div class="missing-item-left"><span class="missing-zh">${ev.zh}</span><span class="missing-axis">${ev.axis} · ${formatYear(ev.year)}</span></div><div class="missing-links">${ev.wiki_zh?`<a class="wiki-btn zh" href="${ev.wiki_zh}" target="_blank">中文 Wiki</a>`:''} ${ev.wiki_en?`<a class="wiki-btn en" href="${ev.wiki_en}" target="_blank">EN Wiki</a>`:''}</div></div><div class="missing-edit-row"><input type="text" placeholder="貼上圖片 URL..." id="missing-url-${ev.id}"><button class="btn-apply" onclick="applyMissingUrl('${ev.id}')">套用</button></div><span class="missing-applied" id="missing-ok-${ev.id}">✓ 已套用</span>`;
+    listEl.appendChild(item);
+  });
+}
+
+function applyMissingUrl(id) {
+  const input=document.getElementById('missing-url-'+id);
+  const url=sanitizeImageUrl(input.value.trim());
+  if(!url){input.focus();return;}
+  const okEl=document.getElementById('missing-ok-'+id);
+  okEl.textContent='⏳ 驗證中...'; okEl.style.display='inline'; okEl.style.color='var(--muted)';
+  testImageLoad(url,5000).then(ok=>{
+    if(!ok){okEl.textContent='⚠ 圖片無法載入';okEl.style.color='var(--red)';return;}
+    const ev=eventsData.events.find(e=>e.id===id); if(ev) ev.image=url;
+    logChange({type:'image-manual', zh:ev?.zh||id, id});
+    okEl.textContent='✓ 已套用！'; okEl.style.color='var(--green)';
+    document.getElementById('missing-item-'+id).style.opacity='0.5'; input.value='';
+  });
+}
+
+// ── Image fetch utilities ──
+function parseWiki(url){if(!url?.includes('wikipedia.org/wiki/'))return null;return{lang:url.split('//')[1].split('.wikipedia')[0],title:decodeURIComponent(url.split('/wiki/')[1].split('#')[0])};}
+async function fetchNasaCandidates(ev,n=5){try{const q=encodeURIComponent(ev.en||ev.zh);const r=await fetch(`https://images-api.nasa.gov/search?q=${q}&media_type=image&page_size=${n}`);const d=await r.json();return(d.collection?.items||[]).slice(0,n).flatMap(item=>{const link=item.links?.find(l=>l.rel==='preview');if(!link?.href)return[];const large=link.href.replace('~thumb.jpg','~orig.jpg').replace('~small.jpg','~large.jpg');return[{url:large,label:item.data?.[0]?.title||'NASA',source:'NASA'}];});}catch(e){return[];}}
+async function fetchWikidata(ev) {
+  const wikiUrl = ev.wiki_en || ev.wiki_zh;
+  if (!wikiUrl) return null;
+  const w = parseWiki(wikiUrl);
+  if (!w) return null;
+  try {
+    const lang = w.lang === 'zh' ? 'zhwiki' : 'enwiki';
+    const p = new URLSearchParams({action:'wbgetentities',sites:lang,titles:w.title,props:'claims',format:'json',origin:'*'});
+    const d = await (await fetch(`https://www.wikidata.org/w/api.php?${p}`)).json();
+    for (const ent of Object.values(d.entities || {})) {
+      const fn = ent.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
+      if (fn) {
+        const p2 = new URLSearchParams({action:'query',titles:`File:${fn}`,prop:'imageinfo',iiprop:'url',iiurlwidth:'1200',format:'json',origin:'*'});
+        const d2 = await (await fetch(`https://commons.wikimedia.org/w/api.php?${p2}`)).json();
+        for (const pg of Object.values(d2.query?.pages || {})) {
+          const u = pg.imageinfo?.[0]?.thumburl || pg.imageinfo?.[0]?.url;
+          if (u) return { url: u, label: 'Wikidata P18', source: 'Wikidata' };
+        }
+      }
+    }
+  } catch(e) {}
+  return null;
+}
+async function fetchWikiThumb(wikiUrl,size=1200){const w=parseWiki(wikiUrl);if(!w)return null;try{const p=new URLSearchParams({action:'query',titles:w.title,prop:'pageimages',pithumbsize:String(size),format:'json',redirects:'1',origin:'*'});const d=await(await fetch(`https://${w.lang}.wikipedia.org/w/api.php?${p}`)).json();for(const pg of Object.values(d.query?.pages||{}))if(pg.thumbnail?.source)return pg.thumbnail.source;}catch(e){}return null;}
+async function fetchWikiOrig(wikiUrl){const w=parseWiki(wikiUrl);if(!w)return null;try{const p=new URLSearchParams({action:'query',titles:w.title,prop:'pageimages',piprop:'original',format:'json',redirects:'1',origin:'*'});const d=await(await fetch(`https://${w.lang}.wikipedia.org/w/api.php?${p}`)).json();for(const pg of Object.values(d.query?.pages||{}))if(pg.original?.source)return pg.original.source;}catch(e){}return null;}
+async function fetchWikiByTitle(title,lang='en'){if(!title)return null;try{const p=new URLSearchParams({action:'query',titles:title,prop:'pageimages',pithumbsize:'1200',piprop:'original|thumbnail',format:'json',redirects:'1',origin:'*'});const d=await(await fetch(`https://${lang}.wikipedia.org/w/api.php?${p}`)).json();for(const pg of Object.values(d.query?.pages||{})){if(pg.pageid===-1)continue;const url=pg.original?.source||pg.thumbnail?.source;if(url)return sanitizeImageUrl(url);}}catch(e){}return null;}
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+
+function sanitizeImageUrl(url){if(!url)return url;if(url.includes('.svg/')&&url.endsWith('.svg.png'))return url.replace(/\/\d+px-/,'/1200px-');if(url.includes('/thumb/')&&url.match(/\/\d+px-/)){const w=parseInt(url.match(/\/(\d+)px-/)[1]);if(w<640)return url.replace(/\/\d+px-/,'/1200px-');}return url;}
+function testImageLoad(url,timeoutMs=5000){return new Promise(resolve=>{if(!url){resolve(false);return;}const img=new Image();const timer=setTimeout(()=>{img.src='';resolve(false);},timeoutMs);img.onload=()=>{clearTimeout(timer);resolve(true);};img.onerror=()=>{clearTimeout(timer);resolve(false);};img.src=url;});}
+
+async function fetchAllCandidates(ev,zhFirst){
+  const wikiUrls=(zhFirst?[ev.wiki_zh,ev.wiki_en]:[ev.wiki_en,ev.wiki_zh]).filter(Boolean);
+  const candidates=[]; const seen=new Set();
+  const add=(c)=>{if(c?.url&&!seen.has(c.url)){seen.add(c.url);candidates.push(c);}};
+  const isNaturalSci=['astronomy','geology','biology'].includes(ev.category);
+  const tasks=[];
+  if(isNaturalSci) tasks.push(fetchNasaCandidates(ev,4).then(arr=>arr.forEach(add)));
+  tasks.push(fetchWikidata(ev).then(r=>{if(r){r.url=sanitizeImageUrl(r.url);add(r);}}));
+  tasks.push(...wikiUrls.map(u=>fetchWikiThumb(u).then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki縮圖('+parseWiki(u)?.lang+')',source:'Wiki-Thumb'}:null);})));
+  tasks.push(...wikiUrls.map(u=>fetchWikiOrig(u).then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki原圖('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null);})));
+  if(ev.en) tasks.push(fetchWikiByTitle(ev.en,'en').then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki搜尋(en)',source:'Wiki-Search'}:null);}));
+  if(ev.zh) tasks.push(fetchWikiByTitle(ev.zh,'zh').then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki搜尋(zh)',source:'Wiki-Search'}:null);}));
+  await Promise.allSettled(tasks);
+  return candidates;
+}
+
+// ── Picker ──
+let _pickerResolve=null, _selectedPickerUrl=null;
+function showPicker(ev,candidates){
+  return new Promise(resolve=>{
+    _pickerResolve=resolve; _selectedPickerUrl=null;
+    document.getElementById('picker-title').textContent=ev.zh+(ev.en?' — '+ev.en:'');
+    document.getElementById('picker-meta').textContent=`${ev.axis} · ${formatYear(ev.year)} · ${candidates.length} 張候選`;
+    document.getElementById('picker-url-input').value='';
+    document.getElementById('picker-custom-preview').style.display='none';
+    document.getElementById('picker-status').textContent='';
+    const grid=document.getElementById('picker-grid'); grid.innerHTML='';
+    if(ev.image){const cur=document.createElement('div');cur.className='pick-item';cur.innerHTML=`<img src="${ev.image}" style="height:120px;object-fit:cover;width:100%"><div class="pick-label"><span style="color:var(--yellow)">★ 現有圖片</span><br><span class="pick-source">保留</span></div>`;cur.addEventListener('click',()=>selectPickerItem(cur,ev.image));grid.appendChild(cur);}
+    candidates.forEach(c=>{const item=document.createElement('div');item.className='pick-item';item.dataset.url=c.url;item.innerHTML=`<img src="${c.url}" onerror="this.parentElement.classList.add('img-broken')" style="height:120px;object-fit:cover;width:100%"><div class="pick-label"><span style="color:var(--text)">${c.label||c.source}</span><br><span class="pick-source">${c.source}</span></div>`;item.addEventListener('click',()=>selectPickerItem(item,c.url));grid.appendChild(item);});
+    const none=document.createElement('div');none.className='pick-item pick-none';none.innerHTML='<span style="font-size:20px">🚫</span><span>略過</span>';none.addEventListener('click',()=>{selectPickerItem(none,null);document.getElementById('picker-confirm').textContent='✓ 確認略過';});grid.appendChild(none);
+    document.getElementById('picker-overlay').classList.remove('hide');
+    document.getElementById('picker-confirm').textContent='✓ 使用選取的圖片';
+  });
+}
+function selectPickerItem(el,url){document.querySelectorAll('.pick-item').forEach(i=>i.classList.remove('selected'));el.classList.add('selected');_selectedPickerUrl=url;document.getElementById('picker-status').textContent=url?'已選取':'已選擇略過';if(!el.closest('#picker-custom')){document.getElementById('picker-url-input').value='';document.getElementById('picker-custom-preview').style.display='none';}}
+function previewCustom(){const url=document.getElementById('picker-url-input').value.trim();const img=document.getElementById('picker-custom-preview');if(!url){img.style.display='none';return;}img.src=url;img.style.display='block';_selectedPickerUrl=url;document.querySelectorAll('.pick-item').forEach(i=>i.classList.remove('selected'));}
+async function pickerConfirm(){
+  const customUrl=document.getElementById('picker-url-input').value.trim();
+  if(customUrl) _selectedPickerUrl=sanitizeImageUrl(customUrl);
+  if(!_selectedPickerUrl){document.getElementById('picker-overlay').classList.add('hide');if(_pickerResolve)_pickerResolve({action:'skip'});_pickerResolve=null;return;}
+  const statusEl=document.getElementById('picker-status');
+  statusEl.textContent='⏳ 驗證圖片中...'; statusEl.style.color='var(--muted)';
+  document.getElementById('picker-confirm').disabled=true;
+  const ok=await testImageLoad(_selectedPickerUrl);
+  document.getElementById('picker-confirm').disabled=false;
+  if(!ok){statusEl.style.color='var(--red)';statusEl.textContent='⚠ 圖片無法載入！請重新選擇';return;}
+  statusEl.style.color='var(--green)'; statusEl.textContent='✓ 驗證成功';
+  document.getElementById('picker-overlay').classList.add('hide');
+  if(_pickerResolve)_pickerResolve({action:'set',url:_selectedPickerUrl});
+  _pickerResolve=null;
+}
+function pickerSkip(){document.getElementById('picker-overlay').classList.add('hide');if(_pickerResolve)_pickerResolve({action:'skip'});_pickerResolve=null;}
+function pickerKeep(){document.getElementById('picker-overlay').classList.add('hide');if(_pickerResolve)_pickerResolve({action:'keep'});_pickerResolve=null;}
+
+// ── Validate ──
+let _validateStop=false, _brokenEvents=[];
+async function validateExistingImages(){
+  if(!eventsData)return;
+  _validateStop=false; _brokenEvents=[];
+  const withImg=eventsData.events.filter(e=>e.image); const total=withImg.length;
+  document.getElementById('btn-validate').disabled=true;
+  document.getElementById('btn-validate-stop').style.display='';
+  document.getElementById('validate-progress').style.display='';
+  document.getElementById('validate-broken-wrap').style.display='none';
+  document.getElementById('validate-status').textContent=`檢查中... 0 / ${total}`;
+  const BATCH=8;
+  for(let i=0;i<withImg.length;i+=BATCH){
+    if(_validateStop)break;
+    const batch=withImg.slice(i,Math.min(i+BATCH,withImg.length));
+    await Promise.all(batch.map(async ev=>{const ok=await testImageLoad(ev.image,6000);if(!ok)_brokenEvents.push(ev);}));
+    const done=Math.min(i+BATCH,withImg.length);
+    document.getElementById('validate-fill').style.width=Math.round(done/total*100)+'%';
+    document.getElementById('validate-text').textContent=`${done} / ${total}`;
+    document.getElementById('validate-status').textContent=`檢查中... ${done} / ${total}${_brokenEvents.length?` ⚠ ${_brokenEvents.length} 個失效`:''}`;
+  }
+  document.getElementById('btn-validate').disabled=false;
+  document.getElementById('btn-validate-stop').style.display='none';
+  if(!_brokenEvents.length){document.getElementById('validate-status').textContent=`✓ 全部 ${total} 個圖片連結有效！`;return;}
+  document.getElementById('validate-status').textContent=`完成：${total} 個中發現 ${_brokenEvents.length} 個失效`;
+  renderBrokenList();
+}
+function validateStop(){_validateStop=true;}
+function renderBrokenList(){
+  const listEl=document.getElementById('validate-broken-list');
+  document.getElementById('validate-broken-count').textContent=`⚠ 發現 ${_brokenEvents.length} 個失效連結`;
+  listEl.innerHTML='';
+  _brokenEvents.forEach(ev=>{
+    const item=document.createElement('div'); item.className='broken-item'; item.id='broken-'+ev.id;
+    item.innerHTML=`<img class="broken-thumb" src="${ev.image}" onerror="this.style.opacity='0.2'"><div class="broken-info"><div class="broken-zh">${ev.zh}</div><div class="broken-url">${ev.image}</div></div><div class="broken-actions"><button class="btn-clear" onclick="clearOneBroken('${ev.id}')">清除</button></div>`;
+    listEl.appendChild(item);
+  });
+  document.getElementById('validate-broken-wrap').style.display='';
+}
+function clearOneBroken(id){
+  const ev=eventsData.events.find(e=>e.id===id);
+  if(ev){logChange({type:'image-clear', zh:ev.zh, id}); delete ev.image;}
+  _brokenEvents=_brokenEvents.filter(e=>e.id!==id);
+  const item=document.getElementById('broken-'+id); if(item)item.remove();
+  document.getElementById('validate-broken-count').textContent=`⚠ 剩 ${_brokenEvents.length} 個失效`;
+}
+function clearAllBroken(){
+  _brokenEvents.forEach(ev=>{
+    const e=eventsData.events.find(x=>x.id===ev.id);
+    if(e){logChange({type:'image-clear', zh:e.zh, id:e.id}); delete e.image;}
+  });
+  _brokenEvents=[];
+  document.getElementById('validate-broken-list').innerHTML='<p style="color:var(--green);padding:10px">✓ 已清除所有失效連結</p>';
+  document.getElementById('validate-broken-count').textContent='✓ 全部清除完成';
+}
+
+function log(msg,cls='log-info'){const el=document.getElementById('log');el.innerHTML+=`<div class="${cls}">${msg}</div>`;el.scrollTop=el.scrollHeight;}
+
+// ── Run batch update ──
+async function runUpdate(){
+  if(!eventsData)return;
+  shouldStop=false; statOk=statManual=statFail=statSkip=0; results=[];
+  document.getElementById('log').innerHTML='';
+  document.getElementById('btn-run').disabled=true;
+  document.getElementById('btn-stop').style.display='';
+  document.getElementById('progress-wrap').style.display='';
+  const overwrite=document.getElementById('chk-overwrite').checked;
+  const zhFirst=document.getElementById('chk-zh').checked;
+  const evList=eventsData.events;
+  for(let i=0;i<evList.length;i++){
+    if(shouldStop){log('— 已停止 —','log-warn');break;}
+    const ev=evList[i];
+    document.getElementById('progress-fill').style.width=Math.round(i/evList.length*100)+'%';
+    document.getElementById('progress-text').textContent=`${i+1} / ${evList.length}  ${ev.zh}`;
+    if(ev.image&&!overwrite){statSkip++;document.getElementById('stat-skip').textContent=statSkip;results.push({ev,status:'skip',img:ev.image});continue;}
+    if(!ev.wiki_zh&&!ev.wiki_en&&!ev.en&&!ev.zh){statFail++;document.getElementById('stat-fail').textContent=statFail;log(`✗ ${ev.zh}（無來源）`,'log-fail');results.push({ev,status:'fail',img:null});continue;}
+    log(`⏳ ${ev.zh} 抓取中...`,'log-info');
+    const candidates=await fetchAllCandidates(ev,zhFirst);
+    if(!candidates.length){statFail++;document.getElementById('stat-fail').textContent=statFail;log(`✗ ${ev.zh}（找不到圖片）`,'log-fail');results.push({ev,status:'fail',img:null});continue;}
+    if(candidates.length===1&&!ev.image){
+      ev.image=candidates[0].url; statOk++; document.getElementById('stat-ok').textContent=statOk;
+      log(`✓ ${ev.zh} <span style="color:#86efac;font-size:9px">[自動·${candidates[0].source}]</span>`,'log-auto');
+      logChange({type:'image-auto', zh:ev.zh, id:ev.id, source:candidates[0].source});
+      results.push({ev,status:'auto',img:ev.image});
+    } else {
+      log(`🔍 ${ev.zh}（${candidates.length} 張候選）`,'log-info');
+      const choice=await showPicker(ev,candidates);
+      if(choice.action==='set'&&choice.url){
+        ev.image=choice.url; statManual++; document.getElementById('stat-manual').textContent=statManual;
+        log(`✓ ${ev.zh} <span style="color:var(--accent);font-size:9px">[手選]</span>`,'log-ok');
+        logChange({type:'image-manual', zh:ev.zh, id:ev.id, source:'手動選取'});
+        results.push({ev,status:'manual',img:ev.image});
+      } else if(choice.action==='keep'){
+        log(`— ${ev.zh}（保留原圖）`,'log-info');
+        results.push({ev,status:'kept',img:ev.image});
+      } else {
+        statFail++; document.getElementById('stat-fail').textContent=statFail;
+        log(`— ${ev.zh}（略過）`,'log-info');
+        results.push({ev,status:'skipped',img:null});
+      }
+    }
+    await delay(30);
+  }
+  document.getElementById('progress-fill').style.width='100%';
+  document.getElementById('progress-text').textContent='完成！';
+  document.getElementById('btn-run').disabled=false;
+  document.getElementById('btn-stop').style.display='none';
+  log(`─── 完成：自動 ${statOk} · 手選 ${statManual} · 失敗/略過 ${statFail} · 略過有圖 ${statSkip} ───`,'log-warn');
+  showMissing();
+}
+function stopUpdate(){shouldStop=true;}
+
+function toggleTable(){const wrap=document.getElementById('result-wrap');wrap.style.display=wrap.style.display==='none'?'':'none';if(wrap.style.display==='none')return;const tbody=document.getElementById('result-body');tbody.innerHTML='';results.filter(r=>r.status!=='skip').forEach(({ev,status,img})=>{const badge=status==='auto'?'<span class="badge badge-ok">自動</span>':status==='manual'?'<span class="badge badge-manual">手選</span>':status==='kept'?'<span class="badge badge-skip">保留</span>':'<span class="badge badge-skip">略過</span>';const imgHtml=img?`<img src="${img}" onerror="this.style.display='none'">`:'—';const urlHtml=img?`<span style="color:var(--muted);word-break:break-all;font-size:10px">${img.substring(0,70)}…</span>`:'';tbody.innerHTML+=`<tr><td>${ev.zh}</td><td>${badge}</td><td>${imgHtml}</td><td>${urlHtml}</td></tr>`;});}
+
+// Close confirm on Escape / backdrop click
+document.getElementById('confirm-overlay').addEventListener('click', e=>{
+  if(e.target===document.getElementById('confirm-overlay')) closeConfirm();
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeConfirm(); });
+
+// Init
+switchTopTab('add');
+</script>
+</body>
+</html>
