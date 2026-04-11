@@ -84,10 +84,21 @@
       "group": "arts"
     },
     {
+      "id": "science",
+      "label": "科學技術",
+      "color": "#67e8f9",
+      "order": 7,
+      "parent": "cross",
+      "startYear": -3000,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "science"
+    },
+    {
       "id": "east",
       "label": "東方文明",
       "color": "#f97316",
-      "order": 7,
+      "order": 8,
       "parent": "cross",
       "startYear": -3500,
       "endYear": null,
@@ -98,7 +109,7 @@
       "id": "mideast",
       "label": "中東",
       "color": "#f59e0b",
-      "order": 8,
+      "order": 9,
       "parent": "east",
       "startYear": -3500,
       "endYear": null,
@@ -106,10 +117,32 @@
       "group": "civilization"
     },
     {
+      "id": "egypt",
+      "label": "古埃及",
+      "color": "#fde68a",
+      "order": 10,
+      "parent": "mideast",
+      "startYear": -3100,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "civilization"
+    },
+    {
+      "id": "persia",
+      "label": "波斯/伊朗",
+      "color": "#fbbf24",
+      "order": 11,
+      "parent": "mideast",
+      "startYear": -600,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "civilization"
+    },
+    {
       "id": "judaism",
       "label": "猶太教",
       "color": "#fde68a",
-      "order": 9,
+      "order": 12,
       "parent": "mideast",
       "startYear": -2000,
       "endYear": null,
@@ -120,7 +153,7 @@
       "id": "christianity",
       "label": "基督教",
       "color": "#c4b5fd",
-      "order": 10,
+      "order": 13,
       "parent": "judaism",
       "startYear": -6,
       "endYear": null,
@@ -131,7 +164,7 @@
       "id": "islam",
       "label": "伊斯蘭教",
       "color": "#d9f99d",
-      "order": 11,
+      "order": 14,
       "parent": "mideast",
       "startYear": 570,
       "endYear": null,
@@ -139,10 +172,65 @@
       "group": "religion"
     },
     {
+      "id": "africa",
+      "label": "非洲",
+      "color": "#d97706",
+      "order": 15,
+      "parent": "human-evo",
+      "startYear": -300000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "civilization"
+    },
+    {
+      "id": "north-africa",
+      "label": "北非",
+      "color": "#fcd34d",
+      "order": 16,
+      "parent": "africa",
+      "startYear": -814,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "nation"
+    },
+    {
+      "id": "west-africa",
+      "label": "西非",
+      "color": "#f59e0b",
+      "order": 17,
+      "parent": "africa",
+      "startYear": 300,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "nation"
+    },
+    {
+      "id": "east-africa",
+      "label": "東非",
+      "color": "#d97706",
+      "order": 18,
+      "parent": "africa",
+      "startYear": 100,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "nation"
+    },
+    {
+      "id": "south-africa",
+      "label": "南非",
+      "color": "#b45309",
+      "order": 19,
+      "parent": "africa",
+      "startYear": 1000,
+      "endYear": null,
+      "zoomMin": 0.72,
+      "group": "nation"
+    },
+    {
       "id": "india",
       "label": "印度",
       "color": "#fb923c",
-      "order": 12,
+      "order": 20,
       "parent": "east",
       "startYear": -2600,
       "endYear": null,
@@ -153,7 +241,7 @@
       "id": "hinduism",
       "label": "印度教",
       "color": "#fed7aa",
-      "order": 13,
+      "order": 21,
       "parent": "india",
       "startYear": -1500,
       "endYear": null,
@@ -164,7 +252,7 @@
       "id": "buddhism",
       "label": "佛教",
       "color": "#fecaca",
-      "order": 14,
+      "order": 22,
       "parent": "hinduism",
       "startYear": -490,
       "endYear": null,
@@ -175,7 +263,7 @@
       "id": "china",
       "label": "中國",
       "color": "#ef4444",
-      "order": 15,
+      "order": 23,
       "parent": "east",
       "startYear": -5000,
       "endYear": null,
@@ -186,7 +274,7 @@
       "id": "china-b",
       "label": "並立政權",
       "color": "#dc2626",
-      "order": 16,
+      "order": 24,
       "parent": "china",
       "startYear": -771,
       "endYear": null,
@@ -197,7 +285,7 @@
       "id": "taoism",
       "label": "道教",
       "color": "#fca5a5",
-      "order": 17,
+      "order": 25,
       "parent": "china",
       "startYear": -550,
       "endYear": null,
@@ -207,8 +295,8 @@
     {
       "id": "taiwan",
       "label": "臺灣",
-      "color": "#f43f5e",
-      "order": 18,
+      "color": "#fbcfe8",
+      "order": 26,
       "parent": "east",
       "startYear": -30000,
       "endYear": null,
@@ -218,8 +306,8 @@
     {
       "id": "japan",
       "label": "日本",
-      "color": "#fb7185",
-      "order": 19,
+      "color": "#fdba74",
+      "order": 27,
       "parent": "east",
       "startYear": -300,
       "endYear": null,
@@ -230,7 +318,7 @@
       "id": "west",
       "label": "西方文明",
       "color": "#7c3aed",
-      "order": 20,
+      "order": 28,
       "parent": "cross",
       "startYear": -3500,
       "endYear": null,
@@ -241,7 +329,7 @@
       "id": "greece",
       "label": "希臘羅馬",
       "color": "#8b5cf6",
-      "order": 21,
+      "order": 29,
       "parent": "west",
       "startYear": -1600,
       "endYear": 476,
@@ -252,7 +340,7 @@
       "id": "europe",
       "label": "歐洲",
       "color": "#3b82f6",
-      "order": 22,
+      "order": 30,
       "parent": "west",
       "startYear": 500,
       "endYear": null,
@@ -263,11 +351,55 @@
       "id": "americas",
       "label": "美洲",
       "color": "#60a5fa",
-      "order": 23,
+      "order": 31,
       "parent": "west",
-      "startYear": 1492,
+      "startYear": -15000,
       "endYear": null,
       "zoomMin": 0.58,
+      "group": "civilization"
+    },
+    {
+      "id": "north-america",
+      "label": "北美",
+      "color": "#3b82f6",
+      "order": 32,
+      "parent": "americas",
+      "startYear": -13000,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "nation"
+    },
+    {
+      "id": "latin-america",
+      "label": "拉丁美洲",
+      "color": "#8b5cf6",
+      "order": 33,
+      "parent": "americas",
+      "startYear": -2000,
+      "endYear": null,
+      "zoomMin": 0.65,
+      "group": "nation"
+    },
+    {
+      "id": "south-america",
+      "label": "南美",
+      "color": "#7c3aed",
+      "order": 34,
+      "parent": "americas",
+      "startYear": -1000,
+      "endYear": null,
+      "zoomMin": 0.72,
+      "group": "nation"
+    },
+    {
+      "id": "usa",
+      "label": "美國",
+      "color": "#2563eb",
+      "order": 35,
+      "parent": "north-america",
+      "startYear": 1776,
+      "endYear": null,
+      "zoomMin": 0.72,
       "group": "nation"
     }
   ],
@@ -1054,23 +1186,6 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/N-Mesopotamia_and_Syria_english.svg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/美索不達米亞",
       "wiki_en": "https://en.wikipedia.org/wiki/Mesopotamia",
-      "category": "civilization",
-      "category_broad": "human"
-    },
-    {
-      "id": "ancient-egypt",
-      "year": -3100,
-      "zh": "古埃及統一",
-      "en": "Ancient Egypt Unified",
-      "axis": "mideast",
-      "track": 0,
-      "sub_track": 0,
-      "level": 1,
-      "desc_zh": "美尼斯王統一上下埃及，建立法老王朝，尼羅河文明進入鼎盛時期。",
-      "desc_en": "King Menes unifies Upper and Lower Egypt, establishing the Pharaonic dynasties and the golden age of Nile civilization.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Ancient_Egypt_map-en.svg",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/古埃及",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ancient_Egypt",
       "category": "civilization",
       "category_broad": "human"
     },
@@ -1892,24 +2007,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross"
-    },
-    {
-      "id": "columbus",
-      "year": 1492,
-      "zh": "哥倫布發現美洲",
-      "en": "Columbus Reaches Americas",
-      "axis": "cross",
-      "track": 0,
-      "level": 1,
-      "desc_zh": "哥倫布抵達美洲，開啟大航海時代，東西半球永久連結，世界格局徹底改變。",
-      "desc_en": "Columbus reaches the Americas, beginning the Age of Exploration and permanently connecting the Eastern and Western hemispheres.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ridolfo_del_Ghirlandaio_-_Ritratto_di_Cristoforo_Colombo_%281520%29.jpg",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/克里斯托弗·哥倫布",
-      "wiki_en": "https://en.wikipedia.org/wiki/Christopher_Columbus",
-      "sub_track": 0,
-      "category": "exploration",
-      "category_broad": "human"
+      "crossRef": "science"
     },
     {
       "id": "reformation",
@@ -1960,7 +2058,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "tw-formosa-named",
@@ -2091,7 +2189,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Isaac_Newton",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "industrial-revolution",
@@ -2133,7 +2231,7 @@
       "year": 1859,
       "zh": "達爾文演化論",
       "en": "Darwin's Evolution",
-      "axis": "cross",
+      "axis": "science",
       "track": 0,
       "level": 2,
       "desc_zh": "達爾文發表《物種起源》，提出天擇演化論，徹底改變人類對生命起源的理解。",
@@ -2143,7 +2241,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Charles_Darwin",
       "sub_track": 0,
       "category": "science",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "cross"
     },
     {
       "id": "meiji",
@@ -2423,7 +2522,7 @@
       "year": 1953,
       "zh": "DNA雙螺旋結構",
       "en": "DNA Double Helix",
-      "axis": "cross",
+      "axis": "science",
       "track": 0,
       "level": 1,
       "desc_zh": "沃森與克里克發現DNA雙螺旋結構，開創分子生物學，奠定現代生物技術的基礎。",
@@ -2433,7 +2532,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/DNA",
       "sub_track": 0,
       "category": "science",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "cross"
     },
     {
       "id": "tw-economic-miracle",
@@ -2450,23 +2550,6 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Taipei_Night_Skyline_from_Hongludi_20240113.jpg/1280px-Taipei_Night_Skyline_from_Hongludi_20240113.jpg",
       "category": "politics",
       "category_broad": "human"
-    },
-    {
-      "id": "moon-landing",
-      "year": 1969,
-      "zh": "人類登月",
-      "en": "Moon Landing",
-      "axis": "cross",
-      "track": 0,
-      "level": 1,
-      "desc_zh": "阿波羅11號太空人阿姆斯壯踏上月球，實現人類千年來的飛天夢想。",
-      "desc_en": "Apollo 11 astronaut Neil Armstrong walks on the Moon, fulfilling humanity's age-old dream of reaching another world.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/阿波羅11號",
-      "wiki_en": "https://en.wikipedia.org/wiki/Apollo_11",
-      "sub_track": 0,
-      "category": "science",
-      "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/960px-Aldrin_Apollo_11_original.jpg"
     },
     {
       "id": "tw-martial-law-lift",
@@ -2503,7 +2586,7 @@
       "year": 1991,
       "zh": "網際網路誕生",
       "en": "World Wide Web",
-      "axis": "cross",
+      "axis": "science",
       "track": 0,
       "level": 1,
       "desc_zh": "提姆·伯納斯-李發明全球資訊網，網際網路向公眾開放，人類進入資訊時代。",
@@ -2513,7 +2596,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/World_Wide_Web",
       "sub_track": 0,
       "category": "science",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "cross"
     },
     {
       "id": "tw-first-election",
@@ -2535,7 +2619,7 @@
       "year": 2003,
       "zh": "人類基因組定序",
       "en": "Human Genome Sequenced",
-      "axis": "cross",
+      "axis": "science",
       "track": 0,
       "level": 2,
       "desc_zh": "人類基因組計畫完成，完整解讀人類約30億個DNA鹼基對，開啟精準醫療新時代。",
@@ -2545,14 +2629,15 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Human_Genome_Project",
       "sub_track": 0,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "cross"
     },
     {
       "id": "smartphone",
       "year": 2007,
       "zh": "智慧型手機時代",
       "en": "Smartphone Era",
-      "axis": "cross",
+      "axis": "science",
       "track": 0,
       "level": 2,
       "desc_zh": "蘋果公司發布第一代iPhone，智慧型手機普及，行動網路改變人類生活方式。",
@@ -2562,14 +2647,15 @@
       "wiki_en": "https://en.wikipedia.org/wiki/iPhone",
       "sub_track": 0,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "cross"
     },
     {
       "id": "ai-revolution",
       "year": 2022,
       "zh": "AI 革命",
       "en": "AI Revolution",
-      "axis": "cross",
+      "axis": "science",
       "track": 0,
       "level": 1,
       "desc_zh": "ChatGPT 等大型語言模型向公眾開放，人工智慧技術進入爆炸性發展階段，深刻改變各行各業。",
@@ -2579,7 +2665,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/ChatGPT",
       "sub_track": 0,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "cross"
     },
     {
       "id": "cosmic-inflation",
@@ -2993,37 +3080,6 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Guercino_Abramo_ripudia_Agar_%28cropped%29.jpg"
     },
     {
-      "id": "egypt-pyramid",
-      "year": -2560,
-      "zh": "吉薩大金字塔",
-      "en": "Great Pyramid of Giza",
-      "axis": "mideast",
-      "level": 1,
-      "desc_zh": "古夫法老建造，高146公尺，是古代世界七大奇蹟中唯一留存至今者，建造技術至今仍是謎。",
-      "desc_en": "Built by Pharaoh Khufu, 146m tall — the only surviving wonder of the ancient world; its construction methods remain mysterious.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/吉薩大金字塔",
-      "wiki_en": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
-      "category": "culture",
-      "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/1280px-Kheops-Pyramid.jpg"
-    },
-    {
-      "id": "egypt-new-kingdom",
-      "year": -1550,
-      "endYear": -1070,
-      "zh": "古埃及新王國",
-      "en": "Egyptian New Kingdom",
-      "axis": "mideast",
-      "level": 1,
-      "desc_zh": "圖特摩斯三世、拉美西斯二世等法老的帝國擴張時期，卡疊石之戰與阿布辛貝神廟均屬此期。",
-      "desc_en": "The imperial expansion period with Thutmose III and Ramesses II; Battle of Kadesh and Abu Simbel temples belong to this era.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/新王國時期",
-      "wiki_en": "https://en.wikipedia.org/wiki/New_Kingdom_of_Egypt",
-      "category": "civilization",
-      "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png"
-    },
-    {
       "id": "hebrews-egypt",
       "year": -1500,
       "endYear": -1280,
@@ -3168,7 +3224,7 @@
       "year": -559,
       "zh": "居魯士大帝",
       "en": "Cyrus the Great",
-      "axis": "mideast",
+      "axis": "persia",
       "level": 1,
       "desc_zh": "建立波斯阿契美尼德帝國，征服巴比倫後解放被囚猶太人，頒布人類史上最早的人權宣言「居魯士圓柱」。",
       "desc_en": "Founds the Persian Achaemenid Empire; after conquering Babylon, frees the captive Jews and issues the Cyrus Cylinder — history's earliest human rights declaration.",
@@ -3184,7 +3240,7 @@
       "endYear": -330,
       "zh": "阿契美尼德波斯帝國",
       "en": "Achaemenid Persian Empire",
-      "axis": "mideast",
+      "axis": "persia",
       "level": 1,
       "desc_zh": "從希臘到印度的龐大帝國，大流士一世建立行省制度、波斯波利斯宮殿，是古代世界最大帝國之一。",
       "desc_en": "A vast empire from Greece to India; Darius I establishes the satrapy system and builds Persepolis — one of antiquity's greatest empires.",
@@ -3199,7 +3255,7 @@
       "year": -521,
       "zh": "大流士一世・波斯波利斯",
       "en": "Darius I & Persepolis",
-      "axis": "mideast",
+      "axis": "persia",
       "level": 2,
       "desc_zh": "大流士一世鞏固波斯帝國，建造壯麗的波斯波利斯宮殿群，完善行省制度，使帝國達到極盛。",
       "desc_en": "Darius I consolidates Persian power, builds the magnificent Persepolis palace complex, perfects the satrapy system.",
@@ -3210,28 +3266,12 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Gate_of_All_Nations%2C_Persepolis.jpg"
     },
     {
-      "id": "cleopatra",
-      "year": -51,
-      "endYear": -30,
-      "zh": "埃及豔后克麗奧帕特拉",
-      "en": "Cleopatra — Last Pharaoh",
-      "axis": "mideast",
-      "level": 2,
-      "desc_zh": "末代法老，與凱撒及安東尼的政治聯姻維繫埃及獨立，其死亡標誌古埃及三千年文明的終結。",
-      "desc_en": "The last pharaoh; political alliances with Caesar and Antony kept Egypt independent until her death ended 3,000 years of Egyptian civilization.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/克麗奧帕特拉七世",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cleopatra",
-      "category": "politics",
-      "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg"
-    },
-    {
       "id": "sassanid-persia",
       "year": 224,
       "endYear": 651,
       "zh": "薩珊波斯帝國",
       "en": "Sassanid Persian Empire",
-      "axis": "mideast",
+      "axis": "persia",
       "level": 1,
       "desc_zh": "伊朗最後一個前伊斯蘭王朝，瑣羅亞斯德教為國教，與羅馬拜占庭爭雄四百年，最終亡於伊斯蘭軍隊。",
       "desc_en": "Iran's last pre-Islamic dynasty; Zoroastrianism as state religion; rivaled Rome and Byzantium for 400 years before falling to Islam.",
@@ -3411,7 +3451,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi",
       "category": "math",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Al-Khwarizmi_portrait.jpg"
     },
     {
@@ -3427,7 +3467,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Ibn_al-Haytham",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Ibn_Al-Haytham_portrait.jpg"
     },
     {
@@ -3443,7 +3483,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Avicenna",
       "category": "medicine",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Avicenna_Bust%2C_left_profile_%28cropped%29.jpg"
     },
     {
@@ -3580,7 +3620,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Hippocrates",
       "category": "medicine",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hippocrates_rubens.jpg/1280px-Hippocrates_rubens.jpg"
     },
     {
@@ -3626,7 +3666,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Euclid",
       "category": "math",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Jusepe_de_Ribera_-_Euclid_-_2001.26_-_J._Paul_Getty_Museum.jpg"
     },
     {
@@ -3642,7 +3682,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Archimedes",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Retrato_de_un_erudito_%28%C2%BFArqu%C3%ADmedes%3F%29%2C_por_Domenico_Fetti.jpg"
     },
     {
@@ -3967,7 +4007,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Galileo_Galilei",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Galileo.arp.300pix.jpg"
     },
     {
@@ -3983,7 +4023,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Kepler_laws_diagram.svg"
     },
     {
@@ -3999,7 +4039,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/William_Harvey",
       "category": "medicine",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/William_Harvey_2.jpg"
     },
     {
@@ -4046,7 +4086,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/David_-_Portrait_of_Monsieur_Lavoisier_%28cropped%29.jpg"
     },
     {
@@ -4078,7 +4118,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Electromagnetic_induction",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Electromagnetic_induction_-_solenoid_to_loop_-_animation.gif"
     },
     {
@@ -4094,7 +4134,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Periodic_table",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Colour_18-col_PT_with_labels.svg"
     },
     {
@@ -4141,7 +4181,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Magellan%E2%80%93Elcano_expedition",
       "category": "exploration",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Detail_from_a_map_of_Ortelius_-_Magellan%27s_ship_Victoria.png"
     },
     {
@@ -4210,7 +4250,7 @@
       "year": 1905,
       "zh": "愛因斯坦相對論",
       "en": "Einstein's Theory of Relativity",
-      "axis": "cross",
+      "axis": "science",
       "level": 1,
       "desc_zh": "愛因斯坦發表狹義相對論，E=mc²改變人類對時間、空間與能量的理解，奠定核能與現代宇宙學基礎。",
       "desc_en": "Einstein publishes special relativity; E=mc² transforms our understanding of time, space, and energy — the foundation of nuclear energy and modern cosmology.",
@@ -4218,14 +4258,15 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Theory_of_relativity",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BBH_gravitational_lensing_of_gw150914.webm/1280px--BBH_gravitational_lensing_of_gw150914.webm.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BBH_gravitational_lensing_of_gw150914.webm/1280px--BBH_gravitational_lensing_of_gw150914.webm.jpg",
+      "crossRef": "cross"
     },
     {
       "id": "quantum-mechanics",
       "year": 1925,
       "zh": "量子力學革命",
       "en": "Quantum Mechanics Revolution",
-      "axis": "cross",
+      "axis": "science",
       "level": 1,
       "desc_zh": "波耳、海森堡、薛丁格等人建立量子力學，揭示微觀世界的不確定性，是半導體、雷射與核技術的理論基礎。",
       "desc_en": "Bohr, Heisenberg, Schrödinger establish quantum mechanics, revealing the uncertainty of the microscopic world — the theoretical basis of semiconductors, lasers, and nuclear technology.",
@@ -4233,7 +4274,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Quantum_mechanics",
       "category": "science",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Hydrogen_Density_Plots.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Hydrogen_Density_Plots.png",
+      "crossRef": "cross"
     },
     {
       "id": "nine-chapters",
@@ -4249,7 +4291,7 @@
       "category": "math",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/%E4%B9%9D%E7%AB%A0%E7%AE%97%E8%A1%93%E7%B4%B0%E8%8D%89%E5%9C%96%E8%AA%AA.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "silk-origin",
@@ -4264,7 +4306,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Silk",
       "category": "culture",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Silk_raw_01a.jpg"
     },
     {
@@ -4281,7 +4323,7 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dujiang_Weir.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "steel-china",
@@ -4297,7 +4339,7 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Mat_weight_in_the_shape_of_a_tiger_Tomb_1_Dayun_Mountain_Xuyi_Jiangsu_Western_Han_2nd_century_BCE_Bronze_inlaid_with_gold_and_silver_%28cleaned_up%29.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "papermaking",
@@ -4312,7 +4354,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Papermaking",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Papiermuseum_Basel_2008_%2838%29.jpg"
     },
     {
@@ -4328,7 +4370,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Zhang_Heng",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/20251004_Tomb_of_Zhang_Heng_03.jpg"
     },
     {
@@ -4345,7 +4387,7 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Armillary_sphere_with_astronomical_clock.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "hua-tuo",
@@ -4360,7 +4402,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Hua_Tuo",
       "category": "medicine",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/%E6%B1%89%E5%90%8D%E5%8C%BB%E5%8D%8E%E4%BD%97.jpg"
     },
     {
@@ -4377,7 +4419,7 @@
       "category": "math",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Cutcircle2.svg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "huangdi-neijing",
@@ -4393,7 +4435,7 @@
       "category": "medicine",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Koteidaikei_Myodo.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "variolation",
@@ -4408,7 +4450,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Variolation",
       "category": "medicine",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Queens_of_Mysore_%28detail%29%2C_Thomas_Hickey%2C_1805.jpg"
     },
     {
@@ -4424,7 +4466,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Bi_Sheng",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Mengxi_bitan.jpg"
     },
     {
@@ -4440,7 +4482,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Compass",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/2016_Busola.JPG"
     },
     {
@@ -4457,7 +4499,7 @@
       "category": "math",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "zu-chongzhi-pi",
@@ -4473,7 +4515,7 @@
       "category": "math",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/%E7%A5%96%E5%86%B2%E4%B9%8B%E9%93%9C%E5%83%8F.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "gunpowder",
@@ -4488,7 +4530,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Gunpowder",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/2023_Czarny_proch_Vesuvit_LC_%283%29.jpg/1280px-2023_Czarny_proch_Vesuvit_LC_%283%29.jpg"
     },
     {
@@ -4505,7 +4547,7 @@
       "category": "civilization",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/%E5%A4%A7%E9%81%8B%E6%B2%B3.png",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "yi-xing-meridian",
@@ -4521,7 +4563,7 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Beijing_Ancient_Observatory_20090715-22.jpg/1280px-Beijing_Ancient_Observatory_20090715-22.jpg",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "guo-shoujing-calendar",
@@ -4537,7 +4579,7 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Guo_Shoujing-beijing.JPG",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "bencao-gangmu",
@@ -4552,7 +4594,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Compendium_of_Materia_Medica",
       "category": "medicine",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Bencao_Gangmu0_33-36.jpg"
     },
     {
@@ -4569,7 +4611,7 @@
       "category": "exploration",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Travels_of_Xu_Xiake.png",
-      "crossRef": "cross"
+      "crossRef": "science"
     },
     {
       "id": "zheng-he-voyages",
@@ -4584,7 +4626,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Treasure_voyages",
       "category": "exploration",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/ZhengHeShips.gif"
     },
     {
@@ -5289,6 +5331,585 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/立體主義",
       "wiki_en": "https://en.wikipedia.org/wiki/Cubism",
       "image": "https://upload.wikimedia.org/wikipedia/en/1/1c/Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg"
+    },
+    {
+      "id": "bering-migration",
+      "year": -15000,
+      "zh": "人類越過白令陸橋進入美洲",
+      "en": "Peopling of the Americas",
+      "axis": "americas",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "人類在末次冰河期透過白令陸橋從亞洲進入北美洲，逐漸擴散至整個南北美洲，成為美洲原住民的祖先。",
+      "desc_en": "During the last glacial period, humans cross the Bering Land Bridge from Asia into North America, gradually spreading throughout the Americas.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美洲原住民",
+      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_the_Americas",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Early_migrations_mercator.svg"
+    },
+    {
+      "id": "olmec",
+      "year": -1500,
+      "endYear": -400,
+      "zh": "奧爾梅克文明",
+      "en": "Olmec Civilization",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "中美洲最早的主要文明，以巨石頭像著稱，對後來的馬雅、阿茲特克文明影響深遠，被稱為「母文化」。",
+      "desc_en": "The earliest major Mesoamerican civilization, known for colossal stone heads; the 'mother culture' that influenced Maya and Aztec civilizations.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/奧爾梅克",
+      "wiki_en": "https://en.wikipedia.org/wiki/Olmecs",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Formative_Era_sites.svg"
+    },
+    {
+      "id": "maya-rise",
+      "year": -2000,
+      "endYear": 900,
+      "zh": "馬雅文明",
+      "en": "Maya Civilization",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "中美洲最重要的古代文明，發展出精密曆法、象形文字、天文學，建造壯觀的石造城市。",
+      "desc_en": "The most significant ancient Mesoamerican civilization, developing precise calendars, hieroglyphics, astronomy, and spectacular stone cities.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馬雅文明",
+      "wiki_en": "https://en.wikipedia.org/wiki/Maya_civilization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/El_Castillo%2C_Chich%C3%A9n_Itz%C3%A1.jpg"
+    },
+    {
+      "id": "north-america-cultures",
+      "year": -2600,
+      "zh": "北美原住民文化",
+      "en": "North American Indigenous Cultures",
+      "axis": "north-america",
+      "level": 2,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "北美洲各地原住民發展出多元文化，包括密西西比文化的土丘建築、太平洋西北岸的圖騰柱文化等。",
+      "desc_en": "Diverse indigenous cultures across North America, including Mississippian mound builders and Pacific Northwest totem pole cultures.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美洲原住民",
+      "wiki_en": "https://en.wikipedia.org/wiki/Indigenous_peoples_of_North_America",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Distribution_of_Indigenous_Peoples_in_the_Americas.svg"
+    },
+    {
+      "id": "aztec-empire",
+      "year": 1300,
+      "endYear": 1521,
+      "zh": "阿茲特克帝國",
+      "en": "Aztec Empire",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "中美洲強大帝國，以特諾奇提特蘭為首都，發展出複雜的宗教、農業和貿易體系，1521年被西班牙征服者推翻。",
+      "desc_en": "Powerful Mesoamerican empire centered on Tenochtitlan, with complex religion, agriculture, and trade; conquered by Spanish in 1521.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿茲特克",
+      "wiki_en": "https://en.wikipedia.org/wiki/Aztec_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Aztec_Empire_ME_%28orthographic_projection%29.svg"
+    },
+    {
+      "id": "inca-empire",
+      "year": 1438,
+      "endYear": 1533,
+      "zh": "印加帝國",
+      "en": "Inca Empire",
+      "axis": "south-america",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "南美洲最大的前哥倫布帝國，沿安地斯山脈延伸，建有精密的道路系統和梯田農業，1533年被西班牙征服者攻滅。",
+      "desc_en": "The largest pre-Columbian empire in the Americas, stretching along the Andes with sophisticated road systems and terraced agriculture; conquered by Spain in 1533.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/印加帝國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Inca_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/80_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg/1280px-80_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg"
+    },
+    {
+      "id": "columbus-americas",
+      "year": 1492,
+      "zh": "哥倫布抵達美洲",
+      "en": "Columbus Reaches the Americas",
+      "axis": "americas",
+      "level": 1,
+      "category": "exploration",
+      "category_broad": "human",
+      "crossRef": "science",
+      "desc_zh": "哥倫布代表西班牙航行抵達加勒比海，開啟歐洲對美洲的殖民時代，改變了世界歷史格局。",
+      "desc_en": "Columbus, sailing for Spain, reaches the Caribbean, opening the era of European colonization of the Americas and transforming world history.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/克里斯托弗·哥倫布",
+      "wiki_en": "https://en.wikipedia.org/wiki/Christopher_Columbus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ridolfo_del_Ghirlandaio_-_Ritratto_di_Cristoforo_Colombo_%281520%29.jpg"
+    },
+    {
+      "id": "spanish-conquest-aztec",
+      "year": 1519,
+      "endYear": 1521,
+      "zh": "西班牙征服阿茲特克",
+      "en": "Spanish Conquest of the Aztecs",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "desc_zh": "埃爾南·科爾特斯率西班牙軍隊征服阿茲特克帝國，開啟中美洲的西班牙殖民統治。",
+      "desc_en": "Hernán Cortés leads Spanish forces to conquer the Aztec Empire, beginning Spanish colonial rule in Mesoamerica.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/征服阿茲特克",
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Aztec_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Codex_Mendoza_folio_67r_bottom.jpg/1280px-Codex_Mendoza_folio_67r_bottom.jpg"
+    },
+    {
+      "id": "us-independence",
+      "year": 1776,
+      "zh": "美國獨立宣言",
+      "en": "US Declaration of Independence",
+      "axis": "usa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "crossRef": "science",
+      "desc_zh": "北美十三殖民地宣布脫離英國統治，建立美利堅合眾國，是現代民主政治的重要里程碑。",
+      "desc_en": "The thirteen North American colonies declare independence from Britain, establishing the United States — a landmark of modern democracy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美國獨立宣言",
+      "wiki_en": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/United_States_Declaration_of_Independence.jpg"
+    },
+    {
+      "id": "us-constitution",
+      "year": 1789,
+      "zh": "美國憲法生效",
+      "en": "US Constitution Takes Effect",
+      "axis": "usa",
+      "level": 2,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "美國憲法正式生效，建立三權分立的聯邦制政府，成為現代憲政民主的典範。",
+      "desc_en": "The US Constitution takes effect, establishing a federal government with separation of powers — a model for modern constitutional democracy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美國憲法",
+      "wiki_en": "https://en.wikipedia.org/wiki/Constitution_of_the_United_States",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Constitution_of_the_United_States%2C_page_1.jpg/1280px-Constitution_of_the_United_States%2C_page_1.jpg"
+    },
+    {
+      "id": "haiti-independence",
+      "year": 1804,
+      "zh": "海地獨立",
+      "en": "Haitian Independence",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "海地成為世界上第一個由奴隸起義建立的黑人共和國，是拉丁美洲獨立運動的先驅。",
+      "desc_en": "Haiti becomes the world's first Black republic founded by a slave revolt — a pioneer of Latin American independence movements.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/海地",
+      "wiki_en": "https://en.wikipedia.org/wiki/Haitian_Revolution",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Incendie_de_la_Plaine_du_Cap._Massacre_des_Blancs_par_les_esclaves_noirs_r%C3%A9volt%C3%A9s._France_militaire._Martinet_et_Masson.jpg/1280px-Incendie_de_la_Plaine_du_Cap._Massacre_des_Blancs_par_les_esclaves_noirs_r%C3%A9volt%C3%A9s._France_militaire._Martinet_et_Masson.jpg"
+    },
+    {
+      "id": "latin-america-independence",
+      "year": 1810,
+      "endYear": 1825,
+      "zh": "拉丁美洲獨立運動",
+      "en": "Latin American Independence",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "玻利瓦爾、聖馬丁等領導拉丁美洲各國脫離西班牙葡萄牙統治，建立一系列獨立共和國。",
+      "desc_en": "Led by Bolívar and San Martín, Latin American nations break free from Spanish and Portuguese rule, establishing independent republics.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/拉丁美洲獨立運動",
+      "wiki_en": "https://en.wikipedia.org/wiki/Latin_American_wars_of_independence",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Che_Guevara_-_Guerrillero_Heroico_by_Alberto_Korda.jpg/960px-Che_Guevara_-_Guerrillero_Heroico_by_Alberto_Korda.jpg"
+    },
+    {
+      "id": "us-civil-war",
+      "year": 1861,
+      "endYear": 1865,
+      "zh": "美國南北戰爭",
+      "en": "American Civil War",
+      "axis": "usa",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "desc_zh": "美國南北方為奴隸制存廢爆發內戰，北方聯邦獲勝，奴隸制廢除，美國維持統一並走向工業化。",
+      "desc_en": "War between Union and Confederacy over slavery; Union victory abolishes slavery and preserves national unity, accelerating industrialization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美國內戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/American_Civil_War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/CivilWarUSAColl.png"
+    },
+    {
+      "id": "us-moon-landing",
+      "year": 1969,
+      "zh": "阿波羅登月",
+      "en": "Apollo Moon Landing",
+      "axis": "usa",
+      "level": 1,
+      "category": "science",
+      "category_broad": "human",
+      "crossRef": "science",
+      "desc_zh": "阿波羅11號太空人阿姆斯壯和艾德林成為首次踏上月球的人類，是人類太空探索的最大里程碑。",
+      "desc_en": "Apollo 11 astronauts Armstrong and Aldrin become the first humans on the Moon — humanity's greatest milestone in space exploration.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿波羅11號",
+      "wiki_en": "https://en.wikipedia.org/wiki/Apollo_11",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/1280px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg"
+    },
+    {
+      "id": "great-depression",
+      "year": 1929,
+      "zh": "大蕭條",
+      "en": "Great Depression",
+      "axis": "usa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "crossRef": "cross",
+      "desc_zh": "美國股市崩潰引發全球經濟大蕭條，失業率飆升，對全球政治和經濟格局產生深遠影響。",
+      "desc_en": "US stock market crash triggers the global Great Depression; soaring unemployment profoundly reshapes world politics and economics.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大蕭條",
+      "wiki_en": "https://en.wikipedia.org/wiki/Great_Depression",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone%2C_02-1931_-_NARA_-_541927.jpg"
+    },
+    {
+      "id": "us-superpower",
+      "year": 1991,
+      "zh": "美國成為唯一超強",
+      "en": "US Becomes Sole Superpower",
+      "axis": "usa",
+      "level": 2,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "蘇聯解體後，美國成為冷戰後世界唯一的超級大國，主導新世界秩序。",
+      "desc_en": "After the Soviet collapse, the US becomes the world's sole superpower, shaping the new world order.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美國",
+      "wiki_en": "https://en.wikipedia.org/wiki/United_States",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg"
+    },
+    {
+      "id": "africa-human-origin",
+      "year": -300000,
+      "zh": "人類起源於非洲",
+      "en": "Human Origins in Africa",
+      "axis": "africa",
+      "level": 1,
+      "category": "biology",
+      "category_broad": "human",
+      "desc_zh": "現代智人在非洲演化出現，非洲是全人類的發源地，基因研究證實所有現代人都源自非洲。",
+      "desc_en": "Modern Homo sapiens evolves in Africa — the birthplace of all humanity, confirmed by genetic evidence tracing all modern humans to African origins.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/人類演化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Human_evolution",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Homo-Stammbaum%2C_Version_Stringer-en.svg"
+    },
+    {
+      "id": "egypt-unified",
+      "year": -3100,
+      "zh": "古埃及統一",
+      "en": "Egypt Unified",
+      "axis": "egypt",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "美尼斯王統一上下埃及，建立法老王朝，尼羅河流域文明進入鼎盛時期。",
+      "desc_en": "King Menes unifies Upper and Lower Egypt, establishing the Pharaonic dynasties at the height of Nile Valley civilization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古埃及",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ancient_Egypt",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Ancient_Egypt_map-en.svg"
+    },
+    {
+      "id": "egypt-pyramids",
+      "year": -2560,
+      "zh": "吉薩大金字塔",
+      "en": "Great Pyramid of Giza",
+      "axis": "egypt",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "古夫法老下令建造的吉薩大金字塔，是古代世界七大奇蹟中唯一現存的，展示古埃及的工程成就。",
+      "desc_en": "Built for Pharaoh Khufu, the Great Pyramid is the only surviving Wonder of the Ancient World, showcasing Egyptian engineering mastery.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/吉薩大金字塔",
+      "wiki_en": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/1280px-Kheops-Pyramid.jpg"
+    },
+    {
+      "id": "egypt-new-kingdom-ev",
+      "year": -1550,
+      "endYear": -1070,
+      "zh": "古埃及新王國",
+      "en": "Egyptian New Kingdom",
+      "axis": "egypt",
+      "level": 2,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "古埃及最後的鼎盛時期，以拉美西斯二世為代表，建造了阿布辛貝神廟等宏偉建築。",
+      "desc_en": "Egypt's last great era of power, epitomized by Ramesses II; monumental constructions like Abu Simbel define this golden age.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/新王國時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/New_Kingdom_of_Egypt",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png/1280px-Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_thutmose_iii.png"
+    },
+    {
+      "id": "cleopatra-ev",
+      "year": -51,
+      "zh": "埃及豔后克麗奧帕特拉",
+      "en": "Cleopatra",
+      "axis": "egypt",
+      "level": 2,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "最後一位法老，以與凱撒和安東尼的政治聯盟聞名，她的去世標誌著古埃及的終結，埃及成為羅馬行省。",
+      "desc_en": "The last pharaoh, famous for alliances with Caesar and Antony; her death marks the end of ancient Egypt as it becomes a Roman province.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/克麗奧帕特拉七世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cleopatra",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg"
+    },
+    {
+      "id": "carthage",
+      "year": -814,
+      "zh": "迦太基建立",
+      "en": "Founding of Carthage",
+      "axis": "north-africa",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "腓尼基人在北非建立迦太基城邦，成為地中海西部最強大的商業帝國，與羅馬多次戰爭。",
+      "desc_en": "Phoenicians found Carthage in North Africa, building the most powerful commercial empire in the western Mediterranean, later warring with Rome.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/迦太基",
+      "wiki_en": "https://en.wikipedia.org/wiki/Carthage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Amilcar%2C_Carthage%2C_Tunisia_-_panoramio_%2815%29.jpg/1280px-Amilcar%2C_Carthage%2C_Tunisia_-_panoramio_%2815%29.jpg"
+    },
+    {
+      "id": "islam-north-africa",
+      "year": 640,
+      "zh": "伊斯蘭傳入北非",
+      "en": "Islam Spreads to North Africa",
+      "axis": "north-africa",
+      "level": 2,
+      "category": "religion",
+      "category_broad": "human",
+      "desc_zh": "阿拉伯軍隊征服埃及和北非，伊斯蘭文化和阿拉伯語在北非廣泛傳播，深刻改變了當地文化。",
+      "desc_en": "Arab armies conquer Egypt and North Africa, spreading Islamic culture and Arabic language, profoundly transforming the region's culture.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/伊斯蘭教",
+      "wiki_en": "https://en.wikipedia.org/wiki/Spread_of_Islam",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Supplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg/1280px-Supplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg"
+    },
+    {
+      "id": "mali-empire",
+      "year": 1235,
+      "endYear": 1600,
+      "zh": "馬利帝國",
+      "en": "Mali Empire",
+      "axis": "west-africa",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "西非最強大的帝國，以黃金和鹽的貿易聞名，曼薩·穆薩統治時期是人類歷史上最富有的人之一。",
+      "desc_en": "West Africa's most powerful empire, famed for gold and salt trade; Mansa Musa was one of the wealthiest individuals in history.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馬利帝國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mali_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Map_of_the_Mali_Empire.png/1280px-Map_of_the_Mali_Empire.png"
+    },
+    {
+      "id": "aksum-kingdom",
+      "year": 100,
+      "endYear": 940,
+      "zh": "阿克蘇姆王國",
+      "en": "Kingdom of Aksum",
+      "axis": "east-africa",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "衣索比亞高原的古代王國，是東非最重要的古代文明，與羅馬、波斯、印度有貿易往來，是最早採用基督教的國家之一。",
+      "desc_en": "An ancient kingdom on the Ethiopian highlands, one of East Africa's most important civilizations; among the first to adopt Christianity.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿克蘇姆王國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Aksum",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/LocationAksumiteEmpire-es.svg"
+    },
+    {
+      "id": "great-zimbabwe",
+      "year": 1000,
+      "endYear": 1450,
+      "zh": "大津巴布韋文明",
+      "en": "Great Zimbabwe",
+      "axis": "south-africa",
+      "level": 1,
+      "category": "civilization",
+      "category_broad": "human",
+      "desc_zh": "南部非洲最重要的古代文明，以巨石建築聞名，是繁盛的黃金貿易中心，津巴布韋國名由此而來。",
+      "desc_en": "The most significant ancient civilization in southern Africa, known for massive stone enclosures; a prosperous gold trade center that gives Zimbabwe its name.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大津巴布韋",
+      "wiki_en": "https://en.wikipedia.org/wiki/Great_Zimbabwe",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Great-Zimbabwe-6.jpg"
+    },
+    {
+      "id": "slave-trade",
+      "year": 1500,
+      "endYear": 1867,
+      "zh": "大西洋奴隸貿易",
+      "en": "Atlantic Slave Trade",
+      "axis": "africa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "crossRef": "cross",
+      "desc_zh": "歐洲殖民者從西非強行運走數百萬非洲人到美洲為奴，是人類歷史上規模最大的強迫遷徙之一，深刻影響非洲和美洲的歷史。",
+      "desc_en": "European colonizers forcibly transported millions of Africans to the Americas; one of the largest forced migrations in history, profoundly shaping Africa and the Americas.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大西洋奴隸貿易",
+      "wiki_en": "https://en.wikipedia.org/wiki/Atlantic_slave_trade",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Slave_Auction_Ad.jpg"
+    },
+    {
+      "id": "berlin-conference",
+      "year": 1884,
+      "zh": "柏林會議瓜分非洲",
+      "en": "Berlin Conference — Scramble for Africa",
+      "axis": "africa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "crossRef": "cross",
+      "desc_zh": "歐洲列強在柏林召開會議，瓜分非洲大陸，確立殖民地邊界，大多數非洲現代國界由此而來。",
+      "desc_en": "European powers meet in Berlin to partition Africa, establishing colonial boundaries that define most modern African borders.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/柏林西非會議",
+      "wiki_en": "https://en.wikipedia.org/wiki/Berlin_Conference",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kongokonferenz.jpg/1280px-Kongokonferenz.jpg"
+    },
+    {
+      "id": "apartheid",
+      "year": 1948,
+      "endYear": 1994,
+      "zh": "南非種族隔離制度",
+      "en": "South African Apartheid",
+      "axis": "south-africa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "南非國民黨政府實施種族隔離政策，以法律強制分隔不同種族，受到國際社會廣泛譴責和制裁。",
+      "desc_en": "The South African National Party enforces racial segregation by law, drawing widespread international condemnation and sanctions.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/種族隔離",
+      "wiki_en": "https://en.wikipedia.org/wiki/Apartheid",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Monomotapa_Map.jpg/1280px-Monomotapa_Map.jpg"
+    },
+    {
+      "id": "africa-independence",
+      "year": 1960,
+      "zh": "非洲獨立年",
+      "en": "Year of Africa",
+      "axis": "africa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "1960年17個非洲國家宣告獨立，標誌著非洲去殖民化運動的高峰，改變了世界政治格局。",
+      "desc_en": "In 1960, 17 African nations declare independence, marking the peak of African decolonization and reshaping world politics.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/非洲年",
+      "wiki_en": "https://en.wikipedia.org/wiki/Year_of_Africa",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Colonization_1945_Spanish_script.png"
+    },
+    {
+      "id": "mandela-president",
+      "year": 1994,
+      "zh": "曼德拉當選南非總統",
+      "en": "Mandela Elected President",
+      "axis": "south-africa",
+      "level": 1,
+      "category": "politics",
+      "category_broad": "human",
+      "desc_zh": "納爾遜·曼德拉在南非首次全種族選舉中當選總統，結束種族隔離制度，成為和平與民主的象徵。",
+      "desc_en": "Nelson Mandela wins South Africa's first fully democratic election, ending apartheid and becoming a global symbol of peace and democracy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/納爾遜·曼德拉",
+      "wiki_en": "https://en.wikipedia.org/wiki/Nelson_Mandela",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/1280px-Nelson_Mandela_1994.jpg"
+    },
+    {
+      "id": "rwanda-genocide",
+      "year": 1994,
+      "zh": "盧安達種族屠殺",
+      "en": "Rwandan Genocide",
+      "axis": "east-africa",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "desc_zh": "胡圖族對圖西族展開大屠殺，約100天內80至100萬人遇難，是20世紀最嚴重的種族滅絕事件之一。",
+      "desc_en": "Hutu extremists massacre the Tutsi population; 800,000–1,000,000 killed in 100 days — one of the worst genocides of the 20th century.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/盧旺達種族滅絕",
+      "wiki_en": "https://en.wikipedia.org/wiki/Rwandan_genocide",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/1280px-Nyamata_Memorial_Site_13.jpg"
+    },
+    {
+      "id": "steam-engine",
+      "year": 1769,
+      "zh": "瓦特蒸汽機",
+      "en": "Watt's Steam Engine",
+      "axis": "science",
+      "level": 1,
+      "category": "science",
+      "category_broad": "human",
+      "crossRef": "europe",
+      "desc_zh": "詹姆斯·瓦特改良蒸汽機，成為工業革命的核心動力，從根本上改變了人類的生產方式。",
+      "desc_en": "James Watt's improved steam engine powers the Industrial Revolution, fundamentally transforming human production.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蒸汽機",
+      "wiki_en": "https://en.wikipedia.org/wiki/Steam_engine",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%D0%93%D0%BE%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D0%BF%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0.JPG/1280px-%D0%93%D0%BE%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D0%BF%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0.JPG"
+    },
+    {
+      "id": "electricity-telegraph",
+      "year": 1837,
+      "zh": "電報・電力時代",
+      "en": "Telegraph & Electricity Age",
+      "axis": "science",
+      "level": 2,
+      "category": "science",
+      "category_broad": "human",
+      "crossRef": "europe",
+      "desc_zh": "電報和電力技術的發展，開啟人類通訊和動力的新紀元，大幅縮短了距離。",
+      "desc_en": "Development of the telegraph and electrical power opens a new era of communication and energy, dramatically shrinking distances.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/電報",
+      "wiki_en": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cooke_and_Wheatstone_electric_telegraph.jpg/1280px-Cooke_and_Wheatstone_electric_telegraph.jpg"
+    },
+    {
+      "id": "germ-theory",
+      "year": 1860,
+      "zh": "巴斯德・細菌理論",
+      "en": "Pasteur — Germ Theory",
+      "axis": "science",
+      "level": 2,
+      "category": "science",
+      "category_broad": "human",
+      "crossRef": "europe",
+      "desc_zh": "路易·巴斯德建立細菌致病理論，奠定現代醫學和公共衛生的基礎，是醫學史上最重要的突破之一。",
+      "desc_en": "Louis Pasteur establishes germ theory, founding modern medicine and public health — one of medicine's most important breakthroughs.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/病菌論",
+      "wiki_en": "https://en.wikipedia.org/wiki/Germ_theory_of_disease",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Cholera_bacteria_SEM.jpg"
+    },
+    {
+      "id": "nuclear-physics",
+      "year": 1938,
+      "zh": "核分裂發現",
+      "en": "Nuclear Fission Discovered",
+      "axis": "science",
+      "level": 1,
+      "category": "science",
+      "category_broad": "human",
+      "crossRef": "europe",
+      "desc_zh": "哈恩和斯特拉斯曼發現鈾的核分裂，開啟核能和核武器時代，深刻改變了20世紀的政治和能源格局。",
+      "desc_en": "Hahn and Strassmann discover nuclear fission in uranium, opening the nuclear age and profoundly reshaping 20th-century politics and energy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/核分裂",
+      "wiki_en": "https://en.wikipedia.org/wiki/Nuclear_fission",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Nuclear_fission.svg"
+    },
+    {
+      "id": "computer-turing",
+      "year": 1945,
+      "zh": "電腦誕生・圖靈",
+      "en": "Computer — Turing",
+      "axis": "science",
+      "level": 1,
+      "category": "science",
+      "category_broad": "human",
+      "crossRef": "europe",
+      "desc_zh": "圖靈的理論基礎和二戰後電子計算機的誕生，開啟了資訊時代，是人類歷史上最重要的技術革命之一。",
+      "desc_en": "Turing's theoretical foundations and postwar electronic computers launch the information age — one of history's most important technological revolutions.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/艾倫·圖靈",
+      "wiki_en": "https://en.wikipedia.org/wiki/Alan_Turing",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Alan_turing_header.jpg"
     }
   ]
 }

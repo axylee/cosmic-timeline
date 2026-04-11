@@ -839,12 +839,13 @@ function buildAxes(axesArray) {
 // Groups defined here (visual logic, not data)
 // group membership comes from axes[].group in JSON
 const AXIS_GROUP_DEFS = {
-  natural:      { label:'自然科學', color:'#818cf8' },  // 靛藍
-  human:        { label:'人文',     color:'#e2e8f0' },  // 白銀（跨文明色）
-  arts:         { label:'藝術文化', color:'#f472b6' },  // 玫瑰桃
-  religion:     { label:'宗教',     color:'#fde68a' },  // 淡金（宗教統一淡色）
-  civilization: { label:'文明',     color:'#f97316' },  // 橙（東方暖色代表）
-  nation:       { label:'國家地區', color:'#3b82f6' },  // 藍（歐洲/西方）
+  natural:      { label:'自然科學', color:'#818cf8' },
+  human:        { label:'人文',     color:'#e2e8f0' },
+  science:      { label:'科學技術', color:'#67e8f9' },
+  arts:         { label:'藝術文化', color:'#f472b6' },
+  religion:     { label:'宗教',     color:'#fde68a' },
+  civilization: { label:'文明',     color:'#f97316' },
+  nation:       { label:'國家地區', color:'#3b82f6' },
 };
 
 // These are rebuilt after axes load
@@ -893,12 +894,14 @@ function blendHex(hex1, hex2, t) {
 }
 
 // ── Dynamic legend builder ──
-let _soloAxis = null;  // currently soloed axis id
+// _soloAxis: 觸發 solo 的軸線 id（null = 非 solo 模式）
+// _soloSet:  正常顯示的軸線集合（包含 solo 軸 + 單擊加入的比較軸）
+let _soloAxis = null;
+let _soloSet  = new Set();
 
 function buildLegend() {
   const legend = document.getElementById('legend');
   if (!legend) return;
-  // Clear existing leg items only (keep buttons and hint)
   legend.querySelectorAll('.leg').forEach(el => el.remove());
 
   const sorted = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
@@ -915,41 +918,43 @@ function buildLegend() {
     div.dataset.axis = id;
     div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
 
-    let _clickTimer = null;
-    div.addEventListener('click', () => {
-      // Debounce: wait 220ms to distinguish single vs double
-      if (_clickTimer) return;
-      _clickTimer = setTimeout(() => { _clickTimer = null; }, 220);
-    });
-    div.addEventListener('dblclick', (e) => {
+    // 雙擊：進入 / 切換 / 退出 Solo 模式
+    div.addEventListener('dblclick', e => {
       e.preventDefault();
       if (_soloAxis === id) {
-        // Already soloed this — restore all
+        // 再雙擊同一條 → 退出 solo
         _soloAxis = null;
-        hiddenAxes.clear();
+        _soloSet.clear();
       } else {
-        // Solo this axis
+        // 進入 solo：只顯示這條
         _soloAxis = id;
-        Object.keys(AXES).forEach(axId => {
-          if (axId !== id) hiddenAxes.add(axId);
-          else hiddenAxes.delete(axId);
-        });
+        _soloSet = new Set([id]);
       }
       updateLegendState();
       draw();
     });
+
+    // 單擊：
+    // - 非 solo 模式 → 切換 hiddenAxes（正常隱藏/顯示）
+    // - solo 模式 → 把這條加入 / 移出比較組（_soloSet）
+    let _dblGuard = false;
+    div.addEventListener('dblclick', () => { _dblGuard = true; setTimeout(() => _dblGuard = false, 300); });
     div.addEventListener('click', () => {
+      if (_dblGuard) return;
       if (_soloAxis) {
-        // In solo mode, single click restores all
-        _soloAxis = null;
-        hiddenAxes.clear();
+        // Solo 模式：加入/移出比較組
+        if (id === _soloAxis) return; // solo 主軸不能移除
+        if (_soloSet.has(id)) _soloSet.delete(id);
+        else _soloSet.add(id);
       } else {
+        // 正常模式：切換隱藏
         if (hiddenAxes.has(id)) hiddenAxes.delete(id);
         else hiddenAxes.add(id);
       }
       updateLegendState();
       draw();
     });
+
     legend.appendChild(div);
   });
   if (!addedHint && hintEl) legend.appendChild(hintEl);
@@ -958,6 +963,7 @@ function buildLegend() {
 
 function showAllAxes() {
   _soloAxis = null;
+  _soloSet.clear();
   hiddenAxes.clear();
   updateLegendState();
   draw();
@@ -969,23 +975,30 @@ function updateLegendState() {
     const id = el.dataset.axis;
     const ax = AXES[id];
     if (!ax) return;
-    // Show/hide based on zoom (sub-axes hidden when zoomed out)
-    const shouldShow = ax.zoomMin === 0 || zoom >= ax.zoomMin;
-    el.style.display = shouldShow ? '' : 'none';
-    // Color dot updates with zoom
+    // zoom 顯示控制
+    el.style.display = (ax.zoomMin === 0 || zoom >= ax.zoomMin) ? '' : 'none';
+    // 顏色圓點跟著 zoom
     const dot = el.querySelector('.leg-dot');
     if (dot) dot.style.background = axisEffectiveColor(id);
-    // Hidden/solo styling
+    // Solo 樣式
     if (_soloAxis) {
-      el.classList.toggle('solo-active', id === _soloAxis);
-      el.classList.toggle('solo-dimmed', id !== _soloAxis);
+      const inSet = _soloSet.has(id);
+      el.classList.toggle('solo-active', inSet);
+      el.classList.toggle('solo-dimmed', !inSet);
       el.classList.remove('hidden-axis');
+      // 提示：非主 solo 但在比較組的軸加個小標記
+      if (inSet && id !== _soloAxis) {
+        el.style.outline = '1px solid rgba(255,255,255,0.25)';
+        el.style.borderRadius = '4px';
+      } else {
+        el.style.outline = '';
+      }
     } else {
       el.classList.remove('solo-active','solo-dimmed');
+      el.style.outline = '';
       el.classList.toggle('hidden-axis', hiddenAxes.has(id));
     }
   });
-  // Show/hide show-all button
   const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null;
   const btn = document.getElementById('legend-show-all');
   if (btn) btn.style.opacity = hasHidden ? '1' : '0.4';
@@ -1004,10 +1017,9 @@ function getVisibleAxes() {
 
   return Object.entries(AXES)
     .filter(([id, ax]) => {
-      if (hiddenAxes.has(id)) return false;
-      // 子軸 zoom 門檻
+      // Solo 模式：所有軸線都保持可見（透明度由 categoryAlpha 控制）
+      if (!_soloAxis && hiddenAxes.has(id)) return false;
       if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
-      // 消亡判斷：zoom 夠深 + 有 endYear + 視窗左邊界已超過 endYear → 隱藏
       if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
       return true;
     })
@@ -1151,7 +1163,8 @@ function eventVisible(ev) {
   const zoom = currentZoom();
   const ax = AXES[ev.axis];
   if (!ax) return false;
-  if (hiddenAxes.has(ev.axis)) return false;
+  // Solo 模式：事件仍然可見（只是透明度降低），不 hide
+  if (!_soloAxis && hiddenAxes.has(ev.axis)) return false;
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   const checkEnd = zoom >= 0.58;
   if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
@@ -1232,6 +1245,8 @@ function eventColor(ev) {
 
 // Alpha modifier when a group is highlighted in indicator
 function categoryAlpha(ev) {
+  // Solo 模式：不在 _soloSet 裡的軸線事件淡化到 0.06
+  if (_soloAxis && !_soloSet.has(ev.axis)) return 0.06;
   if (!highlightedCategory) return 1;
   const zoom = currentZoom();
   if (zoom >= ZOOM_GROUP) return 1;
@@ -1392,7 +1407,7 @@ function drawAxisLines() {
     const startX  = yearToX(ax.startYear);
     if (startX > canvasW + 60) return;
 
-    const alpha   = subAxisAlpha(ax);
+    const alpha   = subAxisAlpha(ax) * (_soloAxis && !_soloSet.has(id) ? 0.07 : 1);
     const color   = axisEffectiveColor(id);
     const forkX   = Math.max(-80, startX);
     const dy      = y - parentY;
@@ -1466,9 +1481,10 @@ function drawAxisLines() {
 
     const lineTo = Math.min(canvasW + 20, endX);
 
-    // Alpha — sub-axis fade in, human-evo fade out, ended civilisations fade out
+    // Alpha — sub-axis fade in, human-evo fade out, solo dim
     let alpha = ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65;
     if (id === 'human-evo') alpha *= humanEvoAlpha();
+    if (_soloAxis && !_soloSet.has(id)) alpha *= 0.07;
 
     ctx.save();
     ctx.globalAlpha = alpha;
@@ -1531,7 +1547,7 @@ function drawAxisLines() {
     const label     = ax.label;
     const fontSize  = ax.zoomMin > 0 ? 9 : 10;
     const pad       = 5;
-    const labelAlpha = ax.zoomMin > 0 ? subAxisAlpha(ax) : 1;
+    const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (_soloAxis && !_soloSet.has(id) ? 0.07 : 1);
     if (labelAlpha < 0.05) return;
 
     ctx.save();
@@ -1561,7 +1577,7 @@ function drawAxisLines() {
     if (!hasFutureEvents) return;
     const y     = yMap.get(id);
     const color = axisEffectiveColor(id);
-    const alpha = ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65;
+    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (_soloAxis && !_soloSet.has(id) ? 0.07 : 1);
     const endX  = yearToX(FUTURE_END);
     if (nowXf >= canvasW || endX < nowXf) return;
     ctx.save();
@@ -2071,6 +2087,8 @@ function drawEvents(eventsInView) {
       if (!targetAx) return;
       if (hiddenAxes.has(ev.crossRef)) return;
       if (hiddenAxes.has(ev.axis)) return;
+      // Solo 模式：crossRef 線只在兩端都在 _soloSet 時正常顯示
+      const crossDim = _soloAxis && !(_soloSet.has(ev.axis) || _soloSet.has(ev.crossRef));
 
       const x      = yearToX(ev.year);
       if (x < -20 || x > canvasW + 20) return;
@@ -2085,7 +2103,7 @@ function drawEvents(eventsInView) {
       const isHov  = hoveredEvent && hoveredEvent.id === ev.id;
 
       ctx.save();
-      ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35);
+      ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35) * (crossDim ? 0.15 : 1);
 
       // Vertical dashed line between the two axes
       ctx.beginPath();
