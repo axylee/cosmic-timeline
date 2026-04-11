@@ -1516,9 +1516,15 @@ function eventColor(ev) {
 }
 
 // Alpha modifier when a group is highlighted in indicator
+// Solo dim check — true if this axis should be dimmed
+// Works for both axis solo (_soloAxis) and group solo (_soloGroups)
+function isSoloDimmed(axId) {
+  if (!_soloAxis && !_soloGroups) return false;
+  return !_soloSet.has(axId);
+}
+
 function categoryAlpha(ev) {
-  // Solo 模式：不在 _soloSet 的軸線淡化
-  if (_soloAxis && !_soloSet.has(ev.axis)) return _soloDimAlpha;
+  if (isSoloDimmed(ev.axis)) return _soloDimAlpha;
   if (!highlightedCategory) return 1;
   const zoom = currentZoom();
   if (zoom >= ZOOM_GROUP) return 1;
@@ -1692,7 +1698,7 @@ function drawAxisLines() {
     const startX  = yearToX(ax.startYear);
     if (startX > canvasW + 60) return;
 
-    const alpha   = subAxisAlpha(ax) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
+    const alpha   = subAxisAlpha(ax) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
     const color   = axisEffectiveColor(id);
     const forkX   = Math.max(-80, startX);
     const dy      = y - parentY;
@@ -1767,7 +1773,7 @@ function drawAxisLines() {
     const lineTo = Math.min(canvasW + 20, endX);
 
     // Alpha — sub-axis fade in, human-evo fade out, ended civilisations fade out
-    let alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
+    let alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
     if (id === 'human-evo') alpha *= humanEvoAlpha();
 
     ctx.save();
@@ -1831,7 +1837,7 @@ function drawAxisLines() {
     const label     = T(ax.label, ax.label_en || ax.label);
     const fontSize  = ax.zoomMin > 0 ? 9 : 10;
     const pad       = 5;
-    const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
+    const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
     if (labelAlpha < 0.05) return;
 
     ctx.save();
@@ -1861,7 +1867,7 @@ function drawAxisLines() {
     if (!hasFutureEvents) return;
     const y     = yMap.get(id);
     const color = axisEffectiveColor(id);
-    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
+    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
     const endX  = yearToX(FUTURE_END);
     if (nowXf >= canvasW || endX < nowXf) return;
     ctx.save();
@@ -2099,7 +2105,7 @@ function drawPill(ev, y, opts = {}) {
   ctx.save();
 
   // ── Pill fill ──
-  const soloMul = (_soloAxis && !_soloSet.has(ev.axis)) ? _soloDimAlpha : 1;
+  const soloMul = (isSoloDimmed(ev.axis)) ? _soloDimAlpha : 1;
   ctx.beginPath();
   ctx.roundRect(rx1, y - pillH, w, pillH * 2, r);
   ctx.fillStyle = color;
@@ -2343,7 +2349,7 @@ function drawEvents(eventsInView) {
     // Label — only when zoomed in enough and not a cluster
     if (!isCluster && labelVisible(rep)) {
       ctx.save();
-      const evSoloMul = (_soloAxis && !_soloSet.has(rep.axis)) ? _soloDimAlpha : 1;
+      const evSoloMul = (isSoloDimmed(rep.axis)) ? _soloDimAlpha : 1;
       const fs = rep.level === 1 ? 11 : 10;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
       const tw  = ctx.measureText(T(rep.zh, rep.en)).width;
