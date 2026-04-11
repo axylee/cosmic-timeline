@@ -15,7 +15,7 @@
       "startYear": -13800000000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "galaxy",
@@ -26,7 +26,7 @@
       "startYear": -13500000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "solar-system",
@@ -37,7 +37,7 @@
       "startYear": -4600000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "earth",
@@ -48,7 +48,7 @@
       "startYear": -4540000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "life",
@@ -59,7 +59,7 @@
       "startYear": -3800000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "human-evo",
@@ -70,7 +70,7 @@
       "startYear": -4000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "cross",
@@ -81,7 +81,7 @@
       "startYear": -10000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "human"
+      "group": "nation"
     },
     {
       "id": "arts",
@@ -92,7 +92,7 @@
       "startYear": -3500,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "arts"
+      "group": "nation"
     },
     {
       "id": "science",
@@ -103,7 +103,7 @@
       "startYear": -3200,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "science"
+      "group": "nation"
     },
     {
       "id": "east",
@@ -114,7 +114,7 @@
       "startYear": -8000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "mideast",
@@ -125,7 +125,7 @@
       "startYear": -8000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "egypt",
@@ -136,7 +136,7 @@
       "startYear": -3100,
       "endYear": 641,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "persia",
@@ -145,9 +145,20 @@
       "order": 12,
       "parent": "mideast",
       "startYear": -559,
-      "endYear": 651,
+      "endYear": 1501,
       "zoomMin": 0.65,
-      "group": "civilization"
+      "group": "nation"
+    },
+    {
+      "id": "iran",
+      "label": "伊朗",
+      "color": "#fb923c",
+      "order": 13,
+      "parent": "persia",
+      "startYear": 1501,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
     },
     {
       "id": "judaism",
@@ -158,7 +169,7 @@
       "startYear": -2000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "christianity",
@@ -169,7 +180,7 @@
       "startYear": -6,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "islam",
@@ -180,7 +191,7 @@
       "startYear": 570,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "africa",
@@ -191,7 +202,7 @@
       "startYear": -300000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "north-africa",
@@ -246,7 +257,7 @@
       "startYear": -2600,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "hinduism",
@@ -257,7 +268,7 @@
       "startYear": -1500,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "buddhism",
@@ -268,7 +279,7 @@
       "startYear": -490,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "china",
@@ -301,7 +312,7 @@
       "startYear": -550,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "taiwan",
@@ -334,7 +345,7 @@
       "startYear": -1600,
       "endYear": null,
       "zoomMin": 0,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "greece",
@@ -345,7 +356,7 @@
       "startYear": -1600,
       "endYear": 476,
       "zoomMin": 0.51,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "europe",
@@ -367,7 +378,7 @@
       "startYear": -15000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "north-america",
@@ -389,7 +400,7 @@
       "startYear": -2000,
       "endYear": null,
       "zoomMin": 0.51,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "south-america",
@@ -411,17 +422,6 @@
       "startYear": 1776,
       "endYear": null,
       "zoomMin": 0.72,
-      "group": "nation"
-    },
-    {
-      "id": "iran",
-      "label": "伊朗",
-      "color": "#fb923c",
-      "order": 13,
-      "parent": "persia",
-      "startYear": 1501,
-      "endYear": null,
-      "zoomMin": 0.58,
       "group": "nation"
     }
   ],

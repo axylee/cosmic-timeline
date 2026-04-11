@@ -3229,6 +3229,28 @@ function showPopup(ev) {
     if (id === ev.axis) opt.selected = true;
     axSelect.appendChild(opt);
   });
+  // When axis changes, refresh parent/zoomMin/startYear/endYear to reflect the NEW axis
+  axSelect.onchange = () => {
+    const newAxId = axSelect.value;
+    const newAx = AXES[newAxId];
+    if (!newAx) return;
+    // Rebuild parent select excluding the new axis itself
+    const pSel = document.getElementById('edit-axis-parent');
+    pSel.innerHTML = '<option value="">— 無（頂層）—</option>';
+    Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
+      if (id === newAxId) return;
+      const opt = document.createElement('option');
+      opt.value = id;
+      opt.textContent = `${ax.label} (${id})`;
+      if (id === (newAx.parent||'')) opt.selected = true;
+      pSel.appendChild(opt);
+    });
+    const z = newAx.zoomMin ?? 0;
+    document.getElementById('edit-zoommin').value = z;
+    document.getElementById('edit-zoommin-val').textContent = z.toFixed(2);
+    document.getElementById('edit-axis-startyear').value = newAx.startYear ?? '';
+    document.getElementById('edit-axis-endyear').value   = newAx.endYear   ?? '';
+  };
 
   // Populate crossRef select (with "none" option)
   const crSelect = document.getElementById('edit-crossref');
