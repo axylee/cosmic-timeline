@@ -44,7 +44,7 @@
       "label": "地球",
       "color": "#60a5fa",
       "order": 3,
-      "parent": "cosmos",
+      "parent": "solar-system",
       "startYear": -4540000000,
       "endYear": null,
       "zoomMin": 0,
