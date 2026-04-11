@@ -208,35 +208,7 @@ body {
   width: 100%; height: 3px; cursor: pointer; accent-color: #a78bfa;
 }
 
-/* legend group header */
-.leg-group {
-  display: flex; align-items: center; gap: 5px;
-  width: 100%; padding: 3px 4px; border-radius: 5px;
-  cursor: pointer; transition: background .12s;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: rgba(221,216,200,0.5); user-select: none;
-  justify-content: flex-end;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  margin-top: 4px; padding-top: 5px;
-}
-.leg-group:first-of-type { border-top: none; margin-top: 0; }
-.leg-group:hover { background: rgba(255,255,255,0.05); color: rgba(221,216,200,0.85); }
-.leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
-.leg-group.solo-dimmed { opacity: 0.3; }
-.leg-group-dot {
-  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-}
-.leg-group-arrow {
-  font-size: 8px; flex-shrink: 0; transition: transform .15s;
-  color: rgba(221,216,200,0.3);
-}
-.leg-group.collapsed .leg-group-arrow { transform: rotate(-90deg); }
-.leg-group-items {
-  display: flex; flex-direction: column; gap: 1px;
-  overflow: hidden; transition: max-height .2s ease;
-}
-.leg-group-items.collapsed { max-height: 0 !important; }
+/* ─── MAIN CANVAS ─── */
 #timeline-canvas {
   position: fixed; inset: 0; z-index: 10;
   display: block;
@@ -880,6 +852,48 @@ body {
           <div class="edit-label">英文名稱</div>
           <input class="edit-input" id="edit-en" type="text">
         </div>
+        <div class="edit-row" style="flex-direction:column;gap:6px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div>
+              <div class="edit-label" style="margin-bottom:4px">起始年份 <span style="color:#f87171">*</span></div>
+              <input class="edit-input" id="edit-year" type="number" placeholder="例：-586 或 1453">
+            </div>
+            <div>
+              <div class="edit-label" style="margin-bottom:4px">結束年份（空白=點事件）</div>
+              <input class="edit-input" id="edit-endyear" type="number" placeholder="有填=pill 時間段">
+            </div>
+          </div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.25)">負數 = BC · 有結束年份顯示為色條（pill）</div>
+        </div>
+        <div class="edit-row" style="flex-direction:column;gap:6px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div>
+              <div class="edit-label" style="margin-bottom:4px">重要程度</div>
+              <select class="edit-input" id="edit-level" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;cursor:pointer">
+                <option value="1">Level 1 — 大事件</option>
+                <option value="2">Level 2 — 一般</option>
+                <option value="3">Level 3 — 小事件</option>
+              </select>
+            </div>
+            <div>
+              <div class="edit-label" style="margin-bottom:4px">分類</div>
+              <select class="edit-input" id="edit-category" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;cursor:pointer">
+                <option value="civilization">文明</option>
+                <option value="politics">政治</option>
+                <option value="war">戰爭</option>
+                <option value="science">科學技術</option>
+                <option value="religion">宗教</option>
+                <option value="philosophy">哲學</option>
+                <option value="culture">文化藝術</option>
+                <option value="exploration">探索</option>
+                <option value="medicine">醫學</option>
+                <option value="astronomy">天文</option>
+                <option value="geology">地質</option>
+                <option value="biology">生物</option>
+              </select>
+            </div>
+          </div>
+        </div>
         <div class="edit-row">
           <div class="edit-label">中文描述</div>
           <textarea class="edit-input edit-textarea" id="edit-desc-zh"></textarea>
@@ -921,8 +935,8 @@ function toggleLang() {
   localStorage.setItem('cosmic-lang', lang);
   applyLang();
   draw();
-  // Refresh open popup if any
-  if (_editingEventId || document.getElementById('popup-overlay').classList.contains('show')) {
+  // Refresh popup only if it's actually open
+  if (document.getElementById('popup-overlay').classList.contains('show') && _editingEventId) {
     const ev = events.find(e => e.id === _editingEventId);
     if (ev) showPopup(ev);
   }
@@ -974,10 +988,11 @@ function buildAxes(axesArray) {
       parent:    ax.parent ?? null,
       order:     ax.order,
       zoomMin:   ax.zoomMin ?? 0,
-      group:     ax.group || 'nation',
     };
   });
+  // Rebuild AXIS_GROUP_MAP after axes are loaded
   buildAxisGroupMap();
+  // Rebuild legend
   buildLegend();
 }
 
@@ -1047,7 +1062,6 @@ function blendHex(hex1, hex2, t) {
 let _soloAxis     = null;
 let _soloSet      = new Set();
 let _soloDimAlpha = 0.07;
-let _soloGroups   = null; // null = off, Set of group keys = active
 
 function updateSoloDim(val) {
   _soloDimAlpha = val / 100;
@@ -1060,157 +1074,58 @@ function _setSoloCtrl(show) {
   if (el) el.style.display = show ? 'flex' : 'none';
 }
 
-// Track which groups are collapsed
-let _collapsedGroups = new Set();
-// _soloGroups: set of soloed group keys (see declaration above)
-
 function buildLegend() {
   const legend = document.getElementById('legend');
   if (!legend) return;
-  // Remove old group/axis items (keep controls + hint + solo-ctrl)
-  legend.querySelectorAll('.leg, .leg-group, .leg-group-items').forEach(el => el.remove());
+  // Clear existing leg items only (keep buttons and hint)
+  legend.querySelectorAll('.leg').forEach(el => el.remove());
 
-  // Group axes by their group key, in AXIS_GROUP_DEFS order
-  const sortedAxes = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
-  const groupOrder = Object.keys(AXIS_GROUP_DEFS);
+  const sorted = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
+  let hintEl = document.getElementById('legend-zoom-hint');
+  let addedHint = false;
 
-  // Build map: groupKey → [axisId, ...]
-  const groupAxes = {};
-  groupOrder.forEach(gk => { groupAxes[gk] = []; });
-  sortedAxes.forEach(([id, ax]) => {
-    const gk = AXIS_GROUP_MAP[id] || 'nation';
-    if (!groupAxes[gk]) groupAxes[gk] = [];
-    groupAxes[gk].push(id);
-  });
+  sorted.forEach(([id, ax]) => {
+    if (ax.zoomMin > 0 && !addedHint) {
+      if (hintEl) legend.insertBefore(hintEl, null);
+      addedHint = true;
+    }
+    const div = document.createElement('div');
+    div.className = ax.zoomMin > 0 ? 'leg leg-sub' : 'leg';
+    div.dataset.axis = id;
+    div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
 
-  const hintEl = document.getElementById('legend-zoom-hint');
-
-  groupOrder.forEach(gk => {
-    const ids = groupAxes[gk];
-    if (!ids || !ids.length) return;
-    const def = AXIS_GROUP_DEFS[gk];
-
-    // ── Group header ──
-    const header = document.createElement('div');
-    header.className = 'leg-group';
-    header.dataset.group = gk;
-    if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
-    header.innerHTML = `<span class="leg-group-arrow">▾</span><span style="flex:1;text-align:right">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
-
-    // Group header: single click = collapse/expand
-    // Double click = solo this group
-    let _grpDblGuard = false;
-    header.addEventListener('dblclick', e => {
+    let _dblGuard = false;
+    div.addEventListener('dblclick', e => {
       e.preventDefault();
-      _grpDblGuard = true; setTimeout(() => _grpDblGuard = false, 300);
-      // Exit axis solo mode first
-      _soloAxis = null;
-      if (_soloGroups && _soloGroups.has(gk) && _soloGroups.size === 1) {
-        // Toggle off
-        _soloGroups = null;
-      } else if (!_soloGroups) {
-        _soloGroups = new Set([gk]);
+      _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
+      if (_soloAxis === id) {
+        _soloAxis = null; _soloSet.clear();
       } else {
-        _soloGroups = new Set([gk]); // reset to just this group
+        _soloAxis = id; _soloSet = new Set([id]);
       }
-      // Build _soloSet from all axes in soloed groups
-      if (_soloGroups) {
-        _soloSet = new Set();
-        _soloGroups.forEach(sgk => {
-          (groupAxes[sgk] || []).forEach(id => _soloSet.add(id));
-        });
-      } else {
-        _soloSet.clear();
-      }
-      _setSoloCtrl(_soloGroups !== null || _soloAxis !== null);
+      _setSoloCtrl(_soloAxis !== null);
       updateLegendState(); draw();
     });
-    header.addEventListener('click', () => {
-      if (_grpDblGuard) return;
-      if (_soloGroups) {
-        // In group solo mode: single click = add/remove this group from comparison
-        if (_soloGroups.has(gk)) {
-          _soloGroups.delete(gk);
-          if (_soloGroups.size === 0) _soloGroups = null;
-        } else {
-          _soloGroups.add(gk);
-        }
-        // Rebuild soloSet
-        if (_soloGroups) {
-          _soloSet = new Set();
-          _soloGroups.forEach(sgk => {
-            (groupAxes[sgk] || []).forEach(id => _soloSet.add(id));
-          });
-        } else {
-          _soloSet.clear();
-        }
-        _setSoloCtrl(_soloGroups !== null);
-        updateLegendState(); draw();
+    div.addEventListener('click', () => {
+      if (_dblGuard) return;
+      if (_soloAxis) {
+        if (id === _soloAxis) return;
+        if (_soloSet.has(id)) _soloSet.delete(id);
+        else _soloSet.add(id);
       } else {
-        // Toggle collapse
-        if (_collapsedGroups.has(gk)) _collapsedGroups.delete(gk);
-        else _collapsedGroups.add(gk);
-        updateLegendState();
+        if (hiddenAxes.has(id)) hiddenAxes.delete(id);
+        else hiddenAxes.add(id);
       }
+      updateLegendState(); draw();
     });
-    legend.appendChild(header);
-
-    // ── Axes in this group ──
-    const itemsWrap = document.createElement('div');
-    itemsWrap.className = 'leg-group-items';
-    itemsWrap.dataset.group = gk;
-    if (_collapsedGroups.has(gk)) itemsWrap.classList.add('collapsed');
-
-    ids.forEach(id => {
-      const ax = AXES[id];
-      if (!ax) return;
-      const div = document.createElement('div');
-      div.className = ax.zoomMin > 0 ? 'leg leg-sub' : 'leg';
-      div.dataset.axis = id;
-      div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
-
-      let _dblGuard = false;
-      div.addEventListener('dblclick', e => {
-        e.preventDefault();
-        _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
-        _soloGroups = null; // exit group solo
-        if (_soloAxis === id) {
-          _soloAxis = null; _soloSet.clear();
-        } else {
-          _soloAxis = id; _soloSet = new Set([id]);
-        }
-        _setSoloCtrl(_soloAxis !== null);
-        updateLegendState(); draw();
-      });
-      div.addEventListener('click', () => {
-        if (_dblGuard) return;
-        if (_soloAxis) {
-          if (id === _soloAxis) return;
-          if (_soloSet.has(id)) _soloSet.delete(id);
-          else _soloSet.add(id);
-        } else if (_soloGroups) {
-          // In group solo mode, clicking axis adds/removes it
-          if (_soloSet.has(id)) _soloSet.delete(id);
-          else _soloSet.add(id);
-        } else {
-          if (hiddenAxes.has(id)) hiddenAxes.delete(id);
-          else hiddenAxes.add(id);
-        }
-        updateLegendState(); draw();
-      });
-      itemsWrap.appendChild(div);
-    });
-    legend.appendChild(itemsWrap);
+    legend.appendChild(div);
   });
-
-  // Append zoom hint at bottom
-  if (hintEl) legend.appendChild(hintEl);
+  if (!addedHint && hintEl) legend.appendChild(hintEl);
   updateLegendState();
 }
 
 function showAllAxes() {
   _soloAxis = null; _soloSet.clear();
-  _soloGroups = null;
   hiddenAxes.clear();
   _setSoloCtrl(false);
   updateLegendState(); draw();
@@ -1218,61 +1133,28 @@ function showAllAxes() {
 
 function updateLegendState() {
   const zoom = currentZoom();
-
-  // Update group headers
-  document.querySelectorAll('#legend .leg-group').forEach(header => {
-    const gk = header.dataset.group;
-    header.classList.toggle('collapsed', _collapsedGroups.has(gk));
-    if (_soloGroups) {
-      header.classList.toggle('solo-active', _soloGroups.has(gk));
-      header.classList.toggle('solo-dimmed', !_soloGroups.has(gk));
-    } else if (_soloAxis) {
-      // In axis solo: groups are background
-      header.classList.remove('solo-active', 'solo-dimmed');
-      header.style.opacity = '0.35';
-    } else {
-      header.classList.remove('solo-active', 'solo-dimmed');
-      header.style.opacity = '';
-    }
-  });
-
-  // Update items wrappers (collapse)
-  document.querySelectorAll('#legend .leg-group-items').forEach(wrap => {
-    const gk = wrap.dataset.group;
-    wrap.classList.toggle('collapsed', _collapsedGroups.has(gk));
-    if (!wrap.classList.contains('collapsed')) {
-      // Set max-height for animation
-      wrap.style.maxHeight = wrap.scrollHeight + 'px';
-    } else {
-      wrap.style.maxHeight = '0';
-    }
-  });
-
-  // Update individual axis items
   document.querySelectorAll('#legend .leg').forEach(el => {
     const id = el.dataset.axis;
     const ax = AXES[id];
     if (!ax) return;
-    // zoom visibility
-    el.style.display = (ax.zoomMin === 0 || zoom >= ax.zoomMin) ? '' : 'none';
-    // dot color
+    // Show/hide based on zoom (sub-axes hidden when zoomed out)
+    const shouldShow = ax.zoomMin === 0 || zoom >= ax.zoomMin;
+    el.style.display = shouldShow ? '' : 'none';
+    // Color dot updates with zoom
     const dot = el.querySelector('.leg-dot');
     if (dot) dot.style.background = axisEffectiveColor(id);
-    // solo/hidden styling
-    if (_soloAxis || _soloGroups) {
-      const inSet = _soloSet.has(id);
-      el.classList.toggle('solo-active', inSet);
-      el.classList.toggle('solo-dimmed', !inSet);
+    // Hidden/solo styling
+    if (_soloAxis) {
+      el.classList.toggle('solo-active', id === _soloAxis);
+      el.classList.toggle('solo-dimmed', id !== _soloAxis);
       el.classList.remove('hidden-axis');
-      el.style.outline = (inSet && id !== _soloAxis) ? '1px solid rgba(255,255,255,0.2)' : '';
     } else {
-      el.classList.remove('solo-active', 'solo-dimmed');
-      el.style.outline = '';
+      el.classList.remove('solo-active','solo-dimmed');
       el.classList.toggle('hidden-axis', hiddenAxes.has(id));
     }
   });
-
-  const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null || _soloGroups !== null;
+  // Show/hide show-all button
+  const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null;
   const btn = document.getElementById('legend-show-all');
   if (btn) btn.style.opacity = hasHidden ? '1' : '0.4';
 }
@@ -1516,15 +1398,9 @@ function eventColor(ev) {
 }
 
 // Alpha modifier when a group is highlighted in indicator
-// Solo dim check — true if this axis should be dimmed
-// Works for both axis solo (_soloAxis) and group solo (_soloGroups)
-function isSoloDimmed(axId) {
-  if (!_soloAxis && !_soloGroups) return false;
-  return !_soloSet.has(axId);
-}
-
 function categoryAlpha(ev) {
-  if (isSoloDimmed(ev.axis)) return _soloDimAlpha;
+  // Solo 模式：不在 _soloSet 的軸線淡化
+  if (_soloAxis && !_soloSet.has(ev.axis)) return _soloDimAlpha;
   if (!highlightedCategory) return 1;
   const zoom = currentZoom();
   if (zoom >= ZOOM_GROUP) return 1;
@@ -1698,7 +1574,7 @@ function drawAxisLines() {
     const startX  = yearToX(ax.startYear);
     if (startX > canvasW + 60) return;
 
-    const alpha   = subAxisAlpha(ax) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    const alpha   = subAxisAlpha(ax) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
     const color   = axisEffectiveColor(id);
     const forkX   = Math.max(-80, startX);
     const dy      = y - parentY;
@@ -1773,7 +1649,7 @@ function drawAxisLines() {
     const lineTo = Math.min(canvasW + 20, endX);
 
     // Alpha — sub-axis fade in, human-evo fade out, ended civilisations fade out
-    let alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    let alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
     if (id === 'human-evo') alpha *= humanEvoAlpha();
 
     ctx.save();
@@ -1837,7 +1713,7 @@ function drawAxisLines() {
     const label     = T(ax.label, ax.label_en || ax.label);
     const fontSize  = ax.zoomMin > 0 ? 9 : 10;
     const pad       = 5;
-    const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
     if (labelAlpha < 0.05) return;
 
     ctx.save();
@@ -1867,7 +1743,7 @@ function drawAxisLines() {
     if (!hasFutureEvents) return;
     const y     = yMap.get(id);
     const color = axisEffectiveColor(id);
-    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (_soloAxis && !_soloSet.has(id) ? _soloDimAlpha : 1);
     const endX  = yearToX(FUTURE_END);
     if (nowXf >= canvasW || endX < nowXf) return;
     ctx.save();
@@ -2105,7 +1981,7 @@ function drawPill(ev, y, opts = {}) {
   ctx.save();
 
   // ── Pill fill ──
-  const soloMul = (isSoloDimmed(ev.axis)) ? _soloDimAlpha : 1;
+  const soloMul = (_soloAxis && !_soloSet.has(ev.axis)) ? _soloDimAlpha : 1;
   ctx.beginPath();
   ctx.roundRect(rx1, y - pillH, w, pillH * 2, r);
   ctx.fillStyle = color;
@@ -2349,7 +2225,7 @@ function drawEvents(eventsInView) {
     // Label — only when zoomed in enough and not a cluster
     if (!isCluster && labelVisible(rep)) {
       ctx.save();
-      const evSoloMul = (isSoloDimmed(rep.axis)) ? _soloDimAlpha : 1;
+      const evSoloMul = (_soloAxis && !_soloSet.has(rep.axis)) ? _soloDimAlpha : 1;
       const fs = rep.level === 1 ? 11 : 10;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
       const tw  = ctx.measureText(T(rep.zh, rep.en)).width;
@@ -2906,7 +2782,7 @@ document.addEventListener('keydown', e => {
     case 'ArrowDown':  e.preventDefault(); yOffset -= 60; clampYOffset(); draw(); break;
     case '+': case '=': e.preventDefault(); zoomBy(0.6); break;
     case '-': case '_': e.preventDefault(); zoomBy(1.6); break;
-    case 'Escape': document.getElementById('popup-overlay').classList.remove('show'); break;
+    case 'Escape': document.getElementById('popup-overlay').classList.remove('show'); _editingEventId = null; break;
   }
 });
 
@@ -3384,13 +3260,17 @@ function showPopup(ev) {
   document.getElementById('edit-axis-endyear').value   = curAx?.endYear   ?? '';
 
   // Populate edit fields
-  document.getElementById('edit-image').value   = ev.image   || '';
-  document.getElementById('edit-zh').value      = ev.zh      || '';
-  document.getElementById('edit-en').value      = ev.en      || '';
-  document.getElementById('edit-desc-zh').value = ev.desc_zh || '';
-  document.getElementById('edit-desc-en').value = ev.desc_en || '';
-  document.getElementById('edit-wiki-zh').value = ev.wiki_zh || '';
-  document.getElementById('edit-wiki-en').value = ev.wiki_en || '';
+  document.getElementById('edit-image').value   = ev.image    || '';
+  document.getElementById('edit-zh').value      = ev.zh       || '';
+  document.getElementById('edit-en').value      = ev.en       || '';
+  document.getElementById('edit-year').value    = ev.year     ?? '';
+  document.getElementById('edit-endyear').value = ev.endYear  ?? '';
+  document.getElementById('edit-level').value   = ev.level    || 2;
+  document.getElementById('edit-category').value = ev.category || 'civilization';
+  document.getElementById('edit-desc-zh').value = ev.desc_zh  || '';
+  document.getElementById('edit-desc-en').value = ev.desc_en  || '';
+  document.getElementById('edit-wiki-zh').value = ev.wiki_zh  || '';
+  document.getElementById('edit-wiki-en').value = ev.wiki_en  || '';
 
   // Image preview
   const preview = document.getElementById('edit-img-preview');
@@ -3433,10 +3313,12 @@ function showPopup(ev) {
 
 document.getElementById('popup-close').addEventListener('click', () => {
   document.getElementById('popup-overlay').classList.remove('show');
+  _editingEventId = null;
 });
 document.getElementById('popup-overlay').addEventListener('click', e => {
   if (e.target === document.getElementById('popup-overlay')) {
     document.getElementById('popup-overlay').classList.remove('show');
+    _editingEventId = null;
   }
 });
 
@@ -3588,8 +3470,9 @@ function exportJSON() {
     const clone = { ...ev };
     delete clone._autoParent;
     if (edits[clone.id]) Object.assign(clone, edits[clone.id]);
-    // clean up undefined crossRef
+    // clean up empty crossRef and endYear
     if (clone.crossRef === '' || clone.crossRef === undefined) delete clone.crossRef;
+    if (clone.endYear  === '' || clone.endYear  === undefined) delete clone.endYear;
     return clone;
   });
 
@@ -3660,18 +3543,25 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
 
   // ── Event field edits ──
   const crossRefVal = document.getElementById('edit-crossref').value;
+  const yearRaw    = document.getElementById('edit-year').value.trim();
+  const endYearRaw = document.getElementById('edit-endyear').value.trim();
   const fields = {
     axis:     document.getElementById('edit-axis').value || undefined,
-    crossRef: crossRefVal || undefined,  // empty string = remove crossRef
+    crossRef: crossRefVal || undefined,
     image:    document.getElementById('edit-image').value.trim() || undefined,
     zh:       document.getElementById('edit-zh').value.trim() || undefined,
     en:       document.getElementById('edit-en').value.trim() || undefined,
+    level:    parseInt(document.getElementById('edit-level').value) || undefined,
+    category: document.getElementById('edit-category').value || undefined,
     desc_zh:  document.getElementById('edit-desc-zh').value.trim() || undefined,
     desc_en:  document.getElementById('edit-desc-en').value.trim() || undefined,
     wiki_zh:  document.getElementById('edit-wiki-zh').value.trim() || undefined,
     wiki_en:  document.getElementById('edit-wiki-en').value.trim() || undefined,
   };
-  // crossRef='' means user cleared it — keep as empty string so exportJSON removes it
+  if (yearRaw !== '')    fields.year    = parseInt(yearRaw);
+  if (endYearRaw !== '') fields.endYear = parseInt(endYearRaw);
+  else                   fields.endYear = '';  // '' = remove endYear
+  // crossRef='' means user cleared it
   if (crossRefVal === '') fields.crossRef = '';
   Object.keys(fields).forEach(k => fields[k] === undefined && delete fields[k]);
   saveEdit(_editingEventId, fields);
@@ -3681,6 +3571,7 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
   if (ev) {
     Object.assign(ev, fields);
     if (fields.crossRef === '') delete ev.crossRef;
+    if (fields.endYear  === '') delete ev.endYear;
   }
 
   // ── Axis setting edits (parent + zoomMin + startYear + endYear) ──
