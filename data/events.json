@@ -15,7 +15,7 @@
       "startYear": -13800000000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "solar-system",
@@ -26,7 +26,7 @@
       "startYear": -4600000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "earth",
@@ -37,7 +37,7 @@
       "startYear": -4540000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "life",
@@ -48,7 +48,7 @@
       "startYear": -3800000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "human-evo",
@@ -59,7 +59,7 @@
       "startYear": -4000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "nation"
     },
     {
       "id": "cross",
@@ -70,7 +70,7 @@
       "startYear": -10000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "human"
+      "group": "nation"
     },
     {
       "id": "arts",
@@ -81,7 +81,7 @@
       "startYear": -800,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "arts"
+      "group": "nation"
     },
     {
       "id": "science",
@@ -92,7 +92,7 @@
       "startYear": -3000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "science"
+      "group": "nation"
     },
     {
       "id": "east",
@@ -103,7 +103,7 @@
       "startYear": -3500,
       "endYear": null,
       "zoomMin": 0,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "mideast",
@@ -114,7 +114,7 @@
       "startYear": -3500,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "egypt",
@@ -125,7 +125,7 @@
       "startYear": -3100,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "persia",
@@ -136,7 +136,7 @@
       "startYear": -600,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "judaism",
@@ -147,7 +147,7 @@
       "startYear": -2000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "christianity",
@@ -158,7 +158,7 @@
       "startYear": -6,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "islam",
@@ -169,7 +169,7 @@
       "startYear": 570,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "africa",
@@ -180,7 +180,7 @@
       "startYear": -300000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "north-africa",
@@ -235,7 +235,7 @@
       "startYear": -2600,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "hinduism",
@@ -246,7 +246,7 @@
       "startYear": -1500,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "buddhism",
@@ -257,17 +257,17 @@
       "startYear": -490,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "china",
       "label": "中國",
       "color": "#ef4444",
       "order": 23,
-      "parent": "east",
+      "parent": "human-evo",
       "startYear": -5000,
       "endYear": null,
-      "zoomMin": 0.58,
+      "zoomMin": 0.51,
       "group": "nation"
     },
     {
@@ -290,7 +290,7 @@
       "startYear": -550,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "religion"
+      "group": "nation"
     },
     {
       "id": "taiwan",
@@ -323,7 +323,7 @@
       "startYear": -3500,
       "endYear": null,
       "zoomMin": 0,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "greece",
@@ -334,7 +334,7 @@
       "startYear": -1600,
       "endYear": 476,
       "zoomMin": 0.58,
-      "group": "civilization"
+      "group": "nation"
     },
     {
       "id": "europe",
@@ -352,11 +352,11 @@
       "label": "美洲",
       "color": "#60a5fa",
       "order": 31,
-      "parent": "west",
+      "parent": "human-evo",
       "startYear": -15000,
       "endYear": null,
-      "zoomMin": 0.58,
-      "group": "civilization"
+      "zoomMin": 0.3,
+      "group": "nation"
     },
     {
       "id": "north-america",
@@ -2764,7 +2764,7 @@
       "year": -4400000000,
       "zh": "地球液態水海洋出現",
       "en": "First Liquid Oceans",
-      "axis": "solar-system",
+      "axis": "earth",
       "level": 1,
       "desc_zh": "地球冷卻後，大氣中水蒸氣凝結形成最早的液態海洋，生命出現的先決條件。",
       "desc_en": "As Earth cools, water vapor condenses to form the first liquid oceans — a prerequisite for life.",
@@ -2794,7 +2794,7 @@
       "year": -4000000000,
       "zh": "最早大陸地殼形成",
       "en": "First Continental Crust",
-      "axis": "solar-system",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "最早的大陸地殼碎片形成，格陵蘭發現的阿卡斯塔片麻岩是目前已知最古老的岩石。",
       "desc_en": "The earliest continental crust fragments form; Acasta Gneiss in Canada is the oldest known intact rock.",
@@ -2809,7 +2809,7 @@
       "year": -3500000000,
       "zh": "板塊構造開始",
       "en": "Plate Tectonics Begins",
-      "axis": "solar-system",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "地球板塊漂移活動開始，大陸不斷碰撞分裂，塑造今日地球的地貌與山脈。",
       "desc_en": "Plate tectonic activity begins; continents drift, collide, and split, shaping today's geography and mountains.",
@@ -2825,7 +2825,7 @@
       "endYear": -750000000,
       "zh": "羅迪尼亞超大陸",
       "en": "Rodinia Supercontinent",
-      "axis": "solar-system",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "已知最早有完整記錄的超大陸，幾乎包含當時所有陸塊，後來分裂成多個板塊。",
       "desc_en": "The earliest well-documented supercontinent, containing nearly all landmasses; later broke apart into multiple plates.",
@@ -5044,7 +5044,8 @@
       "desc_en": "Neolithic culture of the Yellow River valley, known for painted pottery; agricultural settlements form the prehistoric foundation of Chinese civilization.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/仰韶文化",
       "wiki_en": "https://en.wikipedia.org/wiki/Yangshao_culture",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Yangshao_map.svg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Yangshao_map.svg",
+      "crossRef": "east"
     },
     {
       "id": "shennong",
