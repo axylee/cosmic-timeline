@@ -100,7 +100,7 @@
       "color": "#67e8f9",
       "order": 8,
       "parent": "cross",
-      "startYear": -3000,
+      "startYear": -3200,
       "endYear": null,
       "zoomMin": 0.58,
       "group": "science"
@@ -111,7 +111,7 @@
       "color": "#f97316",
       "order": 9,
       "parent": "cross",
-      "startYear": -3500,
+      "startYear": -8000,
       "endYear": null,
       "zoomMin": 0,
       "group": "civilization"
@@ -122,7 +122,7 @@
       "color": "#f59e0b",
       "order": 10,
       "parent": "east",
-      "startYear": -3500,
+      "startYear": -8000,
       "endYear": null,
       "zoomMin": 0.58,
       "group": "civilization"
@@ -331,7 +331,7 @@
       "color": "#7c3aed",
       "order": 29,
       "parent": "cross",
-      "startYear": -800,
+      "startYear": -1600,
       "endYear": null,
       "zoomMin": 0,
       "group": "civilization"
