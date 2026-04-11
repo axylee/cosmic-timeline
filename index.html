@@ -117,45 +117,42 @@ body {
 
 /* ─── AXIS LEGEND ─── */
 #legend {
-  position: fixed; top: 54px; left: 0; right: 0; z-index: 49;
-  display: flex; align-items: center; justify-content: center; gap: 18px;
-  padding: 6px 24px;
-  background: linear-gradient(to bottom, rgba(5,8,16,0.6) 0%, transparent);
+  position: fixed;
+  right: 40px;   /* 緊貼 right-panel 左邊 */
+  top: 80px; bottom: 80px;
+  z-index: 51;   /* 高於 canvas(10) 和 right-panel(50)，不被遮住 */
+  display: flex; flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  padding: 8px 8px;
+  background: rgba(5,8,16,0.82);
+  border-left: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px 0 0 8px;
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 130px;
+  scrollbar-width: none;
 }
+#legend::-webkit-scrollbar { display: none; }
 .leg {
   display: flex; align-items: center; gap: 5px;
   font-family: 'Noto Sans TC', sans-serif;
-  font-size: 10px; letter-spacing: 0.05em;
+  font-size: 10px; letter-spacing: 0.03em;
   color: rgba(221,216,200,0.85); opacity: 0.9;
-  cursor: pointer; transition: opacity .2s;
+  cursor: pointer; transition: opacity .15s;
+  white-space: nowrap; flex-direction: row-reverse;
+  padding: 1px 4px; border-radius: 4px;
+  width: 100%; justify-content: flex-end;
 }
-.leg:hover { opacity: 1; color: #fff; }
+.leg:hover { opacity: 1; color: #fff; background: rgba(255,255,255,0.06); }
 .leg.hidden-axis { opacity: 0.2; text-decoration: line-through; }
-.leg.solo-active { opacity: 1; color: #fff; }
+.leg.solo-active { opacity: 1; color: #fff; background: rgba(255,255,255,0.08); }
 .leg.solo-dimmed { opacity: 0.18; }
 .leg-sub {
-  font-size: 9px; opacity: 0.6;
+  font-size: 9px; opacity: 0.6; padding-left: 8px;
 }
 .leg-sub.hidden-axis { opacity: 0.15; text-decoration: line-through; }
-.leg-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  flex-shrink: 0; box-shadow: 0 0 3px currentColor;
-}
-.leg-sub .leg-dot { width: 6px; height: 6px; }
-#legend-show-all {
-  font-size: 9px; padding: 2px 8px; border-radius: 8px;
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(221,216,200,0.6); cursor: pointer; white-space: nowrap;
-  font-family: 'Noto Sans TC', sans-serif; flex-shrink: 0;
-}
-#legend-show-all:hover { background: rgba(255,255,255,0.14); color: var(--text); }
-#legend-clear-edits {
-  font-size: 9px; padding: 2px 8px; border-radius: 8px;
-  background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.2);
-  color: rgba(248,113,113,0.7); cursor: pointer; white-space: nowrap;
-  font-family: 'Noto Sans TC', sans-serif; flex-shrink: 0; margin-left: 4px;
-}
-#legend-clear-edits:hover { background: rgba(248,113,113,0.22); color: #f87171; }
 .leg-dot {
   width: 7px; height: 7px; border-radius: 50%;
   flex-shrink: 0;
@@ -164,8 +161,42 @@ body {
 #legend-zoom-hint {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 8px; color: rgba(221,216,200,0.2);
-  letter-spacing: 0.05em; padding: 0 4px;
-  pointer-events: none;
+  letter-spacing: 0.05em; padding: 2px 4px;
+  pointer-events: none; text-align: right;
+}
+/* legend top controls */
+#legend-controls {
+  display: flex; flex-direction: column; gap: 4px;
+  padding-bottom: 6px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 2px; width: 100%;
+}
+#legend-show-all, #legend-clear-edits {
+  font-size: 9px; padding: 3px 6px; border-radius: 6px;
+  cursor: pointer; white-space: nowrap;
+  font-family: 'Noto Sans TC', sans-serif;
+  width: 100%; text-align: center; border: 1px solid;
+}
+#legend-show-all {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(221,216,200,0.6);
+}
+#legend-show-all:hover { background: rgba(255,255,255,0.14); color: var(--text); }
+#legend-clear-edits {
+  background: rgba(248,113,113,0.08);
+  border-color: rgba(248,113,113,0.2);
+  color: rgba(248,113,113,0.7);
+}
+#legend-clear-edits:hover { background: rgba(248,113,113,0.2); color: #f87171; }
+/* solo dim slider */
+#legend-solo-ctrl {
+  display: none; flex-direction: column; gap: 3px;
+  padding-top: 4px; border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 2px; width: 100%;
+  font-size: 9px; color: rgba(221,216,200,0.5);
+}
+#legend-solo-ctrl input[type=range] {
+  width: 100%; height: 3px; cursor: pointer; accent-color: #a78bfa;
 }
 
 /* ─── MAIN CANVAS ─── */
@@ -661,15 +692,17 @@ body {
 </div>
 
 <div id="legend">
-  <button id="legend-show-all" onclick="showAllAxes()">全部顯示</button>
-  <button id="legend-clear-edits" onclick="clearAllEdits()">清除本地修改</button>
-  <span id="legend-zoom-hint">← zoom in 展開子軸</span>
-  <span id="legend-solo-ctrl" style="display:none;align-items:center;gap:5px;font-size:9px;color:rgba(221,216,200,0.5);flex-shrink:0">
-    淡化：<input type="range" id="solo-dim-slider" min="1" max="30" value="7"
-      style="width:60px;height:3px;cursor:pointer;accent-color:#a78bfa"
+  <div id="legend-controls">
+    <button id="legend-show-all" onclick="showAllAxes()">全部顯示</button>
+    <button id="legend-clear-edits" onclick="clearAllEdits()">清除修改</button>
+  </div>
+  <span id="legend-zoom-hint">zoom in 展開 ↓</span>
+  <div id="legend-solo-ctrl">
+    <span>淡化強度</span>
+    <input type="range" id="solo-dim-slider" min="1" max="30" value="7"
       oninput="updateSoloDim(this.value)">
     <span id="solo-dim-val">7%</span>
-  </span>
+  </div>
 </div>
 
 <canvas id="timeline-canvas"></canvas>
@@ -1396,12 +1429,6 @@ function drawAxisLines() {
   const visAxes = getVisibleAxes();
   const zoom    = currentZoom();
 
-  // ── Clip: axis lines only draw BELOW the era banner strip ──
-  ctx.save();
-  ctx.beginPath();
-  ctx.rect(0, TOP_MARGIN - 10, canvasW, canvasH);
-  ctx.clip();
-
   // ── Clip mask: solid axis lines never appear past NOW ──
   const nowX = yearToX(NOW);
   ctx.save();
@@ -1612,7 +1639,6 @@ function drawAxisLines() {
     ctx.setLineDash([]);
     ctx.restore();
   });
-  ctx.restore(); // close TOP_MARGIN clip
 }
 
 // ════════════════════════════════════════════
@@ -1885,7 +1911,7 @@ function drawPill(ev, y, opts = {}) {
     ctx.restore();
   }
 
-  // ── Label — always show for child pills; use zoom threshold for others ──
+  // ── Label ──
   const showLabel = isChild || ev.level === 1 || zoom > 0.20;
   if (showLabel) {
     ctx.save();
@@ -1907,10 +1933,9 @@ function drawPill(ev, y, opts = {}) {
         ctx.roundRect(cx - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
         ctx.fill();
       }
-      const textA = soloMul;
       ctx.fillStyle = isHov ? color : (inside && py === prefY
-        ? `rgba(255,255,255,${(isChild ? 0.85 : ev.level === 1 ? 0.9 : 0.75) * textA})`
-        : `rgba(221,216,200,${(ev.level === 1 ? 0.9 : 0.65) * textA})`);
+        ? `rgba(255,255,255,${(isChild ? 0.85 : ev.level === 1 ? 0.9 : 0.75) * soloMul})`
+        : `rgba(221,216,200,${(ev.level === 1 ? 0.9 : 0.65) * soloMul})`);
       ctx.textAlign = 'center';
       ctx.fillText(ev.zh, cx, py);
     }
@@ -1957,12 +1982,6 @@ function hexToRgb(hex) {
 function drawEvents(eventsInView) {
   const zoom = currentZoom();
   _regClear();
-
-  // ── Clip: events only draw below the era banner strip ──
-  ctx.save();
-  ctx.beginPath();
-  ctx.rect(0, TOP_MARGIN - 10, canvasW, canvasH);
-  ctx.clip();
 
   // Sort: level 1 first
   const sorted = [...eventsInView].sort((a, b) => (a.level||3) - (b.level||3));
@@ -2087,8 +2106,8 @@ function drawEvents(eventsInView) {
     // Label — only when zoomed in enough and not a cluster
     if (!isCluster && labelVisible(rep)) {
       ctx.save();
-      const fs = rep.level === 1 ? 11 : 10;
       const evSoloMul = (_soloAxis && !_soloSet.has(rep.axis)) ? _soloDimAlpha : 1;
+      const fs = rep.level === 1 ? 11 : 10;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
       const tw  = ctx.measureText(rep.zh).width;
       const py  = _tryPlace(x, y - r - 8, tw, fs + 4, [-13, 13, -26, 26, -39]);
@@ -2161,7 +2180,6 @@ function drawEvents(eventsInView) {
       ctx.restore();
     });
   }
-  ctx.restore(); // close TOP_MARGIN clip
 }
 
 // ════════════════════════════════════════════
