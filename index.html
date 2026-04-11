@@ -130,9 +130,27 @@ body {
   cursor: pointer; transition: opacity .2s;
 }
 .leg:hover { opacity: 1; }
+.leg.hidden-axis { opacity: 0.25; text-decoration: line-through; }
+.leg.solo-active { opacity: 1; }
+.leg.solo-dimmed { opacity: 0.2; }
 .leg-sub {
   font-size: 9px; opacity: 0.45;
 }
+.leg-sub.hidden-axis { opacity: 0.15; text-decoration: line-through; }
+#legend-show-all {
+  font-size: 9px; padding: 2px 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(221,216,200,0.6); cursor: pointer; white-space: nowrap;
+  font-family: 'Noto Sans TC', sans-serif; flex-shrink: 0;
+}
+#legend-show-all:hover { background: rgba(255,255,255,0.14); color: var(--text); }
+#legend-clear-edits {
+  font-size: 9px; padding: 2px 8px; border-radius: 8px;
+  background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.2);
+  color: rgba(248,113,113,0.7); cursor: pointer; white-space: nowrap;
+  font-family: 'Noto Sans TC', sans-serif; flex-shrink: 0; margin-left: 4px;
+}
+#legend-clear-edits:hover { background: rgba(248,113,113,0.22); color: #f87171; }
 .leg-dot {
   width: 7px; height: 7px; border-radius: 50%;
   flex-shrink: 0;
@@ -544,38 +562,6 @@ body {
 ═══════════════════════════════════════ */
 
 /* ── Category Indicator ── */
-#cat-indicator {
-  position: fixed;
-  top: 14px; right: 14px;
-  z-index: 200;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .3s;
-}
-#cat-indicator.visible { opacity: 1; pointer-events: all; }
-#cat-indicator-inner {
-  background: rgba(5,8,16,0.88);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 10px;
-  padding: 10px 12px;
-  display: flex; flex-direction: column; gap: 4px;
-  backdrop-filter: blur(8px);
-  min-width: 130px;
-}
-.cat-item {
-  display: flex; align-items: center; gap: 8px;
-  padding: 3px 6px; border-radius: 6px;
-  cursor: pointer; transition: background .12s;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 11px; color: rgba(221,216,200,0.75);
-  white-space: nowrap;
-}
-.cat-item:hover { background: rgba(255,255,255,0.07); color: #fff; }
-.cat-item.active { background: rgba(255,255,255,0.10); color: #fff; }
-.cat-item.dimmed { opacity: 0.35; }
-.cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.cat-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3px 0; }
-
 /* Landscape hint — shown on portrait phones */
 #landscape-hint {
   display: none;
@@ -650,11 +636,6 @@ body {
 
 <canvas id="stars-canvas"></canvas>
 
-<!-- Category colour indicator (top-right) -->
-<div id="cat-indicator">
-  <div id="cat-indicator-inner"></div>
-</div>
-
 <!-- Mobile landscape hint -->
 <div id="landscape-hint">
   <div class="hint-icon">📱</div>
@@ -675,6 +656,8 @@ body {
 </div>
 
 <div id="legend">
+  <button id="legend-show-all" onclick="showAllAxes()">全部顯示</button>
+  <button id="legend-clear-edits" onclick="clearAllEdits()">清除本地修改</button>
   <span id="legend-zoom-hint">← zoom in 展開子軸</span>
 </div>
 
@@ -767,6 +750,10 @@ body {
       </div>
 
       <div id="edit-panel">
+        <div class="edit-row">
+          <div class="edit-label">所在軸線</div>
+          <select class="edit-input" id="edit-axis" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
+        </div>
         <div class="edit-row">
           <div class="edit-label">圖片 URL</div>
           <input class="edit-input" id="edit-image" type="text" placeholder="https://upload.wikimedia.org/...">
@@ -906,40 +893,102 @@ function blendHex(hex1, hex2, t) {
 }
 
 // ── Dynamic legend builder ──
+let _soloAxis = null;  // currently soloed axis id
+
 function buildLegend() {
   const legend = document.getElementById('legend');
   if (!legend) return;
-  // Keep zoom hint span
-  const hint = legend.querySelector('#legend-zoom-hint');
-  legend.innerHTML = '';
+  // Clear existing leg items only (keep buttons and hint)
+  legend.querySelectorAll('.leg').forEach(el => el.remove());
 
-  // Main axes (zoomMin === 0), then sub-axes
   const sorted = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
+  let hintEl = document.getElementById('legend-zoom-hint');
   let addedHint = false;
 
   sorted.forEach(([id, ax]) => {
     if (ax.zoomMin > 0 && !addedHint) {
-      // Insert zoom hint before first sub-axis
-      const h = document.createElement('span');
-      h.id = 'legend-zoom-hint';
-      h.textContent = '← zoom in 展開子軸';
-      legend.appendChild(h);
+      if (hintEl) legend.insertBefore(hintEl, null);
       addedHint = true;
     }
     const div = document.createElement('div');
     div.className = ax.zoomMin > 0 ? 'leg leg-sub' : 'leg';
     div.dataset.axis = id;
     div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
-    // Toggle visibility on click (existing behaviour)
+
+    let _clickTimer = null;
     div.addEventListener('click', () => {
-      if (hiddenAxes.has(id)) hiddenAxes.delete(id);
-      else hiddenAxes.add(id);
-      div.classList.toggle('hidden-axis', hiddenAxes.has(id));
+      // Debounce: wait 220ms to distinguish single vs double
+      if (_clickTimer) return;
+      _clickTimer = setTimeout(() => { _clickTimer = null; }, 220);
+    });
+    div.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      if (_soloAxis === id) {
+        // Already soloed this — restore all
+        _soloAxis = null;
+        hiddenAxes.clear();
+      } else {
+        // Solo this axis
+        _soloAxis = id;
+        Object.keys(AXES).forEach(axId => {
+          if (axId !== id) hiddenAxes.add(axId);
+          else hiddenAxes.delete(axId);
+        });
+      }
+      updateLegendState();
+      draw();
+    });
+    div.addEventListener('click', () => {
+      if (_soloAxis) {
+        // In solo mode, single click restores all
+        _soloAxis = null;
+        hiddenAxes.clear();
+      } else {
+        if (hiddenAxes.has(id)) hiddenAxes.delete(id);
+        else hiddenAxes.add(id);
+      }
+      updateLegendState();
       draw();
     });
     legend.appendChild(div);
   });
-  if (!addedHint && hint) legend.appendChild(hint);
+  if (!addedHint && hintEl) legend.appendChild(hintEl);
+  updateLegendState();
+}
+
+function showAllAxes() {
+  _soloAxis = null;
+  hiddenAxes.clear();
+  updateLegendState();
+  draw();
+}
+
+function updateLegendState() {
+  const zoom = currentZoom();
+  document.querySelectorAll('#legend .leg').forEach(el => {
+    const id = el.dataset.axis;
+    const ax = AXES[id];
+    if (!ax) return;
+    // Show/hide based on zoom (sub-axes hidden when zoomed out)
+    const shouldShow = ax.zoomMin === 0 || zoom >= ax.zoomMin;
+    el.style.display = shouldShow ? '' : 'none';
+    // Color dot updates with zoom
+    const dot = el.querySelector('.leg-dot');
+    if (dot) dot.style.background = axisEffectiveColor(id);
+    // Hidden/solo styling
+    if (_soloAxis) {
+      el.classList.toggle('solo-active', id === _soloAxis);
+      el.classList.toggle('solo-dimmed', id !== _soloAxis);
+      el.classList.remove('hidden-axis');
+    } else {
+      el.classList.remove('solo-active','solo-dimmed');
+      el.classList.toggle('hidden-axis', hiddenAxes.has(id));
+    }
+  });
+  // Show/hide show-all button
+  const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null;
+  const btn = document.getElementById('legend-show-all');
+  if (btn) btn.style.opacity = hasHidden ? '1' : '0.4';
 }
 
 // ── 間距常數 ──
@@ -2168,7 +2217,7 @@ function draw() {
 
   updateScrollbar();
   updateVScrollbar();
-  updateCategoryIndicator();
+  updateLegendState();
 }
 
 // ════════════════════════════════════════════
@@ -2939,11 +2988,24 @@ function showPopup(ev) {
 
   document.getElementById('popup-zh').textContent = ev.zh;
   document.getElementById('popup-en').textContent = ev.en;
-  document.getElementById('popup-time').textContent = ev.endYear
+  const axLabel = (AXES[ev.axis] && AXES[ev.axis].label) || ev.axis;
+  const timeStr = ev.endYear
     ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
     : formatYear(ev.year);
+  document.getElementById('popup-time').textContent = `${axLabel} · ${timeStr}`;
   document.getElementById('popup-desc-zh').textContent = ev.desc_zh || '';
   document.getElementById('popup-desc-en').textContent = ev.desc_en || '';
+
+  // Populate axis select
+  const axSelect = document.getElementById('edit-axis');
+  axSelect.innerHTML = '';
+  Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = `${ax.label} (${id})`;
+    if (id === ev.axis) opt.selected = true;
+    axSelect.appendChild(opt);
+  });
 
   // Populate edit fields
   document.getElementById('edit-image').value   = ev.image   || '';
@@ -3003,21 +3065,8 @@ document.getElementById('popup-overlay').addEventListener('click', e => {
 });
 
 // ════════════════════════════════════════════
-//  LEGEND TOGGLE
+//  LEGEND TOGGLE — handled in buildLegend() above
 // ════════════════════════════════════════════
-document.querySelectorAll('.leg').forEach(el => {
-  el.addEventListener('click', () => {
-    const axis = el.dataset.axis;
-    if (hiddenAxes.has(axis)) {
-      hiddenAxes.delete(axis);
-      el.style.opacity = '0.85';
-    } else {
-      hiddenAxes.add(axis);
-      el.style.opacity = '0.25';
-    }
-    draw();
-  });
-});
 
 // ════════════════════════════════════════════
 //  LOAD DATA
@@ -3185,6 +3234,7 @@ document.getElementById('edit-image').addEventListener('input', e => {
 document.getElementById('edit-save-btn').addEventListener('click', () => {
   if (!_editingEventId) return;
   const fields = {
+    axis:    document.getElementById('edit-axis').value || undefined,
     image:   document.getElementById('edit-image').value.trim() || undefined,
     zh:      document.getElementById('edit-zh').value.trim() || undefined,
     en:      document.getElementById('edit-en').value.trim() || undefined,
@@ -3209,6 +3259,12 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
   showPopup(ev);
   draw();
 });
+
+function clearAllEdits() {
+  if (!confirm('確定要清除所有本地修改嗎？這會移除 localStorage 中的所有編輯記錄，並重新整理頁面。')) return;
+  localStorage.removeItem('cosmic-timeline-edits');
+  location.reload();
+}
 
 // ════════════════════════════════════════════
 //  ERA JUMP BUTTONS
@@ -3238,62 +3294,6 @@ document.querySelectorAll('.era-btn[data-start]').forEach(btn => {
     jumpTo(start, end);
   });
 });
-
-// ════════════════════════════════════════════
-//  CATEGORY INDICATOR
-// ════════════════════════════════════════════
-// ════════════════════════════════════════════
-//  CATEGORY INDICATOR — shows 5 axis groups when zoomed out
-// ════════════════════════════════════════════
-let _lastIndicatorMode = null;
-
-function updateCategoryIndicator() {
-  const zoom = currentZoom();
-  const ind   = document.getElementById('cat-indicator');
-  const inner = document.getElementById('cat-indicator-inner');
-
-  // Hide when fully zoomed in (individual axis colours)
-  if (zoom >= ZOOM_GROUP) {
-    ind.classList.remove('visible');
-    _lastIndicatorMode = null;
-    highlightedCategory = null;
-    return;
-  }
-
-  if (_lastIndicatorMode !== 'groups') {
-    _lastIndicatorMode = 'groups';
-    inner.innerHTML = '';
-    Object.entries(AXIS_GROUPS).forEach(([key, g]) => {
-      const el = document.createElement('div');
-      el.className = 'cat-item';
-      el.dataset.key = key;
-      el.innerHTML = `<span class="cat-dot" style="background:${g.color}"></span>${g.label}`;
-      el.addEventListener('click', () => {
-        highlightedCategory = highlightedCategory === key ? null : key;
-        updateCategoryIndicator();
-        draw();
-      });
-      inner.appendChild(el);
-    });
-  }
-
-  // Update active/dimmed
-  inner.querySelectorAll('.cat-item').forEach(el => {
-    const key = el.dataset.key;
-    if (!highlightedCategory) {
-      el.classList.remove('active','dimmed');
-    } else if (key === highlightedCategory) {
-      el.classList.add('active'); el.classList.remove('dimmed');
-    } else {
-      el.classList.add('dimmed'); el.classList.remove('active');
-    }
-  });
-
-  ind.classList.add('visible');
-}
-
-// Hook updateCategoryIndicator into draw — called at end of draw()
-// (see draw() function above — updateCategoryIndicator() added there directly)
 
 // ════════════════════════════════════════════
 //  SEARCH
