@@ -530,9 +530,9 @@
       "desc_en": "One of Earth's earliest and most severe glaciations, triggered by the Great Oxidation Event destroying methane greenhouse gas; lasted 300 million years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/休倫冰期",
       "wiki_en": "https://en.wikipedia.org/wiki/Huronian_glaciation",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Snowball_Earth.jpg/800px-Snowball_Earth.jpg",
       "category": "geology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "image": "https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/cosmos_9035489_001_72dpi.jpg"
     },
     {
       "id": "great-oxidation-event",
@@ -1021,9 +1021,9 @@
       "desc_en": "Taiwan's early Neolithic culture with farming and pottery, considered the ancestral culture of Austronesian peoples.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大坌坑文化",
       "wiki_en": "https://en.wikipedia.org/wiki/Dapenkeng_culture",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Neolithic.jpg/640px-Neolithic.jpg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "image": "https://twstudy.iis.sinica.edu.tw/preHistory/img/p22-2.jpg"
     },
     {
       "id": "tw-austronesian",
@@ -1120,9 +1120,9 @@
       "desc_en": "Iron Age culture in northern Taiwan, believed to be ancestors of the Ketagalan people.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/十三行文化",
       "wiki_en": "https://en.wikipedia.org/wiki/Shisanhang_culture",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Shihsanhang_Museum_of_Archaeology.jpg/640px-Shihsanhang_Museum_of_Archaeology.jpg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "image": "https://sshm.vm.ntpc.gov.tw/upload/image/045fad04473c.png"
     },
     {
       "id": "hammurabi",
@@ -3797,7 +3797,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/State_church_of_the_Roman_Empire",
       "category": "religion",
       "category_broad": "human",
-      "crossRef": "europe"
+      "crossRef": "europe",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Spread_of_Christianity_to_AD_600_-_Atlas_of_World_History.png/1280px-Spread_of_Christianity_to_AD_600_-_Atlas_of_World_History.png"
     },
     {
       "id": "great-schism",
@@ -4797,7 +4798,8 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/全真道",
       "wiki_en": "https://en.wikipedia.org/wiki/Quanzhen_school",
       "category": "religion",
-      "category_broad": "human"
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Pakua_with_frame.svg/1200px-Pakua_with_frame.svg.png"
     },
     {
       "id": "vedic-age",
@@ -4967,7 +4969,8 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/聖經正典",
       "wiki_en": "https://en.wikipedia.org/wiki/Biblical_canon",
       "category": "religion",
-      "category_broad": "human"
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Bible.malmesbury.arp.jpg/1920px-Bible.malmesbury.arp.jpg"
     },
     {
       "id": "protestant-reformation",
