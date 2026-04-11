@@ -208,7 +208,35 @@ body {
   width: 100%; height: 3px; cursor: pointer; accent-color: #a78bfa;
 }
 
-/* ─── MAIN CANVAS ─── */
+/* legend group header */
+.leg-group {
+  display: flex; align-items: center; gap: 5px;
+  width: 100%; padding: 3px 4px; border-radius: 5px;
+  cursor: pointer; transition: background .12s;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(221,216,200,0.5); user-select: none;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 4px; padding-top: 5px;
+}
+.leg-group:first-of-type { border-top: none; margin-top: 0; }
+.leg-group:hover { background: rgba(255,255,255,0.05); color: rgba(221,216,200,0.85); }
+.leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
+.leg-group.solo-dimmed { opacity: 0.3; }
+.leg-group-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+}
+.leg-group-arrow {
+  font-size: 8px; flex-shrink: 0; transition: transform .15s;
+  color: rgba(221,216,200,0.3);
+}
+.leg-group.collapsed .leg-group-arrow { transform: rotate(-90deg); }
+.leg-group-items {
+  display: flex; flex-direction: column; gap: 1px;
+  overflow: hidden; transition: max-height .2s ease;
+}
+.leg-group-items.collapsed { max-height: 0 !important; }
 #timeline-canvas {
   position: fixed; inset: 0; z-index: 10;
   display: block;
@@ -1020,6 +1048,7 @@ function blendHex(hex1, hex2, t) {
 let _soloAxis     = null;
 let _soloSet      = new Set();
 let _soloDimAlpha = 0.07;
+let _soloGroups   = null; // null = off, Set of group keys = active
 
 function updateSoloDim(val) {
   _soloDimAlpha = val / 100;
@@ -1032,58 +1061,157 @@ function _setSoloCtrl(show) {
   if (el) el.style.display = show ? 'flex' : 'none';
 }
 
+// Track which groups are collapsed
+let _collapsedGroups = new Set();
+// _soloGroups: set of soloed group keys (see declaration above)
+
 function buildLegend() {
   const legend = document.getElementById('legend');
   if (!legend) return;
-  // Clear existing leg items only (keep buttons and hint)
-  legend.querySelectorAll('.leg').forEach(el => el.remove());
+  // Remove old group/axis items (keep controls + hint + solo-ctrl)
+  legend.querySelectorAll('.leg, .leg-group, .leg-group-items').forEach(el => el.remove());
 
-  const sorted = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
-  let hintEl = document.getElementById('legend-zoom-hint');
-  let addedHint = false;
+  // Group axes by their group key, in AXIS_GROUP_DEFS order
+  const sortedAxes = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
+  const groupOrder = Object.keys(AXIS_GROUP_DEFS);
 
-  sorted.forEach(([id, ax]) => {
-    if (ax.zoomMin > 0 && !addedHint) {
-      if (hintEl) legend.insertBefore(hintEl, null);
-      addedHint = true;
-    }
-    const div = document.createElement('div');
-    div.className = ax.zoomMin > 0 ? 'leg leg-sub' : 'leg';
-    div.dataset.axis = id;
-    div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
-
-    let _dblGuard = false;
-    div.addEventListener('dblclick', e => {
-      e.preventDefault();
-      _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
-      if (_soloAxis === id) {
-        _soloAxis = null; _soloSet.clear();
-      } else {
-        _soloAxis = id; _soloSet = new Set([id]);
-      }
-      _setSoloCtrl(_soloAxis !== null);
-      updateLegendState(); draw();
-    });
-    div.addEventListener('click', () => {
-      if (_dblGuard) return;
-      if (_soloAxis) {
-        if (id === _soloAxis) return;
-        if (_soloSet.has(id)) _soloSet.delete(id);
-        else _soloSet.add(id);
-      } else {
-        if (hiddenAxes.has(id)) hiddenAxes.delete(id);
-        else hiddenAxes.add(id);
-      }
-      updateLegendState(); draw();
-    });
-    legend.appendChild(div);
+  // Build map: groupKey → [axisId, ...]
+  const groupAxes = {};
+  groupOrder.forEach(gk => { groupAxes[gk] = []; });
+  sortedAxes.forEach(([id, ax]) => {
+    const gk = AXIS_GROUP_MAP[id] || 'nation';
+    if (!groupAxes[gk]) groupAxes[gk] = [];
+    groupAxes[gk].push(id);
   });
-  if (!addedHint && hintEl) legend.appendChild(hintEl);
+
+  const hintEl = document.getElementById('legend-zoom-hint');
+
+  groupOrder.forEach(gk => {
+    const ids = groupAxes[gk];
+    if (!ids || !ids.length) return;
+    const def = AXIS_GROUP_DEFS[gk];
+
+    // ── Group header ──
+    const header = document.createElement('div');
+    header.className = 'leg-group';
+    header.dataset.group = gk;
+    if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
+    header.innerHTML = `<span class="leg-group-arrow">▾</span><span style="flex:1;text-align:right">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
+
+    // Group header: single click = collapse/expand
+    // Double click = solo this group
+    let _grpDblGuard = false;
+    header.addEventListener('dblclick', e => {
+      e.preventDefault();
+      _grpDblGuard = true; setTimeout(() => _grpDblGuard = false, 300);
+      // Exit axis solo mode first
+      _soloAxis = null;
+      if (_soloGroups && _soloGroups.has(gk) && _soloGroups.size === 1) {
+        // Toggle off
+        _soloGroups = null;
+      } else if (!_soloGroups) {
+        _soloGroups = new Set([gk]);
+      } else {
+        _soloGroups = new Set([gk]); // reset to just this group
+      }
+      // Build _soloSet from all axes in soloed groups
+      if (_soloGroups) {
+        _soloSet = new Set();
+        _soloGroups.forEach(sgk => {
+          (groupAxes[sgk] || []).forEach(id => _soloSet.add(id));
+        });
+      } else {
+        _soloSet.clear();
+      }
+      _setSoloCtrl(_soloGroups !== null || _soloAxis !== null);
+      updateLegendState(); draw();
+    });
+    header.addEventListener('click', () => {
+      if (_grpDblGuard) return;
+      if (_soloGroups) {
+        // In group solo mode: single click = add/remove this group from comparison
+        if (_soloGroups.has(gk)) {
+          _soloGroups.delete(gk);
+          if (_soloGroups.size === 0) _soloGroups = null;
+        } else {
+          _soloGroups.add(gk);
+        }
+        // Rebuild soloSet
+        if (_soloGroups) {
+          _soloSet = new Set();
+          _soloGroups.forEach(sgk => {
+            (groupAxes[sgk] || []).forEach(id => _soloSet.add(id));
+          });
+        } else {
+          _soloSet.clear();
+        }
+        _setSoloCtrl(_soloGroups !== null);
+        updateLegendState(); draw();
+      } else {
+        // Toggle collapse
+        if (_collapsedGroups.has(gk)) _collapsedGroups.delete(gk);
+        else _collapsedGroups.add(gk);
+        updateLegendState();
+      }
+    });
+    legend.appendChild(header);
+
+    // ── Axes in this group ──
+    const itemsWrap = document.createElement('div');
+    itemsWrap.className = 'leg-group-items';
+    itemsWrap.dataset.group = gk;
+    if (_collapsedGroups.has(gk)) itemsWrap.classList.add('collapsed');
+
+    ids.forEach(id => {
+      const ax = AXES[id];
+      if (!ax) return;
+      const div = document.createElement('div');
+      div.className = ax.zoomMin > 0 ? 'leg leg-sub' : 'leg';
+      div.dataset.axis = id;
+      div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
+
+      let _dblGuard = false;
+      div.addEventListener('dblclick', e => {
+        e.preventDefault();
+        _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
+        _soloGroups = null; // exit group solo
+        if (_soloAxis === id) {
+          _soloAxis = null; _soloSet.clear();
+        } else {
+          _soloAxis = id; _soloSet = new Set([id]);
+        }
+        _setSoloCtrl(_soloAxis !== null);
+        updateLegendState(); draw();
+      });
+      div.addEventListener('click', () => {
+        if (_dblGuard) return;
+        if (_soloAxis) {
+          if (id === _soloAxis) return;
+          if (_soloSet.has(id)) _soloSet.delete(id);
+          else _soloSet.add(id);
+        } else if (_soloGroups) {
+          // In group solo mode, clicking axis adds/removes it
+          if (_soloSet.has(id)) _soloSet.delete(id);
+          else _soloSet.add(id);
+        } else {
+          if (hiddenAxes.has(id)) hiddenAxes.delete(id);
+          else hiddenAxes.add(id);
+        }
+        updateLegendState(); draw();
+      });
+      itemsWrap.appendChild(div);
+    });
+    legend.appendChild(itemsWrap);
+  });
+
+  // Append zoom hint at bottom
+  if (hintEl) legend.appendChild(hintEl);
   updateLegendState();
 }
 
 function showAllAxes() {
   _soloAxis = null; _soloSet.clear();
+  _soloGroups = null;
   hiddenAxes.clear();
   _setSoloCtrl(false);
   updateLegendState(); draw();
@@ -1091,28 +1219,61 @@ function showAllAxes() {
 
 function updateLegendState() {
   const zoom = currentZoom();
+
+  // Update group headers
+  document.querySelectorAll('#legend .leg-group').forEach(header => {
+    const gk = header.dataset.group;
+    header.classList.toggle('collapsed', _collapsedGroups.has(gk));
+    if (_soloGroups) {
+      header.classList.toggle('solo-active', _soloGroups.has(gk));
+      header.classList.toggle('solo-dimmed', !_soloGroups.has(gk));
+    } else if (_soloAxis) {
+      // In axis solo: groups are background
+      header.classList.remove('solo-active', 'solo-dimmed');
+      header.style.opacity = '0.35';
+    } else {
+      header.classList.remove('solo-active', 'solo-dimmed');
+      header.style.opacity = '';
+    }
+  });
+
+  // Update items wrappers (collapse)
+  document.querySelectorAll('#legend .leg-group-items').forEach(wrap => {
+    const gk = wrap.dataset.group;
+    wrap.classList.toggle('collapsed', _collapsedGroups.has(gk));
+    if (!wrap.classList.contains('collapsed')) {
+      // Set max-height for animation
+      wrap.style.maxHeight = wrap.scrollHeight + 'px';
+    } else {
+      wrap.style.maxHeight = '0';
+    }
+  });
+
+  // Update individual axis items
   document.querySelectorAll('#legend .leg').forEach(el => {
     const id = el.dataset.axis;
     const ax = AXES[id];
     if (!ax) return;
-    // Show/hide based on zoom (sub-axes hidden when zoomed out)
-    const shouldShow = ax.zoomMin === 0 || zoom >= ax.zoomMin;
-    el.style.display = shouldShow ? '' : 'none';
-    // Color dot updates with zoom
+    // zoom visibility
+    el.style.display = (ax.zoomMin === 0 || zoom >= ax.zoomMin) ? '' : 'none';
+    // dot color
     const dot = el.querySelector('.leg-dot');
     if (dot) dot.style.background = axisEffectiveColor(id);
-    // Hidden/solo styling
-    if (_soloAxis) {
-      el.classList.toggle('solo-active', id === _soloAxis);
-      el.classList.toggle('solo-dimmed', id !== _soloAxis);
+    // solo/hidden styling
+    if (_soloAxis || _soloGroups) {
+      const inSet = _soloSet.has(id);
+      el.classList.toggle('solo-active', inSet);
+      el.classList.toggle('solo-dimmed', !inSet);
       el.classList.remove('hidden-axis');
+      el.style.outline = (inSet && id !== _soloAxis) ? '1px solid rgba(255,255,255,0.2)' : '';
     } else {
-      el.classList.remove('solo-active','solo-dimmed');
+      el.classList.remove('solo-active', 'solo-dimmed');
+      el.style.outline = '';
       el.classList.toggle('hidden-axis', hiddenAxes.has(id));
     }
   });
-  // Show/hide show-all button
-  const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null;
+
+  const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null || _soloGroups !== null;
   const btn = document.getElementById('legend-show-all');
   if (btn) btn.style.opacity = hasHidden ? '1' : '0.4';
 }
