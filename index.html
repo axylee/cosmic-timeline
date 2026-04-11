@@ -1396,6 +1396,12 @@ function drawAxisLines() {
   const visAxes = getVisibleAxes();
   const zoom    = currentZoom();
 
+  // ── Clip: axis lines only draw BELOW the era banner strip ──
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(0, TOP_MARGIN - 10, canvasW, canvasH);
+  ctx.clip();
+
   // ── Clip mask: solid axis lines never appear past NOW ──
   const nowX = yearToX(NOW);
   ctx.save();
@@ -1606,6 +1612,7 @@ function drawAxisLines() {
     ctx.setLineDash([]);
     ctx.restore();
   });
+  ctx.restore(); // close TOP_MARGIN clip
 }
 
 // ════════════════════════════════════════════
@@ -1882,7 +1889,6 @@ function drawPill(ev, y, opts = {}) {
   const showLabel = isChild || ev.level === 1 || zoom > 0.20;
   if (showLabel) {
     ctx.save();
-    ctx.globalAlpha = soloMul;
     const fs      = isChild ? 10 : (ev.level === 1 ? 11 : 10);
     const infoGap = isHov ? 22 : 0;
     ctx.font      = `${ev.level === 1 && !isChild ? '500 ' : ''}${fs}px "Noto Sans TC", sans-serif`;
@@ -1896,14 +1902,15 @@ function drawPill(ev, y, opts = {}) {
 
     if (py !== null) {
       if (!inside || py !== prefY) {
-        ctx.fillStyle = 'rgba(5,8,16,0.80)';
+        ctx.fillStyle = `rgba(5,8,16,${0.80 * soloMul})`;
         ctx.beginPath();
         ctx.roundRect(cx - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
         ctx.fill();
       }
+      const textA = soloMul;
       ctx.fillStyle = isHov ? color : (inside && py === prefY
-        ? `rgba(255,255,255,${isChild ? 0.85 : ev.level === 1 ? 0.9 : 0.75})`
-        : `rgba(221,216,200,${ev.level === 1 ? 0.9 : 0.65})`);
+        ? `rgba(255,255,255,${(isChild ? 0.85 : ev.level === 1 ? 0.9 : 0.75) * textA})`
+        : `rgba(221,216,200,${(ev.level === 1 ? 0.9 : 0.65) * textA})`);
       ctx.textAlign = 'center';
       ctx.fillText(ev.zh, cx, py);
     }
@@ -1950,6 +1957,12 @@ function hexToRgb(hex) {
 function drawEvents(eventsInView) {
   const zoom = currentZoom();
   _regClear();
+
+  // ── Clip: events only draw below the era banner strip ──
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(0, TOP_MARGIN - 10, canvasW, canvasH);
+  ctx.clip();
 
   // Sort: level 1 first
   const sorted = [...eventsInView].sort((a, b) => (a.level||3) - (b.level||3));
@@ -2075,15 +2088,16 @@ function drawEvents(eventsInView) {
     if (!isCluster && labelVisible(rep)) {
       ctx.save();
       const fs = rep.level === 1 ? 11 : 10;
+      const evSoloMul = (_soloAxis && !_soloSet.has(rep.axis)) ? _soloDimAlpha : 1;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
       const tw  = ctx.measureText(rep.zh).width;
       const py  = _tryPlace(x, y - r - 8, tw, fs + 4, [-13, 13, -26, 26, -39]);
       if (py !== null) {
-        ctx.fillStyle = 'rgba(5,8,16,0.72)';
+        ctx.fillStyle = `rgba(5,8,16,${0.72 * evSoloMul})`;
         ctx.beginPath();
         ctx.roundRect(x - tw / 2 - 4, py - fs, tw + 8, fs + 3, 3);
         ctx.fill();
-        ctx.fillStyle = isHov ? color : `rgba(221,216,200,${rep.level === 1 ? 0.88 : 0.60})`;
+        ctx.fillStyle = isHov ? color : `rgba(221,216,200,${(rep.level === 1 ? 0.88 : 0.60) * evSoloMul})`;
         ctx.textAlign = 'center';
         ctx.fillText(rep.zh, x, py);
       }
@@ -2147,6 +2161,7 @@ function drawEvents(eventsInView) {
       ctx.restore();
     });
   }
+  ctx.restore(); // close TOP_MARGIN clip
 }
 
 // ════════════════════════════════════════════
