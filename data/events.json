@@ -297,10 +297,10 @@
       "label": "臺灣",
       "color": "#fbcfe8",
       "order": 26,
-      "parent": "east",
+      "parent": "human-evo",
       "startYear": -30000,
       "endYear": null,
-      "zoomMin": 0.58,
+      "zoomMin": 0.51,
       "group": "nation"
     },
     {
@@ -333,7 +333,7 @@
       "parent": "west",
       "startYear": -1600,
       "endYear": 476,
-      "zoomMin": 0.58,
+      "zoomMin": 0.51,
       "group": "nation"
     },
     {
@@ -377,7 +377,7 @@
       "parent": "americas",
       "startYear": -2000,
       "endYear": null,
-      "zoomMin": 0.65,
+      "zoomMin": 0.51,
       "group": "nation"
     },
     {
@@ -1108,7 +1108,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Changbin_culture",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "east"
     },
     {
       "id": "tw-zuozhen",
@@ -5107,7 +5108,8 @@
       "desc_en": "The dominant Greek Bronze Age civilization; the historical context of the Trojan War; collapsed due to the Sea Peoples invasion, leading to the Greek Dark Ages.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/邁錫尼文明",
       "wiki_en": "https://en.wikipedia.org/wiki/Mycenaean_Greece",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Mycenaean_World_en.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Mycenaean_World_en.png",
+      "crossRef": "human-evo"
     },
     {
       "id": "homer-arts",
@@ -5378,7 +5380,8 @@
       "desc_en": "The most significant ancient Mesoamerican civilization, developing precise calendars, hieroglyphics, astronomy, and spectacular stone cities.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/馬雅文明",
       "wiki_en": "https://en.wikipedia.org/wiki/Maya_civilization",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/El_Castillo%2C_Chich%C3%A9n_Itz%C3%A1.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/El_Castillo%2C_Chich%C3%A9n_Itz%C3%A1.jpg",
+      "crossRef": "human-evo"
     },
     {
       "id": "north-america-cultures",
