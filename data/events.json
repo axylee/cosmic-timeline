@@ -18,6 +18,17 @@
       "group": "natural"
     },
     {
+      "id": "galaxy",
+      "label": "銀河系",
+      "color": "#c4b5fd",
+      "order": 1,
+      "parent": "cosmos",
+      "startYear": -13500000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
       "id": "solar-system",
       "label": "太陽系",
       "color": "#818cf8",
@@ -401,17 +412,6 @@
       "endYear": null,
       "zoomMin": 0.72,
       "group": "nation"
-    },
-    {
-      "id": "galaxy",
-      "label": "銀河系",
-      "color": "#c4b5fd",
-      "order": 1,
-      "parent": "cosmos",
-      "startYear": -13500000000,
-      "endYear": null,
-      "zoomMin": 0.3,
-      "group": "natural"
     }
   ],
   "era_bands": [
