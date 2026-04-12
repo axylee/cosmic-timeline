@@ -439,7 +439,7 @@
       "id": "climate",
       "label": "氣候",
       "color": "#7dd3fc",
-      "order": 39,
+      "order": 3.5,
       "parent": "earth",
       "startYear": -2400000000,
       "endYear": null,
