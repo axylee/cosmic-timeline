@@ -305,15 +305,15 @@ python check.py
 
 群組定義的設計原則：**演化順序**（自然 → 世界 → 地區 → 文明 → 宗教 → 人文 → 國家），父子關係反映「某地區先有文明，文明之後才有國家」的邏輯層次。
 
-| 群組 key | 名稱（顏色） | 定義 | 包含軸線 | 未來擴充 |
-|---------|------------|------|---------|---------|
-| natural | 自然（靛藍） | 宇宙誕生至人類出現，純自然演化過程 | cosmos, galaxy, solar-system, earth, climate, life, human-evo, migration | 無 |
-| global | 世界（白銀） | 與人類行為直接相關、跨越多地區影響全人類，不屬於單一地區或文明 | cross, trade | 可擴充全球性主題軸 |
-| region | 地區（翠綠） | 人類活動的地理容器，早於文明與國家存在 | east, west, africa, americas, central-asia, southeast-asia, oceania, arctic, antarctic | 可加中亞細分等 |
-| civilization | 文明（橙色） | 各地理區域內發展的文明，部分延續至今，早於近代國家 | mideast, mesopotamia, egypt, persia, india, china, greece, latin-america | 撒哈拉以南、東南亞文明等 |
-| religion | 宗教（金黃） | 各宗教體系的起源與發展 | judaism, christianity, islam, hinduism, buddhism, taoism | 未來可加其他宗教 |
-| human | 人文（玫瑰） | 跨越地區與文明的人類文化活動 | science, arts | 未來可擴充 |
-| nation | 國家（藍色） | 近代以後有明確政治實體的重要國家或地區 | iran, north/west/east/south-africa, china-b, taiwan, japan, europe, north-america, south-america, usa | 重要國家陸續補充 |
+| 群組 key | 名稱 | 定義 | 包含軸線 | 未來擴充 |
+|---------|------|------|---------|---------|
+| natural | 自然 | 宇宙誕生至人類出現，純自然演化過程 | cosmos, galaxy, solar-system, earth, climate, life, human-evo, migration | 無 |
+| global | 世界 | 與人類行為直接相關、跨越多地區影響全人類，不屬於單一地區或文明 | cross, trade | 可擴充全球性主題軸 |
+| region | 地區 | 人類活動的地理容器，早於文明與國家存在 | east, west, africa, americas, central-asia, southeast-asia, oceania, arctic, antarctic | 可加中亞細分等 |
+| civilization | 文明 | 各地理區域內發展的文明，部分延續至今，早於近代國家 | mideast, mesopotamia, egypt, persia, india, china, greece, latin-america | 撒哈拉以南、東南亞文明等 |
+| religion | 宗教 | 各宗教體系的起源與發展 | judaism, christianity, islam, hinduism, buddhism, taoism | 未來可加其他宗教 |
+| human | 人文 | 跨越地區與文明的人類文化活動 | science, arts | 未來可擴充 |
+| nation | 國家 | 近代以後有明確政治實體的重要國家或地區 | iran, north/west/east/south-africa, china-b, taiwan, japan, europe, north-america, south-america, usa | 重要國家陸續補充 |
 
 ### 群組設計說明
 
