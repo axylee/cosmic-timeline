@@ -100,7 +100,7 @@
       "color": "#67e8f9",
       "order": 40,
       "parent": "cross",
-      "startYear": -3200,
+      "startYear": -10000,
       "endYear": null,
       "zoomMin": 0.58,
       "group": "human"
@@ -111,7 +111,7 @@
       "color": "#f97316",
       "order": 20,
       "parent": "cross",
-      "startYear": -8000,
+      "startYear": -30000,
       "endYear": null,
       "zoomMin": 0.3,
       "group": "region"
@@ -364,7 +364,7 @@
       "color": "#3b82f6",
       "order": 68,
       "parent": "west",
-      "startYear": 500,
+      "startYear": 380,
       "endYear": null,
       "zoomMin": 0.58,
       "group": "nation"
@@ -375,7 +375,7 @@
       "color": "#60a5fa",
       "order": 23,
       "parent": "human-evo",
-      "startYear": -15000,
+      "startYear": -20000,
       "endYear": null,
       "zoomMin": 0.3,
       "group": "region"
@@ -1990,7 +1990,11 @@
       "sub_track": 0,
       "endYear": 1291,
       "category": "war",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "mideast",
+        "islam"
+      ]
     },
     {
       "id": "liao-jin-song",
@@ -4750,7 +4754,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Treasure_voyages",
       "category": "exploration",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "trade",
+        "science"
+      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/ZhengHeShips.gif"
     },
     {
@@ -5562,7 +5569,10 @@
       "level": 1,
       "category": "exploration",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "trade",
+        "science"
+      ],
       "desc_zh": "哥倫布代表西班牙航行抵達加勒比海，開啟歐洲對美洲的殖民時代，改變了世界歷史格局。",
       "desc_en": "Columbus, sailing for Spain, reaches the Caribbean, opening the era of European colonization of the Americas and transforming world history.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/克里斯托弗·哥倫布",
@@ -5874,7 +5884,10 @@
       "level": 1,
       "category": "politics",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": [
+        "cross",
+        "americas"
+      ],
       "desc_zh": "歐洲殖民者從西非強行運走數百萬非洲人到美洲為奴，是人類歷史上規模最大的強迫遷徙之一，深刻影響非洲和美洲的歷史。",
       "desc_en": "European colonizers forcibly transported millions of Africans to the Americas; one of the largest forced migrations in history, profoundly shaping Africa and the Americas.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/大西洋奴隸貿易",
@@ -5890,7 +5903,10 @@
       "level": 1,
       "category": "politics",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": [
+        "cross",
+        "europe"
+      ],
       "desc_zh": "歐洲列強在柏林召開會議，瓜分非洲大陸，確立殖民地邊界，大多數非洲現代國界由此而來。",
       "desc_en": "European powers meet in Berlin to partition Africa, establishing colonial boundaries that define most modern African borders.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/柏林西非會議",
@@ -6763,7 +6779,10 @@
       "level": 1,
       "category": "politics",
       "category_broad": "human",
-      "crossRef": "europe",
+      "crossRef": [
+        "europe",
+        "cross"
+      ],
       "desc_zh": "英法兩國秘密協議瓜分鄂圖曼帝國的中東領土，無視當地族群和宗教分布劃定邊界，造成今日伊拉克、敘利亞、黎巴嫩等國的內部矛盾根源。",
       "desc_en": "Britain and France secretly divided Ottoman Middle East territories, drawing borders that ignored ethnic and religious distributions — the root of modern Middle Eastern conflicts.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/賽克斯-皮科協議",
@@ -6873,7 +6892,10 @@
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "judaism",
+      "crossRef": [
+        "judaism",
+        "mideast"
+      ],
       "desc_zh": "哈里發歐麥爾率軍征服拜占庭控制的耶路撒冷，伊斯蘭教將耶路撒冷視為第三聖城，此後耶路撒冷的歸屬成為三大宗教千年衝突的核心。",
       "desc_en": "Caliph Umar conquered Byzantine Jerusalem, making it Islam's third holiest city. Jerusalem's ownership became the core of a thousand-year conflict between three religions.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊斯蘭征服耶路撒冷",
@@ -6904,7 +6926,10 @@
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "mideast",
+      "crossRef": [
+        "mideast",
+        "islam"
+      ],
       "desc_zh": "第一次十字軍攻陷耶路撒冷後，對城內穆斯林和猶太居民進行大屠殺，此事件在伊斯蘭世界留下深刻創傷，成為後來聖戰思想的重要來源。",
       "desc_en": "After capturing Jerusalem, the First Crusaders massacred Muslim and Jewish inhabitants — an event that left deep trauma in the Islamic world and became a major source of jihadist ideology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/耶路撒冷圍城戰_(1099年)",
@@ -7062,7 +7087,10 @@
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "judaism",
+      "crossRef": [
+        "judaism",
+        "islam"
+      ],
       "desc_zh": "哈馬斯於2023年10月7日突襲以色列，造成約1200人死亡，以色列隨後對加薩展開大規模軍事行動，造成數萬平民傷亡，引發全球關注。",
       "desc_en": "Hamas attacked Israel on October 7, 2023, killing ~1,200 people. Israel launched a massive military campaign in Gaza causing tens of thousands of civilian casualties and global controversy.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/2023年哈馬斯以色列衝突",
@@ -7254,7 +7282,10 @@
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "mideast",
+      "crossRef": [
+        "usa",
+        "cross"
+      ],
       "desc_zh": "美國領導34國聯軍驅逐伊拉克軍隊，百日戰爭中展示壓倒性軍事科技優勢，但刻意保留薩達姆政權，留下未竟之業，為2003年再次入侵埋下伏筆。",
       "desc_en": "A US-led 34-nation coalition expelled Iraq from Kuwait, demonstrating overwhelming military technology but deliberately leaving Saddam in power — unfinished business that led to the 2003 invasion.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/波斯灣戰爭",
@@ -7270,7 +7301,10 @@
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "mideast",
+      "crossRef": [
+        "mideast",
+        "islam"
+      ],
       "desc_zh": "賓拉登領導的蓋達組織劫持飛機撞擊紐約世貿中心和五角大廈，近3000人罹難。美國隨後發動反恐戰爭，入侵阿富汗和伊拉克，徹底改變21世紀地緣政治。",
       "desc_en": "Al-Qaeda hijackers crashed planes into the World Trade Center and Pentagon, killing nearly 3,000. The US launched wars in Afghanistan and Iraq, fundamentally reshaping 21st-century geopolitics.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/九一一事件",
@@ -7286,7 +7320,10 @@
       "level": 1,
       "category": "politics",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": [
+        "cross",
+        "islam"
+      ],
       "desc_zh": "突尼西亞小販自焚引發連鎖革命，埃及、利比亞、葉門、敘利亞相繼爆發起義，部分成功推翻獨裁者，但多國陷入長期內戰，伊斯蘭國趁亂崛起。",
       "desc_en": "A Tunisian vendor's self-immolation triggered revolutions across Egypt, Libya, Yemen and Syria. Some toppled dictators, but many nations descended into civil war, allowing ISIS to rise.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿拉伯之春",
@@ -7298,11 +7335,14 @@
       "year": 2013,
       "zh": "ISIS崛起·伊斯蘭國建立",
       "en": "Rise of ISIS",
-      "axis": "islam",
+      "axis": "mideast",
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "mideast",
+      "crossRef": [
+        "islam",
+        "cross"
+      ],
       "desc_zh": "2003年美國入侵伊拉克後，遜尼派武裝在敘利亞內戰中壯大，2013年成立伊斯蘭國，一度控制伊拉克和敘利亞大片領土，吸引全球聖戰分子，震驚世界。",
       "desc_en": "Growing from Sunni insurgency after the 2003 US invasion, ISIS declared a caliphate in 2013, controlling vast territory in Iraq and Syria and attracting global jihadists.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊斯蘭國",
@@ -7516,7 +7556,10 @@
       "level": 1,
       "category": "war",
       "category_broad": "human",
-      "crossRef": "cross",
+      "crossRef": [
+        "cross",
+        "islam"
+      ],
       "desc_zh": "成吉思汗之孫旭烈兀率蒙古大軍橫掃伊朗，摧毀無數城市和農業灌溉系統，造成大規模人口死亡，伊朗從此人口銳減。旭烈兀汗國後來在伊朗土地上建立伊兒汗國。",
       "desc_en": "Genghis Khan's grandson Hulagu swept through Iran, destroying cities and irrigation systems and causing massive population loss. The Ilkhanate was subsequently established on Iranian territory.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/旭烈兀西征",
