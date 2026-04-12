@@ -7742,7 +7742,8 @@
       "en": "Karoo Ice Age",
       "axis": "climate",
       "level": 2,
-      "category": "nature"
+      "category": "nature",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Karoo_Glaciation.png"
     },
     {
       "id": "climate-lgm",
@@ -7751,7 +7752,8 @@
       "en": "Last Glacial Maximum",
       "axis": "climate",
       "level": 2,
-      "category": "nature"
+      "category": "nature",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/CLIMAP.jpg"
     },
     {
       "id": "climate-holocene",
@@ -7787,7 +7789,8 @@
       "en": "Paris Agreement",
       "axis": "climate",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/ParisAgreement.svg"
     },
     {
       "id": "life-ext1",
@@ -7890,7 +7893,8 @@
       "en": "Austronesian Expansion",
       "axis": "oceania",
       "level": 1,
-      "category": "civilization"
+      "category": "civilization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Taiwanese_aborigines.JPG"
     },
     {
       "id": "oce-003",
@@ -7935,7 +7939,8 @@
       "en": "Commonwealth of Australia",
       "axis": "oceania",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
     },
     {
       "id": "cas-001",
@@ -7998,7 +8003,8 @@
       "en": "Timurid Empire",
       "axis": "central-asia",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Timur_Empire.jpg"
     },
     {
       "id": "cas-008",
@@ -8007,7 +8013,8 @@
       "en": "Kazakh Khanate",
       "axis": "central-asia",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Map_of_the_Kazakh_Khanate_18th_century.png"
     },
     {
       "id": "sea-001",
@@ -8025,7 +8032,8 @@
       "en": "Dong Son Culture",
       "axis": "southeast-asia",
       "level": 2,
-      "category": "civilization"
+      "category": "civilization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Dong_Son_axe.JPG"
     },
     {
       "id": "sea-003",
@@ -8034,7 +8042,8 @@
       "en": "Kingdom of Funan",
       "axis": "southeast-asia",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Map_indianized_kingdoms_indochina.jpg"
     },
     {
       "id": "sea-004",
@@ -8043,7 +8052,8 @@
       "en": "Srivijaya Empire",
       "axis": "southeast-asia",
       "level": 1,
-      "category": "civilization"
+      "category": "civilization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Srivijaya_Empire.svg"
     },
     {
       "id": "sea-005",
@@ -8070,7 +8080,8 @@
       "en": "Ayutthaya Kingdom",
       "axis": "southeast-asia",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Thailand_%28Ayutthaya_period%29.svg"
     },
     {
       "id": "sea-008",
@@ -8142,7 +8153,8 @@
       "en": "Portuguese Age of Discovery",
       "axis": "trade",
       "level": 1,
-      "category": "exploration"
+      "category": "exploration",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_the_Kingdom_of_Portugal_%281485%E2%80%93mid-16th_century%29.svg"
     },
     {
       "id": "trd-009",
@@ -8169,7 +8181,8 @@
       "en": "Bretton Woods Agreement",
       "axis": "trade",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Mount_Washington_Hotel_2003.JPG"
     },
     {
       "id": "trd-012",
@@ -8232,7 +8245,8 @@
       "en": "Delhi Sultanate",
       "axis": "india",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Map_of_the_Mamluk_Dynasty.png"
     },
     {
       "id": "ind-007",
@@ -8250,7 +8264,8 @@
       "en": "British East India Company",
       "axis": "india",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_the_British_East_India_Company_%281801%29.svg"
     },
     {
       "id": "ind-009",
@@ -8259,7 +8274,8 @@
       "en": "Indian Rebellion",
       "axis": "india",
       "level": 1,
-      "category": "war"
+      "category": "war",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Capture_of_Delhi%2C_1857..jpg"
     },
     {
       "id": "ind-010",
@@ -8268,7 +8284,8 @@
       "en": "Indian Independence",
       "axis": "india",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/India%2C_by_British_Information_Services%2C_1944_restored_version.jpg"
     },
     {
       "id": "hevo-008",
@@ -8313,7 +8330,8 @@
       "en": "Euclidean Geometry",
       "axis": "science",
       "level": 2,
-      "category": "science"
+      "category": "science",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Sanzio_01_Euclid.jpg"
     },
     {
       "id": "sci-017",
@@ -8322,7 +8340,8 @@
       "en": "Copernican Revolution",
       "axis": "science",
       "level": 1,
-      "category": "science"
+      "category": "science",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Galileo_before_the_Holy_Office_-_Joseph-Nicolas_Robert-Fleury%2C_1847.png"
     },
     {
       "id": "sci-019",
@@ -8395,7 +8414,8 @@
       "en": "Arab Conquest of Egypt",
       "axis": "egypt",
       "level": 1,
-      "category": "war"
+      "category": "war",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mohammad_adil-Muslim_conquest_of_Egypt-zh.png"
     },
     {
       "id": "egy-008",
@@ -8449,7 +8469,8 @@
       "en": "Mali Empire",
       "axis": "africa",
       "level": 1,
-      "category": "civilization"
+      "category": "civilization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Map_of_the_Mali_Empire.png"
     },
     {
       "id": "afr-010",
@@ -8458,7 +8479,8 @@
       "en": "Great Zimbabwe",
       "axis": "africa",
       "level": 2,
-      "category": "civilization"
+      "category": "civilization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Conical_Tower_-_Great_Enclosure_III_%2833736918448%29.jpg"
     },
     {
       "id": "afr-011",
@@ -8476,7 +8498,8 @@
       "en": "End of Apartheid",
       "axis": "africa",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/F.W._de_Klerk%2C_left%2C_the_last_president_of_apartheid-era_South_Africa%2C_and_Nelson_Mandela%2C_his_successor%2C_wait_to_speak_in_Philadelphia%2C_Pennsylvania_LCCN2011634245.jpg"
     },
     {
       "id": "ame-003",
@@ -8530,7 +8553,8 @@
       "en": "Cuban Revolution",
       "axis": "latin-america",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/CheyFidel.jpg"
     },
     {
       "id": "crs-012",
@@ -8539,7 +8563,8 @@
       "en": "Peace of Westphalia",
       "axis": "cross",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/M%C3%BCnster%2C_Historisches_Rathaus_--_2014_--_6855.jpg"
     },
     {
       "id": "crs-014",
@@ -8557,7 +8582,8 @@
       "en": "Spanish Flu Pandemic",
       "axis": "cross",
       "level": 1,
-      "category": "nature"
+      "category": "nature",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Emergency_hospital_during_Influenza_epidemic%2C_Camp_Funston%2C_Kansas_-_NCP_1603.jpg"
     },
     {
       "id": "crs-016",
@@ -8566,7 +8592,8 @@
       "en": "Universal Declaration of Human Rights",
       "axis": "cross",
       "level": 1,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Eleanor_Roosevelt_UDHR.jpg"
     },
     {
       "id": "crs-018",
@@ -8575,7 +8602,8 @@
       "en": "Global Financial Crisis",
       "axis": "cross",
       "level": 2,
-      "category": "politics"
+      "category": "politics",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Lehman_Brothers_Times_Square_by_David_Shankbone.jpg"
     },
     {
       "id": "crs-019",
@@ -8584,7 +8612,8 @@
       "en": "COVID-19 Pandemic",
       "axis": "cross",
       "level": 1,
-      "category": "nature"
+      "category": "nature",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Covid-19_SP_-_UTI_V._Nova_Cachoeirinha.jpg"
     },
     {
       "id": "eas-001",
@@ -8644,7 +8673,8 @@
       "axis": "west",
       "level": 1,
       "crossRef": "europe",
-      "category": "culture"
+      "category": "culture",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Raffael_Stanza_della_Segnatura.jpg"
     },
     {
       "id": "wes-003",

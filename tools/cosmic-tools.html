@@ -231,6 +231,7 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
   <div class="top-tabs">
     <button class="top-tab active" onclick="switchTopTab('add')">➕ 新增事件 / 軸線</button>
     <button class="top-tab" onclick="switchTopTab('images')">🖼 圖片管理</button>
+    <button class="top-tab" onclick="switchTopTab('views')">🎯 視圖管理</button>
   </div>
 
   <!-- ══ ADD PANEL ══ -->
@@ -495,7 +496,52 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
         </table>
       </div>
     </div>
-  </div>
+</div><!-- /panel-images -->
+
+  <!-- ══ VIEWS PANEL ══ -->
+  <div class="top-panel" id="panel-views" style="padding-top:16px;display:none">
+
+    <!-- 新增 / 修改 view -->
+    <div class="card">
+      <div class="card-title" id="view-form-title">➕ 新增視圖</div>
+      <input type="hidden" id="view-edit-id">
+
+      <div class="row" style="gap:10px;margin-bottom:10px;flex-wrap:wrap">
+        <div style="flex:1;min-width:120px">
+          <label class="field-label">分類 Category</label>
+          <input type="text" id="view-category" placeholder="例：地區" list="view-category-list"
+            style="width:100%;padding:7px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:13px">
+          <datalist id="view-category-list"></datalist>
+        </div>
+        <div style="flex:1;min-width:120px">
+          <label class="field-label">標籤 Label</label>
+          <input type="text" id="view-label" placeholder="例：東亞歷史"
+            style="width:100%;padding:7px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:13px">
+        </div>
+      </div>
+
+      <label class="field-label">包含軸線 Axes（可多選）</label>
+      <div id="view-axes-checkboxes" style="max-height:280px;overflow-y:auto;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:10px;margin-bottom:12px"></div>
+
+      <div class="row" style="gap:8px">
+        <button class="btn-primary" onclick="saveView()">✓ 儲存視圖</button>
+        <button class="btn-ghost" onclick="resetViewForm()">✕ 清除</button>
+      </div>
+      <div id="view-form-msg" style="font-size:12px;margin-top:6px"></div>
+    </div>
+
+    <!-- 現有視圖列表 -->
+    <div class="card">
+      <div class="card-title">現有視圖列表</div>
+      <div id="views-list" style="display:flex;flex-direction:column;gap:6px"></div>
+    </div>
+
+    <!-- 輸出 -->
+    <div class="card">
+      <button class="btn-success" onclick="showConfirm()" style="width:100%;padding:13px;font-size:14px">📋 預覽變更並輸出</button>
+    </div>
+
+  </div><!-- /panel-views -->
 
 </div><!-- /tool-area -->
 
@@ -560,11 +606,13 @@ function onLoaded(name) {
 //  TAB SWITCHING
 // ════════════════════════════════════════════
 function switchTopTab(name) {
-  document.querySelectorAll('.top-tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&name==='add')||(i===1&&name==='images')));
-  document.getElementById('panel-add').classList.toggle('active', name==='add');
-  document.getElementById('panel-images').classList.toggle('active', name==='images');
-  document.getElementById('panel-add').style.display = name==='add'?'block':'none';
-  document.getElementById('panel-images').style.display = name==='images'?'block':'none';
+  document.querySelectorAll('.top-tab').forEach((t,i)=>t.classList.toggle('active',
+    (i===0&&name==='add')||(i===1&&name==='images')||(i===2&&name==='views')));
+  ['add','images','views'].forEach(n=>{
+    const el = document.getElementById('panel-'+n);
+    if(el){ el.classList.toggle('active',n===name); el.style.display=n===name?'block':'none'; }
+  });
+  if(name==='views') renderViewsList();
 }
 function switchTab(tab) {
   document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&tab==='event')||(i===1&&tab==='axis')));
@@ -754,6 +802,7 @@ function showConfirm() {
   const editAxes   = changeLog.filter(c=>c.type==='edit-axis-parent'||c.type==='edit-axis-zoommin');
   const imgUpdates = changeLog.filter(c=>c.type==='image-auto'||c.type==='image-manual');
   const imgClears  = changeLog.filter(c=>c.type==='image-clear');
+  const viewChanges= changeLog.filter(c=>c.type==='views');
 
   const total = changeLog.length;
   subtitle.textContent = total > 0
@@ -785,6 +834,9 @@ function showConfirm() {
   section('🗑', '清除失效圖片', imgClears, c=>
     `<div class="cl-item"><span class="cl-icon">×</span><span class="cl-name">${c.zh}</span><span class="cl-meta">圖片已清除</span></div>`);
 
+  section('🎯', '視圖變更', viewChanges, c=>
+    `<div class="cl-item"><span class="cl-icon">✎</span><span class="cl-name">${c.desc}</span></div>`);
+
   if (!total) {
     html = '<div class="cl-empty">尚無變更記錄。點「確認輸出」仍可下載當前版本。</div>';
   }
@@ -808,6 +860,7 @@ function doDownload() {
     axes: [...(eventsData.axes||[]),...newAxes],
     era_bands: eventsData.era_bands||[],
     events: [...eventsData.events,...newEvents],
+    views: eventsData.views||[],
   };
   const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
   const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='events.json'; a.click();
@@ -824,6 +877,179 @@ function doDownload() {
 
 // Keep downloadJson as alias for backward compat
 function downloadJson() { showConfirm(); }
+
+// ════════════════════════════════════════════
+//  VIEWS MANAGEMENT
+// ════════════════════════════════════════════
+// In-memory views (loaded from eventsData.views, edited here)
+let viewsData = [];  // working copy
+
+function initViewsPanel() {
+  viewsData = JSON.parse(JSON.stringify(eventsData.views || []));
+  buildAxesCheckboxes();
+  buildCategoryDatalist();
+  renderViewsList();
+}
+
+function buildAxesCheckboxes() {
+  const wrap = document.getElementById('view-axes-checkboxes');
+  if (!wrap) return;
+  const axes = (eventsData.axes || []).slice().sort((a,b)=>a.order-b.order);
+
+  // Group by group key
+  const groups = {};
+  axes.forEach(ax => {
+    const g = ax.group || 'nation';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(ax);
+  });
+
+  let html = '';
+  Object.entries(groups).forEach(([gk, axList]) => {
+    html += `<div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:10px 0 4px;padding-left:2px">${gk}</div>`;
+    axList.forEach(ax => {
+      html += `<label style="display:block;padding:4px 6px;cursor:pointer;border-radius:4px;font-size:12px;line-height:1.6" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background=''">
+        <input type="checkbox" data-axis-id="${ax.id}" style="cursor:pointer;vertical-align:middle;margin-right:6px">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ax.color};vertical-align:middle;margin-right:4px"></span>
+        <span style="vertical-align:middle">${ax.label}</span>
+        <span style="font-size:10px;color:var(--muted);margin-left:6px;vertical-align:middle">${ax.id}</span>
+      </label>`;
+    });
+  });
+  wrap.innerHTML = html;
+}
+
+function buildCategoryDatalist() {
+  const dl = document.getElementById('view-category-list');
+  if (!dl) return;
+  const cats = [...new Set(viewsData.map(v=>v.category))];
+  dl.innerHTML = cats.map(c=>`<option value="${c}">`).join('');
+}
+
+function getCheckedAxes() {
+  return [...document.querySelectorAll('#view-axes-checkboxes input[type=checkbox]:checked')]
+    .map(cb => cb.dataset.axisId);
+}
+
+function setCheckedAxes(axes) {
+  document.querySelectorAll('#view-axes-checkboxes input[type=checkbox]').forEach(cb => {
+    cb.checked = axes.includes(cb.dataset.axisId);
+  });
+}
+
+function generateViewId(category, label) {
+  const cat = category.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g,'').slice(0,4);
+  const lbl = label.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g,'').slice(0,4);
+  const rand = Math.random().toString(36).slice(2,5);
+  return `view-${cat}-${lbl}-${rand}`;
+}
+
+function saveView() {
+  const category = document.getElementById('view-category').value.trim();
+  const label    = document.getElementById('view-label').value.trim();
+  const axes     = getCheckedAxes();
+  const editId   = document.getElementById('view-edit-id').value;
+  const msg      = document.getElementById('view-form-msg');
+
+  if (!category) { msg.style.color='var(--red)'; msg.textContent='請填入分類'; return; }
+  if (!label)    { msg.style.color='var(--red)'; msg.textContent='請填入標籤'; return; }
+  if (!axes.length){ msg.style.color='var(--red)'; msg.textContent='請至少選擇一條軸線'; return; }
+
+  if (editId) {
+    // Modify existing
+    const idx = viewsData.findIndex(v=>v.id===editId);
+    if (idx>=0) {
+      viewsData[idx] = { id: editId, category, label, axes };
+      msg.style.color='var(--green)'; msg.textContent=`✓ 已修改：${label}`;
+    }
+  } else {
+    // New view
+    const id = generateViewId(category, label);
+    viewsData.push({ id, category, label, axes });
+    msg.style.color='var(--green)'; msg.textContent=`✓ 已新增：${label}`;
+  }
+
+  // Sync back to eventsData so showConfirm picks it up
+  eventsData.views = viewsData;
+  addChangeLog({ type:'views', desc:`視圖「${label}」已${editId?'修改':'新增'}` });
+
+  resetViewForm();
+  buildCategoryDatalist();
+  renderViewsList();
+}
+
+function editView(id) {
+  const v = viewsData.find(v=>v.id===id);
+  if (!v) return;
+  document.getElementById('view-edit-id').value  = v.id;
+  document.getElementById('view-category').value = v.category;
+  document.getElementById('view-label').value    = v.label;
+  setCheckedAxes(v.axes);
+  document.getElementById('view-form-title').textContent = '✏ 修改視圖';
+  document.getElementById('view-form-msg').textContent = '';
+  document.querySelector('.card').scrollIntoView({behavior:'smooth'});
+}
+
+function deleteView(id) {
+  const v = viewsData.find(v=>v.id===id);
+  if (!v) return;
+  if (!confirm(`確定要刪除視圖「${v.label}」？`)) return;
+  viewsData = viewsData.filter(v=>v.id!==id);
+  eventsData.views = viewsData;
+  addChangeLog({ type:'views', desc:`視圖「${v.label}」已刪除` });
+  renderViewsList();
+}
+
+function resetViewForm() {
+  document.getElementById('view-edit-id').value  = '';
+  document.getElementById('view-category').value = '';
+  document.getElementById('view-label').value    = '';
+  setCheckedAxes([]);
+  document.getElementById('view-form-title').textContent = '➕ 新增視圖';
+  document.getElementById('view-form-msg').textContent   = '';
+}
+
+function renderViewsList() {
+  const wrap = document.getElementById('views-list');
+  if (!wrap) return;
+  if (!viewsData.length) {
+    wrap.innerHTML = '<div style="color:var(--muted);font-size:12px">尚無視圖，請先新增</div>';
+    return;
+  }
+
+  // Group by category
+  const cats = {};
+  viewsData.forEach(v => {
+    if (!cats[v.category]) cats[v.category] = [];
+    cats[v.category].push(v);
+  });
+
+  wrap.innerHTML = '';
+  Object.entries(cats).forEach(([cat, items]) => {
+    const catEl = document.createElement('div');
+    catEl.style.cssText = 'font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:10px 0 4px;';
+    catEl.textContent = cat;
+    wrap.appendChild(catEl);
+
+    items.forEach(v => {
+      const row = document.createElement('div');
+      row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--surface2);border-radius:6px;font-size:12px;';
+      row.innerHTML = `
+        <span style="flex:1;font-weight:500">${v.label}</span>
+        <span style="font-size:10px;color:var(--muted);flex:2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${v.axes.join(', ')}</span>
+        <button class="btn-ghost" style="padding:3px 8px;font-size:11px" onclick="editView('${v.id}')">編輯</button>
+        <button class="btn-warn"  style="padding:3px 8px;font-size:11px" onclick="deleteView('${v.id}')">刪除</button>`;
+      wrap.appendChild(row);
+    });
+  });
+}
+
+// Hook into onLoaded to init views panel
+const _origOnLoaded = onLoaded;
+onLoaded = function(name) {
+  _origOnLoaded(name);
+  initViewsPanel();
+};
 
 // ════════════════════════════════════════════
 //  IMAGE TOOL
