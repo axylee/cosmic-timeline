@@ -131,7 +131,7 @@ body {
   right: 40px;
   top: 80px; bottom: 80px;
   z-index: 51;
-  width: 61px;
+  width: 72px;
   display: block;                    /* block 而非 flex，子元素寬度行為完全可預期 */
   padding: 8px 0;
   background: rgba(5,8,16,0.82);
@@ -211,7 +211,7 @@ body {
 .leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
 .leg-group.solo-dimmed { opacity: 0.3; }
 .leg-group-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.leg-group-label { flex: 1; text-align: right; cursor: pointer; overflow: hidden; }
+.leg-group-label { flex: 1; text-align: right; cursor: pointer; overflow: hidden; white-space: nowrap; }
 .leg-group-arrow {
   font-size: 13px; flex-shrink: 0; transition: transform .15s;
   color: rgba(221,216,200,0.5); cursor: pointer;
@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121406</span>
+  <span id="version-label">v202604121413</span>
 </div>
 
 <div id="legend">
@@ -1167,7 +1167,7 @@ function buildLegend() {
     header.className = 'leg-group';
     header.dataset.group = gk;
     if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
-    header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
+    header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer;white-space:nowrap;overflow:hidden">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
 
     // Arrow: only collapse/expand
     const arrowEl = header.querySelector('.leg-group-arrow');
