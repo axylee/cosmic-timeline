@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121545</span>
+  <span id="version-label">v202604121545b</span>
 </div>
 
 <div id="legend">
@@ -1376,7 +1376,7 @@ function getVisibleAxes() {
 
   return Object.entries(AXES)
     .filter(([id, ax]) => {
-      if (!_soloAxis && !_soloGroups && hiddenAxes.has(id)) return false;
+      if ((_soloSet.size === 0) && hiddenAxes.has(id)) return false;
       if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
       if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
       return true;
@@ -1522,7 +1522,7 @@ function eventVisible(ev) {
   const ax = AXES[ev.axis];
   if (!ax) return false;
   // Solo 模式下所有事件仍可見（只有 alpha 降低）
-  if (!_soloAxis && !_soloGroups && hiddenAxes.has(ev.axis)) return false;
+  if ((_soloSet.size === 0) && hiddenAxes.has(ev.axis)) return false;
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   const checkEnd = zoom >= 0.58;
   if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
@@ -2462,8 +2462,8 @@ function drawEvents(eventsInView) {
 
       const targetAx = AXES[ev.crossRef];
       if (!targetAx) return;
-      if (!_soloAxis && !_soloGroups && hiddenAxes.has(ev.crossRef)) return;
-      if (!_soloAxis && !_soloGroups && hiddenAxes.has(ev.axis)) return;
+      if ((_soloSet.size === 0) && hiddenAxes.has(ev.crossRef)) return;
+      if ((_soloSet.size === 0) && hiddenAxes.has(ev.axis)) return;
 
       const x      = yearToX(ev.year);
       if (x < -20 || x > canvasW + 20) return;
