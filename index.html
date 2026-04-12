@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121530</span>
+  <span id="version-label">v202604121545</span>
 </div>
 
 <div id="legend">
@@ -1127,10 +1127,8 @@ function blendHex(hex1, hex2, t) {
 }
 
 // ── Dynamic legend builder ──
-let _soloAxis      = null;
-let _soloSet       = new Set();
+let _soloSet       = new Set();   // axisId set — 唯一 solo 狀態，size>0 = solo active
 let _soloDimAlpha  = 0.07;
-let _soloGroups    = null;   // null = off, Set of group keys = active
 let _collapsedGroups = new Set();
 
 function updateSoloDim(val) {
@@ -1163,29 +1161,11 @@ function buildLegend() {
 
   const hintEl = document.getElementById('legend-zoom-hint');
 
-  // ── 統一 solo 輔助函式 ──
-  // soloSet 裡放的是目前 solo 中的 axisId
-  // _soloActive = true 代表目前在 solo 模式
-
-  function _enterSolo(axisIds) {
-    // 進入 solo，只顯示 axisIds
-    _soloSet = new Set(axisIds);
-    _setSoloCtrl(true);
-    updateLegendState(); draw();
-  }
-
-  function _cancelSolo() {
-    _soloAxis = null; _soloGroups = null; _soloSet.clear();
+  // ── 統一 solo 輔助 ──
+  function cancelSolo() {
+    _soloSet.clear();
     _setSoloCtrl(false);
     updateLegendState(); draw();
-  }
-
-  function _isSoloActive() {
-    return _soloSet.size > 0;
-  }
-
-  function _groupAxisIds(gk) {
-    return groupAxes[gk] || [];
   }
 
   groupOrder.forEach(gk => {
@@ -1200,7 +1180,7 @@ function buildLegend() {
     if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
     header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer;white-space:nowrap;overflow:hidden;color:rgba(221,216,200,0.85)">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
 
-    // Arrow: only collapse/expand
+    // 三角形：只負責展開/收合
     const arrowEl = header.querySelector('.leg-group-arrow');
     arrowEl.addEventListener('click', e => {
       e.stopPropagation();
@@ -1210,35 +1190,39 @@ function buildLegend() {
       updateToggleAllBtn();
     });
 
-    // Group label: 統一邏輯
+    // Group label
     const labelEl = header.querySelector('.leg-group-label');
     let _grpDblGuard = false;
     labelEl.addEventListener('dblclick', e => {
       e.preventDefault(); e.stopPropagation();
       _grpDblGuard = true; setTimeout(() => _grpDblGuard = false, 300);
-      _cancelSolo();
+      if (_soloSet.size > 0) {
+        cancelSolo();
+      } else {
+        _soloSet = new Set(ids);
+        _setSoloCtrl(true);
+        updateLegendState(); draw();
+      }
     });
     labelEl.addEventListener('click', e => {
       if (_grpDblGuard) return;
       e.stopPropagation();
-      const gkIds = _groupAxisIds(gk);
-      if (!_isSoloActive()) {
-        // 正常狀態：雙擊才 solo，單點 hide/show group
-        // （group label 單點 = hide/show 由下面 dblclick 處理，這裡進入 solo）
-        _enterSolo(gkIds);
-      } else {
-        // solo 狀態：判斷此 group 的軸是否全在 solo 中
-        const allIn = gkIds.every(id => _soloSet.has(id));
+      if (_soloSet.size > 0) {
+        const allIn = ids.every(id => _soloSet.has(id));
         if (allIn) {
-          // 全部在 solo → 移除這個 group
-          gkIds.forEach(id => _soloSet.delete(id));
-          if (_soloSet.size === 0) _cancelSolo();
-          else { _setSoloCtrl(true); updateLegendState(); draw(); }
+          ids.forEach(id => _soloSet.delete(id));
+          if (_soloSet.size === 0) _setSoloCtrl(false);
         } else {
-          // 加入 solo
-          gkIds.forEach(id => _soloSet.add(id));
-          _setSoloCtrl(true); updateLegendState(); draw();
+          ids.forEach(id => _soloSet.add(id));
+          _setSoloCtrl(true);
         }
+        updateLegendState(); draw();
+      } else {
+        // 正常狀態單點 = hide/show 整個 group
+        const allHidden = ids.every(id => hiddenAxes.has(id));
+        if (allHidden) ids.forEach(id => hiddenAxes.delete(id));
+        else ids.forEach(id => hiddenAxes.add(id));
+        updateLegendState(); draw();
       }
     });
     legend.appendChild(header);
@@ -1261,24 +1245,29 @@ function buildLegend() {
       div.addEventListener('dblclick', e => {
         e.preventDefault();
         _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
-        // 雙擊 = 取消全部 solo（不管正常還是 solo 狀態）
-        _cancelSolo();
+        if (_soloSet.size > 0) {
+          cancelSolo();
+        } else {
+          _soloSet = new Set([id]);
+          _setSoloCtrl(true);
+          updateLegendState(); draw();
+        }
       });
       div.addEventListener('click', () => {
         if (_dblGuard) return;
-        if (!_isSoloActive()) {
-          // 正常狀態：單點 = 進入 solo
-          _enterSolo([id]);
-        } else {
-          // solo 狀態：單點已 solo 項目 = 移除；單點未 solo 項目 = 加入
+        if (_soloSet.size > 0) {
           if (_soloSet.has(id)) {
             _soloSet.delete(id);
-            if (_soloSet.size === 0) _cancelSolo();
-            else { updateLegendState(); draw(); }
+            if (_soloSet.size === 0) _setSoloCtrl(false);
           } else {
             _soloSet.add(id);
-            updateLegendState(); draw();
+            _setSoloCtrl(true);
           }
+          updateLegendState(); draw();
+        } else {
+          if (hiddenAxes.has(id)) hiddenAxes.delete(id);
+          else hiddenAxes.add(id);
+          updateLegendState(); draw();
         }
       });
       itemsWrap.appendChild(div);
@@ -1291,8 +1280,7 @@ function buildLegend() {
 }
 
 function showAllAxes() {
-  _soloAxis = null; _soloSet.clear();
-  _soloGroups = null;
+  _soloSet.clear();
   hiddenAxes.clear();
   _setSoloCtrl(false);
   updateLegendState(); draw();
@@ -1322,20 +1310,21 @@ function updateToggleAllBtn() {
 
 function updateLegendState() {
   const zoom = currentZoom();
+  const soloActive = _soloSet.size > 0;
 
   // Group headers
   document.querySelectorAll('#legend .leg-group').forEach(header => {
     const gk = header.dataset.group;
     header.classList.toggle('collapsed', _collapsedGroups.has(gk));
-    if (_soloGroups) {
-      header.classList.toggle('solo-active', _soloGroups.has(gk));
-      header.classList.toggle('solo-dimmed', !_soloGroups.has(gk));
+    if (soloActive) {
+      // check if any axis in this group is in solo
+      const items = header.nextElementSibling;
+      const anyIn = items && [...items.querySelectorAll('.leg')].some(el => _soloSet.has(el.dataset.axis));
+      header.classList.toggle('solo-active', anyIn);
+      header.classList.toggle('solo-dimmed', !anyIn);
       header.style.opacity = '';
-    } else if (_soloAxis) {
-      header.classList.remove('solo-active','solo-dimmed');
-      header.style.opacity = '0.35';
     } else {
-      header.classList.remove('solo-active','solo-dimmed');
+      header.classList.remove('solo-active', 'solo-dimmed');
       header.style.opacity = '';
     }
   });
@@ -1356,20 +1345,20 @@ function updateLegendState() {
     el.style.display = (ax.zoomMin === 0 || zoom >= ax.zoomMin) ? '' : 'none';
     const dot = el.querySelector('.leg-dot');
     if (dot) dot.style.background = axisEffectiveColor(id);
-    if (_soloAxis || _soloGroups) {
+    if (soloActive) {
       const inSet = _soloSet.has(id);
       el.classList.toggle('solo-active', inSet);
       el.classList.toggle('solo-dimmed', !inSet);
       el.classList.remove('hidden-axis');
-      el.style.outline = (inSet && id !== _soloAxis) ? '1px solid rgba(255,255,255,0.2)' : '';
+      el.style.outline = '';
     } else {
-      el.classList.remove('solo-active','solo-dimmed');
+      el.classList.remove('solo-active', 'solo-dimmed');
       el.style.outline = '';
       el.classList.toggle('hidden-axis', hiddenAxes.has(id));
     }
   });
 
-  const hasHidden = hiddenAxes.size > 0 || _soloAxis !== null || _soloGroups !== null;
+  const hasHidden = hiddenAxes.size > 0 || soloActive;
   const btn = document.getElementById('legend-show-all');
   if (btn) btn.style.opacity = hasHidden ? '1' : '0.4';
 }
@@ -1615,7 +1604,7 @@ function eventColor(ev) {
 // Alpha modifier when a group is highlighted in indicator
 // Solo dim check — works for both axis solo and group solo
 function isSoloDimmed(axId) {
-  if (!_soloAxis && !_soloGroups) return false;
+  if (_soloSet.size === 0) return false;
   return !_soloSet.has(axId);
 }
 
