@@ -210,8 +210,8 @@ body {
 .leg-group:hover { background: rgba(255,255,255,0.04); }
 .leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
 .leg-group.solo-dimmed { opacity: 0.3; }
-.leg-group-dot { width: 1px; height: 1px; border-radius: 50%; flex-shrink: 0; }
-.leg-group-label { flex: 1; text-align: right; cursor: pointer; overflow: hidden; white-space: nowrap; }
+.leg-group-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.leg-group-label { flex: 1; text-align: right; cursor: pointer; overflow: hidden; white-space: nowrap; opacity: 0.9; }
 .leg-group-arrow {
   font-size: 13px; flex-shrink: 0; transition: transform .15s;
   color: rgba(221,216,200,0.5); cursor: pointer;
@@ -239,8 +239,8 @@ body {
 .leg {
   display: flex; align-items: center; gap: 4px;
   font-family: 'Noto Sans TC', sans-serif;
-  font-size: 10px; letter-spacing: 0.03em;
-  color: rgba(221,216,200,0.85); opacity: 0.9;
+  font-size: 9px; letter-spacing: 0.03em;
+  color: rgba(221,216,200,0.85); opacity: 0.6;
   cursor: pointer; transition: opacity .15s;
   white-space: nowrap; flex-direction: row-reverse;
   padding: 1px 4px; border-radius: 4px;
@@ -254,7 +254,7 @@ body {
 .leg.solo-dimmed { opacity: 0.18; }
 .leg-sub { font-size: 9px; opacity: 0.6; }
 .leg-sub.hidden-axis { opacity: 0.15; text-decoration: line-through; }
-.leg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.leg-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
 .leg-sub .leg-dot { width: 5px; height: 5px; }
 
 /* ── Zoom hint ── */
@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121454</span>
+  <span id="version-label">v202604121512</span>
 </div>
 
 <div id="legend">
