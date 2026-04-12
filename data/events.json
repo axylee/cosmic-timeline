@@ -500,6 +500,28 @@
       "endYear": null,
       "zoomMin": 0.3,
       "group": "global"
+    },
+    {
+      "id": "arctic",
+      "label": "北極",
+      "color": "#bae6fd",
+      "order": 72,
+      "parent": "migration",
+      "startYear": -30000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "region"
+    },
+    {
+      "id": "antarctic",
+      "label": "南極",
+      "color": "#e0f2fe",
+      "order": 73,
+      "parent": "migration",
+      "startYear": -30000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "region"
     }
   ],
   "era_bands": [
@@ -8319,6 +8341,330 @@
       "axis": "science",
       "level": 2,
       "category": "science"
+    },
+    {
+      "id": "egy-002",
+      "year": -3100,
+      "zh": "象形文字發明",
+      "en": "Hieroglyphics Invented",
+      "axis": "egypt",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "egy-003",
+      "year": -2700,
+      "zh": "古王國時期・金字塔時代",
+      "en": "Old Kingdom・Age of Pyramids",
+      "axis": "egypt",
+      "level": 1,
+      "category": "civilization",
+      "endYear": -2200
+    },
+    {
+      "id": "egy-004",
+      "year": -1353,
+      "zh": "阿肯納頓宗教改革",
+      "en": "Akhenaten Religious Reform",
+      "axis": "egypt",
+      "level": 2,
+      "category": "religion"
+    },
+    {
+      "id": "egy-005",
+      "year": -1274,
+      "zh": "卡迭石戰役・最早和平條約",
+      "en": "Battle of Kadesh・First Peace Treaty",
+      "axis": "egypt",
+      "level": 2,
+      "category": "war"
+    },
+    {
+      "id": "egy-006",
+      "year": -332,
+      "zh": "亞歷山大征服埃及",
+      "en": "Alexander Conquers Egypt",
+      "axis": "egypt",
+      "level": 1,
+      "category": "war"
+    },
+    {
+      "id": "egy-007",
+      "year": 641,
+      "zh": "阿拉伯征服埃及",
+      "en": "Arab Conquest of Egypt",
+      "axis": "egypt",
+      "level": 1,
+      "category": "war"
+    },
+    {
+      "id": "egy-008",
+      "year": 1798,
+      "zh": "拿破崙入侵埃及",
+      "en": "Napoleon Invades Egypt",
+      "axis": "egypt",
+      "level": 2,
+      "category": "war"
+    },
+    {
+      "id": "egy-009",
+      "year": 1952,
+      "zh": "埃及革命・納瑟",
+      "en": "Egyptian Revolution・Nasser",
+      "axis": "egypt",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "afr-006",
+      "year": -3000,
+      "zh": "努比亞文明",
+      "en": "Nubian Civilization",
+      "axis": "africa",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "afr-007",
+      "year": -900,
+      "zh": "迦太基建立",
+      "en": "Carthage Founded",
+      "axis": "africa",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "afr-008",
+      "year": 300,
+      "zh": "阿克蘇姆帝國（衣索比亞）",
+      "en": "Aksumite Empire (Ethiopia)",
+      "axis": "africa",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "afr-009",
+      "year": 1200,
+      "zh": "馬利帝國",
+      "en": "Mali Empire",
+      "axis": "africa",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "afr-010",
+      "year": 1400,
+      "zh": "大辛巴威",
+      "en": "Great Zimbabwe",
+      "axis": "africa",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "afr-011",
+      "year": 1652,
+      "zh": "荷蘭殖民南非",
+      "en": "Dutch Colonize South Africa",
+      "axis": "africa",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "afr-012",
+      "year": 1994,
+      "zh": "南非種族隔離結束",
+      "en": "End of Apartheid",
+      "axis": "africa",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "ame-003",
+      "year": -3000,
+      "zh": "北美洲最早農業",
+      "en": "Earliest Agriculture in North America",
+      "axis": "americas",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "ame-004",
+      "year": 1865,
+      "zh": "美國南北戰爭結束",
+      "en": "US Civil War Ends",
+      "axis": "americas",
+      "level": 1,
+      "category": "war"
+    },
+    {
+      "id": "lat-007",
+      "year": -3000,
+      "zh": "查文文化（秘魯最早文明）",
+      "en": "Chavín Culture (Early Peru)",
+      "axis": "latin-america",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "lat-008",
+      "year": 1532,
+      "zh": "西班牙征服印加",
+      "en": "Spanish Conquest of Inca",
+      "axis": "latin-america",
+      "level": 1,
+      "category": "war"
+    },
+    {
+      "id": "lat-009",
+      "year": 1888,
+      "zh": "巴西廢除奴隸制",
+      "en": "Brazil Abolishes Slavery",
+      "axis": "latin-america",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "lat-010",
+      "year": 1959,
+      "zh": "古巴革命",
+      "en": "Cuban Revolution",
+      "axis": "latin-america",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "crs-012",
+      "year": 1648,
+      "zh": "西發利亞和約・現代國家體系",
+      "en": "Peace of Westphalia",
+      "axis": "cross",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "crs-014",
+      "year": 1848,
+      "zh": "民族主義浪潮",
+      "en": "Wave of Nationalism",
+      "axis": "cross",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "crs-015",
+      "year": 1918,
+      "zh": "西班牙流感",
+      "en": "Spanish Flu Pandemic",
+      "axis": "cross",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "crs-016",
+      "year": 1948,
+      "zh": "世界人權宣言",
+      "en": "Universal Declaration of Human Rights",
+      "axis": "cross",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "crs-018",
+      "year": 2008,
+      "zh": "全球金融危機",
+      "en": "Global Financial Crisis",
+      "axis": "cross",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "crs-019",
+      "year": 2020,
+      "zh": "COVID-19 全球大流行",
+      "en": "COVID-19 Pandemic",
+      "axis": "cross",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "eas-001",
+      "year": -551,
+      "zh": "孔子・儒家思想影響東亞",
+      "en": "Confucius・Confucianism Spreads",
+      "axis": "east",
+      "level": 1,
+      "crossRef": "china",
+      "category": "civilization"
+    },
+    {
+      "id": "eas-002",
+      "year": 618,
+      "zh": "唐朝・東亞文化圈形成",
+      "en": "Tang Dynasty・East Asian Culture",
+      "axis": "east",
+      "level": 1,
+      "crossRef": "china",
+      "category": "civilization"
+    },
+    {
+      "id": "eas-003",
+      "year": 1368,
+      "zh": "明朝・東方世界秩序",
+      "en": "Ming Dynasty・Eastern World Order",
+      "axis": "east",
+      "level": 2,
+      "crossRef": "china",
+      "category": "civilization"
+    },
+    {
+      "id": "eas-004",
+      "year": 1868,
+      "zh": "明治維新・東方現代化",
+      "en": "Meiji Restoration・Eastern Modernization",
+      "axis": "east",
+      "level": 1,
+      "crossRef": "japan",
+      "category": "civilization"
+    },
+    {
+      "id": "wes-001",
+      "year": -800,
+      "zh": "西方文明起源・希臘城邦",
+      "en": "Western Civilization・Greek City-States",
+      "axis": "west",
+      "level": 1,
+      "crossRef": "greece",
+      "category": "civilization"
+    },
+    {
+      "id": "wes-002",
+      "year": 1450,
+      "zh": "文藝復興鼎盛",
+      "en": "High Renaissance",
+      "axis": "west",
+      "level": 1,
+      "crossRef": "europe",
+      "category": "culture"
+    },
+    {
+      "id": "wes-003",
+      "year": 1687,
+      "zh": "科學革命・牛頓力學",
+      "en": "Scientific Revolution・Newton",
+      "axis": "west",
+      "level": 1,
+      "crossRef": "europe",
+      "category": "science"
+    },
+    {
+      "id": "wes-004",
+      "year": 1776,
+      "zh": "啟蒙時代・美國獨立",
+      "en": "Enlightenment・American Independence",
+      "axis": "west",
+      "level": 1,
+      "crossRef": "usa",
+      "category": "politics"
     }
   ]
 }
