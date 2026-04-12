@@ -278,7 +278,7 @@ body {
 }
 #scale-line-wrap { display: flex; align-items: center; }
 .scale-cap { width: 1px; height: 7px; background: rgba(221,216,200,0.45); display: inline-block; }
-#scale-line { height: 2px; background: rgba(221,216,200,0.45); display: inline-block; min-width: 20px; }
+#scale-line { height: 2px; background: rgba(221,216,200,0.45); display: inline-block; width: 90px; }
 
 /* ─── RIGHT PANEL: V-zoom + V-scrollbar ─── */
 #right-panel {
@@ -1960,18 +1960,19 @@ function drawRuler() {
     ctx.fillText(formatYearShort(y), x, rulerY + 18);
   }
 
-  // ── Scale bar (bottom-left) ──
-  // Pick a nice round number whose pixel width is 60–200px
+  // ── Scale bar (header) — fixed 90px width, reverse-calculate years ──
+  const SCALE_PX = 90; // fixed pixel width (~2.5cm at 96dpi)
+  const yearsPerPx = span / canvasW;
+  const exactYears = yearsPerPx * SCALE_PX;
+
+  // Find the nicest round number closest to exactYears for the label
   const niceSteps = [1e10,5e9,2e9,1e9,5e8,2e8,1e8,5e7,2e7,1e7,5e6,1e6,
                      5e5,1e5,5e4,1e4,5e3,1e3,500,200,100,50,20,10,5,2,1];
-  let scaleYears = niceSteps.find(s => {
-    const px = (s / span) * canvasW;
-    return px >= 60 && px <= 200;
-  }) || step;
-  const scalePx = Math.round((scaleYears / span) * canvasW);
+  const scaleYears = niceSteps.reduce((best, s) =>
+    Math.abs(s - exactYears) < Math.abs(best - exactYears) ? s : best, niceSteps[0]);
 
-  // Update DOM scale bar
-  document.getElementById('scale-line').style.width = scalePx + 'px';
+  // Update DOM scale bar — line stays 90px, label shows the nearest nice year count
+  document.getElementById('scale-line').style.width = SCALE_PX + 'px';
   document.getElementById('scale-label').textContent = formatScaleBar(scaleYears);
 }
 
