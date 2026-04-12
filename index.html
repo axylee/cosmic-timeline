@@ -131,9 +131,9 @@ body {
   right: 40px;
   top: 80px; bottom: 80px;
   z-index: 51;
-  width: 122px;           /* 固定寬度，不隨內容撐寬 */
+  width: 122px;
   display: flex; flex-direction: column;
-  align-items: stretch;   /* 子元素撐滿寬度 */
+  align-items: flex-end;
   gap: 0;
   padding: 8px 0;
   background: rgba(5,8,16,0.82);
@@ -153,6 +153,7 @@ body {
   padding: 0 8px 6px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   margin-bottom: 4px;
+  width: 100%; box-sizing: border-box;
 }
 #legend-show-all, #legend-toggle-all, #legend-clear-edits {
   font-size: 9px; padding: 3px 6px; border-radius: 6px;
@@ -185,6 +186,7 @@ body {
   margin-bottom: 2px;
   font-size: 9px; color: rgba(221,216,200,0.5);
   transition: opacity .2s;
+  width: 100%; box-sizing: border-box;
 }
 #legend-solo-ctrl.disabled { opacity: 0.25; pointer-events: none; }
 #legend-solo-ctrl input[type=range] {
@@ -195,7 +197,7 @@ body {
 /* ── Group header ── */
 .leg-group {
   display: flex; align-items: center; gap: 4px;
-  padding: 5px 8px 3px;
+  width: 100%; padding: 5px 8px 3px;
   cursor: default; transition: background .12s;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -210,7 +212,7 @@ body {
 .leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
 .leg-group.solo-dimmed { opacity: 0.3; }
 .leg-group-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.leg-group-label { flex: 1; text-align: right; cursor: pointer; }
+.leg-group-label { flex: 1; text-align: right; cursor: pointer; overflow: hidden; text-overflow: ellipsis; }
 .leg-group-arrow {
   font-size: 13px; flex-shrink: 0; transition: transform .15s;
   color: rgba(221,216,200,0.5); cursor: pointer;
@@ -219,20 +221,23 @@ body {
 .leg-group-arrow:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .leg-group.collapsed .leg-group-arrow { transform: rotate(-90deg); }
 
-/* ── Axis items wrapper (indented under group) ── */
+/* ── Axis items wrapper ── */
 .leg-group-items {
   display: flex; flex-direction: column; gap: 1px;
   overflow: hidden; transition: max-height .2s ease;
-  margin-left: 8px;                         /* visual indent */
-  border-left: 1px solid rgba(255,255,255,0.1);
-  padding-left: 4px;
-  /* width is auto — no width:100% to avoid margin overflow */
+  width: 100%; box-sizing: border-box;
+  border-left: 2px solid rgba(255,255,255,0.08);
+  padding-left: 6px; padding-right: 0;
+  margin-left: 10px;
+  /* shrink to fit: let flex handle the actual width */
+  align-self: flex-end;
+  max-width: calc(100% - 10px);
 }
 .leg-group-items.collapsed { max-height: 0 !important; }
 
 /* ── Individual axis row ── */
 .leg {
-  display: flex; align-items: center; gap: 5px;
+  display: flex; align-items: center; gap: 4px;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 10px; letter-spacing: 0.03em;
   color: rgba(221,216,200,0.85); opacity: 0.9;
@@ -240,12 +245,13 @@ body {
   white-space: nowrap; flex-direction: row-reverse;
   padding: 1px 4px; border-radius: 4px;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .leg:hover { opacity: 1; color: #fff; background: rgba(255,255,255,0.06); }
 .leg.hidden-axis { opacity: 0.2; text-decoration: line-through; }
 .leg.solo-active { opacity: 1; color: #fff; background: rgba(255,255,255,0.08); }
 .leg.solo-dimmed { opacity: 0.18; }
-.leg-sub { font-size: 9px; opacity: 0.6; }   /* no extra padding — parent handles indent */
+.leg-sub { font-size: 9px; opacity: 0.6; }
 .leg-sub.hidden-axis { opacity: 0.15; text-decoration: line-through; }
 .leg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
 .leg-sub .leg-dot { width: 5px; height: 5px; }
