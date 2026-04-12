@@ -124,7 +124,7 @@
       "parent": "east",
       "startYear": -8000,
       "endYear": null,
-      "zoomMin": 0.58,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
@@ -135,7 +135,7 @@
       "parent": "mideast",
       "startYear": -3100,
       "endYear": 641,
-      "zoomMin": 0.58,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
@@ -146,7 +146,7 @@
       "parent": "mideast",
       "startYear": -559,
       "endYear": 1501,
-      "zoomMin": 0.65,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
@@ -256,7 +256,7 @@
       "parent": "east",
       "startYear": -2600,
       "endYear": null,
-      "zoomMin": 0.58,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
@@ -289,7 +289,7 @@
       "parent": "human-evo",
       "startYear": -5000,
       "endYear": null,
-      "zoomMin": 0.51,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
@@ -355,7 +355,7 @@
       "parent": "west",
       "startYear": -1600,
       "endYear": 476,
-      "zoomMin": 0.51,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
@@ -399,7 +399,7 @@
       "parent": "americas",
       "startYear": -2000,
       "endYear": null,
-      "zoomMin": 0.51,
+      "zoomMin": 0.3,
       "group": "civilization"
     },
     {
