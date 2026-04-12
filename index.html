@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121545b</span>
+  <span id="version-label">v202604121753</span>
 </div>
 
 <div id="legend">
@@ -1070,13 +1070,13 @@ function buildAxes(axesArray) {
 // Groups defined here (visual logic, not data)
 // group membership comes from axes[].group in JSON
 const AXIS_GROUP_DEFS = {
-  natural:      { label:'自然科學', color:'#818cf8' },
-  human:        { label:'人文',     color:'#e2e8f0' },
-  science:      { label:'科學技術', color:'#67e8f9' },
-  arts:         { label:'藝術文化', color:'#f472b6' },
-  religion:     { label:'宗教',     color:'#fde68a' },
+  natural:      { label:'自然',     color:'#818cf8' },
+  global:       { label:'世界',     color:'#e2e8f0' },
+  region:       { label:'地區',     color:'#34d399' },
   civilization: { label:'文明',     color:'#f97316' },
-  nation:       { label:'國家地區', color:'#3b82f6' },
+  religion:     { label:'宗教',     color:'#fde68a' },
+  human:        { label:'人文',     color:'#f472b6' },
+  nation:       { label:'國家',     color:'#3b82f6' },
 };
 
 // These are rebuilt after axes load
