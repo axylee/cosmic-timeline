@@ -197,6 +197,16 @@ body {
   color: rgba(248,113,113,0.7);
 }
 #legend-clear-edits:hover { background: rgba(248,113,113,0.2); color: #f87171; }
+#legend-toggle-all {
+  font-size: 9px; padding: 3px 6px; border-radius: 6px;
+  cursor: pointer; white-space: nowrap;
+  font-family: 'Noto Sans TC', sans-serif;
+  width: 100%; text-align: center; border: 1px solid;
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  color: rgba(221,216,200,0.5);
+}
+#legend-toggle-all:hover { background: rgba(255,255,255,0.12); color: var(--text); }
 /* solo dim slider */
 #legend-solo-ctrl {
   display: none; flex-direction: column; gap: 3px;
@@ -225,9 +235,11 @@ body {
 .leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
 .leg-group.solo-dimmed { opacity: 0.3; }
 .leg-group-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.leg-group-arrow { font-size: 8px; flex-shrink: 0; transition: transform .15s; color: rgba(221,216,200,0.3); }
+.leg-group-arrow { font-size: 13px; flex-shrink: 0; transition: transform .15s; color: rgba(221,216,200,0.5); cursor: pointer; padding: 2px 4px; border-radius: 3px; line-height: 1; }
+.leg-group-arrow:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .leg-group.collapsed .leg-group-arrow { transform: rotate(-90deg); }
-.leg-group-items { display: flex; flex-direction: column; gap: 1px; overflow: hidden; transition: max-height .2s ease; }
+.leg-group-items { display: flex; flex-direction: column; gap: 1px; overflow: hidden; transition: max-height .2s ease;
+  border-left: 1px solid rgba(255,255,255,0.1); margin-left: 10px; padding-left: 6px; }
 .leg-group-items.collapsed { max-height: 0 !important; }
 .hide { display: none !important; }
 
@@ -252,20 +264,21 @@ body {
   white-space: nowrap;
 }
 
-/* ─── SCALE BAR ─── */
+/* ─── SCALE BAR (in header) ─── */
 #scale-bar {
-  position: fixed; bottom: 68px; left: 20px; z-index: 50;
-  display: flex; flex-direction: column; gap: 4px;
-  pointer-events: none;
+  display: flex; align-items: center; gap: 6px;
+  pointer-events: none; flex-shrink: 0;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,0.12);
 }
 #scale-label {
   font-family: 'Noto Sans TC', sans-serif;
-  font-size: 10px; color: rgba(221,216,200,0.45);
-  letter-spacing: 0.08em; margin-bottom: 2px;
+  font-size: 10px; color: rgba(221,216,200,0.55);
+  letter-spacing: 0.08em; white-space: nowrap;
 }
 #scale-line-wrap { display: flex; align-items: center; }
-.scale-cap { width: 1px; height: 8px; background: rgba(221,216,200,0.35); display: inline-block; }
-#scale-line { height: 2px; background: rgba(221,216,200,0.35); display: inline-block; }
+.scale-cap { width: 1px; height: 7px; background: rgba(221,216,200,0.45); display: inline-block; }
+#scale-line { height: 2px; background: rgba(221,216,200,0.45); display: inline-block; min-width: 20px; }
 
 /* ─── RIGHT PANEL: V-zoom + V-scrollbar ─── */
 #right-panel {
@@ -722,11 +735,20 @@ body {
   </div>
   <button id="lang-toggle" onclick="toggleLang()" title="Switch language">中/EN</button>
   <p id="header-sub">138億年 · 13.8 BILLION YEARS</p>
+  <div id="scale-bar">
+    <div id="scale-line-wrap">
+      <div class="scale-cap"></div>
+      <div id="scale-line"></div>
+      <div class="scale-cap"></div>
+    </div>
+    <div id="scale-label">— —</div>
+  </div>
 </div>
 
 <div id="legend">
   <div id="legend-controls">
     <button id="legend-show-all" onclick="showAllAxes()">全部顯示</button>
+    <button id="legend-toggle-all" onclick="toggleAllGroups()">▾ 展開全部</button>
     <button id="legend-clear-edits" onclick="clearAllEdits()">清除修改</button>
   </div>
   <span id="legend-zoom-hint">zoom in 展開 ↓</span>
@@ -741,16 +763,6 @@ body {
 <canvas id="timeline-canvas"></canvas>
 
 <div id="time-display">— —</div>
-
-<!-- Scale bar bottom-left -->
-<div id="scale-bar">
-  <div id="scale-label">— —</div>
-  <div id="scale-line-wrap">
-    <div class="scale-cap"></div>
-    <div id="scale-line"></div>
-    <div class="scale-cap"></div>
-  </div>
-</div>
 
 <!-- Right panel: V-zoom slider + V-scrollbar -->
 <div id="right-panel">
@@ -1129,43 +1141,43 @@ function buildLegend() {
     header.className = 'leg-group';
     header.dataset.group = gk;
     if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
-    header.innerHTML = `<span class="leg-group-arrow">▾</span><span style="flex:1;text-align:right">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
+    header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
 
+    // Arrow: only collapse/expand
+    const arrowEl = header.querySelector('.leg-group-arrow');
+    arrowEl.addEventListener('click', e => {
+      e.stopPropagation();
+      if (_collapsedGroups.has(gk)) _collapsedGroups.delete(gk);
+      else _collapsedGroups.add(gk);
+      updateLegendState();
+      updateToggleAllBtn();
+    });
+
+    // Label click = solo toggle; dblclick = cancel solo
+    const labelEl = header.querySelector('.leg-group-label');
     let _grpDblGuard = false;
-    header.addEventListener('dblclick', e => {
+    labelEl.addEventListener('dblclick', e => {
       e.preventDefault();
       _grpDblGuard = true; setTimeout(() => _grpDblGuard = false, 300);
-      _soloAxis = null;
-      if (_soloGroups && _soloGroups.has(gk) && _soloGroups.size === 1) {
-        _soloGroups = null;
-      } else {
-        _soloGroups = new Set([gk]);
-      }
-      if (_soloGroups) {
-        _soloSet = new Set();
-        _soloGroups.forEach(sgk => (groupAxes[sgk]||[]).forEach(id => _soloSet.add(id)));
-      } else { _soloSet.clear(); }
-      _setSoloCtrl(_soloGroups !== null || _soloAxis !== null);
+      // cancel all solo
+      _soloAxis = null; _soloSet.clear(); _soloGroups = null;
+      _setSoloCtrl(false);
       updateLegendState(); draw();
     });
-    header.addEventListener('click', () => {
+    labelEl.addEventListener('click', e => {
       if (_grpDblGuard) return;
-      if (_soloGroups) {
-        if (_soloGroups.has(gk)) {
-          _soloGroups.delete(gk);
-          if (_soloGroups.size === 0) _soloGroups = null;
-        } else { _soloGroups.add(gk); }
-        if (_soloGroups) {
-          _soloSet = new Set();
-          _soloGroups.forEach(sgk => (groupAxes[sgk]||[]).forEach(id => _soloSet.add(id)));
-        } else { _soloSet.clear(); }
-        _setSoloCtrl(_soloGroups !== null);
-        updateLegendState(); draw();
+      e.stopPropagation();
+      _soloAxis = null;
+      if (_soloGroups && _soloGroups.has(gk) && _soloGroups.size === 1) {
+        _soloGroups = null; _soloSet.clear();
       } else {
-        if (_collapsedGroups.has(gk)) _collapsedGroups.delete(gk);
-        else _collapsedGroups.add(gk);
-        updateLegendState();
+        if (!_soloGroups) _soloGroups = new Set();
+        _soloGroups.add(gk);
+        _soloSet = new Set();
+        _soloGroups.forEach(sgk => (groupAxes[sgk]||[]).forEach(id => _soloSet.add(id)));
       }
+      _setSoloCtrl(_soloGroups !== null);
+      updateLegendState(); draw();
     });
     legend.appendChild(header);
 
@@ -1223,6 +1235,28 @@ function showAllAxes() {
   hiddenAxes.clear();
   _setSoloCtrl(false);
   updateLegendState(); draw();
+}
+
+function toggleAllGroups() {
+  const groupOrder = Object.keys(AXIS_GROUP_DEFS);
+  const anyCollapsed = groupOrder.some(gk => _collapsedGroups.has(gk));
+  if (anyCollapsed) {
+    // expand all
+    _collapsedGroups.clear();
+  } else {
+    // collapse all
+    groupOrder.forEach(gk => _collapsedGroups.add(gk));
+  }
+  updateLegendState();
+  updateToggleAllBtn();
+}
+
+function updateToggleAllBtn() {
+  const btn = document.getElementById('legend-toggle-all');
+  if (!btn) return;
+  const groupOrder = Object.keys(AXIS_GROUP_DEFS);
+  const anyCollapsed = groupOrder.some(gk => _collapsedGroups.has(gk));
+  btn.textContent = anyCollapsed ? '▾ 展開全部' : '▸ 收合全部';
 }
 
 function updateLegendState() {
