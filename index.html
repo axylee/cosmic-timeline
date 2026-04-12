@@ -195,7 +195,7 @@ body {
 
 /* ── Group header ── */
 .leg-group {
-  display: flex; align-items: center; gap: 4px;
+  display: flex; align-items: center; gap: 1px;
   width: 100%; padding: 5px 4px 3px;
   cursor: default; transition: background .12s;
   font-family: 'Noto Sans TC', sans-serif;
@@ -210,12 +210,12 @@ body {
 .leg-group:hover { background: rgba(255,255,255,0.04); }
 .leg-group.solo-active { color: #fff; background: rgba(255,255,255,0.08); }
 .leg-group.solo-dimmed { opacity: 0.3; }
-.leg-group-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.leg-group-dot { width: 1px; height: 1px; border-radius: 50%; flex-shrink: 0; }
 .leg-group-label { flex: 1; text-align: right; cursor: pointer; overflow: hidden; white-space: nowrap; }
 .leg-group-arrow {
   font-size: 13px; flex-shrink: 0; transition: transform .15s;
   color: rgba(221,216,200,0.5); cursor: pointer;
-  padding: 1px 3px; border-radius: 3px; line-height: 1;
+  padding: 1px 1px; border-radius: 3px; line-height: 1;
 }
 .leg-group-arrow:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .leg-group.collapsed .leg-group-arrow { transform: rotate(-90deg); }
@@ -228,10 +228,10 @@ body {
   display: block;
   overflow: hidden; transition: max-height .2s ease;
   box-sizing: border-box;
-  padding-left: 6px;
+  padding-left: 3px;
   border-left: 2px solid rgba(255,255,255,0.08);
-  margin-left: 4px;
-  width: calc(100% - 4px);
+  margin-left: 2px;
+  width: calc(100% - 2px);
 }
 .leg-group-items.collapsed { max-height: 0 !important; }
 
@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121424</span>
+  <span id="version-label">v202604121440</span>
 </div>
 
 <div id="legend">
