@@ -275,7 +275,7 @@ python check.py
 | `startYear` | ✓ | 分支線起始年份 |
 | `endYear` | | 消亡年份（null = 至今） |
 | `zoomMin` | ✓ | 顯示門檻（0 = 全局，0.58 = zoom in才出現） |
-| `group` | ✓ | natural / human / science / arts / religion / civilization / nation |
+| `group` | ✓ | natural / global / region / civilization / religion / human / nation |
 
 ### events（事件）
 
@@ -300,15 +300,24 @@ python check.py
 
 ## 軸線分類群組
 
-| 群組 | 顏色 | 包含軸線 |
-|------|------|---------|
-| natural | 靛藍 | 宇宙、太陽系、地球、生命、人類演化 |
-| human | 白銀 | 跨文明 |
-| science | 青色 | 科學技術 |
-| arts | 玫瑰 | 藝術文化 |
-| religion | 金黃 | 猶太教、基督教、伊斯蘭教、印度教、佛教、道教 |
-| civilization | 橙色 | 東方、西方、中東、非洲、埃及、波斯、印度、希臘、美洲、拉丁美洲 |
-| nation | 藍色 | 中國、台灣、日本、歐洲、北美、南美、美國、非洲各地區 |
+群組定義的設計原則：**演化順序**（自然 → 世界 → 地區 → 文明 → 宗教 → 人文 → 國家），父子關係反映「某地區先有文明，文明之後才有國家」的邏輯層次。
+
+| 群組 key | 中文名稱 | 顏色 | 定義 | 包含軸線 | 未來擴充方向 |
+|---------|---------|------|------|---------|------------|
+| natural | 自然 | 靛藍 | 宇宙誕生至人類出現，純自然演化過程 | cosmos, galaxy, solar-system, earth, life, human-evo | climate（氣候/冰河期） |
+| global | 世界 | 白銀 | 與人類行為直接相關、跨越多地區影響全人類的事件，不屬於單一地區或文明 | cross | migration（人類遷徙）, trade（貿易/絲路） |
+| region | 地區 | 翠綠 | 人類活動的地理容器，定義各大地理區域，早於文明與國家存在 | east, west, africa, americas | central-asia, oceania, southeast-asia |
+| civilization | 文明 | 橙色 | 在各地理區域內發展的文明，部分延續至今，早於近代國家概念 | mideast, mesopotamia, egypt, persia, india, china, greece, latin-america | 撒哈拉以南非洲文明, 中亞草原文明, 大洋洲原住民, 東南亞文明 |
+| religion | 宗教 | 金黃 | 各宗教體系的起源與發展 | judaism, christianity, islam, hinduism, buddhism, taoism | 未來可加其他宗教 |
+| human | 人文 | 玫瑰 | 跨越地區與文明的人類文化活動，包含科學與藝術 | science, arts | 未來可擴充 |
+| nation | 國家 | 藍色 | 近代以後有明確政治實體的重要國家或地區 | iran, north-africa, west-africa, east-africa, south-africa, china-b, taiwan, japan, europe, north-america, south-america, usa | 重要國家陸續補充 |
+
+### 群組設計說明
+
+- **自然 vs 世界**：自然事件與人類行為無關（宇宙大爆炸、生命演化）；世界事件由人類行為觸發但影響跨越地區（世界大戰、黑死病、蒙古帝國）
+- **地區 vs 文明**：地區是地理容器（東方、西方），文明是在該地理區域內發展的具體文明（中國、希臘羅馬）；地區的 zoomMin = 0.30，與文明同步出現
+- **文明 vs 國家**：文明早於國家存在，部分文明延續至今；國家是近代政治實體，為文明的子軸
+- **科學技術與藝術文化**歸入人文群組，不單獨成群組，因為 legend 群組與軸線名稱重複
 
 ---
 
@@ -323,3 +332,6 @@ python check.py
 | 2026-04-11 | 中英文切換、Popup 編輯完整功能 |
 | 2026-04-11 | cosmic-tools.html 工具箱（新增/圖片/確認輸出）|
 | 2026-04-11 | 兩河流域、宇宙、中東戰火、青銅鐵器 大批事件 |
+| 2026-04-12 | UI 改版：比例尺移至 header、Legend 寬度優化、Solo 邏輯統一 |
+| 2026-04-12 | 群組架構重整：human→region/global/human，science/arts→human，新增 global group |
+| 2026-04-12 | east/west label 改為東方/西方，zoomMin 改為 0.30，文明軸線 zoomMin 全部統一 0.30 |
