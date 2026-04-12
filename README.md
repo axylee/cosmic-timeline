@@ -136,7 +136,7 @@ python check.py
 #### ✏ 修改事件的軸線 / CrossRef
 1. 點擊事件 → Popup → ✏ 編輯
 2. 「所在軸線」下拉：選擇要移動到的軸線
-3. 「CrossRef」下拉：選擇縱線要連到哪條軸線（可選「— 無 —」清除）
+3. 「CrossRef」多選清單：按住 Ctrl/Cmd 可選最多3條軸線（縱線連接目標），不選任何項目 = 清除
 4. 儲存修改 → 匯出 JSON → 覆蓋上傳
 
 #### ➕ 新增單一事件（少量）
@@ -216,13 +216,20 @@ python check.py
 - 右側 Legend → **雙擊**軸線名稱或群組：進入 Solo 模式（只顯示該項，其他淡化）
 - Solo 狀態下**單擊**其他項目：加入顯示；再次單擊：移除
 - Solo 狀態下**雙擊**任何項目：退出 Solo
-- 右側頂部「全部顯示」按鈕：清除所有隱藏與 Solo 狀態
+- 右側頂部「全部顯示」按鈕：清除所有隱藏、Solo 與 Filter 狀態
 
 #### 🎯 Events 視圖（主題快速切換）
 - 點擊頂部「**Events**」按鈕 → 彈出分類選單
 - 選單分四類：自然與宇宙 / 文明縱覽 / 主題 / 地區
 - 點選任一項目：自動隱藏無關軸線，並 zoom 到對應時間範圍
 - 取消：點右側「**全部顯示**」按鈕恢復
+
+#### 🔍 Filter（事件層級篩選）
+- 點擊頂部「**Filter**」按鈕 → 彈出 category 選單（戰爭/科學/宗教/文化等15個分類）
+- 可多選：選中的 category 事件正常顯示，其他事件淡化至幾乎不可見
+- 按鈕顯示目前選中數量（例：`Filter (2)`）
+- 可與 Events 視圖同時使用（先選視圖縮小範圍，再 Filter 看特定類型）
+- 取消：點 popup 內「清除篩選」或點「**全部顯示**」按鈕
 
 #### 🌐 中英文切換
 - 右上角「中 / EN」按鈕
@@ -291,7 +298,7 @@ python check.py
 | `axis` | ✓ | 所在軸線 id |
 | `level` | ✓ | 重要程度（1=大 2=中 3=小） |
 | `endYear` | | 結束年份（有填 = pill，沒填 = 點） |
-| `crossRef` | | 縱線連接目標軸線 id |
+| `crossRef` | | 縱線連接目標軸線 id，支援單一字串或陣列（最多3條），例：`"cross"` 或 `["mideast","islam","cross"]` |
 | `image` | | 圖片 URL |
 | `desc_zh` | | 中文描述 |
 | `desc_en` | | 英文描述 |
@@ -341,3 +348,10 @@ python check.py
 | 2026-04-12 | 新增軸線：climate, migration, oceania, central-asia, southeast-asia, trade, arctic, antarctic |
 | 2026-04-12 | 大批事件補充：india, egypt, africa, americas, latin-america, cross, east, west, migration, 自然群組 |
 | 2026-04-12 | Events 視圖選單：header 按鈕 → popup 分類選單，點選後自動 hide/show + zoom 到對應時間範圍 |
+| 2026-04-12 | cosmic-tools.html 新增「視圖管理」分頁：新增/修改/刪除 view，axes 多選，ID 自動產生 |
+| 2026-04-12 | Filter 功能：header 按鈕 → category 多選篩選，選中類別事件亮起其他淡化，可與 Events 同時使用 |
+| 2026-04-12 | crossRef 多軸支援：最多3條，陣列格式向下相容舊字串，縱線/hit test/popup 全部更新 |
+| 2026-04-12 | crossRef 批量更新：ISIS移至mideast軸、波灣戰爭/十字軍/911等14個事件補充多軸crossRef |
+| 2026-04-12 | 冰河期5次補 endYear 變 pill，Events 選單加「五次大冰河期」視圖 |
+| 2026-04-12 | crossRef 縱線跑位 bug 修正：目標軸線不在 yMap 時不畫縱線 |
+| 2026-04-12 | 軸線 startYear 修正：science/east/europe/americas/latin-america |
