@@ -875,7 +875,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604122208</span>
+  <span id="version-label">v202604122215</span>
 </div>
 
 <div id="view-popup"></div>
@@ -4276,6 +4276,9 @@ showAllAxes = function() {
   btn.textContent = 'Events';
   btn.classList.remove('active');
   buildViewPopup();
+  // 同時清除 filter
+  _filterSet.clear();
+  _updateFilterBtn();
 };
 
 // ════════════════════════════════════════════
