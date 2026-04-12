@@ -826,7 +826,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121956</span>
+  <span id="version-label">v202604122100</span>
 </div>
 
 <div id="view-popup"></div>
@@ -2522,6 +2522,10 @@ function drawEvents(eventsInView) {
       const x      = yearToX(ev.year);
       if (x < -20 || x > canvasW + 20) return;
 
+      // 只在兩條軸線都可見時才畫縱線
+      const yMap = getAxisYMap();
+      if (!yMap.has(ev.axis) || !yMap.has(ev.crossRef)) return;
+
       const y1     = axisY(ev.axis);
       const y2     = axisY(ev.crossRef);
       if (Math.abs(y1 - y2) < 4) return;
@@ -3284,7 +3288,7 @@ function findEventsAt(mx, my) {
       if (d <= Math.max(HIT_DOT, dotRadius(ev) + 12)) results.push({ ev, dist: d });
 
       // Also hit-test crossRef hollow circle on target axis
-      if (ev.crossRef && zoom >= 0.55 && !hiddenAxes.has(ev.crossRef)) {
+      if (ev.crossRef && zoom >= 0.55 && !hiddenAxes.has(ev.crossRef) && getAxisYMap().has(ev.crossRef)) {
         const y2 = axisY(ev.crossRef);
         const d2 = Math.hypot(mx - x, my - y2);
         if (d2 <= Math.max(HIT_DOT, dotRadius(ev) + 12)) {
