@@ -850,22 +850,21 @@ body {
 <!-- Mobile landscape hint -->
 <div id="landscape-hint">
   <div class="hint-icon">📱</div>
-  <p>請將手機<strong>橫向</strong>使用<br>以獲得最佳體驗</p>
-  <small>Rotate your device to landscape</small>
-  <button onclick="document.getElementById('landscape-hint').style.display='none'">繼續直向瀏覽</button>
+  <p>請將手機<strong>橫向</strong>使用以獲得最佳體驗<br><span style="font-size:11px;opacity:0.7">Rotate to landscape for best experience</span></p>
+  <button onclick="document.getElementById('landscape-hint').style.display='none'">繼續 / Continue</button>
 </div>
 
 <div id="header">
   <h1>COSMIC TIMELINE · 宇宙歷史時間軸</h1>
   <div id="search-wrap">
     <span id="search-icon">🔍</span>
-    <input type="text" id="search-input" placeholder="搜尋事件… 例如：牛頓、Newton、1687" autocomplete="off" spellcheck="false">
+    <input type="text" id="search-input" placeholder="Search events… e.g. Newton, 1687" autocomplete="off" spellcheck="false">
     <button id="search-clear" onclick="clearSearch()">✕</button>
     <div id="search-results"></div>
   </div>
   <button id="lang-toggle" onclick="toggleLang()" title="Switch language">中/EN</button>
-  <button id="view-btn" onclick="toggleViewPopup()" title="事件視圖">Events</button>
-  <button id="filter-btn" onclick="toggleFilterPopup()" title="事件篩選">Filter</button>
+  <button id="view-btn" onclick="toggleViewPopup()" title="Event Views">Events</button>
+  <button id="filter-btn" onclick="toggleFilterPopup()" title="Filter Events">Filter</button>
   <p id="header-sub">138億年 · 13.8 BILLION YEARS</p>
   <div id="scale-bar">
     <div id="scale-line-wrap">
@@ -875,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604122242</span>
+  <span id="version-label">v202604130001</span>
 </div>
 
 <div id="view-popup"></div>
@@ -883,13 +882,13 @@ body {
 
 <div id="legend">
   <div id="legend-controls">
-    <button id="legend-show-all" onclick="showAllAxes()">全部顯示</button>
-    <button id="legend-toggle-all" onclick="toggleAllGroups()">展開全部</button>
-    <button id="legend-clear-edits" onclick="clearAllEdits()">清除修改</button>
+    <button id="legend-show-all" onclick="showAllAxes()">Show All</button>
+    <button id="legend-toggle-all" onclick="toggleAllGroups()">Expand All</button>
+    <button id="legend-clear-edits" onclick="clearAllEdits()">Clear Edits</button>
   </div>
-  <span id="legend-zoom-hint">zoom in 展開 ↓</span>
+  <span id="legend-zoom-hint">zoom in to expand ↓</span>
   <div id="legend-solo-ctrl" class="disabled">
-    <span>淡化強度</span>
+    <span>Dim</span>
     <input type="range" id="solo-dim-slider" min="1" max="30" value="7"
       oninput="updateSoloDim(this.value)">
     <span id="solo-dim-val">7%</span>
@@ -914,24 +913,24 @@ body {
       <div id="vscroll-thumb"></div>
     </div>
   </div>
-  <button id="btn-reset" title="全覽">⊙</button>
+  <button id="btn-reset" title="Overview">⊙</button>
 </div>
 
 <!-- Bottom bar: era jumps + H-scrollbar + H-zoom slider -->
 <div id="bottom-bar">
   <div id="era-jumps">
-    <button class="era-btn" id="btn-global" style="color:#e2e8f0;border-color:#e2e8f055;opacity:0.9">全局</button>
-    <button class="era-btn" style="color:#a78bfa;border-color:#a78bfa55" data-start="-13800000000" data-end="-4000000000">宇宙誕生</button>
-    <button class="era-btn" style="color:#60a5fa;border-color:#60a5fa55" data-start="-4600000000" data-end="-500000000">地球生命</button>
-    <button class="era-btn" style="color:#34d399;border-color:#34d39955" data-start="-250000000" data-end="-50000000">恐龍時代</button>
-    <button class="era-btn" style="color:#fbbf24;border-color:#fbbf2455" data-start="-4000000" data-end="-100000">人類演化</button>
-    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="-12000" data-end="500">史前文明</button>
-    <button class="era-btn" style="color:#fde68a;border-color:#fde68a55" data-start="-3500" data-end="-500">古代東方</button>
-    <button class="era-btn" style="color:#c4b5fd;border-color:#c4b5fd55" data-start="-800" data-end="500">古典西方</button>
-    <button class="era-btn" style="color:#a5b4fc;border-color:#a5b4fc55" data-start="500" data-end="1500">中世紀</button>
-    <button class="era-btn" style="color:#c084fc;border-color:#c084fc55" data-start="1400" data-end="1800">文藝復興</button>
-    <button class="era-btn" style="color:#93c5fd;border-color:#93c5fd55" data-start="1750" data-end="1950">工業革命</button>
-    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="1900" data-end="2030">現代</button>
+    <button class="era-btn" id="btn-global" style="color:#e2e8f0;border-color:#e2e8f055;opacity:0.9" data-zh="全局" data-en="All">全局</button>
+    <button class="era-btn" style="color:#a78bfa;border-color:#a78bfa55" data-start="-13800000000" data-end="-4000000000" data-zh="宇宙誕生" data-en="Big Bang">宇宙誕生</button>
+    <button class="era-btn" style="color:#60a5fa;border-color:#60a5fa55" data-start="-4600000000" data-end="-500000000" data-zh="地球生命" data-en="Earth & Life">地球生命</button>
+    <button class="era-btn" style="color:#34d399;border-color:#34d39955" data-start="-250000000" data-end="-50000000" data-zh="恐龍時代" data-en="Dinosaurs">恐龍時代</button>
+    <button class="era-btn" style="color:#fbbf24;border-color:#fbbf2455" data-start="-4000000" data-end="-100000" data-zh="人類演化" data-en="Human Evo.">人類演化</button>
+    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="-12000" data-end="500" data-zh="史前文明" data-en="Prehistory">史前文明</button>
+    <button class="era-btn" style="color:#fde68a;border-color:#fde68a55" data-start="-3500" data-end="-500" data-zh="古代東方" data-en="Ancient East">古代東方</button>
+    <button class="era-btn" style="color:#c4b5fd;border-color:#c4b5fd55" data-start="-800" data-end="500" data-zh="古典西方" data-en="Classical West">古典西方</button>
+    <button class="era-btn" style="color:#a5b4fc;border-color:#a5b4fc55" data-start="500" data-end="1500" data-zh="中世紀" data-en="Medieval">中世紀</button>
+    <button class="era-btn" style="color:#c084fc;border-color:#c084fc55" data-start="1400" data-end="1800" data-zh="文藝復興" data-en="Renaissance">文藝復興</button>
+    <button class="era-btn" style="color:#93c5fd;border-color:#93c5fd55" data-start="1750" data-end="1950" data-zh="工業革命" data-en="Industrial Rev.">工業革命</button>
+    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="1900" data-end="2030" data-zh="現代" data-en="Modern">現代</button>
   </div>
   <div id="hscroll-row">
     <div id="scrollbar-track">
@@ -969,120 +968,120 @@ body {
 
       <!-- Edit panel -->
       <div style="display:flex;align-items:center;gap:10px;margin-top:14px;">
-        <button class="popup-edit-btn" id="popup-edit-btn">✏ 編輯</button>
-        <span class="edit-modified-badge" id="edit-modified-badge">● 已修改</span>
-        <button class="edit-export-btn" id="popup-export-btn" style="flex:none;padding:6px 12px;font-size:11px;">⬇ 匯出 JSON</button>
+        <button class="popup-edit-btn" id="popup-edit-btn">✏ Edit</button>
+        <span class="edit-modified-badge" id="edit-modified-badge">● Modified</span>
+        <button class="edit-export-btn" id="popup-export-btn" style="flex:none;padding:6px 12px;font-size:11px;">⬇ Export JSON</button>
       </div>
 
       <div id="edit-panel">
         <div class="edit-row">
-          <div class="edit-label">所在軸線</div>
+          <div class="edit-label">Axis</div>
           <select class="edit-input" id="edit-axis" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row" style="flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
           <div style="display:flex;align-items:center;gap:8px">
-            <div class="edit-label" style="width:70px;flex-shrink:0">顯示門檻</div>
+            <div class="edit-label" style="width:70px;flex-shrink:0">Zoom Min</div>
             <input type="range" id="edit-zoommin" min="0" max="1" step="0.01" value="0"
               style="flex:1;cursor:pointer;accent-color:#a78bfa"
               oninput="document.getElementById('edit-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
             <span id="edit-zoommin-val" style="font-size:11px;color:var(--text-muted);min-width:28px">0.00</span>
           </div>
-          <div style="font-size:10px;color:rgba(221,216,200,0.25);padding-left:78px">0 = 全局顯示 · 0.58 = zoom in 才出現</div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.25);padding-left:78px">0 = always visible · 0.58 = zoom in to show</div>
         </div>
         <div class="edit-row">
-          <div class="edit-label">CrossRef（連到軸線）<br><span style="font-size:10px;color:rgba(221,216,200,0.35)">最多3條，Ctrl/Cmd 多選</span></div>
+          <div class="edit-label">CrossRef<br><span style="font-size:10px;color:rgba(221,216,200,0.35)">Max 3, Ctrl/Cmd multi-select</span></div>
           <select class="edit-input" id="edit-crossref" multiple size="4" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:4px;font-size:12px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row">
-          <div class="edit-label">父軸</div>
+          <div class="edit-label">Parent Axis</div>
           <select class="edit-input" id="edit-axis-parent" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row" style="flex-direction:column;gap:6px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
             <div>
-              <div class="edit-label" style="margin-bottom:4px">軸線起始年份</div>
-              <input class="edit-input" id="edit-axis-startyear" type="number" placeholder="例：-800 或 1776" style="font-size:12px">
+              <div class="edit-label" style="margin-bottom:4px">Axis Start Year</div>
+              <input class="edit-input" id="edit-axis-startyear" type="number" placeholder="e.g. -800 or 1776" style="font-size:12px">
             </div>
             <div>
-              <div class="edit-label" style="margin-bottom:4px">消亡年份（空白=至今）</div>
-              <input class="edit-input" id="edit-axis-endyear" type="number" placeholder="例：476（西羅馬滅亡）" style="font-size:12px">
+              <div class="edit-label" style="margin-bottom:4px">End Year (blank = ongoing)</div>
+              <input class="edit-input" id="edit-axis-endyear" type="number" placeholder="e.g. 476" style="font-size:12px">
             </div>
           </div>
-          <div style="font-size:10px;color:rgba(221,216,200,0.25)">起始年份決定分支線起點 · 有消亡年份則線會在該年終止</div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.25)">Start year sets branch origin · End year terminates the line</div>
         </div>
         <div class="edit-row">
-          <div class="edit-label">圖片 URL</div>
+          <div class="edit-label">Image URL</div>
           <input class="edit-input" id="edit-image" type="text" placeholder="https://upload.wikimedia.org/...">
           <img class="edit-img-preview" id="edit-img-preview">
         </div>
         <div class="edit-row">
-          <div class="edit-label">中文名稱</div>
+          <div class="edit-label">Name (ZH)</div>
           <input class="edit-input" id="edit-zh" type="text">
         </div>
         <div class="edit-row">
-          <div class="edit-label">英文名稱</div>
+          <div class="edit-label">Name (EN)</div>
           <input class="edit-input" id="edit-en" type="text">
         </div>
         <div class="edit-row" style="flex-direction:column;gap:6px">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
             <div>
-              <div class="edit-label" style="margin-bottom:4px">起始年份 <span style="color:#f87171">*</span></div>
-              <input class="edit-input" id="edit-year" type="number" placeholder="例：-586 或 1453">
+              <div class="edit-label" style="margin-bottom:4px">Start Year <span style="color:#f87171">*</span></div>
+              <input class="edit-input" id="edit-year" type="number" placeholder="e.g. -586 or 1453">
             </div>
             <div>
-              <div class="edit-label" style="margin-bottom:4px">結束年份（空白=點事件）</div>
-              <input class="edit-input" id="edit-endyear" type="number" placeholder="有填=pill 時間段">
+              <div class="edit-label" style="margin-bottom:4px">End Year (blank = point)</div>
+              <input class="edit-input" id="edit-endyear" type="number" placeholder="filled = pill">
             </div>
           </div>
-          <div style="font-size:10px;color:rgba(221,216,200,0.25)">負數 = BC · 有結束年份顯示為色條（pill）</div>
+          <div style="font-size:10px;color:rgba(221,216,200,0.25)">Negative = BC · End year renders as pill</div>
         </div>
         <div class="edit-row" style="flex-direction:column;gap:6px">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
             <div>
-              <div class="edit-label" style="margin-bottom:4px">重要程度</div>
+              <div class="edit-label" style="margin-bottom:4px">Importance</div>
               <select class="edit-input" id="edit-level" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;cursor:pointer">
-                <option value="1">Level 1 — 大事件</option>
-                <option value="2">Level 2 — 一般</option>
-                <option value="3">Level 3 — 小事件</option>
+                <option value="1">Level 1 — Major</option>
+                <option value="2">Level 2 — Standard</option>
+                <option value="3">Level 3 — Minor</option>
               </select>
             </div>
             <div>
-              <div class="edit-label" style="margin-bottom:4px">分類</div>
+              <div class="edit-label" style="margin-bottom:4px">Category</div>
               <select class="edit-input" id="edit-category" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;cursor:pointer">
-                <option value="civilization">文明</option>
-                <option value="politics">政治</option>
-                <option value="war">戰爭</option>
-                <option value="science">科學技術</option>
-                <option value="religion">宗教</option>
-                <option value="philosophy">哲學</option>
-                <option value="culture">文化藝術</option>
-                <option value="exploration">探索</option>
-                <option value="medicine">醫學</option>
-                <option value="astronomy">天文</option>
-                <option value="geology">地質</option>
-                <option value="biology">生物</option>
+                <option value="civilization">Civilization</option>
+                <option value="politics">Politics</option>
+                <option value="war">War</option>
+                <option value="science">Science & Tech</option>
+                <option value="religion">Religion</option>
+                <option value="philosophy">Philosophy</option>
+                <option value="culture">Culture & Arts</option>
+                <option value="exploration">Exploration</option>
+                <option value="medicine">Medicine</option>
+                <option value="astronomy">Astronomy</option>
+                <option value="geology">Geology</option>
+                <option value="biology">Biology</option>
               </select>
             </div>
           </div>
         </div>
         <div class="edit-row">
-          <div class="edit-label">中文描述</div>
+          <div class="edit-label">Desc (ZH)</div>
           <textarea class="edit-input edit-textarea" id="edit-desc-zh"></textarea>
         </div>
         <div class="edit-row">
-          <div class="edit-label">英文描述</div>
+          <div class="edit-label">Desc (EN)</div>
           <textarea class="edit-input edit-textarea" id="edit-desc-en"></textarea>
         </div>
         <div class="edit-row">
-          <div class="edit-label">中文 Wikipedia URL</div>
+          <div class="edit-label">Wikipedia (ZH)</div>
           <input class="edit-input" id="edit-wiki-zh" type="text">
         </div>
         <div class="edit-row">
-          <div class="edit-label">英文 Wikipedia URL</div>
+          <div class="edit-label">Wikipedia (EN)</div>
           <input class="edit-input" id="edit-wiki-en" type="text">
         </div>
         <div class="edit-actions">
-          <button class="edit-save-btn" id="edit-save-btn">✓ 儲存修改</button>
+          <button class="edit-save-btn" id="edit-save-btn">✓ Save</button>
         </div>
       </div>
     </div>
@@ -1091,7 +1090,7 @@ body {
 
 <!-- Overlap picker — shown when clicking a crowded area -->
 <div id="overlap-menu">
-  <div id="overlap-title">此處有多個事件</div>
+  <div id="overlap-title">Multiple events here</div>
   <div id="overlap-list"></div>
 </div>
 
@@ -1105,8 +1104,10 @@ function toggleLang() {
   lang = lang === 'zh' ? 'en' : 'zh';
   localStorage.setItem('cosmic-lang', lang);
   applyLang();
+  buildLegend();
+  buildFilterPopup();
+  buildViewPopup();
   draw();
-  // Refresh popup only if it's actually open
   if (document.getElementById('popup-overlay').classList.contains('show') && _editingEventId) {
     const ev = events.find(e => e.id === _editingEventId);
     if (ev) showPopup(ev);
@@ -1127,6 +1128,11 @@ function applyLang() {
     if (sub) sub.textContent = '138億年 · 13.8 BILLION YEARS';
     document.getElementById('search-input').placeholder = '搜尋事件… 例如：牛頓、Newton、1687';
   }
+  // era 按鈕切換
+  document.querySelectorAll('.era-btn').forEach(b => {
+    const t = lang === 'en' ? b.dataset.en : b.dataset.zh;
+    if (t) b.textContent = t;
+  });
 }
 
 // Helper: get display text based on lang
@@ -1174,13 +1180,13 @@ function buildAxes(axesArray) {
 // Groups defined here (visual logic, not data)
 // group membership comes from axes[].group in JSON
 const AXIS_GROUP_DEFS = {
-  natural:      { label:'自然',     color:'#818cf8' },
-  global:       { label:'世界',     color:'#e2e8f0' },
-  region:       { label:'地區',     color:'#34d399' },
-  civilization: { label:'文明',     color:'#f97316' },
-  human:        { label:'人文',     color:'#f472b6' },
-  religion:     { label:'宗教',     color:'#fde68a' },
-  nation:       { label:'國家',     color:'#3b82f6' },
+  natural:      { label:'自然', label_en:'Nature',        color:'#818cf8' },
+  global:       { label:'世界', label_en:'Global',        color:'#e2e8f0' },
+  region:       { label:'地區', label_en:'Region',        color:'#34d399' },
+  civilization: { label:'文明', label_en:'Civilization',  color:'#f97316' },
+  human:        { label:'人文', label_en:'Humanities',    color:'#f472b6' },
+  religion:     { label:'宗教', label_en:'Religion',      color:'#fde68a' },
+  nation:       { label:'國家', label_en:'Nations',       color:'#3b82f6' },
 };
 
 // These are rebuilt after axes load
@@ -1282,7 +1288,7 @@ function buildLegend() {
     header.className = 'leg-group';
     header.dataset.group = gk;
     if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
-    header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer;white-space:nowrap;overflow:hidden;color:rgba(221,216,200,0.85)">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
+    header.innerHTML = `<span class="leg-group-arrow" title="Expand/Collapse">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer;white-space:nowrap;overflow:hidden;color:rgba(221,216,200,0.85)">${T(def.label,def.label_en)}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
 
     // 三角形：只負責展開/收合
     const arrowEl = header.querySelector('.leg-group-arrow');
@@ -1343,7 +1349,7 @@ function buildLegend() {
       const div = document.createElement('div');
       div.className = ax.zoomMin > 0 ? 'leg leg-sub' : 'leg';
       div.dataset.axis = id;
-      div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${ax.label}`;
+      div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${T(ax.label,ax.label_en)}`;
 
       let _dblGuard = false;
       div.addEventListener('dblclick', e => {
@@ -1409,7 +1415,7 @@ function updateToggleAllBtn() {
   if (!btn) return;
   const groupOrder = Object.keys(AXIS_GROUP_DEFS);
   const anyCollapsed = groupOrder.some(gk => _collapsedGroups.has(gk));
-  btn.textContent = anyCollapsed ? '展開全部' : '收合全部';
+  btn.textContent = anyCollapsed ? T('展開全部','Expand All') : T('收合全部','Collapse All');
 }
 
 function updateLegendState() {
@@ -1732,11 +1738,22 @@ function contentHeight() {
 // ════════════════════════════════════════════
 function formatYear(y) {
   const abs = Math.abs(y);
+  if (lang === 'en') {
+    if (y < 0) {
+      if (abs >= 100_000_000) { const yi=abs/1e8; return (yi>=100?yi.toFixed(0):yi>=10?yi.toFixed(1):yi.toFixed(2))+' Bya'; }
+      if (abs >= 10_000_000)  return (abs/1e6).toFixed(0)+' Mya';
+      if (abs >= 1_000_000)   return (abs/1e6).toFixed(1)+' Mya';
+      if (abs >= 10_000)      return (abs/10000).toFixed(1)+' Kya';
+      if (abs >= 1_000)       return Math.round(abs/1000)+' Kya';
+      return Math.round(abs)+' BC';
+    }
+    if (y === 0) return 'AD 1';
+    if (y > NOW) return `AD ${Math.round(y)} (future)`;
+    return `AD ${Math.round(y)}`;
+  }
   if (y < 0) {
-    if (abs >= 100_000_000) {           // ≥ 1億 → 億年前
-      const v = abs / 1e9;              // in units of 10億
-      const yi = abs / 1e8;             // in units of 1億
-      // 138億: yi=138 → "138億", 13.8億: yi=13.8 → "13.8億", 5.4億: yi=5.4 → "5.4億"
+    if (abs >= 100_000_000) {
+      const yi = abs / 1e8;
       return (yi >= 100 ? yi.toFixed(0) : yi >= 10 ? yi.toFixed(1) : yi.toFixed(2)) + ' 億年前';
     }
     if (abs >= 10_000_000)   return (abs / 1e6).toFixed(0) + ' 百萬年前';
@@ -1755,10 +1772,10 @@ function formatYearShort(y) {
   if (y < 0) {
     if (abs >= 100_000_000) {
       const yi = abs / 1e8;
-      return (yi >= 100 ? yi.toFixed(0) : yi >= 10 ? yi.toFixed(1) : yi.toFixed(2)) + '億yr';
+      return (yi >= 100 ? yi.toFixed(0) : yi >= 10 ? yi.toFixed(1) : yi.toFixed(2)) + 'Byr';
     }
     if (abs >= 1_000_000)    return (abs / 1e6).toFixed(0) + 'Myr';
-    if (abs >= 10_000)       return (abs / 10000).toFixed(1) + '萬BC';
+    if (abs >= 10_000)       return (abs / 10000).toFixed(1) + 'Kyr';
     if (abs >= 1_000)        return Math.round(abs / 1000) + 'K BC';
     return Math.round(abs) + ' BC';
   }
@@ -2132,6 +2149,12 @@ function drawRuler() {
 
 function formatScaleBar(years) {
   const abs = Math.abs(years);
+  if (lang === 'en') {
+    if (abs >= 1e9) return (abs/1e9).toFixed(abs>=5e9?0:1)+' Byr';
+    if (abs >= 1e6) return (abs/1e6).toFixed(abs>=5e6?0:1)+' Myr';
+    if (abs >= 1e3) return (abs/1e3).toFixed(0)+' Kyr';
+    return abs+' yr';
+  }
   if (abs >= 1e9) return (abs / 1e9).toFixed(abs >= 5e9 ? 0 : 1) + ' 億年';
   if (abs >= 1e6) return (abs / 1e6).toFixed(abs >= 5e6 ? 0 : 1) + ' 百萬年';
   if (abs >= 1e3) return (abs / 1e3).toFixed(0) + ' 千年';
@@ -2649,7 +2672,7 @@ function drawFutureZone() {
     ctx.font = '500 10px "Noto Sans TC", sans-serif';
     ctx.fillStyle = 'rgba(200,210,220,0.6)';
     ctx.textAlign = 'center';
-    ctx.fillText('今日', x1, 158);
+    ctx.fillText(T('今日','Today'), x1, 158);
   }
 
   // Right hard boundary
@@ -2663,7 +2686,7 @@ function drawFutureZone() {
     ctx.font = '500 10px "Noto Sans TC", sans-serif';
     ctx.fillStyle = 'rgba(200,210,220,0.35)';
     ctx.textAlign = 'center';
-    ctx.fillText('未來 500 年', x2 - 30, 158);
+    ctx.fillText(T('未來 500 年','Next 500 yr'), x2 - 30, 158);
   }
 }
 
@@ -3559,7 +3582,7 @@ function showPopup(ev) {
     if (!newAx) return;
     // Rebuild parent select excluding the new axis itself
     const pSel = document.getElementById('edit-axis-parent');
-    pSel.innerHTML = '<option value="">— 無（頂層）—</option>';
+    pSel.innerHTML = '<option value="">— None (top level) —</option>';
     Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
       if (id === newAxId) return;
       const opt = document.createElement('option');
@@ -3598,7 +3621,7 @@ function showPopup(ev) {
   // Populate axis parent select and zoomMin for the CURRENT axis
   const curAx = AXES[ev.axis];
   const parentSel = document.getElementById('edit-axis-parent');
-  parentSel.innerHTML = '<option value="">— 無（頂層）—</option>';
+  parentSel.innerHTML = '<option value="">— None (top level) —</option>';
   Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
     if (id === ev.axis) return; // can't be own parent
     const opt = document.createElement('option');
@@ -3634,7 +3657,7 @@ function showPopup(ev) {
   // Modified badge
   const n = countEdits();
   const badge = document.getElementById('edit-modified-badge');
-  if (n > 0) { badge.textContent = `● ${n} 筆已修改`; badge.classList.add('show'); }
+  if (n > 0) { badge.textContent = `● ${n} modified`; badge.classList.add('show'); }
   else { badge.classList.remove('show'); }
 
   // Close edit panel when switching events
@@ -3649,7 +3672,7 @@ function showPopup(ev) {
     a.href = ev.wiki_zh;
     a.target = '_blank';
     a.rel = 'noopener';
-    a.innerHTML = '📖 中文 Wikipedia';
+    a.innerHTML = '📖 Wikipedia (ZH)';
     linksEl.appendChild(a);
   }
   if (ev.wiki_en) {
@@ -3959,7 +3982,7 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
 
   // Update badge
   document.getElementById('edit-modified-badge').classList.add('show');
-  document.getElementById('edit-modified-badge').textContent = `● ${countEdits()} 筆已修改`;
+  document.getElementById('edit-modified-badge').textContent = `● ${countEdits()} modified`;
 
   // Refresh popup
   if (ev) showPopup(ev);
@@ -3967,7 +3990,7 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
 });
 
 function clearAllEdits() {
-  if (!confirm('確定要清除所有本地修改嗎？這會移除所有編輯記錄並重新整理頁面。')) return;
+  if (!confirm('Clear all local edits? This will remove all edit records and reload the page.')) return;
   localStorage.removeItem(EDIT_KEY);
   localStorage.removeItem(AXES_EDIT_KEY);
   location.reload();
@@ -4028,10 +4051,10 @@ function highlightMatch(text, query) {
 function formatYearShort(y) {
   if (!y && y !== 0) return '';
   const abs = Math.abs(y);
-  if (abs >= 1e9)  return (y < 0 ? '-' : '') + (abs/1e9).toFixed(1) + '億年';
-  if (abs >= 1e6)  return (y < 0 ? '-' : '') + (abs/1e6).toFixed(1) + '百萬年';
-  if (abs >= 1e4)  return (y < 0 ? (abs/1e4).toFixed(1)+'萬年前' : '西元 '+y);
-  return y < 0 ? Math.abs(y)+'年前' : '西元 '+y+'年';
+  if (abs >= 1e9)  return (y < 0 ? '-' : '') + (abs/1e9).toFixed(1) + (lang==='en'?' Bya':'億年');
+  if (abs >= 1e6)  return (y < 0 ? '-' : '') + (abs/1e6).toFixed(1) + (lang==='en'?' Mya':'百萬年');
+  if (abs >= 1e4)  return y < 0 ? (lang==='en'?(abs/1e4).toFixed(1)+' Kya':(abs/1e4).toFixed(1)+'萬年前') : (lang==='en'?'AD '+y:'西元 '+y);
+  return y < 0 ? (lang==='en'?Math.abs(y)+' BC':Math.abs(y)+'年前') : (lang==='en'?'AD '+y:'西元 '+y+'年');
 }
 
 function renderSearchResults(query) {
@@ -4042,7 +4065,7 @@ function renderSearchResults(query) {
   if (!query.trim()) { box.classList.remove('show'); return; }
 
   if (matches.length === 0) {
-    box.innerHTML = '<div class="sr-empty">找不到相關事件</div>';
+    box.innerHTML = `<div class="sr-empty">${T('找不到相關事件','No results found')}</div>`;
     box.classList.add('show');
     return;
   }
@@ -4215,17 +4238,21 @@ function buildViewPopup() {
     cats[v.category].push(v);
   });
 
+  // zh→en category map（從 view 資料建立）
+  const cats_en = {};
+  _viewDefs.forEach(v => { if (v.category_en) cats_en[v.category] = v.category_en; });
+
   Object.entries(cats).forEach(([cat, items]) => {
     const catEl = document.createElement('div');
     catEl.className = 'view-category';
-    catEl.textContent = cat;
+    catEl.textContent = lang === 'en' ? (cats_en[cat] || cat) : cat;
     popup.appendChild(catEl);
 
     items.forEach(v => {
       const el = document.createElement('div');
       el.className = 'view-item' + (_activeViewId === v.id ? ' active' : '');
       el.dataset.viewId = v.id;
-      el.innerHTML = `<span>${v.label}</span><span class="view-item-axes">${v.axes.join(', ')}</span>`;
+      el.innerHTML = `<span>${T(v.label,v.label_en)}</span><span class="view-item-axes">${v.axes.join(', ')}</span>`;
       el.addEventListener('click', () => applyView(v));
       popup.appendChild(el);
     });
@@ -4280,7 +4307,7 @@ function applyView(v) {
 
   // 3. Update button
   const btn = document.getElementById('view-btn');
-  btn.textContent = v.label;
+  btn.textContent = T(v.label, v.label_en);
   btn.classList.add('active');
 
   // 4. Close popup
@@ -4311,21 +4338,21 @@ let _filterSet = new Set(); // active categories
 
 // Category definitions: key, Chinese label, color
 const FILTER_CATS = [
-  { id:'war',          label:'戰爭',   color:'#f87171' },
-  { id:'science',      label:'科學',   color:'#67e8f9' },
-  { id:'religion',     label:'宗教',   color:'#fde68a' },
-  { id:'culture',      label:'文化',   color:'#f472b6' },
-  { id:'politics',     label:'政治',   color:'#a5b4fc' },
-  { id:'civilization', label:'文明',   color:'#f97316' },
-  { id:'nature',       label:'自然',   color:'#34d399' },
-  { id:'geology',      label:'地質',   color:'#6ee7b7' },
-  { id:'biology',      label:'生物',   color:'#86efac' },
-  { id:'astronomy',    label:'天文',   color:'#818cf8' },
-  { id:'migration',    label:'遷徙',   color:'#fbbf24' },
-  { id:'exploration',  label:'探索',   color:'#fb923c' },
-  { id:'trade',        label:'貿易',   color:'#c084fc' },
-  { id:'medicine',     label:'醫學',   color:'#4ade80' },
-  { id:'philosophy',   label:'哲學',   color:'#e2e8f0' },
+  { id:'war',          label:'戰爭',   label_en:'War',          color:'#f87171' },
+  { id:'science',      label:'科學',   label_en:'Science',      color:'#67e8f9' },
+  { id:'religion',     label:'宗教',   label_en:'Religion',     color:'#fde68a' },
+  { id:'culture',      label:'文化',   label_en:'Culture',      color:'#f472b6' },
+  { id:'politics',     label:'政治',   label_en:'Politics',     color:'#a5b4fc' },
+  { id:'civilization', label:'文明',   label_en:'Civilization', color:'#f97316' },
+  { id:'nature',       label:'自然',   label_en:'Nature',       color:'#34d399' },
+  { id:'geology',      label:'地質',   label_en:'Geology',      color:'#6ee7b7' },
+  { id:'biology',      label:'生物',   label_en:'Biology',      color:'#86efac' },
+  { id:'astronomy',    label:'天文',   label_en:'Astronomy',    color:'#818cf8' },
+  { id:'migration',    label:'遷徙',   label_en:'Migration',    color:'#fbbf24' },
+  { id:'exploration',  label:'探索',   label_en:'Exploration',  color:'#fb923c' },
+  { id:'trade',        label:'貿易',   label_en:'Trade',        color:'#c084fc' },
+  { id:'medicine',     label:'醫學',   label_en:'Medicine',     color:'#4ade80' },
+  { id:'philosophy',   label:'哲學',   label_en:'Philosophy',   color:'#e2e8f0' },
 ];
 
 function buildFilterPopup() {
@@ -4336,11 +4363,11 @@ function buildFilterPopup() {
     const active = _filterSet.has(cat.id);
     html += `<div class="filter-item${active?' active':''}" onclick="toggleFilterCat('${cat.id}')">
       <span class="filter-item-dot" style="background:${cat.color}"></span>
-      <span>${cat.label}</span>
+      <span>${T(cat.label,cat.label_en)}</span>
       <span style="font-size:10px;color:var(--muted);margin-left:auto">${cat.id}</span>
     </div>`;
   });
-  html += `<div class="filter-clear" onclick="clearFilter()">清除篩選</div>`;
+  html += `<div class="filter-clear" onclick="clearFilter()">${T('清除篩選','Clear Filter')}</div>`;
   popup.innerHTML = html;
 }
 

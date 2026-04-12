@@ -15,7 +15,8 @@
       "startYear": -13800000000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Cosmos"
     },
     {
       "id": "galaxy",
@@ -26,7 +27,8 @@
       "startYear": -13500000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Milky Way"
     },
     {
       "id": "solar-system",
@@ -37,7 +39,8 @@
       "startYear": -4600000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Solar System"
     },
     {
       "id": "earth",
@@ -48,7 +51,8 @@
       "startYear": -4540000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Earth"
     },
     {
       "id": "life",
@@ -59,7 +63,8 @@
       "startYear": -3800000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Life"
     },
     {
       "id": "human-evo",
@@ -70,7 +75,8 @@
       "startYear": -4000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Human Evolution"
     },
     {
       "id": "cross",
@@ -81,7 +87,8 @@
       "startYear": -10000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "global"
+      "group": "global",
+      "label_en": "Cross-Civilization"
     },
     {
       "id": "arts",
@@ -92,7 +99,8 @@
       "startYear": -3500,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "human"
+      "group": "human",
+      "label_en": "Arts & Culture"
     },
     {
       "id": "science",
@@ -103,7 +111,8 @@
       "startYear": -10000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "human"
+      "group": "human",
+      "label_en": "Science & Tech"
     },
     {
       "id": "east",
@@ -114,7 +123,8 @@
       "startYear": -30000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "East"
     },
     {
       "id": "mideast",
@@ -125,7 +135,8 @@
       "startYear": -8000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "Middle East"
     },
     {
       "id": "egypt",
@@ -136,7 +147,8 @@
       "startYear": -3100,
       "endYear": 641,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "Ancient Egypt"
     },
     {
       "id": "persia",
@@ -147,7 +159,8 @@
       "startYear": -559,
       "endYear": 1501,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "Persia"
     },
     {
       "id": "iran",
@@ -158,7 +171,8 @@
       "startYear": 1501,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "Iran"
     },
     {
       "id": "judaism",
@@ -169,7 +183,8 @@
       "startYear": -2000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "religion",
+      "label_en": "Judaism"
     },
     {
       "id": "christianity",
@@ -180,7 +195,8 @@
       "startYear": -6,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "religion",
+      "label_en": "Christianity"
     },
     {
       "id": "islam",
@@ -191,7 +207,8 @@
       "startYear": 570,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "religion",
+      "label_en": "Islam"
     },
     {
       "id": "africa",
@@ -202,7 +219,8 @@
       "startYear": -300000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "region"
+      "group": "region",
+      "label_en": "Africa"
     },
     {
       "id": "north-africa",
@@ -213,7 +231,8 @@
       "startYear": -814,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "N. Africa"
     },
     {
       "id": "west-africa",
@@ -224,7 +243,8 @@
       "startYear": 300,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "W. Africa"
     },
     {
       "id": "east-africa",
@@ -235,7 +255,8 @@
       "startYear": 100,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "E. Africa"
     },
     {
       "id": "south-africa",
@@ -246,7 +267,8 @@
       "startYear": 1000,
       "endYear": null,
       "zoomMin": 0.72,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "S. Africa"
     },
     {
       "id": "india",
@@ -257,7 +279,8 @@
       "startYear": -2600,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "India"
     },
     {
       "id": "hinduism",
@@ -268,7 +291,8 @@
       "startYear": -1500,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "religion"
+      "group": "religion",
+      "label_en": "Hinduism"
     },
     {
       "id": "buddhism",
@@ -279,7 +303,8 @@
       "startYear": -490,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "religion"
+      "group": "religion",
+      "label_en": "Buddhism"
     },
     {
       "id": "china",
@@ -290,7 +315,8 @@
       "startYear": -5000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "China"
     },
     {
       "id": "china-b",
@@ -301,7 +327,8 @@
       "startYear": -771,
       "endYear": null,
       "zoomMin": 0.75,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "Parallel States"
     },
     {
       "id": "taoism",
@@ -312,7 +339,8 @@
       "startYear": -550,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "religion"
+      "group": "religion",
+      "label_en": "Taoism"
     },
     {
       "id": "taiwan",
@@ -323,7 +351,8 @@
       "startYear": -30000,
       "endYear": null,
       "zoomMin": 0.51,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "Taiwan"
     },
     {
       "id": "japan",
@@ -334,7 +363,8 @@
       "startYear": -300,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "Japan"
     },
     {
       "id": "west",
@@ -345,7 +375,8 @@
       "startYear": -1600,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "West"
     },
     {
       "id": "greece",
@@ -356,7 +387,8 @@
       "startYear": -1600,
       "endYear": 476,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "Greece & Rome"
     },
     {
       "id": "europe",
@@ -367,7 +399,8 @@
       "startYear": 380,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "Europe"
     },
     {
       "id": "americas",
@@ -378,7 +411,8 @@
       "startYear": -20000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "Americas"
     },
     {
       "id": "north-america",
@@ -389,7 +423,8 @@
       "startYear": -2600,
       "endYear": null,
       "zoomMin": 0.65,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "N. America"
     },
     {
       "id": "latin-america",
@@ -400,7 +435,8 @@
       "startYear": -3000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "Latin America"
     },
     {
       "id": "south-america",
@@ -411,7 +447,8 @@
       "startYear": -1000,
       "endYear": null,
       "zoomMin": 0.72,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "S. America"
     },
     {
       "id": "usa",
@@ -422,7 +459,8 @@
       "startYear": 1776,
       "endYear": null,
       "zoomMin": 0.72,
-      "group": "nation"
+      "group": "nation",
+      "label_en": "USA"
     },
     {
       "id": "mesopotamia",
@@ -433,7 +471,8 @@
       "startYear": -8000,
       "endYear": -539,
       "zoomMin": 0.3,
-      "group": "civilization"
+      "group": "civilization",
+      "label_en": "Mesopotamia"
     },
     {
       "id": "climate",
@@ -444,7 +483,8 @@
       "startYear": -2400000000,
       "endYear": null,
       "zoomMin": 0,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Climate"
     },
     {
       "id": "migration",
@@ -455,7 +495,8 @@
       "startYear": -70000,
       "endYear": null,
       "zoomMin": 0.1,
-      "group": "natural"
+      "group": "natural",
+      "label_en": "Migration"
     },
     {
       "id": "oceania",
@@ -466,7 +507,8 @@
       "startYear": -65000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "Oceania"
     },
     {
       "id": "central-asia",
@@ -477,7 +519,8 @@
       "startYear": -40000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "Central Asia"
     },
     {
       "id": "southeast-asia",
@@ -488,7 +531,8 @@
       "startYear": -40000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "SE Asia"
     },
     {
       "id": "trade",
@@ -499,7 +543,8 @@
       "startYear": -3000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "global"
+      "group": "global",
+      "label_en": "Trade"
     },
     {
       "id": "arctic",
@@ -510,7 +555,8 @@
       "startYear": -30000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "Arctic"
     },
     {
       "id": "antarctic",
@@ -521,7 +567,8 @@
       "startYear": -30000,
       "endYear": null,
       "zoomMin": 0.3,
-      "group": "region"
+      "group": "region",
+      "label_en": "Antarctic"
     }
   ],
   "era_bands": [
@@ -9038,7 +9085,9 @@
         "cosmos",
         "galaxy",
         "solar-system"
-      ]
+      ],
+      "label_en": "Cosmic History",
+      "category_en": "Nature & Universe"
     },
     {
       "id": "nat-earth",
@@ -9048,7 +9097,9 @@
         "earth",
         "climate",
         "life"
-      ]
+      ],
+      "label_en": "Earth & Life",
+      "category_en": "Nature & Universe"
     },
     {
       "id": "nat-human",
@@ -9057,7 +9108,9 @@
       "axes": [
         "human-evo",
         "migration"
-      ]
+      ],
+      "label_en": "Human Evolution",
+      "category_en": "Nature & Universe"
     },
     {
       "id": "civ-all",
@@ -9076,7 +9129,9 @@
         "china",
         "greece",
         "latin-america"
-      ]
+      ],
+      "label_en": "All Civilizations",
+      "category_en": "Civilizations"
     },
     {
       "id": "civ-east",
@@ -9090,7 +9145,9 @@
         "persia",
         "india",
         "china"
-      ]
+      ],
+      "label_en": "Eastern Civilizations",
+      "category_en": "Civilizations"
     },
     {
       "id": "civ-west",
@@ -9100,7 +9157,9 @@
         "west",
         "greece",
         "europe"
-      ]
+      ],
+      "label_en": "Western Civilizations",
+      "category_en": "Civilizations"
     },
     {
       "id": "civ-africa",
@@ -9109,7 +9168,9 @@
       "axes": [
         "africa",
         "egypt"
-      ]
+      ],
+      "label_en": "African Civilizations",
+      "category_en": "Civilizations"
     },
     {
       "id": "civ-americas",
@@ -9118,7 +9179,9 @@
       "axes": [
         "americas",
         "latin-america"
-      ]
+      ],
+      "label_en": "Americas",
+      "category_en": "Civilizations"
     },
     {
       "id": "thm-religion",
@@ -9131,7 +9194,9 @@
         "hinduism",
         "buddhism",
         "taoism"
-      ]
+      ],
+      "label_en": "World Religions",
+      "category_en": "Themes"
     },
     {
       "id": "thm-science",
@@ -9140,7 +9205,9 @@
       "axes": [
         "science",
         "cross"
-      ]
+      ],
+      "label_en": "Science & Technology",
+      "category_en": "Themes"
     },
     {
       "id": "thm-trade",
@@ -9149,7 +9216,9 @@
       "axes": [
         "trade",
         "cross"
-      ]
+      ],
+      "label_en": "Trade & Exploration",
+      "category_en": "Themes"
     },
     {
       "id": "thm-climate",
@@ -9158,7 +9227,9 @@
       "axes": [
         "climate",
         "earth"
-      ]
+      ],
+      "label_en": "Climate & Environment",
+      "category_en": "Themes"
     },
     {
       "id": "nat-iceages",
@@ -9168,7 +9239,9 @@
         "climate",
         "earth",
         "life"
-      ]
+      ],
+      "label_en": "Five Ice Ages",
+      "category_en": "Themes"
     },
     {
       "id": "thm-migration",
@@ -9181,7 +9254,9 @@
         "southeast-asia",
         "arctic",
         "antarctic"
-      ]
+      ],
+      "label_en": "Human Migration",
+      "category_en": "Themes"
     },
     {
       "id": "reg-mideast",
@@ -9195,7 +9270,9 @@
         "islam",
         "judaism",
         "iran"
-      ]
+      ],
+      "label_en": "Middle East History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-eastasia",
@@ -9206,7 +9283,9 @@
         "china",
         "japan",
         "taiwan"
-      ]
+      ],
+      "label_en": "East Asia History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-europe",
@@ -9216,7 +9295,9 @@
         "west",
         "greece",
         "europe"
-      ]
+      ],
+      "label_en": "European History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-southasia",
@@ -9226,7 +9307,9 @@
         "india",
         "hinduism",
         "buddhism"
-      ]
+      ],
+      "label_en": "South Asia History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-africa",
@@ -9239,7 +9322,9 @@
         "east-africa",
         "south-africa",
         "egypt"
-      ]
+      ],
+      "label_en": "African History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-americas",
@@ -9251,7 +9336,9 @@
         "north-america",
         "usa",
         "south-america"
-      ]
+      ],
+      "label_en": "Americas History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-oceania",
@@ -9260,7 +9347,9 @@
       "axes": [
         "oceania",
         "antarctic"
-      ]
+      ],
+      "label_en": "Oceania",
+      "category_en": "Regions"
     },
     {
       "id": "reg-centralas",
@@ -9268,7 +9357,9 @@
       "label": "中亞歷史",
       "axes": [
         "central-asia"
-      ]
+      ],
+      "label_en": "Central Asia History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-sea",
@@ -9276,7 +9367,9 @@
       "label": "東南亞歷史",
       "axes": [
         "southeast-asia"
-      ]
+      ],
+      "label_en": "SE Asia History",
+      "category_en": "Regions"
     },
     {
       "id": "reg-polar",
@@ -9285,7 +9378,9 @@
       "axes": [
         "arctic",
         "antarctic"
-      ]
+      ],
+      "label_en": "Polar Regions",
+      "category_en": "Regions"
     }
   ]
 }
