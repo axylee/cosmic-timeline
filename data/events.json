@@ -434,6 +434,72 @@
       "endYear": -539,
       "zoomMin": 0.3,
       "group": "civilization"
+    },
+    {
+      "id": "climate",
+      "label": "氣候",
+      "color": "#7dd3fc",
+      "order": 39,
+      "parent": "earth",
+      "startYear": -2400000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "migration",
+      "label": "人類遷徙",
+      "color": "#fbbf24",
+      "order": 40,
+      "parent": "human-evo",
+      "startYear": -70000,
+      "endYear": null,
+      "zoomMin": 0.1,
+      "group": "natural"
+    },
+    {
+      "id": "oceania",
+      "label": "大洋洲",
+      "color": "#6ee7b7",
+      "order": 41,
+      "parent": "migration",
+      "startYear": -65000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "region"
+    },
+    {
+      "id": "central-asia",
+      "label": "中亞/北亞",
+      "color": "#fca5a5",
+      "order": 42,
+      "parent": "east",
+      "startYear": -40000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "region"
+    },
+    {
+      "id": "southeast-asia",
+      "label": "東南亞",
+      "color": "#86efac",
+      "order": 43,
+      "parent": "migration",
+      "startYear": -40000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "region"
+    },
+    {
+      "id": "trade",
+      "label": "貿易",
+      "color": "#c084fc",
+      "order": 44,
+      "parent": "cross",
+      "startYear": -3000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "global"
     }
   ],
   "era_bands": [
