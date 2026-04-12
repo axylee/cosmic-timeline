@@ -7766,7 +7766,8 @@
       "axis": "climate",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Holocene"
+      "wiki_en": "https://en.wikipedia.org/wiki/Holocene",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mollweide.jpg/1280px-Mollweide.jpg"
     },
     {
       "id": "climate-warming",
@@ -7776,7 +7777,8 @@
       "axis": "climate",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Global_warming"
+      "wiki_en": "https://en.wikipedia.org/wiki/Global_warming",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Change_in_Average_Temperature_With_Fahrenheit.svg/1200px-Change_in_Average_Temperature_With_Fahrenheit.svg.png"
     },
     {
       "id": "climate-ipcc",
@@ -7786,7 +7788,8 @@
       "axis": "climate",
       "level": 2,
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change"
+      "wiki_en": "https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Intergovernmental_Panel_on_Climate_Change_Logo.svg/1200px-Intergovernmental_Panel_on_Climate_Change_Logo.svg.png"
     },
     {
       "id": "climate-paris",
@@ -7807,7 +7810,8 @@
       "axis": "life",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Late_Ordovician_mass_extinction"
+      "wiki_en": "https://en.wikipedia.org/wiki/Late_Ordovician_mass_extinction",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ordovician_extinction.jpg/1280px-Ordovician_extinction.jpg"
     },
     {
       "id": "life-ext2",
@@ -7817,7 +7821,8 @@
       "axis": "life",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Late_Devonian_extinction"
+      "wiki_en": "https://en.wikipedia.org/wiki/Late_Devonian_extinction",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png"
     },
     {
       "id": "life-ext4",
@@ -7827,7 +7832,8 @@
       "axis": "life",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Triassic%E2%80%93Jurassic_extinction_event"
+      "wiki_en": "https://en.wikipedia.org/wiki/Triassic%E2%80%93Jurassic_extinction_event",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png"
     },
     {
       "id": "mig-002",
@@ -7848,7 +7854,8 @@
       "axis": "migration",
       "level": 2,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Early_human_migrations"
+      "wiki_en": "https://en.wikipedia.org/wiki/Early_human_migrations",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png"
     },
     {
       "id": "mig-004",
@@ -7859,7 +7866,8 @@
       "level": 2,
       "crossRef": "southeast-asia",
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Southeast_Asia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Southeast_Asia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/CasparSchmalkalden_AsiaMap.jpg"
     },
     {
       "id": "mig-005",
@@ -7881,7 +7889,8 @@
       "level": 1,
       "crossRef": "americas",
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_the_Americas"
+      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_the_Americas",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Early_migrations_mercator.svg/1200px-Early_migrations_mercator.svg.png"
     },
     {
       "id": "mig-007",
@@ -7891,7 +7900,8 @@
       "axis": "migration",
       "level": 2,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paleo-Indians"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleo-Indians",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Glyptodon_old_drawing.jpg"
     },
     {
       "id": "oce-001",
@@ -7922,7 +7932,8 @@
       "axis": "oceania",
       "level": 2,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Polynesia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Polynesia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Map_OC-Polynesia.PNG"
     },
     {
       "id": "oce-004",
@@ -7932,7 +7943,8 @@
       "axis": "oceania",
       "level": 1,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/M%C4%81ori_people"
+      "wiki_en": "https://en.wikipedia.org/wiki/M%C4%81ori_people",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/New_Zealand_-_Maori_rowing_-_8444.jpg/1280px-New_Zealand_-_Maori_rowing_-_8444.jpg"
     },
     {
       "id": "oce-005",
@@ -7942,7 +7954,8 @@
       "axis": "oceania",
       "level": 1,
       "category": "exploration",
-      "wiki_en": "https://en.wikipedia.org/wiki/James_Cook"
+      "wiki_en": "https://en.wikipedia.org/wiki/James_Cook",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Captainjamescookportrait.jpg/1280px-Captainjamescookportrait.jpg"
     },
     {
       "id": "oce-006",
@@ -7952,7 +7965,8 @@
       "axis": "oceania",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/History_of_Australia"
+      "wiki_en": "https://en.wikipedia.org/wiki/History_of_Australia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Aboriginal_farmers_at_Franklinford_1858.jpg"
     },
     {
       "id": "oce-007",
@@ -7983,7 +7997,8 @@
       "axis": "central-asia",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Domestication_of_the_horse"
+      "wiki_en": "https://en.wikipedia.org/wiki/Domestication_of_the_horse",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cave_painting_in_Doushe_cave%2C_Lorstan%2C_Iran%2C_8th_millennium_BC.JPG"
     },
     {
       "id": "cas-003",
@@ -7993,7 +8008,8 @@
       "axis": "central-asia",
       "level": 2,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Scythians"
+      "wiki_en": "https://en.wikipedia.org/wiki/Scythians",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Scythian_Kingdom_in_West_Asia.jpg/1280px-Scythian_Kingdom_in_West_Asia.jpg"
     },
     {
       "id": "cas-004",
@@ -8003,7 +8019,8 @@
       "axis": "central-asia",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Xiongnu"
+      "wiki_en": "https://en.wikipedia.org/wiki/Xiongnu",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Xiongnu_chieftain_%28black_backgrouond%29.jpg/1280px-Xiongnu_chieftain_%28black_backgrouond%29.jpg"
     },
     {
       "id": "cas-005",
@@ -8013,7 +8030,8 @@
       "axis": "central-asia",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/G%C3%B6kt%C3%BCrks"
+      "wiki_en": "https://en.wikipedia.org/wiki/G%C3%B6kt%C3%BCrks",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tyurki.jpg"
     },
     {
       "id": "cas-006",
@@ -8023,7 +8041,8 @@
       "axis": "central-asia",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif/1280px-Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif"
     },
     {
       "id": "cas-007",
@@ -8055,7 +8074,8 @@
       "axis": "southeast-asia",
       "level": 2,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Southeast_Asia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Southeast_Asia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/CasparSchmalkalden_AsiaMap.jpg"
     },
     {
       "id": "sea-002",
@@ -8098,7 +8118,8 @@
       "axis": "southeast-asia",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Khmer_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Khmer_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Map-of-southeast-asia_900_CE.svg/1200px-Map-of-southeast-asia_900_CE.svg.png"
     },
     {
       "id": "sea-006",
@@ -8108,7 +8129,8 @@
       "axis": "southeast-asia",
       "level": 1,
       "category": "culture",
-      "wiki_en": "https://en.wikipedia.org/wiki/Angkor_Wat"
+      "wiki_en": "https://en.wikipedia.org/wiki/Angkor_Wat",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Buddhist_monks_in_front_of_the_Angkor_Wat.jpg/1280px-Buddhist_monks_in_front_of_the_Angkor_Wat.jpg"
     },
     {
       "id": "sea-007",
@@ -8129,7 +8151,8 @@
       "axis": "southeast-asia",
       "level": 1,
       "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/Capture_of_Malacca_(1511)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Capture_of_Malacca_(1511)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Conquista_de_Malaca%2C_estudo_-_Ernesto_Condeixa_%28cropped%29.png"
     },
     {
       "id": "sea-009",
@@ -8169,7 +8192,8 @@
       "axis": "trade",
       "level": 2,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/Phoenicia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Phoenicia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Phoenicia_map-en.svg/1200px-Phoenicia_map-en.svg.png"
     },
     {
       "id": "trd-005",
@@ -8179,7 +8203,8 @@
       "axis": "trade",
       "level": 2,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/Viking_Age"
+      "wiki_en": "https://en.wikipedia.org/wiki/Viking_Age",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nicholas_Roerich%2C_Guests_from_Overseas.jpg/1280px-Nicholas_Roerich%2C_Guests_from_Overseas.jpg"
     },
     {
       "id": "trd-006",
@@ -8189,7 +8214,8 @@
       "axis": "trade",
       "level": 2,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/Marco_Polo"
+      "wiki_en": "https://en.wikipedia.org/wiki/Marco_Polo",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Marco_Polo_-_costume_tartare.jpg"
     },
     {
       "id": "trd-007",
@@ -8210,7 +8236,8 @@
       "axis": "trade",
       "level": 1,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/East_India_Company"
+      "wiki_en": "https://en.wikipedia.org/wiki/East_India_Company",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/B26055943A_-_A_map_of_the_East-Indies_and_the_adjacent_countries.jpg/1280px-B26055943A_-_A_map_of_the_East-Indies_and_the_adjacent_countries.jpg"
     },
     {
       "id": "trd-010",
@@ -8220,7 +8247,8 @@
       "axis": "trade",
       "level": 1,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/Suez_Canal"
+      "wiki_en": "https://en.wikipedia.org/wiki/Suez_Canal",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Suez_Canal%2C_Egypt_%2831596166706%29.jpg/1280px-Suez_Canal%2C_Egypt_%2831596166706%29.jpg"
     },
     {
       "id": "trd-011",
@@ -8241,7 +8269,8 @@
       "axis": "trade",
       "level": 2,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/World_Trade_Organization"
+      "wiki_en": "https://en.wikipedia.org/wiki/World_Trade_Organization",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fourth_Global_Review_of_Aid_for_Trade_1691_%289237986689%29.jpg/1280px-Fourth_Global_Review_of_Aid_for_Trade_1691_%289237986689%29.jpg"
     },
     {
       "id": "trd-013",
@@ -8271,7 +8300,8 @@
       "axis": "india",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Maurya_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Maurya_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Maurya_Empire%2C_c.250_BCE_network_model_v01.png"
     },
     {
       "id": "ind-004",
@@ -8281,7 +8311,8 @@
       "axis": "india",
       "level": 1,
       "category": "religion",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ashoka"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ashoka",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg"
     },
     {
       "id": "ind-005",
@@ -8291,7 +8322,8 @@
       "axis": "india",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Gupta_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Gupta_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/South_Asia_historical_AD375_EN.svg/1200px-South_Asia_historical_AD375_EN.svg.png"
     },
     {
       "id": "ind-006",
@@ -8312,7 +8344,8 @@
       "axis": "india",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mughal_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mughal_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/MughalEmpire1700.svg/1200px-MughalEmpire1700.svg.png"
     },
     {
       "id": "ind-008",
@@ -8355,7 +8388,8 @@
       "axis": "human-evo",
       "level": 1,
       "category": "evolution",
-      "wiki_en": "https://en.wikipedia.org/wiki/Behavioral_modernity"
+      "wiki_en": "https://en.wikipedia.org/wiki/Behavioral_modernity",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lascaux_painting.jpg"
     },
     {
       "id": "hevo-009",
@@ -8375,7 +8409,8 @@
       "axis": "human-evo",
       "level": 2,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/History_of_cities"
+      "wiki_en": "https://en.wikipedia.org/wiki/History_of_cities",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nuremberg_chronicles_-_Nuremberga.png/1280px-Nuremberg_chronicles_-_Nuremberga.png"
     },
     {
       "id": "hevo-011",
@@ -8385,7 +8420,8 @@
       "axis": "human-evo",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/History_of_writing"
+      "wiki_en": "https://en.wikipedia.org/wiki/History_of_writing",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Writing_system_survey.svg/1200px-Writing_system_survey.svg.png"
     },
     {
       "id": "sci-016",
@@ -8417,7 +8453,8 @@
       "axis": "science",
       "level": 2,
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/Voltaic_pile"
+      "wiki_en": "https://en.wikipedia.org/wiki/Voltaic_pile",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Volta_battery-MHS_373-IMG_3840-gradient.jpg/1280px-Volta_battery-MHS_373-IMG_3840-gradient.jpg"
     },
     {
       "id": "sci-020",
@@ -8427,7 +8464,8 @@
       "axis": "science",
       "level": 2,
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/X-ray"
+      "wiki_en": "https://en.wikipedia.org/wiki/X-ray",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/X-ray_by_Wilhelm_R%C3%B6ntgen_of_Albert_von_K%C3%B6lliker%27s_hand_-_18960123-02.jpg"
     },
     {
       "id": "egy-002",
@@ -8437,7 +8475,8 @@
       "axis": "egypt",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"
+      "wiki_en": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hieroglyphs_from_the_tomb_of_Seti_I.jpg"
     },
     {
       "id": "egy-003",
@@ -8448,7 +8487,8 @@
       "level": 1,
       "category": "civilization",
       "endYear": -2200,
-      "wiki_en": "https://en.wikipedia.org/wiki/Old_Kingdom_of_Egypt"
+      "wiki_en": "https://en.wikipedia.org/wiki/Old_Kingdom_of_Egypt",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/4th_Dynasty_of_Egypt-03.png/1280px-4th_Dynasty_of_Egypt-03.png"
     },
     {
       "id": "egy-004",
@@ -8458,7 +8498,8 @@
       "axis": "egypt",
       "level": 2,
       "category": "religion",
-      "wiki_en": "https://en.wikipedia.org/wiki/Akhenaten"
+      "wiki_en": "https://en.wikipedia.org/wiki/Akhenaten",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/GD-EG-Caire-Mus%C3%A9e061.JPG"
     },
     {
       "id": "egy-005",
@@ -8468,7 +8509,8 @@
       "axis": "egypt",
       "level": 2,
       "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Kadesh"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Kadesh",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Ramses_II_at_Kadesh.jpg"
     },
     {
       "id": "egy-006",
@@ -8478,7 +8520,8 @@
       "axis": "egypt",
       "level": 1,
       "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/Egypt_(Roman_province)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Egypt_(Roman_province)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg/1200px-Roman_Empire_-_Aegyptus_%28125_AD%29.svg.png"
     },
     {
       "id": "egy-007",
@@ -8499,7 +8542,8 @@
       "axis": "egypt",
       "level": 2,
       "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/French_campaign_in_Egypt_and_Syria"
+      "wiki_en": "https://en.wikipedia.org/wiki/French_campaign_in_Egypt_and_Syria",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/French_campaign_in_Egypt_and_Syria.jpg/1280px-French_campaign_in_Egypt_and_Syria.jpg"
     },
     {
       "id": "egy-009",
@@ -8509,7 +8553,8 @@
       "axis": "egypt",
       "level": 2,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Egyptian_revolution_of_1952"
+      "wiki_en": "https://en.wikipedia.org/wiki/Egyptian_revolution_of_1952",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Free_Officers%2C_1953.jpg"
     },
     {
       "id": "afr-006",
@@ -8519,7 +8564,8 @@
       "axis": "africa",
       "level": 2,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Kush"
+      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Kush",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Kushite_heartland_and_Kushite_Empire_of_the_25th_dynasty_circa_700_BCE.jpg/1280px-Kushite_heartland_and_Kushite_Empire_of_the_25th_dynasty_circa_700_BCE.jpg"
     },
     {
       "id": "afr-007",
@@ -8529,7 +8575,8 @@
       "axis": "africa",
       "level": 2,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Carthage"
+      "wiki_en": "https://en.wikipedia.org/wiki/Carthage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Montage_ville_de_Carthage.png/1280px-Montage_ville_de_Carthage.png"
     },
     {
       "id": "afr-008",
@@ -8539,7 +8586,8 @@
       "axis": "africa",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Aksum"
+      "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Aksum",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/ET_Axum_asv2018-01_img48_Dungur.jpg/1280px-ET_Axum_asv2018-01_img48_Dungur.jpg"
     },
     {
       "id": "afr-009",
@@ -8571,7 +8619,8 @@
       "axis": "africa",
       "level": 2,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cape_Colony"
+      "wiki_en": "https://en.wikipedia.org/wiki/Cape_Colony",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Flag_of_the_Cape_Colony_%281876%E2%80%931910%29.svg/1200px-Flag_of_the_Cape_Colony_%281876%E2%80%931910%29.svg.png"
     },
     {
       "id": "afr-012",
@@ -8602,7 +8651,8 @@
       "axis": "americas",
       "level": 1,
       "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/American_Civil_War"
+      "wiki_en": "https://en.wikipedia.org/wiki/American_Civil_War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/CivilWarUSAColl.png"
     },
     {
       "id": "lat-007",
@@ -8612,7 +8662,8 @@
       "axis": "latin-america",
       "level": 2,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Chav%C3%ADn_culture"
+      "wiki_en": "https://en.wikipedia.org/wiki/Chav%C3%ADn_culture",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Chav%C3%ADn_de_Hu%C3%A1ntar.JPG"
     },
     {
       "id": "lat-008",
@@ -8622,7 +8673,8 @@
       "axis": "latin-america",
       "level": 1,
       "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Inca_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Inca_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Montaje_2_conquista_del_Peru.png/1280px-Montaje_2_conquista_del_Peru.png"
     },
     {
       "id": "lat-009",
@@ -8632,7 +8684,8 @@
       "axis": "latin-america",
       "level": 2,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Abolitionism_in_Brazil"
+      "wiki_en": "https://en.wikipedia.org/wiki/Abolitionism_in_Brazil",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Cartaz_de_1888_comemorativo_a_Aboli%C3%A7%C3%A3o_da_Escravid%C3%A3o_no_Brasil.jpg"
     },
     {
       "id": "lat-010",
@@ -8664,7 +8717,8 @@
       "axis": "cross",
       "level": 2,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Revolutions_of_1848"
+      "wiki_en": "https://en.wikipedia.org/wiki/Revolutions_of_1848",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Horace_Vernet-Barricade_rue_Soufflot.jpg/1280px-Horace_Vernet-Barricade_rue_Soufflot.jpg"
     },
     {
       "id": "crs-015",
@@ -8719,7 +8773,8 @@
       "level": 1,
       "crossRef": "china",
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Confucianism"
+      "wiki_en": "https://en.wikipedia.org/wiki/Confucianism",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg/1200px-%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg.png"
     },
     {
       "id": "eas-002",
@@ -8730,7 +8785,8 @@
       "level": 1,
       "crossRef": "china",
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Tang_outline_map%2C_661.svg/1200px-Tang_outline_map%2C_661.svg.png"
     },
     {
       "id": "eas-003",
@@ -8741,7 +8797,8 @@
       "level": 2,
       "crossRef": "china",
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Map_of_Ming_Chinese_empire_1415_%28cropped_2%29.jpg"
     },
     {
       "id": "eas-004",
@@ -8752,7 +8809,8 @@
       "level": 1,
       "crossRef": "japan",
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Meiji_Restoration"
+      "wiki_en": "https://en.wikipedia.org/wiki/Meiji_Restoration",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/MeijiJoukyou.jpg/1280px-MeijiJoukyou.jpg"
     },
     {
       "id": "wes-001",
@@ -8763,7 +8821,8 @@
       "level": 1,
       "crossRef": "greece",
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ancient_Greece"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ancient_Greece",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Sicily_Selinunte_Temple_E_%28Hera%29.JPG/1280px-Sicily_Selinunte_Temple_E_%28Hera%29.JPG"
     },
     {
       "id": "wes-002",
@@ -8786,7 +8845,8 @@
       "level": 1,
       "crossRef": "europe",
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/Scientific_Revolution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Scientific_Revolution",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/1280px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg"
     },
     {
       "id": "wes-004",
@@ -8797,7 +8857,8 @@
       "level": 1,
       "crossRef": "usa",
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
+      "wiki_en": "https://en.wikipedia.org/wiki/Age_of_Enlightenment",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Les_salons_au_XVIIIe_si%C3%A8cle_-_Histoire_Image.jpg/1280px-Les_salons_au_XVIIIe_si%C3%A8cle_-_Histoire_Image.jpg"
     },
     {
       "id": "cos-015",
@@ -8807,7 +8868,8 @@
       "axis": "cosmos",
       "level": 2,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Dark_matter"
+      "wiki_en": "https://en.wikipedia.org/wiki/Dark_matter",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/UniverseComposition.svg/1200px-UniverseComposition.svg.png"
     },
     {
       "id": "gal-007",
@@ -8817,7 +8879,8 @@
       "axis": "galaxy",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Sagittarius_A*"
+      "wiki_en": "https://en.wikipedia.org/wiki/Sagittarius_A*",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Gcle.jpg/1280px-Gcle.jpg"
     },
     {
       "id": "gal-008",
@@ -8827,7 +8890,8 @@
       "axis": "galaxy",
       "level": 2,
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/Sagittarius_A*"
+      "wiki_en": "https://en.wikipedia.org/wiki/Sagittarius_A*",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/EHT_Saggitarius_A_black_hole.tif/lossy-page1-1280px-EHT_Saggitarius_A_black_hole.tif.jpg"
     },
     {
       "id": "sol-017",
@@ -8837,7 +8901,8 @@
       "axis": "solar-system",
       "level": 2,
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/Pluto"
+      "wiki_en": "https://en.wikipedia.org/wiki/Pluto",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Pluto_in_True_Color_-_High-Res.png/1280px-Pluto_in_True_Color_-_High-Res.png"
     },
     {
       "id": "sol-018",
@@ -8847,7 +8912,8 @@
       "axis": "solar-system",
       "level": 2,
       "category": "science",
-      "wiki_en": "https://en.wikipedia.org/wiki/Pluto"
+      "wiki_en": "https://en.wikipedia.org/wiki/Pluto",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Global_LORRI_mosaic_of_Pluto_in_true_colour.jpg"
     },
     {
       "id": "ear-016",
@@ -8857,7 +8923,8 @@
       "axis": "earth",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Pangaea"
+      "wiki_en": "https://en.wikipedia.org/wiki/Pangaea",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif"
     },
     {
       "id": "ear-017",
@@ -8867,7 +8934,8 @@
       "axis": "earth",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Pangaea"
+      "wiki_en": "https://en.wikipedia.org/wiki/Pangaea",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif"
     },
     {
       "id": "ear-018",
@@ -8877,7 +8945,8 @@
       "axis": "earth",
       "level": 2,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Himalayas"
+      "wiki_en": "https://en.wikipedia.org/wiki/Himalayas",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Himalayas_and_allied_ranges_NASA_Landsat_showing_the_eight_thousanders%2C_annotated_with_major_rivers.jpg/1280px-Himalayas_and_allied_ranges_NASA_Landsat_showing_the_eight_thousanders%2C_annotated_with_major_rivers.jpg"
     },
     {
       "id": "lif-036",
@@ -8887,7 +8956,8 @@
       "axis": "life",
       "level": 1,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Holocene_extinction"
+      "wiki_en": "https://en.wikipedia.org/wiki/Holocene_extinction",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png"
     },
     {
       "id": "hevo-012",
@@ -8897,7 +8967,8 @@
       "axis": "human-evo",
       "level": 2,
       "category": "evolution",
-      "wiki_en": "https://en.wikipedia.org/wiki/Neanderthal_extinction"
+      "wiki_en": "https://en.wikipedia.org/wiki/Neanderthal_extinction",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Neanderthal_distribution.jpg/1280px-Neanderthal_distribution.jpg"
     },
     {
       "id": "mig-000",
@@ -8908,7 +8979,8 @@
       "level": 1,
       "crossRef": "human-evo",
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans"
+      "wiki_en": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png"
     }
   ],
   "views": [
