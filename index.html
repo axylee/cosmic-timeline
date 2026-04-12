@@ -81,8 +81,8 @@ body {
 #view-btn.active { border-color: rgba(167,139,250,0.5); color: #a78bfa; background: rgba(167,139,250,0.1); }
 
 #view-popup {
-  position: fixed; z-index: 300;
-  top: 44px; left: 50%; transform: translateX(-50%);
+  position: fixed; z-index: 400;
+  top: 46px; left: auto; right: auto;
   width: 260px;
   background: rgba(8,12,24,0.97);
   border: 1px solid rgba(255,255,255,0.12);
@@ -816,7 +816,7 @@ body {
     <div id="search-results"></div>
   </div>
   <button id="lang-toggle" onclick="toggleLang()" title="Switch language">中/EN</button>
-  <button id="view-btn" onclick="toggleViewPopup()" title="主題視圖">🎯 視圖</button>
+  <button id="view-btn" onclick="toggleViewPopup()" title="事件視圖">Events</button>
   <p id="header-sub">138億年 · 13.8 BILLION YEARS</p>
   <div id="scale-bar">
     <div id="scale-line-wrap">
@@ -826,7 +826,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121937</span>
+  <span id="version-label">v202604121956</span>
 </div>
 
 <div id="view-popup"></div>
@@ -4156,24 +4156,57 @@ function buildViewPopup() {
 
 function toggleViewPopup() {
   const popup = document.getElementById('view-popup');
-  popup.classList.toggle('show');
+  const btn   = document.getElementById('view-btn');
+  if (popup.classList.contains('show')) {
+    popup.classList.remove('show');
+    return;
+  }
+  // Position popup below the button
+  const rect = btn.getBoundingClientRect();
+  popup.style.left = rect.left + 'px';
+  popup.style.top  = (rect.bottom + 6) + 'px';
+  popup.classList.add('show');
 }
 
 function applyView(v) {
-  // Solo the axes in this view
-  _soloSet = new Set(v.axes);
-  _setSoloCtrl(true);
+  // 1. Hide all axes not in this view
+  hiddenAxes.clear();
+  _soloSet.clear();
+  _setSoloCtrl(false);
+
+  const viewSet = new Set(v.axes);
+  Object.keys(AXES).forEach(id => {
+    if (!viewSet.has(id)) hiddenAxes.add(id);
+  });
+
   _activeViewId = v.id;
 
-  // Update button label
+  // 2. Auto zoom: find earliest startYear among selected axes
+  let earliest = Infinity;
+  let latest = -Infinity;
+  v.axes.forEach(id => {
+    const ax = AXES[id];
+    if (!ax) return;
+    if (ax.startYear < earliest) earliest = ax.startYear;
+    const end = ax.endYear ?? NOW;
+    if (end > latest) latest = end;
+  });
+
+  if (earliest !== Infinity) {
+    const span = latest - earliest;
+    const padding = span * 0.15; // 15% padding each side
+    const targetStart = earliest - padding;
+    const targetEnd   = latest  + padding;
+    animateToView(targetStart, targetEnd, null);
+  }
+
+  // 3. Update button
   const btn = document.getElementById('view-btn');
-  btn.textContent = `🎯 ${v.label}`;
+  btn.textContent = v.label;
   btn.classList.add('active');
 
-  // Close popup
+  // 4. Close popup
   document.getElementById('view-popup').classList.remove('show');
-
-  // Rebuild popup to update active state
   buildViewPopup();
   updateLegendState();
   draw();
@@ -4185,7 +4218,7 @@ showAllAxes = function() {
   _origShowAllAxes();
   _activeViewId = null;
   const btn = document.getElementById('view-btn');
-  btn.textContent = '🎯 視圖';
+  btn.textContent = 'Events';
   btn.classList.remove('active');
   buildViewPopup();
 };
