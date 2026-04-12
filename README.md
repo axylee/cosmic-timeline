@@ -212,14 +212,17 @@ python check.py
 ### ─── 顯示控制 ───────────────────────────────────
 
 #### 👁 隱藏 / 顯示特定軸線
-- 右側 Legend → **單擊**軸線名稱：切換顯示/隱藏
+- 右側 Legend → **單擊**軸線名稱或群組：切換顯示/隱藏
+- 右側 Legend → **雙擊**軸線名稱或群組：進入 Solo 模式（只顯示該項，其他淡化）
+- Solo 狀態下**單擊**其他項目：加入顯示；再次單擊：移除
+- Solo 狀態下**雙擊**任何項目：退出 Solo
+- 右側頂部「全部顯示」按鈕：清除所有隱藏與 Solo 狀態
 
-#### 🎯 Solo 模式：只看特定軸線或群組
-- **雙擊**軸線名稱 → Solo 單條軸線
-- **雙擊**群組標題（自然科學/宗教/文明等）→ Solo 整個群組
-- Solo 狀態下**單擊**其他軸線或群組 → 加入比較
-- **再雙擊**同一個 → 退出 Solo
-- 左側「淡化強度」滑桿：調整非 Solo 的透明度
+#### 🎯 Events 視圖（主題快速切換）
+- 點擊頂部「**Events**」按鈕 → 彈出分類選單
+- 選單分四類：自然與宇宙 / 文明縱覽 / 主題 / 地區
+- 點選任一項目：自動隱藏無關軸線，並 zoom 到對應時間範圍
+- 取消：點右側「**全部顯示**」按鈕恢復
 
 #### 🌐 中英文切換
 - 右上角「中 / EN」按鈕
@@ -302,15 +305,15 @@ python check.py
 
 群組定義的設計原則：**演化順序**（自然 → 世界 → 地區 → 文明 → 宗教 → 人文 → 國家），父子關係反映「某地區先有文明，文明之後才有國家」的邏輯層次。
 
-| 群組 key | 中文名稱 | 顏色 | 定義 | 包含軸線 | 未來擴充方向 |
-|---------|---------|------|------|---------|------------|
-| natural | 自然 | 靛藍 | 宇宙誕生至人類出現，純自然演化過程 | cosmos, galaxy, solar-system, earth, life, human-evo | climate（氣候/冰河期） |
-| global | 世界 | 白銀 | 與人類行為直接相關、跨越多地區影響全人類的事件，不屬於單一地區或文明 | cross | migration（人類遷徙）, trade（貿易/絲路） |
-| region | 地區 | 翠綠 | 人類活動的地理容器，定義各大地理區域，早於文明與國家存在 | east, west, africa, americas | central-asia, oceania, southeast-asia |
-| civilization | 文明 | 橙色 | 在各地理區域內發展的文明，部分延續至今，早於近代國家概念 | mideast, mesopotamia, egypt, persia, india, china, greece, latin-america | 撒哈拉以南非洲文明, 中亞草原文明, 大洋洲原住民, 東南亞文明 |
+| 群組 key | 名稱 | 顏色 | 定義 | 包含軸線 | 未來擴充 |
+|---------|------|------|------|---------|---------|
+| natural | 自然 | 靛藍 | 宇宙誕生至人類出現，純自然演化過程 | cosmos, galaxy, solar-system, earth, climate, life, human-evo, migration | 無 |
+| global | 世界 | 白銀 | 與人類行為直接相關、跨越多地區影響全人類，不屬於單一地區或文明 | cross, trade | 可擴充全球性主題軸 |
+| region | 地區 | 翠綠 | 人類活動的地理容器，早於文明與國家存在 | east, west, africa, americas, central-asia, southeast-asia, oceania, arctic, antarctic | 可加中亞細分等 |
+| civilization | 文明 | 橙色 | 各地理區域內發展的文明，部分延續至今，早於近代國家 | mideast, mesopotamia, egypt, persia, india, china, greece, latin-america | 撒哈拉以南、東南亞文明等 |
 | religion | 宗教 | 金黃 | 各宗教體系的起源與發展 | judaism, christianity, islam, hinduism, buddhism, taoism | 未來可加其他宗教 |
-| human | 人文 | 玫瑰 | 跨越地區與文明的人類文化活動，包含科學與藝術 | science, arts | 未來可擴充 |
-| nation | 國家 | 藍色 | 近代以後有明確政治實體的重要國家或地區 | iran, north-africa, west-africa, east-africa, south-africa, china-b, taiwan, japan, europe, north-america, south-america, usa | 重要國家陸續補充 |
+| human | 人文 | 玫瑰 | 跨越地區與文明的人類文化活動 | science, arts | 未來可擴充 |
+| nation | 國家 | 藍色 | 近代以後有明確政治實體的重要國家或地區 | iran, north/west/east/south-africa, china-b, taiwan, japan, europe, north-america, south-america, usa | 重要國家陸續補充 |
 
 ### 群組設計說明
 
@@ -333,5 +336,8 @@ python check.py
 | 2026-04-11 | cosmic-tools.html 工具箱（新增/圖片/確認輸出）|
 | 2026-04-11 | 兩河流域、宇宙、中東戰火、青銅鐵器 大批事件 |
 | 2026-04-12 | UI 改版：比例尺移至 header、Legend 寬度優化、Solo 邏輯統一 |
-| 2026-04-12 | 群組架構重整：human→region/global/human，science/arts→human，新增 global group |
-| 2026-04-12 | east/west label 改為東方/西方，zoomMin 改為 0.30，文明軸線 zoomMin 全部統一 0.30 |
+| 2026-04-12 | 群組架構重整：7個 group（natural/global/region/civilization/religion/human/nation） |
+| 2026-04-12 | east/west label 改為東方/西方，zoomMin 改為 0.30，文明軸線全部 0.30 |
+| 2026-04-12 | 新增軸線：climate, migration, oceania, central-asia, southeast-asia, trade, arctic, antarctic |
+| 2026-04-12 | 大批事件補充：india, egypt, africa, americas, latin-america, cross, east, west, migration, 自然群組 |
+| 2026-04-12 | Events 視圖選單：header 按鈕 → popup 分類選單，點選後自動 hide/show + zoom 到對應時間範圍 |
