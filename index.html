@@ -131,7 +131,7 @@ body {
   right: 40px;
   top: 80px; bottom: 80px;
   z-index: 51;
-  width: 72px;
+  width: 65px;
   display: block;                    /* block 而非 flex，子元素寬度行為完全可預期 */
   padding: 8px 0;
   background: rgba(5,8,16,0.82);
@@ -774,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121440</span>
+  <span id="version-label">v202604121454</span>
 </div>
 
 <div id="legend">
@@ -784,6 +784,12 @@ body {
     <button id="legend-clear-edits" onclick="clearAllEdits()">清除修改</button>
   </div>
   <span id="legend-zoom-hint">zoom in 展開 ↓</span>
+  <div id="legend-solo-ctrl" class="disabled">
+    <span>淡化強度</span>
+    <input type="range" id="solo-dim-slider" min="1" max="30" value="7"
+      oninput="updateSoloDim(this.value)">
+    <span id="solo-dim-val">7%</span>
+  </div>
 </div>
 
 <canvas id="timeline-canvas"></canvas>
