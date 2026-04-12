@@ -80,6 +80,54 @@ body {
 #view-btn:hover { background: rgba(255,255,255,0.14); color: #fff; }
 #view-btn.active { border-color: rgba(167,139,250,0.5); color: #a78bfa; background: rgba(167,139,250,0.1); }
 
+/* ── FILTER BUTTON ── */
+#filter-btn {
+  padding: 4px 10px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(221,216,200,0.7); font-size: 10px; font-family: inherit;
+  cursor: pointer; letter-spacing: 0.05em; transition: all .15s;
+  white-space: nowrap;
+}
+#filter-btn:hover { background: rgba(255,255,255,0.14); color: #fff; }
+#filter-btn.active { border-color: rgba(251,191,36,0.5); color: #fbbf24; background: rgba(251,191,36,0.1); }
+
+#filter-popup {
+  position: fixed; z-index: 400;
+  top: 46px; left: auto; right: auto;
+  width: 200px;
+  background: rgba(8,12,24,0.97);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+  max-height: 70vh; overflow-y: auto;
+  display: none; padding: 8px 0;
+  scrollbar-width: none;
+}
+#filter-popup::-webkit-scrollbar { display: none; }
+#filter-popup.show { display: block; }
+.filter-item {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 12px; color: rgba(221,216,200,0.8);
+  padding: 7px 14px; cursor: pointer;
+  display: flex; align-items: center; gap: 8px;
+  transition: background .1s;
+}
+.filter-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.filter-item.active { color: #fbbf24; background: rgba(251,191,36,0.08); }
+.filter-item-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.filter-clear {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px; color: rgba(221,216,200,0.4);
+  padding: 7px 14px; cursor: pointer;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 4px; text-align: center;
+  transition: color .1s;
+}
+.filter-clear:hover { color: var(--text); }
+
 #view-popup {
   position: fixed; z-index: 400;
   top: 46px; left: auto; right: auto;
@@ -817,6 +865,7 @@ body {
   </div>
   <button id="lang-toggle" onclick="toggleLang()" title="Switch language">中/EN</button>
   <button id="view-btn" onclick="toggleViewPopup()" title="事件視圖">Events</button>
+  <button id="filter-btn" onclick="toggleFilterPopup()" title="事件篩選">Filter</button>
   <p id="header-sub">138億年 · 13.8 BILLION YEARS</p>
   <div id="scale-bar">
     <div id="scale-line-wrap">
@@ -826,10 +875,11 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604122100</span>
+  <span id="version-label">v202604122208</span>
 </div>
 
 <div id="view-popup"></div>
+<div id="filter-popup"></div>
 
 <div id="legend">
   <div id="legend-controls">
@@ -1664,6 +1714,7 @@ function isSoloDimmed(axId) {
 
 function categoryAlpha(ev) {
   if (isSoloDimmed(ev.axis)) return _soloDimAlpha;
+  if (isFilterDimmed(ev)) return 0.08;
   if (!highlightedCategory) return 1;
   const zoom = currentZoom();
   if (zoom >= ZOOM_GROUP) return 1;
@@ -2244,7 +2295,7 @@ function drawPill(ev, y, opts = {}) {
   ctx.save();
 
   // ── Pill fill ──
-  const soloMul = (isSoloDimmed(ev.axis)) ? _soloDimAlpha : 1;
+  const soloMul = (isSoloDimmed(ev.axis)) ? _soloDimAlpha : isFilterDimmed(ev) ? 0.08 : 1;
   ctx.beginPath();
   ctx.roundRect(rx1, y - pillH, w, pillH * 2, r);
   ctx.fillStyle = color;
@@ -2488,7 +2539,7 @@ function drawEvents(eventsInView) {
     // Label — only when zoomed in enough and not a cluster
     if (!isCluster && labelVisible(rep)) {
       ctx.save();
-      const evSoloMul = (isSoloDimmed(rep.axis)) ? _soloDimAlpha : 1;
+      const evSoloMul = (isSoloDimmed(rep.axis)) ? _soloDimAlpha : isFilterDimmed(rep) ? 0.08 : 1;
       const fs = rep.level === 1 ? 11 : 10;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
       const tw  = ctx.measureText(T(rep.zh, rep.en)).width;
@@ -4226,6 +4277,103 @@ showAllAxes = function() {
   btn.classList.remove('active');
   buildViewPopup();
 };
+
+// ════════════════════════════════════════════
+//  FILTER — category-level event highlight
+// ════════════════════════════════════════════
+let _filterSet = new Set(); // active categories
+
+// Category definitions: key, Chinese label, color
+const FILTER_CATS = [
+  { id:'war',          label:'戰爭',   color:'#f87171' },
+  { id:'science',      label:'科學',   color:'#67e8f9' },
+  { id:'religion',     label:'宗教',   color:'#fde68a' },
+  { id:'culture',      label:'文化',   color:'#f472b6' },
+  { id:'politics',     label:'政治',   color:'#a5b4fc' },
+  { id:'civilization', label:'文明',   color:'#f97316' },
+  { id:'nature',       label:'自然',   color:'#34d399' },
+  { id:'geology',      label:'地質',   color:'#6ee7b7' },
+  { id:'biology',      label:'生物',   color:'#86efac' },
+  { id:'astronomy',    label:'天文',   color:'#818cf8' },
+  { id:'migration',    label:'遷徙',   color:'#fbbf24' },
+  { id:'exploration',  label:'探索',   color:'#fb923c' },
+  { id:'trade',        label:'貿易',   color:'#c084fc' },
+  { id:'medicine',     label:'醫學',   color:'#4ade80' },
+  { id:'philosophy',   label:'哲學',   color:'#e2e8f0' },
+];
+
+function buildFilterPopup() {
+  const popup = document.getElementById('filter-popup');
+  if (!popup) return;
+  let html = '';
+  FILTER_CATS.forEach(cat => {
+    const active = _filterSet.has(cat.id);
+    html += `<div class="filter-item${active?' active':''}" onclick="toggleFilterCat('${cat.id}')">
+      <span class="filter-item-dot" style="background:${cat.color}"></span>
+      <span>${cat.label}</span>
+      <span style="font-size:10px;color:var(--muted);margin-left:auto">${cat.id}</span>
+    </div>`;
+  });
+  html += `<div class="filter-clear" onclick="clearFilter()">清除篩選</div>`;
+  popup.innerHTML = html;
+}
+
+function toggleFilterPopup() {
+  const popup = document.getElementById('filter-popup');
+  const btn   = document.getElementById('filter-btn');
+  if (popup.classList.contains('show')) {
+    popup.classList.remove('show');
+    return;
+  }
+  buildFilterPopup();
+  const rect = btn.getBoundingClientRect();
+  popup.style.left = rect.left + 'px';
+  popup.style.top  = (rect.bottom + 6) + 'px';
+  popup.classList.add('show');
+}
+
+function toggleFilterCat(catId) {
+  if (_filterSet.has(catId)) _filterSet.delete(catId);
+  else _filterSet.add(catId);
+  _updateFilterBtn();
+  buildFilterPopup();
+  draw();
+}
+
+function clearFilter() {
+  _filterSet.clear();
+  _updateFilterBtn();
+  buildFilterPopup();
+  document.getElementById('filter-popup').classList.remove('show');
+  draw();
+}
+
+function _updateFilterBtn() {
+  const btn = document.getElementById('filter-btn');
+  if (_filterSet.size > 0) {
+    btn.textContent = `Filter (${_filterSet.size})`;
+    btn.classList.add('active');
+  } else {
+    btn.textContent = 'Filter';
+    btn.classList.remove('active');
+  }
+}
+
+// isFilterDimmed: returns true if event should be dimmed by filter
+function isFilterDimmed(ev) {
+  if (_filterSet.size === 0) return false;
+  return !_filterSet.has(ev.category);
+}
+
+// Close filter popup on outside click
+document.addEventListener('click', e => {
+  const popup = document.getElementById('filter-popup');
+  const btn   = document.getElementById('filter-btn');
+  if (popup && popup.classList.contains('show') &&
+      !popup.contains(e.target) && !btn.contains(e.target)) {
+    popup.classList.remove('show');
+  }
+});
 
 // ════════════════════════════════════════════
 //  INIT

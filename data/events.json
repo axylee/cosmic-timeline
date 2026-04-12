@@ -7734,7 +7734,8 @@
       "axis": "climate",
       "level": 2,
       "category": "nature",
-      "wiki_en": "https://en.wikipedia.org/wiki/Andean-Saharan_glaciation"
+      "wiki_en": "https://en.wikipedia.org/wiki/Andean-Saharan_glaciation",
+      "endYear": -420000000
     },
     {
       "id": "climate-karoo",
@@ -7745,7 +7746,8 @@
       "level": 2,
       "category": "nature",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Karoo_Glaciation.png",
-      "wiki_en": "https://en.wikipedia.org/wiki/Karoo_Ice_Age"
+      "wiki_en": "https://en.wikipedia.org/wiki/Karoo_Ice_Age",
+      "endYear": -260000000
     },
     {
       "id": "climate-lgm",
@@ -7756,7 +7758,8 @@
       "level": 2,
       "category": "nature",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/CLIMAP.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum"
+      "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum",
+      "endYear": -11700
     },
     {
       "id": "climate-holocene",
@@ -9112,6 +9115,16 @@
       "axes": [
         "climate",
         "earth"
+      ]
+    },
+    {
+      "id": "nat-iceages",
+      "category": "主題",
+      "label": "五次大冰河期",
+      "axes": [
+        "climate",
+        "earth",
+        "life"
       ]
     },
     {
