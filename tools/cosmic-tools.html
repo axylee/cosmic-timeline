@@ -268,8 +268,8 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
             <div style="font-size:10px;color:rgba(221,216,200,0.25);margin-top:2px">0 = 全局顯示 · 0.58 = zoom in 才出現 · 0.75 = 深度 zoom in</div>
           </div>
           <div class="form-group">
-            <label>CrossRef（縱線連到哪條軸線）</label>
-            <select id="ev-crossref"><option value="">— 無 —</option></select>
+            <label>CrossRef（縱線連到哪條軸線）<span style="font-size:10px;color:rgba(221,216,200,0.35);margin-left:6px">最多3條，Ctrl/Cmd 多選</span></label>
+            <select id="ev-crossref" multiple size="4" style="width:100%;padding:4px;background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;font-size:12px;font-family:inherit;cursor:pointer"></select>
           </div>
         </div>
       </div>
@@ -632,17 +632,27 @@ function populateAxisSelects() {
   ['ev-axis','ev-crossref','ax-parent','ev-axis-parent'].forEach(sid=>{
     const sel = document.getElementById(sid);
     if (!sel) return;
-    const prev = sel.value;
-    if (sid==='ev-crossref') sel.innerHTML='<option value="">— 無 —</option>';
-    else if (sid==='ev-axis-parent') sel.innerHTML='<option value="">— 無（頂層）—</option>';
-    else sel.innerHTML='';
+    const prev = sid === 'ev-crossref'
+      ? [...sel.selectedOptions].map(o=>o.value)
+      : sel.value;
+    sel.innerHTML='';
+    if (sid==='ev-axis-parent') sel.innerHTML='<option value="">— 無（頂層）—</option>';
     axes.forEach(ax=>{
       if (sid==='ev-axis-parent' && ax.id===document.getElementById('ev-axis').value) return;
       const opt=document.createElement('option');
       opt.value=ax.id; opt.textContent=`${ax.label} (${ax.id})`;
       sel.appendChild(opt);
     });
-    if (prev) sel.value=prev;
+    if (sid === 'ev-crossref') {
+      [...sel.options].forEach(o => { if (prev.includes(o.value)) o.selected = true; });
+      // enforce max 3
+      sel.onchange = () => {
+        const s = [...sel.selectedOptions];
+        if (s.length > 3) s.slice(3).forEach(o => o.selected = false);
+      };
+    } else {
+      if (prev) sel.value=prev;
+    }
   });
   onAxisChange();
 }
@@ -704,7 +714,9 @@ function addEvent() {
 
   const ev={id:makeId(zh),year:parseInt(year),zh,axis,level:parseInt(document.getElementById('ev-level').value),category:document.getElementById('ev-category').value,category_broad:'human'};
   const endYear=document.getElementById('ev-endyear').value.trim(); if(endYear) ev.endYear=parseInt(endYear);
-  const crossRef=document.getElementById('ev-crossref').value; if(crossRef) ev.crossRef=crossRef;
+  const crossRefs = [...document.getElementById('ev-crossref').selectedOptions].map(o=>o.value).slice(0,3);
+  if (crossRefs.length === 1) ev.crossRef = crossRefs[0];
+  else if (crossRefs.length > 1) ev.crossRef = crossRefs;
   const image=document.getElementById('ev-image').value.trim(); if(image) ev.image=image;
   const en=document.getElementById('ev-en').value.trim(); if(en) ev.en=en;
   const descZh=document.getElementById('ev-desc-zh').value.trim(); if(descZh) ev.desc_zh=descZh;
@@ -773,7 +785,7 @@ function clearPreview(){if(pendingItems.length&&!confirm('確定清除全部？'
 
 function clearEventForm(){
   ['ev-zh','ev-en','ev-year','ev-endyear','ev-desc-zh','ev-desc-en','ev-wiki-zh','ev-wiki-en','ev-image'].forEach(id=>document.getElementById(id).value='');
-  document.getElementById('ev-crossref').value='';
+  document.getElementById('ev-crossref').querySelectorAll('option').forEach(o=>o.selected=false);
   document.getElementById('ev-img-preview').style.display='none';
   document.getElementById('ev-error').classList.add('hide');
 }
