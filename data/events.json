@@ -8766,5 +8766,254 @@
       "crossRef": "human-evo",
       "category": "migration"
     }
+  ],
+  "views": [
+    {
+      "id": "nat-cosmos",
+      "category": "自然與宇宙",
+      "label": "宇宙歷史",
+      "axes": [
+        "cosmos",
+        "galaxy",
+        "solar-system"
+      ]
+    },
+    {
+      "id": "nat-earth",
+      "category": "自然與宇宙",
+      "label": "地球與生命",
+      "axes": [
+        "earth",
+        "climate",
+        "life"
+      ]
+    },
+    {
+      "id": "nat-human",
+      "category": "自然與宇宙",
+      "label": "人類演化與遷徙",
+      "axes": [
+        "human-evo",
+        "migration"
+      ]
+    },
+    {
+      "id": "civ-all",
+      "category": "文明縱覽",
+      "label": "全部文明",
+      "axes": [
+        "east",
+        "west",
+        "africa",
+        "americas",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china",
+        "greece",
+        "latin-america"
+      ]
+    },
+    {
+      "id": "civ-east",
+      "category": "文明縱覽",
+      "label": "東方文明",
+      "axes": [
+        "east",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china"
+      ]
+    },
+    {
+      "id": "civ-west",
+      "category": "文明縱覽",
+      "label": "西方文明",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ]
+    },
+    {
+      "id": "civ-africa",
+      "category": "文明縱覽",
+      "label": "非洲文明",
+      "axes": [
+        "africa",
+        "egypt"
+      ]
+    },
+    {
+      "id": "civ-americas",
+      "category": "文明縱覽",
+      "label": "美洲文明",
+      "axes": [
+        "americas",
+        "latin-america"
+      ]
+    },
+    {
+      "id": "thm-religion",
+      "category": "主題",
+      "label": "宗教發展",
+      "axes": [
+        "judaism",
+        "christianity",
+        "islam",
+        "hinduism",
+        "buddhism",
+        "taoism"
+      ]
+    },
+    {
+      "id": "thm-science",
+      "category": "主題",
+      "label": "科學技術",
+      "axes": [
+        "science",
+        "cross"
+      ]
+    },
+    {
+      "id": "thm-trade",
+      "category": "主題",
+      "label": "貿易全球化",
+      "axes": [
+        "trade",
+        "cross"
+      ]
+    },
+    {
+      "id": "thm-climate",
+      "category": "主題",
+      "label": "氣候環境",
+      "axes": [
+        "climate",
+        "earth"
+      ]
+    },
+    {
+      "id": "thm-migration",
+      "category": "主題",
+      "label": "人類遷徙",
+      "axes": [
+        "migration",
+        "oceania",
+        "central-asia",
+        "southeast-asia",
+        "arctic",
+        "antarctic"
+      ]
+    },
+    {
+      "id": "reg-mideast",
+      "category": "地區",
+      "label": "中東歷史",
+      "axes": [
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "islam",
+        "judaism",
+        "iran"
+      ]
+    },
+    {
+      "id": "reg-eastasia",
+      "category": "地區",
+      "label": "東亞歷史",
+      "axes": [
+        "east",
+        "china",
+        "japan",
+        "taiwan"
+      ]
+    },
+    {
+      "id": "reg-europe",
+      "category": "地區",
+      "label": "歐洲歷史",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ]
+    },
+    {
+      "id": "reg-southasia",
+      "category": "地區",
+      "label": "南亞歷史",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism"
+      ]
+    },
+    {
+      "id": "reg-africa",
+      "category": "地區",
+      "label": "非洲歷史",
+      "axes": [
+        "africa",
+        "north-africa",
+        "west-africa",
+        "east-africa",
+        "south-africa",
+        "egypt"
+      ]
+    },
+    {
+      "id": "reg-americas",
+      "category": "地區",
+      "label": "美洲歷史",
+      "axes": [
+        "americas",
+        "latin-america",
+        "north-america",
+        "usa",
+        "south-america"
+      ]
+    },
+    {
+      "id": "reg-oceania",
+      "category": "地區",
+      "label": "大洋洲",
+      "axes": [
+        "oceania",
+        "antarctic"
+      ]
+    },
+    {
+      "id": "reg-centralas",
+      "category": "地區",
+      "label": "中亞歷史",
+      "axes": [
+        "central-asia"
+      ]
+    },
+    {
+      "id": "reg-sea",
+      "category": "地區",
+      "label": "東南亞歷史",
+      "axes": [
+        "southeast-asia"
+      ]
+    },
+    {
+      "id": "reg-polar",
+      "category": "地區",
+      "label": "極地",
+      "axes": [
+        "arctic",
+        "antarctic"
+      ]
+    }
   ]
 }
