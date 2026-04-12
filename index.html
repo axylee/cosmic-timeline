@@ -207,12 +207,17 @@ body {
   color: rgba(221,216,200,0.5);
 }
 #legend-toggle-all:hover { background: rgba(255,255,255,0.12); color: var(--text); }
-/* solo dim slider */
+/* solo dim slider — always visible, disabled when no solo active */
 #legend-solo-ctrl {
-  display: none; flex-direction: column; gap: 3px;
+  display: flex; flex-direction: column; gap: 3px;
   padding-top: 4px; border-top: 1px solid rgba(255,255,255,0.08);
   margin-top: 2px; width: 100%;
   font-size: 9px; color: rgba(221,216,200,0.5);
+  transition: opacity .2s;
+}
+#legend-solo-ctrl.disabled {
+  opacity: 0.25;
+  pointer-events: none;
 }
 #legend-solo-ctrl input[type=range] {
   width: 100%; height: 3px; cursor: pointer; accent-color: #a78bfa;
@@ -239,7 +244,8 @@ body {
 .leg-group-arrow:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .leg-group.collapsed .leg-group-arrow { transform: rotate(-90deg); }
 .leg-group-items { display: flex; flex-direction: column; gap: 1px; overflow: hidden; transition: max-height .2s ease;
-  border-left: 1px solid rgba(255,255,255,0.1); margin-left: 10px; padding-left: 6px; }
+  padding-left: 8px; box-sizing: border-box; width: 100%;
+  border-left: 1px solid rgba(255,255,255,0.1); margin-left: 6px; }
 .leg-group-items.collapsed { max-height: 0 !important; }
 .hide { display: none !important; }
 
@@ -752,7 +758,7 @@ body {
     <button id="legend-clear-edits" onclick="clearAllEdits()">清除修改</button>
   </div>
   <span id="legend-zoom-hint">zoom in 展開 ↓</span>
-  <div id="legend-solo-ctrl">
+  <div id="legend-solo-ctrl" class="disabled">
     <span>淡化強度</span>
     <input type="range" id="solo-dim-slider" min="1" max="30" value="7"
       oninput="updateSoloDim(this.value)">
@@ -1107,9 +1113,9 @@ function updateSoloDim(val) {
   draw();
 }
 
-function _setSoloCtrl(show) {
+function _setSoloCtrl(active) {
   const el = document.getElementById('legend-solo-ctrl');
-  if (el) el.style.display = show ? 'flex' : 'none';
+  if (el) el.classList.toggle('disabled', !active);
 }
 
 function buildLegend() {
