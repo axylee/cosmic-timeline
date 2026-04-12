@@ -8665,6 +8665,106 @@
       "level": 1,
       "crossRef": "usa",
       "category": "politics"
+    },
+    {
+      "id": "cos-015",
+      "year": -13700000000,
+      "zh": "暗物質形成",
+      "en": "Dark Matter Forms",
+      "axis": "cosmos",
+      "level": 2,
+      "category": "nature"
+    },
+    {
+      "id": "gal-007",
+      "year": -4000000000,
+      "zh": "銀河系中心黑洞・人馬座A*",
+      "en": "Milky Way Black Hole・Sagittarius A*",
+      "axis": "galaxy",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "gal-008",
+      "year": 2022,
+      "zh": "人馬座A*黑洞首張照片",
+      "en": "First Image of Sagittarius A*",
+      "axis": "galaxy",
+      "level": 2,
+      "category": "science"
+    },
+    {
+      "id": "sol-017",
+      "year": 1930,
+      "zh": "冥王星發現",
+      "en": "Pluto Discovered",
+      "axis": "solar-system",
+      "level": 2,
+      "category": "science"
+    },
+    {
+      "id": "sol-018",
+      "year": 2006,
+      "zh": "冥王星降級為矮行星",
+      "en": "Pluto Reclassified as Dwarf Planet",
+      "axis": "solar-system",
+      "level": 2,
+      "category": "science"
+    },
+    {
+      "id": "ear-016",
+      "year": -300000000,
+      "zh": "盤古大陸形成",
+      "en": "Pangaea Forms",
+      "axis": "earth",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "ear-017",
+      "year": -175000000,
+      "zh": "盤古大陸分裂",
+      "en": "Pangaea Breaks Apart",
+      "axis": "earth",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "ear-018",
+      "year": -50000000,
+      "zh": "喜馬拉雅山形成",
+      "en": "Himalayas Form",
+      "axis": "earth",
+      "level": 2,
+      "category": "nature"
+    },
+    {
+      "id": "lif-036",
+      "year": 2000,
+      "zh": "第六次大滅絕（人類世・進行中）",
+      "en": "6th Mass Extinction (Anthropocene)",
+      "axis": "life",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "hevo-012",
+      "year": -40000,
+      "zh": "尼安德塔人滅絕",
+      "en": "Neanderthals Go Extinct",
+      "axis": "human-evo",
+      "level": 2,
+      "category": "evolution"
+    },
+    {
+      "id": "mig-000",
+      "year": -70000,
+      "zh": "人類走出非洲・遷徙開始",
+      "en": "Out of Africa・Migration Begins",
+      "axis": "migration",
+      "level": 1,
+      "crossRef": "human-evo",
+      "category": "migration"
     }
   ]
 }
