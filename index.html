@@ -774,13 +774,13 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121512</span>
+  <span id="version-label">v202604121530</span>
 </div>
 
 <div id="legend">
   <div id="legend-controls">
     <button id="legend-show-all" onclick="showAllAxes()">全部顯示</button>
-    <button id="legend-toggle-all" onclick="toggleAllGroups()">▾ 展開全部</button>
+    <button id="legend-toggle-all" onclick="toggleAllGroups()">展開全部</button>
     <button id="legend-clear-edits" onclick="clearAllEdits()">清除修改</button>
   </div>
   <span id="legend-zoom-hint">zoom in 展開 ↓</span>
@@ -1163,6 +1163,31 @@ function buildLegend() {
 
   const hintEl = document.getElementById('legend-zoom-hint');
 
+  // ── 統一 solo 輔助函式 ──
+  // soloSet 裡放的是目前 solo 中的 axisId
+  // _soloActive = true 代表目前在 solo 模式
+
+  function _enterSolo(axisIds) {
+    // 進入 solo，只顯示 axisIds
+    _soloSet = new Set(axisIds);
+    _setSoloCtrl(true);
+    updateLegendState(); draw();
+  }
+
+  function _cancelSolo() {
+    _soloAxis = null; _soloGroups = null; _soloSet.clear();
+    _setSoloCtrl(false);
+    updateLegendState(); draw();
+  }
+
+  function _isSoloActive() {
+    return _soloSet.size > 0;
+  }
+
+  function _groupAxisIds(gk) {
+    return groupAxes[gk] || [];
+  }
+
   groupOrder.forEach(gk => {
     const ids = groupAxes[gk];
     if (!ids || !ids.length) return;
@@ -1173,7 +1198,7 @@ function buildLegend() {
     header.className = 'leg-group';
     header.dataset.group = gk;
     if (_collapsedGroups.has(gk)) header.classList.add('collapsed');
-    header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer;white-space:nowrap;overflow:hidden">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
+    header.innerHTML = `<span class="leg-group-arrow" title="展開/收合">▾</span><span class="leg-group-label" style="flex:1;text-align:right;cursor:pointer;white-space:nowrap;overflow:hidden;color:rgba(221,216,200,0.85)">${def.label}</span><span class="leg-group-dot" style="background:${def.color}"></span>`;
 
     // Arrow: only collapse/expand
     const arrowEl = header.querySelector('.leg-group-arrow');
@@ -1185,31 +1210,36 @@ function buildLegend() {
       updateToggleAllBtn();
     });
 
-    // Label click = solo toggle; dblclick = cancel solo
+    // Group label: 統一邏輯
     const labelEl = header.querySelector('.leg-group-label');
     let _grpDblGuard = false;
     labelEl.addEventListener('dblclick', e => {
-      e.preventDefault();
+      e.preventDefault(); e.stopPropagation();
       _grpDblGuard = true; setTimeout(() => _grpDblGuard = false, 300);
-      // cancel all solo
-      _soloAxis = null; _soloSet.clear(); _soloGroups = null;
-      _setSoloCtrl(false);
-      updateLegendState(); draw();
+      _cancelSolo();
     });
     labelEl.addEventListener('click', e => {
       if (_grpDblGuard) return;
       e.stopPropagation();
-      _soloAxis = null;
-      if (_soloGroups && _soloGroups.has(gk) && _soloGroups.size === 1) {
-        _soloGroups = null; _soloSet.clear();
+      const gkIds = _groupAxisIds(gk);
+      if (!_isSoloActive()) {
+        // 正常狀態：雙擊才 solo，單點 hide/show group
+        // （group label 單點 = hide/show 由下面 dblclick 處理，這裡進入 solo）
+        _enterSolo(gkIds);
       } else {
-        if (!_soloGroups) _soloGroups = new Set();
-        _soloGroups.add(gk);
-        _soloSet = new Set();
-        _soloGroups.forEach(sgk => (groupAxes[sgk]||[]).forEach(id => _soloSet.add(id)));
+        // solo 狀態：判斷此 group 的軸是否全在 solo 中
+        const allIn = gkIds.every(id => _soloSet.has(id));
+        if (allIn) {
+          // 全部在 solo → 移除這個 group
+          gkIds.forEach(id => _soloSet.delete(id));
+          if (_soloSet.size === 0) _cancelSolo();
+          else { _setSoloCtrl(true); updateLegendState(); draw(); }
+        } else {
+          // 加入 solo
+          gkIds.forEach(id => _soloSet.add(id));
+          _setSoloCtrl(true); updateLegendState(); draw();
+        }
       }
-      _setSoloCtrl(_soloGroups !== null);
-      updateLegendState(); draw();
     });
     legend.appendChild(header);
 
@@ -1231,26 +1261,25 @@ function buildLegend() {
       div.addEventListener('dblclick', e => {
         e.preventDefault();
         _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
-        _soloGroups = null;
-        if (_soloAxis === id) { _soloAxis = null; _soloSet.clear(); }
-        else { _soloAxis = id; _soloSet = new Set([id]); }
-        _setSoloCtrl(_soloAxis !== null);
-        updateLegendState(); draw();
+        // 雙擊 = 取消全部 solo（不管正常還是 solo 狀態）
+        _cancelSolo();
       });
       div.addEventListener('click', () => {
         if (_dblGuard) return;
-        if (_soloAxis) {
-          if (id === _soloAxis) return;
-          if (_soloSet.has(id)) _soloSet.delete(id);
-          else _soloSet.add(id);
-        } else if (_soloGroups) {
-          if (_soloSet.has(id)) _soloSet.delete(id);
-          else _soloSet.add(id);
+        if (!_isSoloActive()) {
+          // 正常狀態：單點 = 進入 solo
+          _enterSolo([id]);
         } else {
-          if (hiddenAxes.has(id)) hiddenAxes.delete(id);
-          else hiddenAxes.add(id);
+          // solo 狀態：單點已 solo 項目 = 移除；單點未 solo 項目 = 加入
+          if (_soloSet.has(id)) {
+            _soloSet.delete(id);
+            if (_soloSet.size === 0) _cancelSolo();
+            else { updateLegendState(); draw(); }
+          } else {
+            _soloSet.add(id);
+            updateLegendState(); draw();
+          }
         }
-        updateLegendState(); draw();
       });
       itemsWrap.appendChild(div);
     });
@@ -1288,7 +1317,7 @@ function updateToggleAllBtn() {
   if (!btn) return;
   const groupOrder = Object.keys(AXIS_GROUP_DEFS);
   const anyCollapsed = groupOrder.some(gk => _collapsedGroups.has(gk));
-  btn.textContent = anyCollapsed ? '▾ 展開全部' : '▸ 收合全部';
+  btn.textContent = anyCollapsed ? '展開全部' : '收合全部';
 }
 
 function updateLegendState() {
