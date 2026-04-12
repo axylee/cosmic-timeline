@@ -990,8 +990,8 @@ body {
           <div style="font-size:10px;color:rgba(221,216,200,0.25);padding-left:78px">0 = 全局顯示 · 0.58 = zoom in 才出現</div>
         </div>
         <div class="edit-row">
-          <div class="edit-label">CrossRef（連到軸線）</div>
-          <select class="edit-input" id="edit-crossref" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
+          <div class="edit-label">CrossRef（連到軸線）<br><span style="font-size:10px;color:rgba(221,216,200,0.35)">最多3條，Ctrl/Cmd 多選</span></div>
+          <select class="edit-input" id="edit-crossref" multiple size="4" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:4px;font-size:12px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row">
           <div class="edit-label">父軸</div>
@@ -2561,60 +2561,62 @@ function drawEvents(eventsInView) {
   // Only show when zoomed in enough (otherwise too cluttered)
   if (zoom >= 0.55) {
     sorted.forEach(ev => {
-      if (!ev.crossRef) return;
+      if (!ev._crossRefs || !ev._crossRefs.length) return;
       if (!eventVisible(ev)) return;
       if (ev.endYear) return;  // only point events
-
-      const targetAx = AXES[ev.crossRef];
-      if (!targetAx) return;
-      if ((_soloSet.size === 0) && hiddenAxes.has(ev.crossRef)) return;
       if ((_soloSet.size === 0) && hiddenAxes.has(ev.axis)) return;
 
-      const x      = yearToX(ev.year);
+      const x    = yearToX(ev.year);
       if (x < -20 || x > canvasW + 20) return;
 
-      // 只在兩條軸線都可見時才畫縱線
-      const yMap = getAxisYMap();
-      if (!yMap.has(ev.axis) || !yMap.has(ev.crossRef)) return;
+      const yMap  = getAxisYMap();
+      if (!yMap.has(ev.axis)) return;
 
-      const y1     = axisY(ev.axis);
-      const y2     = axisY(ev.crossRef);
-      if (Math.abs(y1 - y2) < 4) return;
+      const y1    = axisY(ev.axis);
+      const color = eventColor(ev);
+      const catA  = categoryAlpha(ev);
+      const r     = dotRadius(ev);
+      const isHov = hoveredEvent && hoveredEvent.id === ev.id;
 
-      const color  = eventColor(ev);
-      const catA   = categoryAlpha(ev);
-      const r      = dotRadius(ev);
-      const isHov  = hoveredEvent && hoveredEvent.id === ev.id;
+      ev._crossRefs.forEach(crId => {
+        const targetAx = AXES[crId];
+        if (!targetAx) return;
+        if ((_soloSet.size === 0) && hiddenAxes.has(crId)) return;
+        if (!yMap.has(crId)) return;
 
-      ctx.save();
-      ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35);
+        const y2 = axisY(crId);
+        if (Math.abs(y1 - y2) < 4) return;
 
-      // Vertical dashed line between the two axes
-      ctx.beginPath();
-      ctx.moveTo(x, Math.min(y1, y2) + r);
-      ctx.lineTo(x, Math.max(y1, y2) - r);
-      ctx.strokeStyle = color;
-      ctx.lineWidth   = isHov ? 1.5 : 1;
-      ctx.setLineDash([3, 4]);
-      ctx.stroke();
-      ctx.setLineDash([]);
+        ctx.save();
+        ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35);
 
-      // Hollow circle on target axis
-      ctx.globalAlpha = catA * (isHov ? 0.9 : 0.55);
-      ctx.beginPath();
-      ctx.arc(x, y2, r * 0.85, 0, Math.PI * 2);
-      ctx.strokeStyle = color;
-      ctx.lineWidth   = isHov ? 2 : 1.5;
-      ctx.stroke();
+        // Vertical dashed line
+        ctx.beginPath();
+        ctx.moveTo(x, Math.min(y1, y2) + r);
+        ctx.lineTo(x, Math.max(y1, y2) - r);
+        ctx.strokeStyle = color;
+        ctx.lineWidth   = isHov ? 1.5 : 1;
+        ctx.setLineDash([3, 4]);
+        ctx.stroke();
+        ctx.setLineDash([]);
 
-      // Small filled dot in center of hollow circle
-      ctx.beginPath();
-      ctx.arc(x, y2, r * 0.3, 0, Math.PI * 2);
-      ctx.fillStyle = color;
-      ctx.globalAlpha = catA * (isHov ? 0.9 : 0.5);
-      ctx.fill();
+        // Hollow circle on target axis
+        ctx.globalAlpha = catA * (isHov ? 0.9 : 0.55);
+        ctx.beginPath();
+        ctx.arc(x, y2, r * 0.85, 0, Math.PI * 2);
+        ctx.strokeStyle = color;
+        ctx.lineWidth   = isHov ? 2 : 1.5;
+        ctx.stroke();
 
-      ctx.restore();
+        // Small filled dot
+        ctx.beginPath();
+        ctx.arc(x, y2, r * 0.3, 0, Math.PI * 2);
+        ctx.fillStyle  = color;
+        ctx.globalAlpha = catA * (isHov ? 0.9 : 0.5);
+        ctx.fill();
+
+        ctx.restore();
+      });
     });
   }
 }
@@ -3338,13 +3340,16 @@ function findEventsAt(mx, my) {
       const x = yearToX(ev.year), d = Math.hypot(mx - x, my - y);
       if (d <= Math.max(HIT_DOT, dotRadius(ev) + 12)) results.push({ ev, dist: d });
 
-      // Also hit-test crossRef hollow circle on target axis
-      if (ev.crossRef && zoom >= 0.55 && !hiddenAxes.has(ev.crossRef) && getAxisYMap().has(ev.crossRef)) {
-        const y2 = axisY(ev.crossRef);
-        const d2 = Math.hypot(mx - x, my - y2);
-        if (d2 <= Math.max(HIT_DOT, dotRadius(ev) + 12)) {
-          results.push({ ev, dist: d2 + 0.1 }); // slight penalty vs original
-        }
+      // Also hit-test crossRef hollow circles on target axes
+      if (ev._crossRefs && ev._crossRefs.length && zoom >= 0.55) {
+        ev._crossRefs.forEach(crId => {
+          if (hiddenAxes.has(crId) || !getAxisYMap().has(crId)) return;
+          const y2 = axisY(crId);
+          const d2 = Math.hypot(mx - x, my - y2);
+          if (d2 <= Math.max(HIT_DOT, dotRadius(ev) + 12)) {
+            results.push({ ev, dist: d2 + 0.1 });
+          }
+        });
       }
     }
   });
@@ -3528,9 +3533,9 @@ function showPopup(ev) {
     ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
     : formatYear(ev.year);
   let metaStr = parentLabel ? `${parentLabel} › ${axLabel}` : axLabel;
-  if (ev.crossRef) {
-    const crLabel = (AXES[ev.crossRef]?.label) || ev.crossRef;
-    metaStr += `  ⤴ ${crLabel}`;
+  if (ev._crossRefs && ev._crossRefs.length) {
+    const crLabels = ev._crossRefs.map(id => (AXES[id]?.label) || id).join('・');
+    metaStr += `  ⤴ ${crLabels}`;
   }
   document.getElementById('popup-time').textContent = `${metaStr} · ${timeStr}`;
   // Description: EN mode shows EN desc only; ZH mode shows both
@@ -3570,16 +3575,25 @@ function showPopup(ev) {
     document.getElementById('edit-axis-endyear').value   = newAx.endYear   ?? '';
   };
 
-  // Populate crossRef select (with "none" option)
+  // Populate crossRef multi-select (max 3)
   const crSelect = document.getElementById('edit-crossref');
-  crSelect.innerHTML = '<option value="">— 無 —</option>';
+  crSelect.innerHTML = '';
+  const currentCrRefs = ev._crossRefs || [];
   Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
+    if (id === ev.axis) return; // can't crossRef own axis
     const opt = document.createElement('option');
     opt.value = id;
     opt.textContent = `${ax.label} (${id})`;
-    if (id === (ev.crossRef||'')) opt.selected = true;
+    if (currentCrRefs.includes(id)) opt.selected = true;
     crSelect.appendChild(opt);
   });
+  // Enforce max 3 on change
+  crSelect.onchange = () => {
+    const selected = [...crSelect.selectedOptions];
+    if (selected.length > 3) {
+      selected.slice(3).forEach(o => o.selected = false);
+    }
+  };
 
   // Populate axis parent select and zoomMin for the CURRENT axis
   const curAx = AXES[ev.axis];
@@ -3735,6 +3749,12 @@ async function loadEvents() {
     events = FALLBACK_EVENTS;
   }
   buildParentTree();
+  // Normalize crossRef → _crossRefs array (max 3, backward compatible)
+  events.forEach(ev => {
+    if (Array.isArray(ev.crossRef))   ev._crossRefs = ev.crossRef.slice(0,3);
+    else if (ev.crossRef)             ev._crossRefs = [ev.crossRef];
+    else                              ev._crossRefs = [];
+  });
   applyEdits();
   applyLang();
   draw();
@@ -3811,9 +3831,11 @@ function exportJSON() {
   const mergedEvents = events.map(ev => {
     const clone = { ...ev };
     delete clone._autoParent;
+    delete clone._crossRefs;  // internal only, don't export
     if (edits[clone.id]) Object.assign(clone, edits[clone.id]);
     // clean up empty crossRef and endYear
     if (clone.crossRef === '' || clone.crossRef === undefined) delete clone.crossRef;
+    if (Array.isArray(clone.crossRef) && clone.crossRef.length === 0) delete clone.crossRef;
     if (clone.endYear  === '' || clone.endYear  === undefined) delete clone.endYear;
     return clone;
   });
@@ -3884,12 +3906,12 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
   if (!_editingEventId) return;
 
   // ── Event field edits ──
-  const crossRefVal = document.getElementById('edit-crossref').value;
+  const crSelected = [...document.getElementById('edit-crossref').selectedOptions].map(o=>o.value).slice(0,3);
   const yearRaw    = document.getElementById('edit-year').value.trim();
   const endYearRaw = document.getElementById('edit-endyear').value.trim();
   const fields = {
     axis:     document.getElementById('edit-axis').value || undefined,
-    crossRef: crossRefVal || undefined,
+    crossRef: crSelected.length === 1 ? crSelected[0] : crSelected.length > 1 ? crSelected : undefined,
     image:    document.getElementById('edit-image').value.trim() || undefined,
     zh:       document.getElementById('edit-zh').value.trim() || undefined,
     en:       document.getElementById('edit-en').value.trim() || undefined,
@@ -3902,9 +3924,9 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
   };
   if (yearRaw !== '')    fields.year    = parseInt(yearRaw);
   if (endYearRaw !== '') fields.endYear = parseInt(endYearRaw);
-  else                   fields.endYear = '';  // '' = remove endYear
-  // crossRef='' means user cleared it
-  if (crossRefVal === '') fields.crossRef = '';
+  else                   fields.endYear = '';
+  // crossRef=[] means user cleared all
+  if (crSelected.length === 0) fields.crossRef = '';
   Object.keys(fields).forEach(k => fields[k] === undefined && delete fields[k]);
   saveEdit(_editingEventId, fields);
 
@@ -3912,7 +3934,8 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
   const ev = events.find(e => e.id === _editingEventId);
   if (ev) {
     Object.assign(ev, fields);
-    if (fields.crossRef === '') delete ev.crossRef;
+    if (fields.crossRef === '') { delete ev.crossRef; ev._crossRefs = []; }
+    else if (fields.crossRef)  { ev._crossRefs = Array.isArray(fields.crossRef) ? fields.crossRef : [fields.crossRef]; }
     if (fields.endYear  === '') delete ev.endYear;
   }
 
