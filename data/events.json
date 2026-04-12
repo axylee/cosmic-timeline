@@ -754,7 +754,7 @@
       "endYear": -2100000000,
       "zh": "休倫冰河期",
       "en": "Huronian Glaciation",
-      "axis": "earth",
+      "axis": "climate",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "地球史上最早、最嚴重的冰河期之一，由大氧化事件導致溫室氣體甲烷破壞而引發，持續3億年。",
@@ -819,7 +819,7 @@
       "endYear": -635000000,
       "zh": "雪球地球",
       "en": "Snowball Earth",
-      "axis": "earth",
+      "axis": "climate",
       "level": 1,
       "sub_track": 0,
       "desc_zh": "地球幾乎完全被冰雪覆蓋，全球平均溫度降至零下50度，海洋表面結冰，持續近1億年。",
@@ -1086,7 +1086,7 @@
       "year": -2600000,
       "zh": "第四紀冰河期（至今）",
       "en": "Quaternary Glaciation (ongoing)",
-      "axis": "earth",
+      "axis": "climate",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "260萬年前開始、至今仍在持續的冰河期，包含多次冰期與間冰期，人類在此期間演化。",
@@ -6366,7 +6366,7 @@
       "year": -34000000,
       "zh": "南極冰蓋形成",
       "en": "Antarctic Ice Sheet Forms",
-      "axis": "earth",
+      "axis": "climate",
       "level": 2,
       "category": "geology",
       "category_broad": "natural",
@@ -7703,6 +7703,622 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/伊朗核問題",
       "wiki_en": "https://en.wikipedia.org/wiki/Nuclear_program_of_Iran",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Atomprogramm_des_Iran_2.png"
+    },
+    {
+      "id": "climate-andean",
+      "year": -450000000,
+      "zh": "安第斯-撒哈拉冰河期",
+      "en": "Andean-Saharan Glaciation",
+      "axis": "climate",
+      "level": 2,
+      "category": "nature"
+    },
+    {
+      "id": "climate-karoo",
+      "year": -300000000,
+      "zh": "卡魯冰河期",
+      "en": "Karoo Ice Age",
+      "axis": "climate",
+      "level": 2,
+      "category": "nature"
+    },
+    {
+      "id": "climate-lgm",
+      "year": -20000,
+      "zh": "末次冰盛期",
+      "en": "Last Glacial Maximum",
+      "axis": "climate",
+      "level": 2,
+      "category": "nature"
+    },
+    {
+      "id": "climate-holocene",
+      "year": -11700,
+      "zh": "冰河期結束・全新世開始",
+      "en": "End of Ice Age・Holocene",
+      "axis": "climate",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "climate-warming",
+      "year": 1850,
+      "zh": "工業革命後全球氣溫上升",
+      "en": "Global Warming Begins",
+      "axis": "climate",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "climate-ipcc",
+      "year": 1988,
+      "zh": "IPCC 成立",
+      "en": "IPCC Founded",
+      "axis": "climate",
+      "level": 2,
+      "category": "science"
+    },
+    {
+      "id": "climate-paris",
+      "year": 2015,
+      "zh": "巴黎氣候協定",
+      "en": "Paris Agreement",
+      "axis": "climate",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "life-ext1",
+      "year": -444000000,
+      "zh": "第一次大滅絕（奧陶紀末）",
+      "en": "1st Mass Extinction (Ordovician)",
+      "axis": "life",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "life-ext2",
+      "year": -375000000,
+      "zh": "第二次大滅絕（泥盆紀末）",
+      "en": "2nd Mass Extinction (Devonian)",
+      "axis": "life",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "life-ext4",
+      "year": -201000000,
+      "zh": "第四次大滅絕（三疊紀末）",
+      "en": "4th Mass Extinction (Triassic)",
+      "axis": "life",
+      "level": 1,
+      "category": "nature"
+    },
+    {
+      "id": "mig-002",
+      "year": -65000,
+      "zh": "抵達澳洲/大洋洲",
+      "en": "Arrival in Australia/Oceania",
+      "axis": "migration",
+      "level": 1,
+      "crossRef": "oceania",
+      "category": "migration"
+    },
+    {
+      "id": "mig-003",
+      "year": -45000,
+      "zh": "抵達歐洲",
+      "en": "Arrival in Europe",
+      "axis": "migration",
+      "level": 2,
+      "category": "migration"
+    },
+    {
+      "id": "mig-004",
+      "year": -40000,
+      "zh": "抵達東南亞",
+      "en": "Arrival in Southeast Asia",
+      "axis": "migration",
+      "level": 2,
+      "crossRef": "southeast-asia",
+      "category": "migration"
+    },
+    {
+      "id": "mig-005",
+      "year": -30000,
+      "zh": "抵達中亞/西伯利亞",
+      "en": "Arrival in Central Asia/Siberia",
+      "axis": "migration",
+      "level": 2,
+      "crossRef": "central-asia",
+      "category": "migration"
+    },
+    {
+      "id": "mig-006",
+      "year": -20000,
+      "zh": "抵達美洲（白令陸橋）",
+      "en": "Arrival in Americas (Bering)",
+      "axis": "migration",
+      "level": 1,
+      "crossRef": "americas",
+      "category": "migration"
+    },
+    {
+      "id": "mig-007",
+      "year": -15000,
+      "zh": "遍布南美洲",
+      "en": "Spread through South America",
+      "axis": "migration",
+      "level": 2,
+      "category": "migration"
+    },
+    {
+      "id": "oce-001",
+      "year": -65000,
+      "zh": "人類抵達澳洲",
+      "en": "Humans Arrive in Australia",
+      "axis": "oceania",
+      "level": 1,
+      "category": "migration"
+    },
+    {
+      "id": "oce-002",
+      "year": -3500,
+      "zh": "南島民族擴散",
+      "en": "Austronesian Expansion",
+      "axis": "oceania",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "oce-003",
+      "year": -1000,
+      "zh": "抵達玻里尼西亞",
+      "en": "Settlement of Polynesia",
+      "axis": "oceania",
+      "level": 2,
+      "category": "migration"
+    },
+    {
+      "id": "oce-004",
+      "year": -800,
+      "zh": "抵達紐西蘭（毛利人）",
+      "en": "Māori Arrive in New Zealand",
+      "axis": "oceania",
+      "level": 1,
+      "category": "migration"
+    },
+    {
+      "id": "oce-005",
+      "year": 1770,
+      "zh": "庫克船長抵達澳洲",
+      "en": "Captain Cook Arrives",
+      "axis": "oceania",
+      "level": 1,
+      "category": "exploration"
+    },
+    {
+      "id": "oce-006",
+      "year": 1788,
+      "zh": "英國殖民澳洲",
+      "en": "British Colonization of Australia",
+      "axis": "oceania",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "oce-007",
+      "year": 1901,
+      "zh": "澳洲聯邦成立",
+      "en": "Commonwealth of Australia",
+      "axis": "oceania",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "cas-001",
+      "year": -40000,
+      "zh": "人類抵達中亞",
+      "en": "Humans Arrive in Central Asia",
+      "axis": "central-asia",
+      "level": 2,
+      "category": "migration"
+    },
+    {
+      "id": "cas-002",
+      "year": -3500,
+      "zh": "馬的馴化・草原文明開始",
+      "en": "Horse Domestication",
+      "axis": "central-asia",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "cas-003",
+      "year": -800,
+      "zh": "斯基泰人崛起",
+      "en": "Scythian Civilization",
+      "axis": "central-asia",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "cas-004",
+      "year": -209,
+      "zh": "匈奴帝國建立",
+      "en": "Xiongnu Empire",
+      "axis": "central-asia",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "cas-005",
+      "year": 552,
+      "zh": "突厥帝國建立",
+      "en": "Göktürk Khaganate",
+      "axis": "central-asia",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "cas-006",
+      "year": 1206,
+      "zh": "蒙古帝國建立・成吉思汗",
+      "en": "Mongol Empire・Genghis Khan",
+      "axis": "central-asia",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "cas-007",
+      "year": 1370,
+      "zh": "帖木兒帝國",
+      "en": "Timurid Empire",
+      "axis": "central-asia",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "cas-008",
+      "year": 1500,
+      "zh": "哈薩克汗國",
+      "en": "Kazakh Khanate",
+      "axis": "central-asia",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "sea-001",
+      "year": -40000,
+      "zh": "人類抵達東南亞",
+      "en": "Humans Arrive in Southeast Asia",
+      "axis": "southeast-asia",
+      "level": 2,
+      "category": "migration"
+    },
+    {
+      "id": "sea-002",
+      "year": -2000,
+      "zh": "銅鼓文化・東山文明",
+      "en": "Dong Son Culture",
+      "axis": "southeast-asia",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "sea-003",
+      "year": 100,
+      "zh": "扶南王國",
+      "en": "Kingdom of Funan",
+      "axis": "southeast-asia",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "sea-004",
+      "year": 600,
+      "zh": "室利佛逝・海上貿易帝國",
+      "en": "Srivijaya Empire",
+      "axis": "southeast-asia",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "sea-005",
+      "year": 802,
+      "zh": "吳哥王朝建立",
+      "en": "Khmer Empire Founded",
+      "axis": "southeast-asia",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "sea-006",
+      "year": 1200,
+      "zh": "吳哥窟建成",
+      "en": "Angkor Wat Completed",
+      "axis": "southeast-asia",
+      "level": 1,
+      "category": "culture"
+    },
+    {
+      "id": "sea-007",
+      "year": 1350,
+      "zh": "大城王國（泰國）",
+      "en": "Ayutthaya Kingdom",
+      "axis": "southeast-asia",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "sea-008",
+      "year": 1511,
+      "zh": "葡萄牙占領麻六甲",
+      "en": "Portuguese Conquest of Malacca",
+      "axis": "southeast-asia",
+      "level": 1,
+      "category": "war"
+    },
+    {
+      "id": "sea-009",
+      "year": 1945,
+      "zh": "東南亞各國獨立浪潮",
+      "en": "Southeast Asian Independence",
+      "axis": "southeast-asia",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "trd-001",
+      "year": -3000,
+      "zh": "美索不達米亞早期貿易網絡",
+      "en": "Mesopotamian Trade Networks",
+      "axis": "trade",
+      "level": 2,
+      "category": "trade"
+    },
+    {
+      "id": "trd-002",
+      "year": -2000,
+      "zh": "青銅時代地中海貿易",
+      "en": "Bronze Age Mediterranean Trade",
+      "axis": "trade",
+      "level": 2,
+      "category": "trade"
+    },
+    {
+      "id": "trd-003",
+      "year": -600,
+      "zh": "腓尼基人貿易網絡",
+      "en": "Phoenician Trade Network",
+      "axis": "trade",
+      "level": 2,
+      "category": "trade"
+    },
+    {
+      "id": "trd-005",
+      "year": 800,
+      "zh": "維京人貿易路線",
+      "en": "Viking Trade Routes",
+      "axis": "trade",
+      "level": 2,
+      "category": "trade"
+    },
+    {
+      "id": "trd-006",
+      "year": 1271,
+      "zh": "馬可波羅東行",
+      "en": "Marco Polo Travels East",
+      "axis": "trade",
+      "level": 2,
+      "category": "trade"
+    },
+    {
+      "id": "trd-007",
+      "year": 1415,
+      "zh": "葡萄牙開始大航海",
+      "en": "Portuguese Age of Discovery",
+      "axis": "trade",
+      "level": 1,
+      "category": "exploration"
+    },
+    {
+      "id": "trd-009",
+      "year": 1600,
+      "zh": "東印度公司成立",
+      "en": "East India Company Founded",
+      "axis": "trade",
+      "level": 1,
+      "category": "trade"
+    },
+    {
+      "id": "trd-010",
+      "year": 1869,
+      "zh": "蘇伊士運河開通",
+      "en": "Suez Canal Opens",
+      "axis": "trade",
+      "level": 1,
+      "category": "trade"
+    },
+    {
+      "id": "trd-011",
+      "year": 1944,
+      "zh": "布列敦森林協定",
+      "en": "Bretton Woods Agreement",
+      "axis": "trade",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "trd-012",
+      "year": 1995,
+      "zh": "WTO 成立",
+      "en": "WTO Founded",
+      "axis": "trade",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "trd-013",
+      "year": 2001,
+      "zh": "中國加入 WTO",
+      "en": "China Joins WTO",
+      "axis": "trade",
+      "level": 2,
+      "category": "politics"
+    },
+    {
+      "id": "ind-002",
+      "year": -1500,
+      "zh": "雅利安人入侵・吠陀時代",
+      "en": "Aryan Migration・Vedic Age",
+      "axis": "india",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "ind-003",
+      "year": -320,
+      "zh": "孔雀王朝建立",
+      "en": "Maurya Empire Founded",
+      "axis": "india",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "ind-004",
+      "year": -268,
+      "zh": "阿育王統治・佛教擴散",
+      "en": "Ashoka・Buddhism Spreads",
+      "axis": "india",
+      "level": 1,
+      "category": "religion"
+    },
+    {
+      "id": "ind-005",
+      "year": 320,
+      "zh": "笈多王朝・印度黃金時代",
+      "en": "Gupta Empire・Golden Age",
+      "axis": "india",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "ind-006",
+      "year": 1206,
+      "zh": "德里蘇丹國",
+      "en": "Delhi Sultanate",
+      "axis": "india",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "ind-007",
+      "year": 1526,
+      "zh": "蒙兀兒帝國建立",
+      "en": "Mughal Empire Founded",
+      "axis": "india",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "ind-008",
+      "year": 1757,
+      "zh": "英國東印度公司控制印度",
+      "en": "British East India Company",
+      "axis": "india",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "ind-009",
+      "year": 1857,
+      "zh": "印度民族起義",
+      "en": "Indian Rebellion",
+      "axis": "india",
+      "level": 1,
+      "category": "war"
+    },
+    {
+      "id": "ind-010",
+      "year": 1947,
+      "zh": "印度獨立",
+      "en": "Indian Independence",
+      "axis": "india",
+      "level": 1,
+      "category": "politics"
+    },
+    {
+      "id": "hevo-008",
+      "year": -50000,
+      "zh": "語言能力成熟・行為現代性",
+      "en": "Behavioral Modernity",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "evolution"
+    },
+    {
+      "id": "hevo-009",
+      "year": -10000,
+      "zh": "農業革命・新石器時代",
+      "en": "Agricultural Revolution",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "hevo-010",
+      "year": -8000,
+      "zh": "最早城市聚落",
+      "en": "First Urban Settlements",
+      "axis": "human-evo",
+      "level": 2,
+      "category": "civilization"
+    },
+    {
+      "id": "hevo-011",
+      "year": -3500,
+      "zh": "文字發明",
+      "en": "Writing Invented",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "civilization"
+    },
+    {
+      "id": "sci-016",
+      "year": -300,
+      "zh": "歐幾里德幾何學",
+      "en": "Euclidean Geometry",
+      "axis": "science",
+      "level": 2,
+      "category": "science"
+    },
+    {
+      "id": "sci-017",
+      "year": 1543,
+      "zh": "哥白尼日心說",
+      "en": "Copernican Revolution",
+      "axis": "science",
+      "level": 1,
+      "category": "science"
+    },
+    {
+      "id": "sci-019",
+      "year": 1800,
+      "zh": "電池發明・電學時代",
+      "en": "Battery Invented",
+      "axis": "science",
+      "level": 2,
+      "category": "science"
+    },
+    {
+      "id": "sci-020",
+      "year": 1895,
+      "zh": "X光發現",
+      "en": "X-ray Discovery",
+      "axis": "science",
+      "level": 2,
+      "category": "science"
     }
   ]
 }
