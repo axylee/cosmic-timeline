@@ -1965,13 +1965,12 @@ function drawRuler() {
   const yearsPerPx = span / canvasW;
   const exactYears = yearsPerPx * SCALE_PX;
 
-  // Find the nicest round number closest to exactYears for the label
+  // Find the largest nice round number that is <= exactYears
   const niceSteps = [1e10,5e9,2e9,1e9,5e8,2e8,1e8,5e7,2e7,1e7,5e6,1e6,
                      5e5,1e5,5e4,1e4,5e3,1e3,500,200,100,50,20,10,5,2,1];
-  const scaleYears = niceSteps.reduce((best, s) =>
-    Math.abs(s - exactYears) < Math.abs(best - exactYears) ? s : best, niceSteps[0]);
+  const scaleYears = niceSteps.find(s => s <= exactYears) || 1;
 
-  // Update DOM scale bar — line stays 90px, label shows the nearest nice year count
+  // Update DOM scale bar — line stays 90px, label shows the correct year count
   document.getElementById('scale-line').style.width = SCALE_PX + 'px';
   document.getElementById('scale-label').textContent = formatScaleBar(scaleYears);
 }
