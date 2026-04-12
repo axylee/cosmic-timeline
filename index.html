@@ -132,9 +132,7 @@ body {
   top: 80px; bottom: 80px;
   z-index: 51;
   width: 122px;
-  display: flex; flex-direction: column;
-  align-items: stretch;              /* 所有子元素強制等寬，不由內容決定 */
-  gap: 0;
+  display: block;                    /* block 而非 flex，子元素寬度行為完全可預期 */
   padding: 8px 0;
   background: rgba(5,8,16,0.82);
   border-left: 1px solid rgba(255,255,255,0.07);
@@ -198,7 +196,7 @@ body {
 /* ── Group header ── */
 .leg-group {
   display: flex; align-items: center; gap: 4px;
-  padding: 5px 8px 3px;
+  width: 100%; padding: 5px 8px 3px;
   cursor: default; transition: background .12s;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -227,14 +225,13 @@ body {
    border-left 在 padding 內側顯示歸屬線
    完全不用 margin-left，避免超出容器寬度 */
 .leg-group-items {
-  display: flex; flex-direction: column; gap: 1px;
+  display: block;
   overflow: hidden; transition: max-height .2s ease;
   box-sizing: border-box;
-  padding-left: 10px;
+  padding-left: 14px;                /* 縮排：純 padding，不撐寬容器 */
   border-left: 2px solid rgba(255,255,255,0.08);
   margin-left: 8px;
-  /* 關鍵：寬度 = 容器寬 - margin，不讓內容撐寬 */
-  width: calc(100% - 8px);
+  width: calc(100% - 8px);          /* 補償 margin-left */
 }
 .leg-group-items.collapsed { max-height: 0 !important; }
 
@@ -248,8 +245,8 @@ body {
   white-space: nowrap; flex-direction: row-reverse;
   padding: 1px 4px; border-radius: 4px;
   justify-content: flex-end;
-  overflow: hidden;                  /* 超出的文字右邊直接消失 */
-  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%; box-sizing: border-box;
 }
 .leg:hover { opacity: 1; color: #fff; background: rgba(255,255,255,0.06); }
 .leg.hidden-axis { opacity: 0.2; text-decoration: line-through; }
@@ -777,7 +774,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604121340</span>
+  <span id="version-label">v202604121355</span>
 </div>
 
 <div id="legend">
