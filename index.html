@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604131242c</span>
+  <span id="version-label">v202604131518</span>
 </div>
 
 <div id="view-popup"></div>
@@ -995,6 +995,10 @@ body {
             </div>
           </div>
           <div style="font-size:10px;color:rgba(221,216,200,0.25)">Start year sets branch origin · End year terminates the line</div>
+        </div>
+        <div class="edit-row" style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
+          <div class="edit-label">Position — place below</div>
+          <select class="edit-input" id="edit-axis-order" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row">
           <div class="edit-label">Image URL</div>
@@ -3568,6 +3572,24 @@ function showPopup(ev) {
     document.getElementById('edit-zoommin-val').textContent = z.toFixed(2);
     document.getElementById('edit-axis-startyear').value = newAx.startYear ?? '';
     document.getElementById('edit-axis-endyear').value   = newAx.endYear   ?? '';
+    // Refresh order select for the new axis
+    const oSel = document.getElementById('edit-axis-order');
+    oSel.innerHTML = '';
+    const tOpt = document.createElement('option');
+    tOpt.value = '__top__'; tOpt.textContent = T('— 最上方 —','— Top —');
+    oSel.appendChild(tOpt);
+    const sorted2 = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
+    let selVal2 = '__top__';
+    sorted2.forEach(([id,ax]) => {
+      const opt = document.createElement('option');
+      opt.value = id;
+      const gDef2 = AXIS_GROUP_DEFS[ax.group];
+      const gLbl2 = gDef2 ? T(gDef2.label, gDef2.label_en) : ax.group;
+      opt.textContent = `${T(ax.label, ax.label_en)} [${gLbl2}]`;
+      oSel.appendChild(opt);
+      if (ax.order < (newAx.order ?? 0)) selVal2 = id;
+    });
+    oSel.value = selVal2;
   };
 
   // Populate crossRef multi-select (max 3)
@@ -3607,6 +3629,30 @@ function showPopup(ev) {
   document.getElementById('edit-zoommin-val').textContent = zm.toFixed(2);
   document.getElementById('edit-axis-startyear').value = curAx?.startYear ?? '';
   document.getElementById('edit-axis-endyear').value   = curAx?.endYear   ?? '';
+
+  // Populate "place below" order select
+  const orderSel = document.getElementById('edit-axis-order');
+  orderSel.innerHTML = '';
+  const sortedByOrder = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
+  // First option: top (order before the first axis)
+  const topOpt = document.createElement('option');
+  topOpt.value = '__top__';
+  topOpt.textContent = T('— 最上方 —','— Top —');
+  orderSel.appendChild(topOpt);
+  // One option per existing axis
+  const curOrder = curAx?.order ?? 0;
+  let selectedValue = '__top__';
+  sortedByOrder.forEach(([id, ax]) => {
+    const opt = document.createElement('option');
+    opt.value = id;
+    const gDef = AXIS_GROUP_DEFS[ax.group];
+    const gLabel = gDef ? T(gDef.label, gDef.label_en) : ax.group;
+    opt.textContent = `${T(ax.label, ax.label_en)} [${gLabel}]`;
+    orderSel.appendChild(opt);
+    // Select the axis that is directly above the current axis
+    if (ax.order < curOrder) selectedValue = id;
+  });
+  orderSel.value = selectedValue;
 
   // Populate edit fields
   document.getElementById('edit-image').value   = ev.image    || '';
@@ -3742,6 +3788,9 @@ async function loadEvents() {
     if (data.era_bands && data.era_bands.length > 0) ERA_BANDS = data.era_bands;
     // Store raw era_bands for export
     window._eraBandsRaw = data.era_bands || [];
+    // Store raw meta and era_buttons for export
+    window._jsonMeta = data.meta || {};
+    window._eraButtonsRaw = data.era_buttons || [];
     // A2: Load filter_cats from JSON
     if (data.filter_cats && data.filter_cats.length > 0) FILTER_CATS = data.filter_cats;
     // A1: Build era buttons from JSON
@@ -3846,6 +3895,7 @@ function exportJSON() {
       const base = {
         id,
         label:     ax.label,
+        label_en:  ax.label_en || ax.label,
         color:     ax.color,
         order:     ax.order,
         parent:    ax.parent ?? null,
@@ -3859,9 +3909,13 @@ function exportJSON() {
     });
 
   const out = {
-    meta: { title_zh:'宇宙歷史時間軸', title_en:'Cosmic Timeline', total_years:13800000000, created:'2026' },
+    meta: window._jsonMeta || { title_zh:'宇宙歷史時間軸', title_en:'Cosmic History Timeline', total_years:13800000000, created:'2026' },
+    axis_groups: AXIS_GROUP_DEFS,
     axes: mergedAxes,
     era_bands: window._eraBandsRaw || [],
+    era_buttons: window._eraButtonsRaw || [],
+    filter_cats: FILTER_CATS,
+    views: _viewDefs || [],
     events: mergedEvents,
   };
 
@@ -3951,6 +4005,32 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
       startYear: syRaw !== '' ? parseInt(syRaw) : (AXES[axId]?.startYear ?? 0),
       endYear:   eyRaw !== '' ? parseInt(eyRaw) : null,
     };
+
+    // Handle order change ("place below" select)
+    const orderVal = document.getElementById('edit-axis-order').value;
+    if (orderVal) {
+      const sorted = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
+      let newOrder;
+      if (orderVal === '__top__') {
+        // Place before the first axis
+        newOrder = sorted.length > 0 ? sorted[0][1].order - 1 : 0;
+      } else {
+        // Place after the selected axis
+        const idx = sorted.findIndex(([id]) => id === orderVal);
+        if (idx >= 0) {
+          const afterOrder = sorted[idx][1].order;
+          const nextOrder = idx + 1 < sorted.length ? sorted[idx + 1][1].order : afterOrder + 10;
+          // Skip if the axis is already right after the target (no change needed)
+          if (sorted[idx + 1]?.[0] !== axId) {
+            newOrder = (afterOrder + nextOrder) / 2;
+          }
+        }
+      }
+      if (newOrder !== undefined) {
+        axFields.order = newOrder;
+      }
+    }
+
     saveAxisEdit(axId, axFields);
     buildAxisGroupMap();
     buildLegend();
