@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>宇宙歷史時間軸 · Cosmic Timeline</title>
+<title>宇宙歷史時間軸 · Cosmic History Timeline</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -855,7 +855,7 @@ body {
 </div>
 
 <div id="header">
-  <h1>COSMIC TIMELINE<span id="h1-zh"> · 宇宙歷史時間軸</span></h1>
+  <h1>COSMIC HISTORY TIMELINE<span id="h1-zh"> · 宇宙歷史時間軸</span></h1>
   <div id="search-wrap">
     <span id="search-icon">🔍</span>
     <input type="text" id="search-input" placeholder="Search events… e.g. Newton, 1687" autocomplete="off" spellcheck="false">
@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604131242</span>
+  <span id="version-label">v202604131242b</span>
 </div>
 
 <div id="view-popup"></div>
@@ -1121,6 +1121,12 @@ function applyLang() {
   // overlap title
   const ot = document.getElementById('overlap-title');
   if (ot) ot.textContent = T('多個事件重疊','Multiple events here');
+  // legend buttons
+  const saBtn = document.getElementById('legend-show-all');
+  if (saBtn) saBtn.textContent = T('全部顯示','Show All');
+  const ceBtn = document.getElementById('legend-clear-edits');
+  if (ceBtn) ceBtn.textContent = T('清除編輯','Clear Edits');
+  updateToggleAllBtn();
   // era 按鈕切換
   updateEraButtonLang();
 }
@@ -4072,16 +4078,21 @@ function renderSearchResults(query) {
   box.innerHTML = matches.map((ev, i) => {
     const ax    = AXES[ev.axis];
     const color = axisEffectiveColor(ev.axis);
-    const zh    = highlightMatch(ev.zh || '', query);
-    const en    = highlightMatch(ev.en || '', query);
     const meta  = formatYearShort(ev.year);
+    const axLabel = ax ? T(ax.label, ax.label_en) : ev.axis;
+    let mainHtml;
+    if (lang === 'en') {
+      const en = highlightMatch(ev.en || ev.zh || '', query);
+      mainHtml = `<div class="sr-zh">${en}</div>`;
+    } else {
+      const zh = highlightMatch(ev.zh || '', query);
+      const en = highlightMatch(ev.en || '', query);
+      mainHtml = `<div class="sr-zh">${zh}</div>${ev.en ? `<div class="sr-en">${en}</div>` : ''}`;
+    }
     return `<div class="sr-item" data-idx="${i}" onmousedown="selectSearchResult(${i})">
       <div class="sr-dot" style="background:${color}"></div>
-      <div class="sr-main">
-        <div class="sr-zh">${zh}</div>
-        ${ev.en ? `<div class="sr-en">${en}</div>` : ''}
-      </div>
-      <div class="sr-meta">${ax?.label||ev.axis} · ${meta}</div>
+      <div class="sr-main">${mainHtml}</div>
+      <div class="sr-meta">${axLabel} · ${meta}</div>
     </div>`;
   }).join('');
   box.classList.add('show');
