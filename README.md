@@ -1,4 +1,4 @@
-# 🌌 Cosmic Timeline · 宇宙歷史時間軸
+# 🌌 Cosmic History Timeline · 宇宙歷史時間軸
 
 互動式時間軸，從宇宙誕生（138億年前）到今日。  
 **線上版本：** https://axylee.github.io/cosmic-timeline/
@@ -11,10 +11,11 @@
 cosmic-timeline/
 ├── index.html                # 主時間軸 UI
 ├── data/
-│   └── events.json           # 所有事件、軸線、時代定義
+│   └── events.json           # 所有事件、軸線、時代、UI 設定資料
 ├── tools/
 │   └── cosmic-tools.html     # 工具箱（新增事件/軸線 + 圖片管理）
 ├── check.py                  # 驗證 events.json 的 Python 腳本
+├── add-events-sample.py      # 修改 events.json 的 Python 腳本樣板
 └── README.md
 ```
 
@@ -271,6 +272,24 @@ python check.py
 
 ---
 
+## events.json 完整結構
+
+```
+events.json
+├── meta              # 專案基本資訊
+├── axis_groups       # 軸線群組定義（7 組：label/label_en/color）
+├── axes              # 軸線定義（47 條）
+├── era_bands         # Canvas 背景時代色帶（11 段）
+├── era_buttons       # 底部導航按鈕（12 個）
+├── filter_cats       # 篩選分類（15 類）
+├── views             # 主題視圖（24 個）
+└── events            # 歷史事件（561+ 個）
+```
+
+> 所有 UI 資料（群組、時代色帶、導航按鈕、篩選分類）都從 JSON 動態載入，index.html 不寫死任何資料。
+
+---
+
 ## events.json 欄位說明
 
 ### axes（軸線）
@@ -278,7 +297,8 @@ python check.py
 | 欄位 | 必填 | 說明 |
 |------|------|------|
 | `id` | ✓ | 唯一識別碼（英文小寫 + 連字號） |
-| `label` | ✓ | 顯示名稱 |
+| `label` | ✓ | 中文顯示名稱 |
+| `label_en` | ✓ | 英文顯示名稱 |
 | `color` | ✓ | 顏色 hex |
 | `order` | ✓ | 排列順序 |
 | `parent` | | 父軸 id（null = 頂層） |
@@ -355,3 +375,9 @@ python check.py
 | 2026-04-12 | 冰河期5次補 endYear 變 pill，Events 選單加「五次大冰河期」視圖 |
 | 2026-04-12 | crossRef 縱線跑位 bug 修正：目標軸線不在 yMap 時不畫縱線 |
 | 2026-04-12 | 軸線 startYear 修正：science/east/europe/americas/latin-america |
+| 2026-04-13 | 資料集中化：ERA_BANDS/FILTER_CATS/AXIS_GROUP_DEFS/era_buttons 全部移到 JSON |
+| 2026-04-13 | buildAxes() 加入 label_en 讀取、刪除 Fallback 寫死資料、刪除重複函數 |
+| 2026-04-13 | 完整英文化：UI/Popup/Tooltip/Search/Legend/Era/Filter 全部支援 T() 中英切換 |
+| 2026-04-13 | Solo 模式 click/dblclick 跑位修正（延遲 click 避免衝突） |
+| 2026-04-13 | check.py 擴充：驗證 axis_groups/era_bands/era_buttons/filter_cats + 內容缺失摘要 |
+| 2026-04-13 | 新增 add-events-sample.py 腳本樣板 |

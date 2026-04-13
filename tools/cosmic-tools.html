@@ -868,9 +868,12 @@ function doDownload() {
     const ev={...p.data}; Object.keys(ev).forEach(k=>ev[k]===undefined&&delete ev[k]); return ev;
   });
   const out = {
-    meta: eventsData.meta||{title_zh:'宇宙歷史時間軸',title_en:'Cosmic Timeline',total_years:13800000000,created:'2026'},
+    meta: eventsData.meta||{title_zh:'宇宙歷史時間軸',title_en:'Cosmic History Timeline',total_years:13800000000,created:'2026'},
+    axis_groups: eventsData.axis_groups||{},
     axes: [...(eventsData.axes||[]),...newAxes],
     era_bands: eventsData.era_bands||[],
+    era_buttons: eventsData.era_buttons||[],
+    filter_cats: eventsData.filter_cats||[],
     events: [...eventsData.events,...newEvents],
     views: eventsData.views||[],
   };
