@@ -1102,6 +1102,31 @@ function applyMissingUrl(id) {
 // ── Image fetch utilities ──
 function parseWiki(url){if(!url?.includes('wikipedia.org/wiki/'))return null;return{lang:url.split('//')[1].split('.wikipedia')[0],title:decodeURIComponent(url.split('/wiki/')[1].split('#')[0])};}
 async function fetchNasaCandidates(ev,n=5){try{const q=encodeURIComponent(ev.en||ev.zh);const r=await fetch(`https://images-api.nasa.gov/search?q=${q}&media_type=image&page_size=${n}`);const d=await r.json();return(d.collection?.items||[]).slice(0,n).flatMap(item=>{const link=item.links?.find(l=>l.rel==='preview');if(!link?.href)return[];const large=link.href.replace('~thumb.jpg','~orig.jpg').replace('~small.jpg','~large.jpg');return[{url:large,label:item.data?.[0]?.title||'NASA',source:'NASA'}];});}catch(e){return[];}}
+async function fetchCommonsCandidates(query, n=4) {
+  if (!query) return [];
+  try {
+    const p = new URLSearchParams({
+      action: 'query', generator: 'search', gsrsearch: query,
+      gsrnamespace: '6', gsrlimit: String(n),
+      prop: 'imageinfo', iiprop: 'url|mime', iiurlwidth: '1200',
+      format: 'json', origin: '*'
+    });
+    const d = await (await fetch(`https://commons.wikimedia.org/w/api.php?${p}`)).json();
+    const pages = Object.values(d.query?.pages || {});
+    return pages
+      .filter(pg => {
+        const mime = pg.imageinfo?.[0]?.mime || '';
+        return mime.startsWith('image/') && !mime.includes('svg');
+      })
+      .map(pg => {
+        const ii = pg.imageinfo[0];
+        const url = ii.thumburl || ii.url;
+        const title = (pg.title || '').replace('File:', '').replace(/_/g, ' ');
+        return { url: sanitizeImageUrl(url), label: title.substring(0, 40), source: 'Commons' };
+      })
+      .filter(c => c.url);
+  } catch(e) { return []; }
+}
 async function fetchWikidata(ev) {
   const wikiUrl = ev.wiki_en || ev.wiki_zh;
   if (!wikiUrl) return null;
@@ -1145,6 +1170,9 @@ async function fetchAllCandidates(ev,zhFirst){
   tasks.push(...wikiUrls.map(u=>fetchWikiOrig(u).then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki原圖('+parseWiki(u)?.lang+')',source:'Wiki-Orig'}:null);})));
   if(ev.en) tasks.push(fetchWikiByTitle(ev.en,'en').then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki搜尋(en)',source:'Wiki-Search'}:null);}));
   if(ev.zh) tasks.push(fetchWikiByTitle(ev.zh,'zh').then(url=>{url=sanitizeImageUrl(url);add(url?{url,label:'Wiki搜尋(zh)',source:'Wiki-Search'}:null);}));
+  // Wikimedia Commons direct search — uses EN name first, falls back to ZH
+  if(ev.en) tasks.push(fetchCommonsCandidates(ev.en, 3).then(arr=>arr.forEach(add)));
+  else if(ev.zh) tasks.push(fetchCommonsCandidates(ev.zh, 3).then(arr=>arr.forEach(add)));
   await Promise.allSettled(tasks);
   return candidates;
 }
