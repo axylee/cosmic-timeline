@@ -26,11 +26,6 @@
       "label_en": "Civilization",
       "color": "#f97316"
     },
-    "human": {
-      "label": "人文",
-      "label_en": "Humanities",
-      "color": "#f472b6"
-    },
     "religion": {
       "label": "宗教",
       "label_en": "Religion",
@@ -136,7 +131,7 @@
       "startYear": -3500,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "human",
+      "group": "global",
       "label_en": "Arts & Culture"
     },
     {
@@ -148,7 +143,7 @@
       "startYear": -10000,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "human",
+      "group": "global",
       "label_en": "Science & Tech"
     },
     {
@@ -354,18 +349,6 @@
       "zoomMin": 0.3,
       "group": "civilization",
       "label_en": "China"
-    },
-    {
-      "id": "china-b",
-      "label": "並立政權",
-      "color": "#dc2626",
-      "order": 65,
-      "parent": "china",
-      "startYear": -771,
-      "endYear": null,
-      "zoomMin": 0.75,
-      "group": "nation",
-      "label_en": "Parallel States"
     },
     {
       "id": "taoism",
@@ -2128,7 +2111,7 @@
       "year": -771,
       "zh": "東周列國",
       "en": "Eastern Zhou States",
-      "axis": "china-b",
+      "axis": "china",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "周室東遷後諸侯林立，春秋五霸、戰國七雄先後稱霸。",
@@ -2384,7 +2367,7 @@
       "year": 220,
       "zh": "魏·蜀·吳並立",
       "en": "Wei / Shu / Wu",
-      "axis": "china-b",
+      "axis": "china",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "三國鼎立：曹魏佔北方，蜀漢據西南，孫吳控東南，群雄爭霸。",
@@ -2435,7 +2418,7 @@
       "year": 304,
       "zh": "五胡十六國",
       "en": "Sixteen Kingdoms",
-      "axis": "china-b",
+      "axis": "china",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "北方五個少數民族建立十六個政權，與東晉南北對峙。",
@@ -2589,7 +2572,7 @@
       "year": 907,
       "zh": "五代·十國並立",
       "en": "Five Dynasties & Ten Kingdoms",
-      "axis": "china-b",
+      "axis": "china",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "北方五朝更迭，南方十個獨立政權並立，政治動盪五十年。",
@@ -2645,7 +2628,7 @@
       "year": 1115,
       "zh": "宋·金·遼並立",
       "en": "Song / Jin / Liao Coexistence",
-      "axis": "china-b",
+      "axis": "china",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "南宋偏安江南，金國控北方，蒙古崛起前的三國並立局面。",
