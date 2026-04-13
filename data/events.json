@@ -277,7 +277,7 @@
       "color": "#f59e0b",
       "order": 62,
       "parent": "africa",
-      "startYear": 300,
+      "startYear": -600,
       "endYear": null,
       "zoomMin": 0.58,
       "group": "nation",
@@ -481,7 +481,7 @@
       "color": "#7c3aed",
       "order": 70,
       "parent": "americas",
-      "startYear": -1000,
+      "startYear": -3500,
       "endYear": null,
       "zoomMin": 0.72,
       "group": "nation",
@@ -8422,7 +8422,9 @@
       "level": 2,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Andean-Saharan_glaciation",
-      "endYear": -420000000
+      "endYear": -420000000,
+      "desc_en": "Major glaciation ~460–430 Mya affecting Gondwana, linked to the first mass extinction event.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/安第斯-撒哈拉冰期"
     },
     {
       "id": "climate-karoo",
@@ -8434,7 +8436,9 @@
       "category": "nature",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Karoo_Glaciation.png",
       "wiki_en": "https://en.wikipedia.org/wiki/Karoo_Ice_Age",
-      "endYear": -260000000
+      "endYear": -260000000,
+      "desc_en": "Longest ice age ~360–260 Mya, associated with the spread of land plants and CO₂ drawdown.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/卡魯冰期"
     },
     {
       "id": "climate-lgm",
@@ -8446,7 +8450,9 @@
       "category": "nature",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/CLIMAP.jpg",
       "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum",
-      "endYear": -11700
+      "endYear": -11700,
+      "desc_en": "Peak of the last ice age ~26,000 years ago; ice sheets covered much of North America and Europe.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/末次冰盛期"
     },
     {
       "id": "climate-holocene",
@@ -8457,7 +8463,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Holocene",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mollweide.jpg/1280px-Mollweide.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mollweide.jpg/1280px-Mollweide.jpg",
+      "desc_en": "Warming after the last ice age begins the Holocene epoch, enabling agriculture and civilization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/全新世"
     },
     {
       "id": "climate-warming",
@@ -8468,7 +8476,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Global_warming",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Change_in_Average_Temperature_With_Fahrenheit.svg/1200px-Change_in_Average_Temperature_With_Fahrenheit.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Change_in_Average_Temperature_With_Fahrenheit.svg/1200px-Change_in_Average_Temperature_With_Fahrenheit.svg.png",
+      "desc_en": "Industrial-era fossil fuel combustion drives rising global temperatures from the late 19th century.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/全球变暖"
     },
     {
       "id": "climate-ipcc",
@@ -8479,7 +8489,9 @@
       "level": 2,
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Intergovernmental_Panel_on_Climate_Change_Logo.svg/1200px-Intergovernmental_Panel_on_Climate_Change_Logo.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Intergovernmental_Panel_on_Climate_Change_Logo.svg/1200px-Intergovernmental_Panel_on_Climate_Change_Logo.svg.png",
+      "desc_en": "Intergovernmental Panel on Climate Change established by UN to assess climate science.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/政府間氣候變化專門委員會"
     },
     {
       "id": "climate-paris",
@@ -8490,7 +8502,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/ParisAgreement.svg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paris_Agreement"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paris_Agreement",
+      "desc_en": "196 nations adopt agreement to limit global warming to 1.5°C above pre-industrial levels.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巴黎協定"
     },
     {
       "id": "life-ext1",
@@ -8501,7 +8515,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Late_Ordovician_mass_extinction",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ordovician_extinction.jpg/1280px-Ordovician_extinction.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ordovician_extinction.jpg/1280px-Ordovician_extinction.jpg",
+      "desc_en": "End-Ordovician extinction ~443 Mya kills ~85% of marine species, likely caused by glaciation.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/奧陶紀－志留紀滅絕事件"
     },
     {
       "id": "life-ext2",
@@ -8512,7 +8528,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Late_Devonian_extinction",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png",
+      "desc_en": "Late Devonian extinction ~372 Mya devastates marine life over millions of years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/泥盆紀後期滅絕事件"
     },
     {
       "id": "life-ext4",
@@ -8523,7 +8541,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Triassic%E2%80%93Jurassic_extinction_event",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png",
+      "desc_en": "End-Triassic extinction ~201 Mya clears the way for dinosaurs to dominate.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀－侏羅紀滅絕事件"
     },
     {
       "id": "mig-002",
@@ -8534,7 +8554,9 @@
       "level": 1,
       "crossRef": "oceania",
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_Australia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_Australia",
+      "desc_en": "Humans reach Australia/Oceania ~65,000 years ago, likely by coastal migration.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亞原住民"
     },
     {
       "id": "mig-003",
@@ -8545,7 +8567,9 @@
       "level": 2,
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Early_human_migrations",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png",
+      "desc_en": "Modern humans arrive in Europe ~45,000 years ago, coexisting briefly with Neanderthals.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/歐洲早期現代人"
     },
     {
       "id": "mig-004",
@@ -8557,7 +8581,9 @@
       "crossRef": "southeast-asia",
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Southeast_Asia",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/CasparSchmalkalden_AsiaMap.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/CasparSchmalkalden_AsiaMap.jpg",
+      "desc_en": "Humans settle across Southeast Asia ~40,000 years ago via island-hopping routes.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/東南亞歷史"
     },
     {
       "id": "mig-005",
@@ -8568,7 +8594,9 @@
       "level": 2,
       "crossRef": "central-asia",
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Central_Asia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Central_Asia",
+      "desc_en": "Humans reach Central Asia and Siberia ~30,000 years ago, adapting to extreme cold.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中亞歷史"
     },
     {
       "id": "mig-006",
@@ -8580,7 +8608,9 @@
       "crossRef": "americas",
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_the_Americas",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Early_migrations_mercator.svg/1200px-Early_migrations_mercator.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Early_migrations_mercator.svg/1200px-Early_migrations_mercator.svg.png",
+      "desc_en": "Humans cross the Bering land bridge into the Americas ~20,000 years ago during the ice age.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/白令陸橋"
     },
     {
       "id": "mig-007",
@@ -8591,7 +8621,9 @@
       "level": 2,
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Paleo-Indians",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Glyptodon_old_drawing.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Glyptodon_old_drawing.jpg",
+      "desc_en": "Humans spread through South America ~15,000 years ago, reaching Patagonia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美洲原住民"
     },
     {
       "id": "oce-001",
@@ -8601,7 +8633,9 @@
       "axis": "oceania",
       "level": 1,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_Australia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_Australia",
+      "desc_en": "First humans arrive in Australia ~65,000 years ago, world's earliest known ocean crossing.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亞原住民"
     },
     {
       "id": "oce-002",
@@ -8612,7 +8646,9 @@
       "level": 1,
       "category": "civilization",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Taiwanese_aborigines.JPG",
-      "wiki_en": "https://en.wikipedia.org/wiki/Austronesian_peoples"
+      "wiki_en": "https://en.wikipedia.org/wiki/Austronesian_peoples",
+      "desc_en": "Austronesian peoples expand from Taiwan across the Pacific and Indian Oceans from ~3,500 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南島民族"
     },
     {
       "id": "oce-003",
@@ -8623,7 +8659,9 @@
       "level": 2,
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Polynesia",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Map_OC-Polynesia.PNG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Map_OC-Polynesia.PNG",
+      "desc_en": "Polynesian navigators settle remote Pacific islands including Samoa, Tonga, and Tahiti.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/玻里尼西亞"
     },
     {
       "id": "oce-004",
@@ -8634,7 +8672,9 @@
       "level": 1,
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/M%C4%81ori_people",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/New_Zealand_-_Maori_rowing_-_8444.jpg/1280px-New_Zealand_-_Maori_rowing_-_8444.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/New_Zealand_-_Maori_rowing_-_8444.jpg/1280px-New_Zealand_-_Maori_rowing_-_8444.jpg",
+      "desc_en": "Māori people reach New Zealand ~1250 AD, the last major landmass settled by humans.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/毛利人"
     },
     {
       "id": "oce-005",
@@ -8645,7 +8685,9 @@
       "level": 1,
       "category": "exploration",
       "wiki_en": "https://en.wikipedia.org/wiki/James_Cook",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Captainjamescookportrait.jpg/1280px-Captainjamescookportrait.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Captainjamescookportrait.jpg/1280px-Captainjamescookportrait.jpg",
+      "desc_en": "Captain James Cook maps Australia's east coast in 1770, claiming it for Britain.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/詹姆斯·庫克"
     },
     {
       "id": "oce-006",
@@ -8656,7 +8698,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_Australia",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Aboriginal_farmers_at_Franklinford_1858.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Aboriginal_farmers_at_Franklinford_1858.jpg",
+      "desc_en": "Britain establishes penal colony at Sydney Cove in 1788, beginning European colonization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亞歷史"
     },
     {
       "id": "oce-007",
@@ -8667,7 +8711,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Commonwealth_of_Australia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Commonwealth_of_Australia",
+      "desc_en": "Six British colonies federate into the Commonwealth of Australia on January 1, 1901.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亚联邦"
     },
     {
       "id": "cas-001",
@@ -8677,7 +8723,9 @@
       "axis": "central-asia",
       "level": 2,
       "category": "migration",
-      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Central_Asia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Central_Asia",
+      "desc_en": "Early humans reach Central Asia ~40,000 years ago, leaving traces in Denisova Cave.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/丹尼索瓦人"
     },
     {
       "id": "cas-002",
@@ -8688,7 +8736,9 @@
       "level": 1,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Domestication_of_the_horse",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cave_painting_in_Doushe_cave%2C_Lorstan%2C_Iran%2C_8th_millennium_BC.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cave_painting_in_Doushe_cave%2C_Lorstan%2C_Iran%2C_8th_millennium_BC.JPG",
+      "desc_en": "Horse domesticated on the Kazakh steppe ~3,500 BC, revolutionizing warfare and trade.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/马的驯化"
     },
     {
       "id": "cas-003",
@@ -8699,7 +8749,9 @@
       "level": 2,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Scythians",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Scythian_Kingdom_in_West_Asia.jpg/1280px-Scythian_Kingdom_in_West_Asia.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Scythian_Kingdom_in_West_Asia.jpg/1280px-Scythian_Kingdom_in_West_Asia.jpg",
+      "desc_en": "Scythian nomads dominate the Eurasian steppe from the Black Sea to Siberia, ~800–300 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/斯基泰人"
     },
     {
       "id": "cas-004",
@@ -8710,7 +8762,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Xiongnu",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Xiongnu_chieftain_%28black_backgrouond%29.jpg/1280px-Xiongnu_chieftain_%28black_backgrouond%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Xiongnu_chieftain_%28black_backgrouond%29.jpg/1280px-Xiongnu_chieftain_%28black_backgrouond%29.jpg",
+      "desc_en": "Xiongnu confederacy becomes first major steppe empire, rivaling Han Dynasty China.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/匈奴"
     },
     {
       "id": "cas-005",
@@ -8721,7 +8775,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/G%C3%B6kt%C3%BCrks",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tyurki.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Tyurki.jpg",
+      "desc_en": "Göktürks establish a vast khaganate across Central Asia from Mongolia to the Black Sea.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/突厥汗國"
     },
     {
       "id": "cas-006",
@@ -8732,7 +8788,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif/1280px-Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif/1280px-Expansion_of_the_Mongol_Empire_1206%E2%80%931294.gif",
+      "desc_en": "Genghis Khan unites Mongol tribes and builds the largest contiguous land empire in history.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蒙古帝國"
     },
     {
       "id": "cas-007",
@@ -8743,7 +8801,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Timur_Empire.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Timurid_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Timurid_Empire",
+      "desc_en": "Timur builds a vast empire from Samarkand, conquering Persia, India, and Anatolia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/帖木兒帝國"
     },
     {
       "id": "cas-008",
@@ -8754,7 +8814,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Map_of_the_Kazakh_Khanate_18th_century.png",
-      "wiki_en": "https://en.wikipedia.org/wiki/Kazakh_Khanate"
+      "wiki_en": "https://en.wikipedia.org/wiki/Kazakh_Khanate",
+      "desc_en": "Kazakh Khanate established ~1465, last major nomadic state before Russian expansion.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/哈薩克汗國"
     },
     {
       "id": "sea-001",
@@ -8765,7 +8827,9 @@
       "level": 2,
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Southeast_Asia",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/CasparSchmalkalden_AsiaMap.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/CasparSchmalkalden_AsiaMap.jpg",
+      "desc_en": "Homo sapiens reaches Southeast Asia ~40,000 years ago via coastal migration routes.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/東南亞歷史"
     },
     {
       "id": "sea-002",
@@ -8776,7 +8840,9 @@
       "level": 2,
       "category": "civilization",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Dong_Son_axe.JPG",
-      "wiki_en": "https://en.wikipedia.org/wiki/Dong_Son_culture"
+      "wiki_en": "https://en.wikipedia.org/wiki/Dong_Son_culture",
+      "desc_en": "Bronze Age Dong Son culture in Vietnam produces iconic bronze drums ~600 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/東山文化"
     },
     {
       "id": "sea-003",
@@ -8787,7 +8853,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Map_indianized_kingdoms_indochina.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Funan"
+      "wiki_en": "https://en.wikipedia.org/wiki/Funan",
+      "desc_en": "Funan kingdom in the Mekong Delta becomes earliest known Indianized state in SE Asia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/扶南"
     },
     {
       "id": "sea-004",
@@ -8798,7 +8866,9 @@
       "level": 1,
       "category": "civilization",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Srivijaya_Empire.svg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Srivijaya"
+      "wiki_en": "https://en.wikipedia.org/wiki/Srivijaya",
+      "desc_en": "Srivijaya controls the Strait of Malacca, dominating Southeast Asian maritime trade.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/三佛齊"
     },
     {
       "id": "sea-005",
@@ -8809,7 +8879,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Khmer_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Map-of-southeast-asia_900_CE.svg/1200px-Map-of-southeast-asia_900_CE.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Map-of-southeast-asia_900_CE.svg/1200px-Map-of-southeast-asia_900_CE.svg.png",
+      "desc_en": "Jayavarman II founds the Khmer Empire, beginning centuries of Angkorian civilization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/高棉帝國"
     },
     {
       "id": "sea-006",
@@ -8820,7 +8892,9 @@
       "level": 1,
       "category": "culture",
       "wiki_en": "https://en.wikipedia.org/wiki/Angkor_Wat",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Buddhist_monks_in_front_of_the_Angkor_Wat.jpg/1280px-Buddhist_monks_in_front_of_the_Angkor_Wat.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Buddhist_monks_in_front_of_the_Angkor_Wat.jpg/1280px-Buddhist_monks_in_front_of_the_Angkor_Wat.jpg",
+      "desc_en": "Suryavarman II builds Angkor Wat, the world's largest religious monument.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/吴哥窟"
     },
     {
       "id": "sea-007",
@@ -8831,7 +8905,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Thailand_%28Ayutthaya_period%29.svg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ayutthaya_Kingdom"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ayutthaya_Kingdom",
+      "desc_en": "Thai kingdom of Ayutthaya becomes major Southeast Asian power for over 400 years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿瑜陀耶王國"
     },
     {
       "id": "sea-008",
@@ -8842,7 +8918,9 @@
       "level": 1,
       "category": "war",
       "wiki_en": "https://en.wikipedia.org/wiki/Capture_of_Malacca_(1511)",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Conquista_de_Malaca%2C_estudo_-_Ernesto_Condeixa_%28cropped%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Conquista_de_Malaca%2C_estudo_-_Ernesto_Condeixa_%28cropped%29.png",
+      "desc_en": "Portugal captures Malacca in 1511, beginning European colonial presence in SE Asia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/葡屬麻六甲"
     },
     {
       "id": "sea-009",
@@ -8852,7 +8930,9 @@
       "axis": "southeast-asia",
       "level": 1,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/Decolonization_of_Asia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Decolonization_of_Asia",
+      "desc_en": "Post-WWII wave of independence across SE Asia: Philippines, Indonesia, Vietnam, Burma, Malaya.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/東南亞歷史#獨立運動"
     },
     {
       "id": "trd-001",
@@ -8862,7 +8942,9 @@
       "axis": "trade",
       "level": 2,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/Trade_in_ancient_Mesopotamia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Trade_in_ancient_Mesopotamia",
+      "desc_en": "Long-distance trade networks emerge in Mesopotamia ~3000 BC, exchanging metals, textiles, and grain.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美索不达米亚"
     },
     {
       "id": "trd-002",
@@ -8872,7 +8954,9 @@
       "axis": "trade",
       "level": 2,
       "category": "trade",
-      "wiki_en": "https://en.wikipedia.org/wiki/Bronze_Age_Mediterranean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Bronze_Age_Mediterranean",
+      "desc_en": "Bronze Age Mediterranean trade connects Egypt, Crete, Cyprus, and the Levant ~2000 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/青銅時代"
     },
     {
       "id": "trd-003",
@@ -8883,7 +8967,9 @@
       "level": 2,
       "category": "trade",
       "wiki_en": "https://en.wikipedia.org/wiki/Phoenicia",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Phoenicia_map-en.svg/1200px-Phoenicia_map-en.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Phoenicia_map-en.svg/1200px-Phoenicia_map-en.svg.png",
+      "desc_en": "Phoenician merchants build a vast Mediterranean trade network, spreading the alphabet.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/腓尼基"
     },
     {
       "id": "trd-005",
@@ -8894,7 +8980,9 @@
       "level": 2,
       "category": "trade",
       "wiki_en": "https://en.wikipedia.org/wiki/Viking_Age",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nicholas_Roerich%2C_Guests_from_Overseas.jpg/1280px-Nicholas_Roerich%2C_Guests_from_Overseas.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nicholas_Roerich%2C_Guests_from_Overseas.jpg/1280px-Nicholas_Roerich%2C_Guests_from_Overseas.jpg",
+      "desc_en": "Vikings establish trade routes from Scandinavia to Byzantium and the Islamic world.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/維京人"
     },
     {
       "id": "trd-006",
@@ -8905,7 +8993,9 @@
       "level": 2,
       "category": "trade",
       "wiki_en": "https://en.wikipedia.org/wiki/Marco_Polo",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Marco_Polo_-_costume_tartare.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Marco_Polo_-_costume_tartare.jpg",
+      "desc_en": "Venetian merchant Marco Polo travels to China, documenting the Mongol Empire.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馬可·波羅"
     },
     {
       "id": "trd-007",
@@ -8916,7 +9006,9 @@
       "level": 1,
       "category": "exploration",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_the_Kingdom_of_Portugal_%281485%E2%80%93mid-16th_century%29.svg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Portuguese_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Portuguese_Empire",
+      "desc_en": "Portugal launches the Age of Discovery, reaching the Cape of Good Hope and India.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/地理大发现"
     },
     {
       "id": "trd-009",
@@ -8927,7 +9019,9 @@
       "level": 1,
       "category": "trade",
       "wiki_en": "https://en.wikipedia.org/wiki/East_India_Company",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/B26055943A_-_A_map_of_the_East-Indies_and_the_adjacent_countries.jpg/1280px-B26055943A_-_A_map_of_the_East-Indies_and_the_adjacent_countries.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/B26055943A_-_A_map_of_the_East-Indies_and_the_adjacent_countries.jpg/1280px-B26055943A_-_A_map_of_the_East-Indies_and_the_adjacent_countries.jpg",
+      "desc_en": "Dutch and British East India Companies transform global trade and colonialism.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/荷蘭東印度公司"
     },
     {
       "id": "trd-010",
@@ -8938,7 +9032,9 @@
       "level": 1,
       "category": "trade",
       "wiki_en": "https://en.wikipedia.org/wiki/Suez_Canal",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Suez_Canal%2C_Egypt_%2831596166706%29.jpg/1280px-Suez_Canal%2C_Egypt_%2831596166706%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Suez_Canal%2C_Egypt_%2831596166706%29.jpg/1280px-Suez_Canal%2C_Egypt_%2831596166706%29.jpg",
+      "desc_en": "Suez Canal opens in 1869, dramatically shortening sea routes between Europe and Asia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蘇伊士運河"
     },
     {
       "id": "trd-011",
@@ -8949,7 +9045,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Mount_Washington_Hotel_2003.JPG",
-      "wiki_en": "https://en.wikipedia.org/wiki/Bretton_Woods_system"
+      "wiki_en": "https://en.wikipedia.org/wiki/Bretton_Woods_system",
+      "desc_en": "1944 conference establishes the postwar monetary system, creating IMF and World Bank.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/布雷顿森林协定"
     },
     {
       "id": "trd-012",
@@ -8960,7 +9058,9 @@
       "level": 2,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/World_Trade_Organization",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fourth_Global_Review_of_Aid_for_Trade_1691_%289237986689%29.jpg/1280px-Fourth_Global_Review_of_Aid_for_Trade_1691_%289237986689%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fourth_Global_Review_of_Aid_for_Trade_1691_%289237986689%29.jpg/1280px-Fourth_Global_Review_of_Aid_for_Trade_1691_%289237986689%29.jpg",
+      "desc_en": "World Trade Organization replaces GATT in 1995, governing global trade rules.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/世界贸易组织"
     },
     {
       "id": "trd-013",
@@ -8970,7 +9070,9 @@
       "axis": "trade",
       "level": 2,
       "category": "politics",
-      "wiki_en": "https://en.wikipedia.org/wiki/China_and_the_World_Trade_Organization"
+      "wiki_en": "https://en.wikipedia.org/wiki/China_and_the_World_Trade_Organization",
+      "desc_en": "China joins WTO in 2001, accelerating its integration into the global economy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中國加入世界貿易組織"
     },
     {
       "id": "ind-002",
@@ -8980,7 +9082,9 @@
       "axis": "india",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Indo-Aryan_migration"
+      "wiki_en": "https://en.wikipedia.org/wiki/Indo-Aryan_migration",
+      "desc_en": "Indo-Aryan peoples migrate into the Indian subcontinent, beginning the Vedic civilization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/吠陀時期"
     },
     {
       "id": "ind-003",
@@ -8991,7 +9095,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Maurya_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Maurya_Empire%2C_c.250_BCE_network_model_v01.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Maurya_Empire%2C_c.250_BCE_network_model_v01.png",
+      "desc_en": "Chandragupta founds the Maurya Empire, first to unify most of the Indian subcontinent.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/孔雀王朝"
     },
     {
       "id": "ind-004",
@@ -9002,7 +9108,9 @@
       "level": 1,
       "category": "religion",
       "wiki_en": "https://en.wikipedia.org/wiki/Ashoka",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg",
+      "desc_en": "Emperor Ashoka converts to Buddhism and spreads it across Asia through missionaries.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿育王"
     },
     {
       "id": "ind-005",
@@ -9013,7 +9121,9 @@
       "level": 1,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Gupta_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/South_Asia_historical_AD375_EN.svg/1200px-South_Asia_historical_AD375_EN.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/South_Asia_historical_AD375_EN.svg/1200px-South_Asia_historical_AD375_EN.svg.png",
+      "desc_en": "Gupta Empire presides over India's golden age of science, mathematics, art, and literature.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/笈多王朝"
     },
     {
       "id": "ind-006",
@@ -9024,7 +9134,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Map_of_the_Mamluk_Dynasty.png",
-      "wiki_en": "https://en.wikipedia.org/wiki/Delhi_Sultanate"
+      "wiki_en": "https://en.wikipedia.org/wiki/Delhi_Sultanate",
+      "desc_en": "Muslim sultanates rule northern India from Delhi for over 300 years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/德里蘇丹國"
     },
     {
       "id": "ind-007",
@@ -9035,7 +9147,9 @@
       "level": 1,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Mughal_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/MughalEmpire1700.svg/1200px-MughalEmpire1700.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/MughalEmpire1700.svg/1200px-MughalEmpire1700.svg.png",
+      "desc_en": "Babur founds the Mughal Empire, which will rule most of India for three centuries.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/莫卧儿帝国"
     },
     {
       "id": "ind-008",
@@ -9046,7 +9160,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_the_British_East_India_Company_%281801%29.svg",
-      "wiki_en": "https://en.wikipedia.org/wiki/East_India_Company"
+      "wiki_en": "https://en.wikipedia.org/wiki/East_India_Company",
+      "desc_en": "British East India Company gradually takes control of India through trade and military power.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/不列颠东印度公司"
     },
     {
       "id": "ind-009",
@@ -9057,7 +9173,9 @@
       "level": 1,
       "category": "war",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Capture_of_Delhi%2C_1857..jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857"
+      "wiki_en": "https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857",
+      "desc_en": "Indian Rebellion of 1857 against British rule leads to direct Crown governance.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/印度民族起義"
     },
     {
       "id": "ind-010",
@@ -9068,7 +9186,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/India%2C_by_British_Information_Services%2C_1944_restored_version.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Indian_independence_movement"
+      "wiki_en": "https://en.wikipedia.org/wiki/Indian_independence_movement",
+      "desc_en": "India gains independence from Britain in 1947, partitioned into India and Pakistan.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/印度独立运动"
     },
     {
       "id": "hevo-008",
@@ -9079,7 +9199,9 @@
       "level": 1,
       "category": "evolution",
       "wiki_en": "https://en.wikipedia.org/wiki/Behavioral_modernity",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lascaux_painting.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lascaux_painting.jpg",
+      "desc_en": "Emergence of symbolic thought, art, and complex language marks behavioral modernity ~70,000 years ago.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/行為現代性"
     },
     {
       "id": "hevo-009",
@@ -9089,7 +9211,9 @@
       "axis": "human-evo",
       "level": 1,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Agricultural_revolution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Agricultural_revolution",
+      "desc_en": "Transition from hunter-gathering to farming ~10,000 BC transforms human societies permanently.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/新石器革命"
     },
     {
       "id": "hevo-010",
@@ -9100,7 +9224,9 @@
       "level": 2,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_cities",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nuremberg_chronicles_-_Nuremberga.png/1280px-Nuremberg_chronicles_-_Nuremberga.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nuremberg_chronicles_-_Nuremberga.png/1280px-Nuremberg_chronicles_-_Nuremberga.png",
+      "desc_en": "Earliest urban centers like Eridu and Uruk emerge in Mesopotamia ~5,000 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/烏魯克"
     },
     {
       "id": "hevo-011",
@@ -9111,7 +9237,9 @@
       "level": 1,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_writing",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Writing_system_survey.svg/1200px-Writing_system_survey.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Writing_system_survey.svg/1200px-Writing_system_survey.svg.png",
+      "desc_en": "Cuneiform in Sumer and hieroglyphics in Egypt mark the birth of written records ~3,200 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/文字的歷史"
     },
     {
       "id": "sci-016",
@@ -9122,7 +9250,9 @@
       "level": 2,
       "category": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Sanzio_01_Euclid.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Euclid"
+      "wiki_en": "https://en.wikipedia.org/wiki/Euclid",
+      "desc_en": "Euclid's Elements systematizes geometry, remaining the standard textbook for 2,000 years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/几何原本"
     },
     {
       "id": "sci-017",
@@ -9133,7 +9263,9 @@
       "level": 1,
       "category": "science",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Galileo_before_the_Holy_Office_-_Joseph-Nicolas_Robert-Fleury%2C_1847.png",
-      "wiki_en": "https://en.wikipedia.org/wiki/Copernican_Revolution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Copernican_Revolution",
+      "desc_en": "Copernicus proposes the heliocentric model in 1543, revolutionizing astronomy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/日心说"
     },
     {
       "id": "sci-019",
@@ -9144,7 +9276,9 @@
       "level": 2,
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/Voltaic_pile",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Volta_battery-MHS_373-IMG_3840-gradient.jpg/1280px-Volta_battery-MHS_373-IMG_3840-gradient.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Volta_battery-MHS_373-IMG_3840-gradient.jpg/1280px-Volta_battery-MHS_373-IMG_3840-gradient.jpg",
+      "desc_en": "Volta invents the electric battery in 1800, launching the age of electrical technology.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/伏打電池"
     },
     {
       "id": "sci-020",
@@ -9155,7 +9289,9 @@
       "level": 2,
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/X-ray",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/X-ray_by_Wilhelm_R%C3%B6ntgen_of_Albert_von_K%C3%B6lliker%27s_hand_-_18960123-02.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/X-ray_by_Wilhelm_R%C3%B6ntgen_of_Albert_von_K%C3%B6lliker%27s_hand_-_18960123-02.jpg",
+      "desc_en": "Röntgen discovers X-rays in 1895, transforming medicine and physics.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/X射线"
     },
     {
       "id": "egy-002",
@@ -9166,7 +9302,9 @@
       "level": 1,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hieroglyphs_from_the_tomb_of_Seti_I.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hieroglyphs_from_the_tomb_of_Seti_I.jpg",
+      "desc_en": "Ancient Egyptians develop hieroglyphic writing ~3200 BC, one of humanity's earliest scripts.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/圣书体"
     },
     {
       "id": "egy-003",
@@ -9178,7 +9316,9 @@
       "category": "civilization",
       "endYear": -2200,
       "wiki_en": "https://en.wikipedia.org/wiki/Old_Kingdom_of_Egypt",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/4th_Dynasty_of_Egypt-03.png/1280px-4th_Dynasty_of_Egypt-03.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/4th_Dynasty_of_Egypt-03.png/1280px-4th_Dynasty_of_Egypt-03.png",
+      "desc_en": "Old Kingdom pharaohs build the Great Pyramids of Giza, monuments of engineering and power.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古王國時期"
     },
     {
       "id": "egy-004",
@@ -9189,7 +9329,9 @@
       "level": 2,
       "category": "religion",
       "wiki_en": "https://en.wikipedia.org/wiki/Akhenaten",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/GD-EG-Caire-Mus%C3%A9e061.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/GD-EG-Caire-Mus%C3%A9e061.JPG",
+      "desc_en": "Pharaoh Akhenaten introduces monotheistic worship of Aten, a radical religious experiment.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿肯那頓"
     },
     {
       "id": "egy-005",
@@ -9200,7 +9342,9 @@
       "level": 2,
       "category": "war",
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Kadesh",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Ramses_II_at_Kadesh.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Ramses_II_at_Kadesh.jpg",
+      "desc_en": "Battle of Kadesh between Egypt and Hittites leads to history's earliest known peace treaty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/卡迭石战役"
     },
     {
       "id": "egy-006",
@@ -9211,7 +9355,9 @@
       "level": 1,
       "category": "war",
       "wiki_en": "https://en.wikipedia.org/wiki/Egypt_(Roman_province)",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg/1200px-Roman_Empire_-_Aegyptus_%28125_AD%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg/1200px-Roman_Empire_-_Aegyptus_%28125_AD%29.svg.png",
+      "desc_en": "Alexander the Great conquers Egypt in 332 BC, founding Alexandria and the Ptolemaic dynasty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/亚历山大大帝"
     },
     {
       "id": "egy-007",
@@ -9222,7 +9368,9 @@
       "level": 1,
       "category": "war",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mohammad_adil-Muslim_conquest_of_Egypt-zh.png",
-      "wiki_en": "https://en.wikipedia.org/wiki/Muslim_conquest_of_Egypt"
+      "wiki_en": "https://en.wikipedia.org/wiki/Muslim_conquest_of_Egypt",
+      "desc_en": "Arab armies conquer Egypt in 641 AD, beginning Islamization and Arabization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/穆斯林征服埃及"
     },
     {
       "id": "egy-008",
@@ -9233,7 +9381,9 @@
       "level": 2,
       "category": "war",
       "wiki_en": "https://en.wikipedia.org/wiki/French_campaign_in_Egypt_and_Syria",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/French_campaign_in_Egypt_and_Syria.jpg/1280px-French_campaign_in_Egypt_and_Syria.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/French_campaign_in_Egypt_and_Syria.jpg/1280px-French_campaign_in_Egypt_and_Syria.jpg",
+      "desc_en": "Napoleon invades Egypt in 1798; discovery of the Rosetta Stone unlocks hieroglyphics.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/法國遠征埃及"
     },
     {
       "id": "egy-009",
@@ -9244,7 +9394,9 @@
       "level": 2,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Egyptian_revolution_of_1952",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Free_Officers%2C_1953.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Free_Officers%2C_1953.jpg",
+      "desc_en": "Nasser's 1952 revolution overthrows the monarchy, establishes the Egyptian republic.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/埃及七月革命"
     },
     {
       "id": "afr-006",
@@ -9255,7 +9407,9 @@
       "level": 2,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Kush",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Kushite_heartland_and_Kushite_Empire_of_the_25th_dynasty_circa_700_BCE.jpg/1280px-Kushite_heartland_and_Kushite_Empire_of_the_25th_dynasty_circa_700_BCE.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Kushite_heartland_and_Kushite_Empire_of_the_25th_dynasty_circa_700_BCE.jpg/1280px-Kushite_heartland_and_Kushite_Empire_of_the_25th_dynasty_circa_700_BCE.jpg",
+      "desc_en": "Nubian kingdoms along the Nile rival and sometimes rule Egypt, rich in gold and iron.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/努比亞"
     },
     {
       "id": "afr-007",
@@ -9266,7 +9420,9 @@
       "level": 2,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Carthage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Montage_ville_de_Carthage.png/1280px-Montage_ville_de_Carthage.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Montage_ville_de_Carthage.png/1280px-Montage_ville_de_Carthage.png",
+      "desc_en": "Phoenicians found Carthage ~814 BC; it becomes a major Mediterranean trading power.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/迦太基"
     },
     {
       "id": "afr-008",
@@ -9277,7 +9433,9 @@
       "level": 1,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Aksum",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/ET_Axum_asv2018-01_img48_Dungur.jpg/1280px-ET_Axum_asv2018-01_img48_Dungur.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/ET_Axum_asv2018-01_img48_Dungur.jpg/1280px-ET_Axum_asv2018-01_img48_Dungur.jpg",
+      "desc_en": "Aksumite Empire in Ethiopia becomes a major trading power, adopts Christianity early.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿克蘇姆帝國"
     },
     {
       "id": "afr-009",
@@ -9288,7 +9446,9 @@
       "level": 1,
       "category": "civilization",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Map_of_the_Mali_Empire.png",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mali_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mali_Empire",
+      "desc_en": "Mali Empire under Mansa Musa becomes one of the wealthiest states in world history.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馬利帝國"
     },
     {
       "id": "afr-010",
@@ -9299,7 +9459,9 @@
       "level": 2,
       "category": "civilization",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Conical_Tower_-_Great_Enclosure_III_%2833736918448%29.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Great_Zimbabwe"
+      "wiki_en": "https://en.wikipedia.org/wiki/Great_Zimbabwe",
+      "desc_en": "Great Zimbabwe stone city flourishes as a trading hub in southern Africa ~1100–1450.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大辛巴威"
     },
     {
       "id": "afr-011",
@@ -9310,7 +9472,9 @@
       "level": 2,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Cape_Colony",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Flag_of_the_Cape_Colony_%281876%E2%80%931910%29.svg/1200px-Flag_of_the_Cape_Colony_%281876%E2%80%931910%29.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Flag_of_the_Cape_Colony_%281876%E2%80%931910%29.svg/1200px-Flag_of_the_Cape_Colony_%281876%E2%80%931910%29.svg.png",
+      "desc_en": "Dutch East India Company establishes Cape Colony in 1652, beginning European settlement.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/開普殖民地"
     },
     {
       "id": "afr-012",
@@ -9321,7 +9485,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/F.W._de_Klerk%2C_left%2C_the_last_president_of_apartheid-era_South_Africa%2C_and_Nelson_Mandela%2C_his_successor%2C_wait_to_speak_in_Philadelphia%2C_Pennsylvania_LCCN2011634245.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Apartheid"
+      "wiki_en": "https://en.wikipedia.org/wiki/Apartheid",
+      "desc_en": "Apartheid ends with the first multiracial elections in 1994, Mandela becomes president.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南非種族隔離"
     },
     {
       "id": "ame-003",
@@ -9331,7 +9497,9 @@
       "axis": "americas",
       "level": 2,
       "category": "civilization",
-      "wiki_en": "https://en.wikipedia.org/wiki/Agriculture_in_the_Americas"
+      "wiki_en": "https://en.wikipedia.org/wiki/Agriculture_in_the_Americas",
+      "desc_en": "Indigenous peoples in eastern North America develop maize agriculture ~3000 BC.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美洲原住民農業"
     },
     {
       "id": "ame-004",
@@ -9342,7 +9510,9 @@
       "level": 1,
       "category": "war",
       "wiki_en": "https://en.wikipedia.org/wiki/American_Civil_War",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/CivilWarUSAColl.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/CivilWarUSAColl.png",
+      "desc_en": "US Civil War ends in 1865, abolishing slavery and preserving the Union.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南北战争"
     },
     {
       "id": "lat-007",
@@ -9353,7 +9523,9 @@
       "level": 2,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Chav%C3%ADn_culture",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Chav%C3%ADn_de_Hu%C3%A1ntar.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Chav%C3%ADn_de_Hu%C3%A1ntar.JPG",
+      "desc_en": "Chavín culture ~900 BC is the earliest complex civilization in Peru, influencing later Andean cultures.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/查文文化"
     },
     {
       "id": "lat-008",
@@ -9364,7 +9536,9 @@
       "level": 1,
       "category": "war",
       "wiki_en": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Inca_Empire",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Montaje_2_conquista_del_Peru.png/1280px-Montaje_2_conquista_del_Peru.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Montaje_2_conquista_del_Peru.png/1280px-Montaje_2_conquista_del_Peru.png",
+      "desc_en": "Francisco Pizarro conquers the Inca Empire in 1533, ending the largest pre-Columbian state.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/西班牙征服印加帝國"
     },
     {
       "id": "lat-009",
@@ -9375,7 +9549,9 @@
       "level": 2,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Abolitionism_in_Brazil",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Cartaz_de_1888_comemorativo_a_Aboli%C3%A7%C3%A3o_da_Escravid%C3%A3o_no_Brasil.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Cartaz_de_1888_comemorativo_a_Aboli%C3%A7%C3%A3o_da_Escravid%C3%A3o_no_Brasil.jpg",
+      "desc_en": "Brazil becomes the last country in the Americas to abolish slavery in 1888.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巴西奴隸制度"
     },
     {
       "id": "lat-010",
@@ -9386,7 +9562,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/CheyFidel.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Cuban_Revolution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Cuban_Revolution",
+      "desc_en": "Fidel Castro's revolution overthrows Batista in 1959, establishing a communist state.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古巴革命"
     },
     {
       "id": "crs-012",
@@ -9397,7 +9575,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/M%C3%BCnster%2C_Historisches_Rathaus_--_2014_--_6855.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Peace_of_Westphalia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Peace_of_Westphalia",
+      "desc_en": "1648 treaties end the Thirty Years' War and establish the modern nation-state system.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/威斯特伐利亞和約"
     },
     {
       "id": "crs-014",
@@ -9408,7 +9588,9 @@
       "level": 2,
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Revolutions_of_1848",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Horace_Vernet-Barricade_rue_Soufflot.jpg/1280px-Horace_Vernet-Barricade_rue_Soufflot.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Horace_Vernet-Barricade_rue_Soufflot.jpg/1280px-Horace_Vernet-Barricade_rue_Soufflot.jpg",
+      "desc_en": "19th-century wave of nationalism reshapes Europe and inspires independence movements worldwide.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/民族主義"
     },
     {
       "id": "crs-015",
@@ -9419,7 +9601,9 @@
       "level": 1,
       "category": "nature",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Emergency_hospital_during_Influenza_epidemic%2C_Camp_Funston%2C_Kansas_-_NCP_1603.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_flu"
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_flu",
+      "desc_en": "1918–1919 influenza pandemic kills 50–100 million people worldwide.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/西班牙流感"
     },
     {
       "id": "crs-016",
@@ -9430,7 +9614,9 @@
       "level": 1,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Eleanor_Roosevelt_UDHR.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights"
+      "wiki_en": "https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights",
+      "desc_en": "UN General Assembly adopts the UDHR in 1948, defining fundamental human rights.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/世界人权宣言"
     },
     {
       "id": "crs-018",
@@ -9441,7 +9627,9 @@
       "level": 2,
       "category": "politics",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Lehman_Brothers_Times_Square_by_David_Shankbone.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/2007%E2%80%932008_financial_crisis"
+      "wiki_en": "https://en.wikipedia.org/wiki/2007%E2%80%932008_financial_crisis",
+      "desc_en": "2008 financial crisis triggered by US housing bubble spreads worldwide.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/2007年–2008年環球金融危機"
     },
     {
       "id": "crs-019",
@@ -9452,7 +9640,9 @@
       "level": 1,
       "category": "nature",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Covid-19_SP_-_UTI_V._Nova_Cachoeirinha.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/COVID-19_pandemic"
+      "wiki_en": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
+      "desc_en": "SARS-CoV-2 pandemic beginning in 2019 causes global health, economic, and social upheaval.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/2019冠状病毒病疫情"
     },
     {
       "id": "eas-001",
@@ -9464,7 +9654,9 @@
       "crossRef": "china",
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Confucianism",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg/1200px-%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg/1200px-%E6%9C%A8%E9%90%B8_---_Confucian_wooden-clapper_bell.svg.png",
+      "desc_en": "Confucius' teachings on ethics and governance become the foundation of East Asian civilization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/孔子"
     },
     {
       "id": "eas-002",
@@ -9476,7 +9668,9 @@
       "crossRef": "china",
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Tang_outline_map%2C_661.svg/1200px-Tang_outline_map%2C_661.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Tang_outline_map%2C_661.svg/1200px-Tang_outline_map%2C_661.svg.png",
+      "desc_en": "Tang Dynasty China becomes the cultural center of East Asia, influencing Japan, Korea, and Vietnam.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/唐朝"
     },
     {
       "id": "eas-003",
@@ -9488,7 +9682,9 @@
       "crossRef": "china",
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Map_of_Ming_Chinese_empire_1415_%28cropped_2%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Map_of_Ming_Chinese_empire_1415_%28cropped_2%29.jpg",
+      "desc_en": "Ming Dynasty China leads the Eastern world order through tribute system and maritime expeditions.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/明朝"
     },
     {
       "id": "eas-004",
@@ -9500,7 +9696,9 @@
       "crossRef": "japan",
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Meiji_Restoration",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/MeijiJoukyou.jpg/1280px-MeijiJoukyou.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/MeijiJoukyou.jpg/1280px-MeijiJoukyou.jpg",
+      "desc_en": "Japan's Meiji Restoration triggers modernization across East Asia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/明治维新"
     },
     {
       "id": "wes-001",
@@ -9512,7 +9710,9 @@
       "crossRef": "greece",
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/Ancient_Greece",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Sicily_Selinunte_Temple_E_%28Hera%29.JPG/1280px-Sicily_Selinunte_Temple_E_%28Hera%29.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Sicily_Selinunte_Temple_E_%28Hera%29.JPG/1280px-Sicily_Selinunte_Temple_E_%28Hera%29.JPG",
+      "desc_en": "Greek city-states develop democracy, philosophy, and science — foundations of Western civilization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古希臘"
     },
     {
       "id": "wes-002",
@@ -9524,7 +9724,9 @@
       "crossRef": "europe",
       "category": "culture",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Raffael_Stanza_della_Segnatura.jpg",
-      "wiki_en": "https://en.wikipedia.org/wiki/High_Renaissance"
+      "wiki_en": "https://en.wikipedia.org/wiki/High_Renaissance",
+      "desc_en": "Italian Renaissance reaches its peak with Leonardo, Michelangelo, and Raphael.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/文藝復興"
     },
     {
       "id": "wes-003",
@@ -9536,7 +9738,9 @@
       "crossRef": "europe",
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/Scientific_Revolution",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/1280px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/1280px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg",
+      "desc_en": "Newton's Principia Mathematica transforms understanding of physics and the natural world.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/科学革命"
     },
     {
       "id": "wes-004",
@@ -9548,7 +9752,9 @@
       "crossRef": "usa",
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/Age_of_Enlightenment",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Les_salons_au_XVIIIe_si%C3%A8cle_-_Histoire_Image.jpg/1280px-Les_salons_au_XVIIIe_si%C3%A8cle_-_Histoire_Image.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Les_salons_au_XVIIIe_si%C3%A8cle_-_Histoire_Image.jpg/1280px-Les_salons_au_XVIIIe_si%C3%A8cle_-_Histoire_Image.jpg",
+      "desc_en": "Enlightenment ideas inspire the American Revolution and the Declaration of Independence.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/啟蒙時代"
     },
     {
       "id": "cos-015",
@@ -9559,7 +9765,9 @@
       "level": 2,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Dark_matter",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/UniverseComposition.svg/1200px-UniverseComposition.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/UniverseComposition.svg/1200px-UniverseComposition.svg.png",
+      "desc_en": "Invisible matter that makes up ~27% of the universe formed shortly after the Big Bang, shaping galaxy structure.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/暗物質"
     },
     {
       "id": "gal-007",
@@ -9570,7 +9778,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Sagittarius_A*",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Gcle.jpg/1280px-Gcle.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Gcle.jpg/1280px-Gcle.jpg",
+      "desc_en": "Supermassive black hole at the center of the Milky Way, ~4 million solar masses.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/人馬座A*"
     },
     {
       "id": "gal-008",
@@ -9581,7 +9791,9 @@
       "level": 2,
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/Sagittarius_A*",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/EHT_Saggitarius_A_black_hole.tif/lossy-page1-1280px-EHT_Saggitarius_A_black_hole.tif.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/EHT_Saggitarius_A_black_hole.tif/lossy-page1-1280px-EHT_Saggitarius_A_black_hole.tif.jpg",
+      "desc_en": "Event Horizon Telescope captures first direct image of the Milky Way's central black hole in 2022.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/事件視界望遠鏡"
     },
     {
       "id": "sol-017",
@@ -9592,7 +9804,9 @@
       "level": 2,
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/Pluto",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Pluto_in_True_Color_-_High-Res.png/1280px-Pluto_in_True_Color_-_High-Res.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Pluto_in_True_Color_-_High-Res.png/1280px-Pluto_in_True_Color_-_High-Res.png",
+      "desc_en": "Clyde Tombaugh discovers Pluto in 1930, considered the ninth planet for 76 years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/冥王星"
     },
     {
       "id": "sol-018",
@@ -9603,7 +9817,9 @@
       "level": 2,
       "category": "science",
       "wiki_en": "https://en.wikipedia.org/wiki/Pluto",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Global_LORRI_mosaic_of_Pluto_in_true_colour.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Global_LORRI_mosaic_of_Pluto_in_true_colour.jpg",
+      "desc_en": "IAU reclassifies Pluto as a dwarf planet in 2006 after defining new planetary criteria.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/冥王星#國際天文聯合會的決議"
     },
     {
       "id": "ear-016",
@@ -9614,7 +9830,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Pangaea",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif",
+      "desc_en": "Supercontinent Pangaea assembles from earlier landmasses around 335 million years ago.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/盤古大陸"
     },
     {
       "id": "ear-017",
@@ -9625,7 +9843,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Pangaea",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif",
+      "desc_en": "Pangaea begins rifting apart ~200 Mya, eventually forming today's continents and oceans.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/盤古大陸#分裂"
     },
     {
       "id": "ear-018",
@@ -9636,7 +9856,9 @@
       "level": 2,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Himalayas",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Himalayas_and_allied_ranges_NASA_Landsat_showing_the_eight_thousanders%2C_annotated_with_major_rivers.jpg/1280px-Himalayas_and_allied_ranges_NASA_Landsat_showing_the_eight_thousanders%2C_annotated_with_major_rivers.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Himalayas_and_allied_ranges_NASA_Landsat_showing_the_eight_thousanders%2C_annotated_with_major_rivers.jpg/1280px-Himalayas_and_allied_ranges_NASA_Landsat_showing_the_eight_thousanders%2C_annotated_with_major_rivers.jpg",
+      "desc_en": "Collision of Indian and Eurasian plates begins uplifting the Himalayas ~50 million years ago.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/喜马拉雅山脉"
     },
     {
       "id": "lif-036",
@@ -9647,7 +9869,9 @@
       "level": 1,
       "category": "nature",
       "wiki_en": "https://en.wikipedia.org/wiki/Holocene_extinction",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png",
+      "desc_en": "Ongoing human-caused biodiversity crisis with extinction rates far above natural background.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/全新世滅絕事件"
     },
     {
       "id": "hevo-012",
@@ -9658,7 +9882,9 @@
       "level": 2,
       "category": "evolution",
       "wiki_en": "https://en.wikipedia.org/wiki/Neanderthal_extinction",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Neanderthal_distribution.jpg/1280px-Neanderthal_distribution.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Neanderthal_distribution.jpg/1280px-Neanderthal_distribution.jpg",
+      "desc_en": "Last Neanderthals disappear ~40,000 years ago as Homo sapiens spreads across Europe.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/尼安德特人"
     },
     {
       "id": "mig-000",
@@ -9670,7 +9896,770 @@
       "crossRef": "human-evo",
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png",
+      "desc_en": "Homo sapiens begins migrating out of Africa ~70,000 years ago, eventually reaching every continent.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/人類單地起源說"
+    },
+    {
+      "id": "arc-001",
+      "year": -3000,
+      "zh": "因紐特人祖先進入北極",
+      "en": "Paleo-Eskimo Migration to Arctic",
+      "axis": "arctic",
+      "level": 2,
+      "category": "migration",
+      "desc_zh": "古愛斯基摩人從西伯利亞遷入北美北極地區",
+      "desc_en": "Paleo-Eskimo peoples migrate from Siberia into the North American Arctic.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古愛斯基摩人",
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleo-Eskimos"
+    },
+    {
+      "id": "arc-002",
+      "year": 982,
+      "zh": "維京人發現格陵蘭",
+      "en": "Vikings Discover Greenland",
+      "axis": "arctic",
+      "level": 2,
+      "category": "exploration",
+      "desc_zh": "紅鬍子艾瑞克發現並殖民格陵蘭",
+      "desc_en": "Erik the Red discovers and colonizes Greenland.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/紅鬍子艾瑞克",
+      "wiki_en": "https://en.wikipedia.org/wiki/Erik_the_Red"
+    },
+    {
+      "id": "arc-003",
+      "year": 1596,
+      "zh": "巴倫支探索北極航路",
+      "en": "Barents Explores Arctic",
+      "axis": "arctic",
+      "level": 3,
+      "category": "exploration",
+      "desc_zh": "荷蘭探險家巴倫支試圖尋找東北航路",
+      "desc_en": "Dutch explorer Barents seeks the Northeast Passage, discovers Svalbard.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/威廉·巴倫支",
+      "wiki_en": "https://en.wikipedia.org/wiki/Willem_Barentsz"
+    },
+    {
+      "id": "arc-004",
+      "year": 1909,
+      "zh": "皮里宣稱抵達北極點",
+      "en": "Peary Claims North Pole",
+      "axis": "arctic",
+      "level": 2,
+      "category": "exploration",
+      "desc_zh": "美國探險家皮里宣稱成為首位抵達北極點的人",
+      "desc_en": "American explorer Robert Peary claims to be the first to reach the North Pole.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/羅伯特·皮里",
+      "wiki_en": "https://en.wikipedia.org/wiki/Robert_Peary"
+    },
+    {
+      "id": "arc-005",
+      "year": 1996,
+      "zh": "北極理事會成立",
+      "en": "Arctic Council Founded",
+      "axis": "arctic",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "八個北極國家成立北極理事會，協調北極事務",
+      "desc_en": "Eight Arctic nations establish the Arctic Council for regional governance.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/北極理事會",
+      "wiki_en": "https://en.wikipedia.org/wiki/Arctic_Council"
+    },
+    {
+      "id": "arc-006",
+      "year": 2007,
+      "zh": "北極海冰面積創新低",
+      "en": "Arctic Sea Ice Record Low",
+      "axis": "arctic",
+      "level": 2,
+      "category": "nature",
+      "crossRef": "climate",
+      "desc_zh": "北極海冰面積縮減至衛星觀測以來最小",
+      "desc_en": "Arctic sea ice shrinks to smallest extent since satellite records began.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/北極海冰量下降",
+      "wiki_en": "https://en.wikipedia.org/wiki/Arctic_sea_ice_decline"
+    },
+    {
+      "id": "ant-001",
+      "year": 1820,
+      "zh": "南極洲首次被目擊",
+      "en": "Antarctica First Sighted",
+      "axis": "antarctic",
+      "level": 2,
+      "category": "exploration",
+      "desc_zh": "俄、英、美探險家幾乎同時首次目擊南極大陸",
+      "desc_en": "Russian, British, and American expeditions sight Antarctica for the first time.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南極洲探險史",
+      "wiki_en": "https://en.wikipedia.org/wiki/History_of_Antarctica"
+    },
+    {
+      "id": "ant-002",
+      "year": 1911,
+      "zh": "阿蒙森抵達南極點",
+      "en": "Amundsen Reaches South Pole",
+      "axis": "antarctic",
+      "level": 1,
+      "category": "exploration",
+      "desc_zh": "挪威探險家阿蒙森成為首位抵達南極點的人",
+      "desc_en": "Norwegian Roald Amundsen becomes the first person to reach the South Pole.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/羅爾德·阿蒙森",
+      "wiki_en": "https://en.wikipedia.org/wiki/Roald_Amundsen"
+    },
+    {
+      "id": "ant-003",
+      "year": 1959,
+      "zh": "南極條約簽訂",
+      "en": "Antarctic Treaty Signed",
+      "axis": "antarctic",
+      "level": 1,
+      "category": "politics",
+      "desc_zh": "12國簽署南極條約，將南極設為和平科研保留地",
+      "desc_en": "Twelve nations sign the Antarctic Treaty, reserving Antarctica for peaceful scientific research.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南極條約體系",
+      "wiki_en": "https://en.wikipedia.org/wiki/Antarctic_Treaty_System"
+    },
+    {
+      "id": "ant-004",
+      "year": 1985,
+      "zh": "南極臭氧層破洞發現",
+      "en": "Antarctic Ozone Hole Discovered",
+      "axis": "antarctic",
+      "level": 2,
+      "category": "science",
+      "crossRef": "climate",
+      "desc_zh": "科學家發現南極上空臭氧層嚴重破損",
+      "desc_en": "Scientists discover a severe depletion of the ozone layer over Antarctica.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臭氧层空洞",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ozone_depletion"
+    },
+    {
+      "id": "ant-005",
+      "year": 1998,
+      "zh": "南極冰芯揭示80萬年氣候",
+      "en": "Antarctic Ice Cores Reveal 800K Years",
+      "axis": "antarctic",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "EPICA冰芯計畫鑽取80萬年氣候記錄",
+      "desc_en": "EPICA ice core project extracts 800,000-year climate record from Antarctic ice.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/冰芯",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ice_core"
+    },
+    {
+      "id": "ant-006",
+      "year": 2017,
+      "zh": "拉森C冰棚崩裂",
+      "en": "Larsen C Ice Shelf Collapses",
+      "axis": "antarctic",
+      "level": 2,
+      "category": "nature",
+      "crossRef": "climate",
+      "desc_zh": "南極拉森C冰棚崩裂出一座特拉華州大小的冰山",
+      "desc_en": "A Delaware-sized iceberg breaks off the Larsen C ice shelf in Antarctica.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/拉森冰架",
+      "wiki_en": "https://en.wikipedia.org/wiki/Larsen_Ice_Shelf"
+    },
+    {
+      "id": "nam-002",
+      "year": -700,
+      "zh": "密西西比文化・卡霍基亞",
+      "en": "Mississippian Culture・Cahokia",
+      "axis": "north-america",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "北美最大的前哥倫布時期城市卡霍基亞興起",
+      "desc_en": "Cahokia, the largest pre-Columbian city in North America, emerges.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/卡霍基亞",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cahokia"
+    },
+    {
+      "id": "nam-003",
+      "year": 1534,
+      "zh": "法國探索北美",
+      "en": "French Exploration of N. America",
+      "axis": "north-america",
+      "level": 3,
+      "category": "exploration",
+      "desc_zh": "卡蒂亞探索聖羅倫斯河，開啟法國殖民北美",
+      "desc_en": "Jacques Cartier explores the St. Lawrence River, beginning French colonization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/雅克·卡蒂埃",
+      "wiki_en": "https://en.wikipedia.org/wiki/Jacques_Cartier"
+    },
+    {
+      "id": "nam-004",
+      "year": 1607,
+      "zh": "詹姆斯鎮建立",
+      "en": "Jamestown Founded",
+      "axis": "north-america",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "英國在維吉尼亞建立第一個永久殖民地",
+      "desc_en": "England establishes its first permanent settlement in Virginia.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/詹姆斯鎮_(維吉尼亞州)",
+      "wiki_en": "https://en.wikipedia.org/wiki/Jamestown,_Virginia"
+    },
+    {
+      "id": "nam-005",
+      "year": 1867,
+      "zh": "加拿大聯邦成立",
+      "en": "Canadian Confederation",
+      "axis": "north-america",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "英屬北美殖民地聯合成立加拿大自治領",
+      "desc_en": "British North American colonies unite to form the Dominion of Canada.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/加拿大邦聯",
+      "wiki_en": "https://en.wikipedia.org/wiki/Canadian_Confederation"
+    },
+    {
+      "id": "nam-006",
+      "year": 1869,
+      "zh": "橫貫大陸鐵路完工",
+      "en": "Transcontinental Railroad Completed",
+      "axis": "north-america",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "美國東西岸首條橫貫大陸鐵路完工",
+      "desc_en": "First transcontinental railroad connects the eastern and western United States.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/第一條橫貫大陸鐵路",
+      "wiki_en": "https://en.wikipedia.org/wiki/First_transcontinental_railroad"
+    },
+    {
+      "id": "nam-007",
+      "year": 1994,
+      "zh": "北美自由貿易協定",
+      "en": "NAFTA Takes Effect",
+      "axis": "north-america",
+      "level": 2,
+      "category": "trade",
+      "crossRef": "trade",
+      "desc_zh": "美國、加拿大、墨西哥建立自由貿易區",
+      "desc_en": "US, Canada, and Mexico establish a free trade zone under NAFTA.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/北美自由贸易协议",
+      "wiki_en": "https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement"
+    },
+    {
+      "id": "sam-001",
+      "year": -3000,
+      "zh": "卡拉爾文明",
+      "en": "Caral Civilization",
+      "axis": "south-america",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "南美最早的城市文明，位於秘魯沿海",
+      "desc_en": "Oldest known urban center in the Americas, on the coast of Peru.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/卡拉爾",
+      "wiki_en": "https://en.wikipedia.org/wiki/Caral"
+    },
+    {
+      "id": "sam-002",
+      "year": -200,
+      "zh": "納斯卡線條",
+      "en": "Nazca Lines",
+      "axis": "south-america",
+      "level": 2,
+      "category": "culture",
+      "desc_zh": "秘魯納斯卡高原上巨大的地面圖形",
+      "desc_en": "Massive geoglyphs created on the Nazca plateau in southern Peru.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/纳斯卡线条",
+      "wiki_en": "https://en.wikipedia.org/wiki/Nazca_Lines"
+    },
+    {
+      "id": "sam-003",
+      "year": 500,
+      "zh": "蒂瓦納庫帝國",
+      "en": "Tiwanaku Empire",
+      "axis": "south-america",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "安地斯高原的前印加文明中心",
+      "desc_en": "Pre-Inca civilization centered near Lake Titicaca in the Andes.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蒂瓦納庫",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tiwanaku"
+    },
+    {
+      "id": "sam-004",
+      "year": 1816,
+      "zh": "南美獨立運動",
+      "en": "South American Independence",
+      "axis": "south-america",
+      "level": 1,
+      "category": "politics",
+      "crossRef": "cross",
+      "desc_zh": "玻利瓦爾和聖馬丁領導南美洲從西班牙獨立",
+      "desc_en": "Bolívar and San Martín lead South American independence from Spain.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南美洲独立战争",
+      "wiki_en": "https://en.wikipedia.org/wiki/Spanish_American_wars_of_independence"
+    },
+    {
+      "id": "sam-005",
+      "year": 1914,
+      "zh": "巴拿馬運河開通",
+      "en": "Panama Canal Opens",
+      "axis": "south-america",
+      "level": 2,
+      "category": "science",
+      "crossRef": "trade",
+      "desc_zh": "連接大西洋與太平洋的運河開通",
+      "desc_en": "Canal connecting the Atlantic and Pacific Oceans opens in Panama.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巴拿馬運河",
+      "wiki_en": "https://en.wikipedia.org/wiki/Panama_Canal"
+    },
+    {
+      "id": "sam-006",
+      "year": 1960,
+      "zh": "巴西遷都巴西利亞",
+      "en": "Brasília Becomes Capital",
+      "axis": "south-america",
+      "level": 3,
+      "category": "politics",
+      "desc_zh": "巴西將首都從里約遷至全新建設的巴西利亞",
+      "desc_en": "Brazil moves its capital from Rio de Janeiro to the newly built Brasília.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巴西利亞",
+      "wiki_en": "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+    },
+    {
+      "id": "waf-001",
+      "year": -500,
+      "zh": "諾克文化",
+      "en": "Nok Culture",
+      "axis": "west-africa",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "奈及利亞的早期鐵器文明，以赤陶雕塑聞名",
+      "desc_en": "Early Iron Age civilization in Nigeria, known for its terracotta sculptures.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/诺克文化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Nok_culture"
+    },
+    {
+      "id": "waf-002",
+      "year": 750,
+      "zh": "加納帝國",
+      "en": "Ghana Empire",
+      "axis": "west-africa",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "西非最早的大帝國，控制撒哈拉黃金貿易",
+      "desc_en": "First major West African empire, controlling trans-Saharan gold trade.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/迦納帝國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ghana_Empire"
+    },
+    {
+      "id": "waf-003",
+      "year": 1464,
+      "zh": "桑海帝國",
+      "en": "Songhai Empire",
+      "axis": "west-africa",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "西非最大帝國，以廷巴克圖為學術中心",
+      "desc_en": "Largest empire in West African history, with Timbuktu as its intellectual center.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/桑海帝國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Songhai_Empire"
+    },
+    {
+      "id": "waf-004",
+      "year": 1807,
+      "zh": "英國廢除奴隸貿易",
+      "en": "Britain Abolishes Slave Trade",
+      "axis": "west-africa",
+      "level": 2,
+      "category": "politics",
+      "crossRef": "cross",
+      "desc_zh": "英國通過法案廢除大西洋奴隸貿易",
+      "desc_en": "Britain passes the Slave Trade Act, ending its transatlantic slave trade.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/1807年奴隸貿易法令",
+      "wiki_en": "https://en.wikipedia.org/wiki/Slave_Trade_Act_1807"
+    },
+    {
+      "id": "waf-005",
+      "year": 1960,
+      "zh": "非洲獨立年",
+      "en": "Year of Africa",
+      "axis": "west-africa",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "1960年17個非洲國家同年獨立",
+      "desc_en": "Seventeen African nations gain independence in 1960, the 'Year of Africa'.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/非洲独立年",
+      "wiki_en": "https://en.wikipedia.org/wiki/Year_of_Africa"
+    },
+    {
+      "id": "naf-003",
+      "year": 670,
+      "zh": "阿拉伯征服北非",
+      "en": "Arab Conquest of North Africa",
+      "axis": "north-africa",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "阿拉伯軍隊征服北非，建立伊斯蘭統治",
+      "desc_en": "Arab armies conquer North Africa, establishing Islamic rule.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/穆斯林征服馬格里布",
+      "wiki_en": "https://en.wikipedia.org/wiki/Muslim_conquest_of_the_Maghreb"
+    },
+    {
+      "id": "naf-004",
+      "year": 909,
+      "zh": "法蒂瑪王朝建立",
+      "en": "Fatimid Caliphate Founded",
+      "axis": "north-africa",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "什葉派法蒂瑪王朝在北非建立，後建開羅",
+      "desc_en": "Shia Fatimid dynasty established in North Africa, later founds Cairo.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/法蒂瑪王朝",
+      "wiki_en": "https://en.wikipedia.org/wiki/Fatimid_Caliphate"
+    },
+    {
+      "id": "naf-005",
+      "year": 1830,
+      "zh": "法國殖民阿爾及利亞",
+      "en": "French Colonization of Algeria",
+      "axis": "north-africa",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "法國入侵並殖民阿爾及利亞，持續132年",
+      "desc_en": "France invades and colonizes Algeria, beginning 132 years of colonial rule.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/法屬阿爾及利亞",
+      "wiki_en": "https://en.wikipedia.org/wiki/French_Algeria"
+    },
+    {
+      "id": "naf-006",
+      "year": 1962,
+      "zh": "阿爾及利亞獨立",
+      "en": "Algerian Independence",
+      "axis": "north-africa",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "阿爾及利亞經八年獨立戰爭後脫離法國",
+      "desc_en": "Algeria gains independence from France after eight years of war.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿爾及利亞戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Algerian_War"
+    },
+    {
+      "id": "eaf-003",
+      "year": 800,
+      "zh": "斯瓦希里城邦",
+      "en": "Swahili City-States",
+      "axis": "east-africa",
+      "level": 2,
+      "category": "civilization",
+      "crossRef": "trade",
+      "desc_zh": "東非沿海斯瓦希里城邦興起，連接印度洋貿易",
+      "desc_en": "Swahili city-states flourish along the East African coast, connecting Indian Ocean trade.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/斯瓦希里文明",
+      "wiki_en": "https://en.wikipedia.org/wiki/Swahili_coast"
+    },
+    {
+      "id": "eaf-004",
+      "year": 1498,
+      "zh": "葡萄牙抵達東非",
+      "en": "Portuguese Reach East Africa",
+      "axis": "east-africa",
+      "level": 2,
+      "category": "exploration",
+      "desc_zh": "達伽馬抵達東非沿岸，開啟歐洲殖民時代",
+      "desc_en": "Vasco da Gama reaches the East African coast on his way to India.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/瓦斯科·達伽馬",
+      "wiki_en": "https://en.wikipedia.org/wiki/Vasco_da_Gama"
+    },
+    {
+      "id": "eaf-005",
+      "year": 1885,
+      "zh": "歐洲瓜分東非",
+      "en": "European Scramble for East Africa",
+      "axis": "east-africa",
+      "level": 2,
+      "category": "politics",
+      "crossRef": "cross",
+      "desc_zh": "柏林會議後英德瓜分東非",
+      "desc_en": "Britain and Germany partition East Africa following the Berlin Conference.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/瓜分非洲",
+      "wiki_en": "https://en.wikipedia.org/wiki/Scramble_for_Africa"
+    },
+    {
+      "id": "eaf-006",
+      "year": 1963,
+      "zh": "肯亞獨立",
+      "en": "Kenyan Independence",
+      "axis": "east-africa",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "肯亞脫離英國獨立，肯雅塔成為首任總統",
+      "desc_en": "Kenya gains independence from Britain; Jomo Kenyatta becomes first president.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/肯尼亚",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kenya#Independence"
+    },
+    {
+      "id": "hin-004",
+      "year": -400,
+      "zh": "往世書編纂",
+      "en": "Puranas Compiled",
+      "axis": "hinduism",
+      "level": 3,
+      "category": "religion",
+      "desc_zh": "印度教核心神話文獻「往世書」逐步編纂",
+      "desc_en": "Hindu mythological texts, the Puranas, are gradually compiled.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/往世書",
+      "wiki_en": "https://en.wikipedia.org/wiki/Puranas"
+    },
+    {
+      "id": "hin-005",
+      "year": 700,
+      "zh": "巴克提運動興起",
+      "en": "Bhakti Movement Begins",
+      "axis": "hinduism",
+      "level": 2,
+      "category": "religion",
+      "desc_zh": "強調個人虔信的巴克提運動從南印度興起",
+      "desc_en": "Bhakti devotional movement emerges in South India, emphasizing personal devotion to God.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巴克提運動",
+      "wiki_en": "https://en.wikipedia.org/wiki/Bhakti_movement"
+    },
+    {
+      "id": "hin-006",
+      "year": 1000,
+      "zh": "印度教廟宇建築黃金期",
+      "en": "Hindu Temple Golden Age",
+      "axis": "hinduism",
+      "level": 2,
+      "category": "culture",
+      "desc_zh": "卡久拉霍、坦焦爾等壯麗印度教廟宇建成",
+      "desc_en": "Magnificent Hindu temples built at Khajuraho, Thanjavur, and across India.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/克久拉霍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments"
+    },
+    {
+      "id": "hin-007",
+      "year": 1828,
+      "zh": "印度教改革運動",
+      "en": "Hindu Reform Movement",
+      "axis": "hinduism",
+      "level": 2,
+      "category": "religion",
+      "desc_zh": "拉姆·莫漢·羅伊創立梵社，推動印度教現代改革",
+      "desc_en": "Ram Mohan Roy founds Brahmo Samaj, modernizing Hindu thought and opposing sati.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/梵社",
+      "wiki_en": "https://en.wikipedia.org/wiki/Brahmo_Samaj"
+    },
+    {
+      "id": "tao-004",
+      "year": -369,
+      "zh": "莊子・逍遙遊",
+      "en": "Zhuangzi",
+      "axis": "taoism",
+      "level": 2,
+      "category": "philosophy",
+      "desc_zh": "莊子發展道家哲學，強調自然無為與精神自由",
+      "desc_en": "Zhuangzi develops Taoist philosophy, emphasizing naturalness and spiritual freedom.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/莊子_(書)",
+      "wiki_en": "https://en.wikipedia.org/wiki/Zhuangzi_(book)"
+    },
+    {
+      "id": "tao-005",
+      "year": 364,
+      "zh": "茅山宗形成",
+      "en": "Maoshan School Founded",
+      "axis": "taoism",
+      "level": 3,
+      "category": "religion",
+      "desc_zh": "上清派（茅山宗）形成，融合冥想與經典傳統",
+      "desc_en": "Shangqing (Maoshan) school of Taoism emerges, integrating meditation and scripture.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/上清派",
+      "wiki_en": "https://en.wikipedia.org/wiki/Shangqing"
+    },
+    {
+      "id": "tao-006",
+      "year": 1445,
+      "zh": "正統道藏編纂完成",
+      "en": "Daozang (Taoist Canon) Compiled",
+      "axis": "taoism",
+      "level": 2,
+      "category": "religion",
+      "desc_zh": "明朝完成正統道藏編纂，收錄道教經典近1,500部",
+      "desc_en": "Ming Dynasty completes the Daozang, compiling nearly 1,500 Taoist texts.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/道藏",
+      "wiki_en": "https://en.wikipedia.org/wiki/Daozang"
+    },
+    {
+      "id": "tao-007",
+      "year": 1413,
+      "zh": "武當山宮殿群建成",
+      "en": "Wudang Mountain Temples Built",
+      "axis": "taoism",
+      "level": 2,
+      "category": "culture",
+      "desc_zh": "明成祖下令大規模建設武當山道教宮殿群",
+      "desc_en": "Ming Emperor Yongle orders grand Taoist temple complex built on Wudang Mountain.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/武當山",
+      "wiki_en": "https://en.wikipedia.org/wiki/Wudang_Mountains"
+    },
+    {
+      "id": "bud-006",
+      "year": -100,
+      "zh": "大乘佛教興起",
+      "en": "Mahayana Buddhism Emerges",
+      "axis": "buddhism",
+      "level": 1,
+      "category": "religion",
+      "desc_zh": "大乘佛教從部派佛教中發展出來，強調菩薩道",
+      "desc_en": "Mahayana Buddhism develops from earlier schools, emphasizing the Bodhisattva path.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大乘佛教",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mahayana"
+    },
+    {
+      "id": "bud-007",
+      "year": 552,
+      "zh": "佛教傳入日本",
+      "en": "Buddhism Enters Japan",
+      "axis": "buddhism",
+      "level": 2,
+      "category": "religion",
+      "crossRef": "japan",
+      "desc_zh": "百濟國王向日本天皇贈送佛像與經典",
+      "desc_en": "King of Baekje sends Buddhist images and sutras to the Japanese emperor.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/日本佛教",
+      "wiki_en": "https://en.wikipedia.org/wiki/Buddhism_in_Japan"
+    },
+    {
+      "id": "bud-008",
+      "year": 641,
+      "zh": "佛教傳入西藏",
+      "en": "Buddhism Enters Tibet",
+      "axis": "buddhism",
+      "level": 2,
+      "category": "religion",
+      "desc_zh": "松贊干布引入佛教，開啟藏傳佛教歷史",
+      "desc_en": "Songtsen Gampo introduces Buddhism to Tibet, beginning Tibetan Buddhist tradition.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/藏傳佛教",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tibetan_Buddhism"
+    },
+    {
+      "id": "bud-009",
+      "year": 1956,
+      "zh": "安貝德卡爾佛教復興運動",
+      "en": "Ambedkar Buddhist Revival",
+      "axis": "buddhism",
+      "level": 2,
+      "category": "religion",
+      "desc_zh": "安貝德卡爾帶領印度賤民集體皈依佛教",
+      "desc_en": "B.R. Ambedkar leads mass conversion of Dalits to Buddhism in India.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/比姆拉奥·拉姆吉·安贝德卡尔",
+      "wiki_en": "https://en.wikipedia.org/wiki/B._R._Ambedkar"
+    },
+    {
+      "id": "jpn-008",
+      "year": 645,
+      "zh": "大化改新",
+      "en": "Taika Reform",
+      "axis": "japan",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "日本仿效唐朝進行政治改革，建立中央集權體制",
+      "desc_en": "Japan reforms its government following Tang Dynasty models, centralizing power.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大化改新",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taika_Reform"
+    },
+    {
+      "id": "jpn-009",
+      "year": 1274,
+      "zh": "元寇襲來・蒙古入侵",
+      "en": "Mongol Invasions of Japan",
+      "axis": "japan",
+      "level": 2,
+      "category": "war",
+      "crossRef": "central-asia",
+      "desc_zh": "蒙古帝國兩次入侵日本均因颱風失敗",
+      "desc_en": "Mongol Empire launches two invasions of Japan, both defeated by typhoons ('kamikaze').",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/元日戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Japan"
+    },
+    {
+      "id": "jpn-010",
+      "year": 1945,
+      "zh": "廣島原子彈",
+      "en": "Atomic Bombing of Hiroshima",
+      "axis": "japan",
+      "level": 1,
+      "category": "war",
+      "crossRef": [
+        "usa",
+        "cross"
+      ],
+      "desc_zh": "美國在廣島投下原子彈，加速二戰結束",
+      "desc_en": "US drops atomic bomb on Hiroshima, hastening the end of World War II.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/廣島與長崎原子彈爆炸",
+      "wiki_en": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+    },
+    {
+      "id": "jpn-011",
+      "year": 1964,
+      "zh": "東京奧運・經濟奇蹟",
+      "en": "Tokyo Olympics・Economic Miracle",
+      "axis": "japan",
+      "level": 2,
+      "category": "culture",
+      "desc_zh": "東京奧運展現日本戰後經濟奇蹟與復興",
+      "desc_en": "Tokyo Olympics showcases Japan's postwar economic miracle and recovery.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/1964年夏季奥林匹克运动会",
+      "wiki_en": "https://en.wikipedia.org/wiki/1964_Summer_Olympics"
+    },
+    {
+      "id": "usa-008",
+      "year": 1803,
+      "zh": "路易斯安那購地",
+      "en": "Louisiana Purchase",
+      "axis": "usa",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "美國從法國購買路易斯安那領地，國土面積倍增",
+      "desc_en": "US purchases Louisiana Territory from France, doubling the nation's size.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/路易斯安那购地",
+      "wiki_en": "https://en.wikipedia.org/wiki/Louisiana_Purchase"
+    },
+    {
+      "id": "usa-009",
+      "year": 1941,
+      "zh": "珍珠港事件",
+      "en": "Attack on Pearl Harbor",
+      "axis": "usa",
+      "level": 1,
+      "category": "war",
+      "crossRef": [
+        "japan",
+        "cross"
+      ],
+      "desc_zh": "日本偷襲珍珠港，美國正式參加二戰",
+      "desc_en": "Japan attacks Pearl Harbor; the US enters World War II.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/珍珠港事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"
+    },
+    {
+      "id": "usa-010",
+      "year": 1964,
+      "zh": "民權法案",
+      "en": "Civil Rights Act",
+      "axis": "usa",
+      "level": 1,
+      "category": "politics",
+      "desc_zh": "美國通過民權法案，禁止種族歧視",
+      "desc_en": "US passes the Civil Rights Act, outlawing racial discrimination.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/1964年民權法案",
+      "wiki_en": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964"
+    },
+    {
+      "id": "usa-011",
+      "year": 1947,
+      "zh": "冷戰開始",
+      "en": "Cold War Begins",
+      "axis": "usa",
+      "level": 1,
+      "category": "politics",
+      "crossRef": "cross",
+      "desc_zh": "杜魯門主義標誌美蘇冷戰正式開始",
+      "desc_en": "Truman Doctrine marks the formal beginning of the US-Soviet Cold War.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/冷战",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cold_War"
     }
   ]
 }
