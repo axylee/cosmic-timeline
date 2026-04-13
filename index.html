@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604131137</span>
+  <span id="version-label">v202604131220</span>
 </div>
 
 <div id="view-popup"></div>
@@ -1280,10 +1280,10 @@ function buildLegend() {
 
     // Group label
     const labelEl = header.querySelector('.leg-group-label');
-    let _grpDblGuard = false;
+    let _grpClickTimer = null;
     labelEl.addEventListener('dblclick', e => {
       e.preventDefault(); e.stopPropagation();
-      _grpDblGuard = true; setTimeout(() => _grpDblGuard = false, 300);
+      if (_grpClickTimer) { clearTimeout(_grpClickTimer); _grpClickTimer = null; }
       if (_soloSet.size > 0) {
         cancelSolo();
       } else {
@@ -1293,25 +1293,28 @@ function buildLegend() {
       }
     });
     labelEl.addEventListener('click', e => {
-      if (_grpDblGuard) return;
       e.stopPropagation();
-      if (_soloSet.size > 0) {
-        const allIn = ids.every(id => _soloSet.has(id));
-        if (allIn) {
-          ids.forEach(id => _soloSet.delete(id));
-          if (_soloSet.size === 0) _setSoloCtrl(false);
+      if (_grpClickTimer) { clearTimeout(_grpClickTimer); _grpClickTimer = null; }
+      _grpClickTimer = setTimeout(() => {
+        _grpClickTimer = null;
+        if (_soloSet.size > 0) {
+          const allIn = ids.every(id => _soloSet.has(id));
+          if (allIn) {
+            ids.forEach(id => _soloSet.delete(id));
+            if (_soloSet.size === 0) _setSoloCtrl(false);
+          } else {
+            ids.forEach(id => _soloSet.add(id));
+            _setSoloCtrl(true);
+          }
+          updateLegendState(); draw();
         } else {
-          ids.forEach(id => _soloSet.add(id));
-          _setSoloCtrl(true);
+          // 正常狀態單點 = hide/show 整個 group
+          const allHidden = ids.every(id => hiddenAxes.has(id));
+          if (allHidden) ids.forEach(id => hiddenAxes.delete(id));
+          else ids.forEach(id => hiddenAxes.add(id));
+          updateLegendState(); draw();
         }
-        updateLegendState(); draw();
-      } else {
-        // 正常狀態單點 = hide/show 整個 group
-        const allHidden = ids.every(id => hiddenAxes.has(id));
-        if (allHidden) ids.forEach(id => hiddenAxes.delete(id));
-        else ids.forEach(id => hiddenAxes.add(id));
-        updateLegendState(); draw();
-      }
+      }, 250);
     });
     legend.appendChild(header);
 
@@ -1329,10 +1332,10 @@ function buildLegend() {
       div.dataset.axis = id;
       div.innerHTML = `<div class="leg-dot" style="background:${ax.color}"></div>${T(ax.label,ax.label_en)}`;
 
-      let _dblGuard = false;
+      let _clickTimer = null;
       div.addEventListener('dblclick', e => {
         e.preventDefault();
-        _dblGuard = true; setTimeout(() => _dblGuard = false, 300);
+        if (_clickTimer) { clearTimeout(_clickTimer); _clickTimer = null; }
         if (_soloSet.size > 0) {
           cancelSolo();
         } else {
@@ -1341,22 +1344,25 @@ function buildLegend() {
           updateLegendState(); draw();
         }
       });
-      div.addEventListener('click', () => {
-        if (_dblGuard) return;
-        if (_soloSet.size > 0) {
-          if (_soloSet.has(id)) {
-            _soloSet.delete(id);
-            if (_soloSet.size === 0) _setSoloCtrl(false);
+      div.addEventListener('click', e => {
+        if (_clickTimer) { clearTimeout(_clickTimer); _clickTimer = null; }
+        _clickTimer = setTimeout(() => {
+          _clickTimer = null;
+          if (_soloSet.size > 0) {
+            if (_soloSet.has(id)) {
+              _soloSet.delete(id);
+              if (_soloSet.size === 0) _setSoloCtrl(false);
+            } else {
+              _soloSet.add(id);
+              _setSoloCtrl(true);
+            }
+            updateLegendState(); draw();
           } else {
-            _soloSet.add(id);
-            _setSoloCtrl(true);
+            if (hiddenAxes.has(id)) hiddenAxes.delete(id);
+            else hiddenAxes.add(id);
+            updateLegendState(); draw();
           }
-          updateLegendState(); draw();
-        } else {
-          if (hiddenAxes.has(id)) hiddenAxes.delete(id);
-          else hiddenAxes.add(id);
-          updateLegendState(); draw();
-        }
+        }, 250);
       });
       itemsWrap.appendChild(div);
     });
