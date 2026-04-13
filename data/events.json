@@ -5,6 +5,43 @@
     "total_years": 13800000000,
     "created": "2026"
   },
+  "axis_groups": {
+    "natural": {
+      "label": "自然",
+      "label_en": "Nature",
+      "color": "#818cf8"
+    },
+    "global": {
+      "label": "世界",
+      "label_en": "Global",
+      "color": "#e2e8f0"
+    },
+    "region": {
+      "label": "地區",
+      "label_en": "Region",
+      "color": "#34d399"
+    },
+    "civilization": {
+      "label": "文明",
+      "label_en": "Civilization",
+      "color": "#f97316"
+    },
+    "human": {
+      "label": "人文",
+      "label_en": "Humanities",
+      "color": "#f472b6"
+    },
+    "religion": {
+      "label": "宗教",
+      "label_en": "Religion",
+      "color": "#fde68a"
+    },
+    "nation": {
+      "label": "國家",
+      "label_en": "Nations",
+      "color": "#3b82f6"
+    }
+  },
   "axes": [
     {
       "id": "cosmos",
@@ -573,84 +610,644 @@
   ],
   "era_bands": [
     {
-      "id": "cosmos",
+      "id": "cosmic-dawn",
       "zh": "宇宙誕生",
-      "en": "Cosmic Dawn",
+      "en": "COSMIC DAWN",
       "start": -13800000000,
       "end": -4600000000,
-      "color": "#1a0533"
+      "color": [
+        120,
+        50,
+        220
+      ]
     },
     {
-      "id": "earth",
-      "zh": "地球形成",
-      "en": "Earth Forms",
+      "id": "earth-life",
+      "zh": "地球與生命",
+      "en": "EARTH & LIFE",
       "start": -4600000000,
       "end": -541000000,
-      "color": "#0a1a2e"
+      "color": [
+        30,
+        80,
+        200
+      ]
     },
     {
-      "id": "life",
-      "zh": "生命演化",
-      "en": "Life Evolves",
+      "id": "complex-life",
+      "zh": "複雜生命",
+      "en": "COMPLEX LIFE",
       "start": -541000000,
       "end": -2600000,
-      "color": "#0d2b1a"
+      "color": [
+        20,
+        150,
+        80
+      ]
     },
     {
       "id": "human-evo",
       "zh": "人類演化",
-      "en": "Human Evolution",
+      "en": "HUMAN EVOLUTION",
       "start": -2600000,
       "end": -10000,
-      "color": "#1a1a0a"
+      "color": [
+        180,
+        140,
+        10
+      ]
+    },
+    {
+      "id": "prehistoric",
+      "zh": "史前文明",
+      "en": "PREHISTORIC",
+      "start": -10000,
+      "end": -3000,
+      "color": [
+        200,
+        80,
+        20
+      ]
     },
     {
       "id": "ancient",
       "zh": "古代",
-      "en": "Ancient",
-      "start": -10000,
+      "en": "ANCIENT",
+      "start": -3000,
       "end": -500,
-      "color": "#2a1a00"
+      "color": [
+        200,
+        50,
+        40
+      ]
     },
     {
       "id": "classical",
       "zh": "古典時代",
-      "en": "Classical",
+      "en": "CLASSICAL",
       "start": -500,
       "end": 500,
-      "color": "#1a2200"
+      "color": [
+        160,
+        40,
+        90
+      ]
     },
     {
       "id": "medieval",
       "zh": "中世紀",
-      "en": "Medieval",
+      "en": "MEDIEVAL",
       "start": 500,
       "end": 1400,
-      "color": "#0f1a22"
+      "color": [
+        40,
+        60,
+        170
+      ]
     },
     {
-      "id": "early-modern",
-      "zh": "近代早期",
-      "en": "Early Modern",
+      "id": "renaissance",
+      "zh": "文藝復興·大航海",
+      "en": "RENAISSANCE",
       "start": 1400,
       "end": 1800,
-      "color": "#1a0f22"
+      "color": [
+        80,
+        40,
+        160
+      ]
     },
     {
-      "id": "modern",
-      "zh": "近現代",
-      "en": "Modern",
+      "id": "industrial",
+      "zh": "工業時代",
+      "en": "INDUSTRIAL",
       "start": 1800,
       "end": 1950,
-      "color": "#001a22"
+      "color": [
+        10,
+        100,
+        120
+      ]
     },
     {
       "id": "contemporary",
       "zh": "當代",
-      "en": "Contemporary",
+      "en": "CONTEMPORARY",
       "start": 1950,
       "end": 2026,
-      "color": "#001122"
+      "color": [
+        10,
+        120,
+        150
+      ]
+    }
+  ],
+  "era_buttons": [
+    {
+      "id": "global",
+      "type": "global",
+      "zh": "全局",
+      "en": "All",
+      "color": "#e2e8f0",
+      "borderColor": "#e2e8f055"
+    },
+    {
+      "id": "era-cosmos",
+      "zh": "宇宙誕生",
+      "en": "Big Bang",
+      "start": -13800000000,
+      "end": -4000000000,
+      "color": "#a78bfa",
+      "borderColor": "#a78bfa55"
+    },
+    {
+      "id": "era-earth",
+      "zh": "地球生命",
+      "en": "Earth & Life",
+      "start": -4600000000,
+      "end": -500000000,
+      "color": "#60a5fa",
+      "borderColor": "#60a5fa55"
+    },
+    {
+      "id": "era-dino",
+      "zh": "恐龍時代",
+      "en": "Dinosaurs",
+      "start": -250000000,
+      "end": -50000000,
+      "color": "#34d399",
+      "borderColor": "#34d39955"
+    },
+    {
+      "id": "era-human",
+      "zh": "人類演化",
+      "en": "Human Evo.",
+      "start": -4000000,
+      "end": -100000,
+      "color": "#fbbf24",
+      "borderColor": "#fbbf2455"
+    },
+    {
+      "id": "era-prehist",
+      "zh": "史前文明",
+      "en": "Prehistory",
+      "start": -12000,
+      "end": 500,
+      "color": "#e2e8f0",
+      "borderColor": "#e2e8f055"
+    },
+    {
+      "id": "era-aeast",
+      "zh": "古代東方",
+      "en": "Ancient East",
+      "start": -3500,
+      "end": -500,
+      "color": "#fde68a",
+      "borderColor": "#fde68a55"
+    },
+    {
+      "id": "era-cwest",
+      "zh": "古典西方",
+      "en": "Classical West",
+      "start": -800,
+      "end": 500,
+      "color": "#c4b5fd",
+      "borderColor": "#c4b5fd55"
+    },
+    {
+      "id": "era-med",
+      "zh": "中世紀",
+      "en": "Medieval",
+      "start": 500,
+      "end": 1500,
+      "color": "#a5b4fc",
+      "borderColor": "#a5b4fc55"
+    },
+    {
+      "id": "era-ren",
+      "zh": "文藝復興",
+      "en": "Renaissance",
+      "start": 1400,
+      "end": 1800,
+      "color": "#c084fc",
+      "borderColor": "#c084fc55"
+    },
+    {
+      "id": "era-indust",
+      "zh": "工業革命",
+      "en": "Industrial Rev.",
+      "start": 1750,
+      "end": 1950,
+      "color": "#93c5fd",
+      "borderColor": "#93c5fd55"
+    },
+    {
+      "id": "era-modern",
+      "zh": "現代",
+      "en": "Modern",
+      "start": 1900,
+      "end": 2030,
+      "color": "#e2e8f0",
+      "borderColor": "#e2e8f055"
+    }
+  ],
+  "filter_cats": [
+    {
+      "id": "war",
+      "label": "戰爭",
+      "label_en": "War",
+      "color": "#f87171"
+    },
+    {
+      "id": "science",
+      "label": "科學",
+      "label_en": "Science",
+      "color": "#67e8f9"
+    },
+    {
+      "id": "religion",
+      "label": "宗教",
+      "label_en": "Religion",
+      "color": "#fde68a"
+    },
+    {
+      "id": "culture",
+      "label": "文化",
+      "label_en": "Culture",
+      "color": "#f472b6"
+    },
+    {
+      "id": "politics",
+      "label": "政治",
+      "label_en": "Politics",
+      "color": "#a5b4fc"
+    },
+    {
+      "id": "civilization",
+      "label": "文明",
+      "label_en": "Civilization",
+      "color": "#f97316"
+    },
+    {
+      "id": "nature",
+      "label": "自然",
+      "label_en": "Nature",
+      "color": "#34d399"
+    },
+    {
+      "id": "geology",
+      "label": "地質",
+      "label_en": "Geology",
+      "color": "#6ee7b7"
+    },
+    {
+      "id": "biology",
+      "label": "生物",
+      "label_en": "Biology",
+      "color": "#86efac"
+    },
+    {
+      "id": "astronomy",
+      "label": "天文",
+      "label_en": "Astronomy",
+      "color": "#818cf8"
+    },
+    {
+      "id": "migration",
+      "label": "遷徙",
+      "label_en": "Migration",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "exploration",
+      "label": "探索",
+      "label_en": "Exploration",
+      "color": "#fb923c"
+    },
+    {
+      "id": "trade",
+      "label": "貿易",
+      "label_en": "Trade",
+      "color": "#c084fc"
+    },
+    {
+      "id": "medicine",
+      "label": "醫學",
+      "label_en": "Medicine",
+      "color": "#4ade80"
+    },
+    {
+      "id": "philosophy",
+      "label": "哲學",
+      "label_en": "Philosophy",
+      "color": "#e2e8f0"
+    }
+  ],
+  "views": [
+    {
+      "id": "nat-cosmos",
+      "category": "自然與宇宙",
+      "label": "宇宙歷史",
+      "axes": [
+        "cosmos",
+        "galaxy",
+        "solar-system"
+      ],
+      "label_en": "Cosmic History",
+      "category_en": "Nature & Universe"
+    },
+    {
+      "id": "nat-earth",
+      "category": "自然與宇宙",
+      "label": "地球與生命",
+      "axes": [
+        "earth",
+        "climate",
+        "life"
+      ],
+      "label_en": "Earth & Life",
+      "category_en": "Nature & Universe"
+    },
+    {
+      "id": "nat-human",
+      "category": "自然與宇宙",
+      "label": "人類演化與遷徙",
+      "axes": [
+        "human-evo",
+        "migration"
+      ],
+      "label_en": "Human Evolution",
+      "category_en": "Nature & Universe"
+    },
+    {
+      "id": "civ-all",
+      "category": "文明縱覽",
+      "label": "全部文明",
+      "axes": [
+        "east",
+        "west",
+        "africa",
+        "americas",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china",
+        "greece",
+        "latin-america"
+      ],
+      "label_en": "All Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-east",
+      "category": "文明縱覽",
+      "label": "東方文明",
+      "axes": [
+        "east",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china"
+      ],
+      "label_en": "Eastern Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-west",
+      "category": "文明縱覽",
+      "label": "西方文明",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "Western Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-africa",
+      "category": "文明縱覽",
+      "label": "非洲文明",
+      "axes": [
+        "africa",
+        "egypt"
+      ],
+      "label_en": "African Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-americas",
+      "category": "文明縱覽",
+      "label": "美洲文明",
+      "axes": [
+        "americas",
+        "latin-america"
+      ],
+      "label_en": "Americas",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "thm-religion",
+      "category": "主題",
+      "label": "宗教發展",
+      "axes": [
+        "judaism",
+        "christianity",
+        "islam",
+        "hinduism",
+        "buddhism",
+        "taoism"
+      ],
+      "label_en": "World Religions",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-science",
+      "category": "主題",
+      "label": "科學技術",
+      "axes": [
+        "science",
+        "cross"
+      ],
+      "label_en": "Science & Technology",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-trade",
+      "category": "主題",
+      "label": "貿易全球化",
+      "axes": [
+        "trade",
+        "cross"
+      ],
+      "label_en": "Trade & Exploration",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-climate",
+      "category": "主題",
+      "label": "氣候環境",
+      "axes": [
+        "climate",
+        "earth"
+      ],
+      "label_en": "Climate & Environment",
+      "category_en": "Themes"
+    },
+    {
+      "id": "nat-iceages",
+      "category": "主題",
+      "label": "五次大冰河期",
+      "axes": [
+        "climate",
+        "earth",
+        "life"
+      ],
+      "label_en": "Five Ice Ages",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-migration",
+      "category": "主題",
+      "label": "人類遷徙",
+      "axes": [
+        "migration",
+        "oceania",
+        "central-asia",
+        "southeast-asia",
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Human Migration",
+      "category_en": "Themes"
+    },
+    {
+      "id": "reg-mideast",
+      "category": "地區",
+      "label": "中東歷史",
+      "axes": [
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "islam",
+        "judaism",
+        "iran"
+      ],
+      "label_en": "Middle East History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-eastasia",
+      "category": "地區",
+      "label": "東亞歷史",
+      "axes": [
+        "east",
+        "china",
+        "japan",
+        "taiwan"
+      ],
+      "label_en": "East Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-europe",
+      "category": "地區",
+      "label": "歐洲歷史",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "European History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-southasia",
+      "category": "地區",
+      "label": "南亞歷史",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism"
+      ],
+      "label_en": "South Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-africa",
+      "category": "地區",
+      "label": "非洲歷史",
+      "axes": [
+        "africa",
+        "north-africa",
+        "west-africa",
+        "east-africa",
+        "south-africa",
+        "egypt"
+      ],
+      "label_en": "African History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-americas",
+      "category": "地區",
+      "label": "美洲歷史",
+      "axes": [
+        "americas",
+        "latin-america",
+        "north-america",
+        "usa",
+        "south-america"
+      ],
+      "label_en": "Americas History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-oceania",
+      "category": "地區",
+      "label": "大洋洲",
+      "axes": [
+        "oceania",
+        "antarctic"
+      ],
+      "label_en": "Oceania",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-centralas",
+      "category": "地區",
+      "label": "中亞歷史",
+      "axes": [
+        "central-asia"
+      ],
+      "label_en": "Central Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-sea",
+      "category": "地區",
+      "label": "東南亞歷史",
+      "axes": [
+        "southeast-asia"
+      ],
+      "label_en": "SE Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-polar",
+      "category": "地區",
+      "label": "極地",
+      "axes": [
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Polar Regions",
+      "category_en": "Regions"
     }
   ],
   "events": [
@@ -9074,313 +9671,6 @@
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1200px-Spreading_homo_sapiens_la.svg.png"
-    }
-  ],
-  "views": [
-    {
-      "id": "nat-cosmos",
-      "category": "自然與宇宙",
-      "label": "宇宙歷史",
-      "axes": [
-        "cosmos",
-        "galaxy",
-        "solar-system"
-      ],
-      "label_en": "Cosmic History",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "nat-earth",
-      "category": "自然與宇宙",
-      "label": "地球與生命",
-      "axes": [
-        "earth",
-        "climate",
-        "life"
-      ],
-      "label_en": "Earth & Life",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "nat-human",
-      "category": "自然與宇宙",
-      "label": "人類演化與遷徙",
-      "axes": [
-        "human-evo",
-        "migration"
-      ],
-      "label_en": "Human Evolution",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "civ-all",
-      "category": "文明縱覽",
-      "label": "全部文明",
-      "axes": [
-        "east",
-        "west",
-        "africa",
-        "americas",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china",
-        "greece",
-        "latin-america"
-      ],
-      "label_en": "All Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-east",
-      "category": "文明縱覽",
-      "label": "東方文明",
-      "axes": [
-        "east",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china"
-      ],
-      "label_en": "Eastern Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-west",
-      "category": "文明縱覽",
-      "label": "西方文明",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "Western Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-africa",
-      "category": "文明縱覽",
-      "label": "非洲文明",
-      "axes": [
-        "africa",
-        "egypt"
-      ],
-      "label_en": "African Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-americas",
-      "category": "文明縱覽",
-      "label": "美洲文明",
-      "axes": [
-        "americas",
-        "latin-america"
-      ],
-      "label_en": "Americas",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "thm-religion",
-      "category": "主題",
-      "label": "宗教發展",
-      "axes": [
-        "judaism",
-        "christianity",
-        "islam",
-        "hinduism",
-        "buddhism",
-        "taoism"
-      ],
-      "label_en": "World Religions",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-science",
-      "category": "主題",
-      "label": "科學技術",
-      "axes": [
-        "science",
-        "cross"
-      ],
-      "label_en": "Science & Technology",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-trade",
-      "category": "主題",
-      "label": "貿易全球化",
-      "axes": [
-        "trade",
-        "cross"
-      ],
-      "label_en": "Trade & Exploration",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-climate",
-      "category": "主題",
-      "label": "氣候環境",
-      "axes": [
-        "climate",
-        "earth"
-      ],
-      "label_en": "Climate & Environment",
-      "category_en": "Themes"
-    },
-    {
-      "id": "nat-iceages",
-      "category": "主題",
-      "label": "五次大冰河期",
-      "axes": [
-        "climate",
-        "earth",
-        "life"
-      ],
-      "label_en": "Five Ice Ages",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-migration",
-      "category": "主題",
-      "label": "人類遷徙",
-      "axes": [
-        "migration",
-        "oceania",
-        "central-asia",
-        "southeast-asia",
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Human Migration",
-      "category_en": "Themes"
-    },
-    {
-      "id": "reg-mideast",
-      "category": "地區",
-      "label": "中東歷史",
-      "axes": [
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "islam",
-        "judaism",
-        "iran"
-      ],
-      "label_en": "Middle East History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-eastasia",
-      "category": "地區",
-      "label": "東亞歷史",
-      "axes": [
-        "east",
-        "china",
-        "japan",
-        "taiwan"
-      ],
-      "label_en": "East Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-europe",
-      "category": "地區",
-      "label": "歐洲歷史",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "European History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-southasia",
-      "category": "地區",
-      "label": "南亞歷史",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism"
-      ],
-      "label_en": "South Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-africa",
-      "category": "地區",
-      "label": "非洲歷史",
-      "axes": [
-        "africa",
-        "north-africa",
-        "west-africa",
-        "east-africa",
-        "south-africa",
-        "egypt"
-      ],
-      "label_en": "African History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-americas",
-      "category": "地區",
-      "label": "美洲歷史",
-      "axes": [
-        "americas",
-        "latin-america",
-        "north-america",
-        "usa",
-        "south-america"
-      ],
-      "label_en": "Americas History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-oceania",
-      "category": "地區",
-      "label": "大洋洲",
-      "axes": [
-        "oceania",
-        "antarctic"
-      ],
-      "label_en": "Oceania",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-centralas",
-      "category": "地區",
-      "label": "中亞歷史",
-      "axes": [
-        "central-asia"
-      ],
-      "label_en": "Central Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-sea",
-      "category": "地區",
-      "label": "東南亞歷史",
-      "axes": [
-        "southeast-asia"
-      ],
-      "label_en": "SE Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-polar",
-      "category": "地區",
-      "label": "極地",
-      "axes": [
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Polar Regions",
-      "category_en": "Regions"
     }
   ]
 }

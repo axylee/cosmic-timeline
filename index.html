@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604130001</span>
+  <span id="version-label">v202604131137</span>
 </div>
 
 <div id="view-popup"></div>
@@ -918,20 +918,7 @@ body {
 
 <!-- Bottom bar: era jumps + H-scrollbar + H-zoom slider -->
 <div id="bottom-bar">
-  <div id="era-jumps">
-    <button class="era-btn" id="btn-global" style="color:#e2e8f0;border-color:#e2e8f055;opacity:0.9" data-zh="全局" data-en="All">全局</button>
-    <button class="era-btn" style="color:#a78bfa;border-color:#a78bfa55" data-start="-13800000000" data-end="-4000000000" data-zh="宇宙誕生" data-en="Big Bang">宇宙誕生</button>
-    <button class="era-btn" style="color:#60a5fa;border-color:#60a5fa55" data-start="-4600000000" data-end="-500000000" data-zh="地球生命" data-en="Earth & Life">地球生命</button>
-    <button class="era-btn" style="color:#34d399;border-color:#34d39955" data-start="-250000000" data-end="-50000000" data-zh="恐龍時代" data-en="Dinosaurs">恐龍時代</button>
-    <button class="era-btn" style="color:#fbbf24;border-color:#fbbf2455" data-start="-4000000" data-end="-100000" data-zh="人類演化" data-en="Human Evo.">人類演化</button>
-    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="-12000" data-end="500" data-zh="史前文明" data-en="Prehistory">史前文明</button>
-    <button class="era-btn" style="color:#fde68a;border-color:#fde68a55" data-start="-3500" data-end="-500" data-zh="古代東方" data-en="Ancient East">古代東方</button>
-    <button class="era-btn" style="color:#c4b5fd;border-color:#c4b5fd55" data-start="-800" data-end="500" data-zh="古典西方" data-en="Classical West">古典西方</button>
-    <button class="era-btn" style="color:#a5b4fc;border-color:#a5b4fc55" data-start="500" data-end="1500" data-zh="中世紀" data-en="Medieval">中世紀</button>
-    <button class="era-btn" style="color:#c084fc;border-color:#c084fc55" data-start="1400" data-end="1800" data-zh="文藝復興" data-en="Renaissance">文藝復興</button>
-    <button class="era-btn" style="color:#93c5fd;border-color:#93c5fd55" data-start="1750" data-end="1950" data-zh="工業革命" data-en="Industrial Rev.">工業革命</button>
-    <button class="era-btn" style="color:#e2e8f0;border-color:#e2e8f055" data-start="1900" data-end="2030" data-zh="現代" data-en="Modern">現代</button>
-  </div>
+  <div id="era-jumps"></div>
   <div id="hscroll-row">
     <div id="scrollbar-track">
       <div id="scrollbar-thumb"></div>
@@ -1129,10 +1116,7 @@ function applyLang() {
     document.getElementById('search-input').placeholder = '搜尋事件… 例如：牛頓、Newton、1687';
   }
   // era 按鈕切換
-  document.querySelectorAll('.era-btn').forEach(b => {
-    const t = lang === 'en' ? b.dataset.en : b.dataset.zh;
-    if (t) b.textContent = t;
-  });
+  updateEraButtonLang();
 }
 
 // Helper: get display text based on lang
@@ -1160,6 +1144,7 @@ function buildAxes(axesArray) {
     AXES[ax.id] = {
       color:     ax.color,
       label:     ax.label,
+      label_en:  ax.label_en || ax.label,
       startYear: ax.startYear,
       endYear:   ax.endYear ?? null,
       parent:    ax.parent ?? null,
@@ -1179,15 +1164,8 @@ function buildAxes(axesArray) {
 // ════════════════════════════════════════════
 // Groups defined here (visual logic, not data)
 // group membership comes from axes[].group in JSON
-const AXIS_GROUP_DEFS = {
-  natural:      { label:'自然', label_en:'Nature',        color:'#818cf8' },
-  global:       { label:'世界', label_en:'Global',        color:'#e2e8f0' },
-  region:       { label:'地區', label_en:'Region',        color:'#34d399' },
-  civilization: { label:'文明', label_en:'Civilization',  color:'#f97316' },
-  human:        { label:'人文', label_en:'Humanities',    color:'#f472b6' },
-  religion:     { label:'宗教', label_en:'Religion',      color:'#fde68a' },
-  nation:       { label:'國家', label_en:'Nations',       color:'#3b82f6' },
-};
+// Groups loaded from JSON axis_groups (populated in loadEvents)
+let AXIS_GROUP_DEFS = {};
 
 // These are rebuilt after axes load
 let AXIS_GROUPS   = {};
@@ -1767,38 +1745,11 @@ function formatYear(y) {
   return `西元 ${Math.round(y)} 年`;
 }
 
-function formatYearShort(y) {
-  const abs = Math.abs(y);
-  if (y < 0) {
-    if (abs >= 100_000_000) {
-      const yi = abs / 1e8;
-      return (yi >= 100 ? yi.toFixed(0) : yi >= 10 ? yi.toFixed(1) : yi.toFixed(2)) + 'Byr';
-    }
-    if (abs >= 1_000_000)    return (abs / 1e6).toFixed(0) + 'Myr';
-    if (abs >= 10_000)       return (abs / 10000).toFixed(1) + 'Kyr';
-    if (abs >= 1_000)        return Math.round(abs / 1000) + 'K BC';
-    return Math.round(abs) + ' BC';
-  }
-  if (y === 0) return 'AD 0';
-  return 'AD ' + Math.round(y);
-}
-
 // ════════════════════════════════════════════
 //  DRAW ERA BANDS — 高對比時代色塊
 // ════════════════════════════════════════════
-const ERA_BANDS = [
-  { start:-13800000000, end:-4600000000, color:[120,50,220],  zh:'宇宙誕生',       en:'COSMIC DAWN'    },
-  { start:-4600000000,  end:-541000000,  color:[30,80,200],   zh:'地球與生命',     en:'EARTH & LIFE'   },
-  { start:-541000000,   end:-2600000,    color:[20,150,80],   zh:'複雜生命',       en:'COMPLEX LIFE'   },
-  { start:-2600000,     end:-10000,      color:[180,140,10],  zh:'人類演化',       en:'HUMAN EVOLUTION'},
-  { start:-10000,       end:-3000,       color:[200,80,20],   zh:'史前文明',       en:'PREHISTORIC'    },
-  { start:-3000,        end:-500,        color:[200,50,40],   zh:'古代',           en:'ANCIENT'        },
-  { start:-500,         end:500,         color:[160,40,90],   zh:'古典時代',       en:'CLASSICAL'      },
-  { start:500,          end:1400,        color:[40,60,170],   zh:'中世紀',         en:'MEDIEVAL'       },
-  { start:1400,         end:1800,        color:[80,40,160],   zh:'文藝復興·大航海', en:'RENAISSANCE'    },
-  { start:1800,         end:1950,        color:[10,100,120],  zh:'工業時代',       en:'INDUSTRIAL'     },
-  { start:1950,         end:2026,        color:[10,120,150],  zh:'當代',           en:'CONTEMPORARY'   },
-];
+// Era bands loaded from JSON era_bands (populated in loadEvents)
+let ERA_BANDS = [];
 
 function drawEraBands() {
   // Background fill + vertical border only — banner drawn separately on top
@@ -3761,14 +3712,25 @@ async function loadEvents() {
   try {
     const res  = await fetch('data/events.json');
     const data = await res.json();
+    // A3: Load axis_groups from JSON
+    if (data.axis_groups) AXIS_GROUP_DEFS = data.axis_groups;
+    // Build axes (now reads label_en too)
     if (data.axes && data.axes.length > 0) buildAxes(data.axes);
     events = data.events;
+    // A4: Load era_bands from JSON
+    if (data.era_bands && data.era_bands.length > 0) ERA_BANDS = data.era_bands;
     // Store raw era_bands for export
     window._eraBandsRaw = data.era_bands || [];
+    // A2: Load filter_cats from JSON
+    if (data.filter_cats && data.filter_cats.length > 0) FILTER_CATS = data.filter_cats;
+    // A1: Build era buttons from JSON
+    buildEraButtons(data.era_buttons || []);
     // Load view definitions
     loadViewDefs(data.views || []);
   } catch (err) {
     console.warn('Could not load events.json, using inline fallback');
+    AXIS_GROUP_DEFS = FALLBACK_AXIS_GROUPS;
+    buildAxes(FALLBACK_AXES_ARRAY);
     events = FALLBACK_EVENTS;
   }
   buildParentTree();
@@ -3784,18 +3746,23 @@ async function loadEvents() {
 }
 
 // ════════════════════════════════════════════
-//  FALLBACK — minimal events if JSON fails
+//  FALLBACK — minimal data if JSON fails
 // ════════════════════════════════════════════
+const FALLBACK_AXIS_GROUPS = {
+  natural: { label:'自然', label_en:'Nature', color:'#818cf8' },
+  global:  { label:'世界', label_en:'Global', color:'#e2e8f0' },
+};
+const FALLBACK_AXES_ARRAY = [
+  { id:'cosmos',    label:'宇宙', label_en:'Cosmos',    color:'#a78bfa', order:1, parent:null, startYear:-13800000000, endYear:null, zoomMin:0, group:'natural' },
+  { id:'earth',     label:'地球', label_en:'Earth',     color:'#60a5fa', order:2, parent:null, startYear:-4540000000,  endYear:null, zoomMin:0, group:'natural' },
+  { id:'life',      label:'生命', label_en:'Life',      color:'#34d399', order:3, parent:null, startYear:-3800000000,  endYear:null, zoomMin:0, group:'natural' },
+  { id:'cross',     label:'世界', label_en:'Cross-Civ', color:'#e2e8f0', order:4, parent:null, startYear:-10000,       endYear:null, zoomMin:0, group:'global'  },
+];
 const FALLBACK_EVENTS = [
-  { id:'big-bang',     year:-13800000000, zh:'宇宙大爆炸', en:'Big Bang',      axis:'cosmos',    level:1, track:0, desc_zh:'宇宙誕生', desc_en:'Universe begins', wiki_zh:'https://zh.wikipedia.org/wiki/大爆炸', wiki_en:'https://en.wikipedia.org/wiki/Big_Bang' },
-  { id:'earth-forms',  year:-4540000000,  zh:'地球形成',   en:'Earth Forms',   axis:'earth',     level:1, track:0, desc_zh:'地球誕生', desc_en:'Earth forms',    wiki_zh:'https://zh.wikipedia.org/wiki/地球',   wiki_en:'https://en.wikipedia.org/wiki/Earth' },
-  { id:'first-life',   year:-3800000000,  zh:'生命出現',   en:'First Life',    axis:'earth',     level:1, track:0, desc_zh:'生命誕生', desc_en:'Life begins',    wiki_zh:'https://zh.wikipedia.org/wiki/生命起源', wiki_en:'https://en.wikipedia.org/wiki/Abiogenesis' },
-  { id:'dinosaurs',    year:-230000000,   zh:'恐龍出現',   en:'Dinosaurs',     axis:'life',      level:1, track:0, desc_zh:'恐龍時代', desc_en:'Age of dinosaurs', wiki_zh:'https://zh.wikipedia.org/wiki/恐龍', wiki_en:'https://en.wikipedia.org/wiki/Dinosaur' },
-  { id:'kt',           year:-66000000,    zh:'恐龍滅絕',   en:'Dino Extinct',  axis:'life',      level:1, track:0, desc_zh:'隕石撞擊', desc_en:'Asteroid impact', wiki_zh:'https://zh.wikipedia.org/wiki/白堊紀-古近紀滅絕事件', wiki_en:'https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event' },
-  { id:'homo-sapiens', year:-300000,      zh:'智人出現',   en:'Homo sapiens',  axis:'human-evo', level:1, track:0, desc_zh:'現代人類', desc_en:'Modern humans',  wiki_zh:'https://zh.wikipedia.org/wiki/智人', wiki_en:'https://en.wikipedia.org/wiki/Homo_sapiens' },
-  { id:'agriculture',  year:-10000,       zh:'農業革命',   en:'Agriculture',   axis:'cross',     level:1, track:0, desc_zh:'農耕定居', desc_en:'Farming begins', wiki_zh:'https://zh.wikipedia.org/wiki/農業起源', wiki_en:'https://en.wikipedia.org/wiki/History_of_agriculture' },
-  { id:'ww2',          year:1939,         zh:'二戰',       en:'World War II',  axis:'cross',     level:1, track:0, desc_zh:'人類最大戰爭', desc_en:'Deadliest war', wiki_zh:'https://zh.wikipedia.org/wiki/第二次世界大戰', wiki_en:'https://en.wikipedia.org/wiki/World_War_II' },
-  { id:'internet',     year:1991,         zh:'網際網路',   en:'World Wide Web',axis:'cross',     level:1, track:0, desc_zh:'資訊時代', desc_en:'Information age', wiki_zh:'https://zh.wikipedia.org/wiki/全球資訊網', wiki_en:'https://en.wikipedia.org/wiki/World_Wide_Web' },
+  { id:'big-bang',    year:-13800000000, zh:'宇宙大爆炸', en:'Big Bang',     axis:'cosmos', level:1 },
+  { id:'earth-forms', year:-4540000000,  zh:'地球形成',   en:'Earth Forms',  axis:'earth',  level:1 },
+  { id:'first-life',  year:-3800000000,  zh:'生命出現',   en:'First Life',   axis:'life',   level:1 },
+  { id:'agriculture', year:-10000,       zh:'農業革命',   en:'Agriculture',  axis:'cross',  level:1 },
 ];
 
 // ════════════════════════════════════════════
@@ -3997,33 +3964,70 @@ function clearAllEdits() {
 }
 
 // ════════════════════════════════════════════
-//  ERA JUMP BUTTONS
+//  ERA JUMP BUTTONS — built dynamically from JSON era_buttons
 // ════════════════════════════════════════════
-document.getElementById('btn-global').addEventListener('click', () => {
-  const span   = globalViewSpan();
-  const tStart = TIMELINE_START - span * 0.10;
-  const tEnd   = tStart + span;
-  // Animate directly without extra padding
-  const fromStart = viewStart, fromEnd = viewEnd;
-  const t0 = performance.now(), dur = 420;
-  function step(now) {
-    const t = Math.min(1, (now - t0) / dur);
-    const e = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
-    viewStart = fromStart + (tStart - fromStart) * e;
-    viewEnd   = fromEnd   + (tEnd   - fromEnd)   * e;
-    clampView(); draw();
-    if (t < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-});
+let _eraButtonDefs = [];
 
-document.querySelectorAll('.era-btn[data-start]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const start = parseFloat(btn.dataset.start);
-    const end   = parseFloat(btn.dataset.end);
-    jumpTo(start, end);
+function buildEraButtons(defs) {
+  _eraButtonDefs = defs || [];
+  const container = document.getElementById('era-jumps');
+  if (!container) return;
+  container.innerHTML = '';
+
+  _eraButtonDefs.forEach(def => {
+    const btn = document.createElement('button');
+    btn.className = 'era-btn';
+    btn.style.color = def.color;
+    btn.style.borderColor = def.borderColor;
+    btn.textContent = T(def.zh, def.en);
+
+    if (def.type === 'global') {
+      btn.id = 'btn-global';
+      btn.style.opacity = '0.9';
+      btn.addEventListener('click', () => {
+        const span   = globalViewSpan();
+        const tStart = TIMELINE_START - span * 0.10;
+        const tEnd   = tStart + span;
+        const fromStart = viewStart, fromEnd = viewEnd;
+        const t0 = performance.now(), dur = 420;
+        function step(now) {
+          const t = Math.min(1, (now - t0) / dur);
+          const e = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+          viewStart = fromStart + (tStart - fromStart) * e;
+          viewEnd   = fromEnd   + (tEnd   - fromEnd)   * e;
+          clampView(); draw();
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    } else {
+      btn.dataset.start = def.start;
+      btn.dataset.end   = def.end;
+      btn.dataset.zh    = def.zh;
+      btn.dataset.en    = def.en;
+      btn.addEventListener('click', () => {
+        jumpTo(def.start, def.end);
+      });
+    }
+    container.appendChild(btn);
   });
-});
+}
+
+// Update era button text on language switch
+function updateEraButtonLang() {
+  const btns = document.querySelectorAll('.era-btn');
+  btns.forEach(b => {
+    const zh = b.dataset.zh;
+    const en = b.dataset.en;
+    if (zh && en) b.textContent = T(zh, en);
+  });
+  // Global button uses _eraButtonDefs[0]
+  const globalBtn = document.getElementById('btn-global');
+  if (globalBtn && _eraButtonDefs.length > 0) {
+    const g = _eraButtonDefs[0];
+    globalBtn.textContent = T(g.zh, g.en);
+  }
+}
 
 // ════════════════════════════════════════════
 //  SEARCH
@@ -4336,24 +4340,8 @@ showAllAxes = function() {
 // ════════════════════════════════════════════
 let _filterSet = new Set(); // active categories
 
-// Category definitions: key, Chinese label, color
-const FILTER_CATS = [
-  { id:'war',          label:'戰爭',   label_en:'War',          color:'#f87171' },
-  { id:'science',      label:'科學',   label_en:'Science',      color:'#67e8f9' },
-  { id:'religion',     label:'宗教',   label_en:'Religion',     color:'#fde68a' },
-  { id:'culture',      label:'文化',   label_en:'Culture',      color:'#f472b6' },
-  { id:'politics',     label:'政治',   label_en:'Politics',     color:'#a5b4fc' },
-  { id:'civilization', label:'文明',   label_en:'Civilization', color:'#f97316' },
-  { id:'nature',       label:'自然',   label_en:'Nature',       color:'#34d399' },
-  { id:'geology',      label:'地質',   label_en:'Geology',      color:'#6ee7b7' },
-  { id:'biology',      label:'生物',   label_en:'Biology',      color:'#86efac' },
-  { id:'astronomy',    label:'天文',   label_en:'Astronomy',    color:'#818cf8' },
-  { id:'migration',    label:'遷徙',   label_en:'Migration',    color:'#fbbf24' },
-  { id:'exploration',  label:'探索',   label_en:'Exploration',  color:'#fb923c' },
-  { id:'trade',        label:'貿易',   label_en:'Trade',        color:'#c084fc' },
-  { id:'medicine',     label:'醫學',   label_en:'Medicine',     color:'#4ade80' },
-  { id:'philosophy',   label:'哲學',   label_en:'Philosophy',   color:'#e2e8f0' },
-];
+// Filter categories loaded from JSON filter_cats (populated in loadEvents)
+let FILTER_CATS = [];
 
 function buildFilterPopup() {
   const popup = document.getElementById('filter-popup');
