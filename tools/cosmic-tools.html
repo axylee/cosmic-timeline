@@ -366,17 +366,16 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
             <input type="text" id="ax-label" placeholder="例：韓國">
           </div>
           <div class="form-group">
+            <label>英文標籤 <span class="required">*</span></label>
+            <input type="text" id="ax-label-en" placeholder="例：Korea">
+          </div>
+          <div class="form-group">
             <label>父軸 <span class="required">*</span></label>
             <select id="ax-parent"></select>
           </div>
           <div class="form-group">
             <label>分類群組</label>
-            <select id="ax-group">
-              <option value="natural">自然科學</option><option value="human">人文</option>
-              <option value="science">科學技術</option><option value="arts">藝術文化</option>
-              <option value="religion">宗教</option><option value="civilization">文明</option>
-              <option value="nation" selected>國家地區</option>
-            </select>
+            <select id="ax-group"></select>
           </div>
           <div class="form-group">
             <label>顏色 <span class="required">*</span></label>
@@ -392,6 +391,10 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
                 oninput="document.getElementById('ax-zoommin-val').textContent=parseFloat(this.value).toFixed(2)">
               <span class="zoom-val" id="ax-zoommin-val">0.58</span>
             </div>
+          </div>
+          <div class="form-group">
+            <label>排列位置 — 放在哪條軸線下方</label>
+            <select id="ax-order-after"></select>
           </div>
           <div class="form-group">
             <label>起始年份 <span class="required">*</span></label>
@@ -654,6 +657,41 @@ function populateAxisSelects() {
       if (prev) sel.value=prev;
     }
   });
+  // Populate group dropdown from JSON axis_groups
+  const grpSel = document.getElementById('ax-group');
+  if (grpSel) {
+    const prevGrp = grpSel.value;
+    grpSel.innerHTML = '';
+    const groups = eventsData?.axis_groups || {};
+    Object.entries(groups).forEach(([key, def]) => {
+      const opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = `${def.label} ${def.label_en || ''}`;
+      grpSel.appendChild(opt);
+    });
+    if (prevGrp) grpSel.value = prevGrp;
+    if (!grpSel.value && grpSel.options.length) grpSel.value = 'nation';
+  }
+  // Populate "place below" order dropdown
+  const orderSel = document.getElementById('ax-order-after');
+  if (orderSel) {
+    const prevOrd = orderSel.value;
+    orderSel.innerHTML = '';
+    const topOpt = document.createElement('option');
+    topOpt.value = '__top__'; topOpt.textContent = '— 最上方 —';
+    orderSel.appendChild(topOpt);
+    axes.forEach(ax => {
+      const opt = document.createElement('option');
+      opt.value = ax.id;
+      const grpDef = (eventsData?.axis_groups || {})[ax.group];
+      const grpLabel = grpDef ? grpDef.label : (ax.group || '');
+      opt.textContent = `${ax.label} [${grpLabel}]`;
+      orderSel.appendChild(opt);
+    });
+    // Default: last axis (new axis goes to bottom)
+    if (prevOrd) orderSel.value = prevOrd;
+    else if (axes.length) orderSel.value = axes[axes.length - 1].id;
+  }
   onAxisChange();
 }
 function onAxisChange() {
@@ -750,18 +788,37 @@ function addAxis() {
   const errEl=document.getElementById('ax-error'); errEl.classList.add('hide');
   if(!validateAxId()){errEl.textContent=document.getElementById('ax-id-err').textContent||'ID 不合法';errEl.classList.remove('hide');return;}
   const label=document.getElementById('ax-label').value.trim();
+  const labelEn=document.getElementById('ax-label-en').value.trim();
   const parent=document.getElementById('ax-parent').value;
   const startYear=document.getElementById('ax-startyear').value.trim();
   const errs=[];
   if(!label) errs.push('中文標籤為必填');
+  if(!labelEn) errs.push('英文標籤為必填');
   if(!parent) errs.push('父軸為必填');
   if(!startYear) errs.push('起始年份為必填');
   if(errs.length){errEl.textContent=errs.join('、');errEl.classList.remove('hide');return;}
 
   const color=document.getElementById('ax-color').value.trim()||'#60a5fa';
   const endYear=document.getElementById('ax-endyear').value.trim();
-  const maxOrder=Math.max(...getAxesSorted().map(a=>a.order??0));
-  const ax={id:document.getElementById('ax-id').value.trim(),label,color:/^#[0-9a-fA-F]{6}$/.test(color)?color:'#60a5fa',order:maxOrder+1,parent,startYear:parseInt(startYear),endYear:endYear?parseInt(endYear):null,zoomMin:parseFloat(document.getElementById('ax-zoommin').value),group:document.getElementById('ax-group').value};
+
+  // Calculate order from "place below" select
+  const orderAfter = document.getElementById('ax-order-after').value;
+  const sorted = getAxesSorted().sort((a,b) => a.order - b.order);
+  let newOrder;
+  if (orderAfter === '__top__') {
+    newOrder = sorted.length > 0 ? sorted[0].order - 1 : 0;
+  } else {
+    const idx = sorted.findIndex(a => a.id === orderAfter);
+    if (idx >= 0) {
+      const afterOrder = sorted[idx].order;
+      const nextOrder = idx + 1 < sorted.length ? sorted[idx + 1].order : afterOrder + 10;
+      newOrder = (afterOrder + nextOrder) / 2;
+    } else {
+      newOrder = Math.max(...sorted.map(a => a.order ?? 0)) + 1;
+    }
+  }
+
+  const ax={id:document.getElementById('ax-id').value.trim(),label,label_en:labelEn,color:/^#[0-9a-fA-F]{6}$/.test(color)?color:'#60a5fa',order:newOrder,parent,startYear:parseInt(startYear),endYear:endYear?parseInt(endYear):null,zoomMin:parseFloat(document.getElementById('ax-zoommin').value),group:document.getElementById('ax-group').value};
 
   pendingItems.push({type:'axis',data:ax});
   logChange({type:'add-axis', id:ax.id, label, parent, zoomMin:ax.zoomMin});
@@ -790,7 +847,7 @@ function clearEventForm(){
   document.getElementById('ev-error').classList.add('hide');
 }
 function clearAxisForm(){
-  ['ax-id','ax-label','ax-startyear','ax-endyear'].forEach(id=>document.getElementById(id).value='');
+  ['ax-id','ax-label','ax-label-en','ax-startyear','ax-endyear'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('ax-color').value='#60a5fa';
   document.getElementById('ax-color-picker').value='#60a5fa';
   document.getElementById('ax-zoommin').value='0.58';
