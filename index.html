@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604131242b</span>
+  <span id="version-label">v202604131242c</span>
 </div>
 
 <div id="view-popup"></div>
@@ -1109,13 +1109,13 @@ function applyLang() {
     btn.textContent = 'EN / 中';
     btn.classList.add('en-active');
     if (sub) sub.textContent = '13.8 Billion Years · Cosmic Timeline';
-    if (h1zh) h1zh.style.display = 'none';
+    if (h1zh) h1zh.style.visibility = 'hidden';
     document.getElementById('search-input').placeholder = 'Search events… e.g. Newton, 1687';
   } else {
     btn.textContent = '中 / EN';
     btn.classList.remove('en-active');
     if (sub) sub.textContent = '138億年 · 13.8 BILLION YEARS';
-    if (h1zh) h1zh.style.display = '';
+    if (h1zh) h1zh.style.visibility = '';
     document.getElementById('search-input').placeholder = '搜尋事件… 例如：牛頓、Newton、1687';
   }
   // overlap title
@@ -1127,6 +1127,14 @@ function applyLang() {
   const ceBtn = document.getElementById('legend-clear-edits');
   if (ceBtn) ceBtn.textContent = T('清除編輯','Clear Edits');
   updateToggleAllBtn();
+  // Events / Filter buttons
+  const vBtn = document.getElementById('view-btn');
+  if (vBtn && !_activeViewId) vBtn.textContent = T('主題','Events');
+  if (vBtn && _activeViewId) {
+    const v = _viewDefs.find(d => d.id === _activeViewId);
+    if (v) vBtn.textContent = T(v.label, v.label_en);
+  }
+  _updateFilterBtn();
   // era 按鈕切換
   updateEraButtonLang();
 }
@@ -4333,7 +4341,7 @@ showAllAxes = function() {
   _origShowAllAxes();
   _activeViewId = null;
   const btn = document.getElementById('view-btn');
-  btn.textContent = 'Events';
+  btn.textContent = T('主題','Events');
   btn.classList.remove('active');
   buildViewPopup();
   // 同時清除 filter
@@ -4398,10 +4406,10 @@ function clearFilter() {
 function _updateFilterBtn() {
   const btn = document.getElementById('filter-btn');
   if (_filterSet.size > 0) {
-    btn.textContent = `Filter (${_filterSet.size})`;
+    btn.textContent = `${T('篩選','Filter')} (${_filterSet.size})`;
     btn.classList.add('active');
   } else {
-    btn.textContent = 'Filter';
+    btn.textContent = T('篩選','Filter');
     btn.classList.remove('active');
   }
 }
