@@ -855,7 +855,7 @@ body {
 </div>
 
 <div id="header">
-  <h1>COSMIC TIMELINE · 宇宙歷史時間軸</h1>
+  <h1>COSMIC TIMELINE<span id="h1-zh"> · 宇宙歷史時間軸</span></h1>
   <div id="search-wrap">
     <span id="search-icon">🔍</span>
     <input type="text" id="search-input" placeholder="Search events… e.g. Newton, 1687" autocomplete="off" spellcheck="false">
@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604131220</span>
+  <span id="version-label">v202604131242</span>
 </div>
 
 <div id="view-popup"></div>
@@ -1077,7 +1077,7 @@ body {
 
 <!-- Overlap picker — shown when clicking a crowded area -->
 <div id="overlap-menu">
-  <div id="overlap-title">Multiple events here</div>
+  <div id="overlap-title"></div>
   <div id="overlap-list"></div>
 </div>
 
@@ -1104,17 +1104,23 @@ function toggleLang() {
 function applyLang() {
   const btn = document.getElementById('lang-toggle');
   const sub = document.getElementById('header-sub');
+  const h1zh = document.getElementById('h1-zh');
   if (lang === 'en') {
     btn.textContent = 'EN / 中';
     btn.classList.add('en-active');
     if (sub) sub.textContent = '13.8 Billion Years · Cosmic Timeline';
+    if (h1zh) h1zh.style.display = 'none';
     document.getElementById('search-input').placeholder = 'Search events… e.g. Newton, 1687';
   } else {
     btn.textContent = '中 / EN';
     btn.classList.remove('en-active');
     if (sub) sub.textContent = '138億年 · 13.8 BILLION YEARS';
+    if (h1zh) h1zh.style.display = '';
     document.getElementById('search-input').placeholder = '搜尋事件… 例如：牛頓、Newton、1687';
   }
+  // overlap title
+  const ot = document.getElementById('overlap-title');
+  if (ot) ot.textContent = T('多個事件重疊','Multiple events here');
   // era 按鈕切換
   updateEraButtonLang();
 }
@@ -1520,11 +1526,6 @@ function axisY(axisId, subtrack = 0) {
   return getAxisY(axisId);
 }
 
-function contentHeight() {
-  const n = getVisibleAxes().length;
-  const gap = LANE_GAP_BASE * Math.max(1, yScale);
-  return TOP_MARGIN + n * gap + 100;
-}
 // ════════════════════════════════════════════
 let events = [];
 let viewStart = TIMELINE_START - (NOW - TIMELINE_START) / 0.80 * 0.10;
@@ -3353,7 +3354,7 @@ function handleHover(mx, my) {
     if (!hoveredEvent || hoveredEvent.id !== ev.id) { hoveredEvent = ev; draw(); }
 
     canvas.style.cursor = 'pointer';
-    document.getElementById('tt-era').textContent = (AXES[ev.axis] && AXES[ev.axis].label) || ev.axis;
+    document.getElementById('tt-era').textContent = (AXES[ev.axis] && T(AXES[ev.axis].label, AXES[ev.axis].label_en)) || ev.axis;
     document.getElementById('tt-era').style.color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
     document.getElementById('tt-zh').textContent  = T(ev.zh, ev.en);
     document.getElementById('tt-en').textContent  = lang === 'en' ? '' : (ev.en || '');
@@ -3395,7 +3396,7 @@ function showOverlapMenu(evList, mx, my) {
     const item = document.createElement('div');
     item.className = 'overlap-item';
     item.innerHTML = '<div class="overlap-dot" style="background:' + color + '"></div>'
-      + '<span class="overlap-zh">' + ev.zh + '</span>'
+      + '<span class="overlap-zh">' + T(ev.zh, ev.en) + '</span>'
       + '<span class="overlap-time">' + timeStr + '</span>';
     item.addEventListener('click', e => { e.stopPropagation(); hideOverlapMenu(); showPopup(ev); });
     list.appendChild(item);
@@ -3489,16 +3490,16 @@ function showPopup(ev) {
     img.src = ev.image;
     img.alt = ev.zh;
     img.onerror = () => {
-      imgWrap.innerHTML = '<div class="popup-img-placeholder"><div style="text-align:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><div style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-family:sans-serif">圖片無法載入，點 ✏ 編輯更換 URL</div></div></div>';
+      imgWrap.innerHTML = '<div class="popup-img-placeholder"><div style="text-align:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><div style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-family:sans-serif">' + T('圖片無法載入，點 ✏ 編輯更換 URL','Image failed to load · click ✏ to change URL') + '</div></div></div>';
     };
     imgWrap.appendChild(img);
   } else {
-    imgWrap.innerHTML = '<div class="popup-img-placeholder"><div style="text-align:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><div style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-family:sans-serif">尚無圖片，點 ✏ 編輯加入 URL</div></div></div>';
+    imgWrap.innerHTML = '<div class="popup-img-placeholder"><div style="text-align:center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><div style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-family:sans-serif">' + T('尚無圖片，點 ✏ 編輯加入 URL','No image yet · click ✏ to add URL') + '</div></div></div>';
   }
 
   // Tag
   const tag = document.getElementById('popup-tag');
-  tag.textContent = ((AXES[ev.axis] && AXES[ev.axis].label) || ev.axis).toUpperCase();
+  tag.textContent = (AXES[ev.axis] ? T(AXES[ev.axis].label, AXES[ev.axis].label_en) : ev.axis).toUpperCase();
   tag.style.color = color;
   tag.style.borderColor = color + '44';
   tag.style.background = color + '11';
@@ -3507,14 +3508,14 @@ function showPopup(ev) {
   document.getElementById('popup-zh').textContent = lang === 'en' ? (ev.en || ev.zh) : ev.zh;
   document.getElementById('popup-en').textContent = lang === 'en' ? '' : (ev.en || '');
   const axObj   = AXES[ev.axis];
-  const axLabel = (axObj && axObj.label) || ev.axis;
-  const parentLabel = axObj?.parent ? ((AXES[axObj.parent]?.label) || axObj.parent) : null;
+  const axLabel = axObj ? T(axObj.label, axObj.label_en) : ev.axis;
+  const parentLabel = axObj?.parent ? (AXES[axObj.parent] ? T(AXES[axObj.parent].label, AXES[axObj.parent].label_en) : axObj.parent) : null;
   const timeStr = ev.endYear
     ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
     : formatYear(ev.year);
   let metaStr = parentLabel ? `${parentLabel} › ${axLabel}` : axLabel;
   if (ev._crossRefs && ev._crossRefs.length) {
-    const crLabels = ev._crossRefs.map(id => (AXES[id]?.label) || id).join('・');
+    const crLabels = ev._crossRefs.map(id => AXES[id] ? T(AXES[id].label, AXES[id].label_en) : id).join('・');
     metaStr += `  ⤴ ${crLabels}`;
   }
   document.getElementById('popup-time').textContent = `${metaStr} · ${timeStr}`;
@@ -3528,7 +3529,7 @@ function showPopup(ev) {
   Object.entries(AXES).sort((a,b)=>a[1].order-b[1].order).forEach(([id,ax])=>{
     const opt = document.createElement('option');
     opt.value = id;
-    opt.textContent = `${ax.label} (${id})`;
+    opt.textContent = `${T(ax.label,ax.label_en)} (${id})`;
     if (id === ev.axis) opt.selected = true;
     axSelect.appendChild(opt);
   });
@@ -3544,7 +3545,7 @@ function showPopup(ev) {
       if (id === newAxId) return;
       const opt = document.createElement('option');
       opt.value = id;
-      opt.textContent = `${ax.label} (${id})`;
+      opt.textContent = `${T(ax.label,ax.label_en)} (${id})`;
       if (id === (newAx.parent||'')) opt.selected = true;
       pSel.appendChild(opt);
     });
@@ -3563,7 +3564,7 @@ function showPopup(ev) {
     if (id === ev.axis) return; // can't crossRef own axis
     const opt = document.createElement('option');
     opt.value = id;
-    opt.textContent = `${ax.label} (${id})`;
+    opt.textContent = `${T(ax.label,ax.label_en)} (${id})`;
     if (currentCrRefs.includes(id)) opt.selected = true;
     crSelect.appendChild(opt);
   });
@@ -3583,7 +3584,7 @@ function showPopup(ev) {
     if (id === ev.axis) return; // can't be own parent
     const opt = document.createElement('option');
     opt.value = id;
-    opt.textContent = `${ax.label} (${id})`;
+    opt.textContent = `${T(ax.label,ax.label_en)} (${id})`;
     if (id === (curAx?.parent||'')) opt.selected = true;
     parentSel.appendChild(opt);
   });
@@ -3734,10 +3735,18 @@ async function loadEvents() {
     // Load view definitions
     loadViewDefs(data.views || []);
   } catch (err) {
-    console.warn('Could not load events.json, using inline fallback');
-    AXIS_GROUP_DEFS = FALLBACK_AXIS_GROUPS;
-    buildAxes(FALLBACK_AXES_ARRAY);
-    events = FALLBACK_EVENTS;
+    console.error('Failed to load events.json:', err);
+    // Draw error message on canvas
+    setTimeout(() => {
+      ctx.fillStyle = 'rgba(248,113,113,0.8)';
+      ctx.font = '14px "Noto Sans TC", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('⚠ Failed to load data/events.json', canvasW/2, canvasH/2 - 10);
+      ctx.font = '11px "Noto Sans TC", sans-serif';
+      ctx.fillStyle = 'rgba(221,216,200,0.4)';
+      ctx.fillText('Please ensure the file exists and reload.', canvasW/2, canvasH/2 + 14);
+    }, 100);
+    return;
   }
   buildParentTree();
   // Normalize crossRef → _crossRefs array (max 3, backward compatible)
@@ -3750,26 +3759,6 @@ async function loadEvents() {
   applyLang();
   draw();
 }
-
-// ════════════════════════════════════════════
-//  FALLBACK — minimal data if JSON fails
-// ════════════════════════════════════════════
-const FALLBACK_AXIS_GROUPS = {
-  natural: { label:'自然', label_en:'Nature', color:'#818cf8' },
-  global:  { label:'世界', label_en:'Global', color:'#e2e8f0' },
-};
-const FALLBACK_AXES_ARRAY = [
-  { id:'cosmos',    label:'宇宙', label_en:'Cosmos',    color:'#a78bfa', order:1, parent:null, startYear:-13800000000, endYear:null, zoomMin:0, group:'natural' },
-  { id:'earth',     label:'地球', label_en:'Earth',     color:'#60a5fa', order:2, parent:null, startYear:-4540000000,  endYear:null, zoomMin:0, group:'natural' },
-  { id:'life',      label:'生命', label_en:'Life',      color:'#34d399', order:3, parent:null, startYear:-3800000000,  endYear:null, zoomMin:0, group:'natural' },
-  { id:'cross',     label:'世界', label_en:'Cross-Civ', color:'#e2e8f0', order:4, parent:null, startYear:-10000,       endYear:null, zoomMin:0, group:'global'  },
-];
-const FALLBACK_EVENTS = [
-  { id:'big-bang',    year:-13800000000, zh:'宇宙大爆炸', en:'Big Bang',     axis:'cosmos', level:1 },
-  { id:'earth-forms', year:-4540000000,  zh:'地球形成',   en:'Earth Forms',  axis:'earth',  level:1 },
-  { id:'first-life',  year:-3800000000,  zh:'生命出現',   en:'First Life',   axis:'life',   level:1 },
-  { id:'agriculture', year:-10000,       zh:'農業革命',   en:'Agriculture',  axis:'cross',  level:1 },
-];
 
 // ════════════════════════════════════════════
 //  EDIT SYSTEM — localStorage persistence + JSON export
