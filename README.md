@@ -328,26 +328,98 @@ events.json
 
 ---
 
-## 軸線分類群組
+## 軸線架構
 
-群組定義的設計原則：**演化順序**（自然 → 世界 → 地區 → 文明 → 宗教 → 人文 → 國家），父子關係反映「某地區先有文明，文明之後才有國家」的邏輯層次。
+設計原則：**演化順序**（自然 → 世界 → 地區 → 文明 → 宗教 → 國家），父子關係反映「宇宙先有地球、地球先有生命、地區先有文明、文明之後才有國家」的邏輯層次。父軸在畫面上方，分支線向下展開。
 
-| 群組 | 定義 | 包含軸線 | 未來擴充 |
-|------|------|---------|---------|
-| natural 自然 | 宇宙誕生至人類出現，純自然演化過程 | cosmos, galaxy, solar-system, earth, climate, life, human-evo, migration | 無 |
-| global 世界 | 與人類行為直接相關、跨越多地區影響全人類，不屬於單一地區或文明 | cross, trade | 可擴充全球性主題軸 |
-| region 地區 | 人類活動的地理容器，早於文明與國家存在 | east, west, africa, americas, central-asia, southeast-asia, oceania, arctic, antarctic | 可加中亞細分等 |
-| civilization 文明 | 各地理區域內發展的文明，部分延續至今，早於近代國家 | mideast, mesopotamia, egypt, persia, india, china, greece, latin-america | 撒哈拉以南、東南亞文明等 |
-| religion 宗教 | 各宗教體系的起源與發展 | judaism, christianity, islam, hinduism, buddhism, taoism | 未來可加其他宗教 |
-| human 人文 | 跨越地區與文明的人類文化活動 | science, arts | 未來可擴充 |
-| nation 國家 | 近代以後有明確政治實體的重要國家或地區 | iran, north/west/east/south-africa, china-b, taiwan, japan, europe, north-america, south-america, usa | 重要國家陸續補充 |
+### 🌌 natural 自然
+宇宙誕生至人類出現，純自然演化過程
+
+```
+cosmos 宇宙
+└─ galaxy 銀河系
+   └─ solar-system 太陽系
+      └─ earth 地球
+         ├─ climate 氣候
+         └─ life 生命
+            └─ human-evo 人類演化
+               └─ migration 人類遷徙
+```
+
+### 🌍 global 世界
+跨越地區影響全人類，不屬於單一地區或文明
+
+```
+cross 跨文明 ← human-evo
+├─ trade 貿易
+├─ science 科學技術
+└─ arts 藝術文化
+```
+
+### 🗺 region 地區
+人類活動的地理容器，早於文明與國家存在
+
+```
+east 東方 ← human-evo
+west 西方 ← human-evo
+africa 非洲 ← human-evo
+americas 美洲 ← human-evo
+central-asia 中亞/北亞 ← migration
+southeast-asia 東南亞 ← migration
+oceania 大洋洲 ← migration
+arctic 北極 ← migration
+antarctic 南極 ← migration
+```
+
+### 🏛 civilization 文明
+各地理區域內發展的文明，部分延續至今，早於近代國家
+
+```
+mideast 中東 ← east
+├─ mesopotamia 兩河流域
+├─ egypt 古埃及
+└─ persia 波斯/伊朗
+india 印度 ← east
+china 中國 ← human-evo
+greece 希臘羅馬 ← west
+latin-america 拉丁美洲 ← americas
+```
+
+### ✝ religion 宗教
+各宗教體系的起源與發展
+
+```
+judaism 猶太教 ← mideast
+└─ christianity 基督教
+islam 伊斯蘭教 ← mideast
+hinduism 印度教 ← india
+└─ buddhism 佛教
+taoism 道教 ← china
+```
+
+### 🏳 nation 國家
+近代以後有明確政治實體的重要國家或地區
+
+```
+iran 伊朗 ← persia
+north-africa 北非 ← africa
+west-africa 西非 ← africa
+east-africa 東非 ← africa
+south-africa 南非 ← africa
+taiwan 臺灣 ← human-evo
+japan 日本 ← east
+europe 歐洲 ← west
+north-america 北美 ← americas
+south-america 南美 ← americas
+usa 美國 ← north-america
+```
 
 ### 群組設計說明
 
-- **自然 vs 世界**：自然事件與人類行為無關（宇宙大爆炸、生命演化）；世界事件由人類行為觸發但影響跨越地區（世界大戰、黑死病、蒙古帝國）
-- **地區 vs 文明**：地區是地理容器（東方、西方），文明是在該地理區域內發展的具體文明（中國、希臘羅馬）；地區的 zoomMin = 0.30，與文明同步出現
+- **自然 vs 世界**：自然事件與人類行為無關（宇宙大爆炸、生命演化）；世界事件由人類行為觸發但影響跨越地區（世界大戰、黑死病、科學革命）
+- **地區 vs 文明**：地區是地理容器（東方、西方），文明是在該地理區域內發展的具體文明（中國、希臘羅馬）
 - **文明 vs 國家**：文明早於國家存在，部分文明延續至今；國家是近代政治實體，為文明的子軸
-- **科學技術與藝術文化**歸入人文群組，不單獨成群組，因為 legend 群組與軸線名稱重複
+- **科學技術與藝術文化**歸入世界群組，因為它們是跨越地區與文明的全球性人類活動
 
 ---
 
@@ -381,3 +453,8 @@ events.json
 | 2026-04-13 | Solo 模式 click/dblclick 跑位修正（延遲 click 避免衝突） |
 | 2026-04-13 | check.py 擴充：驗證 axis_groups/era_bands/era_buttons/filter_cats + 內容缺失摘要 |
 | 2026-04-13 | 新增 add-events-sample.py 腳本樣板 |
+| 2026-04-13 | cosmic-tools.html 新增 Wikimedia Commons 圖片搜尋管道 |
+| 2026-04-13 | 補齊 114 個事件的 desc_en + wiki_zh |
+| 2026-04-13 | 新增 57 個事件：arctic/antarctic/north-america/south-america/west-africa/north-africa/east-africa/hinduism/taoism/buddhism/japan/usa |
+| 2026-04-13 | 群組重整：science/arts 移到 global、china-b 併入 china、刪除 human 群組（7→6 組） |
+| 2026-04-13 | 父軸關係修正：east/west parent 改 human-evo、central-asia parent 改 migration |
