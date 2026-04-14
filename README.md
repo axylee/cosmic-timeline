@@ -332,6 +332,38 @@ events.json
 
 設計原則：**演化順序**（自然 → 世界 → 地區 → 文明 → 宗教 → 國家），父子關係反映「宇宙先有地球、地球先有生命、地區先有文明、文明之後才有國家」的邏輯層次。父軸在畫面上方，分支線向下展開。
 
+### 群組定義
+
+- **自然 natural**：人類出現之前的宇宙、地球、生命演化過程
+- **世界 global**：人類行為觸發、跨越多個地區影響全人類的活動與主題
+- **地區 region**：地理容器，不代表特定文明，人類到達後就一直存在
+- **文明 civilization**：符合「文明六特徵」中四項以上的社會體系（見下方判定標準），可能已結束或延續至今
+- **宗教 religion**：從文明中誕生的精神信仰體系，跨越政治與地理邊界傳播
+- **國家 nation**：近代政治實體，通常是文明的延續或區域內的近代國家劃分
+
+### 文明判定標準（符合 4 項以上歸入 civilization）
+
+1. **城市**（urban centers）— 有大型聚落或城市中心
+2. **政府/制度**（centralized government）— 有組織化的統治體系
+3. **社會階層**（social stratification）— 有明確的階級分工
+4. **文字/記錄系統**（writing/record keeping）— 有文字或等效記錄方式
+5. **專業分工**（specialized labor）— 有超越農業的職業分化
+6. **獨特文化表現**（arts, architecture, religion）— 有獨特的藝術、建築或信仰體系
+
+### 文明 → 國家的接續設計
+
+當一個文明「結束」後由近代國家接續時，使用 **civilization → nation 父子關係**：
+
+```
+persia 波斯 (civilization, -559 → endYear:1501)
+└─ iran 伊朗 (nation, 1501 → 至今)
+```
+
+- 文明軸線設定 `endYear`，線條在該年份終止
+- 國家軸線的 `parent` 指向文明軸線，`startYear` 接續文明結束的時間
+- 畫面上分支線自然從文明延伸到國家
+- 延續至今的文明（如 china、india）不需要拆分，直接保持 civilization 不設 endYear
+
 ### 🌌 natural 自然
 宇宙誕生至人類出現，純自然演化過程
 
@@ -357,7 +389,7 @@ cross 跨文明 ← human-evo
 ```
 
 ### 🗺 region 地區
-人類活動的地理容器，早於文明與國家存在
+地理容器，不代表特定文明，人類到達後就一直存在
 
 ```
 east 東方 ← human-evo
@@ -372,21 +404,21 @@ antarctic 南極 ← migration
 ```
 
 ### 🏛 civilization 文明
-各地理區域內發展的文明，部分延續至今，早於近代國家
+符合文明六特徵中四項以上的社會體系
 
 ```
 mideast 中東 ← east
-├─ mesopotamia 兩河流域
-├─ egypt 古埃及
-└─ persia 波斯/伊朗
+├─ mesopotamia 兩河流域 (endYear: -539)
+├─ egypt 古埃及 (endYear: 641)
+└─ persia 波斯 (endYear: 1501)
 india 印度 ← east
 china 中國 ← human-evo
-greece 希臘羅馬 ← west
+greece 希臘羅馬 ← west (endYear: 476)
 latin-america 拉丁美洲 ← americas
 ```
 
 ### ✝ religion 宗教
-各宗教體系的起源與發展
+從文明中誕生的精神信仰體系
 
 ```
 judaism 猶太教 ← mideast
@@ -398,10 +430,10 @@ taoism 道教 ← china
 ```
 
 ### 🏳 nation 國家
-近代以後有明確政治實體的重要國家或地區
+近代政治實體，文明的延續或區域內的近代國家劃分
 
 ```
-iran 伊朗 ← persia
+iran 伊朗 ← persia          ← 文明→國家接續
 north-africa 北非 ← africa
 west-africa 西非 ← africa
 east-africa 東非 ← africa
@@ -414,11 +446,10 @@ south-america 南美 ← americas
 usa 美國 ← north-america
 ```
 
-### 群組設計說明
+### 設計備註
 
-- **自然 vs 世界**：自然事件與人類行為無關（宇宙大爆炸、生命演化）；世界事件由人類行為觸發但影響跨越地區（世界大戰、黑死病、科學革命）
-- **地區 vs 文明**：地區是地理容器（東方、西方），文明是在該地理區域內發展的具體文明（中國、希臘羅馬）
-- **文明 vs 國家**：文明早於國家存在，部分文明延續至今；國家是近代政治實體，為文明的子軸
+- **地區 vs 文明**：地區不會消失，文明會。「東方」永遠在，「古埃及文明」有終點
+- **文明 vs 國家**：文明可能延續至今（china、india），也可能結束後由國家接續（persia → iran）
 - **科學技術與藝術文化**歸入世界群組，因為它們是跨越地區與文明的全球性人類活動
 
 ---
