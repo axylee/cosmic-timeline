@@ -8043,7 +8043,8 @@
       "desc_zh": "中亞突厥遊牧民族塞爾柱人征服伊朗，建立橫跨中亞到安納托利亞的大帝國。波斯文化並未消亡，反而成為塞爾柱宮廷文化，波斯語繼續是帝國行政和文學語言。",
       "desc_en": "The Central Asian Seljuk Turks conquered Iran, building an empire from Central Asia to Anatolia. Persian culture survived as Seljuk court culture, with Persian remaining the language of administration and literature.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/塞爾柱帝國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Seljuk_Empire"
+      "wiki_en": "https://en.wikipedia.org/wiki/Seljuk_Empire",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Map_of_the_Seljuk_Empire_%281092%29.png/960px-Map_of_the_Seljuk_Empire_%281092%29.png"
     },
     {
       "id": "mongol-iran",
@@ -8412,7 +8413,8 @@
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Settlement_of_Australia",
       "desc_en": "Humans reach Australia/Oceania ~65,000 years ago, likely by coastal migration.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亞原住民"
+      "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亞原住民",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Men_and_boys_playing_a_game_of_gorri_-_NMA-11726.jpg"
     },
     {
       "id": "mig-003",
@@ -8583,7 +8585,8 @@
       "category": "migration",
       "wiki_en": "https://en.wikipedia.org/wiki/Prehistoric_Central_Asia",
       "desc_en": "Early humans reach Central Asia ~40,000 years ago, leaving traces in Denisova Cave.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/丹尼索瓦人"
+      "wiki_zh": "https://zh.wikipedia.org/wiki/丹尼索瓦人",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Xiahe_2.png"
     },
     {
       "id": "cas-002",
@@ -8933,7 +8936,8 @@
       "category": "politics",
       "wiki_en": "https://en.wikipedia.org/wiki/China_and_the_World_Trade_Organization",
       "desc_en": "China joins WTO in 2001, accelerating its integration into the global economy.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/中國加入世界貿易組織"
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中國加入世界貿易組織",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/President_Bill_Clinton_and_Chinese_President_Jiang_Zemin_at_the_Arrival_Ceremony.jpg"
     },
     {
       "id": "ind-002",
@@ -9776,7 +9780,8 @@
       "desc_zh": "古愛斯基摩人從西伯利亞遷入北美北極地區",
       "desc_en": "Paleo-Eskimo peoples migrate from Siberia into the North American Arctic.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古愛斯基摩人",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paleo-Eskimos"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleo-Eskimos",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Inuit_conf_map.png"
     },
     {
       "id": "arc-002",
@@ -11257,7 +11262,8 @@
       "desc_zh": "土耳其獲得歐盟候選國地位",
       "desc_en": "Turkey granted EU candidate status.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/土耳其加入歐盟",
-      "wiki_en": "https://en.wikipedia.org/wiki/Accession_of_Turkey_to_the_European_Union"
+      "wiki_en": "https://en.wikipedia.org/wiki/Accession_of_Turkey_to_the_European_Union",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Global_Map_of_Europe_and_Turkey.png/960px-Global_Map_of_Europe_and_Turkey.png"
     },
     {
       "id": "tha-001",
@@ -11270,7 +11276,8 @@
       "desc_zh": "結束絕對君主制，改為君主立憲，後改名泰國",
       "desc_en": "Ends absolute monarchy; Siam becomes a constitutional monarchy, later renamed Thailand.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/1932年暹羅立憲革命",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siamese_revolution_of_1932"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siamese_revolution_of_1932",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Troops-on-the-street-after-the-coup.jpg"
     },
     {
       "id": "tha-002",
@@ -11283,7 +11290,8 @@
       "desc_zh": "在位70年，世界在位最久的君主",
       "desc_en": "Reigns for 70 years, the world's longest-reigning monarch.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/普密蓬·阿杜德",
-      "wiki_en": "https://en.wikipedia.org/wiki/Bhumibol_Adulyadej"
+      "wiki_en": "https://en.wikipedia.org/wiki/Bhumibol_Adulyadej",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Aankomst_Koning_Bhumibol_en_Koningin_Sirikit_te_Den_Haag%2C_Koning_Bhumibol%2C_Bestanddeelnr_911-6993_%28cropped%29%282%29.jpg/960px-Aankomst_Koning_Bhumibol_en_Koningin_Sirikit_te_Den_Haag%2C_Koning_Bhumibol%2C_Bestanddeelnr_911-6993_%28cropped%29%282%29.jpg"
     },
     {
       "id": "tha-003",
@@ -11296,7 +11304,8 @@
       "desc_zh": "泰國成為亞洲四小虎之一",
       "desc_en": "Thailand becomes one of the Asian Tiger Cub economies.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/泰國經濟",
-      "wiki_en": "https://en.wikipedia.org/wiki/Economy_of_Thailand"
+      "wiki_en": "https://en.wikipedia.org/wiki/Economy_of_Thailand",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bangkok_skyline_September_2022.jpg/960px-Bangkok_skyline_September_2022.jpg"
     },
     {
       "id": "tha-004",
@@ -11310,7 +11319,8 @@
       "desc_zh": "泰銖崩盤引發亞洲金融風暴",
       "desc_en": "Thai baht collapse triggers the Asian financial crisis.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/亞洲金融危機",
-      "wiki_en": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis"
+      "wiki_en": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Asienkrise.svg/1200px-Asienkrise.svg.png"
     },
     {
       "id": "mgl-001",
@@ -11323,7 +11333,8 @@
       "desc_zh": "外蒙古脫離清朝宣布獨立",
       "desc_en": "Outer Mongolia declares independence from the Qing dynasty.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/外蒙古独立",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1911"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1911",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Qing_Dynasty_Mongolia_map_1911.svg/1200px-Qing_Dynasty_Mongolia_map_1911.svg.png"
     },
     {
       "id": "mgl-002",
@@ -11336,7 +11347,8 @@
       "desc_zh": "蘇聯支持下建立社會主義國家",
       "desc_en": "Soviet-backed socialist state established.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蒙古人民共和國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_People%27s_Republic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_People%27s_Republic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Mongolian_People%27s_Republic_Orthographic_projection.svg/1200px-Mongolian_People%27s_Republic_Orthographic_projection.svg.png"
     },
     {
       "id": "mgl-003",
@@ -11349,7 +11361,8 @@
       "desc_zh": "和平民主革命，放棄一黨制",
       "desc_en": "Peaceful democratic revolution ends one-party rule.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/1990年蒙古民主革命",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1990"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1990",
+      "image": "https://upload.wikimedia.org/wikipedia/en/5/5b/Hunger_strikers_in_Mongolia.png"
     },
     {
       "id": "mgl-004",
@@ -11362,7 +11375,8 @@
       "desc_zh": "礦業繁榮推動經濟成長",
       "desc_en": "Mining boom drives economic growth in modern Mongolia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蒙古国经济",
-      "wiki_en": "https://en.wikipedia.org/wiki/Economy_of_Mongolia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Economy_of_Mongolia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/UB_downtown.jpg"
     },
     {
       "id": "aus-001",
@@ -11375,7 +11389,8 @@
       "desc_zh": "六個英國殖民地聯合成立澳洲聯邦",
       "desc_en": "Six British colonies federate into the Commonwealth of Australia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/澳大利亚联邦",
-      "wiki_en": "https://en.wikipedia.org/wiki/Federation_of_Australia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Federation_of_Australia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Town_Hall%2C_Sydney%2C_Inauguration_of_Australian_Commonwealth.jpg/960px-Town_Hall%2C_Sydney%2C_Inauguration_of_Australian_Commonwealth.jpg"
     },
     {
       "id": "aus-002",
@@ -11389,7 +11404,8 @@
       "desc_zh": "一戰中澳紐軍團在鄂圖曼作戰，塑造國家認同",
       "desc_en": "ANZAC forces fight at Gallipoli, forging Australian national identity.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/加里波利之战",
-      "wiki_en": "https://en.wikipedia.org/wiki/Gallipoli_campaign"
+      "wiki_en": "https://en.wikipedia.org/wiki/Gallipoli_campaign",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/G.C._18_March_1915_Gallipoli_Campaign_Article.jpg"
     },
     {
       "id": "aus-003",
@@ -11402,7 +11418,8 @@
       "desc_zh": "廢除種族歧視移民政策，走向多元文化",
       "desc_en": "Racially discriminatory immigration policy abolished; multiculturalism embraced.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/白澳政策",
-      "wiki_en": "https://en.wikipedia.org/wiki/White_Australia_policy"
+      "wiki_en": "https://en.wikipedia.org/wiki/White_Australia_policy",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Melbourne_eight_hour_day_march-c1900.jpg"
     },
     {
       "id": "aus-004",
@@ -11415,7 +11432,8 @@
       "desc_zh": "澳洲政府正式向原住民「失竊的一代」道歉",
       "desc_en": "Australian government formally apologizes to the Stolen Generations.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/失竊的一代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Stolen_Generations"
+      "wiki_en": "https://en.wikipedia.org/wiki/Stolen_Generations",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/RuddSorry.jpg"
     },
     {
       "id": "aus-005",
@@ -11429,7 +11447,8 @@
       "desc_zh": "氣候變遷加劇引發的毀滅性森林大火",
       "desc_en": "Devastating bushfires exacerbated by climate change.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/2019–2020年澳洲叢林大火",
-      "wiki_en": "https://en.wikipedia.org/wiki/2019%E2%80%9320_Australian_bushfire_season"
+      "wiki_en": "https://en.wikipedia.org/wiki/2019%E2%80%9320_Australian_bushfire_season",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/2019-20_Australia_Bushfires_season_montage.png"
     },
     {
       "id": "bra-001",
@@ -11442,7 +11461,8 @@
       "desc_zh": "佩德羅一世宣布巴西脫離葡萄牙獨立",
       "desc_en": "Pedro I declares Brazil's independence from Portugal.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/巴西独立",
-      "wiki_en": "https://en.wikipedia.org/wiki/Independence_of_Brazil"
+      "wiki_en": "https://en.wikipedia.org/wiki/Independence_of_Brazil",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_Google_Art_Project.jpg/1920px-Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_Google_Art_Project.jpg"
     },
     {
       "id": "bra-002",
@@ -11455,7 +11475,8 @@
       "desc_zh": "美洲最後廢除奴隸制的國家",
       "desc_en": "Last country in the Americas to abolish slavery.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/巴西奴隸制度",
-      "wiki_en": "https://en.wikipedia.org/wiki/Abolition_of_slavery_in_Brazil"
+      "wiki_en": "https://en.wikipedia.org/wiki/Abolition_of_slavery_in_Brazil",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Slavery_in_Brazil%2C_by_Jean-Baptiste_Debret_%281768-1848%29.jpg/1920px-Slavery_in_Brazil%2C_by_Jean-Baptiste_Debret_%281768-1848%29.jpg"
     },
     {
       "id": "bra-003",
@@ -11468,7 +11489,8 @@
       "desc_zh": "軍事政變推翻帝制，建立共和國",
       "desc_en": "Military coup overthrows the monarchy, establishing a republic.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/巴西共和國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Proclamation_of_the_Republic_(Brazil)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Proclamation_of_the_Republic_(Brazil)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_by_Benedito_Calixto_1893.jpg/1920px-Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_by_Benedito_Calixto_1893.jpg"
     },
     {
       "id": "bra-004",
@@ -11481,7 +11503,8 @@
       "desc_zh": "首都從里約遷至全新建設的巴西利亞",
       "desc_en": "Capital moves from Rio de Janeiro to the newly built Brasília.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/巴西利亞",
-      "wiki_en": "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Bras%C3%ADlia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Planalto_Central_%28cropped%29.jpg/1920px-Planalto_Central_%28cropped%29.jpg"
     },
     {
       "id": "bra-005",
@@ -11494,7 +11517,8 @@
       "desc_zh": "軍政府結束，恢復民主政治",
       "desc_en": "Military dictatorship ends; democracy restored.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/巴西民主化",
-      "wiki_en": "https://en.wikipedia.org/wiki/Democratization_of_Brazil"
+      "wiki_en": "https://en.wikipedia.org/wiki/Democratization_of_Brazil",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Diretas_J%C3%A1.jpg"
     },
     {
       "id": "hevo-001",
@@ -11507,7 +11531,8 @@
       "desc_zh": "人類與黑猩猩的共同祖先分道揚鑣，人類演化的真正起點",
       "desc_en": "The common ancestor of humans and chimpanzees diverges, marking the true start of human evolution.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人科",
-      "wiki_en": "https://en.wikipedia.org/wiki/Hominidae"
+      "wiki_en": "https://en.wikipedia.org/wiki/Hominidae",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Distribution_of_the_Great_Apes.png/1920px-Distribution_of_the_Great_Apes.png"
     },
     {
       "id": "hevo-002",
@@ -11520,7 +11545,8 @@
       "desc_zh": "最著名的早期人類化石，確認直立行走是人類演化的早期特徵",
       "desc_en": "Most famous early human fossil, confirming bipedal walking as an early human trait.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/露西_(南方古猿)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Lucy_(Australopithecus)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Lucy_(Australopithecus)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg/1200px-Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg"
     },
     {
       "id": "hevo-003",
@@ -11534,7 +11560,8 @@
       "desc_zh": "直立人是第一個離開非洲擴散到亞洲和歐洲的人種",
       "desc_en": "Homo erectus is the first human species to migrate out of Africa into Asia and Europe.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/直立人",
-      "wiki_en": "https://en.wikipedia.org/wiki/Homo_erectus"
+      "wiki_en": "https://en.wikipedia.org/wiki/Homo_erectus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Solo_Man_reconstruction.png/1280px-Solo_Man_reconstruction.png"
     },
     {
       "id": "hevo-004",
@@ -11547,7 +11574,8 @@
       "desc_zh": "尼安德塔人和丹尼索瓦人從人類支系分化，後來與智人混血",
       "desc_en": "Neanderthals and Denisovans diverge from the human lineage; they later interbreed with Homo sapiens.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/丹尼索瓦人",
-      "wiki_en": "https://en.wikipedia.org/wiki/Denisovan"
+      "wiki_en": "https://en.wikipedia.org/wiki/Denisovan",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Homo_longi_holotype.jpg"
     },
     {
       "id": "hevo-005",
@@ -11560,7 +11588,8 @@
       "desc_zh": "南非洞穴發現人類最早利用海洋資源的證據",
       "desc_en": "Earliest evidence of humans harvesting marine resources found in South African caves.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/尖峰角",
-      "wiki_en": "https://en.wikipedia.org/wiki/Pinnacle_Point"
+      "wiki_en": "https://en.wikipedia.org/wiki/Pinnacle_Point",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/South_Africa_Western_Cape_location_map.svg"
     },
     {
       "id": "hevo-006",
@@ -11573,7 +11602,8 @@
       "desc_zh": "最早的裝飾品出現，代表人類具備抽象思維與象徵行為",
       "desc_en": "Earliest ornamental beads appear, indicating abstract thinking and symbolic behavior.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/行為現代性",
-      "wiki_en": "https://en.wikipedia.org/wiki/Behavioral_modernity"
+      "wiki_en": "https://en.wikipedia.org/wiki/Behavioral_modernity",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/VenusHohlefels2.jpg/960px-VenusHohlefels2.jpg"
     },
     {
       "id": "hevo-007",
@@ -11587,7 +11617,8 @@
       "desc_zh": "多峇超級火山爆發導致全球降溫，人類瀕臨滅絕，僅存數千人",
       "desc_en": "Toba supervolcano eruption causes global cooling; human population drops to as few as a few thousand.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/多峇巨災理論",
-      "wiki_en": "https://en.wikipedia.org/wiki/Toba_catastrophe_theory"
+      "wiki_en": "https://en.wikipedia.org/wiki/Toba_catastrophe_theory",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tobaeruption.png/1280px-Tobaeruption.png"
     },
     {
       "id": "hevo-013",
@@ -11613,7 +11644,8 @@
       "desc_zh": "中國江西仙人洞出土世界最早的陶器碎片",
       "desc_en": "World's earliest pottery fragments found in Xianrendong Cave, Jiangxi, China.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/仙人洞遺址",
-      "wiki_en": "https://en.wikipedia.org/wiki/Xianrendong"
+      "wiki_en": "https://en.wikipedia.org/wiki/Xianrendong",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/National_Museum_of_China_2014.02.01_14-43-38.jpg/1920px-National_Museum_of_China_2014.02.01_14-43-38.jpg"
     },
     {
       "id": "hevo-015",
@@ -11626,7 +11658,8 @@
       "desc_zh": "狼被馴化為狗，人類與動物合作的開始",
       "desc_en": "Wolves domesticated into dogs, beginning the human-animal partnership.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/狗的馴化",
-      "wiki_en": "https://en.wikipedia.org/wiki/Origin_of_the_domestic_dog"
+      "wiki_en": "https://en.wikipedia.org/wiki/Origin_of_the_domestic_dog",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Canis_lupus_howling_on_glacial_erratic.jpg/960px-Canis_lupus_howling_on_glacial_erratic.jpg"
     },
     {
       "id": "phanerozoic",
@@ -11640,7 +11673,8 @@
       "desc_zh": "可見生命的時代，從寒武紀大爆發至今，包含古生代、中生代、新生代",
       "desc_en": "The eon of visible life, from the Cambrian Explosion to the present, encompassing the Paleozoic, Mesozoic, and Cenozoic eras.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/顯生宙",
-      "wiki_en": "https://en.wikipedia.org/wiki/Phanerozoic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Phanerozoic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Phanerozoic_diversity.png/960px-Phanerozoic_diversity.png"
     },
     {
       "id": "paleogene",
@@ -11655,7 +11689,8 @@
       "desc_zh": "恐龍滅絕後哺乳動物迅速多樣化的時期",
       "desc_en": "Period of rapid mammalian diversification after the dinosaur extinction.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古近紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paleogene"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleogene",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mollweide_Paleographic_Map_of_Earth%2C_45_Ma_%28Lutetian_Age%29.png/1920px-Mollweide_Paleographic_Map_of_Earth%2C_45_Ma_%28Lutetian_Age%29.png"
     },
     {
       "id": "neogene",
@@ -11670,7 +11705,8 @@
       "desc_zh": "草原擴張、類人猿演化的時期",
       "desc_en": "Period of grassland expansion and hominoid evolution.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新近紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Neogene"
+      "wiki_en": "https://en.wikipedia.org/wiki/Neogene",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mollweide_Paleographic_Map_of_Earth%2C_15_Ma_%28Langhian_Age%29.png/1920px-Mollweide_Paleographic_Map_of_Earth%2C_15_Ma_%28Langhian_Age%29.png"
     },
     {
       "id": "quaternary",
@@ -11685,7 +11721,8 @@
       "desc_zh": "冰河期交替與人類演化的時代，持續至今",
       "desc_en": "Era of alternating ice ages and human evolution, continuing to present.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/第四紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Quaternary"
+      "wiki_en": "https://en.wikipedia.org/wiki/Quaternary",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mollweide.jpg/1920px-Mollweide.jpg"
     },
     {
       "id": "stone-age",
@@ -11699,7 +11736,8 @@
       "desc_zh": "人類使用石器工具的漫長時代，涵蓋舊石器、中石器、新石器三個階段",
       "desc_en": "The long era of human stone tool use, encompassing the Paleolithic, Mesolithic, and Neolithic periods.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石器時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age"
+      "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Arrowhead.jpg"
     },
     {
       "id": "paleolithic",
@@ -11714,7 +11752,8 @@
       "desc_zh": "人類最早的石器工具時期，以打製石器為特徵",
       "desc_en": "Earliest period of human tool use, characterized by chipped stone tools.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/舊石器時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paleolithic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleolithic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Bifaz_de_Atapuerca_%28TG10%29.jpg"
     },
     {
       "id": "mesolithic",
@@ -11729,7 +11768,8 @@
       "desc_zh": "從狩獵採集到農業定居的過渡時期",
       "desc_en": "Transitional period between hunter-gathering and agricultural settlement.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中石器時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mesolithic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mesolithic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/OpgravingStevoort.jpg"
     },
     {
       "id": "neolithic",
@@ -11744,7 +11784,8 @@
       "desc_zh": "磨製石器、農業與定居生活開始的時代",
       "desc_en": "Era of polished stone tools, agriculture, and settled communities.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新石器時代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Neolithic"
+      "wiki_en": "https://en.wikipedia.org/wiki/Neolithic",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/N%C3%A9olithique_0001.jpg/1920px-N%C3%A9olithique_0001.jpg"
     },
     {
       "id": "eoarchean",
@@ -11759,7 +11800,8 @@
       "desc_zh": "太古宙最早期，地球最古老岩石形成",
       "desc_en": "Earliest era of the Archean; Earth's oldest known rocks form.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/始太古代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Eoarchean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Eoarchean",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Garnet_paragneiss_Nuvvuagittuq_Greenstone_Belt%2C_4.28_Ga.jpg/1920px-Garnet_paragneiss_Nuvvuagittuq_Greenstone_Belt%2C_4.28_Ga.jpg"
     },
     {
       "id": "paleoarchean",
@@ -11774,7 +11816,8 @@
       "desc_zh": "最早的細菌和疊層石出現",
       "desc_en": "Earliest bacteria and stromatolites appear.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/古太古代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Paleoarchean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleoarchean",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg/1920px-Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg"
     },
     {
       "id": "mesoarchean",
@@ -11789,7 +11832,8 @@
       "desc_zh": "藍藻開始產氧，最早的光合作用證據",
       "desc_en": "Cyanobacteria begin producing oxygen; earliest evidence of photosynthesis.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/中太古代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mesoarchean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mesoarchean",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Banded_iron_formation_%28Goldman_Meadows_Formation%2C_Mesoarchean%3B_Atlantic_City_Iron_Mine%2C_South_Pass%2C_Wyoming%2C_USA%29_2_%2830749219994%29.jpg/1200px-Banded_iron_formation_%28Goldman_Meadows_Formation%2C_Mesoarchean%3B_Atlantic_City_Iron_Mine%2C_South_Pass%2C_Wyoming%2C_USA%29_2_%2830749219994%29.jpg"
     },
     {
       "id": "neoarchean",
@@ -11804,7 +11848,8 @@
       "desc_zh": "大氧化事件前夕，板塊構造穩定化",
       "desc_en": "Eve of the Great Oxidation Event; plate tectonics stabilize.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/新太古代",
-      "wiki_en": "https://en.wikipedia.org/wiki/Neoarchean"
+      "wiki_en": "https://en.wikipedia.org/wiki/Neoarchean",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2650_Ma_paleoglobe.png/1200px-2650_Ma_paleoglobe.png"
     },
     {
       "id": "siderian",
@@ -11819,7 +11864,8 @@
       "desc_zh": "大量帶狀鐵礦層形成，因大氧化事件鐵被氧化沉澱",
       "desc_en": "Massive banded iron formations deposited as iron oxidized during the Great Oxidation Event.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/成鐵紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siderian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siderian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Banded_iron_formation_Dales_Gorge.jpg/1920px-Banded_iron_formation_Dales_Gorge.jpg"
     },
     {
       "id": "rhyacian",
@@ -11834,7 +11880,8 @@
       "desc_zh": "休倫冰河期發生，可能是地球最早的雪球事件",
       "desc_en": "Huronian glaciation occurs, possibly Earth's earliest Snowball Earth event.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/層侵紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Rhyacian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Rhyacian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Black-band_ironstone_%28aka%29.jpg/1920px-Black-band_ironstone_%28aka%29.jpg"
     },
     {
       "id": "orosirian",
@@ -11849,7 +11896,8 @@
       "desc_zh": "大規模造山運動，最早的超大陸開始形成",
       "desc_en": "Major mountain-building events; earliest supercontinents begin forming.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/造山紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Orosirian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Orosirian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Vredefort_Dome_STS51I-33-56AA.jpg/960px-Vredefort_Dome_STS51I-33-56AA.jpg"
     },
     {
       "id": "statherian",
@@ -11864,7 +11912,8 @@
       "desc_zh": "大陸地殼穩定化，最早的複雜單細胞生物出現",
       "desc_en": "Continental crust stabilizes; earliest complex single-celled organisms appear.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/固結紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Statherian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Statherian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/1740_Ma_paleoglobe.png/1920px-1740_Ma_paleoglobe.png"
     },
     {
       "id": "calymmian",
@@ -11879,7 +11928,8 @@
       "desc_zh": "大陸被沉積物覆蓋，哥倫比亞超大陸開始分裂",
       "desc_en": "Continents covered by sedimentary platforms; Columbia supercontinent begins breaking apart.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/蓋層紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Calymmian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Calymmian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/1590_Ma.png/1920px-1590_Ma.png"
     },
     {
       "id": "ectasian",
@@ -11894,7 +11944,8 @@
       "desc_zh": "有性生殖出現，大陸持續延展擴張",
       "desc_en": "Sexual reproduction emerges; continents continue to extend and expand.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/延展紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ectasian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ectasian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/1260_Ma_paleoglobe.png/1920px-1260_Ma_paleoglobe.png"
     },
     {
       "id": "stenian",
@@ -11909,7 +11960,8 @@
       "desc_zh": "羅迪尼亞超大陸開始聚合，多細胞生物可能出現",
       "desc_en": "Rodinia supercontinent begins assembling; multicellular life may emerge.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/狹帶紀",
-      "wiki_en": "https://en.wikipedia.org/wiki/Stenian"
+      "wiki_en": "https://en.wikipedia.org/wiki/Stenian",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/1040_Ma_paleoglobe.png/1200px-1040_Ma_paleoglobe.png"
     },
     {
       "id": "tonian",
