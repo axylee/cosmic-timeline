@@ -82,15 +82,29 @@ python check.py
 
 **正常輸出範例：**
 ```
-=============================================
-  事件總數   : 382
-  有圖片     : 302
-  缺圖片     : 80
-  有 crossRef: 110
-  定義軸線數 : 37
-=============================================
+==================================================
+  事件總數     : 682
+  有圖片       : 546
+  缺圖片       : 136
+  有 en 名稱   : 682  (缺 0)
+  有 desc_en   : 682  (缺 0)
+  有 category  : 682  (缺 0)
+  有 wiki_zh   : 682  (缺 0)
+  有 wiki_en   : 682  (缺 0)
+  有 crossRef  : 200
+  定義軸線數   : 59
+  axis_groups  : 6 組
+  era_bands    : 11 段
+  era_buttons  : 12 個
+  filter_cats  : 15 類
+  views        : 24 個
+==================================================
+
 ✓ 所有事件軸線正確
+✓ 所有事件年份正確
 ✓ 無重複 ID
+✓ 所有軸線 group 正確
+✓ 所有 View 軸線正確
 ```
 
 > ⚠ 如果出現「軸線不存在」或「重複 ID」的警告，回去找 Claude 修正腳本
@@ -100,7 +114,7 @@ python check.py
 1. 用瀏覽器開啟 `tools/cosmic-tools.html`
 2. 切換到「🖼 圖片管理」分頁
 3. 載入剛才更新的 `data/events.json`
-4. 點「▶ 開始更新圖片」→ 自動搜尋 Wikipedia/NASA 圖片
+4. 點「▶ 開始更新圖片」→ 自動搜尋 Wikipedia / Wikidata / Wikimedia Commons / NASA 圖片
 5. 有多張候選圖時手動選擇最佳
 6. 完成後點「📋 預覽變更並輸出」→ 確認後下載
 
@@ -178,7 +192,8 @@ python check.py
 1. `cosmic-tools.html` → 載入 JSON → 切換到「新增軸線」分頁
 2. 填寫：
    - **ID**：英文小寫 + 連字號，不能重複（例：`korea`）
-   - **中文標籤**、**父軸**、**分類群組**、**顏色**
+   - **中文標籤**、**英文標籤**、**父軸**、**分類群組**、**顏色**
+   - **排列位置**（放在哪條軸線下方）
    - **顯示門檻**（0 = 全局，0.58 = zoom in才出現）
    - **起始年份**（必填）/ **消亡年份**（選填）
 3. 點「✓ 加入軸線」→ 新軸線立即出現在事件的軸線選單
@@ -198,7 +213,7 @@ python check.py
 #### 🖼 批量補圖（自動搜尋）
 1. `cosmic-tools.html` → 載入 JSON → 切換到「🖼 圖片管理」
 2. 點「列出缺圖事件」查看缺圖清單
-3. 點「▶ 開始更新圖片」→ 自動從 Wikipedia / Wikidata / NASA 搜尋
+3. 點「▶ 開始更新圖片」→ 自動從 Wikipedia / Wikidata / Wikimedia Commons / NASA 搜尋
    - 只找到一張 → 自動套用
    - 找到多張 → 暫停讓你手動選擇
 4. 點「📋 預覽變更並輸出」→ 確認後下載 → 覆蓋上傳
@@ -219,14 +234,14 @@ python check.py
 - Solo 狀態下**雙擊**任何項目：退出 Solo
 - 右側頂部「全部顯示」按鈕：清除所有隱藏、Solo 與 Filter 狀態
 
-#### 🎯 Events 視圖（主題快速切換）
-- 點擊頂部「**Events**」按鈕 → 彈出分類選單
+#### 🎯 主題視圖（快速切換）
+- 點擊頂部「**主題**」/「**Events**」按鈕（隨語言切換）→ 彈出分類選單
 - 選單分四類：自然與宇宙 / 文明縱覽 / 主題 / 地區
 - 點選任一項目：自動隱藏無關軸線，並 zoom 到對應時間範圍
 - 取消：點右側「**全部顯示**」按鈕恢復
 
-#### 🔍 Filter（事件層級篩選）
-- 點擊頂部「**Filter**」按鈕 → 彈出 category 選單（戰爭/科學/宗教/文化等15個分類）
+#### 🔍 篩選（事件層級）
+- 點擊頂部「**篩選**」/「**Filter**」按鈕（隨語言切換）→ 彈出 category 選單（戰爭/科學/宗教/文化等15個分類）
 - 可多選：選中的 category 事件正常顯示，其他事件淡化至幾乎不可見
 - 按鈕顯示目前選中數量（例：`Filter (2)`）
 - 可與 Events 視圖同時使用（先選視圖縮小範圍，再 Filter 看特定類型）
@@ -277,13 +292,13 @@ python check.py
 ```
 events.json
 ├── meta              # 專案基本資訊
-├── axis_groups       # 軸線群組定義（7 組：label/label_en/color）
-├── axes              # 軸線定義（47 條）
+├── axis_groups       # 軸線群組定義（6 組：label/label_en/color）
+├── axes              # 軸線定義（59 條）
 ├── era_bands         # Canvas 背景時代色帶（11 段）
 ├── era_buttons       # 底部導航按鈕（12 個）
 ├── filter_cats       # 篩選分類（15 類）
 ├── views             # 主題視圖（24 個）
-└── events            # 歷史事件（561+ 個）
+└── events            # 歷史事件（682+ 個）
 ```
 
 > 所有 UI 資料（群組、時代色帶、導航按鈕、篩選分類）都從 JSON 動態載入，index.html 不寫死任何資料。
@@ -421,11 +436,18 @@ antarctic 南極 ← migration
 mideast 中東 ← east
 ├─ mesopotamia 兩河流域 (endYear: -539)
 ├─ egypt 古埃及 (endYear: 641)
-└─ persia 波斯 (endYear: 1501)
+├─ persia 波斯 (endYear: 1501)
+└─ ottoman 鄂圖曼帝國 (endYear: 1922)
+kush 庫什/努比亞 ← africa (endYear: 350)
 india 印度 ← east
+korea 韓國 ← east
 china 中國 ← human-evo
+japan 日本 ← east
 greece 希臘羅馬 ← west (endYear: 476)
+├─ byzantine 拜占庭帝國 (endYear: 1453)
 latin-america 拉丁美洲 ← americas
+siam 暹羅 ← southeast-asia (endYear: 1932)
+mongol 蒙古帝國 ← central-asia (endYear: 1368)
 ```
 
 ### ✝ religion 宗教
@@ -444,17 +466,23 @@ taoism 道教 ← china
 近代政治實體，文明的延續或區域內的近代國家劃分
 
 ```
-iran 伊朗 ← persia          ← 文明→國家接續
+iran 伊朗 ← persia              ← 文明→國家接續
+iraq 伊拉克 ← mesopotamia        ← 文明→國家接續
+modern-egypt 現代埃及 ← egypt     ← 文明→國家接續
+turkey 土耳其 ← ottoman          ← 文明→國家接續
+thailand 泰國 ← siam             ← 文明→國家接續
+mongolia 蒙古國 ← mongol         ← 文明→國家接續
 north-africa 北非 ← africa
 west-africa 西非 ← africa
 east-africa 東非 ← africa
 south-africa 南非 ← africa
 taiwan 臺灣 ← human-evo
-japan 日本 ← east
 europe 歐洲 ← west
 north-america 北美 ← americas
 south-america 南美 ← americas
 usa 美國 ← north-america
+australia 澳洲 ← oceania
+brazil 巴西 ← south-america
 ```
 
 ### 設計備註
@@ -500,3 +528,12 @@ usa 美國 ← north-america
 | 2026-04-13 | 新增 57 個事件：arctic/antarctic/north-america/south-america/west-africa/north-africa/east-africa/hinduism/taoism/buddhism/japan/usa |
 | 2026-04-13 | 群組重整：science/arts 移到 global、china-b 併入 china、刪除 human 群組（7→6 組） |
 | 2026-04-13 | 父軸關係修正：east/west parent 改 human-evo、central-asia parent 改 migration |
+| 2026-04-14 | 文明判定標準定義（六特徵）、文明→國家接續設計模式（persia→iran 範例）|
+| 2026-04-14 | japan 從 nation 移到 civilization |
+| 2026-04-14 | 新增 6 文明軸線：korea, kush, siam, byzantine, mongol, ottoman |
+| 2026-04-14 | 新增 7 國家軸線：iraq, modern-egypt, turkey, thailand, mongolia, australia, brazil |
+| 2026-04-14 | 新增 64 個事件 + 移動 5 個事件到新軸線（59 軸線、682 事件）|
+| 2026-04-14 | index.html popup edit 新增「Position — place below」軸線排序下拉 |
+| 2026-04-14 | index.html exportJSON 修正：補齊 label_en/axis_groups/era_buttons/filter_cats/views 導出 |
+| 2026-04-14 | cosmic-tools.html 新增軸線表單：群組下拉改動態讀取、加 label_en 和排列位置欄位 |
+| 2026-04-14 | Order 區間規則定義：natural 0-9, global 10-19, region 20-29, civilization 30-49, religion 50-59, nation 60-99 |
