@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604131602</span>
+  <span id="version-label">v202604141545</span>
 </div>
 
 <div id="view-popup"></div>
@@ -965,7 +965,8 @@ body {
           <div class="edit-label">Axis</div>
           <select class="edit-input" id="edit-axis" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
-        <div class="edit-row" style="flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
+        <!-- ─── Axis properties ─── -->
+        <div class="edit-row" style="flex-direction:column;gap:4px">
           <div style="display:flex;align-items:center;gap:8px">
             <div class="edit-label" style="width:70px;flex-shrink:0">Zoom Min</div>
             <input type="range" id="edit-zoommin" min="0" max="1" step="0.01" value="0"
@@ -975,19 +976,22 @@ body {
           </div>
           <div style="font-size:10px;color:rgba(221,216,200,0.25);padding-left:78px">0 = always visible · 0.58 = zoom in to show</div>
         </div>
-        <div class="edit-row" style="padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
+        <div class="edit-row">
           <div class="edit-label">Position — place below</div>
           <select class="edit-input" id="edit-axis-order" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row">
-          <div class="edit-label">CrossRef<br><span style="font-size:10px;color:rgba(221,216,200,0.35)">Max 3, Ctrl/Cmd multi-select</span></div>
-          <select class="edit-input" id="edit-crossref" multiple size="4" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:4px;font-size:12px;font-family:inherit;width:100%;cursor:pointer"></select>
+          <div class="edit-label">Color</div>
+          <div style="display:flex;align-items:center;gap:8px;width:100%">
+            <input type="color" id="edit-axis-color-picker" value="#60a5fa" style="width:36px;height:30px;border:none;background:transparent;cursor:pointer;padding:0" oninput="document.getElementById('edit-axis-color').value=this.value">
+            <input class="edit-input" id="edit-axis-color" type="text" value="#60a5fa" placeholder="#rrggbb" style="flex:1;font-size:12px;font-family:'JetBrains Mono',monospace" oninput="if(/^#[0-9a-fA-F]{6}$/.test(this.value))document.getElementById('edit-axis-color-picker').value=this.value">
+          </div>
         </div>
         <div class="edit-row">
           <div class="edit-label">Parent Axis</div>
           <select class="edit-input" id="edit-axis-parent" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 12px;font-size:13px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
-        <div class="edit-row" style="flex-direction:column;gap:6px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)">
+        <div class="edit-row" style="flex-direction:column;gap:6px;padding-bottom:14px;border-bottom:2px solid rgba(255,255,255,0.10)">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
             <div>
               <div class="edit-label" style="margin-bottom:4px">Axis Start Year</div>
@@ -999,6 +1003,11 @@ body {
             </div>
           </div>
           <div style="font-size:10px;color:rgba(221,216,200,0.25)">Start year sets branch origin · End year terminates the line</div>
+        </div>
+        <!-- ─── Event properties ─── -->
+        <div class="edit-row">
+          <div class="edit-label">CrossRef<br><span style="font-size:10px;color:rgba(221,216,200,0.35)">Max 3, Ctrl/Cmd multi-select</span></div>
+          <select class="edit-input" id="edit-crossref" multiple size="4" style="background:rgba(255,255,255,0.05);color:var(--text);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:4px;font-size:12px;font-family:inherit;width:100%;cursor:pointer"></select>
         </div>
         <div class="edit-row">
           <div class="edit-label">Image URL</div>
@@ -3572,6 +3581,9 @@ function showPopup(ev) {
     document.getElementById('edit-zoommin-val').textContent = z.toFixed(2);
     document.getElementById('edit-axis-startyear').value = newAx.startYear ?? '';
     document.getElementById('edit-axis-endyear').value   = newAx.endYear   ?? '';
+    const nc = newAx.color || '#60a5fa';
+    document.getElementById('edit-axis-color').value = nc;
+    document.getElementById('edit-axis-color-picker').value = /^#[0-9a-fA-F]{6}$/.test(nc) ? nc : '#60a5fa';
     // Refresh order select for the new axis
     const oSel = document.getElementById('edit-axis-order');
     oSel.innerHTML = '';
@@ -3629,6 +3641,9 @@ function showPopup(ev) {
   document.getElementById('edit-zoommin-val').textContent = zm.toFixed(2);
   document.getElementById('edit-axis-startyear').value = curAx?.startYear ?? '';
   document.getElementById('edit-axis-endyear').value   = curAx?.endYear   ?? '';
+  const axColor = curAx?.color || '#60a5fa';
+  document.getElementById('edit-axis-color').value = axColor;
+  document.getElementById('edit-axis-color-picker').value = /^#[0-9a-fA-F]{6}$/.test(axColor) ? axColor : '#60a5fa';
 
   // Populate "place below" order select
   const orderSel = document.getElementById('edit-axis-order');
@@ -4005,6 +4020,11 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
       startYear: syRaw !== '' ? parseInt(syRaw) : (AXES[axId]?.startYear ?? 0),
       endYear:   eyRaw !== '' ? parseInt(eyRaw) : null,
     };
+    // Handle color change
+    const newColor = document.getElementById('edit-axis-color').value.trim();
+    if (newColor && /^#[0-9a-fA-F]{6}$/.test(newColor)) {
+      axFields.color = newColor;
+    }
 
     // Handle order change ("place below" select)
     const orderVal = document.getElementById('edit-axis-order').value;
