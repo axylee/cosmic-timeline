@@ -223,6 +223,49 @@ body {
 .sr-meta { font-size: 10px; color: rgba(221,216,200,0.3); white-space: nowrap; flex-shrink: 0; }
 .sr-empty { padding: 16px 14px; color: rgba(221,216,200,0.3); font-size: 12px; text-align: center; }
 
+/* ─── TIPS POPUP ─── */
+#tips-popup {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  width: 380px; z-index: 210;
+  background: rgba(8,12,24,0.97);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  padding: 16px 20px;
+  display: none;
+  font-size: 12px; line-height: 1.7;
+  color: rgba(221,216,200,0.8);
+}
+#tips-popup.show { display: block; }
+#tips-popup .tips-title {
+  font-size: 14px; font-weight: 600; color: var(--text);
+  margin-bottom: 10px;
+}
+#tips-popup .tips-section {
+  margin-bottom: 8px;
+}
+#tips-popup .tips-head {
+  color: #a78bfa; font-weight: 600; font-size: 12px;
+}
+#tips-popup .tips-body {
+  padding-left: 12px; color: rgba(221,216,200,0.6); font-size: 11px;
+}
+#tips-popup .tips-example {
+  margin-top: 10px; padding: 10px 12px;
+  background: rgba(167,139,250,0.06);
+  border-left: 2px solid rgba(167,139,250,0.4);
+  border-radius: 0 8px 8px 0;
+}
+#tips-popup .tips-example-title {
+  color: #fbbf24; font-weight: 600; font-size: 12px; margin-bottom: 6px;
+}
+#tips-popup .tips-step {
+  color: rgba(221,216,200,0.6); font-size: 11px; line-height: 1.8;
+}
+#tips-popup .tips-result {
+  color: #34d399; font-weight: 600; font-size: 11px; margin-top: 4px;
+}
+
 /* ─── AXIS LEGEND ─── */
 /* ─── LEGEND PANEL ─── */
 #legend {
@@ -898,7 +941,35 @@ body {
 </div>
 
 <div id="header">
-  <h1>COSMIC HISTORY TIMELINE<span id="h1-zh"> · 宇宙歷史時間軸</span></h1>
+  <div id="h1-wrap" style="position:relative">
+  <h1 id="h1-title" style="cursor:help">COSMIC HISTORY TIMELINE<span id="h1-zh"> · 宇宙歷史時間軸</span></h1>
+  <div id="tips-popup">
+    <div class="tips-content-zh">
+      <div class="tips-title">🎯 使用技巧</div>
+      <div class="tips-section"><span class="tips-head">▸ 圖例開關</span><div class="tips-body">點擊右側軸線名稱可隱藏/顯示該軸線</div></div>
+      <div class="tips-section"><span class="tips-head">▸ 群組收合</span><div class="tips-body">點擊群組名稱（自然/世界/文明...）可收合/展開整個群組</div></div>
+      <div class="tips-section"><span class="tips-head">▸ 凸顯模式</span><div class="tips-body">雙擊任一軸線名稱 → 凸顯該軸線，其他變暗<br>再次雙擊取消凸顯</div></div>
+      <div class="tips-section"><span class="tips-head">▸ 凸顯透明度</span><div class="tips-body">凸顯啟動後，拖動滑桿調整背景軸線的透明度（0%~50%）</div></div>
+      <div class="tips-example">
+        <div class="tips-example-title">💡 範例：比較文明與宗教的關聯</div>
+        <div class="tips-step">1. 點擊底部時代跳轉到「史前文明」<br>2. 點擊右上角「全部顯示」展開所有軸線<br>3. 點擊「收合全部」關閉所有群組<br>4. 只展開「文明」群組<br>5. 再展開「宗教」群組</div>
+        <div class="tips-result">→ 畫面上只剩文明與宗教的軸線，一目瞭然！</div>
+      </div>
+    </div>
+    <div class="tips-content-en" style="display:none">
+      <div class="tips-title">🎯 Tips</div>
+      <div class="tips-section"><span class="tips-head">▸ Toggle axes</span><div class="tips-body">Click axis name on the right to show/hide</div></div>
+      <div class="tips-section"><span class="tips-head">▸ Group collapse</span><div class="tips-body">Click group name (Natural/Global/Civilization...) to collapse/expand</div></div>
+      <div class="tips-section"><span class="tips-head">▸ Highlight mode</span><div class="tips-body">Double-click any axis → highlight it, others dimmed<br>Double-click again to exit</div></div>
+      <div class="tips-section"><span class="tips-head">▸ Highlight opacity</span><div class="tips-body">When active, drag the slider to adjust background opacity (0%~50%)</div></div>
+      <div class="tips-example">
+        <div class="tips-example-title">💡 Example: Compare civilizations &amp; religions</div>
+        <div class="tips-step">1. Click era jump at bottom → "Pre-civilization"<br>2. Click "Show All" to expand all axes<br>3. Click "Collapse All" to close all groups<br>4. Expand only "Civilization" group<br>5. Then expand "Religion" group</div>
+        <div class="tips-result">→ Only civilization &amp; religion axes remain visible!</div>
+      </div>
+    </div>
+  </div>
+  </div>
   <div id="search-wrap">
     <span id="search-icon">🔍</span>
     <input type="text" id="search-input" placeholder="Search events… e.g. Newton, 1687" autocomplete="off" spellcheck="false">
@@ -917,7 +988,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604142005</span>
+  <span id="version-label">v202604142245</span>
   <a id="coffee-btn" href="https://buymeacoffee.com/" target="_blank" title="Buy me a coffee">
     <img src="images/bmc-logo.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Buy me a coffee</span>
@@ -1200,6 +1271,11 @@ function applyLang() {
   _updateFilterBtn();
   // era 按鈕切換
   updateEraButtonLang();
+  // tips popup language
+  const tipsZh = document.querySelector('.tips-content-zh');
+  const tipsEn = document.querySelector('.tips-content-en');
+  if (tipsZh) tipsZh.style.display = lang === 'en' ? 'none' : '';
+  if (tipsEn) tipsEn.style.display = lang === 'en' ? '' : 'none';
 }
 
 // Helper: get display text based on lang
@@ -4617,6 +4693,22 @@ document.addEventListener('click', e => {
 // ════════════════════════════════════════════
 window.addEventListener('resize', () => { resize(); draw(); });
 resize();
+// ════════════════════════════════════════════
+//  TIPS POPUP — hover on h1 title
+// ════════════════════════════════════════════
+(function() {
+  const h1 = document.getElementById('h1-title');
+  const popup = document.getElementById('tips-popup');
+  if (!h1 || !popup) return;
+  let hideTimer = null;
+  function show() { clearTimeout(hideTimer); popup.classList.add('show'); }
+  function hide() { hideTimer = setTimeout(() => popup.classList.remove('show'), 200); }
+  h1.addEventListener('mouseenter', show);
+  h1.addEventListener('mouseleave', hide);
+  popup.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+  popup.addEventListener('mouseleave', hide);
+})();
+
 loadEvents();
 </script>
 </body>
