@@ -300,12 +300,23 @@ events.json
 | `label` | ✓ | 中文顯示名稱 |
 | `label_en` | ✓ | 英文顯示名稱 |
 | `color` | ✓ | 顏色 hex |
-| `order` | ✓ | 排列順序 |
+| `order` | ✓ | 排列順序（數字越小越上方，支援小數點，見下方區間規則） |
 | `parent` | | 父軸 id（null = 頂層） |
 | `startYear` | ✓ | 分支線起始年份 |
 | `endYear` | | 消亡年份（null = 至今） |
 | `zoomMin` | ✓ | 顯示門檻（0 = 全局，0.58 = zoom in才出現） |
-| `group` | ✓ | natural / global / region / civilization / religion / human / nation |
+| `group` | ✓ | natural / global / region / civilization / religion / nation |
+
+**Order 區間規則：** 同一個 group 的軸線 order 必須落在對應區間內。支援小數點（例如 35.5 排在 35 和 36 之間），可透過 index.html popup edit 的「Position — place below」下拉調整。
+
+| group | order 區間 | 說明 |
+|-------|-----------|------|
+| natural | 0 ~ 9 | 自然 |
+| global | 10 ~ 19 | 世界 |
+| region | 20 ~ 29 | 地區 |
+| civilization | 30 ~ 49 | 文明 |
+| religion | 50 ~ 59 | 宗教 |
+| nation | 60 ~ 99 | 國家 |
 
 ### events（事件）
 
