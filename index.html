@@ -170,7 +170,7 @@ body {
 
 /* ── SEARCH BOX ── */
 #search-wrap {
-  flex: 1; max-width: 360px; position: relative;
+  flex: 1; max-width: 240px; position: relative;
 }
 #search-input {
   width: 100%;
@@ -479,14 +479,55 @@ body {
 }
 #btn-reset:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
 
+/* ─── BUY ME A COFFEE ─── */
+#coffee-btn {
+  margin-left: auto;
+  display: flex; align-items: center; gap: 0;
+  background: #FFDD00; border-radius: 8px;
+  padding: 4px 8px; text-decoration: none;
+  border: 1px dashed rgba(0,0,0,0.3);
+  cursor: pointer; transition: all .3s;
+  overflow: hidden; white-space: nowrap;
+  height: 28px;
+}
+#coffee-btn img {
+  width: 20px; height: 20px; flex-shrink: 0;
+}
+#coffee-btn span {
+  max-width: 0; overflow: hidden;
+  font-size: 11px; font-weight: 600; color: #000;
+  font-family: 'JetBrains Mono', monospace;
+  transition: max-width .3s, margin .3s;
+  margin-left: 0;
+}
+#coffee-btn:hover span {
+  max-width: 140px;
+  margin-left: 6px;
+}
+#coffee-btn:hover {
+  border-color: rgba(0,0,0,0.5);
+  box-shadow: 0 0 8px rgba(255,221,0,0.4);
+}
+
 /* ─── BOTTOM BAR: H-scrollbar + H-zoom + era jumps ─── */
 #bottom-bar {
   position: fixed; bottom: 0; left: 0; right: 36px;
-  height: 88px; z-index: 50;
-  display: flex; flex-direction: column; align-items: stretch;
-  padding: 0 20px;
+  height: 90px; z-index: 50;
+  display: flex; flex-direction: row; align-items: stretch;
+  padding: 0;
   background: linear-gradient(to top, rgba(5,8,16,0.97) 80%, transparent);
-  gap: 5px; justify-content: flex-end; padding-bottom: 8px;
+  gap: 0;
+}
+#ad-slot {
+  width: 300px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.25); font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+}
+#bottom-controls {
+  flex: 1; display: flex; flex-direction: column; align-items: stretch;
+  gap: 5px; justify-content: flex-end; padding: 0 20px 8px;
 }
 
 /* Era jump buttons row */
@@ -830,7 +871,9 @@ body {
   #zoom-slider { width: 200px; }
 
   /* Bottom bar taller for finger taps */
-  #bottom-bar { height: 96px; padding-bottom: 10px; }
+  #bottom-bar { height: 96px; }
+  #ad-slot { display: none; }
+  #bottom-controls { padding-bottom: 10px; }
 
   /* Overlap menu wider */
   #overlap-menu { min-width: 260px; }
@@ -874,7 +917,11 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604141704</span>
+  <span id="version-label">v202604141953</span>
+  <a id="coffee-btn" href="https://buymeacoffee.com/" target="_blank" title="Buy me a coffee">
+    <img src="images/bmc-logo.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
+    <span>Buy me a coffee</span>
+  </a>
 </div>
 
 <div id="view-popup"></div>
@@ -918,16 +965,19 @@ body {
 
 <!-- Bottom bar: era jumps + H-scrollbar + H-zoom slider -->
 <div id="bottom-bar">
-  <div id="era-jumps"></div>
-  <div id="hscroll-row">
-    <div id="scrollbar-track">
-      <div id="scrollbar-thumb"></div>
+  <div id="ad-slot">Ad Space<br>300 × 90</div>
+  <div id="bottom-controls">
+    <div id="era-jumps"></div>
+    <div id="hscroll-row">
+      <div id="scrollbar-track">
+        <div id="scrollbar-thumb"></div>
+      </div>
     </div>
-  </div>
-  <div id="hzoom-row">
-    <span class="hzoom-label">−</span>
-    <input type="range" id="zoom-slider" min="0" max="100" value="5">
-    <span class="hzoom-label">＋</span>
+    <div id="hzoom-row">
+      <span class="hzoom-label">−</span>
+      <input type="range" id="zoom-slider" min="0" max="100" value="5">
+      <span class="hzoom-label">＋</span>
+    </div>
   </div>
 </div>
 
