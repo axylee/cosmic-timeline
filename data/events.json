@@ -1641,7 +1641,7 @@
       "endYear": -252000000,
       "zh": "古生代",
       "en": "Paleozoic Era",
-      "axis": "life",
+      "axis": "earth",
       "level": 1,
       "sub_track": 0,
       "desc_zh": "生命從海洋到陸地的偉大征程，包含寒武紀大爆發、魚類時代、第一批陸地植物與動物，以二疊紀大滅絕終結。",
@@ -1650,7 +1650,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Paleozoic",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Trilobite_Heinrich_Harder.jpg",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "phanerozoic"
     },
     {
       "id": "cambrian",
@@ -1658,7 +1659,7 @@
       "endYear": -485000000,
       "zh": "寒武紀",
       "en": "Cambrian Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "幾乎所有現代動物門在短短數百萬年內同時出現，三葉蟲稱霸海洋，是生命演化的大爆發時代。",
@@ -1667,7 +1668,8 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/寒武紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Cambrian",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "ordovician",
@@ -1675,7 +1677,7 @@
       "endYear": -444000000,
       "zh": "奧陶紀",
       "en": "Ordovician Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "海洋生物空前繁盛，珊瑚礁出現，末期發生地球第二大滅絕事件（奧陶紀大滅絕），85%物種消失。",
@@ -1684,7 +1686,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Ordovician",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mollweide_Paleographic_Map_of_Earth%2C_465_Ma_%28Darriwilian_Age%29.png/1280px-Mollweide_Paleographic_Map_of_Earth%2C_465_Ma_%28Darriwilian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "silurian",
@@ -1692,7 +1695,7 @@
       "endYear": -419000000,
       "zh": "志留紀",
       "en": "Silurian Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "有頜魚類演化出現，陸地植物開始定居，珊瑚礁大量發展，氣候相對溫和穩定。",
@@ -1701,7 +1704,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Silurian",
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Mollweide_Paleographic_Map_of_Earth%2C_430_Ma_%28Homerian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "devonian",
@@ -1709,7 +1713,7 @@
       "endYear": -359000000,
       "zh": "泥盆紀",
       "en": "Devonian Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "「魚類的時代」——各類魚種繁盛，四足動物登陸，蕨類森林出現，末期發生大滅絕。",
@@ -1718,7 +1722,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Devonian",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Mollweide_Paleographic_Map_of_Earth%2C_390_Ma_%28Eifelian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "carboniferous",
@@ -1726,7 +1731,7 @@
       "endYear": -299000000,
       "zh": "石炭紀",
       "en": "Carboniferous Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "巨大沼澤森林覆蓋大陸，大量植物埋入地層形成今日煤礦，第一批爬蟲類與有翅昆蟲出現。",
@@ -1735,7 +1740,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Carboniferous",
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Mollweide_Paleographic_Map_of_Earth%2C_330_Ma_%28Serpukhovian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "permian",
@@ -1743,7 +1749,7 @@
       "endYear": -252000000,
       "zh": "二疊紀",
       "en": "Permian Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "盤古大陸形成，以史上最大滅絕事件結束——96%海洋物種與70%陸地脊椎動物消失。",
@@ -1752,7 +1758,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Permian",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Mollweide_Paleographic_Map_of_Earth%2C_275_Ma_%28Kungurian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "paleozoic"
     },
     {
       "id": "permian-extinction",
@@ -1776,7 +1783,7 @@
       "endYear": -66000000,
       "zh": "中生代",
       "en": "Mesozoic Era",
-      "axis": "life",
+      "axis": "earth",
       "level": 1,
       "sub_track": 0,
       "desc_zh": "恐龍主宰大地的時代，包含三疊紀、侏羅紀、白堊紀，哺乳類與鳥類也在此期間演化出現。",
@@ -1785,7 +1792,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mesozoic",
       "image": "https://images-assets.nasa.gov/image/iss017e005351/iss017e005351~orig.jpg",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "phanerozoic"
     },
     {
       "id": "triassic",
@@ -1793,7 +1801,7 @@
       "endYear": -201000000,
       "zh": "三疊紀",
       "en": "Triassic Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "二疊紀大滅絕後生命復甦，恐龍與哺乳類同時演化出現，盤古大陸開始分裂。",
@@ -1802,7 +1810,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Triassic",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Mollweide_Paleographic_Map_of_Earth%2C_225_Ma_%28Norian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "mesozoic"
     },
     {
       "id": "jurassic",
@@ -1810,7 +1819,7 @@
       "endYear": -145000000,
       "zh": "侏羅紀",
       "en": "Jurassic Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "恐龍稱霸陸地，超巨型蜥腳類恐龍出現，始祖鳥演化，盤古大陸持續分裂，氣候溫暖濕潤。",
@@ -1819,7 +1828,8 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/侏羅紀",
       "wiki_en": "https://en.wikipedia.org/wiki/Jurassic",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "mesozoic"
     },
     {
       "id": "cretaceous",
@@ -1827,7 +1837,7 @@
       "endYear": -66000000,
       "zh": "白堊紀",
       "en": "Cretaceous Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "開花植物大爆發，恐龍多樣性達到頂峰，以隕石撞擊引發的大滅絕事件結束。",
@@ -1836,7 +1846,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "mesozoic"
     },
     {
       "id": "kt-event",
@@ -1859,7 +1870,7 @@
       "year": -66000000,
       "zh": "新生代（至今）",
       "en": "Cenozoic Era (to present)",
-      "axis": "life",
+      "axis": "earth",
       "level": 1,
       "sub_track": 0,
       "desc_zh": "哺乳類與鳥類大輻射演化，草原擴張，靈長類出現，最終演化出人類，延續至今。",
@@ -1868,7 +1879,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cenozoic",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ice_age_fauna_of_northern_Spain_-_Mauricio_Ant%C3%B3n.jpg/1280px-Ice_age_fauna_of_northern_Spain_-_Mauricio_Ant%C3%B3n.jpg",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "phanerozoic"
     },
     {
       "id": "bipedalism-event",
@@ -3766,7 +3778,7 @@
       "endYear": -541000000,
       "zh": "埃迪卡拉紀生物群",
       "en": "Ediacaran Biota",
-      "axis": "life",
+      "axis": "earth",
       "level": 1,
       "desc_zh": "雪球地球結束後，最早的複雜多細胞生物出現，軟體動物，無骨骼，是動物演化的先驅。",
       "desc_en": "After Snowball Earth, the first complex multicellular organisms appear — soft-bodied, boneless pioneers of animal evolution.",
@@ -3774,7 +3786,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Ediacaran",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Mollweide_Paleographic_Map_of_Earth%2C_600_Ma_%28Ediacaran_Period%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Mollweide_Paleographic_Map_of_Earth%2C_600_Ma_%28Ediacaran_Period%29.png",
+      "parentEvent": "neoproterozoic"
     },
     {
       "id": "land-plants",
@@ -5609,7 +5622,7 @@
       "endYear": -1600000000,
       "zh": "古元古代",
       "en": "Paleoproterozoic Era",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "元古宙最早的時代，大氧化事件改變大氣成分，休倫冰河期使地球幾乎全部凍結，生命以原核生物為主。",
       "desc_en": "Earliest era of the Proterozoic; the Great Oxidation Event transforms the atmosphere; Huronian glaciation nearly freezes the Earth.",
@@ -5617,7 +5630,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Paleoproterozoic",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2050ma.png/1280px-2050ma.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2050ma.png/1280px-2050ma.png",
+      "parentEvent": "proterozoic"
     },
     {
       "id": "mesoproterozoic",
@@ -5625,7 +5639,7 @@
       "endYear": -1000000000,
       "zh": "中元古代",
       "en": "Mesoproterozoic Era",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "生命開始出現有性生殖，多細胞藻類演化，羅迪尼亞超大陸形成，海洋生態系逐漸複雜化。",
       "desc_en": "Sexual reproduction evolves; multicellular algae appear; Rodinia supercontinent assembles; marine ecosystems grow more complex.",
@@ -5633,7 +5647,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mesoproterozoic",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Banded_fine-grained_pyrite_in_shale_%28Urquhart_Shale%2C_Mesoproterozoic%3B_Mt._Isa_Mines%2C_Queensland%2C_Australia%29_%2818940551220%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Banded_fine-grained_pyrite_in_shale_%28Urquhart_Shale%2C_Mesoproterozoic%3B_Mt._Isa_Mines%2C_Queensland%2C_Australia%29_%2818940551220%29.jpg",
+      "parentEvent": "proterozoic"
     },
     {
       "id": "neoproterozoic",
@@ -5641,7 +5656,7 @@
       "endYear": -541000000,
       "zh": "新元古代",
       "en": "Neoproterozoic Era",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "雪球地球多次凍結，埃迪卡拉紀最早複雜動物出現，為寒武紀大爆發奠基。",
       "desc_en": "Multiple Snowball Earth events; earliest complex animals appear in the Ediacaran; groundwork laid for the Cambrian explosion.",
@@ -5649,7 +5664,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Neoproterozoic",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Neoproterozoic_collage.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Neoproterozoic_collage.png",
+      "parentEvent": "proterozoic"
     },
     {
       "id": "sexual-reproduction",
@@ -5687,7 +5703,7 @@
       "endYear": -635000000,
       "zh": "克里奧真紀",
       "en": "Cryogenian Period",
-      "axis": "life",
+      "axis": "earth",
       "level": 2,
       "desc_zh": "地球兩次幾乎完全凍結（雪球地球），海洋表面結冰，生命在海底熱液口存活，結束後生命爆發性複雜化。",
       "desc_en": "Earth freezes twice (Snowball Earth); life survives near hydrothermal vents; after thawing, life complexifies explosively.",
@@ -5695,7 +5711,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cryogenian",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Mollweide_Paleographic_Map_of_Earth%2C_690_Ma_%28Cryogenian_Period%29.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Mollweide_Paleographic_Map_of_Earth%2C_690_Ma_%28Cryogenian_Period%29.png",
+      "parentEvent": "neoproterozoic"
     },
     {
       "id": "earliest-animals",
@@ -8134,34 +8151,34 @@
     },
     {
       "id": "bronze-age",
-      "year": -3200,
+      "year": -3300,
       "endYear": -1200,
-      "zh": "青銅器時代",
+      "zh": "青銅時代",
       "en": "Bronze Age",
-      "axis": "science",
+      "axis": "human-evo",
       "level": 1,
       "category": "science",
       "category_broad": "human",
       "crossRef": "cross",
-      "desc_zh": "人類學會將銅和錫合煉成青銅，製造工具和武器，青銅器時代的文明包括古埃及、美索不達米亞、愛琴海文明和中國商代，推動了城市和國家的出現。",
-      "desc_en": "Humans learned to alloy copper and tin into bronze for tools and weapons. Bronze Age civilizations including Egypt, Mesopotamia, Aegean and Shang China drove the rise of cities and states.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/青銅器時代",
+      "desc_zh": "人類開始冶煉青銅，最早的文明與文字出現",
+      "desc_en": "Humans begin smelting bronze; earliest civilizations and writing systems emerge.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/青銅時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Bronze_Age",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/AlacaStandarte.jpg/1280px-AlacaStandarte.jpg"
     },
     {
       "id": "iron-age",
       "year": -1200,
-      "endYear": -550,
+      "endYear": -500,
       "zh": "鐵器時代",
       "en": "Iron Age",
-      "axis": "science",
+      "axis": "human-evo",
       "level": 1,
       "category": "science",
       "category_broad": "human",
       "crossRef": "cross",
-      "desc_zh": "赫梯人率先掌握冶鐵技術，鐵器比青銅更堅硬廉價，普及後大幅改變農業生產力和軍事力量對比，加速了舊帝國的崩潰和新文明的興起。",
-      "desc_en": "The Hittites pioneered iron smelting. Iron's superior hardness and lower cost transformed agricultural productivity and military power, accelerating the collapse of old empires and rise of new civilizations.",
+      "desc_zh": "鐵器取代青銅，帝國與古典文明興起",
+      "desc_en": "Iron replaces bronze; empires and classical civilizations arise.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/鐵器時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Iron_Age",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/HMB_Keltengrab_M%C3%BCnsingen-Rain_Grab_91.jpg/1280px-HMB_Keltengrab_M%C3%BCnsingen-Rain_Grab_91.jpg"
@@ -11801,6 +11818,124 @@
       "desc_en": "Wolves domesticated into dogs, beginning the human-animal partnership.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/狗的馴化",
       "wiki_en": "https://en.wikipedia.org/wiki/Origin_of_the_domestic_dog"
+    },
+    {
+      "id": "phanerozoic",
+      "year": -541000000,
+      "endYear": null,
+      "zh": "顯生宙",
+      "en": "Phanerozoic Eon",
+      "axis": "earth",
+      "level": 1,
+      "category": "nature",
+      "desc_zh": "可見生命的時代，從寒武紀大爆發至今，包含古生代、中生代、新生代",
+      "desc_en": "The eon of visible life, from the Cambrian Explosion to the present, encompassing the Paleozoic, Mesozoic, and Cenozoic eras.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/顯生宙",
+      "wiki_en": "https://en.wikipedia.org/wiki/Phanerozoic"
+    },
+    {
+      "id": "paleogene",
+      "year": -66000000,
+      "endYear": -23000000,
+      "zh": "古近紀",
+      "en": "Paleogene Period",
+      "axis": "earth",
+      "level": 2,
+      "category": "nature",
+      "parentEvent": "cenozoic",
+      "desc_zh": "恐龍滅絕後哺乳動物迅速多樣化的時期",
+      "desc_en": "Period of rapid mammalian diversification after the dinosaur extinction.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古近紀",
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleogene"
+    },
+    {
+      "id": "neogene",
+      "year": -23000000,
+      "endYear": -2600000,
+      "zh": "新近紀",
+      "en": "Neogene Period",
+      "axis": "earth",
+      "level": 2,
+      "category": "nature",
+      "parentEvent": "cenozoic",
+      "desc_zh": "草原擴張、類人猿演化的時期",
+      "desc_en": "Period of grassland expansion and hominoid evolution.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/新近紀",
+      "wiki_en": "https://en.wikipedia.org/wiki/Neogene"
+    },
+    {
+      "id": "quaternary",
+      "year": -2600000,
+      "endYear": null,
+      "zh": "第四紀",
+      "en": "Quaternary Period",
+      "axis": "earth",
+      "level": 2,
+      "category": "nature",
+      "parentEvent": "cenozoic",
+      "desc_zh": "冰河期交替與人類演化的時代，持續至今",
+      "desc_en": "Era of alternating ice ages and human evolution, continuing to present.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/第四紀",
+      "wiki_en": "https://en.wikipedia.org/wiki/Quaternary"
+    },
+    {
+      "id": "stone-age",
+      "year": -2600000,
+      "endYear": -3300,
+      "zh": "石器時代",
+      "en": "Stone Age",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "人類使用石器工具的漫長時代，涵蓋舊石器、中石器、新石器三個階段",
+      "desc_en": "The long era of human stone tool use, encompassing the Paleolithic, Mesolithic, and Neolithic periods.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/石器時代",
+      "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age"
+    },
+    {
+      "id": "paleolithic",
+      "year": -2600000,
+      "endYear": -10000,
+      "zh": "舊石器時代",
+      "en": "Paleolithic",
+      "axis": "human-evo",
+      "level": 2,
+      "category": "civilization",
+      "parentEvent": "stone-age",
+      "desc_zh": "人類最早的石器工具時期，以打製石器為特徵",
+      "desc_en": "Earliest period of human tool use, characterized by chipped stone tools.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/舊石器時代",
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleolithic"
+    },
+    {
+      "id": "mesolithic",
+      "year": -10000,
+      "endYear": -8000,
+      "zh": "中石器時代",
+      "en": "Mesolithic",
+      "axis": "human-evo",
+      "level": 2,
+      "category": "civilization",
+      "parentEvent": "stone-age",
+      "desc_zh": "從狩獵採集到農業定居的過渡時期",
+      "desc_en": "Transitional period between hunter-gathering and agricultural settlement.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中石器時代",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mesolithic"
+    },
+    {
+      "id": "neolithic",
+      "year": -8000,
+      "endYear": -3300,
+      "zh": "新石器時代",
+      "en": "Neolithic",
+      "axis": "human-evo",
+      "level": 2,
+      "category": "civilization",
+      "parentEvent": "stone-age",
+      "desc_zh": "磨製石器、農業與定居生活開始的時代",
+      "desc_en": "Era of polished stone tools, agriculture, and settled communities.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/新石器時代",
+      "wiki_en": "https://en.wikipedia.org/wiki/Neolithic"
     }
   ]
 }
