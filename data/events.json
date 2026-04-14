@@ -1880,7 +1880,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ice_age_fauna_of_northern_Spain_-_Mauricio_Ant%C3%B3n.jpg/1280px-Ice_age_fauna_of_northern_Spain_-_Mauricio_Ant%C3%B3n.jpg",
       "category": "biology",
       "category_broad": "natural",
-      "parentEvent": "phanerozoic"
+      "parentEvent": "phanerozoic",
+      "endYear": "__NOW__"
     },
     {
       "id": "bipedalism-event",
@@ -1912,7 +1913,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Quaternary_glaciation",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Iceage_north-glacial_hg.png",
       "category": "geology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "endYear": "__NOW__"
     },
     {
       "id": "stone-tools",
@@ -10029,7 +10031,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Holocene_extinction",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png",
       "desc_en": "Ongoing human-caused biodiversity crisis with extinction rates far above natural background.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/全新世滅絕事件"
+      "wiki_zh": "https://zh.wikipedia.org/wiki/全新世滅絕事件",
+      "endYear": "__NOW__"
     },
     {
       "id": "hevo-012",
@@ -11824,7 +11827,7 @@
     {
       "id": "phanerozoic",
       "year": -541000000,
-      "endYear": null,
+      "endYear": "__NOW__",
       "zh": "顯生宙",
       "en": "Phanerozoic Eon",
       "axis": "earth",
@@ -11868,7 +11871,7 @@
     {
       "id": "quaternary",
       "year": -2600000,
-      "endYear": null,
+      "endYear": "__NOW__",
       "zh": "第四紀",
       "en": "Quaternary Period",
       "axis": "earth",

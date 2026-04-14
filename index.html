@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604141545</span>
+  <span id="version-label">v202604141610</span>
 </div>
 
 <div id="view-popup"></div>
@@ -3386,7 +3386,7 @@ function handleHover(mx, my) {
     document.getElementById('tt-zh').textContent  = T(ev.zh, ev.en);
     document.getElementById('tt-en').textContent  = lang === 'en' ? '' : (ev.en || '');
     const timeStr = ev.endYear
-      ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
+      ? `${formatYear(ev.year)} — ${ev._endNow ? T('至今','Present') : formatYear(ev.endYear)}`
       : formatYear(ev.year);
     document.getElementById('tt-time').textContent = timeStr;
 
@@ -3418,7 +3418,7 @@ function showOverlapMenu(evList, mx, my) {
   evList.forEach(ev => {
     const color = (AXES[ev.axis] && AXES[ev.axis].color) || '#fff';
     const timeStr = ev.endYear
-      ? formatYear(ev.year) + ' — ' + formatYear(ev.endYear)
+      ? formatYear(ev.year) + ' — ' + (ev._endNow ? T('至今','Present') : formatYear(ev.endYear))
       : formatYear(ev.year);
     const item = document.createElement('div');
     item.className = 'overlap-item';
@@ -3538,7 +3538,7 @@ function showPopup(ev) {
   const axLabel = axObj ? T(axObj.label, axObj.label_en) : ev.axis;
   const parentLabel = axObj?.parent ? (AXES[axObj.parent] ? T(AXES[axObj.parent].label, AXES[axObj.parent].label_en) : axObj.parent) : null;
   const timeStr = ev.endYear
-    ? `${formatYear(ev.year)} — ${formatYear(ev.endYear)}`
+    ? `${formatYear(ev.year)} — ${ev._endNow ? T('至今','Present') : formatYear(ev.endYear)}`
     : formatYear(ev.year);
   let metaStr = parentLabel ? `${parentLabel} › ${axLabel}` : axLabel;
   if (ev._crossRefs && ev._crossRefs.length) {
@@ -3799,6 +3799,14 @@ async function loadEvents() {
     // Build axes (now reads label_en too)
     if (data.axes && data.axes.length > 0) buildAxes(data.axes);
     events = data.events;
+    // Resolve __NOW__ endYear to current year, mark for display
+    const _currentYear = new Date().getFullYear();
+    events.forEach(ev => {
+      if (ev.endYear === '__NOW__') {
+        ev.endYear = _currentYear;
+        ev._endNow = true;  // flag: display as "至今/Present" instead of year
+      }
+    });
     // A4: Load era_bands from JSON
     if (data.era_bands && data.era_bands.length > 0) ERA_BANDS = data.era_bands;
     // Store raw era_bands for export
@@ -3895,6 +3903,8 @@ function exportJSON() {
     const clone = { ...ev };
     delete clone._autoParent;
     delete clone._crossRefs;  // internal only, don't export
+    if (clone._endNow) { clone.endYear = '__NOW__'; }
+    delete clone._endNow;     // internal flag, don't export
     if (edits[clone.id]) Object.assign(clone, edits[clone.id]);
     // clean up empty crossRef and endYear
     if (clone.crossRef === '' || clone.crossRef === undefined) delete clone.crossRef;
