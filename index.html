@@ -874,7 +874,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604141610</span>
+  <span id="version-label">v202604141704</span>
 </div>
 
 <div id="view-popup"></div>
@@ -2223,7 +2223,7 @@ function hasChildren(ev) {
 }
 
 // Y offset for an expanded child row below its parent
-const EXPAND_ROW_H = 36;
+const EXPAND_ROW_H = 14;
 
 function childRowY(parentY, depth) {
   return parentY + depth * EXPAND_ROW_H * Math.max(1, yScale);
@@ -2394,18 +2394,18 @@ function drawPill(ev, y, opts = {}) {
     const bw  = bx2 - bx1;
     if (bw > 0) {
       ctx.save();
-      const grad = ctx.createLinearGradient(bx1, y + pillH, bx1, childY - 7);
+      const grad = ctx.createLinearGradient(bx1, y + pillH, bx1, childY - 4);
       const [rc, gc, bc] = hexToRgb(color);
       grad.addColorStop(0,   `rgba(${rc},${gc},${bc},0.18)`);
       grad.addColorStop(1,   `rgba(${rc},${gc},${bc},0.06)`);
       ctx.fillStyle = grad;
-      ctx.fillRect(bx1, y + pillH, bw, childY - 7 - (y + pillH));
+      ctx.fillRect(bx1, y + pillH, bw, childY - 4 - (y + pillH));
       ctx.restore();
     }
 
-    // Draw child pills
+    // Draw child pills — recurse so grandchildren also get drawn
     children.forEach(child => {
-      if (eventVisible(child)) drawPill(child, childY, { depth: 1, isChild: true });
+      if (eventVisible(child)) drawPill(child, childY, { depth: depth + 1, isChild: true });
     });
   }
 }
@@ -3333,9 +3333,23 @@ function findEventsAt(mx, my) {
     if (ev.endYear && !resolvedParent(ev)) {
       y += offsets.get(ev.id) ?? 0;
     }
-    if (resolvedParent(ev) && expandedEvents.has(resolvedParent(ev))) {
-      const parent = events.find(e => e.id === resolvedParent(ev));
-      if (parent) y = childRowY(axisY(parent.axis), 1);
+    // Walk up parentEvent chain to find depth for expanded children/grandchildren
+    if (resolvedParent(ev)) {
+      let depth = 0;
+      let cur = ev;
+      let topAncestor = null;
+      while (resolvedParent(cur) && expandedEvents.has(resolvedParent(cur))) {
+        depth++;
+        const p = events.find(e => e.id === resolvedParent(cur));
+        if (!p) break;
+        topAncestor = p;
+        cur = p;
+      }
+      if (depth > 0 && topAncestor) {
+        y = childRowY(axisY(topAncestor.axis), depth);
+      } else {
+        return; // parent not expanded, child not visible
+      }
     }
 
     if (ev.endYear) {
@@ -3459,10 +3473,18 @@ function isInfoClick(ev, mx, my) {
 }
 
 function getPillY(ev) {
-  // Child pills expanded below parent
-  if (resolvedParent(ev) && expandedEvents.has(resolvedParent(ev))) {
-    const parent = events.find(e => e.id === resolvedParent(ev));
-    if (parent) return childRowY(axisY(parent.axis), 1);
+  // Walk up the parentEvent chain to find depth and root axis
+  let depth = 0;
+  let cur = ev;
+  while (resolvedParent(cur) && expandedEvents.has(resolvedParent(cur))) {
+    depth++;
+    const p = events.find(e => e.id === resolvedParent(cur));
+    if (!p) break;
+    cur = p;
+  }
+  if (depth > 0) {
+    // cur is now the top-level expanded ancestor
+    return childRowY(axisY(cur.axis), depth);
   }
   // Apply stacking offset for partial-overlap pills
   const offsets = getPillOffsets();
