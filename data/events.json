@@ -315,6 +315,18 @@
       "group": "civilization"
     },
     {
+      "id": "china",
+      "label": "中國",
+      "label_en": "China",
+      "color": "#ef4444",
+      "order": 32,
+      "parent": "human-evo",
+      "startYear": -5000,
+      "endYear": null,
+      "zoomMin": 0.3,
+      "group": "civilization"
+    },
+    {
       "id": "egypt",
       "label": "古埃及",
       "label_en": "Ancient Egypt",
@@ -327,14 +339,14 @@
       "group": "civilization"
     },
     {
-      "id": "persia",
-      "label": "波斯/伊朗",
-      "label_en": "Persia",
+      "id": "latin-america",
+      "label": "拉丁美洲",
+      "label_en": "Latin America",
       "color": "#fb923c",
-      "order": 39,
-      "parent": "mideast",
-      "startYear": -559,
-      "endYear": 1501,
+      "order": 34,
+      "parent": "americas",
+      "startYear": -3000,
+      "endYear": null,
       "zoomMin": 0.3,
       "group": "civilization"
     },
@@ -351,13 +363,25 @@
       "group": "civilization"
     },
     {
-      "id": "china",
-      "label": "中國",
-      "label_en": "China",
+      "id": "kush",
+      "label": "庫什/努比亞",
+      "label_en": "Kingdom of Kush",
+      "color": "#f97316",
+      "order": 36,
+      "parent": "africa",
+      "startYear": -2500,
+      "endYear": 350,
+      "zoomMin": 0.3,
+      "group": "civilization"
+    },
+    {
+      "id": "korea",
+      "label": "韓國",
+      "label_en": "Korea",
       "color": "#ef4444",
-      "order": 32,
-      "parent": "human-evo",
-      "startYear": -5000,
+      "order": 37,
+      "parent": "east",
+      "startYear": -2333,
       "endYear": null,
       "zoomMin": 0.3,
       "group": "civilization"
@@ -375,14 +399,74 @@
       "group": "civilization"
     },
     {
-      "id": "latin-america",
-      "label": "拉丁美洲",
-      "label_en": "Latin America",
+      "id": "persia",
+      "label": "波斯/伊朗",
+      "label_en": "Persia",
       "color": "#fb923c",
-      "order": 34,
-      "parent": "americas",
-      "startYear": -3000,
+      "order": 39,
+      "parent": "mideast",
+      "startYear": -559,
+      "endYear": 1501,
+      "zoomMin": 0.3,
+      "group": "civilization"
+    },
+    {
+      "id": "japan",
+      "label": "日本",
+      "label_en": "Japan",
+      "color": "#fbbf24",
+      "order": 40,
+      "parent": "east",
+      "startYear": -300,
       "endYear": null,
+      "zoomMin": 0.58,
+      "group": "civilization"
+    },
+    {
+      "id": "siam",
+      "label": "暹羅",
+      "label_en": "Siam",
+      "color": "#f97316",
+      "order": 41,
+      "parent": "southeast-asia",
+      "startYear": -200,
+      "endYear": 1932,
+      "zoomMin": 0.3,
+      "group": "civilization"
+    },
+    {
+      "id": "byzantine",
+      "label": "拜占庭帝國",
+      "label_en": "Byzantine Empire",
+      "color": "#ef4444",
+      "order": 42,
+      "parent": "greece",
+      "startYear": 330,
+      "endYear": 1453,
+      "zoomMin": 0.3,
+      "group": "civilization"
+    },
+    {
+      "id": "mongol",
+      "label": "蒙古帝國",
+      "label_en": "Mongol Empire",
+      "color": "#d97706",
+      "order": 43,
+      "parent": "central-asia",
+      "startYear": 1206,
+      "endYear": 1368,
+      "zoomMin": 0.3,
+      "group": "civilization"
+    },
+    {
+      "id": "ottoman",
+      "label": "鄂圖曼帝國",
+      "label_en": "Ottoman Empire",
+      "color": "#fb923c",
+      "order": 44,
+      "parent": "mideast",
+      "startYear": 1299,
+      "endYear": 1922,
       "zoomMin": 0.3,
       "group": "civilization"
     },
@@ -531,18 +615,6 @@
       "group": "nation"
     },
     {
-      "id": "japan",
-      "label": "日本",
-      "label_en": "Japan",
-      "color": "#fbbf24",
-      "order": 40,
-      "parent": "east",
-      "startYear": -300,
-      "endYear": null,
-      "zoomMin": 0.58,
-      "group": "civilization"
-    },
-    {
       "id": "europe",
       "label": "歐洲",
       "label_en": "Europe",
@@ -591,160 +663,88 @@
       "group": "nation"
     },
     {
-      "id": "korea",
-      "label": "韓國",
-      "label_en": "Korea",
-      "color": "#ef4444",
-      "parent": "east",
-      "startYear": -2333,
-      "endYear": null,
-      "zoomMin": 0.3,
-      "group": "civilization",
-      "order": 37
-    },
-    {
-      "id": "siam",
-      "label": "暹羅",
-      "label_en": "Siam",
-      "color": "#f97316",
-      "parent": "southeast-asia",
-      "startYear": -200,
-      "endYear": 1932,
-      "zoomMin": 0.3,
-      "group": "civilization",
-      "order": 41
-    },
-    {
-      "id": "byzantine",
-      "label": "拜占庭帝國",
-      "label_en": "Byzantine Empire",
-      "color": "#ef4444",
-      "parent": "greece",
-      "startYear": 330,
-      "endYear": 1453,
-      "zoomMin": 0.3,
-      "group": "civilization",
-      "order": 42
-    },
-    {
-      "id": "ottoman",
-      "label": "鄂圖曼帝國",
-      "label_en": "Ottoman Empire",
-      "color": "#fb923c",
-      "parent": "mideast",
-      "startYear": 1299,
-      "endYear": 1922,
-      "zoomMin": 0.3,
-      "group": "civilization",
-      "order": 44
-    },
-    {
-      "id": "mongol",
-      "label": "蒙古帝國",
-      "label_en": "Mongol Empire",
-      "color": "#d97706",
-      "parent": "central-asia",
-      "startYear": 1206,
-      "endYear": 1368,
-      "zoomMin": 0.3,
-      "group": "civilization",
-      "order": 43
-    },
-    {
-      "id": "kush",
-      "label": "庫什/努比亞",
-      "label_en": "Kingdom of Kush",
-      "color": "#f97316",
-      "parent": "africa",
-      "startYear": -2500,
-      "endYear": 350,
-      "zoomMin": 0.3,
-      "group": "civilization",
-      "order": 36
-    },
-    {
       "id": "iraq",
       "label": "伊拉克",
       "label_en": "Iraq",
       "color": "#93c5fd",
+      "order": 70,
       "parent": "mesopotamia",
       "startYear": 1920,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 70
+      "group": "nation"
     },
     {
       "id": "modern-egypt",
       "label": "現代埃及",
       "label_en": "Modern Egypt",
       "color": "#3b82f6",
+      "order": 71,
       "parent": "egypt",
       "startYear": 1805,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 71
+      "group": "nation"
     },
     {
       "id": "turkey",
       "label": "土耳其",
       "label_en": "Turkey",
       "color": "#1d4ed8",
+      "order": 72,
       "parent": "ottoman",
       "startYear": 1922,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 72
+      "group": "nation"
     },
     {
       "id": "thailand",
       "label": "泰國",
       "label_en": "Thailand",
       "color": "#60a5fa",
+      "order": 73,
       "parent": "siam",
       "startYear": 1932,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 73
+      "group": "nation"
     },
     {
       "id": "mongolia",
       "label": "蒙古國",
       "label_en": "Mongolia",
       "color": "#1e40af",
+      "order": 74,
       "parent": "mongol",
       "startYear": 1911,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 74
+      "group": "nation"
     },
     {
       "id": "australia",
       "label": "澳洲",
       "label_en": "Australia",
       "color": "#93c5fd",
+      "order": 75,
       "parent": "oceania",
       "startYear": 1901,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 75
+      "group": "nation"
     },
     {
       "id": "brazil",
       "label": "巴西",
       "label_en": "Brazil",
       "color": "#3b82f6",
+      "order": 76,
       "parent": "south-america",
       "startYear": 1822,
       "endYear": null,
       "zoomMin": 0.58,
-      "group": "nation",
-      "order": 76
+      "group": "nation"
     }
   ],
   "era_bands": [
@@ -1914,7 +1914,7 @@
       "desc_en": "Homo habilis creates the earliest stone tools (Oldowan industry), marking the dawn of human technology.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/石器時代",
       "wiki_en": "https://en.wikipedia.org/wiki/Stone_Age",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Ggantija_Temples_%281%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/National_park_stone_tools.jpg",
       "category": "biology",
       "category_broad": "natural"
     },
