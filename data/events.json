@@ -1968,7 +1968,7 @@
       "endYear": -11700,
       "zh": "末次冰河期",
       "en": "Last Glacial Period",
-      "axis": "human-evo",
+      "axis": "climate",
       "level": 2,
       "sub_track": 0,
       "desc_zh": "最後一次冰河期，冰蓋覆蓋北美、歐洲大部，海平面下降120公尺，人類通過白令陸橋進入美洲。",
@@ -1977,7 +1977,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Period",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Map_of_Alpine_Glaciations.png",
       "category": "geology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "parentEvent": "quaternary-glaciation"
     },
     {
       "id": "out-of-africa",
@@ -8608,7 +8609,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum",
       "endYear": -11700,
       "desc_en": "Peak of the last ice age ~26,000 years ago; ice sheets covered much of North America and Europe.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/末次冰盛期"
+      "wiki_zh": "https://zh.wikipedia.org/wiki/末次冰盛期",
+      "parentEvent": "last-ice-age"
     },
     {
       "id": "climate-holocene",
