@@ -83,14 +83,14 @@ python check.py
 **正常輸出範例：**
 ```
 ==================================================
-  事件總數     : 682
+  事件總數     : 712
   有圖片       : 546
-  缺圖片       : 136
-  有 en 名稱   : 682  (缺 0)
-  有 desc_en   : 682  (缺 0)
-  有 category  : 682  (缺 0)
-  有 wiki_zh   : 682  (缺 0)
-  有 wiki_en   : 682  (缺 0)
+  缺圖片       : 166
+  有 en 名稱   : 712  (缺 0)
+  有 desc_en   : 712  (缺 0)
+  有 category  : 712  (缺 0)
+  有 wiki_zh   : 712  (缺 0)
+  有 wiki_en   : 712  (缺 0)
   有 crossRef  : 200
   定義軸線數   : 59
   axis_groups  : 6 組
@@ -298,7 +298,7 @@ events.json
 ├── era_buttons       # 底部導航按鈕（12 個）
 ├── filter_cats       # 篩選分類（15 類）
 ├── views             # 主題視圖（24 個）
-└── events            # 歷史事件（682+ 個）
+└── events            # 歷史事件（712+ 個）
 ```
 
 > 所有 UI 資料（群組、時代色帶、導航按鈕、篩選分類）都從 JSON 動態載入，index.html 不寫死任何資料。
@@ -343,7 +343,7 @@ events.json
 | `en` | | 英文名稱 |
 | `axis` | ✓ | 所在軸線 id |
 | `level` | ✓ | 重要程度（1=大 2=中 3=小） |
-| `endYear` | | 結束年份（有填 = pill，沒填 = 點） |
+| `endYear` | | 結束年份（有填 = pill，沒填 = 點）。填 `"__NOW__"` 表示「至今」，載入時自動替換為當前年份，匯出時自動還原 |
 | `crossRef` | | 縱線連接目標軸線 id，支援單一字串或陣列（最多3條），例：`"cross"` 或 `["mideast","islam","cross"]` |
 | `image` | | 圖片 URL |
 | `desc_zh` | | 中文描述 |
@@ -402,6 +402,31 @@ cosmos 宇宙
          └─ life 生命
             └─ human-evo 人類演化
                └─ migration 人類遷徙
+```
+
+#### earth 軸線上的地質年代層級（pill 展開）
+
+地質年代以 parentEvent 建立宙→代→紀的展開層級，點擊 pill 可展開子分期。`endYear: "__NOW__"` 表示持續至今。
+
+```
+冥古宙 (-4540M → -4000M)
+太古宙 (-4000M → -2500M) → 展開：始太古代/古太古代/中太古代/新太古代
+元古宙 (-2500M → -541M) → 展開：
+  ├─ 古元古代 → 展開：成鐵紀/層侵紀/造山紀/固結紀
+  ├─ 中元古代 → 展開：蓋層紀/延展紀/拉伸紀(狹帶紀)
+  └─ 新元古代 → 展開：拉伸紀(Tonian)/克里奧真紀/埃迪卡拉紀
+顯生宙 (-541M → __NOW__) → 展開：
+  ├─ 古生代 → 展開：寒武紀/奧陶紀/志留紀/泥盆紀/石炭紀/二疊紀
+  ├─ 中生代 → 展開：三疊紀/侏羅紀/白堊紀
+  └─ 新生代 → 展開：古近紀/新近紀/第四紀
+```
+
+#### human-evo 軸線上的人類史分期（pill 展開）
+
+```
+石器時代 (-2.6M → -3300) → 展開：舊石器時代/中石器時代/新石器時代
+青銅時代 (-3300 → -1200)
+鐵器時代 (-1200 → -500)
 ```
 
 ### 🌍 global 世界
@@ -537,3 +562,14 @@ brazil 巴西 ← south-america
 | 2026-04-14 | index.html exportJSON 修正：補齊 label_en/axis_groups/era_buttons/filter_cats/views 導出 |
 | 2026-04-14 | cosmic-tools.html 新增軸線表單：群組下拉改動態讀取、加 label_en 和排列位置欄位 |
 | 2026-04-14 | Order 區間規則定義：natural 0-9, global 10-19, region 20-29, civilization 30-49, religion 50-59, nation 60-99 |
+| 2026-04-14 | 色系統一：每 group 定義 5 個色階循環套用（natural 漸層/global 各指定/region 粉紫/civilization 橘紅金/religion 綠/nation 藍）|
+| 2026-04-14 | 新增 10 個 human-evo 事件（人猿分化→馴化狗），startYear 調整為 -7.5M |
+| 2026-04-14 | 地質年代移到 earth 軸線：17 個 pill 從 life 移到 earth，建立 parentEvent 宙→代→紀展開層級 |
+| 2026-04-14 | 新增顯生宙 + 古近紀/新近紀/第四紀 + 石器/舊石器/中石器/新石器時代，青銅/鐵器時代移到 human-evo |
+| 2026-04-14 | 末次冰河期移到 climate 軸線，建立第四紀冰河期→末次冰河期→末次冰盛期展開層級 |
+| 2026-04-14 | `endYear: "__NOW__"` 功能：載入時自動替換為當前年份，顯示「至今」，匯出時自動還原 |
+| 2026-04-14 | index.html popup edit 重排：軸線屬性區（Zoom/Position/Color/Parent/StartYear）→ 分隔線 → 事件屬性區 |
+| 2026-04-14 | index.html 新增軸線 Color 編輯（色票 + hex 輸入）|
+| 2026-04-14 | EXPAND_ROW_H 36→14：展開 pill 間距縮小避免跨線，支援三層展開 |
+| 2026-04-14 | 第三階展開 pill 可點擊：drawPill 遞迴繪製、getPillY/findEventsAt 支援任意深度 hit test |
+| 2026-04-14 | 補齊地質年代到「紀」：太古宙4代 + 古元古代4紀 + 中元古代3紀 + 新元古代1紀（共 712 事件）|
