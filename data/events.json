@@ -1082,6 +1082,313 @@
       "color": "#e2e8f0"
     }
   ],
+  "views": [
+    {
+      "id": "nat-cosmos",
+      "category": "自然與宇宙",
+      "label": "宇宙歷史",
+      "axes": [
+        "cosmos",
+        "galaxy",
+        "solar-system"
+      ],
+      "label_en": "Cosmic History",
+      "category_en": "Nature & Universe"
+    },
+    {
+      "id": "nat-earth",
+      "category": "自然與宇宙",
+      "label": "地球與生命",
+      "axes": [
+        "earth",
+        "climate",
+        "life"
+      ],
+      "label_en": "Earth & Life",
+      "category_en": "Nature & Universe"
+    },
+    {
+      "id": "nat-human",
+      "category": "自然與宇宙",
+      "label": "人類演化與遷徙",
+      "axes": [
+        "human-evo",
+        "migration"
+      ],
+      "label_en": "Human Evolution",
+      "category_en": "Nature & Universe"
+    },
+    {
+      "id": "civ-all",
+      "category": "文明縱覽",
+      "label": "全部文明",
+      "axes": [
+        "east",
+        "west",
+        "africa",
+        "americas",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china",
+        "greece",
+        "latin-america"
+      ],
+      "label_en": "All Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-east",
+      "category": "文明縱覽",
+      "label": "東方文明",
+      "axes": [
+        "east",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china"
+      ],
+      "label_en": "Eastern Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-west",
+      "category": "文明縱覽",
+      "label": "西方文明",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "Western Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-africa",
+      "category": "文明縱覽",
+      "label": "非洲文明",
+      "axes": [
+        "africa",
+        "egypt"
+      ],
+      "label_en": "African Civilizations",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "civ-americas",
+      "category": "文明縱覽",
+      "label": "美洲文明",
+      "axes": [
+        "americas",
+        "latin-america"
+      ],
+      "label_en": "Americas",
+      "category_en": "Civilizations"
+    },
+    {
+      "id": "thm-religion",
+      "category": "主題",
+      "label": "宗教發展",
+      "axes": [
+        "judaism",
+        "christianity",
+        "islam",
+        "hinduism",
+        "buddhism",
+        "taoism"
+      ],
+      "label_en": "World Religions",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-science",
+      "category": "主題",
+      "label": "科學技術",
+      "axes": [
+        "science",
+        "cross"
+      ],
+      "label_en": "Science & Technology",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-trade",
+      "category": "主題",
+      "label": "貿易全球化",
+      "axes": [
+        "trade",
+        "cross"
+      ],
+      "label_en": "Trade & Exploration",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-climate",
+      "category": "主題",
+      "label": "氣候環境",
+      "axes": [
+        "climate",
+        "earth"
+      ],
+      "label_en": "Climate & Environment",
+      "category_en": "Themes"
+    },
+    {
+      "id": "nat-iceages",
+      "category": "主題",
+      "label": "五次大冰河期",
+      "axes": [
+        "climate",
+        "earth",
+        "life"
+      ],
+      "label_en": "Five Ice Ages",
+      "category_en": "Themes"
+    },
+    {
+      "id": "thm-migration",
+      "category": "主題",
+      "label": "人類遷徙",
+      "axes": [
+        "migration",
+        "oceania",
+        "central-asia",
+        "southeast-asia",
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Human Migration",
+      "category_en": "Themes"
+    },
+    {
+      "id": "reg-mideast",
+      "category": "地區",
+      "label": "中東歷史",
+      "axes": [
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "islam",
+        "judaism",
+        "iran"
+      ],
+      "label_en": "Middle East History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-eastasia",
+      "category": "地區",
+      "label": "東亞歷史",
+      "axes": [
+        "east",
+        "china",
+        "japan",
+        "taiwan"
+      ],
+      "label_en": "East Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-europe",
+      "category": "地區",
+      "label": "歐洲歷史",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "European History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-southasia",
+      "category": "地區",
+      "label": "南亞歷史",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism"
+      ],
+      "label_en": "South Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-africa",
+      "category": "地區",
+      "label": "非洲歷史",
+      "axes": [
+        "africa",
+        "north-africa",
+        "west-africa",
+        "east-africa",
+        "south-africa",
+        "egypt"
+      ],
+      "label_en": "African History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-americas",
+      "category": "地區",
+      "label": "美洲歷史",
+      "axes": [
+        "americas",
+        "latin-america",
+        "north-america",
+        "usa",
+        "south-america"
+      ],
+      "label_en": "Americas History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-oceania",
+      "category": "地區",
+      "label": "大洋洲",
+      "axes": [
+        "oceania",
+        "antarctic"
+      ],
+      "label_en": "Oceania",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-centralas",
+      "category": "地區",
+      "label": "中亞歷史",
+      "axes": [
+        "central-asia"
+      ],
+      "label_en": "Central Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-sea",
+      "category": "地區",
+      "label": "東南亞歷史",
+      "axes": [
+        "southeast-asia"
+      ],
+      "label_en": "SE Asia History",
+      "category_en": "Regions"
+    },
+    {
+      "id": "reg-polar",
+      "category": "地區",
+      "label": "極地",
+      "axes": [
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Polar Regions",
+      "category_en": "Regions"
+    }
+  ],
   "events": [
     {
       "id": "big-bang-event",
@@ -1097,7 +1404,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/大爆炸",
       "wiki_en": "https://en.wikipedia.org/wiki/Big_Bang",
       "category": "astronomy",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0553380168",
+      "amazon_title": "A Brief History of Time — Stephen Hawking"
     },
     {
       "id": "first-stars-event",
@@ -1145,7 +1454,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/太陽系",
       "wiki_en": "https://en.wikipedia.org/wiki/Solar_System",
       "category": "astronomy",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0142001163",
+      "amazon_title": "The Planets — Dava Sobel"
     },
     {
       "id": "earth-forms-event",
@@ -1161,7 +1472,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/地球",
       "wiki_en": "https://en.wikipedia.org/wiki/Earth",
       "category": "geology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0767908171",
+      "amazon_title": "A Short History of Nearly Everything — Bill Bryson"
     },
     {
       "id": "hadean",
@@ -1227,7 +1540,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/生命起源",
       "wiki_en": "https://en.wikipedia.org/wiki/Abiogenesis",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0393088812",
+      "amazon_title": "The Vital Question — Nick Lane"
     },
     {
       "id": "proterozoic",
@@ -1277,7 +1592,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/大氧化事件",
       "wiki_en": "https://en.wikipedia.org/wiki/Great_Oxidation_Event",
       "category": "geology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0198784937",
+      "amazon_title": "Oxygen — Nick Lane"
     },
     {
       "id": "eukaryotes-event",
@@ -1468,7 +1785,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/二疊紀末滅絕事件",
       "wiki_en": "https://en.wikipedia.org/wiki/Permian%E2%80%93Triassic_extinction_event",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0500291934",
+      "amazon_title": "When Life Nearly Died — Michael Benton"
     },
     {
       "id": "mesozoic",
@@ -1556,7 +1875,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/白堊紀-古近紀滅絕事件",
       "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "1250062187",
+      "amazon_title": "The Sixth Extinction — Elizabeth Kolbert"
     },
     {
       "id": "cenozoic",
@@ -1655,7 +1976,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/智人",
       "wiki_en": "https://en.wikipedia.org/wiki/Homo_sapiens",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0062316117",
+      "amazon_title": "Sapiens — Yuval Noah Harari"
     },
     {
       "id": "last-ice-age",
@@ -1689,7 +2012,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/人類走出非洲",
       "wiki_en": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "amazon_asin": "0812971469",
+      "amazon_title": "The Journey of Man — Spencer Wells"
     },
     {
       "id": "cave-art-event",
@@ -1752,7 +2077,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/農業起源",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_agriculture",
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "amazon_asin": "0393354326",
+      "amazon_title": "Guns, Germs, and Steel — Jared Diamond"
     },
     {
       "id": "tw-dapenkeng",
@@ -1800,7 +2127,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/美索不達米亞",
       "wiki_en": "https://en.wikipedia.org/wiki/Mesopotamia",
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "amazon_asin": "0226452387",
+      "amazon_title": "The Sumerians — Samuel Noah Kramer"
     },
     {
       "id": "indus-valley",
@@ -2139,7 +2468,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Qin_dynasty",
       "endYear": -206,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "amazon_asin": "0674057341",
+      "amazon_title": "The Early Chinese Empires — Mark Edward Lewis"
     },
     {
       "id": "han",
@@ -2360,7 +2691,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Tang_dynasty",
       "endYear": 907,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "amazon_asin": "0195176650",
+      "amazon_title": "China's Golden Age — Charles Benn"
     },
     {
       "id": "islam",
@@ -2642,7 +2975,9 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/宗教改革",
       "wiki_en": "https://en.wikipedia.org/wiki/Reformation",
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "amazon_asin": "0812996194",
+      "amazon_title": "Martin Luther — Lyndal Roper"
     },
     {
       "id": "tw-dadu-kingdom",
@@ -3151,7 +3486,9 @@
       "sub_track": 0,
       "category": "science",
       "category_broad": "human",
-      "crossRef": "cross"
+      "crossRef": "cross",
+      "amazon_asin": "074321630X",
+      "amazon_title": "The Double Helix — James Watson"
     },
     {
       "id": "tw-economic-miracle",
@@ -3284,7 +3621,9 @@
       "sub_track": 0,
       "category": "civilization",
       "category_broad": "human",
-      "crossRef": "cross"
+      "crossRef": "cross",
+      "amazon_asin": "1101970316",
+      "amazon_title": "Life 3.0 — Max Tegmark"
     },
     {
       "id": "cosmic-inflation",
@@ -3314,7 +3653,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cosmic_microwave_background",
       "category": "astronomy",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/WMAP_2012.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/WMAP_2012.png",
+      "amazon_asin": "0465024378",
+      "amazon_title": "The First Three Minutes — Steven Weinberg"
     },
     {
       "id": "dark-ages-cosmos",
@@ -3913,7 +4254,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Muhammad",
       "category": "religion",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Muslim_depiction_of_Muhammad_-_17th_century_Ottoman_copy_from_the_%22Edinburgh_codex%22.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Muslim_depiction_of_Muhammad_-_17th_century_Ottoman_copy_from_the_%22Edinburgh_codex%22.jpg",
+      "amazon_asin": "1594771537",
+      "amazon_title": "Muhammad — Martin Lings"
     },
     {
       "id": "first-revelation",
@@ -4271,7 +4614,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Aristotle",
       "category": "philosophy",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg",
+      "amazon_asin": "0199213615",
+      "amazon_title": "The Nicomachean Ethics — Aristotle"
     },
     {
       "id": "euclid",
@@ -4319,7 +4664,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Roman_Empire",
       "category": "civilization",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Roman_Empire_Trajan_117AD.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Roman_Empire_Trajan_117AD.png",
+      "amazon_asin": "1631492225",
+      "amazon_title": "SPQR — Mary Beard"
     },
     {
       "id": "pompeii",
@@ -4412,7 +4759,9 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Crucifixion_of_Jesus",
       "category": "religion",
       "category_broad": "human",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristo_crucificado.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristo_crucificado.jpg",
+      "amazon_asin": "0062084399",
+      "amazon_title": "Simply Jesus — N.T. Wright"
     },
     {
       "id": "paul-missions",
@@ -4879,7 +5228,9 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BBH_gravitational_lensing_of_gw150914.webm/1280px--BBH_gravitational_lensing_of_gw150914.webm.jpg",
-      "crossRef": "cross"
+      "crossRef": "cross",
+      "amazon_asin": "1891396307",
+      "amazon_title": "Relativity — Albert Einstein"
     },
     {
       "id": "quantum-mechanics",
@@ -5751,7 +6102,9 @@
       "desc_en": "Homer composes the Iliad and Odyssey, founding the Western literary tradition and influencing 2,000 years of European literature.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/荷馬",
       "wiki_en": "https://en.wikipedia.org/wiki/Homer",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Homer_bust%2C_Farnese_collection_%28Naples%29.jpg/1280px-Homer_bust%2C_Farnese_collection_%28Naples%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Homer_bust%2C_Farnese_collection_%28Naples%29.jpg/1280px-Homer_bust%2C_Farnese_collection_%28Naples%29.jpg",
+      "amazon_asin": "0140275363",
+      "amazon_title": "The Iliad — Homer (transl. Robert Fagles)"
     },
     {
       "id": "laozi-arts",
@@ -6259,7 +6612,9 @@
       "desc_en": "Built for Pharaoh Khufu, the Great Pyramid is the only surviving Wonder of the Ancient World, showcasing Egyptian engineering mastery.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/吉薩大金字塔",
       "wiki_en": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/1280px-Kheops-Pyramid.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/1280px-Kheops-Pyramid.jpg",
+      "amazon_asin": "0192804588",
+      "amazon_title": "The Oxford History of Ancient Egypt"
     },
     {
       "id": "egypt-new-kingdom-ev",
@@ -11676,7 +12031,9 @@
       "desc_en": "The eon of visible life, from the Cambrian Explosion to the present, encompassing the Paleozoic, Mesozoic, and Cenozoic eras.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/顯生宙",
       "wiki_en": "https://en.wikipedia.org/wiki/Phanerozoic",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Phanerozoic_diversity.png/960px-Phanerozoic_diversity.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Phanerozoic_diversity.png/960px-Phanerozoic_diversity.png",
+      "amazon_asin": "039330700X",
+      "amazon_title": "Wonderful Life — Stephen Jay Gould"
     },
     {
       "id": "paleogene",
@@ -12147,7 +12504,9 @@
       "desc_en": "The universe transitions from decelerating to accelerating expansion; confirmed by supernova observations in 1998.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/暗能量",
       "wiki_en": "https://en.wikipedia.org/wiki/Dark_energy",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Dark_Energy.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Dark_Energy.jpg",
+      "amazon_asin": "0547577575",
+      "amazon_title": "The 4% Universe — Richard Panek"
     },
     {
       "id": "gal-first-stars",
@@ -12483,7 +12842,9 @@
       "desc_en": "A 10km asteroid strikes the Gulf of Mexico, causing the dinosaur extinction and ending the Cretaceous.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/希克蘇魯伯隕石坑",
       "wiki_en": "https://en.wikipedia.org/wiki/Chicxulub_crater",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Yucatan_chix_crater.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Yucatan_chix_crater.jpg",
+      "amazon_asin": "0062364812",
+      "amazon_title": "The Ends of the World — Peter Brannen"
     },
     {
       "id": "sol-barringer",
@@ -12553,7 +12914,9 @@
       "desc_en": "Armstrong and crew become the first humans to set foot on the Moon.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/阿波罗11号",
       "wiki_en": "https://en.wikipedia.org/wiki/Apollo_11",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/1280px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/1280px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg",
+      "amazon_asin": "0316412694",
+      "amazon_title": "One Giant Leap — Charles Fishman"
     },
     {
       "id": "sol-new-horizons",
@@ -12581,7 +12944,9 @@
       "desc_en": "Overturns geocentrism, establishing the Sun as the center of the solar system.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/哥白尼",
       "wiki_en": "https://en.wikipedia.org/wiki/Copernican_heliocentrism",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Copernican_heliocentrism_diagram-2.jpg/1280px-Copernican_heliocentrism_diagram-2.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Copernican_heliocentrism_diagram-2.jpg/1280px-Copernican_heliocentrism_diagram-2.jpg",
+      "amazon_asin": "0674171039",
+      "amazon_title": "The Copernican Revolution — Thomas Kuhn"
     },
     {
       "id": "sci-galileo-telescope",
@@ -12805,7 +13170,9 @@
       "desc_en": "The first stars ignite nuclear fusion, ending the cosmic Dark Ages that lasted hundreds of millions of years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/宇宙黎明",
       "wiki_en": "https://en.wikipedia.org/wiki/Cosmic_dawn",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Distant_galaxy_GN-z11_in_GOODS-N_image_by_HST.jpg/1920px-Distant_galaxy_GN-z11_in_GOODS-N_image_by_HST.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Distant_galaxy_GN-z11_in_GOODS-N_image_by_HST.jpg/1920px-Distant_galaxy_GN-z11_in_GOODS-N_image_by_HST.jpg",
+      "amazon_asin": "0393609391",
+      "amazon_title": "Astrophysics for People in a Hurry — Neil deGrasse Tyson"
     },
     {
       "id": "cos-reionization-end",
@@ -13240,313 +13607,6 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/毅力號火星探測車",
       "wiki_en": "https://en.wikipedia.org/wiki/Perseverance_(rover)",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Perseverance-Selfie-at-Rochette-Horizontal-V2.gif"
-    }
-  ],
-  "views": [
-    {
-      "id": "nat-cosmos",
-      "category": "自然與宇宙",
-      "label": "宇宙歷史",
-      "axes": [
-        "cosmos",
-        "galaxy",
-        "solar-system"
-      ],
-      "label_en": "Cosmic History",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "nat-earth",
-      "category": "自然與宇宙",
-      "label": "地球與生命",
-      "axes": [
-        "earth",
-        "climate",
-        "life"
-      ],
-      "label_en": "Earth & Life",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "nat-human",
-      "category": "自然與宇宙",
-      "label": "人類演化與遷徙",
-      "axes": [
-        "human-evo",
-        "migration"
-      ],
-      "label_en": "Human Evolution",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "civ-all",
-      "category": "文明縱覽",
-      "label": "全部文明",
-      "axes": [
-        "east",
-        "west",
-        "africa",
-        "americas",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china",
-        "greece",
-        "latin-america"
-      ],
-      "label_en": "All Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-east",
-      "category": "文明縱覽",
-      "label": "東方文明",
-      "axes": [
-        "east",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china"
-      ],
-      "label_en": "Eastern Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-west",
-      "category": "文明縱覽",
-      "label": "西方文明",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "Western Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-africa",
-      "category": "文明縱覽",
-      "label": "非洲文明",
-      "axes": [
-        "africa",
-        "egypt"
-      ],
-      "label_en": "African Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-americas",
-      "category": "文明縱覽",
-      "label": "美洲文明",
-      "axes": [
-        "americas",
-        "latin-america"
-      ],
-      "label_en": "Americas",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "thm-religion",
-      "category": "主題",
-      "label": "宗教發展",
-      "axes": [
-        "judaism",
-        "christianity",
-        "islam",
-        "hinduism",
-        "buddhism",
-        "taoism"
-      ],
-      "label_en": "World Religions",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-science",
-      "category": "主題",
-      "label": "科學技術",
-      "axes": [
-        "science",
-        "cross"
-      ],
-      "label_en": "Science & Technology",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-trade",
-      "category": "主題",
-      "label": "貿易全球化",
-      "axes": [
-        "trade",
-        "cross"
-      ],
-      "label_en": "Trade & Exploration",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-climate",
-      "category": "主題",
-      "label": "氣候環境",
-      "axes": [
-        "climate",
-        "earth"
-      ],
-      "label_en": "Climate & Environment",
-      "category_en": "Themes"
-    },
-    {
-      "id": "nat-iceages",
-      "category": "主題",
-      "label": "五次大冰河期",
-      "axes": [
-        "climate",
-        "earth",
-        "life"
-      ],
-      "label_en": "Five Ice Ages",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-migration",
-      "category": "主題",
-      "label": "人類遷徙",
-      "axes": [
-        "migration",
-        "oceania",
-        "central-asia",
-        "southeast-asia",
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Human Migration",
-      "category_en": "Themes"
-    },
-    {
-      "id": "reg-mideast",
-      "category": "地區",
-      "label": "中東歷史",
-      "axes": [
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "islam",
-        "judaism",
-        "iran"
-      ],
-      "label_en": "Middle East History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-eastasia",
-      "category": "地區",
-      "label": "東亞歷史",
-      "axes": [
-        "east",
-        "china",
-        "japan",
-        "taiwan"
-      ],
-      "label_en": "East Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-europe",
-      "category": "地區",
-      "label": "歐洲歷史",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "European History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-southasia",
-      "category": "地區",
-      "label": "南亞歷史",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism"
-      ],
-      "label_en": "South Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-africa",
-      "category": "地區",
-      "label": "非洲歷史",
-      "axes": [
-        "africa",
-        "north-africa",
-        "west-africa",
-        "east-africa",
-        "south-africa",
-        "egypt"
-      ],
-      "label_en": "African History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-americas",
-      "category": "地區",
-      "label": "美洲歷史",
-      "axes": [
-        "americas",
-        "latin-america",
-        "north-america",
-        "usa",
-        "south-america"
-      ],
-      "label_en": "Americas History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-oceania",
-      "category": "地區",
-      "label": "大洋洲",
-      "axes": [
-        "oceania",
-        "antarctic"
-      ],
-      "label_en": "Oceania",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-centralas",
-      "category": "地區",
-      "label": "中亞歷史",
-      "axes": [
-        "central-asia"
-      ],
-      "label_en": "Central Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-sea",
-      "category": "地區",
-      "label": "東南亞歷史",
-      "axes": [
-        "southeast-asia"
-      ],
-      "label_en": "SE Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-polar",
-      "category": "地區",
-      "label": "極地",
-      "axes": [
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Polar Regions",
-      "category_en": "Regions"
     }
   ]
 }
