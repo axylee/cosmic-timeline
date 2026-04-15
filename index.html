@@ -765,6 +765,13 @@ body {
   color: var(--text); border-color: rgba(255,255,255,0.3);
   background: rgba(255,255,255,0.05);
 }
+.popup-link-affiliate {
+  border-color: rgba(251,191,36,0.3); color: #fbbf24;
+}
+.popup-link-affiliate:hover {
+  border-color: rgba(251,191,36,0.6); background: rgba(251,191,36,0.08);
+  color: #fbbf24;
+}
 .popup-close {
   position: absolute; top: 14px; right: 14px;
   width: 30px; height: 30px;
@@ -1023,7 +1030,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604151633</span>
+  <span id="version-label">v202604151925</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -3907,6 +3914,26 @@ function showPopup(ev) {
     a.target = '_blank';
     a.rel = 'noopener';
     a.innerHTML = '🌐 EN Wikipedia';
+    linksEl.appendChild(a);
+  }
+  // Affiliate book links
+  if (ev.amazon_asin) {
+    const a = document.createElement('a');
+    a.className = 'popup-link popup-link-affiliate';
+    a.href = 'https://www.amazon.com/dp/' + ev.amazon_asin + '?tag=cosmictimelin-20';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.title = ev.amazon_title || '';
+    a.innerHTML = '📚 ' + T('亞馬遜', 'Amazon');
+    linksEl.appendChild(a);
+  }
+  if (ev.books_id) {
+    const a = document.createElement('a');
+    a.className = 'popup-link popup-link-affiliate';
+    a.href = 'https://www.books.com.tw/exep/assp.php/' + ev.books_id;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.innerHTML = '📚 ' + T('博客來', 'Books');
     linksEl.appendChild(a);
   }
 
