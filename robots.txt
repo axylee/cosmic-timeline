@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /data/events.json
+
+Sitemap: https://cosmichistorytimeline.com/sitemap.xml
