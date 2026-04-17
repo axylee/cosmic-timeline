@@ -1030,7 +1030,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604151942</span>
+  <span id="version-label">v202604171803</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -1252,6 +1252,22 @@ body {
           <div class="edit-label">Wikipedia (EN)</div>
           <input class="edit-input" id="edit-wiki-en" type="text">
         </div>
+        <div class="edit-row">
+          <div class="edit-label">📚 Amazon ASIN</div>
+          <input class="edit-input" id="edit-amazon-asin" type="text" placeholder="e.g. 0553380168">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">📚 Amazon Title</div>
+          <input class="edit-input" id="edit-amazon-title" type="text" placeholder="e.g. A Brief History of Time">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">📚 博客來 ID</div>
+          <input class="edit-input" id="edit-books-id" type="text" placeholder="e.g. 0010825573">
+        </div>
+        <div class="edit-row">
+          <div class="edit-label">📚 博客來書名</div>
+          <input class="edit-input" id="edit-books-title" type="text" placeholder="e.g. 時間簡史">
+        </div>
         <div class="edit-actions">
           <button class="edit-save-btn" id="edit-save-btn">✓ Save</button>
         </div>
@@ -1348,6 +1364,27 @@ const TIMELINE_END   = FUTURE_END;
 let AXES = {};   // filled from JSON axes array
 
 // Build AXES from JSON axes array
+// ════════════════════════════════════════════
+//  URL ROUTING + SCOPE FILTER (Round 2)
+// ════════════════════════════════════════════
+// 讀取 URL 參數 ?v=<view-id>
+function getCurrentView() {
+  const params = new URLSearchParams(location.search);
+  return params.get('v') || 'main';
+}
+
+// 判斷軸線是否應在當前頁面顯示
+// scope 欄位：
+//   - 沒有 scope → 所有頁面都顯示（向下相容）
+//   - scope: ["main"] → 只在主頁顯示
+//   - scope: ["china"] → 只在中國頁顯示
+//   - scope: ["main", "china"] → 兩頁都顯示
+function isAxisVisibleInCurrentView(ax) {
+  if (!ax.scope || !Array.isArray(ax.scope) || ax.scope.length === 0) return true;
+  const currentView = getCurrentView();
+  return ax.scope.includes(currentView);
+}
+
 function buildAxes(axesArray) {
   AXES = {};
   axesArray.forEach(ax => {
@@ -1361,8 +1398,21 @@ function buildAxes(axesArray) {
       order:     ax.order,
       zoomMin:   ax.zoomMin ?? 0,
       group:     ax.group || 'nation',
+      scope:     ax.scope,  // 保留 scope 以便後續過濾和 exportJSON
     };
   });
+
+  // Round 2: 根據 scope 在「顯示」時過濾（而非載入時排除）
+  // 主頁載入時，把 scope 不含 'main' 的軸線預設隱藏
+  const currentView = getCurrentView();
+  axesArray.forEach(ax => {
+    if (ax.scope && Array.isArray(ax.scope) && ax.scope.length > 0) {
+      if (!ax.scope.includes(currentView)) {
+        hiddenAxes.add(ax.id);  // 預設隱藏（但仍在 AXES 裡，applyView 時可恢復）
+      }
+    }
+  });
+
   // Rebuild AXIS_GROUP_MAP after axes are loaded
   buildAxisGroupMap();
   // Rebuild legend
@@ -1587,6 +1637,13 @@ function showAllAxes() {
   _soloSet.clear();
   hiddenAxes.clear();
   _setSoloCtrl(false);
+  // Round 2: 重新隱藏 scope 不匹配的軸線（清除後 scope 軸線不應全部冒出來）
+  const currentView = getCurrentView();
+  Object.entries(AXES).forEach(([id, ax]) => {
+    if (ax.scope && Array.isArray(ax.scope) && ax.scope.length > 0) {
+      if (!ax.scope.includes(currentView)) hiddenAxes.add(id);
+    }
+  });
   updateLegendState(); draw();
 }
 
@@ -1647,6 +1704,16 @@ function updateLegendState() {
     const ax = AXES[id];
     if (!ax) return;
     el.style.display = (ax.zoomMin === 0 || zoom >= ax.zoomMin) ? '' : 'none';
+    // Round 2: scope 不匹配的軸線在 Legend 裡完全隱藏（不是暗淡）
+    if (ax.scope && Array.isArray(ax.scope) && ax.scope.length > 0) {
+      // 檢查：是否有 active view 且該 view 的 axes 包含這條軸線
+      const activeView = _viewDefs.find(v => v.id === _activeViewId);
+      const inActiveView = activeView && activeView.axes.includes(id);
+      // URL ?v= 的 scope 匹配 OR active view 裡面有
+      if (!ax.scope.includes(getCurrentView()) && !inActiveView) {
+        el.style.display = 'none';
+      }
+    }
     const dot = el.querySelector('.leg-dot');
     if (dot) dot.style.background = axisEffectiveColor(id);
     if (soloActive) {
@@ -2425,7 +2492,7 @@ function getPillOffsets() {
   });
 
   const PILL_H = 10;
-  const OFFSET = PILL_H * 2 + 6;
+  const OFFSET = EXPAND_ROW_H * Math.max(1, yScale);  // 14px × yScale — 與父子展開間距一致
 
   Object.values(byAxis).forEach(pills => {
     pills.sort((a, b) => a.year - b.year);
@@ -2744,20 +2811,31 @@ function drawEvents(eventsInView) {
 
   // ── Pass 3: crossRef lines — vertical connector to target axis ──
   // Only show when zoomed in enough (otherwise too cluttered)
-  if (zoom >= 0.55) {
-    sorted.forEach(ev => {
+  // Round 3: 即使本體軸線被 scope 過濾掉（AXES[ev.axis] 不存在），
+  //          只要 crossRef 目標軸線可見，仍在目標軸線畫空心圓（不畫連接線）
+  const crZoomThreshold = _activeViewId ? 0.30 : 0.55;
+  if (zoom >= crZoomThreshold) {
+    // Round 3 修正：直接遍歷所有事件（不用 sorted，因為 sorted 只含本軸可見的事件）
+    // 要找「有 crossRef 到可見軸線」的事件，即使本體軸線不在 AXES 裡
+    events.forEach(ev => {
       if (!ev._crossRefs || !ev._crossRefs.length) return;
-      if (!eventVisible(ev)) return;
       if (ev.endYear) return;  // only point events
-      if ((_soloSet.size === 0) && hiddenAxes.has(ev.axis)) return;
 
-      const x    = yearToX(ev.year);
+      const mainAxVisible = !!AXES[ev.axis];  // 本體軸線是否存在於 AXES（scope 過濾後）
+      const mainAxHidden  = mainAxVisible && hiddenAxes.has(ev.axis);
+
+      // 如果本體軸線存在且可見，沿用原本行為（也要檢查 solo 和 eventVisible）
+      // 如果本體軸線不存在（scope 過濾掉），直接只畫空心圓（不畫連接線）
+      if (mainAxVisible) {
+        if (!eventVisible(ev)) return;
+        if ((_soloSet.size === 0) && mainAxHidden) return;
+      }
+
+      const x = yearToX(ev.year);
       if (x < -20 || x > canvasW + 20) return;
 
-      const yMap  = getAxisYMap();
-      if (!yMap.has(ev.axis)) return;
-
-      const y1    = axisY(ev.axis);
+      const yMap = getAxisYMap();
+      const y1   = mainAxVisible ? axisY(ev.axis) : null;
       const color = eventColor(ev);
       const catA  = categoryAlpha(ev);
       const r     = dotRadius(ev);
@@ -2770,22 +2848,24 @@ function drawEvents(eventsInView) {
         if (!yMap.has(crId)) return;
 
         const y2 = axisY(crId);
-        if (Math.abs(y1 - y2) < 4) return;
+        if (y1 !== null && Math.abs(y1 - y2) < 4) return;
 
         ctx.save();
         ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35);
 
-        // Vertical dashed line
-        ctx.beginPath();
-        ctx.moveTo(x, Math.min(y1, y2) + r);
-        ctx.lineTo(x, Math.max(y1, y2) - r);
-        ctx.strokeStyle = color;
-        ctx.lineWidth   = isHov ? 1.5 : 1;
-        ctx.setLineDash([3, 4]);
-        ctx.stroke();
-        ctx.setLineDash([]);
+        // Vertical dashed line (只在本體軸線可見時畫)
+        if (y1 !== null) {
+          ctx.beginPath();
+          ctx.moveTo(x, Math.min(y1, y2) + r);
+          ctx.lineTo(x, Math.max(y1, y2) - r);
+          ctx.strokeStyle = color;
+          ctx.lineWidth   = isHov ? 1.5 : 1;
+          ctx.setLineDash([3, 4]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
 
-        // Hollow circle on target axis
+        // Hollow circle on target axis (不論本體軸線是否可見都畫)
         ctx.globalAlpha = catA * (isHov ? 0.9 : 0.55);
         ctx.beginPath();
         ctx.arc(x, y2, r * 0.85, 0, Math.PI * 2);
@@ -3504,6 +3584,26 @@ function findEventsAt(mx, my) {
   const zoom     = currentZoom();
 
   events.forEach(ev => {
+    // Round 3: 特殊處理 — 本體軸線被 scope 過濾掉的事件
+    const mainAxInScope = !!AXES[ev.axis];
+    if (!mainAxInScope) {
+      // 本體軸線不存在（被 scope 過濾）→ 只能透過 crossRef 空心圓點到
+      if (!ev._crossRefs || !ev._crossRefs.length) return;
+      if (ev.endYear) return;  // crossRef 只支援 point events
+      if (zoom < 0.55) return;  // 太遠不畫空心圓
+      const x = yearToX(ev.year);
+      if (x < -20 || x > canvasW + 20) return;
+      ev._crossRefs.forEach(crId => {
+        if (!AXES[crId] || hiddenAxes.has(crId) || !getAxisYMap().has(crId)) return;
+        const y2 = axisY(crId);
+        const d2 = Math.hypot(mx - x, my - y2);
+        if (d2 <= Math.max(HIT_DOT, dotRadius(ev) + 12)) {
+          results.push({ ev, dist: d2 + 0.1 });
+        }
+      });
+      return;  // 這類事件只走 crossRef 路徑，不走一般點位檢測
+    }
+
     if (!eventVisible(ev)) return;
 
     let y = axisY(ev.axis);
@@ -3540,7 +3640,8 @@ function findEventsAt(mx, my) {
       if (d <= Math.max(HIT_DOT, dotRadius(ev) + 12)) results.push({ ev, dist: d });
 
       // Also hit-test crossRef hollow circles on target axes
-      if (ev._crossRefs && ev._crossRefs.length && zoom >= 0.55) {
+      const crZoomThreshold = _activeViewId ? 0.30 : 0.55;
+      if (ev._crossRefs && ev._crossRefs.length && zoom >= crZoomThreshold) {
         ev._crossRefs.forEach(crId => {
           if (hiddenAxes.has(crId) || !getAxisYMap().has(crId)) return;
           const y2 = axisY(crId);
@@ -3880,6 +3981,10 @@ function showPopup(ev) {
   document.getElementById('edit-desc-en').value = ev.desc_en  || '';
   document.getElementById('edit-wiki-zh').value = ev.wiki_zh  || '';
   document.getElementById('edit-wiki-en').value = ev.wiki_en  || '';
+  document.getElementById('edit-amazon-asin').value = ev.amazon_asin || '';
+  document.getElementById('edit-amazon-title').value = ev.amazon_title || '';
+  document.getElementById('edit-books-id').value = ev.books_id || '';
+  document.getElementById('edit-books-title').value = ev.books_title || '';
 
   // Image preview
   const preview = document.getElementById('edit-img-preview');
@@ -4015,9 +4120,17 @@ async function loadEvents() {
     const data = await res.json();
     // A3: Load axis_groups from JSON
     if (data.axis_groups) AXIS_GROUP_DEFS = data.axis_groups;
-    // Build axes (now reads label_en too)
+    // Build axes (all axes loaded; scope-based hiding done in buildAxes via hiddenAxes)
     if (data.axes && data.axes.length > 0) buildAxes(data.axes);
+
+    // Round 2: 保留完整原始軸線清單，供 exportJSON 使用
+    window._allAxesRaw = data.axes || [];
+
+    // 載入全部事件（scope 過濾在顯示階段透過 hiddenAxes + applyView 處理）
     events = data.events;
+
+    // Round 2: 保留完整原始事件清單，供 exportJSON 使用
+    window._allEventsRaw = data.events || [];
     // Resolve __NOW__ endYear to current year, mark for display
     const _currentYear = new Date().getFullYear();
     events.forEach(ev => {
@@ -4033,6 +4146,8 @@ async function loadEvents() {
     // Store raw meta and era_buttons for export
     window._jsonMeta = data.meta || {};
     window._eraButtonsRaw = data.era_buttons || [];
+    // Store view_groups for popup rendering
+    window._viewGroups = data.view_groups || [];
     // A2: Load filter_cats from JSON
     if (data.filter_cats && data.filter_cats.length > 0) FILTER_CATS = data.filter_cats;
     // A1: Build era buttons from JSON
@@ -4062,6 +4177,37 @@ async function loadEvents() {
   });
   applyEdits();
   applyLang();
+
+  // Round 2: URL 帶 ?v=<view-id> → 自動套用對應 view
+  const requestedView = getCurrentView();
+  if (requestedView && requestedView !== 'main') {
+    const v = _viewDefs.find(d => d.id === requestedView);
+    if (v) {
+      // 延遲執行讓 UI 先初始化完成
+      setTimeout(() => applyView(v), 50);
+    } else {
+      console.warn(`[URL Route] view "${requestedView}" not found in views. Fallback to main.`);
+    }
+  }
+
+  // Round 4: URL 帶 ?center=<year>&zoom=<z> → pan + zoom 到該位置（來自專題頁的「全部顯示」）
+  const urlParams = new URLSearchParams(location.search);
+  const centerParam = urlParams.get('center');
+  const zoomParam   = urlParams.get('zoom');
+  if (centerParam !== null && zoomParam !== null && requestedView === 'main') {
+    const centerYear = parseFloat(centerParam);
+    const targetZoom = parseFloat(zoomParam);
+    if (isFinite(centerYear) && isFinite(targetZoom) && targetZoom >= 0 && targetZoom < 1) {
+      // 反解 zoom 公式：zoom = 1 - log(span)/log(maxSpan) → span = maxSpan^(1-zoom)
+      const maxSpan = TOTAL_YEARS + NOW;
+      const viewSpan = Math.pow(maxSpan, 1 - targetZoom);
+      const targetStart = centerYear - viewSpan / 2;
+      const targetEnd   = centerYear + viewSpan / 2;
+      // 延遲執行讓 UI 先初始化完成
+      setTimeout(() => animateToView(targetStart, targetEnd, null), 100);
+    }
+  }
+
   draw();
 }
 
@@ -4117,44 +4263,55 @@ function exportJSON() {
   const edits    = loadEdits();
   const axEdits  = loadAxesEdits();
 
-  // Merge event edits
-  const mergedEvents = events.map(ev => {
-    const clone = { ...ev };
+  // Round 2: 合併事件編輯
+  // events 只包含當前頁面可見的事件，但 exportJSON 需要全部
+  const allEventsRaw = window._allEventsRaw || events;
+  const visibleEventIds = new Set(events.map(e => e.id));
+  const mergedEvents = allEventsRaw.map(rawEv => {
+    // 如果這個事件在當前頁面可見，用 live 的 events 資料（可能有過 __NOW__ 轉換和 crossRef 正規化）
+    const liveEv = visibleEventIds.has(rawEv.id) ? events.find(e => e.id === rawEv.id) : null;
+    const clone = liveEv ? { ...liveEv } : { ...rawEv };
     delete clone._autoParent;
-    delete clone._crossRefs;  // internal only, don't export
+    delete clone._crossRefs;
     if (clone._endNow) { clone.endYear = '__NOW__'; }
-    delete clone._endNow;     // internal flag, don't export
+    delete clone._endNow;
     if (edits[clone.id]) Object.assign(clone, edits[clone.id]);
-    // clean up empty crossRef and endYear
     if (clone.crossRef === '' || clone.crossRef === undefined) delete clone.crossRef;
     if (Array.isArray(clone.crossRef) && clone.crossRef.length === 0) delete clone.crossRef;
     if (clone.endYear  === '' || clone.endYear  === undefined) delete clone.endYear;
     return clone;
   });
 
-  // Merge axes edits — use live AXES (already updated) sorted by order
-  const mergedAxes = Object.entries(AXES)
-    .sort((a,b) => a[1].order - b[1].order)
-    .map(([id, ax]) => {
+  // Round 2: 合併軸線編輯
+  // AXES 只包含可見軸線，但 exportJSON 需要全部
+  const allAxesRaw = window._allAxesRaw || [];
+  const mergedAxes = allAxesRaw
+    .slice()
+    .sort((a,b) => (a.order||0) - (b.order||0))
+    .map(rawAx => {
+      const liveAx = AXES[rawAx.id];
       const base = {
-        id,
-        label:     ax.label,
-        label_en:  ax.label_en || ax.label,
-        color:     ax.color,
-        order:     ax.order,
-        parent:    ax.parent ?? null,
-        startYear: ax.startYear,
-        endYear:   ax.endYear ?? null,
-        zoomMin:   ax.zoomMin ?? 0,
-        group:     ax.group || 'nation',
+        id:        rawAx.id,
+        label:     (liveAx?.label)     || rawAx.label,
+        label_en:  (liveAx?.label_en)  || rawAx.label_en || rawAx.label,
+        color:     (liveAx?.color)     || rawAx.color,
+        order:     (liveAx?.order ?? rawAx.order),
+        parent:    (liveAx?.parent ?? rawAx.parent) ?? null,
+        startYear: (liveAx?.startYear ?? rawAx.startYear),
+        endYear:   (liveAx?.endYear  ?? rawAx.endYear) ?? null,
+        zoomMin:   (liveAx?.zoomMin   ?? rawAx.zoomMin) ?? 0,
+        group:     (liveAx?.group)    || rawAx.group || 'nation',
       };
-      if (axEdits[id]) Object.assign(base, axEdits[id]);
+      // Round 2: 保留 scope 欄位（如果原本有）
+      if (rawAx.scope) base.scope = rawAx.scope;
+      if (axEdits[rawAx.id]) Object.assign(base, axEdits[rawAx.id]);
       return base;
     });
 
   const out = {
     meta: window._jsonMeta || { title_zh:'宇宙歷史時間軸', title_en:'Cosmic History Timeline', total_years:13800000000, created:'2026' },
     axis_groups: AXIS_GROUP_DEFS,
+    view_groups: window._viewGroups || [],
     axes: mergedAxes,
     era_bands: window._eraBandsRaw || [],
     era_buttons: window._eraButtonsRaw || [],
@@ -4218,6 +4375,10 @@ document.getElementById('edit-save-btn').addEventListener('click', () => {
     desc_en:  document.getElementById('edit-desc-en').value.trim() || undefined,
     wiki_zh:  document.getElementById('edit-wiki-zh').value.trim() || undefined,
     wiki_en:  document.getElementById('edit-wiki-en').value.trim() || undefined,
+    amazon_asin:  document.getElementById('edit-amazon-asin').value.trim() || undefined,
+    amazon_title: document.getElementById('edit-amazon-title').value.trim() || undefined,
+    books_id:     document.getElementById('edit-books-id').value.trim() || undefined,
+    books_title:  document.getElementById('edit-books-title').value.trim() || undefined,
   };
   if (yearRaw !== '')    fields.year    = parseInt(yearRaw);
   if (endYearRaw !== '') fields.endYear = parseInt(endYearRaw);
@@ -4578,21 +4739,49 @@ function buildViewPopup() {
   if (!popup) return;
   popup.innerHTML = '';
 
-  // Group by category
-  const cats = {};
+  // Group by v.group (new structure with view_groups)
+  // Fallback: if view has old 'category' field (backward compat), treat as group label
+  const grouped = {};
   _viewDefs.forEach(v => {
-    if (!cats[v.category]) cats[v.category] = [];
-    cats[v.category].push(v);
+    const g = v.group || v.category || 'other';
+    if (!grouped[g]) grouped[g] = [];
+    grouped[g].push(v);
   });
 
-  // zh→en category map（從 view 資料建立）
-  const cats_en = {};
-  _viewDefs.forEach(v => { if (v.category_en) cats_en[v.category] = v.category_en; });
+  // Build group order & label map from view_groups (if exists)
+  const viewGroups = (window._viewGroups) || [];
+  const vgMap = {};
+  viewGroups.forEach(g => { vgMap[g.id] = g; });
 
-  Object.entries(cats).forEach(([cat, items]) => {
+  // Sort groups by order (view_groups defines order). Groups not in view_groups go last.
+  const groupIds = Object.keys(grouped).sort((a, b) => {
+    const oa = vgMap[a] ? vgMap[a].order : 9999;
+    const ob = vgMap[b] ? vgMap[b].order : 9999;
+    return oa - ob;
+  });
+
+  // Legacy: build zh→en fallback map from view.category_en (backward compat)
+  const cats_en_legacy = {};
+  _viewDefs.forEach(v => { if (v.category_en && v.category) cats_en_legacy[v.category] = v.category_en; });
+
+  groupIds.forEach(gid => {
+    const items = grouped[gid];
+    if (!items || !items.length) return;  // 空 group 不顯示
+
     const catEl = document.createElement('div');
     catEl.className = 'view-category';
-    catEl.textContent = lang === 'en' ? (cats_en[cat] || cat) : cat;
+
+    // Label resolution: view_groups → legacy category_en → use ID as-is
+    let labelZh = gid, labelEn = gid;
+    if (vgMap[gid]) {
+      labelZh = vgMap[gid].label || gid;
+      labelEn = vgMap[gid].label_en || vgMap[gid].label || gid;
+    } else {
+      // Legacy fallback
+      labelZh = gid;
+      labelEn = cats_en_legacy[gid] || gid;
+    }
+    catEl.textContent = lang === 'en' ? labelEn : labelZh;
     popup.appendChild(catEl);
 
     items.forEach(v => {
@@ -4633,23 +4822,28 @@ function applyView(v) {
 
   _activeViewId = v.id;
 
-  // 2. Auto zoom: find earliest startYear among selected axes
-  let earliest = Infinity;
-  let latest = -Infinity;
-  v.axes.forEach(id => {
-    const ax = AXES[id];
-    if (!ax) return;
-    if (ax.startYear < earliest) earliest = ax.startYear;
-    const end = ax.endYear ?? NOW;
-    if (end > latest) latest = end;
-  });
-
-  if (earliest !== Infinity) {
-    const span = latest - earliest;
-    const padding = span * 0.15; // 15% padding each side
-    const targetStart = earliest - padding;
-    const targetEnd   = latest  + padding;
-    animateToView(targetStart, targetEnd, null);
+  // 2. Auto zoom
+  // 優先使用 view 定義的 yearStart/yearEnd（精確控制初始 zoom）
+  // 沒定義則從 axes 的 startYear/endYear 自動計算（向下相容）
+  if (v.yearStart != null && v.yearEnd != null) {
+    const span = v.yearEnd - v.yearStart;
+    const padding = span * 0.15;
+    animateToView(v.yearStart - padding, v.yearEnd + padding, null);
+  } else {
+    let earliest = Infinity;
+    let latest = -Infinity;
+    v.axes.forEach(id => {
+      const ax = AXES[id];
+      if (!ax) return;
+      if (ax.startYear < earliest) earliest = ax.startYear;
+      const end = ax.endYear ?? NOW;
+      if (end > latest) latest = end;
+    });
+    if (earliest !== Infinity) {
+      const span = latest - earliest;
+      const padding = span * 0.15;
+      animateToView(earliest - padding, latest + padding, null);
+    }
   }
 
   // 3. Update button
@@ -4665,8 +4859,20 @@ function applyView(v) {
 }
 
 // Hook into showAllAxes to also clear active view
+// Round 4: 若在專題頁（?v=<not-main>），「全部顯示」改為跳轉到主頁並帶 zoom 參數
 const _origShowAllAxes = showAllAxes;
 showAllAxes = function() {
+  const currentView = getCurrentView();
+  if (currentView && currentView !== 'main') {
+    // 專題頁：計算當前視野中心年份 + 當前 zoom，跳主頁
+    const centerYear = Math.round((viewStart + viewEnd) / 2);
+    const zoom = currentZoom();
+    // 保留當前檔案名（indexedit.html 或 index.html）
+    const page = location.pathname.split('/').pop() || '';
+    location.href = `${page}?center=${centerYear}&zoom=${zoom.toFixed(3)}`;
+    return;
+  }
+  // 主頁：原本的行為
   _origShowAllAxes();
   _activeViewId = null;
   const btn = document.getElementById('view-btn');

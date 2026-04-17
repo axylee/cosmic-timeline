@@ -37,15 +37,65 @@
       "color": "#3b82f6"
     }
   },
+  "view_groups": [
+    {
+      "id": "nature-cosmos",
+      "label": "自然與宇宙",
+      "label_en": "Nature & Cosmos",
+      "order": 1
+    },
+    {
+      "id": "civilization",
+      "label": "文明縱覽",
+      "label_en": "Civilizations",
+      "order": 2
+    },
+    {
+      "id": "countries",
+      "label": "國家",
+      "label_en": "Countries",
+      "order": 3
+    },
+    {
+      "id": "wars",
+      "label": "戰爭",
+      "label_en": "Wars",
+      "order": 4
+    },
+    {
+      "id": "topics",
+      "label": "主題",
+      "label_en": "Topics",
+      "order": 5
+    },
+    {
+      "id": "events",
+      "label": "重大事件",
+      "label_en": "Major Events",
+      "order": 6
+    },
+    {
+      "id": "empires",
+      "label": "王朝與帝國",
+      "label_en": "Dynasties & Empires",
+      "order": 7
+    },
+    {
+      "id": "biographies",
+      "label": "人物傳記",
+      "label_en": "Biographies",
+      "order": 8
+    }
+  ],
   "axes": [
     {
       "id": "cosmos",
       "label": "宇宙",
       "label_en": "Cosmos",
       "color": "#a78bfa",
-      "order": 0,
+      "order": -1,
       "parent": null,
-      "startYear": -13800000000000,
+      "startYear": -13800000010,
       "endYear": null,
       "zoomMin": 0,
       "group": "natural"
@@ -109,6 +159,63 @@
       "endYear": null,
       "zoomMin": 0,
       "group": "natural"
+    },
+    {
+      "id": "dinosaurs",
+      "label": "恐龍",
+      "label_en": "Dinosaurs",
+      "color": "#a3e635",
+      "order": 4.1,
+      "parent": "life",
+      "startYear": -252000000,
+      "endYear": -66000000,
+      "zoomMin": 0,
+      "group": "natural"
+    },
+    {
+      "id": "dino-species",
+      "label": "恐龍物種",
+      "label_en": "Dinosaur Species",
+      "color": "#84cc16",
+      "order": 4.2,
+      "parent": "dinosaurs",
+      "startYear": -233000000,
+      "endYear": -66000000,
+      "zoomMin": 0.15,
+      "group": "natural",
+      "scope": [
+        "dinosaurs"
+      ]
+    },
+    {
+      "id": "cenozoic-epochs",
+      "label": "新生代地質世",
+      "label_en": "Cenozoic Epochs",
+      "color": "#60a5fa",
+      "order": 4.3,
+      "parent": "life",
+      "startYear": -66000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural",
+      "scope": [
+        "cenozoic"
+      ]
+    },
+    {
+      "id": "cenozoic-life",
+      "label": "新生代生命演化",
+      "label_en": "Cenozoic Life Evolution",
+      "color": "#34d399",
+      "order": 4.4,
+      "parent": "life",
+      "startYear": -66000000,
+      "endYear": null,
+      "zoomMin": 0,
+      "group": "natural",
+      "scope": [
+        "cenozoic"
+      ]
     },
     {
       "id": "human-evo",
@@ -325,6 +432,66 @@
       "endYear": null,
       "zoomMin": 0.3,
       "group": "civilization"
+    },
+    {
+      "id": "china-emperor",
+      "label": "中國帝王",
+      "label_en": "Chinese Emperor",
+      "color": "#f59e0b",
+      "order": 32.2,
+      "parent": "china",
+      "startYear": -2070,
+      "endYear": 1912,
+      "zoomMin": 0.55,
+      "group": "civilization",
+      "scope": [
+        "china"
+      ]
+    },
+    {
+      "id": "china-war",
+      "label": "中國戰爭",
+      "label_en": "Chinese War",
+      "color": "#991b1b",
+      "order": 32.3,
+      "parent": "china",
+      "startYear": -1600,
+      "endYear": null,
+      "zoomMin": 0.5,
+      "group": "civilization",
+      "scope": [
+        "china"
+      ]
+    },
+    {
+      "id": "china-literature",
+      "label": "中國文學",
+      "label_en": "Chinese Literature",
+      "color": "#7c2d12",
+      "order": 32.4,
+      "parent": "china",
+      "startYear": -1046,
+      "endYear": null,
+      "zoomMin": 0.5,
+      "group": "civilization",
+      "scope": [
+        "china"
+      ]
+    },
+    {
+      "id": "china-science",
+      "label": "中國科技",
+      "label_en": "Chinese Science & Tech",
+      "color": "#ea580c",
+      "order": 32.5,
+      "parent": "china",
+      "startYear": -5000,
+      "endYear": null,
+      "zoomMin": 0.5,
+      "group": "civilization",
+      "scope": [
+        "china"
+      ]
     },
     {
       "id": "egypt",
@@ -613,6 +780,36 @@
       "endYear": null,
       "zoomMin": 0.51,
       "group": "nation"
+    },
+    {
+      "id": "taiwan-colonial",
+      "label": "台灣殖民",
+      "label_en": "Taiwan Colonial",
+      "color": "#4ade80",
+      "order": 65.1,
+      "parent": "taiwan",
+      "startYear": 1544,
+      "endYear": 1987,
+      "zoomMin": 0.5,
+      "group": "nation",
+      "scope": [
+        "taiwan"
+      ]
+    },
+    {
+      "id": "taiwan-culture",
+      "label": "台灣文化",
+      "label_en": "Taiwan Culture",
+      "color": "#38bdf8",
+      "order": 65.2,
+      "parent": "taiwan",
+      "startYear": -5000,
+      "endYear": null,
+      "zoomMin": 0.5,
+      "group": "nation",
+      "scope": [
+        "taiwan"
+      ]
     },
     {
       "id": "europe",
@@ -1082,313 +1279,6 @@
       "color": "#e2e8f0"
     }
   ],
-  "views": [
-    {
-      "id": "nat-cosmos",
-      "category": "自然與宇宙",
-      "label": "宇宙歷史",
-      "axes": [
-        "cosmos",
-        "galaxy",
-        "solar-system"
-      ],
-      "label_en": "Cosmic History",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "nat-earth",
-      "category": "自然與宇宙",
-      "label": "地球與生命",
-      "axes": [
-        "earth",
-        "climate",
-        "life"
-      ],
-      "label_en": "Earth & Life",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "nat-human",
-      "category": "自然與宇宙",
-      "label": "人類演化與遷徙",
-      "axes": [
-        "human-evo",
-        "migration"
-      ],
-      "label_en": "Human Evolution",
-      "category_en": "Nature & Universe"
-    },
-    {
-      "id": "civ-all",
-      "category": "文明縱覽",
-      "label": "全部文明",
-      "axes": [
-        "east",
-        "west",
-        "africa",
-        "americas",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china",
-        "greece",
-        "latin-america"
-      ],
-      "label_en": "All Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-east",
-      "category": "文明縱覽",
-      "label": "東方文明",
-      "axes": [
-        "east",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china"
-      ],
-      "label_en": "Eastern Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-west",
-      "category": "文明縱覽",
-      "label": "西方文明",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "Western Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-africa",
-      "category": "文明縱覽",
-      "label": "非洲文明",
-      "axes": [
-        "africa",
-        "egypt"
-      ],
-      "label_en": "African Civilizations",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "civ-americas",
-      "category": "文明縱覽",
-      "label": "美洲文明",
-      "axes": [
-        "americas",
-        "latin-america"
-      ],
-      "label_en": "Americas",
-      "category_en": "Civilizations"
-    },
-    {
-      "id": "thm-religion",
-      "category": "主題",
-      "label": "宗教發展",
-      "axes": [
-        "judaism",
-        "christianity",
-        "islam",
-        "hinduism",
-        "buddhism",
-        "taoism"
-      ],
-      "label_en": "World Religions",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-science",
-      "category": "主題",
-      "label": "科學技術",
-      "axes": [
-        "science",
-        "cross"
-      ],
-      "label_en": "Science & Technology",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-trade",
-      "category": "主題",
-      "label": "貿易全球化",
-      "axes": [
-        "trade",
-        "cross"
-      ],
-      "label_en": "Trade & Exploration",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-climate",
-      "category": "主題",
-      "label": "氣候環境",
-      "axes": [
-        "climate",
-        "earth"
-      ],
-      "label_en": "Climate & Environment",
-      "category_en": "Themes"
-    },
-    {
-      "id": "nat-iceages",
-      "category": "主題",
-      "label": "五次大冰河期",
-      "axes": [
-        "climate",
-        "earth",
-        "life"
-      ],
-      "label_en": "Five Ice Ages",
-      "category_en": "Themes"
-    },
-    {
-      "id": "thm-migration",
-      "category": "主題",
-      "label": "人類遷徙",
-      "axes": [
-        "migration",
-        "oceania",
-        "central-asia",
-        "southeast-asia",
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Human Migration",
-      "category_en": "Themes"
-    },
-    {
-      "id": "reg-mideast",
-      "category": "地區",
-      "label": "中東歷史",
-      "axes": [
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "islam",
-        "judaism",
-        "iran"
-      ],
-      "label_en": "Middle East History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-eastasia",
-      "category": "地區",
-      "label": "東亞歷史",
-      "axes": [
-        "east",
-        "china",
-        "japan",
-        "taiwan"
-      ],
-      "label_en": "East Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-europe",
-      "category": "地區",
-      "label": "歐洲歷史",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "European History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-southasia",
-      "category": "地區",
-      "label": "南亞歷史",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism"
-      ],
-      "label_en": "South Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-africa",
-      "category": "地區",
-      "label": "非洲歷史",
-      "axes": [
-        "africa",
-        "north-africa",
-        "west-africa",
-        "east-africa",
-        "south-africa",
-        "egypt"
-      ],
-      "label_en": "African History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-americas",
-      "category": "地區",
-      "label": "美洲歷史",
-      "axes": [
-        "americas",
-        "latin-america",
-        "north-america",
-        "usa",
-        "south-america"
-      ],
-      "label_en": "Americas History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-oceania",
-      "category": "地區",
-      "label": "大洋洲",
-      "axes": [
-        "oceania",
-        "antarctic"
-      ],
-      "label_en": "Oceania",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-centralas",
-      "category": "地區",
-      "label": "中亞歷史",
-      "axes": [
-        "central-asia"
-      ],
-      "label_en": "Central Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-sea",
-      "category": "地區",
-      "label": "東南亞歷史",
-      "axes": [
-        "southeast-asia"
-      ],
-      "label_en": "SE Asia History",
-      "category_en": "Regions"
-    },
-    {
-      "id": "reg-polar",
-      "category": "地區",
-      "label": "極地",
-      "axes": [
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Polar Regions",
-      "category_en": "Regions"
-    }
-  ],
   "events": [
     {
       "id": "big-bang-event",
@@ -1787,7 +1677,10 @@
       "category": "biology",
       "category_broad": "natural",
       "amazon_asin": "0500291934",
-      "amazon_title": "When Life Nearly Died — Michael Benton"
+      "amazon_title": "When Life Nearly Died — Michael Benton",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "mesozoic",
@@ -1805,7 +1698,10 @@
       "image": "https://images-assets.nasa.gov/image/iss017e005351/iss017e005351~orig.jpg",
       "category": "biology",
       "category_broad": "natural",
-      "parentEvent": "phanerozoic"
+      "parentEvent": "phanerozoic",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "triassic",
@@ -1877,7 +1773,11 @@
       "category": "biology",
       "category_broad": "natural",
       "amazon_asin": "1250062187",
-      "amazon_title": "The Sixth Extinction — Elizabeth Kolbert"
+      "amazon_title": "The Sixth Extinction — Elizabeth Kolbert",
+      "crossRef": [
+        "dinosaurs",
+        "cenozoic-life"
+      ]
     },
     {
       "id": "cenozoic",
@@ -1911,7 +1811,10 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/南方古猿",
       "wiki_en": "https://en.wikipedia.org/wiki/Australopithecus",
       "category": "biology",
-      "category_broad": "natural"
+      "category_broad": "natural",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "quaternary-glaciation",
@@ -2163,7 +2066,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Xia_dynasty",
       "endYear": -1600,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "tw-shisanhang",
@@ -2213,7 +2119,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Shang_dynasty",
       "endYear": -1046,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "tw-aboriginal",
@@ -2330,7 +2239,10 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/孔子",
       "wiki_en": "https://en.wikipedia.org/wiki/Confucius",
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-literature"
+      ]
     },
     {
       "id": "athens-democracy",
@@ -2470,7 +2382,10 @@
       "category": "civilization",
       "category_broad": "human",
       "amazon_asin": "0674057341",
-      "amazon_title": "The Early Chinese Empires — Mark Edward Lewis"
+      "amazon_title": "The Early Chinese Empires — Mark Edward Lewis",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "han",
@@ -2487,7 +2402,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Han_dynasty",
       "endYear": 220,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "silk-road",
@@ -2555,24 +2473,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
       "endYear": 280,
       "category": "war",
-      "category_broad": "human"
-    },
-    {
-      "id": "three-kingdoms-wei",
-      "year": 220,
-      "zh": "魏·蜀·吳並立",
-      "en": "Wei / Shu / Wu",
-      "axis": "china",
-      "level": 2,
-      "sub_track": 0,
-      "desc_zh": "三國鼎立：曹魏佔北方，蜀漢據西南，孫吳控東南，群雄爭霸。",
-      "desc_en": "Three Kingdoms: Cao Wei in the north, Shu Han in the southwest, Eastern Wu in the southeast.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/三國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Three_Kingdoms",
-      "endYear": 280,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Saam_Gwok_262_CE.png",
-      "category": "war",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-war"
+      ]
     },
     {
       "id": "yamato",
@@ -2623,7 +2527,10 @@
       "endYear": 439,
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Eastern_Jin_Dynasty_376_CE.png",
       "category": "war",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-war"
+      ]
     },
     {
       "id": "northern-southern",
@@ -2640,7 +2547,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Northern_and_Southern_dynasties",
       "endYear": 581,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-war"
+      ]
     },
     {
       "id": "roman-empire-fall",
@@ -2693,14 +2603,17 @@
       "category": "civilization",
       "category_broad": "human",
       "amazon_asin": "0195176650",
-      "amazon_title": "China's Golden Age — Charles Benn"
+      "amazon_title": "China's Golden Age — Charles Benn",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "islam",
       "year": 622,
       "zh": "伊斯蘭教創立",
       "en": "Islam Founded",
-      "axis": "mideast",
+      "axis": "islam",
       "track": 0,
       "level": 1,
       "desc_zh": "穆罕默德創立伊斯蘭教，從麥地那向外傳播，在數十年內橫跨中東、北非與中亞。",
@@ -2710,7 +2623,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Islam",
       "sub_track": 0,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": "mideast",
+      "amazon_asin": "0691236577",
+      "amazon_title": "A History of the Muslim World: From Its Origins to the Dawn of Modernity"
     },
     {
       "id": "nara-heian",
@@ -2762,24 +2678,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
       "endYear": 960,
       "category": "civilization",
-      "category_broad": "human"
-    },
-    {
-      "id": "five-dynasties-kingdoms",
-      "year": 907,
-      "zh": "五代·十國並立",
-      "en": "Five Dynasties & Ten Kingdoms",
-      "axis": "china",
-      "level": 2,
-      "sub_track": 0,
-      "desc_zh": "北方五朝更迭，南方十個獨立政權並立，政治動盪五十年。",
-      "desc_en": "Five successive dynasties in the north; ten independent kingdoms in the south for fifty turbulent years.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/五代十國",
-      "wiki_en": "https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period",
-      "endYear": 960,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/%E4%BA%94%E4%BB%A3%E5%90%8E%E6%A2%81%E5%89%8D%E6%9C%9F%E5%BD%A2%E5%8A%BF%E5%9B%BE%EF%BC%88%E7%B9%81%EF%BC%89.png",
-      "category": "war",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-war"
+      ]
     },
     {
       "id": "song",
@@ -2796,7 +2698,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Song_dynasty",
       "endYear": 1279,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "crusades",
@@ -2887,7 +2792,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Yuan_dynasty",
       "endYear": 1368,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "black-death",
@@ -2922,7 +2830,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Ming_dynasty",
       "endYear": 1644,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "renaissance",
@@ -3059,7 +2970,10 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/荷蘭統治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Formosa",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "tw-spanish",
@@ -3075,7 +2989,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Spanish_Formosa",
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Dutch_and_Spanish_Taiwan_en.svg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "qing",
@@ -3092,7 +3009,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Qing_dynasty",
       "endYear": 1912,
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "tw-koxinga",
@@ -3108,7 +3028,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/明鄭時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Kingdom_of_Tungning",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china",
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "tw-qing",
@@ -3124,7 +3048,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/清治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china",
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "newton",
@@ -3241,7 +3169,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/馬關條約",
       "wiki_en": "https://en.wikipedia.org/wiki/Treaty_of_Shimonoseki",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "japan",
+        "china"
+      ]
     },
     {
       "id": "tw-japanese",
@@ -3257,7 +3189,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/日治台灣時期",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "japan",
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "republic-china",
@@ -3274,7 +3210,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)",
       "endYear": 1949,
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-war"
+      ]
     },
     {
       "id": "ww1",
@@ -3324,7 +3263,10 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/五四運動",
       "wiki_en": "https://en.wikipedia.org/wiki/May_Fourth_Movement",
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-literature"
+      ]
     },
     {
       "id": "tw-wushe",
@@ -3339,7 +3281,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/霧社事件",
       "wiki_en": "https://en.wikipedia.org/wiki/Wushe_incident",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "japan",
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "ww2",
@@ -3421,7 +3367,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/二二八事件",
       "wiki_en": "https://en.wikipedia.org/wiki/228_incident",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china",
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "prc",
@@ -3437,7 +3387,10 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華人民共和國",
       "wiki_en": "https://en.wikipedia.org/wiki/China",
       "category": "civilization",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "tw-roc",
@@ -3452,7 +3405,10 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/中華民國",
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "china"
+      ]
     },
     {
       "id": "tw-martial-law",
@@ -3468,7 +3424,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Martial_law_order_taiwan_may_1949.jpg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "dna-discovery",
@@ -3504,7 +3463,11 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_Miracle",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Taipei_Night_Skyline_from_Hongludi_20240113.jpg/1280px-Taipei_Night_Skyline_from_Hongludi_20240113.jpg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "science",
+        "taiwan-culture"
+      ]
     },
     {
       "id": "tw-martial-law-lift",
@@ -3519,7 +3482,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_martial_law",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Martial_law_order_taiwan_may_1949.jpg",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "taiwan-colonial"
+      ]
     },
     {
       "id": "tw-semiconductor",
@@ -3534,7 +3500,11 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/台灣積體電路製造公司",
       "wiki_en": "https://en.wikipedia.org/wiki/TSMC",
       "category": "politics",
-      "category_broad": "human"
+      "category_broad": "human",
+      "crossRef": [
+        "science",
+        "taiwan-culture"
+      ]
     },
     {
       "id": "internet",
@@ -3627,7 +3597,7 @@
     },
     {
       "id": "cosmic-inflation",
-      "year": -13799900000000,
+      "year": -13800000008,
       "zh": "宇宙暴脹",
       "en": "Cosmic Inflation",
       "axis": "cosmos",
@@ -3781,11 +3751,10 @@
     {
       "id": "rodinia",
       "year": -1100000000,
-      "endYear": -750000000,
       "zh": "羅迪尼亞超大陸",
       "en": "Rodinia Supercontinent",
-      "axis": "climate",
-      "level": 2,
+      "axis": "earth",
+      "level": 1,
       "desc_zh": "已知最早有完整記錄的超大陸，幾乎包含當時所有陸塊，後來分裂成多個板塊。",
       "desc_en": "The earliest well-documented supercontinent, containing nearly all landmasses; later broke apart into multiple plates.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/羅迪尼亞",
@@ -3884,7 +3853,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Reptile",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Reptiles.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Reptiles.jpg",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "first-mammals",
@@ -3899,7 +3871,11 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mammal",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Mammal_Diversity_2011.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Mammal_Diversity_2011.png",
+      "crossRef": [
+        "dinosaurs",
+        "cenozoic-life"
+      ]
     },
     {
       "id": "first-birds",
@@ -3914,7 +3890,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Archaeopteryx",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "flowering-plants",
@@ -3929,7 +3908,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Flowering_plant",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ranunculus_repens_1_%28cropped%29.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ranunculus_repens_1_%28cropped%29.JPG",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "first-primates",
@@ -3944,7 +3926,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Primate",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Primates_-_some_families.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Primates_-_some_families.jpg",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "ape-monkey-split",
@@ -3959,7 +3944,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Ape",
       "category": "biology",
       "category_broad": "natural",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "cuneiform",
@@ -5253,7 +5241,7 @@
       "year": -100,
       "zh": "《九章算術》",
       "en": "Nine Chapters on Mathematics",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "中國最重要的古代數學著作，包含聯立方程、負數、分數運算，系統地解決農業與工程問題。",
       "desc_en": "China's most important ancient math text; covers simultaneous equations, negative numbers, and fractions — systematically solving agricultural and engineering problems.",
@@ -5269,7 +5257,7 @@
       "year": -3000,
       "zh": "絲綢・養蠶技術",
       "en": "Silk — Sericulture Begins",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "中國人發明養蠶繅絲技術，絲綢成為中國最重要的出口商品，也是絲路命名的由來。",
       "desc_en": "Chinese invent silk cultivation; silk becomes China's most important export and gives the Silk Road its name.",
@@ -5277,7 +5265,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Silk",
       "category": "culture",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Silk_raw_01a.jpg"
     },
     {
@@ -5285,7 +5276,7 @@
       "year": -256,
       "zh": "都江堰",
       "en": "Dujiangyan Irrigation System",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "李冰父子在四川建造的水利工程，無壩引水，造就天府之國，至今仍在運作，是世界最古老的水利工程之一。",
       "desc_en": "Built by Li Bing in Sichuan; a damless irrigation system still in use today — one of the world's oldest and most sustainable water projects.",
@@ -5294,14 +5285,17 @@
       "category": "science",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dujiang_Weir.jpg",
-      "crossRef": "science"
+      "crossRef": [
+        "science",
+        "china-science"
+      ]
     },
     {
       "id": "steel-china",
       "year": -200,
       "zh": "漢代冶鐵技術",
       "en": "Han Dynasty Iron & Steel",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "漢代發展出高爐煉鐵技術，大規模生產鐵農具與武器，領先歐洲約千年，支撐帝國的農業與軍事擴張。",
       "desc_en": "Han Dynasty develops blast furnace iron production on a large scale — about 1,000 years ahead of Europe — supporting imperial agriculture and military expansion.",
@@ -5317,7 +5311,7 @@
       "year": 105,
       "zh": "造紙術・蔡倫",
       "en": "Papermaking — Cai Lun",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "desc_zh": "蔡倫改良造紙技術，以樹皮、麻料等製成廉價紙張，知識傳播的革命性突破，是中國四大發明之一。",
       "desc_en": "Cai Lun improves papermaking using bark and hemp; cheap paper revolutionizes knowledge transmission — one of China's Four Great Inventions.",
@@ -5325,7 +5319,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Papermaking",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Papiermuseum_Basel_2008_%2838%29.jpg"
     },
     {
@@ -5333,7 +5330,7 @@
       "year": 132,
       "zh": "張衡地動儀",
       "en": "Zhang Heng's Seismoscope",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "desc_zh": "張衡發明世界第一台地震儀，以銅球落入蟾蜍口中指示地震方向，比歐洲同類裝置早1700年。",
       "desc_en": "Zhang Heng invents the world's first seismoscope; a bronze ball drops into a toad's mouth to indicate earthquake direction — 1,700 years before European equivalents.",
@@ -5349,7 +5346,7 @@
       "year": 117,
       "zh": "張衡渾天儀",
       "en": "Zhang Heng's Armillary Sphere",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "張衡製作水力驅動的渾天儀，精確測量天體位置，推算太陽月球運行，對中國天文學貢獻卓著。",
       "desc_en": "Zhang Heng builds a water-powered armillary sphere to precisely measure celestial positions and predict the movements of the sun and moon.",
@@ -5365,7 +5362,7 @@
       "year": 190,
       "zh": "華佗・外科手術",
       "en": "Hua Tuo — Surgery with Anesthesia",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "東漢神醫華佗使用麻沸散（全身麻醉藥）進行外科手術，是世界最早有記錄的外科麻醉應用。",
       "desc_en": "Han physician Hua Tuo uses mafeisan (general anesthetic) for surgery — the world's earliest recorded use of surgical anesthesia.",
@@ -5381,7 +5378,7 @@
       "year": 263,
       "zh": "劉徽割圓術",
       "en": "Liu Hui's Method for Pi",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "劉徽以割圓術計算圓周率，得π≈3.14159，方法上已含無窮小的極限概念，是數學史上的重要成就。",
       "desc_en": "Liu Hui calculates π≈3.14159 using an iterative polygon method — embedding the concept of limits, a major achievement in mathematical history.",
@@ -5397,7 +5394,7 @@
       "year": -300,
       "zh": "黃帝內經",
       "en": "Huangdi Neijing — Classic of Medicine",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "中醫學的理論基礎，以陰陽五行解釋人體與疾病，至今仍是中醫教育的核心典籍。",
       "desc_en": "The theoretical foundation of Chinese medicine; explains the body and disease through yin-yang and five elements — still a core text in TCM education.",
@@ -5413,7 +5410,7 @@
       "year": 1000,
       "zh": "人痘接種術",
       "en": "Variolation — Early Vaccination",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "宋代中國人發明人痘接種預防天花，是現代疫苗接種的前身，17世紀傳入歐洲後推動了天花疫苗的研發。",
       "desc_en": "Song Dynasty Chinese develop variolation against smallpox — the predecessor of modern vaccination; introduced to Europe in the 17th century, inspiring Jenner's vaccine.",
@@ -5429,7 +5426,7 @@
       "year": 1040,
       "zh": "畢昇活字印刷",
       "en": "Bi Sheng — Movable Type Printing",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "desc_zh": "畢昇發明陶瓷活字印刷術，比古騰堡的活字印刷機早400年，是知識傳播史上的重大技術革命。",
       "desc_en": "Bi Sheng invents ceramic movable type — 400 years before Gutenberg — a major technological revolution in the history of knowledge dissemination.",
@@ -5437,7 +5434,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Bi_Sheng",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Mengxi_bitan.jpg"
     },
     {
@@ -5445,7 +5445,7 @@
       "year": 1044,
       "zh": "指南針航海應用",
       "en": "Compass for Navigation",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "desc_zh": "中國人將指南針從堪輿術應用於航海導航，此技術傳入歐洲後直接促進大航海時代的到來。",
       "desc_en": "Chinese apply the compass from feng shui to maritime navigation; this technology reaches Europe and directly enables the Age of Exploration.",
@@ -5453,7 +5453,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Compass",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/2016_Busola.JPG"
     },
     {
@@ -5461,7 +5464,7 @@
       "year": 1261,
       "zh": "楊輝三角",
       "en": "Yang Hui's Triangle",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "楊輝發表二項式係數三角形，比歐洲帕斯卡三角形早400年，應用於多項式展開與概率計算。",
       "desc_en": "Yang Hui publishes the binomial coefficient triangle — 400 years before Pascal's Triangle in Europe — applied to polynomial expansion and probability.",
@@ -5477,7 +5480,7 @@
       "year": 480,
       "zh": "祖沖之圓周率",
       "en": "Zu Chongzhi — Pi to 7 Decimal Places",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "祖沖之計算圓周率精確到小數點後7位（3.1415926），此記錄保持了約千年，至今仍是數學史的重要成就。",
       "desc_en": "Zu Chongzhi calculates π to 7 decimal places (3.1415926) — a world record held for ~1,000 years and a landmark in mathematical history.",
@@ -5493,7 +5496,7 @@
       "year": 850,
       "zh": "火藥發明",
       "en": "Gunpowder Invented",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "desc_zh": "唐代道士煉丹時意外發現火藥，後來廣泛應用於軍事，傳入歐洲後改變了中世紀的戰爭型態。",
       "desc_en": "Tang Dynasty Taoist alchemists accidentally discover gunpowder; it later transforms warfare and, reaching Europe, changes medieval combat forever.",
@@ -5501,7 +5504,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Gunpowder",
       "category": "science",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/2023_Czarny_proch_Vesuvit_LC_%283%29.jpg/1280px-2023_Czarny_proch_Vesuvit_LC_%283%29.jpg"
     },
     {
@@ -5518,14 +5524,17 @@
       "category": "civilization",
       "category_broad": "human",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/%E5%A4%A7%E9%81%8B%E6%B2%B3.png",
-      "crossRef": "science"
+      "crossRef": [
+        "science",
+        "china-science"
+      ]
     },
     {
       "id": "yi-xing-meridian",
       "year": 724,
       "zh": "僧一行大地測量",
       "en": "Yi Xing — Meridian Survey",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "唐代高僧僧一行主持世界首次大規模大地測量，計算出地球子午線弧度，是科學史的重要里程碑。",
       "desc_en": "Tang monk Yi Xing leads the world's first large-scale geodetic survey, measuring the arc of a meridian — a landmark in scientific history.",
@@ -5541,7 +5550,7 @@
       "year": 1281,
       "zh": "郭守敬授時曆",
       "en": "Guo Shoujing — Shoushi Calendar",
-      "axis": "china",
+      "axis": "china-science",
       "level": 2,
       "desc_zh": "元代郭守敬制定授時曆，一年長度精確到365.2425天，與今日格里曆完全相同，精度超越當時歐洲任何曆法。",
       "desc_en": "Yuan astronomer Guo Shoujing's Shoushi Calendar sets the year at 365.2425 days — identical to the modern Gregorian calendar — more accurate than any contemporary European calendar.",
@@ -5557,7 +5566,7 @@
       "year": 1578,
       "zh": "李時珍《本草綱目》",
       "en": "Li Shizhen — Compendium of Materia Medica",
-      "axis": "china",
+      "axis": "china-literature",
       "level": 2,
       "desc_zh": "李時珍耗時27年完成《本草綱目》，收錄1892種藥物，被譯成多種語言，是東方藥學的百科全書。",
       "desc_en": "Li Shizhen spends 27 years writing this encyclopedia of 1,892 medicinal substances — translated into many languages; the definitive compendium of Eastern pharmacology.",
@@ -5573,7 +5582,7 @@
       "year": 1613,
       "zh": "徐霞客地理考察",
       "en": "Xu Xiake — Geographical Exploration",
-      "axis": "china",
+      "axis": "china-literature",
       "level": 2,
       "desc_zh": "明代地理學家徐霞客實地考察中國山川地貌，著《徐霞客遊記》，是中國近代地理學的先驅。",
       "desc_en": "Ming geographer Xu Xiake surveys China's landscape on foot; his travel notes are a pioneering work of Chinese empirical geography.",
@@ -5599,7 +5608,8 @@
       "category_broad": "human",
       "crossRef": [
         "trade",
-        "science"
+        "science",
+        "china-science"
       ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/ZhengHeShips.gif"
     },
@@ -6038,7 +6048,10 @@
       "desc_en": "One of the Three Sovereigns, Shennong taught farming and medicine, tasting hundreds of herbs — the legendary origin of Chinese agriculture and traditional medicine.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/神農氏",
       "wiki_en": "https://en.wikipedia.org/wiki/Shennong",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Shennong3.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Shennong3.jpg",
+      "crossRef": [
+        "china-science"
+      ]
     },
     {
       "id": "longshan-culture",
@@ -6069,7 +6082,10 @@
       "desc_en": "The Yellow Emperor is regarded as the ancestor of the Chinese people; legend credits him with creating writing, the calendar, music, and medicine — the start of 5,000 years of Chinese civilization.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/黃帝",
       "wiki_en": "https://en.wikipedia.org/wiki/Yellow_Emperor",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Yellow_Emperor.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Yellow_Emperor.jpg",
+      "crossRef": [
+        "china-emperor"
+      ]
     },
     {
       "id": "mycenae",
@@ -6907,7 +6923,7 @@
     },
     {
       "id": "quark-epoch",
-      "year": -13799999999000,
+      "year": -13800000007,
       "zh": "夸克時代",
       "en": "Quark Epoch",
       "axis": "cosmos",
@@ -6922,7 +6938,7 @@
     },
     {
       "id": "proton-formation",
-      "year": -13799998000000,
+      "year": -13800000001,
       "zh": "質子與中子形成",
       "en": "Proton and Neutron Formation",
       "axis": "cosmos",
@@ -6937,7 +6953,7 @@
     },
     {
       "id": "nucleosynthesis",
-      "year": -13799990000000,
+      "year": -13800000000,
       "zh": "宇宙核合成",
       "en": "Big Bang Nucleosynthesis",
       "axis": "cosmos",
@@ -7263,7 +7279,10 @@
       "desc_en": "About 34 million years ago, falling CO2 levels allowed the Antarctic ice sheet to form, shifting Earth into a cooler icehouse climate.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/南極冰蓋",
       "wiki_en": "https://en.wikipedia.org/wiki/Antarctic_ice_sheet",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AA_bedrock_surface.4960.tif/lossy-page1-1280px-AA_bedrock_surface.4960.tif.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AA_bedrock_surface.4960.tif/lossy-page1-1280px-AA_bedrock_surface.4960.tif.jpg",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "fertile-crescent-agriculture",
@@ -8257,11 +8276,14 @@
       "endYear": -1046,
       "zh": "商代青銅器文化",
       "en": "Shang Dynasty Bronze Culture",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "category": "science",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "desc_zh": "商代發展出高度精緻的青銅鑄造技術，青銅器用於祭祀、禮儀和戰爭，司母戊鼎是迄今出土最重的青銅器，代表中國古代文明的巔峰。",
       "desc_en": "The Shang Dynasty developed highly refined bronze casting for ritual, ceremonial and military use. The Simuwu Ding is the heaviest bronze artifact ever unearthed, representing the peak of ancient Chinese civilization.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/商朝",
@@ -8291,11 +8313,14 @@
       "endYear": -221,
       "zh": "中國春秋戰國鐵器普及",
       "en": "Iron Age in China — Spring and Autumn Period",
-      "axis": "china",
+      "axis": "china-science",
       "level": 1,
       "category": "science",
       "category_broad": "human",
-      "crossRef": "science",
+      "crossRef": [
+        "science",
+        "china-science"
+      ],
       "desc_zh": "春秋時代鐵器逐漸普及，到戰國時期鐵農具和鐵兵器已廣泛使用，農業生產力大幅提升，支撐了諸侯國的兼併戰爭和人口增長，最終促成秦統一。",
       "desc_en": "Iron tools spread gradually in the Spring and Autumn Period and became widespread in the Warring States era, dramatically boosting agricultural productivity and fueling the wars that led to Qin unification.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/春秋時代",
@@ -8755,7 +8780,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Triassic%E2%80%93Jurassic_extinction_event",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png",
       "desc_en": "End-Triassic extinction ~201 Mya clears the way for dinosaurs to dominate.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀－侏羅紀滅絕事件"
+      "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀－侏羅紀滅絕事件",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "mig-002",
@@ -10095,7 +10123,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Extinction_intensity.svg/1200px-Extinction_intensity.svg.png",
       "desc_en": "Ongoing human-caused biodiversity crisis with extinction rates far above natural background.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/全新世滅絕事件",
-      "endYear": "__NOW__"
+      "endYear": "__NOW__",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "hevo-012",
@@ -11888,7 +11919,10 @@
       "desc_en": "The common ancestor of humans and chimpanzees diverges, marking the true start of human evolution.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人科",
       "wiki_en": "https://en.wikipedia.org/wiki/Hominidae",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Distribution_of_the_Great_Apes.png/1920px-Distribution_of_the_Great_Apes.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Distribution_of_the_Great_Apes.png/1920px-Distribution_of_the_Great_Apes.png",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "hevo-002",
@@ -11902,7 +11936,10 @@
       "desc_en": "Most famous early human fossil, confirming bipedal walking as an early human trait.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/露西_(南方古猿)",
       "wiki_en": "https://en.wikipedia.org/wiki/Lucy_(Australopithecus)",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg/1200px-Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg/1200px-Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg",
+      "crossRef": [
+        "cenozoic-life"
+      ]
     },
     {
       "id": "hevo-003",
@@ -11912,7 +11949,10 @@
       "axis": "human-evo",
       "level": 1,
       "category": "nature",
-      "crossRef": "migration",
+      "crossRef": [
+        "migration",
+        "cenozoic-life"
+      ],
       "desc_zh": "直立人是第一個離開非洲擴散到亞洲和歐洲的人種",
       "desc_en": "Homo erectus is the first human species to migrate out of Africa into Asia and Europe.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/直立人",
@@ -12340,7 +12380,7 @@
     },
     {
       "id": "cos-planck",
-      "year": -13799999999999,
+      "year": -13800000009,
       "axis": "cosmos",
       "level": 2,
       "category": "astronomy",
@@ -12354,7 +12394,7 @@
     },
     {
       "id": "cos-annihilation",
-      "year": -13799999000000,
+      "year": -13800000006,
       "axis": "cosmos",
       "level": 2,
       "category": "astronomy",
@@ -12368,7 +12408,7 @@
     },
     {
       "id": "cos-lepton",
-      "year": -13799800000000,
+      "year": -13800000005,
       "axis": "cosmos",
       "level": 2,
       "category": "astronomy",
@@ -12382,7 +12422,7 @@
     },
     {
       "id": "cos-photon",
-      "year": -13799600000000,
+      "year": -13800000004,
       "axis": "cosmos",
       "level": 2,
       "category": "astronomy",
@@ -12396,7 +12436,7 @@
     },
     {
       "id": "cos-neutrino-decoupling",
-      "year": -13799500000000,
+      "year": -13800000003,
       "axis": "cosmos",
       "level": 2,
       "category": "astronomy",
@@ -12410,7 +12450,7 @@
     },
     {
       "id": "cos-ep-annihilation",
-      "year": -13799400000000,
+      "year": -13800000002,
       "axis": "cosmos",
       "level": 2,
       "category": "astronomy",
@@ -12844,7 +12884,10 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Chicxulub_crater",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Yucatan_chix_crater.jpg",
       "amazon_asin": "0062364812",
-      "amazon_title": "The Ends of the World — Peter Brannen"
+      "amazon_title": "The Ends of the World — Peter Brannen",
+      "crossRef": [
+        "dinosaurs"
+      ]
     },
     {
       "id": "sol-barringer",
@@ -13607,6 +13650,3727 @@
       "wiki_zh": "https://zh.wikipedia.org/wiki/毅力號火星探測車",
       "wiki_en": "https://en.wikipedia.org/wiki/Perseverance_(rover)",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Perseverance-Selfie-at-Rochette-Horizontal-V2.gif"
+    },
+    {
+      "id": "emperor-yu",
+      "year": -2070,
+      "zh": "大禹治水・建立夏朝",
+      "en": "Yu the Great — Founder of Xia",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "傳說中治水英雄，建立中國第一個世襲王朝。",
+      "desc_en": "Legendary flood controller who founded China's first hereditary dynasty.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/King_Yu_of_Xia.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大禹",
+      "wiki_en": "https://en.wikipedia.org/wiki/Yu_the_Great"
+    },
+    {
+      "id": "emperor-tang-shang",
+      "year": -1600,
+      "zh": "商湯滅夏",
+      "en": "Tang of Shang Overthrows Xia",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "商湯推翻夏桀，建立商朝。",
+      "desc_en": "Tang overthrew the last Xia king and founded the Shang dynasty.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/King_Tang_of_Shang.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/商湯",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tang_of_Shang"
+    },
+    {
+      "id": "emperor-qin-shi",
+      "year": -221,
+      "zh": "秦始皇統一六國",
+      "en": "Qin Shi Huang Unifies China",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "嬴政統一六國，建立中國第一個中央集權帝國，統一度量衡、文字。",
+      "desc_en": "Ying Zheng unified six states, founded the first centralized empire, standardized weights, measures, and writing.",
+      "crossRef": [
+        "east",
+        "china-emperor"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Qinshihuang.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/秦始皇",
+      "wiki_en": "https://en.wikipedia.org/wiki/Qin_Shi_Huang"
+    },
+    {
+      "id": "emperor-han-wudi",
+      "year": -141,
+      "zh": "漢武帝即位",
+      "en": "Emperor Wu of Han",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "開拓絲路、獨尊儒術、擊敗匈奴。漢朝全盛時期。",
+      "desc_en": "Opened Silk Road, promoted Confucianism, defeated Xiongnu. Peak of Han dynasty.",
+      "crossRef": [
+        "trade",
+        "china-emperor"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/漢武帝",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emperor_Wu_of_Han"
+    },
+    {
+      "id": "emperor-cao-cao",
+      "year": 220,
+      "zh": "曹丕稱帝・曹魏建立",
+      "en": "Cao Pi Founds Wei Dynasty",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "曹操之子曹丕篡漢，三國鼎立開始。",
+      "desc_en": "Cao Pi usurped the Han throne, beginning the Three Kingdoms period.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Cao_Pi_Tang.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/曹丕",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cao_Pi"
+    },
+    {
+      "id": "emperor-sui-wendi",
+      "year": 581,
+      "zh": "隋文帝統一南北",
+      "en": "Emperor Wen of Sui Reunifies China",
+      "axis": "china-emperor",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "楊堅結束南北朝分裂，建立隋朝，推行均田制和科舉制。",
+      "desc_en": "Yang Jian ended the North-South division, established the Sui dynasty and imperial examination system.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sui_Wendi_Tang.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/隋文帝",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emperor_Wen_of_Sui"
+    },
+    {
+      "id": "emperor-tang-taizong",
+      "year": 626,
+      "zh": "唐太宗即位・貞觀之治",
+      "en": "Emperor Taizong — Zhenguan Reign",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "李世民開創貞觀之治，唐朝進入全盛。",
+      "desc_en": "Li Shimin ushered in the Zhenguan golden age of the Tang dynasty.",
+      "crossRef": [
+        "east",
+        "china-emperor"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/TangTaizong.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/唐太宗",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emperor_Taizong_of_Tang"
+    },
+    {
+      "id": "emperor-wu-zetian",
+      "year": 690,
+      "zh": "武則天稱帝",
+      "en": "Wu Zetian — China's Only Empress",
+      "axis": "china-emperor",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "中國歷史上唯一的女皇帝。改國號「周」。",
+      "desc_en": "The only female emperor in Chinese history. Changed dynasty name to Zhou.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f2/%E5%94%90%E6%9C%9D%E5%90%8D%E8%87%A3%E6%9C%83%E7%B8%BD%E5%9C%96_%28%E5%B1%80%E9%83%A8%29_-_%E6%AD%A6%E5%89%87%E5%A4%A9.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/武則天",
+      "wiki_en": "https://en.wikipedia.org/wiki/Wu_Zetian"
+    },
+    {
+      "id": "emperor-song-taizu",
+      "year": 960,
+      "zh": "宋太祖趙匡胤",
+      "en": "Emperor Taizu of Song",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "陳橋兵變，黃袍加身，建立宋朝。",
+      "desc_en": "Zhao Kuangyin seized power and founded the Song dynasty.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Song_Taizu.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/宋太祖",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emperor_Taizu_of_Song"
+    },
+    {
+      "id": "emperor-genghis",
+      "year": 1206,
+      "zh": "成吉思汗建蒙古帝國",
+      "en": "Genghis Khan Founds Mongol Empire",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "鐵木真統一蒙古，建立史上最大連續領土帝國。",
+      "desc_en": "Temüjin unified Mongol tribes and founded the largest contiguous land empire.",
+      "crossRef": [
+        "mongol",
+        "china-emperor"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/YuanEmperorAlbumGenghisPortrait.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/成吉思汗",
+      "wiki_en": "https://en.wikipedia.org/wiki/Genghis_Khan"
+    },
+    {
+      "id": "emperor-kublai",
+      "year": 1271,
+      "zh": "忽必烈建立元朝",
+      "en": "Kublai Khan Establishes Yuan",
+      "axis": "china-emperor",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "忽必烈定國號「元」，蒙古人統治中國。",
+      "desc_en": "Kublai Khan proclaimed the Yuan dynasty, Mongol rule over China.",
+      "crossRef": [
+        "mongol"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/YuanEmperorAlbumKhubilaiPortrait.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/忽必烈",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kublai_Khan"
+    },
+    {
+      "id": "emperor-zhu-yuanzhang",
+      "year": 1368,
+      "zh": "朱元璋建立明朝",
+      "en": "Zhu Yuanzhang Founds Ming Dynasty",
+      "axis": "china-emperor",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "農民起義推翻元朝，建立明朝。",
+      "desc_en": "Peasant rebel overthrew Yuan and established the Ming dynasty.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Portrait_assis_de_l%27empereur_Ming_Taizu.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/朱元璋",
+      "wiki_en": "https://en.wikipedia.org/wiki/Hongwu_Emperor"
+    },
+    {
+      "id": "emperor-yongle",
+      "year": 1402,
+      "zh": "明成祖永樂大帝",
+      "en": "Yongle Emperor",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "遷都北京、編纂永樂大典、派鄭和下西洋。",
+      "desc_en": "Moved capital to Beijing, commissioned Yongle Encyclopedia, sent Zheng He's voyages.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Portrait_assis_de_l%27empereur_Ming_Chengzu.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/明成祖",
+      "wiki_en": "https://en.wikipedia.org/wiki/Yongle_Emperor"
+    },
+    {
+      "id": "emperor-kangxi",
+      "year": 1661,
+      "zh": "康熙帝即位",
+      "en": "Kangxi Emperor",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "在位 61 年，平三藩、收台灣、抗俄羅斯。清朝盛世。",
+      "desc_en": "Reigned 61 years. Suppressed revolts, annexed Taiwan, resisted Russia. Qing golden age.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Portrait_of_the_Kangxi_Emperor_in_Court_Dress.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/康熙帝",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kangxi_Emperor",
+      "crossRef": [
+        "china-emperor"
+      ]
+    },
+    {
+      "id": "emperor-qianlong",
+      "year": 1735,
+      "zh": "乾隆帝即位",
+      "en": "Qianlong Emperor",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "編纂四庫全書。乾隆盛世後清朝由盛轉衰。",
+      "desc_en": "Compiled Siku Quanshu. After his reign, Qing dynasty began to decline.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Portrait_of_the_Qianlong_Emperor_in_Court_Dress.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/乾隆帝",
+      "wiki_en": "https://en.wikipedia.org/wiki/Qianlong_Emperor"
+    },
+    {
+      "id": "emperor-puyi",
+      "year": 1912,
+      "zh": "溥儀退位・帝制終結",
+      "en": "Puyi Abdicates — End of Imperial China",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "末代皇帝溥儀退位，中國兩千年帝制結束。",
+      "desc_en": "Last emperor Puyi abdicated, ending 2000 years of imperial rule in China.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/%E6%BA%A5%E4%BB%AA.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/溥儀",
+      "wiki_en": "https://en.wikipedia.org/wiki/Puyi",
+      "crossRef": [
+        "china-emperor"
+      ]
+    },
+    {
+      "id": "war-muye",
+      "year": -1046,
+      "zh": "牧野之戰",
+      "en": "Battle of Muye",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "周武王伐紂，滅商建周。",
+      "desc_en": "King Wu of Zhou defeated Shang at Muye, establishing the Zhou dynasty.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Battle_of_Muye.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/牧野之戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Muye"
+    },
+    {
+      "id": "war-changping",
+      "year": -260,
+      "zh": "長平之戰",
+      "en": "Battle of Changping",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "秦趙之戰，秦將白起坑殺趙軍 40 萬。",
+      "desc_en": "Qin general Bai Qi defeated Zhao and reportedly buried 400,000 soldiers alive.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Battle_of_Changping.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/長平之戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Changping",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "war-chibi",
+      "year": 208,
+      "zh": "赤壁之戰",
+      "en": "Battle of Red Cliffs",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "孫劉聯軍大敗曹操，三國鼎立格局確立。",
+      "desc_en": "Sun-Liu alliance defeated Cao Cao, solidifying the Three Kingdoms division.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Chibizhizhan.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/赤壁之戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Red_Cliffs",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "war-feishui",
+      "year": 383,
+      "zh": "淝水之戰",
+      "en": "Battle of Fei River",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "東晉以少勝多擊敗前秦，南北對峙格局延續。",
+      "desc_en": "Eastern Jin defeated Former Qin despite being outnumbered, preserving the North-South divide.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Battle_of_Fei_River.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/淝水之戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Fei_River"
+    },
+    {
+      "id": "war-anshi",
+      "year": 755,
+      "endYear": 763,
+      "zh": "安史之亂",
+      "en": "An Lushan Rebellion",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "安祿山叛亂，唐朝由盛轉衰的轉折點。",
+      "desc_en": "An Lushan's rebellion marked the turning point of Tang dynasty from prosperity to decline.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/An_Lushan_Rebellion-zh-hant.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/安史之亂",
+      "wiki_en": "https://en.wikipedia.org/wiki/An_Lushan_Rebellion"
+    },
+    {
+      "id": "war-jingkang",
+      "year": 1127,
+      "zh": "靖康之變",
+      "en": "Jingkang Incident",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "金兵攻陷汴京，北宋滅亡，南宋建立。",
+      "desc_en": "Jin captured Kaifeng, ending Northern Song. Southern Song was established.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Huizong.jpg/1280px-Huizong.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/靖康之變",
+      "wiki_en": "https://en.wikipedia.org/wiki/Jingkang_incident"
+    },
+    {
+      "id": "war-opium1",
+      "year": 1840,
+      "endYear": 1842,
+      "zh": "第一次鴉片戰爭",
+      "en": "First Opium War",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "英國以鴉片貿易為由開戰，清朝戰敗簽訂南京條約。",
+      "desc_en": "Britain waged war over opium trade. Qing defeat led to Treaty of Nanjing.",
+      "crossRef": [
+        "europe"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/第一次鴉片戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/First_Opium_War"
+    },
+    {
+      "id": "war-taiping",
+      "year": 1851,
+      "endYear": 1864,
+      "zh": "太平天國",
+      "en": "Taiping Rebellion",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "洪秀全領導的農民起義，造成約 2000 萬人死亡。",
+      "desc_en": "Hong Xiuquan's peasant rebellion, one of the deadliest conflicts in history (~20M deaths).",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Regaining_the_Provincial_City_Anqing2.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/太平天國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiping_Rebellion"
+    },
+    {
+      "id": "war-opium2",
+      "year": 1856,
+      "endYear": 1860,
+      "zh": "第二次鴉片戰爭",
+      "en": "Second Opium War",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "英法聯軍攻入北京，火燒圓明園。",
+      "desc_en": "Anglo-French forces entered Beijing and burned the Old Summer Palace.",
+      "crossRef": [
+        "europe"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/La_bataille_de_Palikiao.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/第二次鴉片戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Second_Opium_War"
+    },
+    {
+      "id": "war-sino-japanese1",
+      "year": 1894,
+      "endYear": 1895,
+      "zh": "甲午戰爭",
+      "en": "First Sino-Japanese War",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "清朝敗給日本，割讓台灣，東亞格局劇變。",
+      "desc_en": "Qing lost to Japan, ceded Taiwan. Dramatically shifted East Asian power dynamics.",
+      "crossRef": [
+        "japan",
+        "taiwan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/First_Sino-Japanese_War_-_Chinese_version.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/甲午戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/First_Sino-Japanese_War"
+    },
+    {
+      "id": "war-boxer",
+      "year": 1900,
+      "zh": "八國聯軍",
+      "en": "Boxer Protocol / Eight-Nation Alliance",
+      "axis": "china",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "義和團運動引發八國聯軍入侵北京。",
+      "desc_en": "Boxer Uprising led to an eight-nation military intervention in Beijing.",
+      "crossRef": [
+        "europe",
+        "china-war"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/EightNations_in1901.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/八國聯軍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Boxer_Rebellion"
+    },
+    {
+      "id": "war-xinhai",
+      "year": 1911,
+      "zh": "辛亥革命",
+      "en": "Xinhai Revolution",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "武昌起義推翻清朝，建立中華民國。",
+      "desc_en": "Wuchang Uprising overthrew the Qing dynasty, establishing the Republic of China.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Xinhai_Revolution_in_Shanghai.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/辛亥革命",
+      "wiki_en": "https://en.wikipedia.org/wiki/Xinhai_Revolution",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "war-sino-japanese2",
+      "year": 1937,
+      "endYear": 1945,
+      "zh": "中日戰爭（抗戰）",
+      "en": "Second Sino-Japanese War",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "中國抗日戰爭，二戰亞洲戰場的一部分。",
+      "desc_en": "China's war against Japan, part of WWII's Asian theater.",
+      "crossRef": [
+        "japan",
+        "east"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Battle_of_Taierzhuang.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中國抗日戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Second_Sino-Japanese_War"
+    },
+    {
+      "id": "war-civil",
+      "year": 1946,
+      "endYear": 1949,
+      "zh": "國共內戰",
+      "en": "Chinese Civil War",
+      "axis": "china-war",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "國民黨與共產黨全面內戰。共產黨勝利，國民黨退守台灣。",
+      "desc_en": "Full-scale civil war between KMT and CPC. CPC victory; KMT retreated to Taiwan.",
+      "crossRef": [
+        "taiwan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/ChineseCivilWarCollage.PNG",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/國共內戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chinese_Civil_War"
+    },
+    {
+      "id": "lit-shijing",
+      "year": -1000,
+      "zh": "《詩經》",
+      "en": "Classic of Poetry (Shijing)",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "中國最早的詩歌總集，收錄西周至春秋時期 305 首詩。",
+      "desc_en": "China's earliest poetry anthology, containing 305 poems from the Western Zhou to Spring and Autumn periods.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Shi_Jing.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/詩經",
+      "wiki_en": "https://en.wikipedia.org/wiki/Classic_of_Poetry"
+    },
+    {
+      "id": "lit-chuci",
+      "year": -340,
+      "zh": "屈原《楚辭》",
+      "en": "Qu Yuan — Chu Ci",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "屈原創作《離騷》等浪漫主義詩篇。",
+      "desc_en": "Qu Yuan wrote Li Sao and other romantic poems, founding the Chu Ci literary tradition.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Qu_Yuan_Chen_Hongshou_2.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/楚辭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chu_Ci"
+    },
+    {
+      "id": "lit-shiji",
+      "year": -91,
+      "zh": "司馬遷《史記》",
+      "en": "Sima Qian — Records of the Grand Historian",
+      "axis": "china",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "中國第一部紀傳體通史，被譽為「史家之絕唱」。",
+      "desc_en": "China's first comprehensive biographical history, praised as the supreme work of historiography.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/%E5%8F%B2%E8%AE%B0.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/史記",
+      "wiki_en": "https://en.wikipedia.org/wiki/Records_of_the_Grand_Historian",
+      "crossRef": [
+        "china-literature"
+      ]
+    },
+    {
+      "id": "lit-tao-yuanming",
+      "year": 405,
+      "zh": "陶淵明《桃花源記》",
+      "en": "Tao Yuanming — Peach Blossom Spring",
+      "axis": "china-literature",
+      "level": 2,
+      "category": "arts",
+      "desc_zh": "描繪世外桃源，開創田園文學。",
+      "desc_en": "Depicted an idyllic utopia, pioneering pastoral literature.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Tao_Qian.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/陶淵明",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tao_Yuanming"
+    },
+    {
+      "id": "lit-tang-poetry",
+      "year": 700,
+      "endYear": 850,
+      "zh": "唐詩黃金時代",
+      "en": "Golden Age of Tang Poetry",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "李白、杜甫、白居易等詩人輩出，唐詩達到巔峰。",
+      "desc_en": "Li Bai, Du Fu, Bai Juyi and other great poets flourished. Peak of Chinese poetry.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Nanling_Wushuang_Pu_-_Li_Qinglian.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/唐詩",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tang_poetry"
+    },
+    {
+      "id": "lit-song-ci",
+      "year": 1000,
+      "endYear": 1200,
+      "zh": "宋詞",
+      "en": "Song Dynasty Ci Poetry",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "蘇軾、李清照、辛棄疾等人將詞推向頂峰。",
+      "desc_en": "Su Shi, Li Qingzhao, Xin Qiji elevated Ci poetry to its zenith.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Map_of_Song_Dynasty_Poets.jpg/1280px-Map_of_Song_Dynasty_Poets.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/宋詞",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ci_(poetry)"
+    },
+    {
+      "id": "lit-erta-pai",
+      "year": 1300,
+      "endYear": 1400,
+      "zh": "元曲",
+      "en": "Yuan Dynasty Drama",
+      "axis": "china-literature",
+      "level": 2,
+      "category": "arts",
+      "desc_zh": "關漢卿《竇娥冤》、王實甫《西廂記》，中國戲劇文學興起。",
+      "desc_en": "Guan Hanqing and Wang Shifu pioneered Chinese dramatic literature.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Yuan_qu.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/元曲",
+      "wiki_en": "https://en.wikipedia.org/wiki/Qu_(poetry)"
+    },
+    {
+      "id": "lit-sanguoyanyi",
+      "year": 1522,
+      "zh": "《三國演義》",
+      "en": "Romance of the Three Kingdoms",
+      "axis": "china",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "羅貫中著，中國四大名著之一。",
+      "desc_en": "By Luo Guanzhong. One of the Four Great Classical Novels of Chinese literature.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%E4%B8%89%E5%9C%8B%E6%BC%94%E7%BE%A9%E6%98%8E%E5%98%89%E6%BA%96%E9%96%93%E4%B9%A6%E6%9E%97%E5%91%A8%E6%9B%B0%E6%A0%A1%E5%88%8A%E6%9C%AC_002.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/三國演義",
+      "wiki_en": "https://en.wikipedia.org/wiki/Romance_of_the_Three_Kingdoms",
+      "crossRef": [
+        "china-literature"
+      ]
+    },
+    {
+      "id": "lit-xiyouji",
+      "year": 1592,
+      "zh": "《西遊記》",
+      "en": "Journey to the West",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "吳承恩著，講述唐三藏西天取經。四大名著之一。",
+      "desc_en": "By Wu Cheng'en. The story of Xuanzang's pilgrimage. One of the Four Great Classical Novels.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Evl53201b_pic.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/西遊記",
+      "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_West"
+    },
+    {
+      "id": "lit-shuihu",
+      "year": 1589,
+      "zh": "《水滸傳》",
+      "en": "Water Margin",
+      "axis": "china-literature",
+      "level": 2,
+      "category": "arts",
+      "desc_zh": "施耐庵著，108 好漢的故事。四大名著之一。",
+      "desc_en": "By Shi Nai'an. Story of 108 outlaws. One of the Four Great Classical Novels.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Shuihu7.PNG",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/水滸傳",
+      "wiki_en": "https://en.wikipedia.org/wiki/Water_Margin"
+    },
+    {
+      "id": "lit-hongloumeng",
+      "year": 1791,
+      "zh": "《紅樓夢》",
+      "en": "Dream of the Red Chamber",
+      "axis": "china",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "曹雪芹著，中國文學最高成就之一。四大名著之一。",
+      "desc_en": "By Cao Xueqin. Widely regarded as the pinnacle of Chinese fiction. One of the Four Great Classical Novels.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/JiaXu01.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/紅樓夢",
+      "wiki_en": "https://en.wikipedia.org/wiki/Dream_of_the_Red_Chamber",
+      "crossRef": [
+        "china-literature"
+      ]
+    },
+    {
+      "id": "lit-luxun",
+      "year": 1918,
+      "zh": "魯迅《狂人日記》",
+      "en": "Lu Xun — A Madman's Diary",
+      "axis": "china",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "中國現代文學開山之作。",
+      "desc_en": "The founding work of modern Chinese literature.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/LuXun1930.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/魯迅",
+      "wiki_en": "https://en.wikipedia.org/wiki/Lu_Xun",
+      "crossRef": [
+        "china-literature"
+      ]
+    },
+    {
+      "id": "dynasty-eastern-han",
+      "year": 25,
+      "endYear": 220,
+      "zh": "東漢",
+      "en": "Eastern Han Dynasty",
+      "axis": "china",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "劉秀復漢，定都洛陽。",
+      "desc_en": "Liu Xiu restored the Han dynasty with the capital at Luoyang.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Han_provinces-zh-classical.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/東漢",
+      "wiki_en": "https://en.wikipedia.org/wiki/Eastern_Han_dynasty"
+    },
+    {
+      "id": "dynasty-prc",
+      "year": 1949,
+      "endYear": "__NOW__",
+      "zh": "中華人民共和國",
+      "en": "People's Republic of China",
+      "axis": "china",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "中國共產黨建立的社會主義國家。",
+      "desc_en": "Socialist state established by the Chinese Communist Party.",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中華人民共和國",
+      "wiki_en": "https://en.wikipedia.org/wiki/China"
+    },
+    {
+      "id": "tw-1945-retro",
+      "year": 1945,
+      "zh": "台灣光復",
+      "en": "Retrocession of Taiwan",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "日本投降，台灣結束 50 年日治，回歸中華民國。",
+      "desc_en": "Japan surrendered. Taiwan returned to the Republic of China after 50 years of Japanese rule.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣光復",
+      "wiki_en": "https://en.wikipedia.org/wiki/Retrocession_Day",
+      "crossRef": [
+        "china",
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/After_Surrender_Ceremony_of_Japan_in_Taiwan_Province%2C_China_Theater.jpg/1280px-After_Surrender_Ceremony_of_Japan_in_Taiwan_Province%2C_China_Theater.jpg"
+    },
+    {
+      "id": "tw-meilidao",
+      "year": 1979,
+      "zh": "美麗島事件",
+      "en": "Kaohsiung Incident",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "民主運動人士在高雄遊行遭鎮壓，台灣民主化的重要轉折。",
+      "desc_en": "Pro-democracy rally in Kaohsiung was suppressed, becoming a turning point for Taiwan's democratization.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美麗島事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Kaohsiung_incident",
+      "crossRef": [
+        "taiwan-colonial"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kaohsiung_Senior_High_Students_in_the_228_incident.jpg"
+    },
+    {
+      "id": "tw-chiang-death",
+      "year": 1988,
+      "zh": "蔣經國去世・李登輝繼任",
+      "en": "Chiang Ching-kuo Dies, Lee Teng-hui Succeeds",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "蔣經國去世，李登輝成為首位台灣出生的總統，開啟民主轉型。",
+      "desc_en": "Chiang Ching-kuo died. Lee Teng-hui became the first Taiwan-born president, initiating democratic reforms.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蔣經國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chiang_Ching-kuo",
+      "crossRef": [
+        "china"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/%E8%94%A3%E7%B6%93%E5%9C%8B%E7%B8%BD%E7%B5%B1_1.jpg"
+    },
+    {
+      "id": "tw-party-rotate1",
+      "year": 2000,
+      "zh": "第一次政黨輪替",
+      "en": "First Party Rotation",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "陳水扁當選總統，國民黨首次失去政權。",
+      "desc_en": "Chen Shui-bian elected president. KMT lost power for the first time.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/2000年中華民國總統選舉",
+      "wiki_en": "https://en.wikipedia.org/wiki/2000_Taiwanese_presidential_election",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/ROC_2000_Presidential_Election_Township_level.svg"
+    },
+    {
+      "id": "tw-sunflower",
+      "year": 2014,
+      "zh": "太陽花運動",
+      "en": "Sunflower Student Movement",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "反服貿學生運動佔領立法院，影響台灣政治走向。",
+      "desc_en": "Anti-CSSTA student movement occupied the Legislative Yuan, reshaping Taiwan's political landscape.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/太陽花學運",
+      "wiki_en": "https://en.wikipedia.org/wiki/Sunflower_Student_Movement",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Sunflower_Movement_collage.jpg"
+    },
+    {
+      "id": "tw-party-rotate3",
+      "year": 2016,
+      "zh": "第三次政黨輪替",
+      "en": "Third Party Rotation",
+      "axis": "taiwan",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "蔡英文當選總統，民進黨重新執政。",
+      "desc_en": "Tsai Ing-wen elected president. DPP returned to power.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/2016年中華民國總統選舉",
+      "wiki_en": "https://en.wikipedia.org/wiki/2016_Taiwanese_presidential_election",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/%E8%94%A1%E8%8B%B1%E6%96%87%E5%85%83%E9%A6%96%E8%82%96%E5%83%8F%E7%85%A7_%28cropped%29.png"
+    },
+    {
+      "id": "tw-ten-projects",
+      "year": 1974,
+      "zh": "十大建設",
+      "en": "Ten Major Construction Projects",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "蔣經國推動十大建設，台灣經濟起飛。",
+      "desc_en": "Chiang Ching-kuo launched Ten Major Construction Projects, driving Taiwan's economic takeoff.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/十大建設",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ten_Major_Construction_Projects",
+      "crossRef": [
+        "taiwan-culture"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/19790701_Lin_Yang-kang.jpg/1280px-19790701_Lin_Yang-kang.jpg"
+    },
+    {
+      "id": "tw-hsinchu",
+      "year": 1980,
+      "zh": "新竹科學園區成立",
+      "en": "Hsinchu Science Park Founded",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "science",
+      "desc_zh": "台灣半導體產業基地，孕育台積電、聯電等。",
+      "desc_en": "Foundation of Taiwan's semiconductor industry base, incubating TSMC, UMC, etc.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/新竹科學園區",
+      "wiki_en": "https://en.wikipedia.org/wiki/Hsinchu_Science_Park",
+      "crossRef": [
+        "science"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Hsinchu_Science_and_Industrial_Park_Administration_20101017.jpg"
+    },
+    {
+      "id": "tw-thsr",
+      "year": 2007,
+      "zh": "台灣高鐵通車",
+      "en": "Taiwan High Speed Rail Opens",
+      "axis": "taiwan",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "台北至高雄 345 公里，最快 90 分鐘，南北一日生活圈。",
+      "desc_en": "345 km from Taipei to Kaohsiung in 90 minutes. Created a one-day commuting circle.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/台灣高鐵",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_High_Speed_Rail",
+      "crossRef": [
+        "science"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/THSR_700T_TR17_20130907.jpg"
+    },
+    {
+      "id": "tw-tsmc-leader",
+      "year": 2020,
+      "zh": "台積電全球晶片霸主",
+      "en": "TSMC Becomes Global Chip Leader",
+      "axis": "taiwan",
+      "level": 1,
+      "category": "science",
+      "desc_zh": "台積電市值超越三星，成為全球最大半導體代工廠。",
+      "desc_en": "TSMC surpassed Samsung to become the world's largest semiconductor foundry.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/台灣積體電路製造",
+      "wiki_en": "https://en.wikipedia.org/wiki/TSMC",
+      "crossRef": [
+        "science"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/TSMC_Global_R%EF%BC%86D_Center_at_night.jpg"
+    },
+    {
+      "id": "tw-col-dutch-mission",
+      "year": 1627,
+      "endYear": 1662,
+      "zh": "荷蘭傳教與新港文書",
+      "en": "Dutch Mission & Sinckan Manuscripts",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "荷蘭傳教士以羅馬拼音記錄原住民語言，留下新港文書。",
+      "desc_en": "Dutch missionaries recorded indigenous languages in Roman script, creating the Sinckan Manuscripts.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/新港文書",
+      "wiki_en": "https://en.wikipedia.org/wiki/Sinckan_Manuscripts",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Xingang_Writing.jpg"
+    },
+    {
+      "id": "tw-col-qing-settle",
+      "year": 1684,
+      "endYear": 1895,
+      "zh": "清代漢人大量移墾",
+      "en": "Qing-era Han Migration",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "閩粵移民大量湧入台灣，漢人逐漸成為主要人口。",
+      "desc_en": "Massive immigration from Fujian and Guangdong. Han Chinese gradually became the dominant population.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣清治時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Flag_of_China_%281889%E2%80%931912%29.svg"
+    },
+    {
+      "id": "tw-col-mudan",
+      "year": 1874,
+      "zh": "牡丹社事件",
+      "en": "Mudan Incident",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "日本藉琉球漂民事件出兵台灣，清朝開始重視台灣防務。",
+      "desc_en": "Japan sent troops to Taiwan over the Mudan incident. Qing began to prioritize Taiwan's defense.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/牡丹社事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Japanese_expedition_to_Taiwan_(1874)",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/TaiwanShuppei.jpg"
+    },
+    {
+      "id": "tw-col-rail",
+      "year": 1908,
+      "zh": "縱貫鐵路全線通車",
+      "en": "Western Trunk Line Completed",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "基隆至高雄縱貫鐵路全線通車，日治重大基礎建設。",
+      "desc_en": "Keelung-Kaohsiung trunk railway completed. Major Japanese-era infrastructure.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/縱貫線_(鐵路)",
+      "wiki_en": "https://en.wikipedia.org/wiki/Western_Line_(Taiwan)",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/12_Cars_EMU500_through_Fengshan_River_Bridge.jpg/1280px-12_Cars_EMU500_through_Fengshan_River_Bridge.jpg"
+    },
+    {
+      "id": "tw-col-bunka",
+      "year": 1921,
+      "zh": "台灣文化協會成立",
+      "en": "Taiwan Cultural Association Founded",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "林獻堂等人成立，推動台灣人自覺運動。",
+      "desc_en": "Founded by Lin Xiantang and others to promote Taiwanese cultural awareness.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣文化協會",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/%E5%8F%B0%E7%81%A3%E6%96%87%E5%8C%96%E5%8D%94%E6%9C%83%E7%AC%AC%E4%B8%80%E5%B1%86%E7%90%86%E4%BA%8B%E6%9C%83.jpg/1280px-thumbnail.jpg"
+    },
+    {
+      "id": "tw-col-taihoku",
+      "year": 1928,
+      "zh": "台北帝國大學創校",
+      "en": "Taihoku Imperial University Founded",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "台灣大學前身，日治時期最高學府。",
+      "desc_en": "Predecessor of National Taiwan University. The highest institution of learning during Japanese rule.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺北帝國大學",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taihoku_Imperial_University",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Taihoku_Imperial_University.JPG"
+    },
+    {
+      "id": "tw-col-jianan",
+      "year": 1930,
+      "zh": "嘉南大圳完工",
+      "en": "Jianan Irrigation System Completed",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "八田與一設計，東亞最大水利工程，嘉南平原成為穀倉。",
+      "desc_en": "Designed by Hatta Yoichi. Largest irrigation system in East Asia. Transformed Jianan Plain into a granary.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/嘉南大圳",
+      "wiki_en": "https://en.wikipedia.org/wiki/Jianan_irrigation_waterway",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Taiwan_formosa_vintage_history_other_places_dams_taipics007.jpg"
+    },
+    {
+      "id": "tw-col-kominka",
+      "year": 1937,
+      "endYear": 1945,
+      "zh": "皇民化運動",
+      "en": "Kōminka Movement",
+      "axis": "taiwan-colonial",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "日本推行同化政策，要求台灣人改日本姓名、參拜神社。",
+      "desc_en": "Japan enforced assimilation: Japanese names, Shinto worship, and Japanese-language-only policies.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/皇民化運動",
+      "wiki_en": "https://en.wikipedia.org/wiki/K%C5%8Dminka_movement",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/1200px-Ambox_important.svg.png"
+    },
+    {
+      "id": "tw-col-white-terror",
+      "year": 1949,
+      "endYear": 1987,
+      "zh": "白色恐怖時期",
+      "en": "White Terror Period",
+      "axis": "taiwan-colonial",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "戒嚴下的政治迫害，數萬人受害。",
+      "desc_en": "Political persecution under martial law. Tens of thousands affected.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣白色恐怖時期",
+      "wiki_en": "https://en.wikipedia.org/wiki/White_Terror_(Taiwan)",
+      "crossRef": [
+        "china"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/228_by_Li_Jun.jpg"
+    },
+    {
+      "id": "tw-cul-austronesian",
+      "year": -4000,
+      "zh": "南島語族擴散起點",
+      "en": "Austronesian Dispersal Origin",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "語言學證據指台灣為南島語族發源地，向南擴散至太平洋。",
+      "desc_en": "Linguistic evidence suggests Taiwan as the origin point of Austronesian dispersal across the Pacific.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南島語族",
+      "wiki_en": "https://en.wikipedia.org/wiki/Austronesian_peoples",
+      "crossRef": [
+        "migration"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Map_of_the_prehistoric_Austronesian_migration_across_the_Pacific_%28per_Benton_et_al%2C_2012%2C_adapted_from_Bellwood%2C_2011%29.png/1280px-Map_of_the_prehistoric_Austronesian_migration_across_the_Pacific_%28per_Benton_et_al%2C_2012%2C_adapted_from_Bellwood%2C_2011%29.png"
+    },
+    {
+      "id": "tw-cul-torii",
+      "year": 1896,
+      "zh": "鳥居龍藏調查原住民",
+      "en": "Torii Ryūzō Surveys Taiwan Aborigines",
+      "axis": "taiwan-culture",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "東亞人類學之父，四次來台系統調查原住民文化。",
+      "desc_en": "Father of East Asian anthropology. Conducted four systematic surveys of Taiwan's indigenous peoples.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鳥居龍藏",
+      "wiki_en": "https://en.wikipedia.org/wiki/Torii_Ry%C5%ABz%C5%8D",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ryuzo_Torii_01.jpg"
+    },
+    {
+      "id": "tw-cul-ino",
+      "year": 1898,
+      "zh": "伊能嘉矩原住民分類",
+      "en": "Ino Kanori's Aboriginal Classification",
+      "axis": "taiwan-culture",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "提出台灣原住民「4群8族11部」分類體系。",
+      "desc_en": "Proposed the '4 groups, 8 tribes, 11 divisions' classification of Taiwan's indigenous peoples.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/伊能嘉矩",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ino_Kanori",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/In%C5%8D_Kanori.jpg"
+    },
+    {
+      "id": "tw-cul-mori",
+      "year": 1900,
+      "endYear": 1926,
+      "zh": "森丑之助踏查台灣",
+      "en": "Mori Ushinosuke — Taiwan Explorer",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "「生蕃行腳」作者。因無力阻止五年理蕃計畫而投海自盡。",
+      "desc_en": "Author of 'Journeys Among the Savages'. Committed suicide at sea, unable to stop the aboriginal subjugation policy.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/森丑之助",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mori_Ushinosuke",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/%E6%A3%AE%E4%B8%91%E4%B9%8B%E5%8A%A9%E8%82%96%E5%83%8F.jpg"
+    },
+    {
+      "id": "tw-cul-chikaokawan",
+      "year": 1908,
+      "zh": "七腳川事件",
+      "en": "Chikaokawan Incident",
+      "axis": "taiwan-culture",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "阿美族七腳川社抗日事件，日軍焚毀部落並強制遷移。",
+      "desc_en": "Amis people of Chikaokawan resisted Japanese rule. The village was burned and residents forcibly relocated.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/七腳川事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Qijiaochuwan_incident",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Taiwan_formosa_vintage_history_cities_hualien_taipics008.jpg"
+    },
+    {
+      "id": "tw-cul-riban",
+      "year": 1910,
+      "endYear": 1915,
+      "zh": "五年理蕃計畫",
+      "en": "Five-Year Aboriginal Subjugation Plan",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "war",
+      "desc_zh": "佐久間左馬太總督武力征服原住民部落，沒收槍械。",
+      "desc_en": "Governor Sakuma's military campaign to subjugate indigenous tribes and confiscate weapons.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/五年理蕃計畫",
+      "wiki_en": "https://en.wikipedia.org/wiki/Five-Year_Plan_for_Controlling_the_Aborigines",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Taiwan_governor-general_Sakuma_Samata_on_the_litter.jpg"
+    },
+    {
+      "id": "tw-cul-kano",
+      "year": 1931,
+      "endYear": 1945,
+      "zh": "鹿野忠雄探險調查",
+      "en": "Kanō Tadao — Mountain Explorer",
+      "axis": "taiwan-culture",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "「八二粁一四五米」作者。博物學家，深入台灣高山進行生態調查，1945年失蹤於北婆羅洲。",
+      "desc_en": "Author of '82km 145m'. Naturalist who explored Taiwan's mountains. Disappeared in North Borneo in 1945.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鹿野忠雄",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tadao_Kano",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/LU0802.JPG"
+    },
+    {
+      "id": "tw-cul-indigenous-name",
+      "year": 1994,
+      "zh": "原住民正名運動",
+      "en": "Indigenous Peoples Renamed",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "civilization",
+      "desc_zh": "「山胞」正式改稱「原住民」，消弭族稱歧視。",
+      "desc_en": "'Mountain compatriots' officially renamed to 'indigenous peoples', ending discriminatory terminology.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣原住民族正名運動",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%E9%84%92%E6%97%8F%E7%9A%84%E3%80%8C%E9%81%AF%E9%81%A8%E5%88%A9%E6%A0%91%E8%81%AF%E5%90%88%E6%94%B6%E7%A9%AB%E7%A5%AD%E3%80%8D_%2828706865630%29.jpg/1280px-thumbnail.jpg"
+    },
+    {
+      "id": "tw-cul-pingpu-2025",
+      "year": 2025,
+      "zh": "平埔原住民族群身分法",
+      "en": "Plains Indigenous Peoples Identity Act",
+      "axis": "taiwan-culture",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "立法院通過，西拉雅等九族可申請平埔原住民身分。",
+      "desc_en": "Legislature passed law allowing Siraya and eight other plains indigenous groups to apply for official recognition.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臺灣原住民族",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/BaksaFormosaHuntingParty1871b.jpg"
+    },
+    {
+      "id": "tw-cul-houhsiao",
+      "year": 1989,
+      "zh": "侯孝賢《悲情城市》",
+      "en": "Hou Hsiao-hsien — A City of Sadness",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "威尼斯金獅獎，首部觸及二二八的台灣電影。",
+      "desc_en": "Venice Golden Lion. First Taiwanese film to address the 228 Incident.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/悲情城市",
+      "wiki_en": "https://en.wikipedia.org/wiki/A_City_of_Sadness",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/02.23_%E5%89%AF%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C%E5%87%9D%E8%A6%96%E6%99%82%E4%BB%A3%EF%BC%9A%E3%80%8A%E6%82%B2%E6%83%85%E5%9F%8E%E5%B8%82%E3%80%8B33%E9%80%B1%E5%B9%B4%E7%89%B9%E6%98%A0%E6%9C%83%E6%9A%A8%E5%BD%B1%E5%83%8F%E5%B1%95%E3%80%8D.jpg/1280px-thumbnail.jpg"
+    },
+    {
+      "id": "tw-cul-ang-lee",
+      "year": 2001,
+      "zh": "李安《臥虎藏龍》奧斯卡",
+      "en": "Ang Lee — Crouching Tiger Oscar",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "台灣導演李安獲奧斯卡最佳外語片，台灣電影國際突破。",
+      "desc_en": "Taiwanese director Ang Lee won Oscar for Best Foreign Language Film. International breakthrough for Taiwan cinema.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/臥虎藏龍_(電影)",
+      "wiki_en": "https://en.wikipedia.org/wiki/Crouching_Tiger,_Hidden_Dragon",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chow_Yun_Fat_for_wiki.jpg"
+    },
+    {
+      "id": "tw-cul-teresa",
+      "year": 1953,
+      "endYear": 1995,
+      "zh": "鄧麗君",
+      "en": "Teresa Teng",
+      "axis": "taiwan-culture",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "台灣文化輸出代表，歌聲傳遍華人世界與日本。",
+      "desc_en": "Icon of Taiwanese cultural export. Her voice reached the entire Chinese-speaking world and Japan.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鄧麗君",
+      "wiki_en": "https://en.wikipedia.org/wiki/Teresa_Teng",
+      "crossRef": [
+        "japan"
+      ],
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Teresa_Teng_US.jpg"
+    },
+    {
+      "id": "mark-war-anshi",
+      "year": 755,
+      "zh": "安史之亂",
+      "en": "An Lushan Rebellion",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/An_Lushan_Rebellion-zh-hant.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/安史之亂",
+      "wiki_en": "https://en.wikipedia.org/wiki/An_Lushan_Rebellion",
+      "desc_zh": "安祿山叛亂，唐朝由盛轉衰的轉折點。",
+      "desc_en": "An Lushan's rebellion marked the turning point of Tang dynasty from prosperity to decline.",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "mark-war-opium1",
+      "year": 1840,
+      "zh": "第一次鴉片戰爭",
+      "en": "First Opium War",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/第一次鴉片戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/First_Opium_War",
+      "desc_zh": "英國以鴉片貿易為由開戰，清朝戰敗簽訂南京條約。",
+      "desc_en": "Britain waged war over opium trade. Qing defeat led to Treaty of Nanjing.",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "mark-war-taiping",
+      "year": 1851,
+      "zh": "太平天國",
+      "en": "Taiping Rebellion",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Regaining_the_Provincial_City_Anqing2.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/太平天國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Taiping_Rebellion",
+      "desc_zh": "洪秀全領導的農民起義，造成約 2000 萬人死亡。",
+      "desc_en": "Hong Xiuquan's peasant rebellion, one of the deadliest conflicts in history (~20M deaths).",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "mark-war-sino-japanese1",
+      "year": 1894,
+      "zh": "甲午戰爭",
+      "en": "First Sino-Japanese War",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/First_Sino-Japanese_War_-_Chinese_version.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/甲午戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/First_Sino-Japanese_War",
+      "desc_zh": "清朝敗給日本，割讓台灣，東亞格局劇變。",
+      "desc_en": "Qing lost to Japan, ceded Taiwan. Dramatically shifted East Asian power dynamics.",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "mark-war-sino-japanese2",
+      "year": 1937,
+      "zh": "中日戰爭（抗戰）",
+      "en": "Second Sino-Japanese War",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Battle_of_Taierzhuang.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中國抗日戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Second_Sino-Japanese_War",
+      "desc_zh": "中國抗日戰爭，二戰亞洲戰場的一部分。",
+      "desc_en": "China's war against Japan, part of WWII's Asian theater.",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "mark-war-civil",
+      "year": 1946,
+      "zh": "國共內戰",
+      "en": "Chinese Civil War",
+      "axis": "china",
+      "level": 1,
+      "category": "war",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/ChineseCivilWarCollage.PNG",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/國共內戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chinese_Civil_War",
+      "desc_zh": "國民黨與共產黨全面內戰。共產黨勝利，國民黨退守台灣。",
+      "desc_en": "Full-scale civil war between KMT and CPC. CPC victory; KMT retreated to Taiwan.",
+      "crossRef": [
+        "china-war"
+      ]
+    },
+    {
+      "id": "mark-lit-tang-poetry",
+      "year": 700,
+      "zh": "唐詩黃金時代",
+      "en": "Golden Age of Tang Poetry",
+      "axis": "china",
+      "level": 1,
+      "category": "arts",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Nanling_Wushuang_Pu_-_Li_Qinglian.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/唐詩",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tang_poetry",
+      "desc_zh": "李白、杜甫、白居易等詩人輩出，唐詩達到巔峰。",
+      "desc_en": "Li Bai, Du Fu, Bai Juyi and other great poets flourished. Peak of Chinese poetry.",
+      "crossRef": [
+        "china-literature"
+      ]
+    },
+    {
+      "id": "emperor-wu-wang",
+      "year": -1046,
+      "zh": "周武王伐紂",
+      "en": "King Wu of Zhou",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "周武王姬發在牧野之戰滅商，建立周朝。",
+      "desc_en": "King Wu defeated Shang at Muye and established the Zhou dynasty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/周武王",
+      "wiki_en": "https://en.wikipedia.org/wiki/King_Wu_of_Zhou",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/King_Wu_of_Zhou.jpg"
+    },
+    {
+      "id": "emperor-qin-ershi",
+      "year": -210,
+      "zh": "秦二世胡亥",
+      "en": "Qin Er Shi",
+      "axis": "china-emperor",
+      "level": 3,
+      "category": "civilization",
+      "desc_zh": "秦始皇死後，胡亥即位，暴政導致農民起義。",
+      "desc_en": "After Qin Shi Huang's death, Hu Hai's tyranny led to peasant uprisings.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/秦二世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Qin_Er_Shi",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Qin_Er_Shi.png"
+    },
+    {
+      "id": "emperor-liu-bang",
+      "year": -202,
+      "zh": "漢高祖劉邦",
+      "en": "Emperor Gaozu of Han",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "平民出身，推翻秦朝，建立漢朝。",
+      "desc_en": "A commoner who overthrew the Qin and founded the Han dynasty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/劉邦",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emperor_Gaozu_of_Han",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Liu_Bang_%28Emperor_Gaozu_of_Han%29.png"
+    },
+    {
+      "id": "emperor-wang-mang",
+      "year": 9,
+      "zh": "王莽篡漢・新朝",
+      "en": "Wang Mang Usurps Han — Xin Dynasty",
+      "axis": "china-emperor",
+      "level": 2,
+      "category": "civilization",
+      "desc_zh": "王莽篡奪西漢政權，建立短命的新朝（9-23年）。",
+      "desc_en": "Wang Mang usurped the Western Han throne and established the short-lived Xin dynasty (9-23 CE).",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/王莽",
+      "wiki_en": "https://en.wikipedia.org/wiki/Wang_Mang",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/%E6%9D%B1%E8%A5%BF%E6%BC%A2%E5%85%A8%E5%82%B3_01_%28%E7%8E%8B%E8%8E%BD%29.jpg"
+    },
+    {
+      "id": "emperor-li-shimin",
+      "year": 598,
+      "zh": "李世民出生",
+      "en": "Li Shimin Born",
+      "axis": "china-emperor",
+      "level": 3,
+      "category": "civilization",
+      "desc_zh": "唐太宗李世民，唐朝第二任皇帝。",
+      "desc_en": "Li Shimin, the second emperor of Tang, born.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/唐太宗",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emperor_Taizong_of_Tang",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/TangTaizong.jpg"
+    },
+    {
+      "id": "emperor-hongwu-reform",
+      "year": 1380,
+      "zh": "朱元璋廢丞相",
+      "en": "Hongwu Abolishes Chancellor",
+      "axis": "china-emperor",
+      "level": 3,
+      "category": "civilization",
+      "desc_zh": "朱元璋廢除丞相制度，皇權空前集中。",
+      "desc_en": "Hongwu Emperor abolished the chancellor system, centralizing imperial power.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/朱元璋",
+      "wiki_en": "https://en.wikipedia.org/wiki/Hongwu_Emperor",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"
+    },
+    {
+      "id": "war-chu-han",
+      "year": -206,
+      "endYear": -202,
+      "zh": "楚漢相爭",
+      "en": "Chu-Han Contention",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "項羽與劉邦爭天下，劉邦最終建立漢朝。",
+      "desc_en": "Xiang Yu and Liu Bang fought for supremacy. Liu Bang won and founded the Han dynasty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/楚漢戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chu%E2%80%93Han_Contention",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Chu-Han_Contention.png"
+    },
+    {
+      "id": "war-yellow-turban",
+      "year": 184,
+      "zh": "黃巾之亂",
+      "en": "Yellow Turban Rebellion",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "張角領導的農民起義，東漢末年動亂之始。",
+      "desc_en": "Peasant revolt led by Zhang Jue, beginning the end of the Eastern Han.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/黃巾之亂",
+      "wiki_en": "https://en.wikipedia.org/wiki/Yellow_Turban_Rebellion",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Yellow_Turban_Rebellion.jpg"
+    },
+    {
+      "id": "war-yamen",
+      "year": 1279,
+      "zh": "崖山海戰・南宋滅亡",
+      "en": "Battle of Yamen — Fall of Song",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "蒙元滅南宋最後一戰，陸秀夫背幼帝投海。",
+      "desc_en": "Final battle between Yuan and Song. Lu Xiufu carried the child emperor into the sea.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/崖山海戰",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Yamen",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Jingmen002.jpg"
+    },
+    {
+      "id": "war-li-zicheng",
+      "year": 1644,
+      "zh": "李自成攻入北京",
+      "en": "Li Zicheng Captures Beijing",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "農民軍攻入北京，崇禎帝自縊，明朝滅亡。",
+      "desc_en": "Rebel army entered Beijing. Chongzhen Emperor hanged himself. End of Ming dynasty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/李自成",
+      "wiki_en": "https://en.wikipedia.org/wiki/Li_Zicheng",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/%E6%9D%8E%E8%87%AA%E6%88%90%E8%A1%8C%E5%AE%AB_%28cropped%29.png"
+    },
+    {
+      "id": "war-sino-french",
+      "year": 1884,
+      "endYear": 1885,
+      "zh": "中法戰爭",
+      "en": "Sino-French War",
+      "axis": "china-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "法國爭奪越南宗主權，與清朝開戰。",
+      "desc_en": "France fought Qing China over suzerainty of Vietnam.",
+      "crossRef": [
+        "france"
+      ],
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中法戰爭",
+      "wiki_en": "https://en.wikipedia.org/wiki/Sino-French_War",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Franco-sino_war_battle.jpg"
+    },
+    {
+      "id": "lit-lunyu",
+      "year": -479,
+      "zh": "《論語》編纂",
+      "en": "Analerta of Confucius Compiled",
+      "axis": "china-literature",
+      "level": 2,
+      "category": "arts",
+      "desc_zh": "孔子弟子編纂，儒家核心經典。",
+      "desc_en": "Compiled by Confucius' disciples. The core text of Confucianism.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/論語",
+      "wiki_en": "https://en.wikipedia.org/wiki/Analects",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Commentaries_of_the_Analects_of_Confucius.jpg"
+    },
+    {
+      "id": "lit-sunzi",
+      "year": -500,
+      "zh": "孫子《兵法》",
+      "en": "Sun Tzu — The Art of War",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "世界最早的軍事著作，影響東西方軍事思想。",
+      "desc_en": "The world's earliest military treatise, influencing military thought globally.",
+      "crossRef": [
+        "china-war"
+      ],
+      "wiki_zh": "https://zh.wikipedia.org/wiki/孫子兵法",
+      "wiki_en": "https://en.wikipedia.org/wiki/The_Art_of_War",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Inscribed_bamboo-slips_of_Art_of_War.jpg/1280px-Inscribed_bamboo-slips_of_Art_of_War.jpg"
+    },
+    {
+      "id": "lit-daodejing",
+      "year": -400,
+      "zh": "老子《道德經》",
+      "en": "Laozi — Tao Te Ching",
+      "axis": "china-literature",
+      "level": 1,
+      "category": "arts",
+      "desc_zh": "道家哲學核心經典，影響中國思想兩千年。",
+      "desc_en": "Core text of Daoist philosophy, influencing Chinese thought for two millennia.",
+      "crossRef": [
+        "taoism"
+      ],
+      "wiki_zh": "https://zh.wikipedia.org/wiki/道德經",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tao_Te_Ching",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Mawangdui_LaoTsu_Ms2.JPG"
+    },
+    {
+      "id": "lit-zizhi",
+      "year": 1084,
+      "zh": "司馬光《資治通鑑》",
+      "en": "Sima Guang — Zizhi Tongjian",
+      "axis": "china-literature",
+      "level": 2,
+      "category": "arts",
+      "desc_zh": "中國第一部編年體通史，記載戰國至五代的歷史。",
+      "desc_en": "China's first comprehensive chronological history, covering Warring States to Five Dynasties.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/資治通鑑",
+      "wiki_en": "https://en.wikipedia.org/wiki/Zizhi_Tongjian",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Zizhi_Tongjian_by_Sima_Guang.jpg"
+    },
+    {
+      "id": "lit-jinpingmei",
+      "year": 1610,
+      "zh": "《金瓶梅》",
+      "en": "The Plum in the Golden Vase",
+      "axis": "china-literature",
+      "level": 2,
+      "category": "arts",
+      "desc_zh": "中國第一部文人獨立創作的長篇小說。",
+      "desc_en": "The first full-length novel written independently by a single Chinese author.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/金瓶梅",
+      "wiki_en": "https://en.wikipedia.org/wiki/Jin_Ping_Mei",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Jinpingmei_books.jpg"
+    },
+    {
+      "id": "sci-jiagu",
+      "year": -1200,
+      "zh": "甲骨文",
+      "en": "Oracle Bone Script",
+      "axis": "china-science",
+      "level": 1,
+      "category": "science",
+      "desc_zh": "商朝刻在龜甲獸骨上的文字，中國最早的成熟文字系統。",
+      "desc_en": "Earliest known mature Chinese writing, carved on oracle bones during the Shang dynasty.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/甲骨文",
+      "wiki_en": "https://en.wikipedia.org/wiki/Oracle_bone_script",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Shang_Inscribed_Ox_Scapula_%28for_divination%29.jpg"
+    },
+    {
+      "id": "sci-abacus",
+      "year": 200,
+      "zh": "算盤",
+      "en": "Abacus",
+      "axis": "china-science",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "中國發明的計算工具，使用至今。",
+      "desc_en": "Chinese-invented calculation tool, still used today.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/算盤",
+      "wiki_en": "https://en.wikipedia.org/wiki/Abacus",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Abacus_Display_at_the_Computer_History_Museum.jpg"
+    },
+    {
+      "id": "sci-porcelain",
+      "year": 600,
+      "zh": "瓷器技術成熟",
+      "en": "Mature Porcelain Technology",
+      "axis": "china-science",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "中國瓷器技術成熟，「China」之名即源於此。",
+      "desc_en": "Chinese porcelain technology matured. The word 'China' derives from this craft.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/瓷器",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chinese_ceramics",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/%E9%9D%92%E7%A3%81%E7%9B%A4_Dish%2C_Celadon_glaze.jpg"
+    },
+    {
+      "id": "sci-woodblock",
+      "year": 868,
+      "zh": "雕版印刷《金剛經》",
+      "en": "Woodblock Printing — Diamond Sutra",
+      "axis": "china-science",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "世界現存最早的有日期標記的印刷書籍。",
+      "desc_en": "The world's oldest dated printed book.",
+      "crossRef": [
+        "buddhism"
+      ],
+      "wiki_zh": "https://zh.wikipedia.org/wiki/金剛般若波羅蜜經",
+      "wiki_en": "https://en.wikipedia.org/wiki/Diamond_Sutra",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Jingangjing.jpg"
+    },
+    {
+      "id": "sci-zheng-he-ship",
+      "year": 1405,
+      "zh": "鄭和寶船（造船技術）",
+      "en": "Zheng He's Treasure Ships",
+      "axis": "china-science",
+      "level": 2,
+      "category": "science",
+      "desc_zh": "鄭和寶船長約 120 米，當時世界最大的木造船。",
+      "desc_en": "Zheng He's treasure ships were ~120m long, the largest wooden ships of their time.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鄭和寶船",
+      "wiki_en": "https://en.wikipedia.org/wiki/Chinese_treasure_ship",
+      "category_broad": "human",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Zheng_He%27s_Treasure_Ship_3.jpg"
+    },
+    {
+      "id": "dino-origin",
+      "year": -233000000,
+      "zh": "恐龍起源",
+      "en": "Origin of Dinosaurs",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "最早的恐龍出現在三疊紀晚期的南美洲（現阿根廷）。",
+      "desc_en": "Earliest dinosaurs appeared in Late Triassic South America (modern Argentina).",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/恐龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Dinosaur",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Dinosauria_montage_2.jpg"
+    },
+    {
+      "id": "dino-saurischia",
+      "year": -233000000,
+      "endYear": -66000000,
+      "zh": "蜥臀目",
+      "en": "Saurischia",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "包括獸腳類（暴龍、伶盜龍）和蜥腳類（腕龍、梁龍）。鳥類由此演化。",
+      "desc_en": "Includes theropods (T. Rex, Velociraptor) and sauropods (Brachiosaurus, Diplodocus). Birds evolved from this group.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蜥臀目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Saurischia",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Saurischia.jpg"
+    },
+    {
+      "id": "dino-ornithischia",
+      "year": -200000000,
+      "endYear": -66000000,
+      "zh": "鳥臀目",
+      "en": "Ornithischia",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "包括劍龍、三角龍、甲龍、副龍櫛龍等。全部為草食性。",
+      "desc_en": "Includes Stegosaurus, Triceratops, Ankylosaurus, Parasaurolophus. All herbivorous.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鳥臀目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ornithischia",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ornithischia_montage.jpg/1280px-Ornithischia_montage.jpg"
+    },
+    {
+      "id": "dino-rise",
+      "year": -200000000,
+      "zh": "恐龍稱霸陸地",
+      "en": "Dinosaurs Dominate Land",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "三疊紀末大滅絕消滅了大部分競爭者，恐龍成為陸地霸主。",
+      "desc_en": "End-Triassic extinction eliminated most competitors. Dinosaurs became dominant land animals.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/三疊紀－侏羅紀滅絕事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Triassic%E2%80%93Jurassic_extinction_event",
+      "crossRef": [
+        "life"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Dinosaurs_in_Their_Time-_Jurassic_Era_Room_%282705542612%29.jpg/1280px-Dinosaurs_in_Their_Time-_Jurassic_Era_Room_%282705542612%29.jpg"
+    },
+    {
+      "id": "dino-gigantism",
+      "year": -160000000,
+      "zh": "侏羅紀巨型化",
+      "en": "Jurassic Gigantism",
+      "axis": "dinosaurs",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "蜥腳類恐龍體型達到巔峰，梁龍、腕龍等巨型草食恐龍遍布各大洲。",
+      "desc_en": "Sauropods reached peak body size. Giant herbivores like Diplodocus and Brachiosaurus spread across continents.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蜥腳下目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Sauropoda",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Louisae.jpg"
+    },
+    {
+      "id": "dino-birds",
+      "year": -150000000,
+      "zh": "鳥類從恐龍演化",
+      "en": "Birds Evolve from Dinosaurs",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "始祖鳥等過渡物種顯示鳥類由獸腳類恐龍演化而來。",
+      "desc_en": "Transitional species like Archaeopteryx show birds evolved from theropod dinosaurs.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鳥類的起源",
+      "wiki_en": "https://en.wikipedia.org/wiki/Origin_of_birds",
+      "crossRef": [
+        "life"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg"
+    },
+    {
+      "id": "dino-angiosperm",
+      "year": -130000000,
+      "zh": "被子植物改變恐龍生態",
+      "en": "Angiosperms Transform Dinosaur Ecology",
+      "axis": "dinosaurs",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "開花植物大爆發改變草食恐龍的食物來源和生態系統。",
+      "desc_en": "Flowering plant explosion changed food sources and ecosystems for herbivorous dinosaurs.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/被子植物",
+      "wiki_en": "https://en.wikipedia.org/wiki/Flowering_plant",
+      "crossRef": [
+        "life"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flower_poster_2.jpg"
+    },
+    {
+      "id": "dino-peak",
+      "year": -80000000,
+      "zh": "恐龍多樣性巔峰",
+      "en": "Peak Dinosaur Diversity",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "白堊紀晚期恐龍種類最多，暴龍、三角龍、甲龍等同時存在。",
+      "desc_en": "Late Cretaceous saw maximum dinosaur diversity. T. Rex, Triceratops, Ankylosaurus coexisted.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/白堊紀",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png"
+    },
+    {
+      "id": "dino-extinction",
+      "year": -66000000,
+      "zh": "恐龍滅絕・白堊紀末",
+      "en": "Dinosaur Extinction — End Cretaceous",
+      "axis": "dinosaurs",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "小行星撞擊尤卡坦半島，非鳥恐龍全部滅絕。只有鳥類存活至今。",
+      "desc_en": "Asteroid struck Yucatán. All non-avian dinosaurs went extinct. Only birds survived to present day.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/白堊紀－古近紀滅絕事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event",
+      "crossRef": [
+        "life",
+        "earth"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Impact_event.jpg"
+    },
+    {
+      "id": "sp-eoraptor",
+      "year": -231000000,
+      "zh": "始盜龍",
+      "en": "Eoraptor",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "最早的恐龍之一，體長約 1 米，雜食性。發現於阿根廷。",
+      "desc_en": "One of the earliest dinosaurs. ~1m long, omnivorous. Discovered in Argentina.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/始盜龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Eoraptor",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Eoraptor_Japan.jpg"
+    },
+    {
+      "id": "sp-herrerasaurus",
+      "year": -231000000,
+      "zh": "黑瑞龍",
+      "en": "Herrerasaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "三疊紀早期掠食者，體長約 6 米。",
+      "desc_en": "Early Triassic predator, ~6m long.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/艾雷拉龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Herrerasaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Herrerasaurus_ischigualastensis_DSC_2929.jpg"
+    },
+    {
+      "id": "sp-plateosaurus",
+      "year": -214000000,
+      "zh": "板龍",
+      "en": "Plateosaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "早期大型草食恐龍，體長可達 10 米。歐洲常見。",
+      "desc_en": "Early large herbivore, up to 10m. Common in Europe.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/板龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Plateosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Plateosaurus_Skelett_2.jpg"
+    },
+    {
+      "id": "sp-coelophysis",
+      "year": -210000000,
+      "zh": "腔骨龍",
+      "en": "Coelophysis",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "三疊紀代表性小型肉食恐龍，群居行為化石豐富。",
+      "desc_en": "Iconic small Triassic predator. Rich fossil evidence of pack behavior.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/腔骨龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Coelophysis",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Coelophysis_bauri_mount.jpg"
+    },
+    {
+      "id": "sp-dilophosaurus",
+      "year": -193000000,
+      "zh": "雙冠龍",
+      "en": "Dilophosaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "頭頂雙冠的早期侏羅紀肉食恐龍。",
+      "desc_en": "Early Jurassic predator with distinctive twin crests on its head.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/雙冠龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Dilophosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/DilophosaurusROM1.JPG"
+    },
+    {
+      "id": "sp-cryolophosaurus",
+      "year": -190000000,
+      "zh": "冰脊龍",
+      "en": "Cryolophosaurus",
+      "axis": "dino-species",
+      "level": 3,
+      "category": "biology",
+      "desc_zh": "在南極洲發現的肉食恐龍，證明侏羅紀南極氣候溫暖。",
+      "desc_en": "Carnivore found in Antarctica, proving warm Jurassic polar climate.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/冰脊龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Cryolophosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Cryolophosaurus_skeletal_mount.jpg"
+    },
+    {
+      "id": "sp-shunosaurus",
+      "year": -170000000,
+      "zh": "蜀龍",
+      "en": "Shunosaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "發現於中國四川的蜥腳類恐龍，尾部有骨錘。",
+      "desc_en": "Sauropod discovered in Sichuan, China. Had a bony tail club.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蜀龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Shunosaurus",
+      "crossRef": [
+        "china"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Shunosaurus_life_restoration.jpg"
+    },
+    {
+      "id": "sp-allosaurus",
+      "year": -155000000,
+      "zh": "異特龍",
+      "en": "Allosaurus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "侏羅紀頂級掠食者，體長可達 12 米。",
+      "desc_en": "Apex Jurassic predator, up to 12m long.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/異特龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Allosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/WLA_hmns_Allosaurus.jpg"
+    },
+    {
+      "id": "sp-stegosaurus",
+      "year": -155000000,
+      "zh": "劍龍",
+      "en": "Stegosaurus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "背部有骨板、尾部有尖刺的草食恐龍。腦容量極小。",
+      "desc_en": "Herbivore with back plates and tail spikes. Famously tiny brain.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/劍龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Stegosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Stegosaurus_ungulatus.jpg/1280px-Stegosaurus_ungulatus.jpg"
+    },
+    {
+      "id": "sp-brachiosaurus",
+      "year": -154000000,
+      "zh": "腕龍",
+      "en": "Brachiosaurus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "巨型蜥腳類，前腿比後腿長，頸部可達 9 米高。",
+      "desc_en": "Giant sauropod with longer forelimbs. Neck could reach 9m high.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/腕龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Brachiosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Brachiosaurus_mount.jpg"
+    },
+    {
+      "id": "sp-diplodocus",
+      "year": -154000000,
+      "zh": "梁龍",
+      "en": "Diplodocus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "體長可達 27 米的長頸恐龍，以尾巴甩擊防禦。",
+      "desc_en": "Up to 27m long. Used its whip-like tail for defense.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/梁龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Diplodocus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/CM_Diplodocus.jpg"
+    },
+    {
+      "id": "sp-pterosaurs",
+      "year": -165000000,
+      "endYear": -66000000,
+      "zh": "翼龍繁盛期",
+      "en": "Pterosaur Dominance",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "翼龍不是恐龍，但同為中生代空中霸主。翼展最大可達 12 米。",
+      "desc_en": "Pterosaurs were not dinosaurs but dominated Mesozoic skies. Wingspan up to 12m.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/翼龍目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Pterosaur",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Pteranodon_amnh_martyniuk.jpg"
+    },
+    {
+      "id": "sp-spinosaurus",
+      "year": -112000000,
+      "zh": "棘龍",
+      "en": "Spinosaurus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "已知最大的肉食恐龍，體長可達 18 米。背上有巨大帆狀突起，可能半水生。",
+      "desc_en": "Largest known carnivorous dinosaur, up to 18m. Had a large sail and was possibly semi-aquatic.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/棘龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Spinosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Spinosaurus_swimming.jpg"
+    },
+    {
+      "id": "sp-argentinosaurus",
+      "year": -94000000,
+      "zh": "阿根廷龍",
+      "en": "Argentinosaurus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "已知最大的恐龍之一，體重估計 70-80 噸。",
+      "desc_en": "One of the largest known dinosaurs. Estimated weight 70-80 tonnes.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿根廷龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Argentinosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Argentinosaurus_DSC_2943.jpg"
+    },
+    {
+      "id": "sp-parasaurolophus",
+      "year": -76000000,
+      "zh": "副龍櫛龍",
+      "en": "Parasaurolophus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "頭頂有管狀冠飾的鴨嘴龍，可能用來發出低頻聲音。",
+      "desc_en": "Hadrosaur with tubular crest, possibly used for producing low-frequency sounds.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/副龍櫛龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Parasaurolophus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f2/FMNH_Parasaurolophus_fossil.jpg"
+    },
+    {
+      "id": "sp-velociraptor",
+      "year": -75000000,
+      "zh": "伶盜龍",
+      "en": "Velociraptor",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "小型聰明的肉食恐龍，實際體型只有火雞大小，有羽毛。",
+      "desc_en": "Small intelligent predator. Actually turkey-sized with feathers, unlike movie depictions.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/伶盜龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Velociraptor",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Velociraptor_skeleton.jpg"
+    },
+    {
+      "id": "sp-ornithomimus",
+      "year": -75000000,
+      "zh": "似鳥龍",
+      "en": "Ornithomimus",
+      "axis": "dino-species",
+      "level": 3,
+      "category": "biology",
+      "desc_zh": "外形像鴕鳥的恐龍，跑速可達 60 km/h。",
+      "desc_en": "Ostrich-like dinosaur. Could run up to 60 km/h.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/似鳥龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ornithomimus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/ROM-OrnithomimusEdmontonicus.png"
+    },
+    {
+      "id": "sp-therizinosaurus",
+      "year": -70000000,
+      "zh": "鐮刀龍",
+      "en": "Therizinosaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "擁有 70 公分長巨爪的神秘恐龍，草食性。",
+      "desc_en": "Mysterious herbivore with 70cm-long claws.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/鐮刀龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Therizinosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Therizinosaurus_arms.jpg"
+    },
+    {
+      "id": "sp-mosasaurus",
+      "year": -70000000,
+      "zh": "滄龍",
+      "en": "Mosasaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "白堊紀海洋頂級掠食者，體長可達 17 米。不是恐龍，是海洋爬蟲類。",
+      "desc_en": "Top marine predator of the Cretaceous, up to 17m. Not a dinosaur but a marine reptile.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/滄龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mosasaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mosasaurus_hoffmannii_-_skeleton.jpg"
+    },
+    {
+      "id": "sp-pachycephalosaurus",
+      "year": -70000000,
+      "zh": "厚頭龍",
+      "en": "Pachycephalosaurus",
+      "axis": "dino-species",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "頭頂有厚達 25 公分的骨質圓頂，可能用於頭部撞擊。",
+      "desc_en": "Had a 25cm-thick dome of bone on its skull, possibly used for head-butting.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/厚頭龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Pachycephalosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Pachycephalosaurus_wyomingensis_ROM.jpg"
+    },
+    {
+      "id": "sp-ankylosaurus",
+      "year": -68000000,
+      "zh": "甲龍",
+      "en": "Ankylosaurus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "全身覆蓋骨甲的草食恐龍，尾部有骨錘可擊碎暴龍腿骨。",
+      "desc_en": "Armored herbivore. Tail club could shatter a T. Rex's leg bones.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/甲龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ankylosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Ankylosaurus_magniventris_reconstruction.png"
+    },
+    {
+      "id": "sp-triceratops",
+      "year": -68000000,
+      "zh": "三角龍",
+      "en": "Triceratops",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "三根角 + 頸盾的草食恐龍，暴龍的主要獵物和勁敵。",
+      "desc_en": "Three-horned herbivore with neck frill. Primary prey and rival of T. Rex.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/三角龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Triceratops",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Triceratops_mount.jpg"
+    },
+    {
+      "id": "sp-trex",
+      "year": -68000000,
+      "zh": "暴龍",
+      "en": "Tyrannosaurus Rex",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "白堊紀末頂級掠食者，咬合力超過 5 萬牛頓。恐龍中最知名的物種。",
+      "desc_en": "Ultimate Cretaceous apex predator. Bite force over 50,000 N. The most famous dinosaur species.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/暴龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Tyrannosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/FMNH_SUE_Trex.jpg"
+    },
+    {
+      "id": "sp-quetzalcoatlus",
+      "year": -68000000,
+      "zh": "風神翼龍",
+      "en": "Quetzalcoatlus",
+      "axis": "dino-species",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "已知最大的飛行動物，翼展可達 12 米。站立時高如長頸鹿。",
+      "desc_en": "Largest known flying animal. Wingspan up to 12m. Stood as tall as a giraffe.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/風神翼龍",
+      "wiki_en": "https://en.wikipedia.org/wiki/Quetzalcoatlus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Quetzalcoatlus_northropi.jpg"
+    },
+    {
+      "id": "epoch-paleocene",
+      "year": -66000000,
+      "endYear": -56000000,
+      "zh": "古新世",
+      "en": "Paleocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "恐龍滅絕後的復甦期。哺乳類開始填補生態空缺，體型逐漸增大。",
+      "desc_en": "Recovery period after dinosaur extinction. Mammals began filling ecological niches and growing larger.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Mollweide_Paleographic_Map_of_Earth%2C_60_Ma_%28Selandian_Age%29.png"
+    },
+    {
+      "id": "epoch-eocene",
+      "year": -56000000,
+      "endYear": -33900000,
+      "zh": "始新世",
+      "en": "Eocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "新生代最溫暖的時期。現代哺乳類的主要類群出現：馬、鯨魚、蝙蝠、靈長類。",
+      "desc_en": "Warmest period of the Cenozoic. Major modern mammal groups appeared: horses, whales, bats, primates.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/始新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Eocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Mollweide_Paleographic_Map_of_Earth%2C_45_Ma_%28Lutetian_Age%29.png"
+    },
+    {
+      "id": "epoch-oligocene",
+      "year": -33900000,
+      "endYear": -23000000,
+      "zh": "漸新世",
+      "en": "Oligocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "全球降溫，森林退縮，草原擴張。哺乳類體型增大，現代類群成形。",
+      "desc_en": "Global cooling. Forests retreated, grasslands expanded. Mammals grew larger, modern groups took shape.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/漸新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Oligocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Mollweide_Paleographic_Map_of_Earth%2C_30_Ma_%28Rupelian_Age%29.png"
+    },
+    {
+      "id": "epoch-miocene",
+      "year": -23000000,
+      "endYear": -5300000,
+      "zh": "中新世",
+      "en": "Miocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "草原時代。哺乳類多樣性巔峰。猿類多樣化，巨齒鯊稱霸海洋。",
+      "desc_en": "Age of grasslands. Peak mammal diversity. Apes diversified. Megalodon ruled the seas.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/中新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Miocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Mollweide_Paleographic_Map_of_Earth%2C_15_Ma_%28Langhian_Age%29.png"
+    },
+    {
+      "id": "epoch-pliocene",
+      "year": -5300000,
+      "endYear": -2600000,
+      "zh": "上新世",
+      "en": "Pliocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "持續降溫。南北美洲相連（巴拿馬地峽）。人猿分化，直立行走的猿人出現。",
+      "desc_en": "Continued cooling. Americas connected via Panama Isthmus. Human-ape split. Bipedal apes appeared.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/上新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Pliocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Mollweide_Paleographic_Map_of_Earth%2C_5_Ma_%28Zanclean_Age%29.png"
+    },
+    {
+      "id": "epoch-pleistocene",
+      "year": -2600000,
+      "endYear": -11700,
+      "zh": "更新世",
+      "en": "Pleistocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "冰河時代。長毛象、劍齒虎等巨型動物。人屬出現並擴散全球。",
+      "desc_en": "Ice Age. Megafauna like mammoths and saber-toothed cats. Genus Homo appeared and spread globally.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/更新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Pleistocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Mollweide_Paleographic_Map_of_Earth%2C_21_Ka_%28Late_Pleistocene_Age%29.png"
+    },
+    {
+      "id": "epoch-holocene",
+      "year": -11700,
+      "endYear": "__NOW__",
+      "zh": "全新世",
+      "en": "Holocene",
+      "axis": "cenozoic-epochs",
+      "level": 1,
+      "category": "geology",
+      "desc_zh": "冰河期結束，人類文明興起。農業革命、城市、工業革命。",
+      "desc_en": "End of Ice Age. Rise of human civilization. Agriculture, cities, Industrial Revolution.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/全新世",
+      "wiki_en": "https://en.wikipedia.org/wiki/Holocene",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mollweide.jpg"
+    },
+    {
+      "id": "cz-mammal-radiation",
+      "year": -65000000,
+      "zh": "哺乳類大爆發",
+      "en": "Mammalian Adaptive Radiation",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "恐龍滅絕後百萬年內，哺乳類快速多樣化，填補所有生態空缺。",
+      "desc_en": "Within a million years of dinosaur extinction, mammals rapidly diversified to fill all ecological niches.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/適應輻射",
+      "wiki_en": "https://en.wikipedia.org/wiki/Adaptive_radiation",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Darwin%27s_finches.jpeg"
+    },
+    {
+      "id": "cz-terror-birds",
+      "year": -62000000,
+      "zh": "恐鳥崛起",
+      "en": "Terror Birds Rise",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "巨型肉食鳥類（駭鳥）成為南美洲頂級掠食者，有些身高超過 2 米。",
+      "desc_en": "Giant predatory birds (Phorusrhacids) became apex predators in South America. Some over 2m tall.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/駭鳥科",
+      "wiki_en": "https://en.wikipedia.org/wiki/Phorusrhacidae",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Skeleton_of_Titanis_at_the_Florida_Museum_of_Natural_History.jpg"
+    },
+    {
+      "id": "cz-first-rodents",
+      "year": -60000000,
+      "zh": "最早的囓齒類",
+      "en": "First Rodents",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "囓齒類出現，日後成為哺乳類中物種數量最多的類群。",
+      "desc_en": "Rodents appeared, eventually becoming the most species-rich order of mammals.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/囓齒目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Rodent",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Capybara.png"
+    },
+    {
+      "id": "cz-first-carnivora",
+      "year": -60000000,
+      "zh": "最早的食肉目",
+      "en": "First Carnivorans",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "原始食肉目（小古貓等）出現，是現代貓、狗、熊的祖先。",
+      "desc_en": "Early carnivorans (Miacids) appeared — ancestors of modern cats, dogs, and bears.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/食肉目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Carnivora",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Em_-_Cryptoprocta_ferox_-_2.jpg/1920px-Em_-_Cryptoprocta_ferox_-_2.jpg"
+    },
+    {
+      "id": "cz-petm",
+      "year": -56000000,
+      "zh": "PETM 全球暖化事件",
+      "en": "PETM — Paleocene-Eocene Thermal Maximum",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "climate",
+      "desc_zh": "古新世-始新世極熱事件。全球溫度暴升 5-8°C，海洋酸化，大量物種遷徙。",
+      "desc_en": "Global temperature surged 5-8°C. Ocean acidification. Massive species migration.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/古新世-始新世極熱事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Paleocene%E2%80%93Eocene_Thermal_Maximum",
+      "crossRef": [
+        "climate"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wfm_ardnamurchan_landsat.jpg/960px-Wfm_ardnamurchan_landsat.jpg"
+    },
+    {
+      "id": "cz-dawn-horse",
+      "year": -52000000,
+      "zh": "始祖馬",
+      "en": "Eohippus (Dawn Horse)",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "最早的馬，只有狗的大小，有四趾。五千萬年間逐漸演化為現代馬。",
+      "desc_en": "Earliest horse, dog-sized with four toes. Evolved into modern horses over 50 million years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/始祖馬",
+      "wiki_en": "https://en.wikipedia.org/wiki/Eohippus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Eohippus.jpg/1920px-Eohippus.jpg"
+    },
+    {
+      "id": "cz-whale-origin",
+      "year": -50000000,
+      "zh": "鯨魚從陸地走入海洋",
+      "en": "Whales Walk into the Sea",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "巴基鯨（Pakicetus）是有腳的鯨魚祖先。從陸地哺乳類演化為海洋巨獸。",
+      "desc_en": "Pakicetus — a whale ancestor with legs. Mammals evolved from land back into the ocean.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巴基鯨",
+      "wiki_en": "https://en.wikipedia.org/wiki/Pakicetus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Pakicetus_Canada.jpg/1280px-Pakicetus_Canada.jpg"
+    },
+    {
+      "id": "cz-first-bats",
+      "year": -50000000,
+      "zh": "最早的蝙蝠",
+      "en": "First Bats",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "最早的飛行哺乳類出現，回聲定位能力讓蝙蝠成功佔據夜間空中生態位。",
+      "desc_en": "First flying mammals appeared. Echolocation enabled bats to dominate nocturnal aerial niches.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/翼手目",
+      "wiki_en": "https://en.wikipedia.org/wiki/Bat",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Batfossil.jpg"
+    },
+    {
+      "id": "cz-basilosaurus",
+      "year": -40000000,
+      "zh": "械齒鯨・早期巨鯨",
+      "en": "Basilosaurus — Early Giant Whale",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "體長可達 18 米的早期鯨魚，已完全適應海洋生活但仍保留退化後肢。",
+      "desc_en": "Up to 18m long. Fully aquatic but still had vestigial hind limbs.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/械齒鯨",
+      "wiki_en": "https://en.wikipedia.org/wiki/Basilosaurus",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Dorudon_fossil_at_Wadi_El-Hitan%2C_Egypt%2C_2014.jpg/960px-Dorudon_fossil_at_Wadi_El-Hitan%2C_Egypt%2C_2014.jpg"
+    },
+    {
+      "id": "cz-eocene-oligocene",
+      "year": -34000000,
+      "zh": "始新世-漸新世大滅絕",
+      "en": "Eocene-Oligocene Extinction",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "全球急劇降溫（Grande Coupure），歐洲大量哺乳類滅絕，被亞洲物種取代。",
+      "desc_en": "Dramatic global cooling (Grande Coupure). Many European mammals went extinct, replaced by Asian species.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/始新世-漸新世滅絕事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Eocene%E2%80%93Oligocene_extinction_event",
+      "crossRef": [
+        "climate"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/Extinction_Intensity%28in_Chinese%29.jpg"
+    },
+    {
+      "id": "cz-paraceratherium",
+      "year": -30000000,
+      "zh": "巨犀",
+      "en": "Paraceratherium — Largest Land Mammal",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "史上最大陸地哺乳類，肩高約 5 米，體重約 15-20 噸。比大象大一倍。",
+      "desc_en": "Largest land mammal ever. ~5m at shoulder, ~15-20 tonnes. Twice the size of an elephant.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巨犀",
+      "wiki_en": "https://en.wikipedia.org/wiki/Paraceratherium",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Paraceratherium_transouralicum_skull.jpg/1920px-Paraceratherium_transouralicum_skull.jpg"
+    },
+    {
+      "id": "cz-grassland-spread",
+      "year": -28000000,
+      "zh": "草原大擴張",
+      "en": "Grassland Expansion",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "全球降溫，森林退縮，草原擴張。改變哺乳類演化方向：跑得快的活下來。",
+      "desc_en": "Global cooling caused forests to retreat and grasslands to expand. Survival favored speed.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/草原",
+      "wiki_en": "https://en.wikipedia.org/wiki/Grassland",
+      "crossRef": [
+        "climate"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Bayanbulak_grassland.jpg/1920px-Bayanbulak_grassland.jpg"
+    },
+    {
+      "id": "cz-early-elephants",
+      "year": -27000000,
+      "zh": "早期象類（乳齒象）",
+      "en": "Early Elephants (Mastodons)",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "象類祖先開始體型增大，發展出長鼻和象牙。",
+      "desc_en": "Elephant ancestors grew larger, developing trunks and tusks.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/乳齒象",
+      "wiki_en": "https://en.wikipedia.org/wiki/Mastodon",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Skeleton_Missouri_Leviathan_Drawing.jpg/1280px-Skeleton_Missouri_Leviathan_Drawing.jpg"
+    },
+    {
+      "id": "cz-early-apes",
+      "year": -25000000,
+      "zh": "早期猿類出現",
+      "en": "Early Apes Appear",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "猿類與舊世界猴分歧。猿類沒有尾巴、腦容量較大。",
+      "desc_en": "Apes diverged from Old World monkeys. Apes lacked tails and had larger brains.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/猿",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ape",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Ape_skeletons.png"
+    },
+    {
+      "id": "cz-megalodon",
+      "year": -20000000,
+      "zh": "巨齒鯊",
+      "en": "Megalodon",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "史上最大鯊魚，體長可達 18 米，咬合力是暴龍的 6 倍。統治海洋 1300 萬年。",
+      "desc_en": "Largest shark ever, up to 18m. Bite force 6× that of T. Rex. Ruled the oceans for 13 million years.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巨齒鯊",
+      "wiki_en": "https://en.wikipedia.org/wiki/Megalodon",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Megalodon.jpg/960px-Megalodon.jpg"
+    },
+    {
+      "id": "cz-ape-diversity",
+      "year": -18000000,
+      "zh": "猿類多樣化",
+      "en": "Ape Diversification",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "各種古猿遍布非洲、歐洲和亞洲。原康修爾猿等為人類遠祖。",
+      "desc_en": "Diverse ape species spread across Africa, Europe, and Asia. Proconsul among early human ancestors.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/原康修爾猿",
+      "wiki_en": "https://en.wikipedia.org/wiki/Proconsul_(primate)",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Proconsul_skeleton_reconstitution_%28University_of_Zurich%29.JPG/1280px-Proconsul_skeleton_reconstitution_%28University_of_Zurich%29.JPG"
+    },
+    {
+      "id": "cz-horse-evolution",
+      "year": -15000000,
+      "zh": "馬的演化・單趾化",
+      "en": "Horse Evolution — Single Toe",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "馬從四趾演化為單蹄、體型增大、腿變長，適應草原奔跑。",
+      "desc_en": "Horses evolved from four toes to single hoof, grew larger with longer legs for running on grasslands.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馬的演化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Evolution_of_the_horse",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Equine_evolution.jpg/1280px-Equine_evolution.jpg"
+    },
+    {
+      "id": "cz-saber-tooth-early",
+      "year": -12000000,
+      "zh": "劍齒虎出現",
+      "en": "Saber-toothed Cats Appear",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "劍齒虎科出現，犬齒長達 28 公分，是頂級掠食者。存活至約 1 萬年前。",
+      "desc_en": "Saber-toothed cats appeared with 28cm canines. Apex predators surviving until ~10,000 years ago.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/劍齒虎",
+      "wiki_en": "https://en.wikipedia.org/wiki/Saber-toothed_cat",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Machairodontinae.jpg/1280px-Machairodontinae.jpg"
+    },
+    {
+      "id": "cz-ape-spread-eurasia",
+      "year": -10000000,
+      "zh": "猿類擴散到歐亞",
+      "en": "Apes Spread to Eurasia",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "猿類從非洲擴散到歐洲和亞洲，為日後人猿分化鋪路。",
+      "desc_en": "Apes migrated from Africa to Europe and Asia, setting stage for the human-ape divergence.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/猿",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ape",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Ape_skeletons.png"
+    },
+    {
+      "id": "cz-panama-isthmus",
+      "year": -3500000,
+      "zh": "巴拿馬地峽形成・南北美大交換",
+      "en": "Panama Isthmus — Great American Interchange",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "南北美洲相連，動物大遷徙。北美的貓科、犬科南下；南美的犰狳、負鼠北上。",
+      "desc_en": "Americas connected. Cats and dogs went south; armadillos and opossums went north.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/南北美洲生物大遷徙",
+      "wiki_en": "https://en.wikipedia.org/wiki/Great_American_interchange",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Americas_K%C3%B6ppen_Map.png/960px-Americas_K%C3%B6ppen_Map.png"
+    },
+    {
+      "id": "cz-megalodon-extinct",
+      "year": -3600000,
+      "zh": "巨齒鯊滅絕",
+      "en": "Megalodon Extinction",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "海洋降溫和鯨魚競爭導致巨齒鯊滅絕。",
+      "desc_en": "Ocean cooling and whale competition drove Megalodon to extinction.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巨齒鯊",
+      "wiki_en": "https://en.wikipedia.org/wiki/Megalodon",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Stenoshark.jpg"
+    },
+    {
+      "id": "cz-mammoth",
+      "year": -2000000,
+      "zh": "長毛象出現",
+      "en": "Woolly Mammoth Appears",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "適應冰河期的巨型象，遍布北半球。約 4000 年前最後的族群在西伯利亞滅絕。",
+      "desc_en": "Ice Age giant spread across Northern Hemisphere. Last population went extinct in Siberia ~4,000 years ago.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/真猛瑪象",
+      "wiki_en": "https://en.wikipedia.org/wiki/Woolly_mammoth",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Siegsdorfer_Mammut.jpg"
+    },
+    {
+      "id": "cz-giant-sloth",
+      "year": -1000000,
+      "zh": "大地懶",
+      "en": "Giant Ground Sloth (Megatherium)",
+      "axis": "cenozoic-life",
+      "level": 2,
+      "category": "biology",
+      "desc_zh": "體重可達 4 噸的巨型地面樹懶，站立時高 6 米。約 1 萬年前滅絕。",
+      "desc_en": "4-tonne giant ground sloth, 6m tall when standing. Extinct ~10,000 years ago.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/大地懶",
+      "wiki_en": "https://en.wikipedia.org/wiki/Megatherium",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Megatherium_americanum_Skeleton_NHM.JPG/960px-Megatherium_americanum_Skeleton_NHM.JPG"
+    },
+    {
+      "id": "cz-megafauna-extinct",
+      "year": -50000,
+      "zh": "巨型動物群滅絕",
+      "en": "Megafauna Extinction",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "長毛象、劍齒虎、大地懶等巨型動物在人類擴散後相繼滅絕。",
+      "desc_en": "Mammoths, saber-toothed cats, giant sloths went extinct as humans spread globally.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/第四紀滅絕事件",
+      "wiki_en": "https://en.wikipedia.org/wiki/Quaternary_extinction_event",
+      "crossRef": [
+        "human-evo"
+      ],
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Paleontological_landscape_painting%2C_White_Sands_National_Park%2C_United_States.jpg"
+    },
+    {
+      "id": "cz-domestication",
+      "year": -10000,
+      "zh": "動物馴化",
+      "en": "Animal Domestication",
+      "axis": "cenozoic-life",
+      "level": 1,
+      "category": "biology",
+      "desc_zh": "人類開始馴化狗、羊、牛、豬。農業革命改變人與動物的關係。",
+      "desc_en": "Humans domesticated dogs, sheep, cattle, pigs. Agriculture transformed human-animal relationships.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/馴化",
+      "wiki_en": "https://en.wikipedia.org/wiki/Domestication",
+      "category_broad": "natural",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Unnatural_selection%2C_2_heads%2C_one_species.jpg"
+    },
+    {
+      "id": "hevo-sahelanthropus",
+      "year": -7000000,
+      "zh": "查德沙赫人・最早人族?",
+      "en": "Sahelanthropus tchadensis",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "biology",
+      "category_broad": "natural",
+      "desc_zh": "2001 年在查德發現，距今約 700 萬年。可能是最早的人族成員，但仍有爭議。腦容量與黑猩猩相近，但枕骨大孔位置暗示可能直立行走。",
+      "desc_en": "Discovered in Chad in 2001, ~7 million years old. Possibly the earliest hominin, though debated. Brain size similar to chimpanzees, but foramen magnum position suggests possible bipedalism.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/乍得沙赫人",
+      "wiki_en": "https://en.wikipedia.org/wiki/Sahelanthropus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sahelanthropus_tchadensis_-_TM_266-01-060-1.jpg/1280px-Sahelanthropus_tchadensis_-_TM_266-01-060-1.jpg",
+      "crossRef": [
+        "cenozoic-life"
+      ]
+    },
+    {
+      "id": "hevo-orrorin",
+      "year": -6000000,
+      "zh": "千年始祖 Orrorin",
+      "en": "Orrorin tugenensis",
+      "axis": "human-evo",
+      "level": 2,
+      "category": "biology",
+      "category_broad": "natural",
+      "desc_zh": "2000 年在肯亞發現，距今約 600 萬年。股骨形態顯示可能已雙足行走，但仍生活在樹上。",
+      "desc_en": "Discovered in Kenya in 2000, ~6 million years old. Femur morphology suggests possible bipedalism while still arboreal.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/千年始祖",
+      "wiki_en": "https://en.wikipedia.org/wiki/Orrorin",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Kenia.PNG",
+      "crossRef": [
+        "cenozoic-life"
+      ]
+    },
+    {
+      "id": "hevo-ardipithecus",
+      "year": -4400000,
+      "zh": "始祖地猿 Ardi",
+      "en": "Ardipithecus ramidus (Ardi)",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "biology",
+      "category_broad": "natural",
+      "desc_zh": "1994 年在衣索比亞發現，距今約 440 萬年。能雙足行走也能攀樹。「Ardi」化石比「Lucy」更早 120 萬年，改寫了人類演化理解。",
+      "desc_en": "Discovered in Ethiopia in 1994, ~4.4 million years old. Could walk bipedally and climb trees. 'Ardi' predates 'Lucy' by 1.2 million years, reshaping our understanding of human evolution.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/始祖地猿",
+      "wiki_en": "https://en.wikipedia.org/wiki/Ardipithecus_ramidus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ardipithecus_ramidus_skull_%282016.003.0002%29%2C_Royal_Tyrrell_Museum%2C_Drumheller%2C_Alberta%2C_2025-07-13.jpg/960px-Ardipithecus_ramidus_skull_%282016.003.0002%29%2C_Royal_Tyrrell_Museum%2C_Drumheller%2C_Alberta%2C_2025-07-13.jpg",
+      "crossRef": [
+        "cenozoic-life"
+      ]
+    },
+    {
+      "id": "hevo-habilis",
+      "year": -2800000,
+      "zh": "巧人・最早的人屬",
+      "en": "Homo habilis — First Homo",
+      "axis": "human-evo",
+      "level": 1,
+      "category": "biology",
+      "category_broad": "natural",
+      "desc_zh": "距今約 280-150 萬年。「能幹的人」，最早被歸入人屬（Homo）的物種。腦容量約 600cc，是第一個製造石器的人族。",
+      "desc_en": "~2.8-1.5 million years ago. 'Handy man', the first species classified in genus Homo. Brain ~600cc, first toolmaker.",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/巧人",
+      "wiki_en": "https://en.wikipedia.org/wiki/Homo_habilis",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/KNM_ER_1813_%28H._habilis%29.png",
+      "crossRef": [
+        "cenozoic-life"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "nat-cosmos",
+      "label": "宇宙歷史",
+      "axes": [
+        "cosmos",
+        "galaxy",
+        "solar-system"
+      ],
+      "label_en": "Cosmic History",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-earth",
+      "label": "地球與生命",
+      "axes": [
+        "earth",
+        "climate",
+        "life"
+      ],
+      "label_en": "Earth & Life",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-human",
+      "label": "人類演化與遷徙",
+      "axes": [
+        "human-evo",
+        "migration"
+      ],
+      "label_en": "Human Evolution",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "civ-all",
+      "label": "全部文明",
+      "axes": [
+        "east",
+        "west",
+        "africa",
+        "americas",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china",
+        "greece",
+        "latin-america"
+      ],
+      "label_en": "All Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-east",
+      "label": "東方文明",
+      "axes": [
+        "east",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china"
+      ],
+      "label_en": "Eastern Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-west",
+      "label": "西方文明",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "Western Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-africa",
+      "label": "非洲文明",
+      "axes": [
+        "africa",
+        "egypt"
+      ],
+      "label_en": "African Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-americas",
+      "label": "美洲文明",
+      "axes": [
+        "americas",
+        "latin-america"
+      ],
+      "label_en": "Americas",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "thm-religion",
+      "label": "宗教發展",
+      "axes": [
+        "judaism",
+        "christianity",
+        "islam",
+        "hinduism",
+        "buddhism",
+        "taoism"
+      ],
+      "label_en": "World Religions",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-science",
+      "label": "科學技術",
+      "axes": [
+        "science",
+        "cross"
+      ],
+      "label_en": "Science & Technology",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-trade",
+      "label": "貿易全球化",
+      "axes": [
+        "trade",
+        "cross"
+      ],
+      "label_en": "Trade & Exploration",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-climate",
+      "label": "氣候環境",
+      "axes": [
+        "climate",
+        "earth"
+      ],
+      "label_en": "Climate & Environment",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-iceages",
+      "label": "五次大冰河期",
+      "axes": [
+        "climate",
+        "earth",
+        "life"
+      ],
+      "label_en": "Five Ice Ages",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "thm-migration",
+      "label": "人類遷徙",
+      "axes": [
+        "migration",
+        "oceania",
+        "central-asia",
+        "southeast-asia",
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Human Migration",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "reg-mideast",
+      "label": "中東歷史",
+      "axes": [
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "islam",
+        "judaism",
+        "iran"
+      ],
+      "label_en": "Middle East History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-eastasia",
+      "label": "東亞歷史",
+      "axes": [
+        "east",
+        "china",
+        "japan",
+        "taiwan"
+      ],
+      "label_en": "East Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-europe",
+      "label": "歐洲歷史",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "European History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-southasia",
+      "label": "南亞歷史",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism"
+      ],
+      "label_en": "South Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-africa",
+      "label": "非洲歷史",
+      "axes": [
+        "africa",
+        "north-africa",
+        "west-africa",
+        "east-africa",
+        "south-africa",
+        "egypt"
+      ],
+      "label_en": "African History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-americas",
+      "label": "美洲歷史",
+      "axes": [
+        "americas",
+        "latin-america",
+        "north-america",
+        "usa",
+        "south-america"
+      ],
+      "label_en": "Americas History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-oceania",
+      "label": "大洋洲",
+      "axes": [
+        "oceania",
+        "antarctic"
+      ],
+      "label_en": "Oceania",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-centralas",
+      "label": "中亞歷史",
+      "axes": [
+        "central-asia"
+      ],
+      "label_en": "Central Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-sea",
+      "label": "東南亞歷史",
+      "axes": [
+        "southeast-asia"
+      ],
+      "label_en": "SE Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-polar",
+      "label": "極地",
+      "axes": [
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Polar Regions",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "china",
+      "label": "中國歷史",
+      "label_en": "Chinese History",
+      "group": "countries",
+      "axes": [
+        "china",
+        "china-emperor",
+        "china-war",
+        "china-literature",
+        "china-science",
+        "taoism",
+        "buddhism",
+        "taiwan"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "dinosaurs",
+      "label": "恐龍",
+      "label_en": "Dinosaurs",
+      "group": "nature-cosmos",
+      "axes": [
+        "dinosaurs",
+        "dino-species",
+        "earth",
+        "life",
+        "climate"
+      ],
+      "yearStart": -260000000,
+      "yearEnd": -60000000
+    },
+    {
+      "id": "ancient-civ",
+      "label": "古文明",
+      "label_en": "Ancient Civilizations",
+      "group": "civilization",
+      "axes": [],
+      "yearStart": -4000,
+      "yearEnd": 500
+    },
+    {
+      "id": "taiwan",
+      "label": "台灣歷史",
+      "label_en": "Taiwan History",
+      "group": "countries",
+      "axes": [
+        "taiwan",
+        "taiwan-colonial",
+        "taiwan-culture",
+        "china",
+        "japan"
+      ],
+      "yearStart": -30000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "japan",
+      "label": "日本歷史",
+      "label_en": "Japanese History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -14000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "korea",
+      "label": "韓國歷史",
+      "label_en": "Korean History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -2333,
+      "yearEnd": 2026
+    },
+    {
+      "id": "india",
+      "label": "印度歷史",
+      "label_en": "Indian History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -3300,
+      "yearEnd": 2026
+    },
+    {
+      "id": "usa",
+      "label": "美國歷史",
+      "label_en": "American History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": 1492,
+      "yearEnd": 2026
+    },
+    {
+      "id": "uk",
+      "label": "英國歷史",
+      "label_en": "British History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "france",
+      "label": "法國歷史",
+      "label_en": "French History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "germany",
+      "label": "德國歷史",
+      "label_en": "German History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -100,
+      "yearEnd": 2026
+    },
+    {
+      "id": "russia",
+      "label": "俄羅斯歷史",
+      "label_en": "Russian History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": 862,
+      "yearEnd": 2026
+    },
+    {
+      "id": "egypt",
+      "label": "埃及歷史",
+      "label_en": "Egyptian History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -3100,
+      "yearEnd": 2026
+    },
+    {
+      "id": "turkey",
+      "label": "土耳其歷史",
+      "label_en": "Turkish History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -2000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "iran",
+      "label": "伊朗/波斯歷史",
+      "label_en": "Iranian/Persian History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -3200,
+      "yearEnd": 2026
+    },
+    {
+      "id": "italy",
+      "label": "義大利歷史",
+      "label_en": "Italian History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -800,
+      "yearEnd": 2026
+    },
+    {
+      "id": "greece",
+      "label": "希臘歷史",
+      "label_en": "Greek History",
+      "group": "countries",
+      "axes": [],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "peloponnesian",
+      "label": "伯羅奔尼撒戰爭",
+      "label_en": "Peloponnesian War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": -431,
+      "yearEnd": -404
+    },
+    {
+      "id": "punic-wars",
+      "label": "布匿戰爭",
+      "label_en": "Punic Wars",
+      "group": "wars",
+      "axes": [],
+      "yearStart": -264,
+      "yearEnd": -146
+    },
+    {
+      "id": "crusades",
+      "label": "十字軍東征",
+      "label_en": "Crusades",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1096,
+      "yearEnd": 1291
+    },
+    {
+      "id": "mongol-conquests",
+      "label": "蒙古征服",
+      "label_en": "Mongol Conquests",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1206,
+      "yearEnd": 1368
+    },
+    {
+      "id": "thirty-years",
+      "label": "三十年戰爭",
+      "label_en": "Thirty Years' War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1618,
+      "yearEnd": 1648
+    },
+    {
+      "id": "seven-years",
+      "label": "七年戰爭",
+      "label_en": "Seven Years' War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1756,
+      "yearEnd": 1763
+    },
+    {
+      "id": "american-revolution",
+      "label": "美國獨立戰爭",
+      "label_en": "American Revolution",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1775,
+      "yearEnd": 1783
+    },
+    {
+      "id": "napoleonic",
+      "label": "拿破崙戰爭",
+      "label_en": "Napoleonic Wars",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1803,
+      "yearEnd": 1815
+    },
+    {
+      "id": "american-civil",
+      "label": "美國南北戰爭",
+      "label_en": "American Civil War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1861,
+      "yearEnd": 1865
+    },
+    {
+      "id": "ww1",
+      "label": "第一次世界大戰",
+      "label_en": "World War I",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1914,
+      "yearEnd": 1918
+    },
+    {
+      "id": "ww2",
+      "label": "第二次世界大戰",
+      "label_en": "World War II",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1939,
+      "yearEnd": 1945
+    },
+    {
+      "id": "cold-war",
+      "label": "冷戰",
+      "label_en": "Cold War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1947,
+      "yearEnd": 1991
+    },
+    {
+      "id": "korean-war",
+      "label": "韓戰",
+      "label_en": "Korean War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1950,
+      "yearEnd": 1953
+    },
+    {
+      "id": "vietnam-war",
+      "label": "越戰",
+      "label_en": "Vietnam War",
+      "group": "wars",
+      "axes": [],
+      "yearStart": 1955,
+      "yearEnd": 1975
+    },
+    {
+      "id": "art-history",
+      "label": "藝術史",
+      "label_en": "Art History",
+      "group": "topics",
+      "axes": [],
+      "yearStart": -30000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "music-history",
+      "label": "音樂史",
+      "label_en": "Music History",
+      "group": "topics",
+      "axes": [],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "medical",
+      "label": "醫學史",
+      "label_en": "History of Medicine",
+      "group": "topics",
+      "axes": [],
+      "yearStart": -2600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "space-exploration",
+      "label": "太空探索",
+      "label_en": "Space Exploration",
+      "group": "topics",
+      "axes": [],
+      "yearStart": 1942,
+      "yearEnd": 2026
+    },
+    {
+      "id": "pandemics",
+      "label": "瘟疫與流行病",
+      "label_en": "Pandemics & Epidemics",
+      "group": "events",
+      "axes": [],
+      "yearStart": -430,
+      "yearEnd": 2026
+    },
+    {
+      "id": "exploration",
+      "label": "大航海時代",
+      "label_en": "Age of Exploration",
+      "group": "events",
+      "axes": [],
+      "yearStart": 1400,
+      "yearEnd": 1600
+    },
+    {
+      "id": "revolutions",
+      "label": "革命浪潮",
+      "label_en": "Revolutions",
+      "group": "events",
+      "axes": [],
+      "yearStart": 1640,
+      "yearEnd": 2026
+    },
+    {
+      "id": "disasters",
+      "label": "重大災害",
+      "label_en": "Major Disasters",
+      "group": "events",
+      "axes": [],
+      "yearStart": -1600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "akkadian",
+      "label": "阿卡德帝國",
+      "label_en": "Akkadian Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": -2334,
+      "yearEnd": -2154
+    },
+    {
+      "id": "ancient-egypt-empire",
+      "label": "古埃及帝國",
+      "label_en": "Ancient Egyptian Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": -3100,
+      "yearEnd": -30
+    },
+    {
+      "id": "persian-empire",
+      "label": "波斯帝國",
+      "label_en": "Persian Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": -550,
+      "yearEnd": -330
+    },
+    {
+      "id": "alexander-empire",
+      "label": "亞歷山大帝國",
+      "label_en": "Alexander's Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": -336,
+      "yearEnd": -323
+    },
+    {
+      "id": "roman-empire",
+      "label": "羅馬帝國",
+      "label_en": "Roman Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": -27,
+      "yearEnd": 476
+    },
+    {
+      "id": "byzantine",
+      "label": "拜占庭帝國",
+      "label_en": "Byzantine Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 330,
+      "yearEnd": 1453
+    },
+    {
+      "id": "tang-dynasty",
+      "label": "唐朝",
+      "label_en": "Tang Dynasty",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 618,
+      "yearEnd": 907
+    },
+    {
+      "id": "arab-caliphate",
+      "label": "阿拉伯帝國",
+      "label_en": "Arab Caliphate",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 632,
+      "yearEnd": 1258
+    },
+    {
+      "id": "mongol-empire",
+      "label": "蒙古帝國",
+      "label_en": "Mongol Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1206,
+      "yearEnd": 1368
+    },
+    {
+      "id": "ottoman-empire",
+      "label": "鄂圖曼帝國",
+      "label_en": "Ottoman Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1299,
+      "yearEnd": 1922
+    },
+    {
+      "id": "mughal-empire",
+      "label": "莫臥兒帝國",
+      "label_en": "Mughal Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1526,
+      "yearEnd": 1857
+    },
+    {
+      "id": "spanish-empire",
+      "label": "西班牙帝國",
+      "label_en": "Spanish Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1492,
+      "yearEnd": 1975
+    },
+    {
+      "id": "british-empire",
+      "label": "大英帝國",
+      "label_en": "British Empire",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1583,
+      "yearEnd": 1997
+    },
+    {
+      "id": "russian-empire",
+      "label": "俄羅斯帝國/蘇聯",
+      "label_en": "Russian Empire / USSR",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1721,
+      "yearEnd": 1991
+    },
+    {
+      "id": "qing-dynasty",
+      "label": "清朝",
+      "label_en": "Qing Dynasty",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1636,
+      "yearEnd": 1912
+    },
+    {
+      "id": "japanese-empire",
+      "label": "大日本帝國",
+      "label_en": "Empire of Japan",
+      "group": "empires",
+      "axes": [],
+      "yearStart": 1868,
+      "yearEnd": 1947
+    },
+    {
+      "id": "confucius",
+      "label": "孔子",
+      "label_en": "Confucius",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -551,
+      "yearEnd": -479
+    },
+    {
+      "id": "alexander",
+      "label": "亞歷山大大帝",
+      "label_en": "Alexander the Great",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -356,
+      "yearEnd": -323
+    },
+    {
+      "id": "qin-shihuang",
+      "label": "秦始皇",
+      "label_en": "Qin Shi Huang",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -259,
+      "yearEnd": -210
+    },
+    {
+      "id": "caesar",
+      "label": "凱撒",
+      "label_en": "Julius Caesar",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -100,
+      "yearEnd": -44
+    },
+    {
+      "id": "genghis-khan",
+      "label": "成吉思汗",
+      "label_en": "Genghis Khan",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1162,
+      "yearEnd": 1227
+    },
+    {
+      "id": "columbus",
+      "label": "哥倫布",
+      "label_en": "Christopher Columbus",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1451,
+      "yearEnd": 1506
+    },
+    {
+      "id": "napoleon",
+      "label": "拿破崙",
+      "label_en": "Napoleon Bonaparte",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1769,
+      "yearEnd": 1821
+    },
+    {
+      "id": "einstein",
+      "label": "愛因斯坦",
+      "label_en": "Albert Einstein",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1879,
+      "yearEnd": 1955
+    },
+    {
+      "id": "cenozoic",
+      "label": "新生代生命演化",
+      "label_en": "Cenozoic Life Evolution",
+      "group": "nature-cosmos",
+      "axes": [
+        "life",
+        "cenozoic-epochs",
+        "cenozoic-life",
+        "earth",
+        "climate",
+        "human-evo"
+      ],
+      "yearStart": -66000000,
+      "yearEnd": -50000
     }
   ]
 }

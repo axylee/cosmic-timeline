@@ -33,6 +33,7 @@ dupes = [id for id, n in id_counts.items() if n > 1]
 
 # 新欄位檢查
 axis_groups = d.get('axis_groups', {})
+view_groups = d.get('view_groups', [])
 era_bands   = d.get('era_bands', [])
 era_buttons = d.get('era_buttons', [])
 filter_cats = d.get('filter_cats', [])
@@ -50,6 +51,25 @@ for v in views:
     if bad:
         view_bad_axes.append(f"  {v.get('id','?')}: {bad}")
 
+# ═══════════════════════════════════════════
+# view_groups 檢查
+# ═══════════════════════════════════════════
+vg_ids = {g['id'] for g in view_groups}
+
+# view 使用舊 category 欄位（應改為 group）
+view_old_category = [v.get('id','?') for v in views if 'category' in v]
+
+# view 缺 group
+view_no_group = [v.get('id','?') for v in views if not v.get('group')]
+
+# view 的 group 不在 view_groups 定義中
+view_bad_group = [f"  {v.get('id','?')}: '{v.get('group')}'" for v in views
+                  if v.get('group') and v.get('group') not in vg_ids]
+
+# view_groups 統計每個 group 下的 view 數量（用於「空 group 不顯示」規則）
+vg_usage = Counter(v.get('group') for v in views if v.get('group'))
+vg_empty = [g['id'] for g in view_groups if g['id'] not in vg_usage]
+
 print("=" * 50)
 print(f"  事件總數     : {len(events)}")
 print(f"  有圖片       : {has_img}")
@@ -62,6 +82,7 @@ print(f"  有 wiki_en   : {has_wiki_en}  (缺 {len(events)-has_wiki_en})")
 print(f"  有 crossRef  : {has_cr}")
 print(f"  定義軸線數   : {len(axes)}")
 print(f"  axis_groups  : {len(axis_groups)} 組")
+print(f"  view_groups  : {len(view_groups)} 組")
 print(f"  era_bands    : {len(era_bands)} 段")
 print(f"  era_buttons  : {len(era_buttons)} 個")
 print(f"  filter_cats  : {len(filter_cats)} 類")
@@ -104,8 +125,32 @@ if view_bad_axes:
 else:
     print("✓ 所有 View 軸線正確")
 
+# view_groups 檢查
+if view_old_category:
+    print(f"\n⚠ View 仍使用舊 category 欄位（應改為 group）: {view_old_category}")
+    errors += 1
+else:
+    print("✓ 無 views 使用舊 category 欄位")
+
+if view_no_group:
+    print(f"\n⚠ View 缺 group 欄位: {view_no_group}")
+    errors += 1
+else:
+    print("✓ 所有 views 有 group 欄位")
+
+if view_bad_group:
+    print(f"\n⚠ View 的 group 引用不存在的 view_groups:")
+    for x in view_bad_group: print(x)
+    errors += 1
+else:
+    print("✓ 所有 views 的 group 正確")
+
 if not axis_groups:
     print("\n⚠ 缺少 axis_groups")
+    errors += 1
+
+if not view_groups:
+    print("\n⚠ 缺少 view_groups")
     errors += 1
 
 if not era_bands:
@@ -138,7 +183,14 @@ missing_cat = [e['zh'] for e in events if not e.get('category')]
 if missing_cat:
     print(f"  缺 category: {len(missing_cat)} 個")
 
+# view_groups 使用狀況
+print("\n─── view_groups 使用狀況 ───")
+for g in view_groups:
+    count = vg_usage.get(g['id'], 0)
+    status = f"{count} 個 view" if count > 0 else "（空，不顯示）"
+    print(f"  {g['id']:18s} {g['label']:8s} {status}")
+
 if errors == 0 and not missing_img and not missing_en:
-    print("  ✓ 全部完整！")
+    print("\n  ✓ 全部完整！")
 
 print(f"\n完成！{'⚠ 有 ' + str(errors) + ' 個結構性錯誤' if errors else '✓ 無結構性錯誤'}")

@@ -1,0 +1,6 @@
+在你的 repo 資料夾開 CMD：
+
+
+python find-missing-images-xxx.py                  # 預設：只跑缺圖的
+python find-missing-images-xxx.py --overwrite      # 覆蓋已有圖
+python find-missing-images-xxx.py --only-failed    # 只跑 image="" 的（= 預設）

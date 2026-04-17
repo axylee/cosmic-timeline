@@ -205,7 +205,7 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
 </div>
 
 <h1>🌌 Cosmic Timeline 工具箱</h1>
-<p class="subtitle">新增事件 · 新增軸線 · 圖片管理 · 一個工具全搞定</p>
+<p class="subtitle">新增事件 · 新增軸線 · 圖片管理 · 視圖管理 · 書籍管理 · 一個工具全搞定</p>
 
 <!-- Load card -->
 <div class="card">
@@ -232,6 +232,7 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
     <button class="top-tab active" onclick="switchTopTab('add')">➕ 新增事件 / 軸線</button>
     <button class="top-tab" onclick="switchTopTab('images')">🖼 圖片管理</button>
     <button class="top-tab" onclick="switchTopTab('views')">🎯 視圖管理</button>
+    <button class="top-tab" onclick="switchTopTab('books')">📚 書籍管理</button>
   </div>
 
   <!-- ══ ADD PANEL ══ -->
@@ -334,6 +335,22 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
             <div class="form-group">
               <label>英文 Wikipedia URL</label>
               <input type="text" id="ev-wiki-en" placeholder="https://en.wikipedia.org/wiki/...">
+            </div>
+            <div class="form-group">
+              <label>📚 Amazon ASIN（選填）</label>
+              <input type="text" id="ev-amazon-asin" placeholder="e.g. 0553380168">
+            </div>
+            <div class="form-group">
+              <label>📚 Amazon Title（選填）</label>
+              <input type="text" id="ev-amazon-title" placeholder="e.g. A Brief History of Time">
+            </div>
+            <div class="form-group">
+              <label>📚 博客來 ID（選填）</label>
+              <input type="text" id="ev-books-id" placeholder="e.g. 0010825573">
+            </div>
+            <div class="form-group">
+              <label>📚 博客來書名（選填）</label>
+              <input type="text" id="ev-books-title" placeholder="e.g. 時間簡史">
             </div>
           </div>
           <div class="form-group">
@@ -477,6 +494,13 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
         <label style="margin:0;display:flex;align-items:center;gap:5px;cursor:pointer;font-size:12px">
           <input type="checkbox" id="chk-zh" checked> 優先中文 Wikipedia
         </label>
+        <label style="margin:0;display:flex;align-items:center;gap:5px;cursor:pointer;font-size:12px;color:var(--accent)">
+          <input type="checkbox" id="chk-smart" checked> 🚀 智慧批次（多候選不停下來，匯出給 AI 挑）
+        </label>
+      </div>
+      <div class="row" id="smart-export-row" style="display:none;margin-bottom:8px">
+        <button class="btn-success" onclick="exportPendingPicks()">📦 匯出待挑 JSON（<span id="pending-count">0</span> 個）</button>
+        <span style="font-size:11px;color:var(--muted);align-self:center">→ 上傳到 claude.ai 請 Claude 挑圖，回覆 .py 腳本</span>
       </div>
       <div class="progress-wrap" id="progress-wrap" style="display:none">
         <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
@@ -511,10 +535,11 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
 
       <div class="row" style="gap:10px;margin-bottom:10px;flex-wrap:wrap">
         <div style="flex:1;min-width:120px">
-          <label class="field-label">分類 Category</label>
-          <input type="text" id="view-category" placeholder="例：地區" list="view-category-list"
+          <label class="field-label">分類 Group</label>
+          <select id="view-group"
             style="width:100%;padding:7px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:13px">
-          <datalist id="view-category-list"></datalist>
+            <option value="">請選擇分類…</option>
+          </select>
         </div>
         <div style="flex:1;min-width:120px">
           <label class="field-label">標籤 Label</label>
@@ -546,6 +571,64 @@ button{padding:8px 18px;border-radius:8px;border:none;font-family:inherit;font-s
 
   </div><!-- /panel-views -->
 
+  <!-- ══ BOOKS PANEL ══ -->
+  <div class="top-panel" id="panel-books" style="padding-top:16px;display:none">
+
+    <div class="card">
+      <div class="card-title">📚 書籍管理</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px">
+        <div style="flex:1;min-width:200px">
+          <label style="font-size:11px;color:var(--muted);display:block;margin-bottom:4px">篩選事件</label>
+          <select id="books-filter" onchange="renderBooksTable()" style="width:100%">
+            <option value="all">全部事件（有/沒書）</option>
+            <option value="amazon">只有 Amazon</option>
+            <option value="books">只有博客來</option>
+            <option value="both" selected>兩個都有</option>
+            <option value="either">至少一個有</option>
+            <option value="neither">兩個都沒</option>
+          </select>
+        </div>
+        <div style="flex:2;min-width:200px">
+          <label style="font-size:11px;color:var(--muted);display:block;margin-bottom:4px">搜尋事件名稱</label>
+          <input type="text" id="books-search" oninput="renderBooksTable()" placeholder="搜尋中文/英文名稱…" style="width:100%">
+        </div>
+      </div>
+      <div>
+        <label style="font-size:11px;color:var(--muted);display:block;margin-bottom:4px">顯示欄位</label>
+        <div id="books-cols" style="display:flex;gap:10px;flex-wrap:wrap;font-size:12px">
+          <label><input type="checkbox" data-col="id"> 事件 ID</label>
+          <label><input type="checkbox" data-col="zh" checked> 中文</label>
+          <label><input type="checkbox" data-col="en" checked> 英文</label>
+          <label><input type="checkbox" data-col="year"> 年份</label>
+          <label><input type="checkbox" data-col="axis"> 軸線</label>
+          <label><input type="checkbox" data-col="amazon_asin" checked> Amazon ASIN</label>
+          <label><input type="checkbox" data-col="amazon_title"> Amazon Title</label>
+          <label><input type="checkbox" data-col="amazon_link" checked> Amazon 連結</label>
+          <label><input type="checkbox" data-col="books_id" checked> 博客來 ID</label>
+          <label><input type="checkbox" data-col="books_title"> 博客來書名</label>
+          <label><input type="checkbox" data-col="books_link" checked> 博客來連結</label>
+        </div>
+      </div>
+      <div id="books-count" style="margin-top:10px;font-size:12px;color:var(--muted)"></div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <div style="overflow:auto;max-height:70vh">
+        <table id="books-table" style="width:100%;border-collapse:collapse;font-size:12px">
+          <thead style="position:sticky;top:0;background:var(--surface);z-index:1">
+            <tr id="books-thead"></tr>
+          </thead>
+          <tbody id="books-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="btn-success" onclick="showConfirm()" style="width:100%;padding:13px;font-size:14px">📋 預覽變更並輸出</button>
+    </div>
+
+  </div><!-- /panel-books -->
+
 </div><!-- /tool-area -->
 
 <script>
@@ -557,6 +640,7 @@ let pendingItems = [];
 let changeLog = [];   // 所有變更記錄
 let results = [], shouldStop = false;
 let statOk=0, statManual=0, statFail=0, statSkip=0;
+let _pendingPicks = [];   // 智慧批次模式下，暫存多候選事件給 Claude 挑
 
 function logChange(entry) {
   changeLog.push(entry);
@@ -609,13 +693,14 @@ function onLoaded(name) {
 //  TAB SWITCHING
 // ════════════════════════════════════════════
 function switchTopTab(name) {
-  document.querySelectorAll('.top-tab').forEach((t,i)=>t.classList.toggle('active',
-    (i===0&&name==='add')||(i===1&&name==='images')||(i===2&&name==='views')));
-  ['add','images','views'].forEach(n=>{
+  const tabs = ['add','images','views','books'];
+  document.querySelectorAll('.top-tab').forEach((t,i)=>t.classList.toggle('active', tabs[i]===name));
+  tabs.forEach(n=>{
     const el = document.getElementById('panel-'+n);
     if(el){ el.classList.toggle('active',n===name); el.style.display=n===name?'block':'none'; }
   });
   if(name==='views') renderViewsList();
+  if(name==='books') renderBooksTable();
 }
 function switchTab(tab) {
   document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&tab==='event')||(i===1&&tab==='axis')));
@@ -761,6 +846,10 @@ function addEvent() {
   const descEn=document.getElementById('ev-desc-en').value.trim(); if(descEn) ev.desc_en=descEn;
   const wikiZh=document.getElementById('ev-wiki-zh').value.trim(); if(wikiZh) ev.wiki_zh=wikiZh;
   const wikiEn=document.getElementById('ev-wiki-en').value.trim(); if(wikiEn) ev.wiki_en=wikiEn;
+  const amazonAsin=document.getElementById('ev-amazon-asin').value.trim(); if(amazonAsin) ev.amazon_asin=amazonAsin;
+  const amazonTitle=document.getElementById('ev-amazon-title').value.trim(); if(amazonTitle) ev.amazon_title=amazonTitle;
+  const booksId=document.getElementById('ev-books-id').value.trim(); if(booksId) ev.books_id=booksId;
+  const booksTitle=document.getElementById('ev-books-title').value.trim(); if(booksTitle) ev.books_title=booksTitle;
 
   // Update zoomMin and parent for axis if changed
   const zmVal=parseFloat(document.getElementById('ev-zoommin').value);
@@ -841,7 +930,7 @@ function removeItem(i){pendingItems.splice(i,1);populateAxisSelects();renderPrev
 function clearPreview(){if(pendingItems.length&&!confirm('確定清除全部？'))return;pendingItems=[];renderPreview();}
 
 function clearEventForm(){
-  ['ev-zh','ev-en','ev-year','ev-endyear','ev-desc-zh','ev-desc-en','ev-wiki-zh','ev-wiki-en','ev-image'].forEach(id=>document.getElementById(id).value='');
+  ['ev-zh','ev-en','ev-year','ev-endyear','ev-desc-zh','ev-desc-en','ev-wiki-zh','ev-wiki-en','ev-image','ev-amazon-asin','ev-amazon-title','ev-books-id','ev-books-title'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('ev-crossref').querySelectorAll('option').forEach(o=>o.selected=false);
   document.getElementById('ev-img-preview').style.display='none';
   document.getElementById('ev-error').classList.add('hide');
@@ -927,6 +1016,7 @@ function doDownload() {
   const out = {
     meta: eventsData.meta||{title_zh:'宇宙歷史時間軸',title_en:'Cosmic History Timeline',total_years:13800000000,created:'2026'},
     axis_groups: eventsData.axis_groups||{},
+    view_groups: eventsData.view_groups||[],
     axes: [...(eventsData.axes||[]),...newAxes],
     era_bands: eventsData.era_bands||[],
     era_buttons: eventsData.era_buttons||[],
@@ -959,7 +1049,7 @@ let viewsData = [];  // working copy
 function initViewsPanel() {
   viewsData = JSON.parse(JSON.stringify(eventsData.views || []));
   buildAxesCheckboxes();
-  buildCategoryDatalist();
+  buildViewGroupSelect();
   renderViewsList();
 }
 
@@ -991,11 +1081,14 @@ function buildAxesCheckboxes() {
   wrap.innerHTML = html;
 }
 
-function buildCategoryDatalist() {
-  const dl = document.getElementById('view-category-list');
-  if (!dl) return;
-  const cats = [...new Set(viewsData.map(v=>v.category))];
-  dl.innerHTML = cats.map(c=>`<option value="${c}">`).join('');
+function buildViewGroupSelect() {
+  const sel = document.getElementById('view-group');
+  if (!sel) return;
+  const viewGroups = (eventsData.view_groups || []).slice().sort((a,b)=>(a.order||0)-(b.order||0));
+  const currentVal = sel.value;
+  sel.innerHTML = '<option value="">請選擇分類…</option>' +
+    viewGroups.map(g=>`<option value="${g.id}">${g.label || g.id}${g.label_en?` (${g.label_en})`:''}</option>`).join('');
+  if (currentVal) sel.value = currentVal;
 }
 
 function getCheckedAxes() {
@@ -1009,21 +1102,21 @@ function setCheckedAxes(axes) {
   });
 }
 
-function generateViewId(category, label) {
-  const cat = category.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g,'').slice(0,4);
+function generateViewId(group, label) {
+  const cat = group.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g,'').slice(0,4);
   const lbl = label.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g,'').slice(0,4);
   const rand = Math.random().toString(36).slice(2,5);
   return `view-${cat}-${lbl}-${rand}`;
 }
 
 function saveView() {
-  const category = document.getElementById('view-category').value.trim();
+  const group    = document.getElementById('view-group').value.trim();
   const label    = document.getElementById('view-label').value.trim();
   const axes     = getCheckedAxes();
   const editId   = document.getElementById('view-edit-id').value;
   const msg      = document.getElementById('view-form-msg');
 
-  if (!category) { msg.style.color='var(--red)'; msg.textContent='請填入分類'; return; }
+  if (!group)    { msg.style.color='var(--red)'; msg.textContent='請選擇分類'; return; }
   if (!label)    { msg.style.color='var(--red)'; msg.textContent='請填入標籤'; return; }
   if (!axes.length){ msg.style.color='var(--red)'; msg.textContent='請至少選擇一條軸線'; return; }
 
@@ -1031,13 +1124,13 @@ function saveView() {
     // Modify existing
     const idx = viewsData.findIndex(v=>v.id===editId);
     if (idx>=0) {
-      viewsData[idx] = { id: editId, category, label, axes };
+      viewsData[idx] = { id: editId, group, label, axes };
       msg.style.color='var(--green)'; msg.textContent=`✓ 已修改：${label}`;
     }
   } else {
     // New view
-    const id = generateViewId(category, label);
-    viewsData.push({ id, category, label, axes });
+    const id = generateViewId(group, label);
+    viewsData.push({ id, group, label, axes });
     msg.style.color='var(--green)'; msg.textContent=`✓ 已新增：${label}`;
   }
 
@@ -1046,7 +1139,6 @@ function saveView() {
   addChangeLog({ type:'views', desc:`視圖「${label}」已${editId?'修改':'新增'}` });
 
   resetViewForm();
-  buildCategoryDatalist();
   renderViewsList();
 }
 
@@ -1054,7 +1146,8 @@ function editView(id) {
   const v = viewsData.find(v=>v.id===id);
   if (!v) return;
   document.getElementById('view-edit-id').value  = v.id;
-  document.getElementById('view-category').value = v.category;
+  // Backward compat: old data may have 'category' instead of 'group'
+  document.getElementById('view-group').value    = v.group || v.category || '';
   document.getElementById('view-label').value    = v.label;
   setCheckedAxes(v.axes);
   document.getElementById('view-form-title').textContent = '✏ 修改視圖';
@@ -1074,7 +1167,7 @@ function deleteView(id) {
 
 function resetViewForm() {
   document.getElementById('view-edit-id').value  = '';
-  document.getElementById('view-category').value = '';
+  document.getElementById('view-group').value    = '';
   document.getElementById('view-label').value    = '';
   setCheckedAxes([]);
   document.getElementById('view-form-title').textContent = '➕ 新增視圖';
@@ -1089,23 +1182,38 @@ function renderViewsList() {
     return;
   }
 
-  // Group by category
-  const cats = {};
+  // Group by v.group (fallback to v.category for backward compat)
+  const grouped = {};
   viewsData.forEach(v => {
-    if (!cats[v.category]) cats[v.category] = [];
-    cats[v.category].push(v);
+    const g = v.group || v.category || 'other';
+    if (!grouped[g]) grouped[g] = [];
+    grouped[g].push(v);
+  });
+
+  // Sort groups by view_groups order
+  const viewGroups = eventsData.view_groups || [];
+  const vgMap = {};
+  viewGroups.forEach(g => { vgMap[g.id] = g; });
+
+  const groupIds = Object.keys(grouped).sort((a, b) => {
+    const oa = vgMap[a] ? vgMap[a].order : 9999;
+    const ob = vgMap[b] ? vgMap[b].order : 9999;
+    return oa - ob;
   });
 
   wrap.innerHTML = '';
-  Object.entries(cats).forEach(([cat, items]) => {
+  groupIds.forEach(gid => {
+    const items = grouped[gid];
     const catEl = document.createElement('div');
     catEl.style.cssText = 'font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:10px 0 4px;';
-    catEl.textContent = cat;
+    // Use view_groups label if available, else use gid as-is
+    const label = vgMap[gid] ? `${vgMap[gid].label}${vgMap[gid].label_en?' · '+vgMap[gid].label_en:''}` : gid;
+    catEl.textContent = label;
     wrap.appendChild(catEl);
 
     items.forEach(v => {
       const row = document.createElement('div');
-      row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--surface2);border-radius:6px;font-size:12px;';
+      row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--surface2);border-radius:6px;font-size:12px;margin-bottom:4px';
       row.innerHTML = `
         <span style="flex:1;font-weight:500">${v.label}</span>
         <span style="font-size:10px;color:var(--muted);flex:2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${v.axes.join(', ')}</span>
@@ -1334,12 +1442,16 @@ function log(msg,cls='log-info'){const el=document.getElementById('log');el.inne
 async function runUpdate(){
   if(!eventsData)return;
   shouldStop=false; statOk=statManual=statFail=statSkip=0; results=[];
+  _pendingPicks=[];
+  document.getElementById('pending-count').textContent='0';
+  document.getElementById('smart-export-row').style.display='none';
   document.getElementById('log').innerHTML='';
   document.getElementById('btn-run').disabled=true;
   document.getElementById('btn-stop').style.display='';
   document.getElementById('progress-wrap').style.display='';
   const overwrite=document.getElementById('chk-overwrite').checked;
   const zhFirst=document.getElementById('chk-zh').checked;
+  const smartMode=document.getElementById('chk-smart').checked;
   const evList=eventsData.events;
   for(let i=0;i<evList.length;i++){
     if(shouldStop){log('— 已停止 —','log-warn');break;}
@@ -1357,6 +1469,27 @@ async function runUpdate(){
       logChange({type:'image-auto', zh:ev.zh, id:ev.id, source:candidates[0].source});
       results.push({ev,status:'auto',img:ev.image});
     } else {
+      if(smartMode){
+        // 智慧批次：不停下來，存入待挑清單
+        _pendingPicks.push({
+          id: ev.id,
+          zh: ev.zh,
+          en: ev.en || '',
+          year: ev.year,
+          axis: ev.axis,
+          category: ev.category || '',
+          desc_zh: ev.desc_zh || '',
+          desc_en: ev.desc_en || '',
+          wiki_zh: ev.wiki_zh || '',
+          wiki_en: ev.wiki_en || '',
+          current_image: ev.image || null,
+          candidates: candidates.map(c=>({url:c.url, source:c.source, label:c.label||''}))
+        });
+        document.getElementById('pending-count').textContent=_pendingPicks.length;
+        log(`📦 ${ev.zh} <span style="color:var(--accent);font-size:9px">[待挑·${candidates.length} 張]</span>`,'log-info');
+        results.push({ev,status:'pending',img:null});
+        continue;
+      }
       log(`🔍 ${ev.zh}（${candidates.length} 張候選）`,'log-info');
       const choice=await showPicker(ev,candidates);
       if(choice.action==='set'&&choice.url){
@@ -1379,10 +1512,41 @@ async function runUpdate(){
   document.getElementById('progress-text').textContent='完成！';
   document.getElementById('btn-run').disabled=false;
   document.getElementById('btn-stop').style.display='none';
-  log(`─── 完成：自動 ${statOk} · 手選 ${statManual} · 失敗/略過 ${statFail} · 略過有圖 ${statSkip} ───`,'log-warn');
+  log(`─── 完成：自動 ${statOk} · 手選 ${statManual} · 失敗/略過 ${statFail} · 略過有圖 ${statSkip}${_pendingPicks.length?` · 📦 待挑 ${_pendingPicks.length}`:''} ───`,'log-warn');
+  if(_pendingPicks.length>0){
+    document.getElementById('smart-export-row').style.display='';
+    log(`📦 有 ${_pendingPicks.length} 個事件需要挑圖，請點「匯出待挑 JSON」上傳給 Claude`,'log-warn');
+  }
   showMissing();
 }
 function stopUpdate(){shouldStop=true;}
+
+// ── 匯出待挑 JSON ──
+function exportPendingPicks(){
+  if(!_pendingPicks.length){alert('沒有待挑項目');return;}
+  const payload = {
+    meta: {
+      exported_at: new Date().toISOString(),
+      count: _pendingPicks.length,
+      note: '請 Claude 根據 candidates 挑選最適合的圖，輸出 add-events-YYYYMMDDHHMM.py'
+    },
+    items: _pendingPicks
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const now = new Date();
+  const ts = now.getFullYear().toString()
+    + String(now.getMonth()+1).padStart(2,'0')
+    + String(now.getDate()).padStart(2,'0')
+    + String(now.getHours()).padStart(2,'0')
+    + String(now.getMinutes()).padStart(2,'0');
+  a.href = url;
+  a.download = `pending-picks-${ts}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  log(`✓ 已匯出 pending-picks-${ts}.json（${_pendingPicks.length} 個事件）`,'log-ok');
+}
 
 function toggleTable(){const wrap=document.getElementById('result-wrap');wrap.style.display=wrap.style.display==='none'?'':'none';if(wrap.style.display==='none')return;const tbody=document.getElementById('result-body');tbody.innerHTML='';results.filter(r=>r.status!=='skip').forEach(({ev,status,img})=>{const badge=status==='auto'?'<span class="badge badge-ok">自動</span>':status==='manual'?'<span class="badge badge-manual">手選</span>':status==='kept'?'<span class="badge badge-skip">保留</span>':'<span class="badge badge-skip">略過</span>';const imgHtml=img?`<img src="${img}" onerror="this.style.display='none'">`:'—';const urlHtml=img?`<span style="color:var(--muted);word-break:break-all;font-size:10px">${img.substring(0,70)}…</span>`:'';tbody.innerHTML+=`<tr><td>${ev.zh}</td><td>${badge}</td><td>${imgHtml}</td><td>${urlHtml}</td></tr>`;});}
 
@@ -1391,6 +1555,124 @@ document.getElementById('confirm-overlay').addEventListener('click', e=>{
   if(e.target===document.getElementById('confirm-overlay')) closeConfirm();
 });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeConfirm(); });
+
+// ════════════════════════════════════════════
+//  BOOKS MANAGEMENT
+// ════════════════════════════════════════════
+const BOOK_COL_DEFS = [
+  {key:'id',           label:'事件 ID',         editable:false, width:'140px'},
+  {key:'zh',           label:'中文名稱',         editable:false, width:'160px'},
+  {key:'en',           label:'英文名稱',         editable:false, width:'180px'},
+  {key:'year',         label:'年份',            editable:false, width:'80px'},
+  {key:'axis',         label:'軸線',            editable:false, width:'100px'},
+  {key:'amazon_asin',  label:'Amazon ASIN',     editable:true,  width:'120px'},
+  {key:'amazon_title', label:'Amazon Title',    editable:true,  width:'180px'},
+  {key:'amazon_link',  label:'Amazon 連結',     editable:false, width:'90px'},
+  {key:'books_id',     label:'博客來 ID',       editable:true,  width:'120px'},
+  {key:'books_title',  label:'博客來書名',       editable:true,  width:'180px'},
+  {key:'books_link',   label:'博客來連結',       editable:false, width:'90px'},
+];
+
+function getVisibleBookCols() {
+  const checked = [...document.querySelectorAll('#books-cols input:checked')].map(x=>x.dataset.col);
+  return BOOK_COL_DEFS.filter(c => checked.includes(c.key));
+}
+
+function renderBooksTable() {
+  if (!eventsData) return;
+  const thead = document.getElementById('books-thead');
+  const tbody = document.getElementById('books-tbody');
+  const countEl = document.getElementById('books-count');
+  if (!thead || !tbody) return;
+
+  const cols = getVisibleBookCols();
+  const filter = document.getElementById('books-filter').value;
+  const search = document.getElementById('books-search').value.trim().toLowerCase();
+
+  // Filter events
+  let rows = eventsData.events.filter(ev => {
+    const hasAmazon = !!ev.amazon_asin;
+    const hasBooks  = !!ev.books_id;
+    if (filter === 'amazon'  && !(hasAmazon && !hasBooks)) return false;
+    if (filter === 'books'   && !(!hasAmazon && hasBooks)) return false;
+    if (filter === 'both'    && !(hasAmazon && hasBooks))  return false;
+    if (filter === 'either'  && !(hasAmazon || hasBooks))  return false;
+    if (filter === 'neither' && (hasAmazon || hasBooks))   return false;
+    if (search) {
+      const z = (ev.zh||'').toLowerCase(), e = (ev.en||'').toLowerCase();
+      if (!z.includes(search) && !e.includes(search)) return false;
+    }
+    return true;
+  });
+
+  // Sort by year
+  rows.sort((a,b) => (a.year||0) - (b.year||0));
+
+  // Header
+  thead.innerHTML = cols.map(c =>
+    `<th style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:left;background:var(--surface);color:var(--muted);font-weight:600;white-space:nowrap;min-width:${c.width}">${c.label}</th>`
+  ).join('');
+
+  // Body
+  tbody.innerHTML = rows.map(ev => {
+    const tds = cols.map(c => {
+      if (c.key === 'amazon_link') {
+        return ev.amazon_asin
+          ? `<td style="padding:4px 8px;border-bottom:1px solid var(--border)"><a href="https://www.amazon.com/dp/${ev.amazon_asin}?tag=cosmictimelin-20" target="_blank" style="color:#fbbf24">🔗 開啟</a></td>`
+          : `<td style="padding:4px 8px;border-bottom:1px solid var(--border);color:var(--muted)">—</td>`;
+      }
+      if (c.key === 'books_link') {
+        return ev.books_id
+          ? `<td style="padding:4px 8px;border-bottom:1px solid var(--border)"><a href="https://www.books.com.tw/exep/assp.php/${ev.books_id}" target="_blank" style="color:#fbbf24">🔗 開啟</a></td>`
+          : `<td style="padding:4px 8px;border-bottom:1px solid var(--border);color:var(--muted)">—</td>`;
+      }
+      const val = ev[c.key] ?? '';
+      if (c.editable) {
+        return `<td style="padding:2px 4px;border-bottom:1px solid var(--border)">
+          <input type="text" value="${String(val).replace(/"/g,'&quot;')}" data-evid="${ev.id}" data-field="${c.key}" onchange="updateBookField(this)"
+                 style="width:100%;background:transparent;border:1px solid transparent;color:var(--text);padding:4px 6px;font-size:12px;border-radius:3px"
+                 onfocus="this.style.borderColor='var(--border)';this.style.background='var(--surface2)'"
+                 onblur="this.style.borderColor='transparent';this.style.background='transparent'">
+        </td>`;
+      }
+      // Non-editable cells
+      const disp = c.key === 'year' ? formatYearShort(val) : String(val);
+      return `<td style="padding:4px 8px;border-bottom:1px solid var(--border);color:${val===''?'var(--muted)':'var(--text)'};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:${c.width}" title="${String(val).replace(/"/g,'&quot;')}">${disp||'—'}</td>`;
+    }).join('');
+    return `<tr>${tds}</tr>`;
+  }).join('');
+
+  countEl.textContent = `顯示 ${rows.length} / ${eventsData.events.length} 個事件`;
+}
+
+function formatYearShort(y) {
+  if (y === '' || y == null) return '';
+  if (y > 0) return String(y);
+  const abs = Math.abs(y);
+  if (abs >= 1e9) return `-${(abs/1e9).toFixed(1)}億年`;
+  if (abs >= 1e6) return `-${(abs/1e6).toFixed(1)}M`;
+  if (abs >= 1e3) return `BC${abs}`;
+  return `BC${abs}`;
+}
+
+function updateBookField(input) {
+  const evid = input.dataset.evid;
+  const field = input.dataset.field;
+  const val = input.value.trim();
+  const ev = eventsData.events.find(e => e.id === evid);
+  if (!ev) return;
+  const oldVal = ev[field] || '';
+  if (val === oldVal) return;
+  if (val === '') delete ev[field]; else ev[field] = val;
+  logChange({type:'edit-book', evId:evid, evLabel:ev.zh, field:field, oldVal:oldVal||'(空)', newVal:val||'(空)'});
+}
+
+// Re-render when column checkboxes change
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#books-cols input').forEach(cb => {
+    cb.addEventListener('change', renderBooksTable);
+  });
+});
 
 // Init
 switchTopTab('add');
