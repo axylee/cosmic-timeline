@@ -1,24 +1,31 @@
-# Block access to dev tools and scripts
-[[redirects]]
-  from = "/check.py"
-  to = "/404.html"
-  status = 404
-  force = true
+## Netlify 部署設定
+##
+## 工作原理：
+##   1. Netlify 執行 build command 把「要公開」的檔案複製到 public/
+##   2. Netlify 只 serve public/ 目錄當網站 root
+##   3. 編輯工具、腳本、文件等敏感檔案不會進 public/，所以公網看不到
+##
+## GitHub repo 仍然保有所有檔案完整結構（包含編輯工具），
+## 只是 deploy 時過濾掉。
 
-[[redirects]]
-  from = "/add-events-*"
-  to = "/404.html"
-  status = 404
-  force = true
+[build]
+  ## 公開網站只會用 public/ 裡的檔案
+  publish = "public"
 
-[[redirects]]
-  from = "/tools/*"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/README.md"
-  to = "/404.html"
-  status = 404
-  force = true
+  ## 每次 deploy 時執行這段 shell 指令
+  ## 1. 清空 public/（避免舊檔殘留）
+  ## 2. 複製公開網站需要的檔案和目錄
+  command = """
+    rm -rf public && \
+    mkdir -p public && \
+    cp index.html                   public/ && \
+    cp about.html                   public/ && \
+    cp googlea6ce8b2ffe27c4a0.html  public/ && \
+    cp ads.txt                      public/ && \
+    cp sitemap.xml                  public/ && \
+    cp robots.txt                   public/ && \
+    cp -r data                      public/ && \
+    cp -r images                    public/ && \
+    echo '=== public/ 內容 ===' && \
+    ls -la public/
+  """
