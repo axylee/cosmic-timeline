@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════
+  Cosmic Timeline 圖片管理工作流程
+═══════════════════════════════════════════════════════
+
+三個工具，職責分明：
+
+  cosmic-tools.html        手動編輯工具（搜尋、挑圖、編輯事件）
+  images-find-missing.py   大量自動補缺圖
+  images-check-dead.py     檢查有圖但實際打不開的事件
+
+
+── 典型流程 ─────────────────────────────────────────
+
+新增大量事件後
+   ↓
+① cosmic-tools.html 手動補圖（少量）
+   ↓
+② 若缺圖太多：python tools/images-find-missing.py
+   ↓
+③ 若發現有 URL 卻開不了：python tools/images-check-dead.py
+
+
+── 工具一：images-find-missing.py ───────────────────
+
+  python tools/images-find-missing.py
+    預設行為，只處理 image="" 的事件
+    自動補圖，找不到或多候選就留空白
+    產出：tools/add-events-YYYYMMDDHHmm-fill-images.py
+
+  python tools/images-find-missing.py --overwrite
+    全部事件重抓（包含原本已有圖的）
+    產出：tools/add-events-YYYYMMDDHHmm-fill-images.py
+
+  跑完執行：
+    copy tools\add-events-YYYYMMDDHHmm-fill-images.py .
+    python add-events-YYYYMMDDHHmm-fill-images.py
+    python check.py
+
+
+── 工具二：images-check-dead.py ─────────────────────
+
+  python tools/images-check-dead.py
+    預設行為，只 HEAD 檢查，不改資料
+    產出：tools/dead-images-YYYYMMDDHHmm.txt（報告）
+
+  python tools/images-check-dead.py --fix
+    清空死連結的 image 欄位
+    產出：
+      tools/dead-images-YYYYMMDDHHmm.txt（報告）
+      tools/add-events-YYYYMMDDHHmm-clear-dead.py（清空腳本）
+
+  跑 --fix 後執行：
+    copy tools\add-events-YYYYMMDDHHmm-clear-dead.py .
+    python add-events-YYYYMMDDHHmm-clear-dead.py
+    python check.py
+
+  之後回到 cosmic-tools.html 篩「缺圖事件」手動補，
+  或再跑 images-find-missing.py 自動補。
+
+
+── 重點備忘 ─────────────────────────────────────────
+
+  • 所有腳本都產 tools/add-events-YYYYMMDDHHmm-xxx.py
+  • 都要 copy 到 repo 根目錄再執行（因為讀 data/events.json）
+  • 產圖 URL 一律使用 Wikimedia 標準尺寸 1280px
+    (非標準尺寸如 1200px 會被 Wikimedia 擋，回 HTTP 429)
+  • 三個工具內部 sanitize 邏輯已統一為 1280
+
+═══════════════════════════════════════════════════════
