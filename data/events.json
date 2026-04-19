@@ -37,6 +37,56 @@
       "color": "#3b82f6"
     }
   },
+  "view_groups": [
+    {
+      "id": "nature-cosmos",
+      "label": "自然與宇宙",
+      "label_en": "Nature & Cosmos",
+      "order": 1
+    },
+    {
+      "id": "civilization",
+      "label": "文明縱覽",
+      "label_en": "Civilizations",
+      "order": 2
+    },
+    {
+      "id": "countries",
+      "label": "國家",
+      "label_en": "Countries",
+      "order": 3
+    },
+    {
+      "id": "wars",
+      "label": "戰爭",
+      "label_en": "Wars",
+      "order": 4
+    },
+    {
+      "id": "topics",
+      "label": "主題",
+      "label_en": "Topics",
+      "order": 5
+    },
+    {
+      "id": "events",
+      "label": "重大事件",
+      "label_en": "Major Events",
+      "order": 6
+    },
+    {
+      "id": "empires",
+      "label": "王朝與帝國",
+      "label_en": "Dynasties & Empires",
+      "order": 7
+    },
+    {
+      "id": "biographies",
+      "label": "人物傳記",
+      "label_en": "Biographies",
+      "order": 8
+    }
+  ],
   "axes": [
     {
       "id": "cosmos",
@@ -892,6 +942,81 @@
       "endYear": null,
       "zoomMin": 0.58,
       "group": "nation"
+    },
+    {
+      "id": "uk",
+      "label": "英國",
+      "label_en": "United Kingdom",
+      "color": "#60a5fa",
+      "order": 66.1,
+      "parent": "europe",
+      "startYear": 1066,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "italy",
+      "label": "義大利",
+      "label_en": "Italy",
+      "color": "#93c5fd",
+      "order": 66.2,
+      "parent": "europe",
+      "startYear": 1861,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "germany",
+      "label": "德國",
+      "label_en": "Germany",
+      "color": "#1d4ed8",
+      "order": 66.3,
+      "parent": "europe",
+      "startYear": 1871,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "russia",
+      "label": "俄羅斯",
+      "label_en": "Russia",
+      "color": "#1e40af",
+      "order": 66.4,
+      "parent": "europe",
+      "startYear": 862,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "france",
+      "label": "法國",
+      "label_en": "France",
+      "color": "#3b82f6",
+      "order": 66.05,
+      "parent": "europe",
+      "startYear": 843,
+      "endYear": null,
+      "zoomMin": 0.58,
+      "group": "nation"
+    },
+    {
+      "id": "american-civil-war",
+      "label": "美國南北戰爭",
+      "label_en": "American Civil War",
+      "color": "#3b82f6",
+      "order": 69.1,
+      "parent": "usa",
+      "startYear": 1860,
+      "endYear": 1865,
+      "zoomMin": 0.72,
+      "group": "nation",
+      "scope": [
+        "american-civil"
+      ]
     }
   ],
   "era_bands": [
@@ -1227,971 +1352,6 @@
       "label": "哲學",
       "label_en": "Philosophy",
       "color": "#e2e8f0"
-    }
-  ],
-  "views": [
-    {
-      "id": "nat-cosmos",
-      "label": "宇宙歷史",
-      "axes": [
-        "cosmos",
-        "galaxy",
-        "solar-system"
-      ],
-      "label_en": "Cosmic History",
-      "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "nat-earth",
-      "label": "地球與生命",
-      "axes": [
-        "earth",
-        "climate",
-        "life"
-      ],
-      "label_en": "Earth & Life",
-      "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "nat-human",
-      "label": "人類演化與遷徙",
-      "axes": [
-        "human-evo",
-        "migration"
-      ],
-      "label_en": "Human Evolution",
-      "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "civ-all",
-      "label": "全部文明",
-      "axes": [
-        "east",
-        "west",
-        "africa",
-        "americas",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china",
-        "greece",
-        "latin-america"
-      ],
-      "label_en": "All Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-east",
-      "label": "東方文明",
-      "axes": [
-        "east",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china"
-      ],
-      "label_en": "Eastern Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-west",
-      "label": "西方文明",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "Western Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-africa",
-      "label": "非洲文明",
-      "axes": [
-        "africa",
-        "egypt"
-      ],
-      "label_en": "African Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-americas",
-      "label": "美洲文明",
-      "axes": [
-        "americas",
-        "latin-america"
-      ],
-      "label_en": "Americas",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "thm-religion",
-      "label": "宗教發展",
-      "axes": [
-        "judaism",
-        "christianity",
-        "islam",
-        "hinduism",
-        "buddhism",
-        "taoism",
-        "human-evo",
-        "cross"
-      ],
-      "label_en": "World Religions",
-      "category_en": "Themes",
-      "group": "topics",
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "thm-science",
-      "label": "科學技術",
-      "axes": [
-        "science",
-        "cross"
-      ],
-      "label_en": "Science & Technology",
-      "category_en": "Themes",
-      "group": "topics"
-    },
-    {
-      "id": "thm-trade",
-      "label": "貿易全球化",
-      "axes": [
-        "trade",
-        "cross"
-      ],
-      "label_en": "Trade & Exploration",
-      "category_en": "Themes",
-      "group": "topics"
-    },
-    {
-      "id": "thm-climate",
-      "label": "氣候環境",
-      "axes": [
-        "climate",
-        "earth"
-      ],
-      "label_en": "Climate & Environment",
-      "category_en": "Themes",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "nat-iceages",
-      "label": "五次大冰河期",
-      "axes": [
-        "climate",
-        "earth",
-        "life"
-      ],
-      "label_en": "Five Ice Ages",
-      "category_en": "Themes",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "thm-migration",
-      "label": "人類遷徙",
-      "axes": [
-        "migration",
-        "oceania",
-        "central-asia",
-        "southeast-asia",
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Human Migration",
-      "category_en": "Themes",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "reg-mideast",
-      "label": "中東歷史",
-      "axes": [
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "islam",
-        "judaism",
-        "iran"
-      ],
-      "label_en": "Middle East History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-eastasia",
-      "label": "東亞歷史",
-      "axes": [
-        "east",
-        "china",
-        "japan",
-        "taiwan"
-      ],
-      "label_en": "East Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-europe",
-      "label": "歐洲歷史",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "European History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-southasia",
-      "label": "南亞歷史",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism"
-      ],
-      "label_en": "South Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-africa",
-      "label": "非洲歷史",
-      "axes": [
-        "africa",
-        "north-africa",
-        "west-africa",
-        "east-africa",
-        "south-africa",
-        "egypt"
-      ],
-      "label_en": "African History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-americas",
-      "label": "美洲歷史",
-      "axes": [
-        "americas",
-        "latin-america",
-        "north-america",
-        "usa",
-        "south-america"
-      ],
-      "label_en": "Americas History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-oceania",
-      "label": "大洋洲",
-      "axes": [
-        "oceania",
-        "antarctic"
-      ],
-      "label_en": "Oceania",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-centralas",
-      "label": "中亞歷史",
-      "axes": [
-        "central-asia"
-      ],
-      "label_en": "Central Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-sea",
-      "label": "東南亞歷史",
-      "axes": [
-        "southeast-asia"
-      ],
-      "label_en": "SE Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-polar",
-      "label": "極地",
-      "axes": [
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Polar Regions",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "china",
-      "label": "中國歷史",
-      "label_en": "Chinese History",
-      "group": "countries",
-      "axes": [
-        "china",
-        "china-emperor",
-        "china-war",
-        "china-literature",
-        "china-science",
-        "taoism",
-        "buddhism",
-        "taiwan"
-      ],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "dinosaurs",
-      "label": "恐龍",
-      "label_en": "Dinosaurs",
-      "group": "nature-cosmos",
-      "axes": [
-        "dinosaurs",
-        "dino-species",
-        "earth",
-        "life",
-        "climate"
-      ],
-      "yearStart": -260000000,
-      "yearEnd": -60000000
-    },
-    {
-      "id": "ancient-civ",
-      "label": "古文明",
-      "label_en": "Ancient Civilizations",
-      "group": "civilization",
-      "axes": [],
-      "yearStart": -4000,
-      "yearEnd": 500
-    },
-    {
-      "id": "taiwan",
-      "label": "台灣歷史",
-      "label_en": "Taiwan History",
-      "group": "countries",
-      "axes": [
-        "taiwan",
-        "taiwan-colonial",
-        "taiwan-culture",
-        "china",
-        "japan"
-      ],
-      "yearStart": -30000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "japan",
-      "label": "日本歷史",
-      "label_en": "Japanese History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -14000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "korea",
-      "label": "韓國歷史",
-      "label_en": "Korean History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -2333,
-      "yearEnd": 2026
-    },
-    {
-      "id": "india",
-      "label": "印度歷史",
-      "label_en": "Indian History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -3300,
-      "yearEnd": 2026
-    },
-    {
-      "id": "usa",
-      "label": "美國歷史",
-      "label_en": "American History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": 1492,
-      "yearEnd": 2026
-    },
-    {
-      "id": "uk",
-      "label": "英國歷史",
-      "label_en": "British History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "france",
-      "label": "法國歷史",
-      "label_en": "French History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -600,
-      "yearEnd": 2026
-    },
-    {
-      "id": "germany",
-      "label": "德國歷史",
-      "label_en": "German History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -100,
-      "yearEnd": 2026
-    },
-    {
-      "id": "russia",
-      "label": "俄羅斯歷史",
-      "label_en": "Russian History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": 862,
-      "yearEnd": 2026
-    },
-    {
-      "id": "egypt",
-      "label": "埃及歷史",
-      "label_en": "Egyptian History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -3100,
-      "yearEnd": 2026
-    },
-    {
-      "id": "turkey",
-      "label": "土耳其歷史",
-      "label_en": "Turkish History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -2000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "iran",
-      "label": "伊朗/波斯歷史",
-      "label_en": "Iranian/Persian History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -3200,
-      "yearEnd": 2026
-    },
-    {
-      "id": "italy",
-      "label": "義大利歷史",
-      "label_en": "Italian History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -800,
-      "yearEnd": 2026
-    },
-    {
-      "id": "greece",
-      "label": "希臘歷史",
-      "label_en": "Greek History",
-      "group": "countries",
-      "axes": [],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "peloponnesian",
-      "label": "伯羅奔尼撒戰爭",
-      "label_en": "Peloponnesian War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": -431,
-      "yearEnd": -404
-    },
-    {
-      "id": "punic-wars",
-      "label": "布匿戰爭",
-      "label_en": "Punic Wars",
-      "group": "wars",
-      "axes": [],
-      "yearStart": -264,
-      "yearEnd": -146
-    },
-    {
-      "id": "crusades",
-      "label": "十字軍東征",
-      "label_en": "Crusades",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1096,
-      "yearEnd": 1291
-    },
-    {
-      "id": "mongol-conquests",
-      "label": "蒙古征服",
-      "label_en": "Mongol Conquests",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1206,
-      "yearEnd": 1368
-    },
-    {
-      "id": "thirty-years",
-      "label": "三十年戰爭",
-      "label_en": "Thirty Years' War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1618,
-      "yearEnd": 1648
-    },
-    {
-      "id": "seven-years",
-      "label": "七年戰爭",
-      "label_en": "Seven Years' War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1756,
-      "yearEnd": 1763
-    },
-    {
-      "id": "american-revolution",
-      "label": "美國獨立戰爭",
-      "label_en": "American Revolution",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1775,
-      "yearEnd": 1783
-    },
-    {
-      "id": "napoleonic",
-      "label": "拿破崙戰爭",
-      "label_en": "Napoleonic Wars",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1803,
-      "yearEnd": 1815
-    },
-    {
-      "id": "american-civil",
-      "label": "美國南北戰爭",
-      "label_en": "American Civil War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1861,
-      "yearEnd": 1865
-    },
-    {
-      "id": "ww1",
-      "label": "第一次世界大戰",
-      "label_en": "World War I",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1914,
-      "yearEnd": 1918
-    },
-    {
-      "id": "ww2",
-      "label": "第二次世界大戰",
-      "label_en": "World War II",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1939,
-      "yearEnd": 1945
-    },
-    {
-      "id": "cold-war",
-      "label": "冷戰",
-      "label_en": "Cold War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1947,
-      "yearEnd": 1991
-    },
-    {
-      "id": "korean-war",
-      "label": "韓戰",
-      "label_en": "Korean War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1950,
-      "yearEnd": 1953
-    },
-    {
-      "id": "vietnam-war",
-      "label": "越戰",
-      "label_en": "Vietnam War",
-      "group": "wars",
-      "axes": [],
-      "yearStart": 1955,
-      "yearEnd": 1975
-    },
-    {
-      "id": "art-history",
-      "label": "藝術史",
-      "label_en": "Art History",
-      "group": "topics",
-      "axes": [],
-      "yearStart": -30000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "music-history",
-      "label": "音樂史",
-      "label_en": "Music History",
-      "group": "topics",
-      "axes": [],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "medical",
-      "label": "醫學史",
-      "label_en": "History of Medicine",
-      "group": "topics",
-      "axes": [],
-      "yearStart": -2600,
-      "yearEnd": 2026
-    },
-    {
-      "id": "space-exploration",
-      "label": "太空探索",
-      "label_en": "Space Exploration",
-      "group": "topics",
-      "axes": [],
-      "yearStart": 1942,
-      "yearEnd": 2026
-    },
-    {
-      "id": "pandemics",
-      "label": "瘟疫與流行病",
-      "label_en": "Pandemics & Epidemics",
-      "group": "events",
-      "axes": [],
-      "yearStart": -430,
-      "yearEnd": 2026
-    },
-    {
-      "id": "exploration",
-      "label": "大航海時代",
-      "label_en": "Age of Exploration",
-      "group": "events",
-      "axes": [],
-      "yearStart": 1400,
-      "yearEnd": 1600
-    },
-    {
-      "id": "revolutions",
-      "label": "革命浪潮",
-      "label_en": "Revolutions",
-      "group": "events",
-      "axes": [],
-      "yearStart": 1640,
-      "yearEnd": 2026
-    },
-    {
-      "id": "disasters",
-      "label": "重大災害",
-      "label_en": "Major Disasters",
-      "group": "events",
-      "axes": [],
-      "yearStart": -1600,
-      "yearEnd": 2026
-    },
-    {
-      "id": "akkadian",
-      "label": "阿卡德帝國",
-      "label_en": "Akkadian Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": -2334,
-      "yearEnd": -2154
-    },
-    {
-      "id": "ancient-egypt-empire",
-      "label": "古埃及帝國",
-      "label_en": "Ancient Egyptian Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": -3100,
-      "yearEnd": -30
-    },
-    {
-      "id": "persian-empire",
-      "label": "波斯帝國",
-      "label_en": "Persian Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": -550,
-      "yearEnd": -330
-    },
-    {
-      "id": "alexander-empire",
-      "label": "亞歷山大帝國",
-      "label_en": "Alexander's Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": -336,
-      "yearEnd": -323
-    },
-    {
-      "id": "roman-empire",
-      "label": "羅馬帝國",
-      "label_en": "Roman Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": -27,
-      "yearEnd": 476
-    },
-    {
-      "id": "byzantine",
-      "label": "拜占庭帝國",
-      "label_en": "Byzantine Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 330,
-      "yearEnd": 1453
-    },
-    {
-      "id": "tang-dynasty",
-      "label": "唐朝",
-      "label_en": "Tang Dynasty",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 618,
-      "yearEnd": 907
-    },
-    {
-      "id": "arab-caliphate",
-      "label": "阿拉伯帝國",
-      "label_en": "Arab Caliphate",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 632,
-      "yearEnd": 1258
-    },
-    {
-      "id": "mongol-empire",
-      "label": "蒙古帝國",
-      "label_en": "Mongol Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1206,
-      "yearEnd": 1368
-    },
-    {
-      "id": "ottoman-empire",
-      "label": "鄂圖曼帝國",
-      "label_en": "Ottoman Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1299,
-      "yearEnd": 1922
-    },
-    {
-      "id": "mughal-empire",
-      "label": "莫臥兒帝國",
-      "label_en": "Mughal Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1526,
-      "yearEnd": 1857
-    },
-    {
-      "id": "spanish-empire",
-      "label": "西班牙帝國",
-      "label_en": "Spanish Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1492,
-      "yearEnd": 1975
-    },
-    {
-      "id": "british-empire",
-      "label": "大英帝國",
-      "label_en": "British Empire",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1583,
-      "yearEnd": 1997
-    },
-    {
-      "id": "russian-empire",
-      "label": "俄羅斯帝國/蘇聯",
-      "label_en": "Russian Empire / USSR",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1721,
-      "yearEnd": 1991
-    },
-    {
-      "id": "qing-dynasty",
-      "label": "清朝",
-      "label_en": "Qing Dynasty",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1636,
-      "yearEnd": 1912
-    },
-    {
-      "id": "japanese-empire",
-      "label": "大日本帝國",
-      "label_en": "Empire of Japan",
-      "group": "empires",
-      "axes": [],
-      "yearStart": 1868,
-      "yearEnd": 1947
-    },
-    {
-      "id": "confucius",
-      "label": "孔子",
-      "label_en": "Confucius",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -551,
-      "yearEnd": -479
-    },
-    {
-      "id": "alexander",
-      "label": "亞歷山大大帝",
-      "label_en": "Alexander the Great",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -356,
-      "yearEnd": -323
-    },
-    {
-      "id": "qin-shihuang",
-      "label": "秦始皇",
-      "label_en": "Qin Shi Huang",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -259,
-      "yearEnd": -210
-    },
-    {
-      "id": "caesar",
-      "label": "凱撒",
-      "label_en": "Julius Caesar",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -100,
-      "yearEnd": -44
-    },
-    {
-      "id": "genghis-khan",
-      "label": "成吉思汗",
-      "label_en": "Genghis Khan",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1162,
-      "yearEnd": 1227
-    },
-    {
-      "id": "columbus",
-      "label": "哥倫布",
-      "label_en": "Christopher Columbus",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1451,
-      "yearEnd": 1506
-    },
-    {
-      "id": "napoleon",
-      "label": "拿破崙",
-      "label_en": "Napoleon Bonaparte",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1769,
-      "yearEnd": 1821
-    },
-    {
-      "id": "einstein",
-      "label": "愛因斯坦",
-      "label_en": "Albert Einstein",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1879,
-      "yearEnd": 1955
-    },
-    {
-      "id": "cenozoic",
-      "label": "新生代生命演化",
-      "label_en": "Cenozoic Life Evolution",
-      "group": "nature-cosmos",
-      "axes": [
-        "life",
-        "cenozoic-epochs",
-        "cenozoic-life",
-        "earth",
-        "climate",
-        "human-evo"
-      ],
-      "yearStart": -66000000,
-      "yearEnd": -50000
-    }
-  ],
-  "view_groups": [
-    {
-      "id": "nature-cosmos",
-      "label": "自然與宇宙",
-      "label_en": "Nature & Cosmos",
-      "order": 1
-    },
-    {
-      "id": "civilization",
-      "label": "文明縱覽",
-      "label_en": "Civilizations",
-      "order": 2
-    },
-    {
-      "id": "countries",
-      "label": "國家",
-      "label_en": "Countries",
-      "order": 3
-    },
-    {
-      "id": "wars",
-      "label": "戰爭",
-      "label_en": "Wars",
-      "order": 4
-    },
-    {
-      "id": "topics",
-      "label": "主題",
-      "label_en": "Topics",
-      "order": 5
-    },
-    {
-      "id": "events",
-      "label": "重大事件",
-      "label_en": "Major Events",
-      "order": 6
-    },
-    {
-      "id": "empires",
-      "label": "王朝與帝國",
-      "label_en": "Dynasties & Empires",
-      "order": 7
-    },
-    {
-      "id": "biographies",
-      "label": "人物傳記",
-      "label_en": "Biographies",
-      "order": 8
     }
   ],
   "events": [
@@ -10953,19 +10113,6 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Department_of_Agriculture%2C_Washington%2C_D._C.%2C_1878_%2814572579629%29.jpg/1280px-Department_of_Agriculture%2C_Washington%2C_D._C.%2C_1878_%2814572579629%29.jpg"
     },
     {
-      "id": "ame-004",
-      "year": 1865,
-      "zh": "美國南北戰爭結束",
-      "en": "US Civil War Ends",
-      "axis": "americas",
-      "level": 1,
-      "category": "war",
-      "wiki_en": "https://en.wikipedia.org/wiki/American_Civil_War",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/CivilWarUSAColl.png",
-      "desc_en": "US Civil War ends in 1865, abolishing slavery and preserving the Union.",
-      "wiki_zh": "https://zh.wikipedia.org/wiki/南北战争"
-    },
-    {
       "id": "lat-007",
       "year": -3000,
       "zh": "查文文化（秘魯最早文明）",
@@ -17940,6 +17087,1331 @@
       ],
       "amazon_asin": "0143106929",
       "amazon_title": "I Ching: The Essential Translation — John Minford"
+    },
+    {
+      "id": "civilwar-lincoln-elected",
+      "year": 1860,
+      "zh": "林肯當選美國總統",
+      "en": "Abraham Lincoln Elected President",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "共和黨候選人林肯當選總統，反對奴隸制擴張，直接觸發南方各州脫離聯邦。",
+      "desc_en": "Republican candidate Abraham Lincoln won the presidency on an anti-slavery-expansion platform, directly triggering Southern secession.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Abraham_Lincoln_by_Alexander_Hesler%2C_1860-restored_%283x4_cropped%29.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/亞伯拉罕·林肯",
+      "wiki_en": "https://en.wikipedia.org/wiki/1860_United_States_presidential_election"
+    },
+    {
+      "id": "civilwar-confederacy",
+      "year": 1861,
+      "zh": "邦聯成立·南方七州脫離",
+      "en": "Confederate States of America Founded",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "南卡羅來納等七個南方州脫離聯邦，成立美利堅邦聯（CSA），傑佛遜·戴維斯任臨時總統。",
+      "desc_en": "Seven Southern states seceded from the Union and formed the Confederate States of America, with Jefferson Davis as provisional president.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Confederate_States_of_America_%28orthographic_projection%29.svg/1280px-Confederate_States_of_America_%28orthographic_projection%29.svg.png",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美利堅聯盟國",
+      "wiki_en": "https://en.wikipedia.org/wiki/Confederate_States_of_America"
+    },
+    {
+      "id": "civilwar-fort-sumter",
+      "year": 1861,
+      "zh": "桑姆特堡戰役·戰爭爆發",
+      "en": "Battle of Fort Sumter — War Begins",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "邦聯軍砲擊位於南卡羅來納州查爾斯頓港的桑姆特堡，南北戰爭正式開打。",
+      "desc_en": "Confederate forces bombarded Fort Sumter in Charleston Harbor, South Carolina, formally beginning the American Civil War.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Bombardment_of_Fort_Sumter.jpg/1920px-Bombardment_of_Fort_Sumter.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/薩姆特堡戰役",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter"
+    },
+    {
+      "id": "civilwar-antietam",
+      "year": 1862,
+      "zh": "安提塔姆戰役",
+      "en": "Battle of Antietam",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "美國史上最血腥的單日戰役，傷亡 2.3 萬人。聯邦軍戰術勝利，使林肯得以發布解放奴隸宣言。",
+      "desc_en": "The bloodiest single day in American history with 23,000 casualties. The Union's tactical victory enabled Lincoln to issue the Emancipation Proclamation.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Thure_de_Thulstrup_-_Battle_of_Antietam.jpg/1920px-Thure_de_Thulstrup_-_Battle_of_Antietam.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/安提耶坦戰役",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Antietam"
+    },
+    {
+      "id": "civilwar-emancipation",
+      "year": 1863,
+      "zh": "解放奴隸宣言",
+      "en": "Emancipation Proclamation",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "林肯宣布所有邦聯轄區內的奴隸獲得自由，將內戰提升為解放戰爭，並阻止英法承認邦聯。",
+      "desc_en": "Lincoln declared all enslaved people in Confederate territory free, transforming the war into a struggle for emancipation and preventing British and French recognition of the Confederacy.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hand_colored_Emancipation_The_Past_and_the_Future_by_Thomas_Nast.jpg/1280px-Hand_colored_Emancipation_The_Past_and_the_Future_by_Thomas_Nast.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/解放奴隸宣言",
+      "wiki_en": "https://en.wikipedia.org/wiki/Emancipation_Proclamation"
+    },
+    {
+      "id": "civilwar-gettysburg-battle",
+      "year": 1863,
+      "zh": "蓋茨堡戰役",
+      "en": "Battle of Gettysburg",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "聯邦軍擊敗李將軍領導的南軍，是南北戰爭轉捩點。三日交戰共 5 萬傷亡。",
+      "desc_en": "Union forces defeated General Lee's Army of Northern Virginia, marking the war's turning point. Three days of fighting produced 50,000 casualties.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg_-_Restoration_by_Adam_Cuerden.jpg/1280px-Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg_-_Restoration_by_Adam_Cuerden.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/蓋茨堡之役",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg"
+    },
+    {
+      "id": "civilwar-gettysburg-address",
+      "year": 1863,
+      "zh": "蓋茨堡演說",
+      "en": "Gettysburg Address",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "林肯在蓋茨堡國家公墓的兩分鐘演說，重新定義美國價值：「民有、民治、民享之政府」。",
+      "desc_en": "Lincoln's two-minute speech at Gettysburg National Cemetery redefined American values: 'government of the people, by the people, for the people.'",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Lincolnatgettysburg.jpg/1280px-Lincolnatgettysburg.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/葛底斯堡演說",
+      "wiki_en": "https://en.wikipedia.org/wiki/Gettysburg_Address"
+    },
+    {
+      "id": "civilwar-appomattox",
+      "year": 1865,
+      "zh": "阿波馬托克斯投降·戰爭結束",
+      "en": "Appomattox Surrender — War Ends",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "war",
+      "desc_zh": "李將軍在阿波馬托克斯郡府向格蘭特將軍投降，南北戰爭實質結束，南方失去主力。",
+      "desc_en": "General Lee surrendered to General Grant at Appomattox Court House, effectively ending the Civil War with the South losing its main army.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/General_Robert_E._Lee_surrenders_at_Appomattox_Court_House_1865.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/阿波馬托克斯戰役",
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House"
+    },
+    {
+      "id": "civilwar-lincoln-assassination",
+      "year": 1865,
+      "zh": "林肯遇刺",
+      "en": "Assassination of Lincoln",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "戰爭結束 5 天後，林肯在福特劇院觀劇時遭演員布斯槍擊身亡，成為第一位遇刺的美國總統。",
+      "desc_en": "Five days after the war ended, Lincoln was shot by actor John Wilkes Booth at Ford's Theatre, becoming the first U.S. president to be assassinated.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lincoln_assassination_slide_c1900_-_Restoration.jpg/1280px-Lincoln_assassination_slide_c1900_-_Restoration.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/亞伯拉罕·林肯遇刺案",
+      "wiki_en": "https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln"
+    },
+    {
+      "id": "civilwar-13th-amendment",
+      "year": 1865,
+      "zh": "第十三條修正案·廢除奴隸制",
+      "en": "13th Amendment — Abolition of Slavery",
+      "axis": "american-civil-war",
+      "level": 2,
+      "category": "politics",
+      "desc_zh": "美國憲法第十三條修正案通過，正式廢除奴隸制度。南北戰爭最重要的法律成果。",
+      "desc_en": "The 13th Amendment to the U.S. Constitution was ratified, formally abolishing slavery. The most important legal outcome of the Civil War.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/AdoptionOf13thAmendment.jpg/960px-AdoptionOf13thAmendment.jpg",
+      "wiki_zh": "https://zh.wikipedia.org/wiki/美國憲法第十三修正案",
+      "wiki_en": "https://en.wikipedia.org/wiki/Thirteenth_Amendment_to_the_United_States_Constitution"
+    }
+  ],
+  "views": [
+    {
+      "id": "nat-cosmos",
+      "label": "宇宙歷史",
+      "axes": [
+        "cosmos",
+        "galaxy",
+        "solar-system"
+      ],
+      "label_en": "Cosmic History",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-earth",
+      "label": "地球與生命",
+      "axes": [
+        "earth",
+        "climate",
+        "life"
+      ],
+      "label_en": "Earth & Life",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-human",
+      "label": "人類演化與遷徙",
+      "axes": [
+        "human-evo",
+        "migration"
+      ],
+      "label_en": "Human Evolution",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "civ-all",
+      "label": "全部文明",
+      "axes": [
+        "east",
+        "west",
+        "africa",
+        "americas",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china",
+        "greece",
+        "latin-america"
+      ],
+      "label_en": "All Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-east",
+      "label": "東方文明",
+      "axes": [
+        "east",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china"
+      ],
+      "label_en": "Eastern Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-west",
+      "label": "西方文明",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "Western Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-africa",
+      "label": "非洲文明",
+      "axes": [
+        "africa",
+        "egypt"
+      ],
+      "label_en": "African Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-americas",
+      "label": "美洲文明",
+      "axes": [
+        "americas",
+        "latin-america"
+      ],
+      "label_en": "Americas",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "thm-religion",
+      "label": "宗教發展",
+      "axes": [
+        "judaism",
+        "christianity",
+        "islam",
+        "hinduism",
+        "buddhism",
+        "taoism",
+        "human-evo",
+        "cross"
+      ],
+      "label_en": "World Religions",
+      "category_en": "Themes",
+      "group": "topics",
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "thm-science",
+      "label": "科學技術",
+      "axes": [
+        "science",
+        "cross"
+      ],
+      "label_en": "Science & Technology",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-trade",
+      "label": "貿易全球化",
+      "axes": [
+        "trade",
+        "cross"
+      ],
+      "label_en": "Trade & Exploration",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-climate",
+      "label": "氣候環境",
+      "axes": [
+        "climate",
+        "earth"
+      ],
+      "label_en": "Climate & Environment",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-iceages",
+      "label": "五次大冰河期",
+      "axes": [
+        "climate",
+        "earth",
+        "life"
+      ],
+      "label_en": "Five Ice Ages",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "thm-migration",
+      "label": "人類遷徙",
+      "axes": [
+        "migration",
+        "oceania",
+        "central-asia",
+        "southeast-asia",
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Human Migration",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "reg-mideast",
+      "label": "中東歷史",
+      "axes": [
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "islam",
+        "judaism",
+        "iran"
+      ],
+      "label_en": "Middle East History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-eastasia",
+      "label": "東亞歷史",
+      "axes": [
+        "east",
+        "china",
+        "japan",
+        "taiwan"
+      ],
+      "label_en": "East Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-europe",
+      "label": "歐洲歷史",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "European History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-southasia",
+      "label": "南亞歷史",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism"
+      ],
+      "label_en": "South Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-africa",
+      "label": "非洲歷史",
+      "axes": [
+        "africa",
+        "north-africa",
+        "west-africa",
+        "east-africa",
+        "south-africa",
+        "egypt"
+      ],
+      "label_en": "African History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-americas",
+      "label": "美洲歷史",
+      "axes": [
+        "americas",
+        "latin-america",
+        "north-america",
+        "usa",
+        "south-america"
+      ],
+      "label_en": "Americas History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-oceania",
+      "label": "大洋洲",
+      "axes": [
+        "oceania",
+        "antarctic"
+      ],
+      "label_en": "Oceania",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-centralas",
+      "label": "中亞歷史",
+      "axes": [
+        "central-asia"
+      ],
+      "label_en": "Central Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-sea",
+      "label": "東南亞歷史",
+      "axes": [
+        "southeast-asia"
+      ],
+      "label_en": "SE Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-polar",
+      "label": "極地",
+      "axes": [
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Polar Regions",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "china",
+      "label": "中國歷史",
+      "label_en": "Chinese History",
+      "group": "countries",
+      "axes": [
+        "china",
+        "china-emperor",
+        "china-war",
+        "china-literature",
+        "china-science",
+        "taoism",
+        "buddhism",
+        "taiwan"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "dinosaurs",
+      "label": "恐龍",
+      "label_en": "Dinosaurs",
+      "group": "nature-cosmos",
+      "axes": [
+        "dinosaurs",
+        "dino-species",
+        "earth",
+        "life",
+        "climate"
+      ],
+      "yearStart": -260000000,
+      "yearEnd": -60000000
+    },
+    {
+      "id": "ancient-civ",
+      "label": "古文明",
+      "label_en": "Ancient Civilizations",
+      "group": "civilization",
+      "axes": [],
+      "yearStart": -4000,
+      "yearEnd": 500
+    },
+    {
+      "id": "taiwan",
+      "label": "台灣歷史",
+      "label_en": "Taiwan History",
+      "group": "countries",
+      "axes": [
+        "taiwan",
+        "taiwan-colonial",
+        "taiwan-culture",
+        "china",
+        "japan"
+      ],
+      "yearStart": -30000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "japan",
+      "label": "日本歷史",
+      "label_en": "Japanese History",
+      "group": "countries",
+      "axes": [
+        "japan",
+        "china-war",
+        "east",
+        "buddhism",
+        "korea"
+      ],
+      "yearStart": -2000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "korea",
+      "label": "韓國歷史",
+      "label_en": "Korean History",
+      "group": "countries",
+      "axes": [
+        "korea",
+        "china",
+        "japan"
+      ],
+      "yearStart": -2333,
+      "yearEnd": 2026
+    },
+    {
+      "id": "india",
+      "label": "印度歷史",
+      "label_en": "Indian History",
+      "group": "countries",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism",
+        "arts"
+      ],
+      "yearStart": -3300,
+      "yearEnd": 2026
+    },
+    {
+      "id": "usa",
+      "label": "美國歷史",
+      "label_en": "American History",
+      "group": "countries",
+      "axes": [
+        "usa",
+        "west",
+        "mideast",
+        "japan"
+      ],
+      "yearStart": 1492,
+      "yearEnd": 2026
+    },
+    {
+      "id": "uk",
+      "label": "英國歷史",
+      "label_en": "British History",
+      "group": "countries",
+      "axes": [
+        "uk",
+        "europe"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "france",
+      "label": "法國歷史",
+      "label_en": "French History",
+      "group": "countries",
+      "axes": [
+        "france",
+        "europe"
+      ],
+      "yearStart": -600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "germany",
+      "label": "德國歷史",
+      "label_en": "German History",
+      "group": "countries",
+      "axes": [
+        "germany",
+        "europe"
+      ],
+      "yearStart": -100,
+      "yearEnd": 2026
+    },
+    {
+      "id": "russia",
+      "label": "俄羅斯歷史",
+      "label_en": "Russian History",
+      "group": "countries",
+      "axes": [
+        "russia",
+        "europe"
+      ],
+      "yearStart": 862,
+      "yearEnd": 2026
+    },
+    {
+      "id": "egypt",
+      "label": "埃及歷史",
+      "label_en": "Egyptian History",
+      "group": "countries",
+      "axes": [
+        "egypt",
+        "mideast",
+        "kush"
+      ],
+      "yearStart": -3100,
+      "yearEnd": 2026
+    },
+    {
+      "id": "turkey",
+      "label": "土耳其歷史",
+      "label_en": "Turkish History",
+      "group": "countries",
+      "axes": [
+        "turkey",
+        "ottoman",
+        "mideast"
+      ],
+      "yearStart": -2000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "iran",
+      "label": "伊朗/波斯歷史",
+      "label_en": "Iranian/Persian History",
+      "group": "countries",
+      "axes": [
+        "iran",
+        "persia",
+        "mideast"
+      ],
+      "yearStart": -3200,
+      "yearEnd": 2026
+    },
+    {
+      "id": "italy",
+      "label": "義大利歷史",
+      "label_en": "Italian History",
+      "group": "countries",
+      "axes": [
+        "italy",
+        "europe",
+        "greece"
+      ],
+      "yearStart": -800,
+      "yearEnd": 2026
+    },
+    {
+      "id": "greece",
+      "label": "希臘歷史",
+      "label_en": "Greek History",
+      "group": "countries",
+      "axes": [
+        "greece",
+        "persia",
+        "judaism",
+        "arts",
+        "west",
+        "christianity"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "peloponnesian",
+      "label": "伯羅奔尼撒戰爭",
+      "label_en": "Peloponnesian War",
+      "group": "wars",
+      "axes": [
+        "greece"
+      ],
+      "yearStart": -431,
+      "yearEnd": -404
+    },
+    {
+      "id": "punic-wars",
+      "label": "布匿戰爭",
+      "label_en": "Punic Wars",
+      "group": "wars",
+      "axes": [
+        "greece",
+        "china"
+      ],
+      "yearStart": -264,
+      "yearEnd": -146
+    },
+    {
+      "id": "crusades",
+      "label": "十字軍東征",
+      "label_en": "Crusades",
+      "group": "wars",
+      "axes": [
+        "christianity",
+        "islam",
+        "mideast",
+        "mongol",
+        "china"
+      ],
+      "yearStart": 1096,
+      "yearEnd": 1291
+    },
+    {
+      "id": "mongol-conquests",
+      "label": "蒙古征服",
+      "label_en": "Mongol Conquests",
+      "group": "wars",
+      "axes": [
+        "mongol",
+        "china",
+        "europe",
+        "mideast"
+      ],
+      "yearStart": 1206,
+      "yearEnd": 1368
+    },
+    {
+      "id": "thirty-years",
+      "label": "三十年戰爭",
+      "label_en": "Thirty Years' War",
+      "group": "wars",
+      "axes": [
+        "europe",
+        "taiwan",
+        "cross",
+        "china"
+      ],
+      "yearStart": 1618,
+      "yearEnd": 1648
+    },
+    {
+      "id": "seven-years",
+      "label": "七年戰爭",
+      "label_en": "Seven Years' War",
+      "group": "wars",
+      "axes": [
+        "europe",
+        "india",
+        "usa"
+      ],
+      "yearStart": 1756,
+      "yearEnd": 1763
+    },
+    {
+      "id": "american-revolution",
+      "label": "美國獨立戰爭",
+      "label_en": "American Revolution",
+      "group": "wars",
+      "axes": [
+        "usa",
+        "west",
+        "europe"
+      ],
+      "yearStart": 1775,
+      "yearEnd": 1783
+    },
+    {
+      "id": "napoleonic",
+      "label": "拿破崙戰爭",
+      "label_en": "Napoleonic Wars",
+      "group": "wars",
+      "axes": [
+        "europe",
+        "latin-america",
+        "modern-egypt",
+        "usa"
+      ],
+      "yearStart": 1803,
+      "yearEnd": 1815
+    },
+    {
+      "id": "american-civil",
+      "label": "美國南北戰爭",
+      "label_en": "American Civil War",
+      "group": "wars",
+      "axes": [
+        "americas",
+        "europe",
+        "usa",
+        "american-civil-war"
+      ],
+      "yearStart": 1859,
+      "yearEnd": 1865
+    },
+    {
+      "id": "ww1",
+      "label": "第一次世界大戰",
+      "label_en": "World War I",
+      "group": "wars",
+      "axes": [
+        "cross",
+        "europe",
+        "mideast",
+        "judaism"
+      ],
+      "yearStart": 1914,
+      "yearEnd": 1918
+    },
+    {
+      "id": "ww2",
+      "label": "第二次世界大戰",
+      "label_en": "World War II",
+      "group": "wars",
+      "axes": [
+        "cross",
+        "japan",
+        "china-war",
+        "europe",
+        "usa",
+        "science"
+      ],
+      "yearStart": 1939,
+      "yearEnd": 1945
+    },
+    {
+      "id": "cold-war",
+      "label": "冷戰",
+      "label_en": "Cold War",
+      "group": "wars",
+      "axes": [
+        "cross",
+        "taiwan",
+        "mideast",
+        "science",
+        "iran",
+        "usa",
+        "europe",
+        "japan",
+        "korea"
+      ],
+      "yearStart": 1947,
+      "yearEnd": 1991
+    },
+    {
+      "id": "korean-war",
+      "label": "韓戰",
+      "label_en": "Korean War",
+      "group": "wars",
+      "axes": [
+        "korea",
+        "china-war",
+        "usa",
+        "japan"
+      ],
+      "yearStart": 1950,
+      "yearEnd": 1953
+    },
+    {
+      "id": "vietnam-war",
+      "label": "越戰",
+      "label_en": "Vietnam War",
+      "group": "wars",
+      "axes": [
+        "usa",
+        "mideast",
+        "taiwan",
+        "science",
+        "cross"
+      ],
+      "yearStart": 1955,
+      "yearEnd": 1975
+    },
+    {
+      "id": "art-history",
+      "label": "藝術史",
+      "label_en": "Art History",
+      "group": "topics",
+      "axes": [
+        "arts",
+        "china-literature",
+        "europe",
+        "mesopotamia",
+        "china"
+      ],
+      "yearStart": -30000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "music-history",
+      "label": "音樂史",
+      "label_en": "Music History",
+      "group": "topics",
+      "axes": [
+        "arts",
+        "china-literature"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "medical",
+      "label": "醫學史",
+      "label_en": "History of Medicine",
+      "group": "topics",
+      "axes": [
+        "science",
+        "china-science",
+        "greece",
+        "mideast",
+        "china"
+      ],
+      "yearStart": -2600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "space-exploration",
+      "label": "太空探索",
+      "label_en": "Space Exploration",
+      "group": "topics",
+      "axes": [
+        "solar-system",
+        "science",
+        "usa"
+      ],
+      "yearStart": 1942,
+      "yearEnd": 2026
+    },
+    {
+      "id": "pandemics",
+      "label": "瘟疫與流行病",
+      "label_en": "Pandemics & Epidemics",
+      "group": "events",
+      "axes": [
+        "cross"
+      ],
+      "yearStart": -430,
+      "yearEnd": 2026
+    },
+    {
+      "id": "exploration",
+      "label": "大航海時代",
+      "label_en": "Age of Exploration",
+      "group": "events",
+      "axes": [
+        "trade",
+        "china",
+        "europe",
+        "americas",
+        "africa",
+        "oceania",
+        "china-science"
+      ],
+      "yearStart": 1400,
+      "yearEnd": 1600
+    },
+    {
+      "id": "revolutions",
+      "label": "革命浪潮",
+      "label_en": "Revolutions",
+      "group": "events",
+      "axes": [
+        "europe",
+        "iran",
+        "science",
+        "cross",
+        "west",
+        "usa",
+        "india",
+        "latin-america"
+      ],
+      "yearStart": 1640,
+      "yearEnd": 2026
+    },
+    {
+      "id": "disasters",
+      "label": "重大災害",
+      "label_en": "Major Disasters",
+      "group": "events",
+      "axes": [
+        "life",
+        "cenozoic-life",
+        "earth",
+        "dinosaurs",
+        "human-evo",
+        "solar-system",
+        "cross",
+        "japan"
+      ],
+      "yearStart": -1600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "akkadian",
+      "label": "阿卡德帝國",
+      "label_en": "Akkadian Empire",
+      "group": "empires",
+      "axes": [
+        "mesopotamia",
+        "egypt"
+      ],
+      "yearStart": -2334,
+      "yearEnd": -2154
+    },
+    {
+      "id": "ancient-egypt-empire",
+      "label": "古埃及帝國",
+      "label_en": "Ancient Egyptian Empire",
+      "group": "empires",
+      "axes": [
+        "egypt",
+        "mesopotamia",
+        "judaism",
+        "greece",
+        "china"
+      ],
+      "yearStart": -3100,
+      "yearEnd": -30
+    },
+    {
+      "id": "persian-empire",
+      "label": "波斯帝國",
+      "label_en": "Persian Empire",
+      "group": "empires",
+      "axes": [
+        "persia",
+        "greece",
+        "mesopotamia",
+        "judaism",
+        "india"
+      ],
+      "yearStart": -550,
+      "yearEnd": -330
+    },
+    {
+      "id": "alexander-empire",
+      "label": "亞歷山大帝國",
+      "label_en": "Alexander's Empire",
+      "group": "empires",
+      "axes": [
+        "greece",
+        "persia",
+        "egypt",
+        "india"
+      ],
+      "yearStart": -336,
+      "yearEnd": -323
+    },
+    {
+      "id": "roman-empire",
+      "label": "羅馬帝國",
+      "label_en": "Roman Empire",
+      "group": "empires",
+      "axes": [
+        "greece",
+        "christianity",
+        "judaism",
+        "china",
+        "europe"
+      ],
+      "yearStart": -27,
+      "yearEnd": 476
+    },
+    {
+      "id": "byzantine",
+      "label": "拜占庭帝國",
+      "label_en": "Byzantine Empire",
+      "group": "empires",
+      "axes": [
+        "byzantine",
+        "christianity",
+        "islam",
+        "ottoman"
+      ],
+      "yearStart": 330,
+      "yearEnd": 1453
+    },
+    {
+      "id": "tang-dynasty",
+      "label": "唐朝",
+      "label_en": "Tang Dynasty",
+      "group": "empires",
+      "axes": [
+        "china",
+        "japan",
+        "korea",
+        "islam",
+        "buddhism"
+      ],
+      "yearStart": 618,
+      "yearEnd": 907
+    },
+    {
+      "id": "arab-caliphate",
+      "label": "阿拉伯帝國",
+      "label_en": "Arab Caliphate",
+      "group": "empires",
+      "axes": [
+        "islam",
+        "mideast",
+        "christianity",
+        "china",
+        "europe",
+        "india"
+      ],
+      "yearStart": 632,
+      "yearEnd": 1258
+    },
+    {
+      "id": "mongol-empire",
+      "label": "蒙古帝國",
+      "label_en": "Mongol Empire",
+      "group": "empires",
+      "axes": [
+        "mongol",
+        "china",
+        "europe",
+        "mideast",
+        "korea"
+      ],
+      "yearStart": 1206,
+      "yearEnd": 1368
+    },
+    {
+      "id": "ottoman-empire",
+      "label": "鄂圖曼帝國",
+      "label_en": "Ottoman Empire",
+      "group": "empires",
+      "axes": [
+        "ottoman",
+        "mideast",
+        "europe",
+        "byzantine",
+        "taiwan"
+      ],
+      "yearStart": 1299,
+      "yearEnd": 1922
+    },
+    {
+      "id": "mughal-empire",
+      "label": "莫臥兒帝國",
+      "label_en": "Mughal Empire",
+      "group": "empires",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism",
+        "europe",
+        "china"
+      ],
+      "yearStart": 1526,
+      "yearEnd": 1857
+    },
+    {
+      "id": "spanish-empire",
+      "label": "西班牙帝國",
+      "label_en": "Spanish Empire",
+      "group": "empires",
+      "axes": [
+        "latin-america",
+        "americas",
+        "europe",
+        "taiwan",
+        "west"
+      ],
+      "yearStart": 1492,
+      "yearEnd": 1975
+    },
+    {
+      "id": "british-empire",
+      "label": "大英帝國",
+      "label_en": "British Empire",
+      "group": "empires",
+      "axes": [
+        "uk",
+        "europe",
+        "india",
+        "usa",
+        "taiwan",
+        "china",
+        "mideast"
+      ],
+      "yearStart": 1583,
+      "yearEnd": 1997
+    },
+    {
+      "id": "russian-empire",
+      "label": "俄羅斯帝國/蘇聯",
+      "label_en": "Russian Empire / USSR",
+      "group": "empires",
+      "axes": [
+        "russia",
+        "europe",
+        "central-asia",
+        "china",
+        "mideast"
+      ],
+      "yearStart": 1721,
+      "yearEnd": 1991
+    },
+    {
+      "id": "qing-dynasty",
+      "label": "清朝",
+      "label_en": "Qing Dynasty",
+      "group": "empires",
+      "axes": [
+        "china",
+        "china-war",
+        "taiwan",
+        "korea",
+        "japan",
+        "mideast"
+      ],
+      "yearStart": 1636,
+      "yearEnd": 1912
+    },
+    {
+      "id": "japanese-empire",
+      "label": "大日本帝國",
+      "label_en": "Empire of Japan",
+      "group": "empires",
+      "axes": [
+        "japan",
+        "china",
+        "china-war",
+        "taiwan",
+        "korea",
+        "taiwan-colonial"
+      ],
+      "yearStart": 1868,
+      "yearEnd": 1947
+    },
+    {
+      "id": "confucius",
+      "label": "孔子",
+      "label_en": "Confucius",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -551,
+      "yearEnd": -479
+    },
+    {
+      "id": "alexander",
+      "label": "亞歷山大大帝",
+      "label_en": "Alexander the Great",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -356,
+      "yearEnd": -323
+    },
+    {
+      "id": "qin-shihuang",
+      "label": "秦始皇",
+      "label_en": "Qin Shi Huang",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -259,
+      "yearEnd": -210
+    },
+    {
+      "id": "caesar",
+      "label": "凱撒",
+      "label_en": "Julius Caesar",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -100,
+      "yearEnd": -44
+    },
+    {
+      "id": "genghis-khan",
+      "label": "成吉思汗",
+      "label_en": "Genghis Khan",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1162,
+      "yearEnd": 1227
+    },
+    {
+      "id": "columbus",
+      "label": "哥倫布",
+      "label_en": "Christopher Columbus",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1451,
+      "yearEnd": 1506
+    },
+    {
+      "id": "napoleon",
+      "label": "拿破崙",
+      "label_en": "Napoleon Bonaparte",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1769,
+      "yearEnd": 1821
+    },
+    {
+      "id": "einstein",
+      "label": "愛因斯坦",
+      "label_en": "Albert Einstein",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1879,
+      "yearEnd": 1955
+    },
+    {
+      "id": "cenozoic",
+      "label": "新生代生命演化",
+      "label_en": "Cenozoic Life Evolution",
+      "group": "nature-cosmos",
+      "axes": [
+        "life",
+        "cenozoic-epochs",
+        "cenozoic-life",
+        "earth",
+        "climate",
+        "human-evo"
+      ],
+      "yearStart": -66000000,
+      "yearEnd": -50000
     }
   ]
 }
