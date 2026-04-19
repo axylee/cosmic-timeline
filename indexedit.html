@@ -1300,6 +1300,11 @@ function toggleLang() {
     const ev = events.find(e => e.id === _editingEventId);
     if (ev) showPopup(ev);
   }
+  // 切換語言時同步更新 meta（若在 view 頁則保留 view 的 meta，否則用主頁 meta）
+  if (typeof updateMetaForView === 'function') {
+    const activeV = _activeViewId ? (VIEWS || []).find(v => v.id === _activeViewId) : null;
+    updateMetaForView(activeV);
+  }
 }
 
 function applyLang() {
@@ -4856,6 +4861,65 @@ function applyView(v) {
   buildViewPopup();
   updateLegendState();
   draw();
+
+  // 5. Update SEO meta (title, description, canonical, og:*) for this view
+  updateMetaForView(v);
+}
+
+// Update document meta tags when view changes (for SEO)
+// Called by applyView (view change), toggleLang (language change),
+// and showAllAxes (back to main view)
+function updateMetaForView(v) {
+  const baseTitle = 'Cosmic History Timeline';
+  const baseDesc_zh = '互動式宇宙歷史時間軸 — 從138億年前大霹靂到今日，涵蓋宇宙、地球、生命演化、人類文明、宗教、國家等多軸對比。';
+  const baseDesc_en = 'An interactive timeline covering 13.8 billion years of cosmic history — from the Big Bang to the present day. Explore the universe, galaxies, life, civilizations, religions, and nations on a single zoomable canvas.';
+  const baseUrl = 'https://cosmichistorytimeline.com';
+
+  let title, desc, canonical;
+  if (v && v.id) {
+    // 專題頁
+    const label = T(v.label, v.label_en);
+    const labelEn = v.label_en || v.label;
+    title = lang === 'en'
+      ? `${labelEn} — ${baseTitle}`
+      : `${label} — ${baseTitle}`;
+    // 視圖描述：列出軸線名稱作為語境
+    const axisLabels = (v.axes || [])
+      .map(aid => { const a = AXES[aid]; return a ? T(a.label, a.label_en) : null; })
+      .filter(Boolean)
+      .slice(0, 6)
+      .join(lang === 'en' ? ', ' : '、');
+    if (lang === 'en') {
+      desc = `${labelEn} on Cosmic History Timeline. Explore events across ${axisLabels} on a zoomable, side-by-side timeline.`;
+    } else {
+      desc = `在宇宙歷史時間軸探索「${label}」— 跨軸對照 ${axisLabels} 等歷史脈絡，可縮放、可對比。`;
+    }
+    canonical = `${baseUrl}/?v=${encodeURIComponent(v.id)}`;
+  } else {
+    // 主頁（無 view）
+    title = baseTitle;
+    desc = lang === 'en' ? baseDesc_en : baseDesc_zh;
+    canonical = `${baseUrl}/`;
+  }
+
+  // 更新 <title>
+  document.title = title;
+
+  // 更新 meta tags（存在才改，不存在不建立新的）
+  const setMeta = (selector, value) => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute('content', value);
+  };
+  setMeta('meta[name="description"]', desc);
+  setMeta('meta[property="og:title"]', title);
+  setMeta('meta[property="og:description"]', desc);
+  setMeta('meta[property="og:url"]', canonical);
+  setMeta('meta[name="twitter:title"]', title);
+  setMeta('meta[name="twitter:description"]', desc);
+
+  // 更新 canonical
+  const link = document.querySelector('link[rel="canonical"]');
+  if (link) link.setAttribute('href', canonical);
 }
 
 // Hook into showAllAxes to also clear active view
@@ -4882,6 +4946,8 @@ showAllAxes = function() {
   // 同時清除 filter
   _filterSet.clear();
   _updateFilterBtn();
+  // 還原主頁 meta（清除 view 狀態）
+  if (typeof updateMetaForView === 'function') updateMetaForView(null);
 };
 
 // ════════════════════════════════════════════
