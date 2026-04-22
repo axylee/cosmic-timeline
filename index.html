@@ -650,13 +650,15 @@ body {
   -webkit-appearance: auto;
   appearance: auto;
 }
-#about-link {
-  position: absolute; right: 20px; bottom: 8px;
+#about-link, #privacy-link {
+  position: absolute; bottom: 8px;
   font-size: 10px; color: rgba(221,216,200,0.25);
   text-decoration: none; font-family: 'JetBrains Mono', monospace;
   transition: color .2s;
 }
-#about-link:hover { color: rgba(221,216,200,0.6); }
+#about-link { right: 20px; }
+#privacy-link { right: 140px; }
+#about-link:hover, #privacy-link:hover { color: rgba(221,216,200,0.6); }
 
 /* ─── TOOLTIP ─── */
 #tooltip {
@@ -1099,6 +1101,7 @@ body {
       <span class="hzoom-label">−</span>
       <input type="range" id="zoom-slider" min="0" max="100" value="5">
       <span class="hzoom-label">＋</span>
+      <a href="privacy-policy.html" target="_blank" id="privacy-link">Privacy</a>
       <a href="about.html" target="_blank" id="about-link">About · Copyright</a>
     </div>
   </div>
