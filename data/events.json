@@ -37,6 +37,56 @@
       "color": "#3b82f6"
     }
   },
+  "view_groups": [
+    {
+      "id": "nature-cosmos",
+      "label": "自然與宇宙",
+      "label_en": "Nature & Cosmos",
+      "order": 1
+    },
+    {
+      "id": "civilization",
+      "label": "文明縱覽",
+      "label_en": "Civilizations",
+      "order": 2
+    },
+    {
+      "id": "countries",
+      "label": "國家",
+      "label_en": "Countries",
+      "order": 3
+    },
+    {
+      "id": "wars",
+      "label": "戰爭",
+      "label_en": "Wars",
+      "order": 4
+    },
+    {
+      "id": "topics",
+      "label": "主題",
+      "label_en": "Topics",
+      "order": 5
+    },
+    {
+      "id": "events",
+      "label": "重大事件",
+      "label_en": "Major Events",
+      "order": 6
+    },
+    {
+      "id": "empires",
+      "label": "王朝與帝國",
+      "label_en": "Dynasties & Empires",
+      "order": 7
+    },
+    {
+      "id": "biographies",
+      "label": "人物傳記",
+      "label_en": "Biographies",
+      "order": 8
+    }
+  ],
   "axes": [
     {
       "id": "cosmos",
@@ -1407,1261 +1457,6 @@
       "label": "哲學",
       "label_en": "Philosophy",
       "color": "#e2e8f0"
-    }
-  ],
-  "views": [
-    {
-      "id": "nat-cosmos",
-      "label": "宇宙歷史",
-      "axes": [
-        "cosmos",
-        "galaxy",
-        "solar-system"
-      ],
-      "label_en": "Cosmic History",
-      "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "nat-earth",
-      "label": "地球與生命",
-      "axes": [
-        "earth",
-        "climate",
-        "life"
-      ],
-      "label_en": "Earth & Life",
-      "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "nat-human",
-      "label": "人類演化與遷徙",
-      "axes": [
-        "human-evo",
-        "migration"
-      ],
-      "label_en": "Human Evolution",
-      "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "civ-all",
-      "label": "全部文明",
-      "axes": [
-        "east",
-        "west",
-        "africa",
-        "americas",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china",
-        "greece",
-        "latin-america"
-      ],
-      "label_en": "All Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-east",
-      "label": "東方文明",
-      "axes": [
-        "east",
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "india",
-        "china"
-      ],
-      "label_en": "Eastern Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-west",
-      "label": "西方文明",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "Western Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-africa",
-      "label": "非洲文明",
-      "axes": [
-        "africa",
-        "egypt"
-      ],
-      "label_en": "African Civilizations",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "civ-americas",
-      "label": "美洲文明",
-      "axes": [
-        "americas",
-        "latin-america"
-      ],
-      "label_en": "Americas",
-      "category_en": "Civilizations",
-      "group": "civilization"
-    },
-    {
-      "id": "thm-religion",
-      "label": "宗教發展",
-      "axes": [
-        "judaism",
-        "christianity",
-        "islam",
-        "hinduism",
-        "buddhism",
-        "taoism",
-        "human-evo",
-        "cross"
-      ],
-      "label_en": "World Religions",
-      "category_en": "Themes",
-      "group": "topics",
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "thm-science",
-      "label": "科學技術",
-      "axes": [
-        "science",
-        "cross"
-      ],
-      "label_en": "Science & Technology",
-      "category_en": "Themes",
-      "group": "topics"
-    },
-    {
-      "id": "thm-trade",
-      "label": "貿易全球化",
-      "axes": [
-        "trade",
-        "cross"
-      ],
-      "label_en": "Trade & Exploration",
-      "category_en": "Themes",
-      "group": "topics"
-    },
-    {
-      "id": "thm-climate",
-      "label": "氣候環境",
-      "axes": [
-        "climate",
-        "earth"
-      ],
-      "label_en": "Climate & Environment",
-      "category_en": "Themes",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "nat-iceages",
-      "label": "五次大冰河期",
-      "axes": [
-        "climate",
-        "earth",
-        "life"
-      ],
-      "label_en": "Five Ice Ages",
-      "category_en": "Themes",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "thm-migration",
-      "label": "人類遷徙",
-      "axes": [
-        "migration",
-        "oceania",
-        "central-asia",
-        "southeast-asia",
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Human Migration",
-      "category_en": "Themes",
-      "group": "nature-cosmos"
-    },
-    {
-      "id": "reg-mideast",
-      "label": "中東歷史",
-      "axes": [
-        "mideast",
-        "mesopotamia",
-        "egypt",
-        "persia",
-        "islam",
-        "judaism",
-        "iran"
-      ],
-      "label_en": "Middle East History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-eastasia",
-      "label": "東亞歷史",
-      "axes": [
-        "east",
-        "china",
-        "japan",
-        "taiwan"
-      ],
-      "label_en": "East Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-europe",
-      "label": "歐洲歷史",
-      "axes": [
-        "west",
-        "greece",
-        "europe"
-      ],
-      "label_en": "European History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-southasia",
-      "label": "南亞歷史",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism"
-      ],
-      "label_en": "South Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-africa",
-      "label": "非洲歷史",
-      "axes": [
-        "africa",
-        "north-africa",
-        "west-africa",
-        "east-africa",
-        "south-africa",
-        "egypt"
-      ],
-      "label_en": "African History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-americas",
-      "label": "美洲歷史",
-      "axes": [
-        "americas",
-        "latin-america",
-        "north-america",
-        "usa",
-        "south-america"
-      ],
-      "label_en": "Americas History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-oceania",
-      "label": "大洋洲",
-      "axes": [
-        "oceania",
-        "antarctic"
-      ],
-      "label_en": "Oceania",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-centralas",
-      "label": "中亞歷史",
-      "axes": [
-        "central-asia"
-      ],
-      "label_en": "Central Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-sea",
-      "label": "東南亞歷史",
-      "axes": [
-        "southeast-asia"
-      ],
-      "label_en": "SE Asia History",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "reg-polar",
-      "label": "極地",
-      "axes": [
-        "arctic",
-        "antarctic"
-      ],
-      "label_en": "Polar Regions",
-      "category_en": "Regions",
-      "group": "countries"
-    },
-    {
-      "id": "china",
-      "label": "中國歷史",
-      "label_en": "Chinese History",
-      "group": "countries",
-      "axes": [
-        "china",
-        "china-emperor",
-        "china-war",
-        "china-literature",
-        "china-science",
-        "taoism",
-        "buddhism",
-        "taiwan"
-      ],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "dinosaurs",
-      "label": "恐龍",
-      "label_en": "Dinosaurs",
-      "group": "nature-cosmos",
-      "axes": [
-        "dinosaurs",
-        "dino-species",
-        "earth",
-        "life",
-        "climate"
-      ],
-      "yearStart": -260000000,
-      "yearEnd": -60000000
-    },
-    {
-      "id": "ancient-civ",
-      "label": "古文明",
-      "label_en": "Ancient Civilizations",
-      "group": "civilization",
-      "axes": [],
-      "yearStart": -4000,
-      "yearEnd": 500
-    },
-    {
-      "id": "taiwan",
-      "label": "台灣歷史",
-      "label_en": "Taiwan History",
-      "group": "countries",
-      "axes": [
-        "taiwan",
-        "taiwan-colonial",
-        "taiwan-culture",
-        "china",
-        "japan"
-      ],
-      "yearStart": -30000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "japan",
-      "label": "日本歷史",
-      "label_en": "Japanese History",
-      "group": "countries",
-      "axes": [
-        "japan",
-        "china-war",
-        "east",
-        "buddhism",
-        "korea"
-      ],
-      "yearStart": -2000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "korea",
-      "label": "韓國歷史",
-      "label_en": "Korean History",
-      "group": "countries",
-      "axes": [
-        "korea",
-        "china",
-        "japan"
-      ],
-      "yearStart": -2333,
-      "yearEnd": 2026
-    },
-    {
-      "id": "india",
-      "label": "印度歷史",
-      "label_en": "Indian History",
-      "group": "countries",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism",
-        "arts"
-      ],
-      "yearStart": -3300,
-      "yearEnd": 2026
-    },
-    {
-      "id": "usa",
-      "label": "美國歷史",
-      "label_en": "American History",
-      "group": "countries",
-      "axes": [
-        "usa",
-        "west",
-        "mideast",
-        "japan"
-      ],
-      "yearStart": 1492,
-      "yearEnd": 2026
-    },
-    {
-      "id": "uk",
-      "label": "英國歷史",
-      "label_en": "British History",
-      "group": "countries",
-      "axes": [
-        "uk",
-        "europe"
-      ],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "france",
-      "label": "法國歷史",
-      "label_en": "French History",
-      "group": "countries",
-      "axes": [
-        "france",
-        "europe"
-      ],
-      "yearStart": -600,
-      "yearEnd": 2026
-    },
-    {
-      "id": "germany",
-      "label": "德國歷史",
-      "label_en": "German History",
-      "group": "countries",
-      "axes": [
-        "germany",
-        "europe"
-      ],
-      "yearStart": -100,
-      "yearEnd": 2026
-    },
-    {
-      "id": "russia",
-      "label": "俄羅斯歷史",
-      "label_en": "Russian History",
-      "group": "countries",
-      "axes": [
-        "russia",
-        "europe"
-      ],
-      "yearStart": 862,
-      "yearEnd": 2026
-    },
-    {
-      "id": "egypt",
-      "label": "埃及歷史",
-      "label_en": "Egyptian History",
-      "group": "countries",
-      "axes": [
-        "egypt",
-        "mideast",
-        "kush"
-      ],
-      "yearStart": -3100,
-      "yearEnd": 2026
-    },
-    {
-      "id": "turkey",
-      "label": "土耳其歷史",
-      "label_en": "Turkish History",
-      "group": "countries",
-      "axes": [
-        "turkey",
-        "ottoman",
-        "mideast"
-      ],
-      "yearStart": -2000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "iran",
-      "label": "伊朗/波斯歷史",
-      "label_en": "Iranian/Persian History",
-      "group": "countries",
-      "axes": [
-        "iran",
-        "persia",
-        "mideast"
-      ],
-      "yearStart": -3200,
-      "yearEnd": 2026
-    },
-    {
-      "id": "italy",
-      "label": "義大利歷史",
-      "label_en": "Italian History",
-      "group": "countries",
-      "axes": [
-        "italy",
-        "europe",
-        "greece"
-      ],
-      "yearStart": -800,
-      "yearEnd": 2026
-    },
-    {
-      "id": "greece",
-      "label": "希臘歷史",
-      "label_en": "Greek History",
-      "group": "countries",
-      "axes": [
-        "greece",
-        "persia",
-        "judaism",
-        "arts",
-        "west",
-        "christianity"
-      ],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "peloponnesian",
-      "label": "伯羅奔尼撒戰爭",
-      "label_en": "Peloponnesian War",
-      "group": "wars",
-      "axes": [
-        "greece"
-      ],
-      "yearStart": -431,
-      "yearEnd": -404
-    },
-    {
-      "id": "punic-wars",
-      "label": "布匿戰爭",
-      "label_en": "Punic Wars",
-      "group": "wars",
-      "axes": [
-        "greece",
-        "china"
-      ],
-      "yearStart": -264,
-      "yearEnd": -146
-    },
-    {
-      "id": "crusades",
-      "label": "十字軍東征",
-      "label_en": "Crusades",
-      "group": "wars",
-      "axes": [
-        "christianity",
-        "islam",
-        "mideast",
-        "mongol",
-        "china"
-      ],
-      "yearStart": 1096,
-      "yearEnd": 1291
-    },
-    {
-      "id": "mongol-conquests",
-      "label": "蒙古征服",
-      "label_en": "Mongol Conquests",
-      "group": "wars",
-      "axes": [
-        "mongol",
-        "china",
-        "europe",
-        "mideast"
-      ],
-      "yearStart": 1206,
-      "yearEnd": 1368
-    },
-    {
-      "id": "thirty-years",
-      "label": "三十年戰爭",
-      "label_en": "Thirty Years' War",
-      "group": "wars",
-      "axes": [
-        "europe",
-        "taiwan",
-        "cross",
-        "china"
-      ],
-      "yearStart": 1618,
-      "yearEnd": 1648
-    },
-    {
-      "id": "seven-years",
-      "label": "七年戰爭",
-      "label_en": "Seven Years' War",
-      "group": "wars",
-      "axes": [
-        "europe",
-        "india",
-        "usa"
-      ],
-      "yearStart": 1756,
-      "yearEnd": 1763
-    },
-    {
-      "id": "american-revolution",
-      "label": "美國獨立戰爭",
-      "label_en": "American Revolution",
-      "group": "wars",
-      "axes": [
-        "usa",
-        "west",
-        "europe"
-      ],
-      "yearStart": 1775,
-      "yearEnd": 1783
-    },
-    {
-      "id": "napoleonic",
-      "label": "拿破崙戰爭",
-      "label_en": "Napoleonic Wars",
-      "group": "wars",
-      "axes": [
-        "europe",
-        "latin-america",
-        "modern-egypt",
-        "usa"
-      ],
-      "yearStart": 1803,
-      "yearEnd": 1815
-    },
-    {
-      "id": "american-civil",
-      "label": "美國南北戰爭",
-      "label_en": "American Civil War",
-      "group": "wars",
-      "axes": [
-        "americas",
-        "europe",
-        "usa",
-        "american-civil-war"
-      ],
-      "yearStart": 1859,
-      "yearEnd": 1865
-    },
-    {
-      "id": "ww1",
-      "label": "第一次世界大戰",
-      "label_en": "World War I",
-      "group": "wars",
-      "axes": [
-        "ww1-western",
-        "ww1-eastern",
-        "ww1-mideast",
-        "ww1-home",
-        "france",
-        "uk",
-        "germany",
-        "russia",
-        "italy",
-        "usa",
-        "ottoman",
-        "turkey",
-        "cross",
-        "europe",
-        "mideast",
-        "judaism"
-      ],
-      "yearStart": 1870,
-      "yearEnd": 1920
-    },
-    {
-      "id": "ww2",
-      "label": "第二次世界大戰",
-      "label_en": "World War II",
-      "group": "wars",
-      "axes": [
-        "ww2-europe",
-        "ww2-pacific",
-        "ww2-home",
-        "france",
-        "uk",
-        "italy",
-        "germany",
-        "russia",
-        "cross",
-        "japan",
-        "china-war",
-        "europe",
-        "usa",
-        "science"
-      ],
-      "yearStart": 1933,
-      "yearEnd": 1946
-    },
-    {
-      "id": "cold-war",
-      "label": "冷戰",
-      "label_en": "Cold War",
-      "group": "wars",
-      "axes": [
-        "cross",
-        "taiwan",
-        "mideast",
-        "science",
-        "iran",
-        "usa",
-        "europe",
-        "japan",
-        "korea"
-      ],
-      "yearStart": 1947,
-      "yearEnd": 1991
-    },
-    {
-      "id": "korean-war",
-      "label": "韓戰",
-      "label_en": "Korean War",
-      "group": "wars",
-      "axes": [
-        "korea",
-        "china-war",
-        "usa",
-        "japan"
-      ],
-      "yearStart": 1950,
-      "yearEnd": 1953
-    },
-    {
-      "id": "vietnam-war",
-      "label": "越戰",
-      "label_en": "Vietnam War",
-      "group": "wars",
-      "axes": [
-        "usa",
-        "mideast",
-        "taiwan",
-        "science",
-        "cross"
-      ],
-      "yearStart": 1955,
-      "yearEnd": 1975
-    },
-    {
-      "id": "art-history",
-      "label": "藝術史",
-      "label_en": "Art History",
-      "group": "topics",
-      "axes": [
-        "arts",
-        "china-literature",
-        "europe",
-        "mesopotamia",
-        "china"
-      ],
-      "yearStart": -30000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "music-history",
-      "label": "音樂史",
-      "label_en": "Music History",
-      "group": "topics",
-      "axes": [
-        "arts",
-        "china-literature"
-      ],
-      "yearStart": -3000,
-      "yearEnd": 2026
-    },
-    {
-      "id": "medical",
-      "label": "醫學史",
-      "label_en": "History of Medicine",
-      "group": "topics",
-      "axes": [
-        "science",
-        "china-science",
-        "greece",
-        "mideast",
-        "china"
-      ],
-      "yearStart": -2600,
-      "yearEnd": 2026
-    },
-    {
-      "id": "space-exploration",
-      "label": "太空探索",
-      "label_en": "Space Exploration",
-      "group": "topics",
-      "axes": [
-        "solar-system",
-        "science",
-        "usa"
-      ],
-      "yearStart": 1942,
-      "yearEnd": 2026
-    },
-    {
-      "id": "pandemics",
-      "label": "瘟疫與流行病",
-      "label_en": "Pandemics & Epidemics",
-      "group": "events",
-      "axes": [
-        "cross"
-      ],
-      "yearStart": -430,
-      "yearEnd": 2026
-    },
-    {
-      "id": "exploration",
-      "label": "大航海時代",
-      "label_en": "Age of Exploration",
-      "group": "events",
-      "axes": [
-        "trade",
-        "china",
-        "europe",
-        "americas",
-        "africa",
-        "oceania",
-        "china-science"
-      ],
-      "yearStart": 1400,
-      "yearEnd": 1600
-    },
-    {
-      "id": "revolutions",
-      "label": "革命浪潮",
-      "label_en": "Revolutions",
-      "group": "events",
-      "axes": [
-        "europe",
-        "iran",
-        "science",
-        "cross",
-        "west",
-        "usa",
-        "india",
-        "latin-america"
-      ],
-      "yearStart": 1640,
-      "yearEnd": 2026
-    },
-    {
-      "id": "disasters",
-      "label": "重大災害",
-      "label_en": "Major Disasters",
-      "group": "events",
-      "axes": [
-        "life",
-        "cenozoic-life",
-        "earth",
-        "dinosaurs",
-        "human-evo",
-        "solar-system",
-        "cross",
-        "japan"
-      ],
-      "yearStart": -1600,
-      "yearEnd": 2026
-    },
-    {
-      "id": "akkadian",
-      "label": "阿卡德帝國",
-      "label_en": "Akkadian Empire",
-      "group": "empires",
-      "axes": [
-        "mesopotamia",
-        "egypt"
-      ],
-      "yearStart": -2334,
-      "yearEnd": -2154
-    },
-    {
-      "id": "ancient-egypt-empire",
-      "label": "古埃及帝國",
-      "label_en": "Ancient Egyptian Empire",
-      "group": "empires",
-      "axes": [
-        "egypt",
-        "mesopotamia",
-        "judaism",
-        "greece",
-        "china"
-      ],
-      "yearStart": -3100,
-      "yearEnd": -30
-    },
-    {
-      "id": "persian-empire",
-      "label": "波斯帝國",
-      "label_en": "Persian Empire",
-      "group": "empires",
-      "axes": [
-        "persia",
-        "greece",
-        "mesopotamia",
-        "judaism",
-        "india"
-      ],
-      "yearStart": -550,
-      "yearEnd": -330
-    },
-    {
-      "id": "alexander-empire",
-      "label": "亞歷山大帝國",
-      "label_en": "Alexander's Empire",
-      "group": "empires",
-      "axes": [
-        "greece",
-        "persia",
-        "egypt",
-        "india"
-      ],
-      "yearStart": -336,
-      "yearEnd": -323
-    },
-    {
-      "id": "roman-empire",
-      "label": "羅馬帝國",
-      "label_en": "Roman Empire",
-      "group": "empires",
-      "axes": [
-        "greece",
-        "christianity",
-        "judaism",
-        "china",
-        "europe"
-      ],
-      "yearStart": -27,
-      "yearEnd": 476
-    },
-    {
-      "id": "byzantine",
-      "label": "拜占庭帝國",
-      "label_en": "Byzantine Empire",
-      "group": "empires",
-      "axes": [
-        "byzantine",
-        "christianity",
-        "islam",
-        "ottoman"
-      ],
-      "yearStart": 330,
-      "yearEnd": 1453
-    },
-    {
-      "id": "tang-dynasty",
-      "label": "唐朝",
-      "label_en": "Tang Dynasty",
-      "group": "empires",
-      "axes": [
-        "china",
-        "japan",
-        "korea",
-        "islam",
-        "buddhism"
-      ],
-      "yearStart": 618,
-      "yearEnd": 907
-    },
-    {
-      "id": "arab-caliphate",
-      "label": "阿拉伯帝國",
-      "label_en": "Arab Caliphate",
-      "group": "empires",
-      "axes": [
-        "islam",
-        "mideast",
-        "christianity",
-        "china",
-        "europe",
-        "india"
-      ],
-      "yearStart": 632,
-      "yearEnd": 1258
-    },
-    {
-      "id": "mongol-empire",
-      "label": "蒙古帝國",
-      "label_en": "Mongol Empire",
-      "group": "empires",
-      "axes": [
-        "mongol",
-        "china",
-        "europe",
-        "mideast",
-        "korea"
-      ],
-      "yearStart": 1206,
-      "yearEnd": 1368
-    },
-    {
-      "id": "ottoman-empire",
-      "label": "鄂圖曼帝國",
-      "label_en": "Ottoman Empire",
-      "group": "empires",
-      "axes": [
-        "ottoman",
-        "mideast",
-        "europe",
-        "byzantine",
-        "taiwan"
-      ],
-      "yearStart": 1299,
-      "yearEnd": 1922
-    },
-    {
-      "id": "mughal-empire",
-      "label": "莫臥兒帝國",
-      "label_en": "Mughal Empire",
-      "group": "empires",
-      "axes": [
-        "india",
-        "hinduism",
-        "buddhism",
-        "europe",
-        "china"
-      ],
-      "yearStart": 1526,
-      "yearEnd": 1857
-    },
-    {
-      "id": "spanish-empire",
-      "label": "西班牙帝國",
-      "label_en": "Spanish Empire",
-      "group": "empires",
-      "axes": [
-        "latin-america",
-        "americas",
-        "europe",
-        "taiwan",
-        "west"
-      ],
-      "yearStart": 1492,
-      "yearEnd": 1975
-    },
-    {
-      "id": "british-empire",
-      "label": "大英帝國",
-      "label_en": "British Empire",
-      "group": "empires",
-      "axes": [
-        "uk",
-        "europe",
-        "india",
-        "usa",
-        "taiwan",
-        "china",
-        "mideast"
-      ],
-      "yearStart": 1583,
-      "yearEnd": 1997
-    },
-    {
-      "id": "russian-empire",
-      "label": "俄羅斯帝國/蘇聯",
-      "label_en": "Russian Empire / USSR",
-      "group": "empires",
-      "axes": [
-        "russia",
-        "europe",
-        "central-asia",
-        "china",
-        "mideast"
-      ],
-      "yearStart": 1721,
-      "yearEnd": 1991
-    },
-    {
-      "id": "qing-dynasty",
-      "label": "清朝",
-      "label_en": "Qing Dynasty",
-      "group": "empires",
-      "axes": [
-        "china",
-        "china-war",
-        "taiwan",
-        "korea",
-        "japan",
-        "mideast"
-      ],
-      "yearStart": 1636,
-      "yearEnd": 1912
-    },
-    {
-      "id": "japanese-empire",
-      "label": "大日本帝國",
-      "label_en": "Empire of Japan",
-      "group": "empires",
-      "axes": [
-        "japan",
-        "china",
-        "china-war",
-        "taiwan",
-        "korea",
-        "taiwan-colonial"
-      ],
-      "yearStart": 1868,
-      "yearEnd": 1947
-    },
-    {
-      "id": "confucius",
-      "label": "孔子",
-      "label_en": "Confucius",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -551,
-      "yearEnd": -479
-    },
-    {
-      "id": "alexander",
-      "label": "亞歷山大大帝",
-      "label_en": "Alexander the Great",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -356,
-      "yearEnd": -323
-    },
-    {
-      "id": "qin-shihuang",
-      "label": "秦始皇",
-      "label_en": "Qin Shi Huang",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -259,
-      "yearEnd": -210
-    },
-    {
-      "id": "caesar",
-      "label": "凱撒",
-      "label_en": "Julius Caesar",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": -100,
-      "yearEnd": -44
-    },
-    {
-      "id": "genghis-khan",
-      "label": "成吉思汗",
-      "label_en": "Genghis Khan",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1162,
-      "yearEnd": 1227
-    },
-    {
-      "id": "columbus",
-      "label": "哥倫布",
-      "label_en": "Christopher Columbus",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1451,
-      "yearEnd": 1506
-    },
-    {
-      "id": "napoleon",
-      "label": "拿破崙",
-      "label_en": "Napoleon Bonaparte",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1769,
-      "yearEnd": 1821
-    },
-    {
-      "id": "einstein",
-      "label": "愛因斯坦",
-      "label_en": "Albert Einstein",
-      "group": "biographies",
-      "axes": [],
-      "yearStart": 1879,
-      "yearEnd": 1955
-    },
-    {
-      "id": "cenozoic",
-      "label": "新生代生命演化",
-      "label_en": "Cenozoic Life Evolution",
-      "group": "nature-cosmos",
-      "axes": [
-        "life",
-        "cenozoic-epochs",
-        "cenozoic-life",
-        "earth",
-        "climate",
-        "human-evo"
-      ],
-      "yearStart": -66000000,
-      "yearEnd": -50000
-    }
-  ],
-  "view_groups": [
-    {
-      "id": "nature-cosmos",
-      "label": "自然與宇宙",
-      "label_en": "Nature & Cosmos",
-      "order": 1
-    },
-    {
-      "id": "civilization",
-      "label": "文明縱覽",
-      "label_en": "Civilizations",
-      "order": 2
-    },
-    {
-      "id": "countries",
-      "label": "國家",
-      "label_en": "Countries",
-      "order": 3
-    },
-    {
-      "id": "wars",
-      "label": "戰爭",
-      "label_en": "Wars",
-      "order": 4
-    },
-    {
-      "id": "topics",
-      "label": "主題",
-      "label_en": "Topics",
-      "order": 5
-    },
-    {
-      "id": "events",
-      "label": "重大事件",
-      "label_en": "Major Events",
-      "order": 6
-    },
-    {
-      "id": "empires",
-      "label": "王朝與帝國",
-      "label_en": "Dynasties & Empires",
-      "order": 7
-    },
-    {
-      "id": "biographies",
-      "label": "人物傳記",
-      "label_en": "Biographies",
-      "order": 8
     }
   ],
   "events": [
@@ -19171,7 +17966,7 @@
       "category": "politics",
       "desc_zh": "2 月雅爾達決定戰後歐洲勢力範圍與蘇聯出兵對日；7 月波茨坦會議對日發布最後通牒並劃定德國占領區，冷戰雛形從此浮現。",
       "desc_en": "In February, Yalta divided postwar Europe and secured Soviet entry against Japan; in July, Potsdam issued the ultimatum to Japan and set up occupation zones — the Cold War's early contours.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg/1280px-Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg",
       "crossRef": [
         "usa",
         "uk",
@@ -19190,7 +17985,7 @@
       "category": "politics",
       "desc_zh": "10 月 24 日《聯合國憲章》生效，取代失敗的國際聯盟，設安全理事會五常任理事國，為戰後國際秩序定基。",
       "desc_en": "On October 24, the UN Charter came into force, replacing the failed League of Nations and establishing the Security Council's five permanent members — the foundation of the postwar order.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/1280px-UN_emblem_blue.svg.png",
       "crossRef": [
         "cross"
       ],
@@ -19207,7 +18002,7 @@
       "category": "politics",
       "desc_zh": "1945-1946 年起盟軍分別在紐倫堡與東京審判納粹德國與日本的戰犯，首次確立「反人類罪」與「侵略罪」國際法概念。",
       "desc_en": "Starting 1945–1946, the Allies tried Nazi German and Japanese war criminals in Nuremberg and Tokyo, establishing crimes against humanity and aggression as international law.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Color_photograph_of_judges%27_bench_at_IMT.jpg/1280px-Color_photograph_of_judges%27_bench_at_IMT.jpg",
       "crossRef": [
         "cross",
         "germany",
@@ -19226,7 +18021,7 @@
       "category": "war",
       "desc_zh": "墨索里尼為建構「新羅馬帝國」入侵衣索比亞，動用毒氣；國聯制裁失敗，標誌集體安全體系崩潰，加速二戰醞釀。",
       "desc_en": "Mussolini invaded Ethiopia to revive a 'New Roman Empire,' using chemical weapons. The League of Nations' failed sanctions marked the collapse of collective security and hastened WWII.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ethiopia_Map_1934_it.svg/1280px-Ethiopia_Map_1934_it.svg.png",
       "crossRef": [
         "africa",
         "ww2-europe"
@@ -19244,7 +18039,7 @@
       "category": "war",
       "desc_zh": "6 月法國敗局已定時，墨索里尼對英法宣戰，義大利攻擊法國南部與北非、巴爾幹，地中海與北非成為英義長期交戰前線。",
       "desc_en": "In June, as France was collapsing, Mussolini declared war on Britain and France. Italy attacked southern France, North Africa, and the Balkans, turning the Mediterranean into a long British–Italian front.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/Bundesarchiv_Bild_101I-316-1181-11%2C_Italien%2C_Benito_Mussolini_mit_italienischen_Soldaten.jpg",
       "crossRef": [
         "italy",
         "france",
@@ -19282,7 +18077,7 @@
       "category": "war",
       "desc_zh": "10-11 月蒙哥馬利率英軍第八軍團擊敗隆美爾的德義非洲軍團，守住埃及與蘇伊士運河。邱吉爾稱「敗仗之前我們從未戰勝，此後也從未戰敗」。",
       "desc_en": "In October–November, Montgomery's Eighth Army defeated Rommel's German–Italian Afrika Korps, saving Egypt and the Suez. Churchill said: 'Before Alamein we never had a victory. After Alamein we never had a defeat.'",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/El_Alamein_1942_-_British_infantry.jpg/960px-El_Alamein_1942_-_British_infantry.jpg",
       "crossRef": [
         "uk",
         "italy"
@@ -19300,7 +18095,7 @@
       "category": "war",
       "desc_zh": "11 月美英聯合於摩洛哥、阿爾及利亞登陸，艾森豪首次擔任大型登陸作戰總指揮。與阿拉曼前後夾擊，半年後北非軸心軍投降。",
       "desc_en": "In November, U.S. and British forces jointly landed in Morocco and Algeria, Eisenhower's first major amphibious command. Combined with El Alamein, Axis forces in North Africa surrendered within six months.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Operation_Torch_-_map.jpg",
       "crossRef": [
         "usa",
         "uk",
@@ -19320,7 +18115,7 @@
       "category": "politics",
       "desc_zh": "7 月盟軍登陸西西里，義大利法西斯大議會罷黜墨索里尼。9 月新政府對盟軍投降，德軍隨即占領北義並救出墨索里尼扶植薩羅共和國。",
       "desc_en": "In July, Allied forces landed in Sicily and the Fascist Grand Council deposed Mussolini. In September, the new government surrendered; Germany occupied northern Italy and installed a rump Salò Republic.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/General_Castellano_signs_the_armistice_on_behalf_of_Badoglio.jpg/960px-General_Castellano_signs_the_armistice_on_behalf_of_Badoglio.jpg",
       "crossRef": [
         "germany",
         "ww2-europe"
@@ -19356,7 +18151,7 @@
       "category": "war",
       "desc_zh": "6 月起德國以 V-1 巡弋飛彈、9 月起以 V-2 彈道飛彈攻擊倫敦，是史上首度使用巡弋與彈道飛彈的戰爭，也奠定戰後火箭與太空科技基礎。",
       "desc_en": "From June Germany launched V-1 cruise missiles and from September V-2 ballistic missiles at London — the first combat use of cruise and ballistic missiles, laying the groundwork for postwar rocketry and spaceflight.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/V-1_cutaway.jpg",
       "crossRef": [
         "germany",
         "science"
@@ -19374,7 +18169,7 @@
       "category": "war",
       "desc_zh": "與珍珠港同日展開。日軍山下奉文 70 天內推進 1,100 公里，以少勝多擊敗英軍，威脅東南亞殖民體系。",
       "desc_en": "Launched the same day as Pearl Harbor. In 70 days, General Yamashita advanced 1,100 km, defeating larger British forces and shaking the Southeast Asian colonial order.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Pacific_War_-_Malaya_1941-42_-_Map.jpg",
       "crossRef": [
         "uk",
         "southeast-asia"
@@ -19392,7 +18187,7 @@
       "category": "war",
       "desc_zh": "4 月美菲聯軍在巴丹半島投降，日軍強迫 7.6 萬戰俘徒步百公里，沿途虐殺近 2 萬人；麥克阿瑟留下「I shall return」名言撤往澳洲。",
       "desc_en": "In April, U.S.–Filipino forces surrendered at Bataan. Japan forced 76,000 POWs to march ~100 km, killing nearly 20,000 along the way. MacArthur famously pledged 'I shall return' on his withdrawal to Australia.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Photograph_of_American_Prisoners_Using_Improvised_Litters_to_Carry_Comrades%2C_05-1942_-_NARA_-_535564.jpg/1280px-Photograph_of_American_Prisoners_Using_Improvised_Litters_to_Carry_Comrades%2C_05-1942_-_NARA_-_535564.jpg",
       "crossRef": [
         "usa",
         "southeast-asia"
@@ -19410,7 +18205,7 @@
       "category": "war",
       "desc_zh": "4 月 18 日美軍 16 架 B-25 自大黃蜂號航母起飛，首次轟炸東京等日本本土都市，實質損害有限但重挫日本民心，並促成日方冒險進攻中途島。",
       "desc_en": "On April 18, 16 U.S. B-25s launched from USS Hornet — the first bombing of the Japanese home islands. Material damage was light but morale impact was large, and it drove Japan to the Midway gamble.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Army_B-25_%28Doolittle_Raid%29.jpg/1280px-Army_B-25_%28Doolittle_Raid%29.jpg",
       "crossRef": [
         "usa",
         "japan"
@@ -19428,7 +18223,7 @@
       "category": "war",
       "desc_zh": "1942-1945 年橫跨三年半的熱帶叢林戰。日軍切斷滇緬公路後，英軍、中國遠征軍（史迪威、孫立人）及印度軍聯合反攻，1945 年光復仰光。",
       "desc_en": "A 3.5-year jungle war (1942–1945). After Japan severed the Burma Road, British forces, the Chinese Expeditionary Force (Stilwell, Sun Li-jen), and Indian troops jointly counterattacked, liberating Rangoon in 1945.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Arakan_Campaign_Indian_Division_at_observation.jpg/1920px-Arakan_Campaign_Indian_Division_at_observation.jpg",
       "crossRef": [
         "uk",
         "india",
@@ -19447,7 +18242,7 @@
       "category": "war",
       "desc_zh": "6-7 月美軍攻下塞班島，突破日本「絕對國防圈」，從此 B-29 可直達東京。東條英機內閣因此下台。",
       "desc_en": "From June–July, U.S. forces captured Saipan, breaching Japan's 'absolute defensive line.' B-29s could now reach Tokyo directly. The Tōjō cabinet fell as a result.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Marines_and_King_Kong_on_Saipan.jpg",
       "crossRef": [
         "usa",
         "japan"
@@ -19465,7 +18260,7 @@
       "category": "war",
       "desc_zh": "6 月 19-20 日，美軍一日擊落 400 餘架日機、擊沉 3 艘航母，美方飛行員戲稱「馬里亞納火雞大獵殺」。日本海軍航空兵自此徹底瓦解。",
       "desc_en": "On June 19–20, U.S. forces shot down over 400 Japanese aircraft and sank 3 carriers in a day — U.S. pilots dubbed it 'the Great Marianas Turkey Shoot.' Japan's naval aviation was annihilated.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Japanese_aircraft_carrier_Zuikaku_and_two_destroyers_under_attack_on_20_June_1944_%2880-G-238025%29.jpg/1280px-Japanese_aircraft_carrier_Zuikaku_and_two_destroyers_under_attack_on_20_June_1944_%2880-G-238025%29.jpg",
       "crossRef": [
         "usa"
       ],
@@ -19482,7 +18277,7 @@
       "category": "war",
       "desc_zh": "3 月 10 日美軍 B-29 以低空燃燒彈攻擊東京，木造民居大片燒毀，單日死亡逾 10 萬人，為二戰最致命的單日常規轟炸。",
       "desc_en": "On March 10, U.S. B-29s dropped incendiary bombs on Tokyo at low altitude, burning wooden districts to the ground and killing over 100,000 in a single day — the deadliest conventional air raid of WWII.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Firebombing_of_Tokyo.jpg/1280px-Firebombing_of_Tokyo.jpg",
       "crossRef": [
         "usa",
         "japan"
@@ -19500,7 +18295,7 @@
       "category": "war",
       "desc_zh": "8 月 9 日蘇軍依雅爾達密約對日宣戰，150 萬大軍橫掃滿洲，11 天內擊潰關東軍，與原子彈雙重衝擊促成日本決定投降。",
       "desc_en": "On August 9, the USSR declared war per the Yalta accords. 1.5 million Soviet troops overran Manchuria and crushed the Kwantung Army in 11 days. Combined with the atomic bombs, this drove Japan's decision to surrender.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Manchuria_Operation_map-en.svg/1280px-Manchuria_Operation_map-en.svg.png",
       "crossRef": [
         "japan",
         "china-war"
@@ -19518,7 +18313,7 @@
       "category": "politics",
       "desc_zh": "10 月希特勒宣布德國退出國際聯盟與裁軍會議，擺脫凡爾賽條約束縛，是納粹德國重整軍備的先聲。",
       "desc_en": "In October, Hitler withdrew Germany from the League of Nations and the Disarmament Conference, escaping the Versailles framework — the opening move toward Nazi rearmament.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Traktat_brzeski_1918.jpg/1280px-Traktat_brzeski_1918.jpg",
       "crossRef": [
         "germany"
       ],
@@ -19535,7 +18330,7 @@
       "category": "politics",
       "desc_zh": "3 月希特勒公開毀棄凡爾賽條約軍事條款、恢復徵兵並成立空軍，英法抗議但未實質制裁，綏靖態勢確立。",
       "desc_en": "In March, Hitler openly repudiated the Versailles military clauses, reinstated conscription, and unveiled the Luftwaffe. Britain and France protested but took no action — appeasement took hold.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Bundesarchiv_Bild_101I-343-0694-21%2C_Belgien-Frankreich%2C_Flugzeug_Heinkel_He_111.jpg",
       "crossRef": [
         "germany"
       ],
@@ -19552,7 +18347,7 @@
       "category": "politics",
       "desc_zh": "3 月德軍進駐非軍事區萊茵蘭，直接違反凡爾賽與羅加諾條約。法國未反應、英國綏靖，希特勒擴張信心大增。",
       "desc_en": "In March, German troops entered the demilitarized Rhineland, directly violating Versailles and Locarno. France did not respond and Britain appeased — boosting Hitler's confidence in further expansion.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Rhineland.jpg",
       "crossRef": [
         "germany",
         "france"
@@ -19570,7 +18365,7 @@
       "category": "war",
       "desc_zh": "1936-1939 年西班牙內戰中，德義派兵助佛朗哥（禿鷹軍團、格爾尼卡轟炸），蘇聯援共和軍，成為二戰前的實戰演習場。",
       "desc_en": "During the 1936–1939 Spanish Civil War, Germany and Italy backed Franco (Condor Legion, Guernica bombing), while the USSR supported the Republicans — a rehearsal for WWII.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/General_map_of_the_Spanish_Civil_War_%281936%E2%80%9339%29.svg/1280px-General_map_of_the_Spanish_Civil_War_%281936%E2%80%9339%29.svg.png",
       "crossRef": [
         "germany",
         "italy"
@@ -19588,7 +18383,7 @@
       "category": "politics",
       "desc_zh": "3 月德軍進入奧地利，奧國被納入大德意志帝國，公投以 99% 支持合法化。英法再次未抵抗，希特勒擴張如入無人之境。",
       "desc_en": "In March, German troops entered Austria and it was absorbed into the Greater German Reich, legitimized by a 99% plebiscite. Britain and France again stood aside as Hitler expanded unopposed.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/State_of_Austria_within_Germany_1938.png",
       "crossRef": [
         "germany"
       ],
@@ -19605,7 +18400,7 @@
       "category": "politics",
       "desc_zh": "3 月德軍進入布拉格，併吞整個捷克，徹底撕毀慕尼黑協定。英法終於意識綏靖失敗，開始對波蘭等提供軍事保證。",
       "desc_en": "In March, German troops entered Prague and annexed the rest of Czechoslovakia, shredding the Munich Agreement. Britain and France finally recognized the failure of appeasement and issued guarantees to Poland.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Bundesarchiv_Bild_183-2004-1202-505%2C_Prag%2C_Burg%2C_Besuch_Adolf_Hitler.jpg",
       "crossRef": [
         "germany"
       ],
@@ -19622,7 +18417,7 @@
       "category": "war",
       "desc_zh": "4 月墨索里尼出兵一週內占領阿爾巴尼亞，建立傀儡王國並納入義大利帝國版圖，為南歐擴張的前站。",
       "desc_en": "In April, Mussolini invaded and occupied Albania within a week, installing a puppet kingdom and absorbing it into the Italian Empire — a staging ground for southern European expansion.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Albanian_Kingdom_%281939%29.svg/1280px-Albanian_Kingdom_%281939%29.svg.png",
       "crossRef": [
         "italy"
       ],
@@ -19639,7 +18434,7 @@
       "category": "politics",
       "desc_zh": "8 月 23 日德蘇簽約含密約劃分東歐勢力範圍，使希特勒解除雙線作戰顧慮，9 天後入侵波蘭。後來被巴巴羅薩撕毀。",
       "desc_en": "Signed August 23, the Nazi–Soviet pact included a secret protocol partitioning Eastern Europe, freeing Hitler from two-front worries. Nine days later, Germany invaded Poland. The pact was later broken by Barbarossa.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Bundesarchiv_Bild_183-H27337%2C_Moskau%2C_Stalin_und_Ribbentrop_im_Kreml.jpg/960px-Bundesarchiv_Bild_183-H27337%2C_Moskau%2C_Stalin_und_Ribbentrop_im_Kreml.jpg",
       "crossRef": [
         "germany",
         "russia"
@@ -19657,7 +18452,7 @@
       "category": "war",
       "desc_zh": "1939-1945 年貫穿全戰爭最長戰役。德軍 U 艇群狼戰術攻擊盟軍運補船團，1943 年盟軍憑密碼破譯（Ultra）與護航航母逆轉。",
       "desc_en": "The longest campaign of the war (1939–1945). German U-boats hunted Allied convoys in 'wolfpack' tactics until 1943, when Ultra code-breaking and escort carriers turned the tide.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Graf_Spee_scuttled.png",
       "crossRef": [
         "uk",
         "germany"
@@ -19675,7 +18470,7 @@
       "category": "war",
       "desc_zh": "8 月波蘭地下國民軍趁蘇軍逼近華沙時起義反德，蘇軍在河對岸按兵不動。63 天激戰後起義失敗，華沙遭德軍夷平。",
       "desc_en": "In August, the Polish Home Army rose against Germans as Soviet forces approached Warsaw. The Red Army halted across the Vistula. After 63 days of fighting, the uprising was crushed and Warsaw was razed.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Warsaw_Uprising.png",
       "crossRef": [
         "russia",
         "germany"
@@ -19693,7 +18488,7 @@
       "category": "war",
       "desc_zh": "9 月 18 日日本關東軍自導自演柳條湖鐵路爆炸，藉機侵占中國東北三省。國聯派李頓調查團譴責日本，日本因此退出國聯。",
       "desc_en": "On September 18, the Japanese Kwantung Army staged the Liutiaohu railway bombing as a pretext to invade Manchuria. The Lytton Commission condemned Japan, leading it to quit the League of Nations.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Mukden_1931_japan_shenyang.jpg",
       "crossRef": [
         "china-war",
         "japan"
@@ -19711,7 +18506,7 @@
       "category": "politics",
       "desc_zh": "3 月日本扶植清朝末代皇帝溥儀在長春建立傀儡國「滿洲國」，掌控中國東北資源與工業，為侵華跳板。",
       "desc_en": "In March, Japan installed the last Qing emperor Puyi as head of the puppet state Manchukuo in Changchun, controlling northeast China's resources and industry — a springboard for further invasion.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Museum_imperial_palace_manchu_state_throne_room_2011_07_26.jpg/1920px-Museum_imperial_palace_manchu_state_throne_room_2011_07_26.jpg",
       "crossRef": [
         "china-war",
         "japan"
@@ -19729,7 +18524,7 @@
       "category": "war",
       "desc_zh": "1938 年 6-10 月中日軍隊在武漢周邊激戰，日軍以重大代價攻占武漢。國民政府西遷重慶抗戰，抗戰進入相持階段。",
       "desc_en": "From June to October 1938, Chinese and Japanese forces fought around Wuhan. Japan took the city at heavy cost; the Nationalist government relocated to Chongqing, and the war entered a stalemate phase.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Japan_Capture_of_Wuhan.jpg",
       "crossRef": [
         "china-war",
         "japan"
@@ -19747,7 +18542,7 @@
       "category": "politics",
       "desc_zh": "9 月 27 日德義日三國在柏林簽訂同盟條約，正式結為軸心國。同年日軍進駐法屬印度支那北部，美國對日禁運加碼。",
       "desc_en": "On September 27, Germany, Italy, and Japan signed the Tripartite Pact in Berlin, formally forming the Axis. That year Japan occupied northern French Indochina, prompting tighter U.S. embargoes.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Signing_ceremony_for_the_Axis_Powers_Tripartite_Pact.jpg",
       "crossRef": [
         "germany",
         "italy",
@@ -19766,7 +18561,7 @@
       "category": "war",
       "desc_zh": "10 月起美軍轟炸日本殖民下台灣，摧毀高雄、新竹、台北等軍事與民生設施。1945 年 5 月 31 日台北大空襲造成三千餘人死亡。",
       "desc_en": "From October, U.S. forces bombed Japanese-colonized Taiwan, destroying military and civilian facilities in Kaohsiung, Hsinchu, and Taipei. The Taipei raid of May 31, 1945 killed over 3,000.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/USS_Lexington_%28CV-16%29_launching_a_Grumman_F6F_Hellcat%2C_circa_12_October_1944_%2880-G-285037%29.jpg",
       "crossRef": [
         "taiwan",
         "usa"
@@ -19784,7 +18579,7 @@
       "category": "war",
       "desc_zh": "4 月 18 日美軍破譯密碼後派 P-38 在布干維爾島上空擊落山本五十六座機，襲擊珍珠港的策劃者身亡，重挫日本海軍士氣。",
       "desc_en": "On April 18, U.S. P-38s, guided by broken Japanese codes, shot down Admiral Yamamoto's plane over Bougainville. The architect of the Pearl Harbor attack was dead, crushing Japanese navy morale.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Yamamoto_last_image_alive.jpg",
       "crossRef": [
         "japan",
         "usa"
@@ -19802,7 +18597,7 @@
       "category": "war",
       "desc_zh": "11 月 20-23 日美軍攻擊吉爾伯特群島塔拉瓦環礁，為中太平洋跳島戰術的首役。76 小時血戰中美軍傷亡慘重，促成兩棲作戰改革。",
       "desc_en": "On November 20–23, U.S. forces assaulted Tarawa Atoll in the Gilberts — the opening battle of the central Pacific island-hopping campaign. The costly 76-hour fight reshaped amphibious doctrine.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marines_Advance_on_Japanese_Pill_Boxes%2C_Tarawa%2C_November_1943_%2810962107133%29.jpg/1280px-Marines_Advance_on_Japanese_Pill_Boxes%2C_Tarawa%2C_November_1943_%2810962107133%29.jpg",
       "crossRef": [
         "usa",
         "japan"
@@ -19820,7 +18615,7 @@
       "category": "war",
       "desc_zh": "10-11 月英法比聯軍在比利時伊普爾阻止德軍「奔向大海」，西線運動戰結束，雙方挖掘塹壕對峙，奠定四年僵持格局。",
       "desc_en": "From October to November, British, French, and Belgian forces halted the German 'Race to the Sea' at Ypres. Mobile warfare ended and both sides dug in — setting the four-year stalemate of the Western Front.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/WWI_Trench_ending_in_Switerland_-_CH-BAR_-_3238320.jpg/1280px-WWI_Trench_ending_in_Switerland_-_CH-BAR_-_3238320.jpg",
       "crossRef": [
         "uk",
         "france"
@@ -19838,7 +18633,7 @@
       "category": "war",
       "desc_zh": "4 月 22 日德軍首次在西線大規模使用氯氣毒氣，造成協約國千人死亡，化學武器從此進入現代戰爭。",
       "desc_en": "On April 22, Germany launched the first large-scale chlorine gas attack on the Western Front, killing a thousand Allied soldiers and bringing chemical weapons into modern warfare.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/William_Roberts-The_First_German_Gas_Attack_at_Ypres.jpg",
       "crossRef": [
         "germany",
         "science"
@@ -19856,7 +18651,7 @@
       "category": "war",
       "desc_zh": "4 月法軍指揮官尼維勒的大攻勢慘敗，逾 40 個師發生譁變拒絕攻擊。貝當接任後改革軍心，但法軍自此只防禦不進攻。",
       "desc_en": "In April, French commander Nivelle's grand offensive failed disastrously; over 40 divisions mutinied, refusing to attack. Pétain restored morale but the French army stayed on the defensive thereafter.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Western_Front_1917.jpg",
       "crossRef": [
         "france"
       ],
@@ -19873,7 +18668,7 @@
       "category": "war",
       "desc_zh": "7-11 月英軍主導的攻勢，於比利時泥濘戰場血戰百日，雙方各損逾 20 萬人僅推進 8 公里。塹壕戰慘烈的象徵。",
       "desc_en": "From July to November, a British-led offensive ground through a Belgian quagmire for 100 days. Each side lost over 200,000 men for just 8 km of gain — the emblem of trench warfare's futility.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Chateauwood.jpg/1280px-Chateauwood.jpg",
       "crossRef": [
         "uk",
         "germany"
@@ -19891,7 +18686,7 @@
       "category": "war",
       "desc_zh": "8 月 8 日盟軍自亞眠發起連續攻勢（魯登道夫稱「德軍最黑暗的日子」），一百日內擊潰興登堡防線，德國求和。",
       "desc_en": "Beginning August 8 at Amiens (Ludendorff's 'black day of the German army'), Allied forces broke the Hindenburg Line in 100 days, forcing Germany to seek peace.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/AWM_AWM_E03183_peronne.jpg",
       "crossRef": [
         "uk",
         "france",
@@ -19910,7 +18705,7 @@
       "category": "war",
       "desc_zh": "5 月德奧聯軍在波蘭南部突破俄軍防線，迫使俄軍「大撤退」退出波蘭、立陶宛、加利西亞，損兵百萬，削弱俄帝國。",
       "desc_en": "In May, German–Austrian forces shattered Russian lines in southern Poland, triggering the 'Great Retreat' out of Poland, Lithuania, and Galicia. Russia lost a million men, weakening the empire.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/EasternFront1915b-es.svg/1280px-EasternFront1915b-es.svg.png",
       "crossRef": [
         "russia",
         "germany"
@@ -19928,7 +18723,7 @@
       "category": "war",
       "desc_zh": "6-9 月俄軍將領布魯西洛夫以新式滲透戰術痛擊奧匈，是俄軍最大勝利、也是奧匈軍的致命一擊。但傷亡慘重，間接加速俄國革命。",
       "desc_en": "From June to September, Russian general Brusilov's novel infiltration tactics devastated Austria-Hungary. Russia's greatest victory was also a fatal blow to the Habsburgs — though the heavy cost helped accelerate the Revolution.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%D0%92_%D0%B0%D1%82%D0%B0%D0%BA%D1%83%21_%281916%29.jpg",
       "crossRef": [
         "russia"
       ],
@@ -19945,7 +18740,7 @@
       "category": "politics",
       "desc_zh": "鄂圖曼政府以安全為由大規模驅逐屠殺境內亞美尼亞人，1915-1923 年估計有 100-150 萬人死亡。是 20 世紀首場大規模系統性屠殺。",
       "desc_en": "The Ottoman government carried out mass deportations and massacres of its Armenian population on security pretexts. An estimated 1–1.5 million died (1915–1923) — the 20th century's first large-scale systematic genocide.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Russian_soldiers_Sheykhalan_1915.jpg",
       "crossRef": [
         "turkey"
       ],
@@ -19962,7 +18757,7 @@
       "category": "war",
       "desc_zh": "6 月麥加謝里夫海珊在英國支持下起兵反抗鄂圖曼，英軍聯絡官 T.E. 勞倫斯率阿拉伯部族游擊，1918 年助攻入大馬士革。",
       "desc_en": "In June, Sharif Hussein of Mecca rose against the Ottomans with British backing. British liaison T.E. Lawrence led Arab irregulars in guerrilla warfare, culminating in the capture of Damascus in 1918.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lcamel.jpg/960px-Lcamel.jpg",
       "crossRef": [
         "uk",
         "turkey"
@@ -19980,7 +18775,7 @@
       "category": "war",
       "desc_zh": "3 月英印軍攻下巴格達，雪恥前年庫特圍城慘敗。英國控制美索不達米亞為戰後託管伊拉克鋪路。",
       "desc_en": "In March, Anglo-Indian forces captured Baghdad, avenging the disastrous siege of Kut the previous year. British control of Mesopotamia set the stage for the postwar Mandate of Iraq.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Maude_in_Baghdad.jpg/1280px-Maude_in_Baghdad.jpg",
       "crossRef": [
         "uk",
         "turkey"
@@ -19998,7 +18793,7 @@
       "category": "war",
       "desc_zh": "10 月英軍與阿拉伯軍攻入阿勒頗，鄂圖曼在中東全線崩潰，三週後簽訂穆德洛斯停戰協定。",
       "desc_en": "In October, British and Arab forces captured Aleppo. The Ottoman position in the Middle East collapsed, and three weeks later the Armistice of Mudros was signed.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/AWMA01773Aleppo.jpg",
       "crossRef": [
         "uk",
         "turkey"
@@ -20016,7 +18811,7 @@
       "category": "politics",
       "desc_zh": "6 月 28 日奧匈皇儲斐迪南大公夫婦在塞拉耶佛遭塞爾維亞青年普林西普刺殺，觸發「七月危機」和第一次世界大戰。",
       "desc_en": "On June 28, Archduke Franz Ferdinand of Austria-Hungary and his wife were assassinated in Sarajevo by Serbian nationalist Princip — triggering the July Crisis and World War I.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/DC-1914-27-d-Sarajevo-cropped.jpg/960px-DC-1914-27-d-Sarajevo-cropped.jpg",
       "crossRef": [
         "europe"
       ],
@@ -20033,7 +18828,7 @@
       "category": "politics",
       "desc_zh": "7-8 月奧匈向塞爾維亞下最後通牒後各國連鎖動員：俄總動員、德宣戰俄法、英國因比利時中立受侵參戰，歐洲陷入世界大戰。",
       "desc_en": "After Austria-Hungary's ultimatum to Serbia in July–August, chain mobilizations followed: Russia mobilized, Germany declared war on Russia and France, Britain joined after Belgium's neutrality was violated. Europe slid into world war.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/WWIchartX.svg/1280px-WWIchartX.svg.png",
       "crossRef": [
         "europe",
         "germany"
@@ -20051,7 +18846,7 @@
       "category": "war",
       "desc_zh": "5 月 7 日英國客輪盧西塔尼亞號遭德國 U 艇擊沉，1,198 人罹難含 128 名美國人，衝擊美國輿論、埋下日後參戰伏筆。",
       "desc_en": "On May 7, a German U-boat sank the British liner Lusitania. 1,198 died, including 128 Americans — shocking U.S. public opinion and sowing seeds for later intervention.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Bundesarchiv_DVM_10_Bild-23-61-17%2C_Untergang_der_%22Lusitania%22.jpg",
       "crossRef": [
         "uk",
         "usa",
@@ -20070,7 +18865,7 @@
       "category": "war",
       "desc_zh": "5 月 31 日-6 月 1 日英德主力艦隊在北海日德蘭海域決戰，雙方均聲稱勝利。此後德國公海艦隊蝸居港內，轉而仰賴 U 艇破交戰。",
       "desc_en": "On May 31–June 1, the British and German main fleets clashed in the North Sea off Jutland. Both claimed victory; afterward the German High Seas Fleet stayed in port, and Germany pivoted to unrestricted U-boat warfare.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Map_of_the_Battle_of_Jutland%2C_1916.svg/1280px-Map_of_the_Battle_of_Jutland%2C_1916.svg.png",
       "crossRef": [
         "uk",
         "germany"
@@ -20088,7 +18883,7 @@
       "category": "politics",
       "desc_zh": "1 月德國外長齊默曼發電報給墨西哥，提議若德美開戰則墨西哥攻美，事成後歸還德州等地。英國破譯後公開，激怒美國輿論。",
       "desc_en": "In January, German Foreign Minister Zimmermann cabled Mexico proposing an alliance — if Germany and the U.S. went to war, Mexico would attack and reclaim Texas et al. British decryption and publication enraged American opinion.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Zimmermann_Telegram_as_Received_by_the_German_Ambassador_to_Mexico_-_NARA_-_302025.jpg/960px-Zimmermann_Telegram_as_Received_by_the_German_Ambassador_to_Mexico_-_NARA_-_302025.jpg",
       "crossRef": [
         "usa",
         "germany"
@@ -20106,7 +18901,7 @@
       "category": "politics",
       "desc_zh": "6 月希臘在維尼澤洛斯主導下對同盟國宣戰，加入巴爾幹戰線，1918 年馬其頓戰線助擊敗保加利亞。",
       "desc_en": "In June, under Venizelos, Greece declared war on the Central Powers and joined the Balkan Front. In 1918, Greek forces helped defeat Bulgaria on the Macedonian Front.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Serbia-WW1-4.jpg",
       "crossRef": [
         "greece"
       ],
@@ -20123,7 +18918,7 @@
       "category": "politics",
       "desc_zh": "1 月 8 日美國總統威爾遜在國會演說提出十四點和平原則，含民族自決、開放外交、國際組織等，奠定戰後秩序理想。",
       "desc_en": "On January 8, President Wilson outlined Fourteen Points in Congress, including self-determination, open diplomacy, and an international organization — the ideological blueprint for the postwar order.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Bushnell_cartoon_about_Kaiser_Wilhelm_considering_Wilson%27s_14-point_plan.jpg",
       "crossRef": [
         "usa"
       ],
@@ -20140,7 +18935,7 @@
       "category": "politics",
       "desc_zh": "11 月 11 日上午 11 時，德國代表在法國康邊森林一節火車車廂內簽署停戰協定，第一次世界大戰結束。",
       "desc_en": "At 11 a.m. on November 11, German representatives signed the Armistice in a railway carriage at Compiègne Forest, ending World War I.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Armisticetrain_%28slight_crop%29.jpg",
       "crossRef": [
         "france",
         "germany"
@@ -20158,7 +18953,7 @@
       "category": "politics",
       "desc_zh": "1919 年 1 月 32 國代表齊聚巴黎召開和會，由美英法義「四巨頭」主導。歷時半年產出凡爾賽條約及一系列對德奧保土和約。",
       "desc_en": "In January 1919, representatives of 32 countries gathered in Paris for the peace conference, led by the Big Four (US, UK, France, Italy). Six months of negotiations produced the Treaty of Versailles and other settlements.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/William_Orpen_%E2%80%93_The_Signing_of_Peace_in_the_Hall_of_Mirrors%2C_Versailles_1919%2C_Ausschnitt.jpg/1920px-William_Orpen_%E2%80%93_The_Signing_of_Peace_in_the_Hall_of_Mirrors%2C_Versailles_1919%2C_Ausschnitt.jpg",
       "crossRef": [
         "france",
         "usa",
@@ -20177,7 +18972,7 @@
       "category": "politics",
       "desc_zh": "10-11 月奧匈各民族紛紛宣布獨立：捷克斯洛伐克、南斯拉夫、匈牙利、奧地利。延續 400 年的哈布斯堡帝國瓦解。",
       "desc_en": "In October–November, the nationalities of Austria-Hungary declared independence: Czechoslovakia, Yugoslavia, Hungary, Austria. The 400-year Habsburg Empire dissolved.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Austria-Hungary_map_new.svg/1280px-Austria-Hungary_map_new.svg.png",
       "crossRef": [
         "italy",
         "germany"
@@ -20195,7 +18990,7 @@
       "category": "war",
       "desc_zh": "9 月 6-12 日法軍與英軍在巴黎近郊的馬恩河反擊德軍，阻止施里芬計畫實現。巴黎計程車載兵支援戰線成為傳奇，塹壕戰從此定型。",
       "desc_en": "On September 6–12, French and British forces counterattacked the Germans on the Marne near Paris, halting the Schlieffen Plan. Paris taxis ferrying troops to the front became legend; trench warfare took hold.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/German_soldiers_Battle_of_Marne_WWI.jpg",
       "crossRef": [
         "germany",
         "ww1-western"
@@ -20213,7 +19008,7 @@
       "category": "war",
       "desc_zh": "2-12 月德軍攻擊凡爾登要塞欲「放血法國」，法軍以「他們不會通過」（Ils ne passeront pas）口號死守十個月。雙方傷亡共 70 萬人，是法國國族記憶頂峰。",
       "desc_en": "From February to December, German forces attacked Verdun to 'bleed France white.' The French held on for ten months under the rallying cry 'Ils ne passeront pas.' Casualties totaled 700,000 — the apex of French national memory.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Battle_of_Verdun_map.png",
       "crossRef": [
         "germany",
         "ww1-western"
@@ -20231,7 +19026,7 @@
       "category": "war",
       "desc_zh": "8 月 1-4 日德國對俄法宣戰並入侵中立比利時，執行施里芬計畫意圖速戰速決擊敗法國。英國因比利時中立受侵參戰。",
       "desc_en": "On August 1–4, Germany declared war on Russia and France and invaded neutral Belgium to execute the Schlieffen Plan. Britain entered the war over Belgium's violated neutrality.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Alfred_von_Schlieffen_1906.jpg/960px-Alfred_von_Schlieffen_1906.jpg",
       "crossRef": [
         "france",
         "ww1-home"
@@ -20249,7 +19044,7 @@
       "category": "war",
       "desc_zh": "3-7 月德軍從東線抽調兵力發動最後賭博，突擊法軍達百公里逼近巴黎。盟軍力守、美軍投入後德軍耗竭，為百日攻勢反攻鋪路。",
       "desc_en": "From March to July, Germany gambled everything with troops transferred from the East, advancing 100 km toward Paris. Allied defense and fresh U.S. forces exhausted the Germans, paving the way for the Hundred Days Offensive.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Western_front_1918_german.jpg",
       "crossRef": [
         "france",
         "ww1-western"
@@ -20267,7 +19062,7 @@
       "category": "politics",
       "desc_zh": "11 月初基爾水兵拒絕出擊引爆全德革命，德皇威廉二世退位流亡荷蘭，德意志帝國終結，威瑪共和成立。",
       "desc_en": "In early November, the Kiel sailors' refusal to sortie sparked a nationwide revolution. Kaiser Wilhelm II abdicated and fled to the Netherlands; the German Empire fell and the Weimar Republic was born.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Proclamation_of_Weimar_Republic_by_Philipp_Scheidemann%2C_9_November_1918_%28cropped%29.jpg/1280px-Proclamation_of_Weimar_Republic_by_Philipp_Scheidemann%2C_9_November_1918_%28cropped%29.jpg",
       "crossRef": [
         "ww1-home"
       ],
@@ -20284,7 +19079,7 @@
       "category": "politics",
       "desc_zh": "6 月 28 日（薩拉熱窩事件 5 週年）簽訂，德國失 13% 領土與所有殖民地、軍力限縮至 10 萬、承擔 1320 億金馬克賠款。極端屈辱埋下納粹崛起遠因。",
       "desc_en": "Signed June 28 (five years after Sarajevo). Germany lost 13% of its territory and all colonies, its army was capped at 100,000, and it owed 132 billion gold marks in reparations. The humiliation laid seeds for Nazi rise.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Big_four.jpg/1280px-Big_four.jpg",
       "crossRef": [
         "france",
         "ww1-home"
@@ -20302,7 +19097,7 @@
       "category": "politics",
       "desc_zh": "4 月愛爾蘭共和派趁英軍主力在西線，於都柏林發動起義宣布獨立。英軍鎮壓並處決 15 名領導者，反激起愛爾蘭獨立運動。",
       "desc_en": "In April, Irish Republicans rose in Dublin to declare independence while British forces were on the Western Front. The British crushed the rising and executed 15 leaders, galvanizing the Irish independence movement.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/The_shell_of_the_G.P.O._on_Sackville_Street_after_the_Easter_Rising_%286937669789%29.jpg/1920px-The_shell_of_the_G.P.O._on_Sackville_Street_after_the_Easter_Rising_%286937669789%29.jpg",
       "crossRef": [
         "ww1-home"
       ],
@@ -20319,7 +19114,7 @@
       "category": "war",
       "desc_zh": "7-11 月英法聯軍進攻索姆河，開戰首日（7/1）英軍傷亡 5.7 萬人，是英軍史上最慘重單日損失。戰中首次使用坦克。",
       "desc_en": "From July to November, Anglo-French forces attacked along the Somme. On the first day (July 1), Britain suffered 57,000 casualties — the bloodiest single day in British military history. Tanks were used in combat for the first time.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Map_of_the_Battle_of_the_Somme%2C_1916.svg/1280px-Map_of_the_Battle_of_the_Somme%2C_1916.svg.png",
       "crossRef": [
         "france",
         "germany"
@@ -20337,7 +19132,7 @@
       "category": "war",
       "desc_zh": "（補 uk 主軸視角）5 月 31 日-6 月 1 日英國大艦隊與德國公海艦隊於日德蘭外海主力對決，英艦損失較多但戰略勝利：德艦自此困守港內。",
       "desc_en": "(UK perspective) On May 31 – June 1, the Grand Fleet met the High Seas Fleet off Jutland. Though losing more ships, Britain won strategically — the German fleet stayed bottled up in port for the rest of the war.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Map_of_the_Battle_of_Jutland%2C_1916.svg/1280px-Map_of_the_Battle_of_Jutland%2C_1916.svg.png",
       "crossRef": [
         "germany",
         "ww1-home"
@@ -20355,7 +19150,7 @@
       "category": "war",
       "desc_zh": "8 月興登堡與魯登道夫在東普魯士包圍俄第二軍團，俘虜 9 萬俄軍，薩姆索諾夫將軍自殺。俄軍入侵德國失敗，德國東線神話開始。",
       "desc_en": "In August, Hindenburg and Ludendorff encircled the Russian Second Army in East Prussia, capturing 90,000 and driving General Samsonov to suicide. The Russian invasion of Germany failed and the Eastern Front legend of the German army began.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Bundesarchiv_Bild_183-R36715%2C_Ostpreu%C3%9Fen%2C_deutsche_Infanterie_auf_dem_Marsch.jpg",
       "crossRef": [
         "germany",
         "ww1-eastern"
@@ -20373,7 +19168,7 @@
       "category": "politics",
       "desc_zh": "11 月（舊曆 10 月）列寧領導布爾什維克推翻臨時政府，建立世界首個社會主義政權。俄國退出 WW1，開啟 20 世紀共產主義實驗。",
       "desc_en": "In November (October O.S.), Lenin's Bolsheviks overthrew the Provisional Government and established the world's first socialist state. Russia withdrew from WWI, opening the 20th-century communist experiment.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/After_the_capture_of_the_Winter_Palace_26_October_1917.jpg",
       "crossRef": [
         "ww1-eastern",
         "ww1-home"
@@ -20391,7 +19186,7 @@
       "category": "politics",
       "desc_zh": "3 月 3 日蘇俄與德奧簽和約，割讓烏克蘭、波蘭、芬蘭、波羅的海三國等大片土地，退出 WW1。德軍因此抽兵西線發動春季攻勢。",
       "desc_en": "On March 3, Soviet Russia signed a peace with Germany and Austria-Hungary, ceding vast territory (Ukraine, Poland, Finland, the Baltics) to exit WWI. This freed German troops for the Spring Offensive in the West.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Bundesarchiv_Bild_183-R92623%2C_Brest-Litowsk%2C_Waffenstillstandsabkommen.jpg",
       "crossRef": [
         "germany",
         "ww1-eastern"
@@ -20409,7 +19204,7 @@
       "category": "politics",
       "desc_zh": "4 月義大利背棄三國同盟，與協約國簽訂倫敦條約，被承諾戰後獲得南蒂羅爾、的里雅斯特等土地。5 月 23 日對奧匈宣戰。",
       "desc_en": "In April, Italy abandoned the Triple Alliance and signed the Treaty of London with the Allies, promised South Tyrol, Trieste, and other territories. On May 23, Italy declared war on Austria-Hungary.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Territories_promised_to_Italy_in_the_treaty_of_London_%281915%29.png/1920px-Territories_promised_to_Italy_in_the_treaty_of_London_%281915%29.png",
       "crossRef": [
         "ww1-home"
       ],
@@ -20426,7 +19221,7 @@
       "category": "war",
       "desc_zh": "1915-1917 年義大利對奧匈在伊松佐河沿線發動 12 次大規模進攻，類似西線塹壕戰的山地版本。雙方損兵逾百萬僅小幅推進。",
       "desc_en": "From 1915 to 1917, Italy launched 12 major offensives against Austria-Hungary along the Isonzo River — a mountain version of Western Front trench warfare. Over a million casualties for marginal gains.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/K%C3%A4mpfe_auf_dem_Doberdo.JPG",
       "crossRef": [
         "ww1-western"
       ],
@@ -20443,7 +19238,7 @@
       "category": "war",
       "desc_zh": "10-11 月德奧軍隊以新式滲透戰術突破義軍防線，義軍大潰退 150 公里至皮亞韋河。損失 30 萬俘虜，海明威的《戰地春夢》以此為背景。",
       "desc_en": "In October–November, German–Austrian forces broke Italian lines using new infiltration tactics, driving them back 150 km to the Piave. 300,000 Italians were captured — the setting of Hemingway's 'A Farewell to Arms.'",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Plotone_d%27assalto_tedesco_con_MG0815.jpg",
       "crossRef": [
         "germany",
         "ww1-eastern"
@@ -20461,7 +19256,7 @@
       "category": "war",
       "desc_zh": "10 月 24 日-11 月 3 日義軍最後攻勢擊潰奧匈軍，11/3 簽訂威拉朱斯蒂停戰，奧匈帝國正式瓦解。為義大利雪卡波雷托之恥。",
       "desc_en": "From October 24 to November 3, Italy's final offensive routed the Austro-Hungarian army. The Armistice of Villa Giusti was signed on November 3, formally dissolving Austria-Hungary — avenging Caporetto.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Liberazione_di_Trieste.jpg",
       "crossRef": [
         "ww1-home"
       ],
@@ -20478,7 +19273,7 @@
       "category": "politics",
       "desc_zh": "10 月 30 日鄂圖曼帝國在愛琴海穆德洛斯港向英國簽署停戰協定，開放海峽、解除武裝，戰後被占領進而促成土耳其獨立戰爭。",
       "desc_en": "On October 30, the Ottoman Empire signed an armistice with Britain at Mudros (Aegean), opening the straits and disarming. Postwar occupation led to the Turkish War of Independence.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Aspiotis_Moudros_Fleet.jpg/1920px-Aspiotis_Moudros_Fleet.jpg",
       "crossRef": [
         "uk",
         "ww1-mideast"
@@ -20496,7 +19291,7 @@
       "category": "politics",
       "desc_zh": "8 月協約國與鄂圖曼簽約大幅肢解帝國：中東歸英法託管、愛琴海東岸歸希臘、建立亞美尼亞與庫德自治區。條約激起凱末爾領導的獨立戰爭，後被洛桑條約取代。",
       "desc_en": "In August, the Allies dismembered the Ottoman Empire: the Middle East became British/French mandates, eastern Aegean coast went to Greece, and autonomous Armenian and Kurdish zones were created. Atatürk's War of Independence rejected the treaty, later replaced by Lausanne.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Sevres_signing.jpg",
       "crossRef": [
         "ww1-mideast",
         "uk",
@@ -20515,7 +19310,7 @@
       "category": "war",
       "desc_zh": "4 月 6 日美國因德國無限制潛艇戰與 Zimmermann 密電對德宣戰，結束孤立主義。美軍遠征軍 1918 年投入西線是盟軍最終勝利關鍵。",
       "desc_en": "On April 6, the U.S. declared war on Germany over unrestricted submarine warfare and the Zimmermann Telegram, ending isolationism. American Expeditionary Forces on the Western Front in 1918 tipped the balance for Allied victory.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/President_Woodrow_Wilson_asking_Congress_to_declare_war_on_Germany%2C_2_April_1917.jpg/1280px-President_Woodrow_Wilson_asking_Congress_to_declare_war_on_Germany%2C_2_April_1917.jpg",
       "crossRef": [
         "ww1-home",
         "germany"
@@ -20533,7 +19328,7 @@
       "category": "war",
       "desc_zh": "9 月 26 日-11 月 11 日百日攻勢中美軍承擔的最大戰役，潘興率 120 萬美軍攻擊德軍右翼。美軍付出 2.6 萬陣亡，是美軍史上最血腥戰役之一。",
       "desc_en": "From September 26 to November 11, the largest U.S. battle of the Hundred Days Offensive. Pershing commanded 1.2 million Americans against the German right flank. U.S. deaths reached 26,000 — one of the bloodiest battles in American history.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/US23rdInfantry37mmGunInActionFrance1918-ARC531005.gif/1280px-US23rdInfantry37mmGunInActionFrance1918-ARC531005.gif",
       "crossRef": [
         "ww1-western",
         "france"
@@ -20551,7 +19346,7 @@
       "category": "politics",
       "desc_zh": "1 月 10 日國際聯盟成立，是世界首個常設國際組織，目標集體安全與和平解決爭端。因美國未加入、組織乏力，20 年後被 WW2 證明失敗。",
       "desc_en": "On January 10, the League of Nations was founded as the world's first permanent international organization, aimed at collective security and peaceful dispute resolution. Weakened by U.S. absence, its failure was confirmed by WWII 20 years later.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/League_of_Nations_Anachronous_Map.PNG",
       "crossRef": [
         "cross"
       ],
@@ -20568,7 +19363,7 @@
       "category": "war",
       "desc_zh": "1870-1871 年普魯士擊敗法國，俾斯麥在凡爾賽宮加冕統一德意志帝國。法國被迫割讓阿爾薩斯-洛林與賠款 50 億金法郎，結下 50 年仇恨，是 WW1 最深層遠因。",
       "desc_en": "In 1870–1871, Prussia crushed France. Bismarck was crowned at Versailles as German Empire was unified. France lost Alsace-Lorraine and paid 5 billion gold francs, nursing 50 years of revanchism — the deepest root of WWI.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ernst_Zimmer_-_Das_Lauenburgische_J%C3%A4ger-Bataillon_Nr._9_bei_Gravelotte.jpg/1920px-Ernst_Zimmer_-_Das_Lauenburgische_J%C3%A4ger-Bataillon_Nr._9_bei_Gravelotte.jpg",
       "crossRef": [
         "germany",
         "ww1-western"
@@ -20586,7 +19381,7 @@
       "category": "politics",
       "desc_zh": "5 月德、奧匈、義大利三國簽訂秘密同盟條約，互保安全、共抗法國與俄國。歐洲兩大陣營分裂的起點。",
       "desc_en": "In May, Germany, Austria-Hungary, and Italy signed a secret alliance for mutual defense against France and Russia — the starting point of Europe's two-bloc division.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Map_Europe_alliances_1914-en.svg/1280px-Map_Europe_alliances_1914-en.svg.png",
       "crossRef": [
         "germany",
         "italy",
@@ -20605,7 +19400,7 @@
       "category": "politics",
       "desc_zh": "1891-1894 年法俄陸續簽訂軍事協約，俾斯麥苦心孤立法國的體系崩潰。德國自此面臨東西雙線作戰威脅。",
       "desc_en": "From 1891–1894, France and Russia signed military accords, shattering Bismarck's careful isolation of France. Germany now faced the two-front threat.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Nicholas_II_and_%C3%89mile_Loubet_meeting_%281901%29.jpg",
       "crossRef": [
         "france",
         "russia",
@@ -20624,7 +19419,7 @@
       "category": "politics",
       "desc_zh": "鐵爾皮茲主導德國大造海軍挑戰英國海上霸權，1898 年首次艦隊法案通過。英德海軍競賽自此開始，改變兩國關係。",
       "desc_en": "Admiral Tirpitz drove Germany to build a navy rivalling Britain's. The 1898 Fleet Law began the Anglo-German naval race, transforming Anglo-German relations.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Bundesarchiv_Bild_146-2008-0152%2C_Familie_Kaiser_Wilhelm_II..jpg",
       "crossRef": [
         "uk",
         "science"
@@ -20642,7 +19437,7 @@
       "category": "politics",
       "desc_zh": "4 月英法簽訂協約，化解殖民地爭端（埃及／摩洛哥分贓），結束近千年敵對，開始走向同盟。德國的外交孤立加深。",
       "desc_en": "In April, Britain and France signed the Entente, resolving colonial disputes (Egypt vs. Morocco) and ending nearly a thousand years of rivalry — turning toward alliance. Germany's isolation deepened.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Scouts-entente-cordiale.jpg/960px-Scouts-entente-cordiale.jpg",
       "crossRef": [
         "uk",
         "france",
@@ -20661,7 +19456,7 @@
       "category": "politics",
       "desc_zh": "2 月英國下水 HMS Dreadnought，革命性全主砲與蒸汽渦輪艦，一艘就讓全球既有戰艦過時。英德海軍競賽升級為主力艦總動員。",
       "desc_en": "In February, Britain launched HMS Dreadnought — revolutionary all-big-gun and steam turbine design that rendered every existing battleship obsolete. The Anglo-German arms race escalated to a capital-ship sprint.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/HMS_Dreadnought_1906_H61017.jpg/1280px-HMS_Dreadnought_1906_H61017.jpg",
       "crossRef": [
         "germany",
         "science"
@@ -20679,7 +19474,7 @@
       "category": "politics",
       "desc_zh": "8 月英俄簽約化解中亞波斯、阿富汗、西藏爭端。與 1904 英法協約和 1894 法俄同盟結合，形成英法俄「三國協約」，完成對三國同盟的圍堵。",
       "desc_en": "In August, Britain and Russia resolved Central Asian disputes (Persia, Afghanistan, Tibet). Combined with the 1904 Entente Cordiale and 1894 Franco-Russian Alliance, the Triple Entente of Britain, France, and Russia completed the encirclement of the Triple Alliance.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Map_Iran_1900-en.png",
       "crossRef": [
         "uk",
         "russia",
@@ -20698,7 +19493,7 @@
       "category": "politics",
       "desc_zh": "10 月奧匈帝國單方面併吞鄂圖曼名義下的波士尼亞-赫塞哥維納，塞爾維亞憤怒、俄國受屈退讓。俄國誓言下次不再讓步，為 1914 危機定下反應。",
       "desc_en": "In October, Austria-Hungary unilaterally annexed Ottoman-held Bosnia-Herzegovina. Serbia was outraged, and Russia was forced to back down, vowing never again — setting its reaction to the 1914 crisis.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bosnie_et_Sandjak_1904_ES.svg/1280px-Bosnie_et_Sandjak_1904_ES.svg.png",
       "crossRef": [
         "turkey",
         "russia",
@@ -20717,7 +19512,7 @@
       "category": "politics",
       "desc_zh": "7 月德國派砲艦「豹號」到摩洛哥阿加迪爾港，挑戰法國殖民權。英國強硬支持法國迫德國退讓，強化英法協約並惡化英德關係。",
       "desc_en": "In July, Germany sent the gunboat Panther to the Moroccan port of Agadir, challenging French colonial claims. Britain's firm support of France forced Germany to back down, hardening the Entente and worsening Anglo-German relations.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/SMS_Panther.gif",
       "crossRef": [
         "germany",
         "france",
@@ -20736,7 +19531,7 @@
       "category": "war",
       "desc_zh": "1912-1913 年塞爾維亞、保加利亞、希臘、蒙特內哥羅組成巴爾幹同盟擊敗鄂圖曼，鄂圖曼幾乎失去全部歐洲領土。塞爾維亞擴大兩倍，奧匈憂心。",
       "desc_en": "In 1912–1913, Serbia, Bulgaria, Greece, and Montenegro formed the Balkan League and defeated the Ottomans, who lost nearly all European territory. Serbia doubled in size, alarming Austria-Hungary.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Balkanskata_voina_Photobox.jpg/1280px-Balkanskata_voina_Photobox.jpg",
       "crossRef": [
         "turkey",
         "ww1-mideast"
@@ -20754,7 +19549,7 @@
       "category": "war",
       "desc_zh": "6-8 月保加利亞不滿分贓攻擊塞爾維亞與希臘，鄂圖曼與羅馬尼亞也趁機攻保。保加利亞慘敗，巴爾幹地區矛盾全面激化，為塞拉耶佛事件鋪路。",
       "desc_en": "From June to August, dissatisfied with its share, Bulgaria attacked Serbia and Greece; the Ottomans and Romania also joined against Bulgaria. Bulgaria lost badly, and Balkan tensions fully boiled — setting the stage for Sarajevo.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Second_Balkan_War.png/1280px-Second_Balkan_War.png",
       "crossRef": [
         "turkey",
         "ww1-mideast"
@@ -20772,7 +19567,7 @@
       "category": "migration",
       "desc_zh": "約 6 萬年前智人自東非越過紅海抵達黎凡特走廊（今以色列、黎巴嫩、敘利亞），為後續擴散至歐亞兩大塊的橋頭堡。",
       "desc_en": "About 60,000 years ago, Homo sapiens crossed the Red Sea from East Africa into the Levant corridor (modern Israel, Lebanon, Syria) — the bridgehead for Eurasian expansion.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1280px-Spreading_homo_sapiens_la.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人類遷徙",
       "wiki_en": "https://en.wikipedia.org/wiki/Early_human_migrations"
     },
@@ -20786,7 +19581,7 @@
       "category": "migration",
       "desc_zh": "約 5 萬年前智人沿印度洋北岸「南線」擴散抵達印度次大陸，是東進東南亞與澳洲的中繼點。",
       "desc_en": "Around 50,000 years ago, Homo sapiens spread along the southern Indian Ocean coastal route into South Asia — the stepping stone to Southeast Asia and Australia.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1280px-Spreading_homo_sapiens_la.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/人類遷徙",
       "wiki_en": "https://en.wikipedia.org/wiki/Coastal_migration"
     },
@@ -20800,7 +19595,7 @@
       "category": "migration",
       "desc_zh": "約 13000 年前北美出現 Clovis 石器文化，特徵是槽狀矛頭，獵捕猛獁象等大型動物。長期被認為是北美最早文化，近年發現更早的前 Clovis 遺址。",
       "desc_en": "Around 13,000 years ago, the Clovis culture appeared in North America, marked by fluted spear points used to hunt mammoths. Long considered the earliest, though pre-Clovis sites have recently been found.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Clovis_spearpoints_-_Cleveland_Museum_of_Natural_History.jpg/1280px-Clovis_spearpoints_-_Cleveland_Museum_of_Natural_History.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/克洛維斯文化",
       "wiki_en": "https://en.wikipedia.org/wiki/Clovis_culture"
     },
@@ -20814,7 +19609,7 @@
       "category": "migration",
       "desc_zh": "冰河期結束後約 1 萬年前，近東新月沃土馴化小麥、大麥與山羊綿羊，人類從狩獵採集轉向定居農業，改變遷徙模式。",
       "desc_en": "Around 10,000 years ago, after the Ice Age, the Fertile Crescent domesticated wheat, barley, goats, and sheep. Humanity shifted from hunter-gathering to settled agriculture, changing migration patterns.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Fertile_crescent_Neolithic_B_circa_7500_BC.jpg/960px-Fertile_crescent_Neolithic_B_circa_7500_BC.jpg",
       "crossRef": [
         "thm-climate",
         "mideast"
@@ -20832,7 +19627,7 @@
       "category": "migration",
       "desc_zh": "約前 3500 年烏克蘭-俄羅斯南部草原的顏那亞文化馴化馬匹、發明輪車，向歐洲、中亞、印度三面擴散，是印歐語系的起源。",
       "desc_en": "Around 3500 BC, the Yamnaya culture of the Pontic-Caspian steppe domesticated horses and invented wheeled vehicles, spreading into Europe, Central Asia, and India — the origin of the Indo-European languages.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Indo-European_migrations.gif",
       "crossRef": [
         "central-asia",
         "india"
@@ -20850,7 +19645,7 @@
       "category": "migration",
       "desc_zh": "約前 1000 年起，班圖語族群自西非喀麥隆一帶向東、向南擴散橫跨撒哈拉以南非洲，帶動農業與鐵器技術傳播。今日非洲 3 億人使用班圖語。",
       "desc_en": "From around 1000 BC, Bantu-speaking peoples expanded south and east from today's Cameroon across sub-Saharan Africa, spreading agriculture and ironworking. Over 300 million Africans now speak Bantu languages.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Bantu_Phillipson.png",
       "crossRef": [
         "africa"
       ],
@@ -20867,7 +19662,7 @@
       "category": "migration",
       "desc_zh": "前 8-前 6 世紀希臘城邦因人口壓力向西地中海、黑海殖民，建立馬賽、拿坡里、敘拉古、拜占庭等城市，希臘文明擴散全地中海。",
       "desc_en": "From the 8th to 6th centuries BC, Greek city-states founded colonies around the western Mediterranean and Black Sea (Marseille, Naples, Syracuse, Byzantium), spreading Greek civilization across the Mediterranean.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Greek_Colonization_Archaic_Period.svg/1280px-Greek_Colonization_Archaic_Period.svg.png",
       "crossRef": [
         "greece",
         "europe"
@@ -20885,7 +19680,7 @@
       "category": "migration",
       "desc_zh": "約 370-375 年匈奴越過頓河擊敗哥德人，推擠日耳曼部族大舉進入羅馬帝國，開啟「民族大遷徙時代」（Völkerwanderung），間接導致西羅馬滅亡。",
       "desc_en": "Around 370–375, the Huns crossed the Don and defeated the Goths, pushing Germanic tribes into the Roman Empire and launching the 'Migration Period' (Völkerwanderung) that led to Rome's fall.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Migration_of_Early_Slavs.png",
       "crossRef": [
         "europe",
         "roman-empire"
@@ -20903,7 +19698,7 @@
       "category": "migration",
       "desc_zh": "4-7 世紀哥德人、汪達爾人、法蘭克人、盎格魯-撒克遜人、倫巴第人陸續進入西羅馬版圖，建立各蠻族王國，奠定中世紀歐洲政治版圖。",
       "desc_en": "From the 4th to 7th centuries, the Goths, Vandals, Franks, Anglo-Saxons, and Lombards entered the former Western Roman Empire, founding successor kingdoms that shaped medieval Europe.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Invasions_of_the_Roman_Empire_1.png/1920px-Invasions_of_the_Roman_Empire_1.png",
       "crossRef": [
         "europe",
         "roman-empire"
@@ -20921,7 +19716,7 @@
       "category": "migration",
       "desc_zh": "約 8-11 世紀玻里尼西亞航海者從馬克薩斯群島或大溪地駕雙體獨木舟抵達夏威夷群島，是南島擴散的最北點。",
       "desc_en": "Between the 8th and 11th centuries, Polynesian voyagers sailed double-hulled canoes from the Marquesas or Tahiti to the Hawaiian Islands — the northern peak of the Austronesian expansion.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Native_Hawaiian_man_pounding_taro_into_poi_with_two_children_by_his_sides.%2C_c._1890s.jpg/1920px-Native_Hawaiian_man_pounding_taro_into_poi_with_two_children_by_his_sides.%2C_c._1890s.jpg",
       "wiki_zh": "https://zh.wikipedia.org/wiki/夏威夷原住民",
       "wiki_en": "https://en.wikipedia.org/wiki/Native_Hawaiians"
     },
@@ -20935,7 +19730,7 @@
       "category": "migration",
       "desc_zh": "985 年紅鬍子艾瑞克建立格陵蘭殖民地，其子雷夫·艾瑞克森約 1000 年抵達北美紐芬蘭（文蘭），比哥倫布早 5 個世紀。",
       "desc_en": "In 985, Erik the Red founded a Greenland colony; his son Leif Erikson reached Newfoundland (Vinland) around 1000 — five centuries before Columbus.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hvalsey_Church.jpg/1280px-Hvalsey_Church.jpg",
       "crossRef": [
         "europe"
       ],
@@ -20952,7 +19747,7 @@
       "category": "migration",
       "desc_zh": "約 13 世紀末玻里尼西亞航海者從東波里尼西亞抵達紐西蘭，發展為毛利人，是人類最後定居的大片土地之一。",
       "desc_en": "In the late 13th century, Polynesian voyagers from East Polynesia reached New Zealand, becoming the Maori — one of the last major landmasses settled by humans.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/First_human_migration_to_New_Zealand.svg/1280px-First_human_migration_to_New_Zealand.svg.png",
       "wiki_zh": "https://zh.wikipedia.org/wiki/毛利人",
       "wiki_en": "https://en.wikipedia.org/wiki/M%C4%81ori_people"
     },
@@ -20966,7 +19761,7 @@
       "category": "migration",
       "desc_zh": "基因與語言研究顯示羅姆人約於 1000 年前自印度西北部離開，經波斯、拜占庭進入巴爾幹與歐洲，成為歐洲最大無國族少數。",
       "desc_en": "Genetic and linguistic studies show the Romani left northwestern India about 1,000 years ago, migrating through Persia and Byzantium into the Balkans and Europe — Europe's largest stateless minority.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Gypsies_camping_-_probably_Swansea_%288678055650%29.jpg",
       "crossRef": [
         "india",
         "europe"
@@ -20984,7 +19779,7 @@
       "category": "migration",
       "desc_zh": "1500-1866 年間約 1250 萬非洲人被強迫運往美洲為奴，是史上最大規模的強迫遷徙，塑造了整個大西洋世界的人口結構。",
       "desc_en": "Between 1500 and 1866, an estimated 12.5 million Africans were forcibly shipped to the Americas — the largest forced migration in history, reshaping the entire Atlantic world's demography.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Slave_Auction_Ad.jpg",
       "crossRef": [
         "africa",
         "americas"
@@ -21002,7 +19797,7 @@
       "category": "migration",
       "desc_zh": "1845-1852 年馬鈴薯枯萎病造成愛爾蘭百萬人餓死、150 萬人移民美國，愛爾蘭人口銳減四分之一。美國愛爾蘭裔自此成為重要少數族群。",
       "desc_en": "The 1845–1852 potato blight killed 1 million in Ireland and drove 1.5 million to emigrate to the U.S. Ireland's population fell by a quarter. Irish Americans became a major U.S. minority.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Emigrants_Leave_Ireland_by_Henry_Doyle_1868.jpg/960px-Emigrants_Leave_Ireland_by_Henry_Doyle_1868.jpg",
       "crossRef": [
         "uk",
         "usa"
@@ -21020,7 +19815,7 @@
       "category": "migration",
       "desc_zh": "19 世紀中葉後廣東、福建移民大批赴東南亞當苦力、商人，形成新加坡、馬來西亞、印尼等地華人社群；同時期亦有華工赴美國修鐵路、赴古巴種甘蔗。",
       "desc_en": "From the mid-19th century, migrants from Guangdong and Fujian went to Southeast Asia as laborers and traders, forming the Chinese communities of Singapore, Malaysia, and Indonesia. Chinese coolies also built U.S. railroads and worked Cuban sugar fields.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/ChineseMigration003.jpg",
       "crossRef": [
         "china",
         "southeast-asia"
@@ -21038,7 +19833,7 @@
       "category": "migration",
       "desc_zh": "1947 年印巴分治引發人類史上規模最大的遷徙：約 1400 萬穆斯林、印度教徒與錫克教徒在巴基斯坦與印度之間遷移，100-200 萬人在宗教暴力中喪生。",
       "desc_en": "The 1947 Partition of India triggered the largest migration in human history: some 14 million Muslims, Hindus, and Sikhs moved between Pakistan and India, with 1–2 million killed in sectarian violence.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Brit_IndianEmpireReligions3.jpg/1280px-Brit_IndianEmpireReligions3.jpg",
       "crossRef": [
         "india"
       ],
@@ -21055,7 +19850,7 @@
       "category": "migration",
       "desc_zh": "1948 年以色列建國與第一次中東戰爭期間約 70 萬巴勒斯坦人被驅趕或逃離家園，阿拉伯語稱「浩劫」（Nakba）。難民問題至今是中東核心議題。",
       "desc_en": "During Israel's 1948 founding and the First Arab-Israeli War, about 700,000 Palestinians were expelled or fled their homes — the 'Nakba' (catastrophe). The refugee issue remains central to Middle East politics.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Palestinian_refugees_leaving_Gaza_Gettyimages-1354487454.webp/1280px-Palestinian_refugees_leaving_Gaza_Gettyimages-1354487454.webp.png",
       "crossRef": [
         "judaism",
         "mideast"
@@ -21073,7 +19868,7 @@
       "category": "migration",
       "desc_zh": "1949 年國共內戰末期約 200 萬軍民隨國民政府遷台，形成戰後台灣「外省人」族群，徹底改變台灣人口與政治結構。",
       "desc_en": "As the Chinese Civil War ended in 1949, about 2 million troops and civilians followed the ROC government to Taiwan, forming the postwar 'Mainlander' (waishengren) community that reshaped Taiwan's demographics and politics.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Movement_KMTretreat.svg/1280px-Movement_KMTretreat.svg.png",
       "crossRef": [
         "china",
         "taiwan"
@@ -21091,7 +19886,7 @@
       "category": "migration",
       "desc_zh": "1975 年西貢陷落後 20 年間，約 200 萬越南人（華人佔比顯著）乘船逃往東南亞、美國、澳洲、歐洲，是冷戰最具代表性的難民潮之一。",
       "desc_en": "After Saigon fell in 1975, about 2 million Vietnamese (many ethnic Chinese) fled by boat over 20 years to Southeast Asia, the U.S., Australia, and Europe — among the Cold War's most iconic refugee crises.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1280px-Spreading_homo_sapiens_la.svg.png",
       "crossRef": [
         "usa",
         "vietnam-war"
@@ -21109,7 +19904,7 @@
       "category": "migration",
       "desc_zh": "智人走出非洲後多數沿印度洋北岸東進：東非 → 阿拉伯半島 → 南亞 → 東南亞 → 澳洲。氣候溫和、海岸資源豐富、Sunda-Sahul 陸棚裸露使跨海容易，一代可推進 60 公里，因此 6.5 萬年前就抵達澳洲。",
       "desc_en": "After leaving Africa, most Homo sapiens followed the Indian Ocean coast: East Africa → Arabia → South Asia → Southeast Asia → Australia. Mild climate, rich coastal resources, and the exposed Sunda-Sahul shelf enabled ~60 km per generation — reaching Australia by 65,000 years ago.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1280px-Spreading_homo_sapiens_la.svg.png",
       "crossRef": [
         "oceania"
       ],
@@ -21126,13 +19921,1218 @@
       "category": "migration",
       "desc_zh": "另一支人類向北進入中亞草原與西伯利亞，要跨越沙漠、高山、冰凍苔原。得先發展縫紉、毛皮衣、火塘、獸骨建材等禦寒技術才能突破，因此北線抵達中亞比南線抵達澳洲晚約 2 萬年，卻為日後跨白令陸橋進入美洲奠定基礎。",
       "desc_en": "Another branch moved north into Central Asian steppes and Siberian tundra, crossing deserts, mountains, and frozen tundra. Tailored fur clothing, needles, hearth-based dwellings, and bone construction were required first. The northern route reached Central Asia ~20,000 years later than the southern reached Australia — but laid the groundwork for crossing Beringia to the Americas.",
-      "image": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spreading_homo_sapiens_la.svg/1280px-Spreading_homo_sapiens_la.svg.png",
       "crossRef": [
         "central-asia",
         "arctic"
       ],
       "wiki_zh": "https://zh.wikipedia.org/wiki/人類遷徙",
       "wiki_en": "https://en.wikipedia.org/wiki/Early_human_migrations"
+    }
+  ],
+  "views": [
+    {
+      "id": "nat-cosmos",
+      "label": "宇宙歷史",
+      "axes": [
+        "cosmos",
+        "galaxy",
+        "solar-system"
+      ],
+      "label_en": "Cosmic History",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-earth",
+      "label": "地球與生命",
+      "axes": [
+        "earth",
+        "climate",
+        "life"
+      ],
+      "label_en": "Earth & Life",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-human",
+      "label": "人類演化與遷徙",
+      "axes": [
+        "human-evo",
+        "migration"
+      ],
+      "label_en": "Human Evolution",
+      "category_en": "Nature & Universe",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "civ-all",
+      "label": "全部文明",
+      "axes": [
+        "east",
+        "west",
+        "africa",
+        "americas",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china",
+        "greece",
+        "latin-america"
+      ],
+      "label_en": "All Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-east",
+      "label": "東方文明",
+      "axes": [
+        "east",
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "india",
+        "china"
+      ],
+      "label_en": "Eastern Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-west",
+      "label": "西方文明",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "Western Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-africa",
+      "label": "非洲文明",
+      "axes": [
+        "africa",
+        "egypt"
+      ],
+      "label_en": "African Civilizations",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "civ-americas",
+      "label": "美洲文明",
+      "axes": [
+        "americas",
+        "latin-america"
+      ],
+      "label_en": "Americas",
+      "category_en": "Civilizations",
+      "group": "civilization"
+    },
+    {
+      "id": "thm-religion",
+      "label": "宗教發展",
+      "axes": [
+        "judaism",
+        "christianity",
+        "islam",
+        "hinduism",
+        "buddhism",
+        "taoism",
+        "human-evo",
+        "cross"
+      ],
+      "label_en": "World Religions",
+      "category_en": "Themes",
+      "group": "topics",
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "thm-science",
+      "label": "科學技術",
+      "axes": [
+        "science",
+        "cross"
+      ],
+      "label_en": "Science & Technology",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-trade",
+      "label": "貿易全球化",
+      "axes": [
+        "trade",
+        "cross"
+      ],
+      "label_en": "Trade & Exploration",
+      "category_en": "Themes",
+      "group": "topics"
+    },
+    {
+      "id": "thm-climate",
+      "label": "氣候環境",
+      "axes": [
+        "climate",
+        "earth"
+      ],
+      "label_en": "Climate & Environment",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "nat-iceages",
+      "label": "五次大冰河期",
+      "axes": [
+        "climate",
+        "earth",
+        "life"
+      ],
+      "label_en": "Five Ice Ages",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "thm-migration",
+      "label": "人類遷徙",
+      "axes": [
+        "migration",
+        "oceania",
+        "central-asia",
+        "southeast-asia",
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Human Migration",
+      "category_en": "Themes",
+      "group": "nature-cosmos"
+    },
+    {
+      "id": "reg-mideast",
+      "label": "中東歷史",
+      "axes": [
+        "mideast",
+        "mesopotamia",
+        "egypt",
+        "persia",
+        "islam",
+        "judaism",
+        "iran"
+      ],
+      "label_en": "Middle East History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-eastasia",
+      "label": "東亞歷史",
+      "axes": [
+        "east",
+        "china",
+        "japan",
+        "taiwan"
+      ],
+      "label_en": "East Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-europe",
+      "label": "歐洲歷史",
+      "axes": [
+        "west",
+        "greece",
+        "europe"
+      ],
+      "label_en": "European History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-southasia",
+      "label": "南亞歷史",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism"
+      ],
+      "label_en": "South Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-africa",
+      "label": "非洲歷史",
+      "axes": [
+        "africa",
+        "north-africa",
+        "west-africa",
+        "east-africa",
+        "south-africa",
+        "egypt"
+      ],
+      "label_en": "African History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-americas",
+      "label": "美洲歷史",
+      "axes": [
+        "americas",
+        "latin-america",
+        "north-america",
+        "usa",
+        "south-america"
+      ],
+      "label_en": "Americas History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-oceania",
+      "label": "大洋洲",
+      "axes": [
+        "oceania",
+        "antarctic"
+      ],
+      "label_en": "Oceania",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-centralas",
+      "label": "中亞歷史",
+      "axes": [
+        "central-asia"
+      ],
+      "label_en": "Central Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-sea",
+      "label": "東南亞歷史",
+      "axes": [
+        "southeast-asia"
+      ],
+      "label_en": "SE Asia History",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "reg-polar",
+      "label": "極地",
+      "axes": [
+        "arctic",
+        "antarctic"
+      ],
+      "label_en": "Polar Regions",
+      "category_en": "Regions",
+      "group": "countries"
+    },
+    {
+      "id": "china",
+      "label": "中國歷史",
+      "label_en": "Chinese History",
+      "group": "countries",
+      "axes": [
+        "china",
+        "china-emperor",
+        "china-war",
+        "china-literature",
+        "china-science",
+        "taoism",
+        "buddhism",
+        "taiwan"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "dinosaurs",
+      "label": "恐龍",
+      "label_en": "Dinosaurs",
+      "group": "nature-cosmos",
+      "axes": [
+        "dinosaurs",
+        "dino-species",
+        "earth",
+        "life",
+        "climate"
+      ],
+      "yearStart": -260000000,
+      "yearEnd": -60000000
+    },
+    {
+      "id": "ancient-civ",
+      "label": "古文明",
+      "label_en": "Ancient Civilizations",
+      "group": "civilization",
+      "axes": [],
+      "yearStart": -4000,
+      "yearEnd": 500
+    },
+    {
+      "id": "taiwan",
+      "label": "台灣歷史",
+      "label_en": "Taiwan History",
+      "group": "countries",
+      "axes": [
+        "taiwan",
+        "taiwan-colonial",
+        "taiwan-culture",
+        "china",
+        "japan"
+      ],
+      "yearStart": -30000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "japan",
+      "label": "日本歷史",
+      "label_en": "Japanese History",
+      "group": "countries",
+      "axes": [
+        "japan",
+        "china-war",
+        "east",
+        "buddhism",
+        "korea"
+      ],
+      "yearStart": -2000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "korea",
+      "label": "韓國歷史",
+      "label_en": "Korean History",
+      "group": "countries",
+      "axes": [
+        "korea",
+        "china",
+        "japan"
+      ],
+      "yearStart": -2333,
+      "yearEnd": 2026
+    },
+    {
+      "id": "india",
+      "label": "印度歷史",
+      "label_en": "Indian History",
+      "group": "countries",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism",
+        "arts"
+      ],
+      "yearStart": -3300,
+      "yearEnd": 2026
+    },
+    {
+      "id": "usa",
+      "label": "美國歷史",
+      "label_en": "American History",
+      "group": "countries",
+      "axes": [
+        "usa",
+        "west",
+        "mideast",
+        "japan"
+      ],
+      "yearStart": 1492,
+      "yearEnd": 2026
+    },
+    {
+      "id": "uk",
+      "label": "英國歷史",
+      "label_en": "British History",
+      "group": "countries",
+      "axes": [
+        "uk",
+        "europe"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "france",
+      "label": "法國歷史",
+      "label_en": "French History",
+      "group": "countries",
+      "axes": [
+        "france",
+        "europe"
+      ],
+      "yearStart": -600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "germany",
+      "label": "德國歷史",
+      "label_en": "German History",
+      "group": "countries",
+      "axes": [
+        "germany",
+        "europe"
+      ],
+      "yearStart": -100,
+      "yearEnd": 2026
+    },
+    {
+      "id": "russia",
+      "label": "俄羅斯歷史",
+      "label_en": "Russian History",
+      "group": "countries",
+      "axes": [
+        "russia",
+        "europe"
+      ],
+      "yearStart": 862,
+      "yearEnd": 2026
+    },
+    {
+      "id": "egypt",
+      "label": "埃及歷史",
+      "label_en": "Egyptian History",
+      "group": "countries",
+      "axes": [
+        "egypt",
+        "mideast",
+        "kush"
+      ],
+      "yearStart": -3100,
+      "yearEnd": 2026
+    },
+    {
+      "id": "turkey",
+      "label": "土耳其歷史",
+      "label_en": "Turkish History",
+      "group": "countries",
+      "axes": [
+        "turkey",
+        "ottoman",
+        "mideast"
+      ],
+      "yearStart": -2000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "iran",
+      "label": "伊朗/波斯歷史",
+      "label_en": "Iranian/Persian History",
+      "group": "countries",
+      "axes": [
+        "iran",
+        "persia",
+        "mideast"
+      ],
+      "yearStart": -3200,
+      "yearEnd": 2026
+    },
+    {
+      "id": "italy",
+      "label": "義大利歷史",
+      "label_en": "Italian History",
+      "group": "countries",
+      "axes": [
+        "italy",
+        "europe",
+        "greece"
+      ],
+      "yearStart": -800,
+      "yearEnd": 2026
+    },
+    {
+      "id": "greece",
+      "label": "希臘歷史",
+      "label_en": "Greek History",
+      "group": "countries",
+      "axes": [
+        "greece",
+        "persia",
+        "judaism",
+        "arts",
+        "west",
+        "christianity"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "peloponnesian",
+      "label": "伯羅奔尼撒戰爭",
+      "label_en": "Peloponnesian War",
+      "group": "wars",
+      "axes": [
+        "greece"
+      ],
+      "yearStart": -431,
+      "yearEnd": -404
+    },
+    {
+      "id": "punic-wars",
+      "label": "布匿戰爭",
+      "label_en": "Punic Wars",
+      "group": "wars",
+      "axes": [
+        "greece",
+        "china"
+      ],
+      "yearStart": -264,
+      "yearEnd": -146
+    },
+    {
+      "id": "crusades",
+      "label": "十字軍東征",
+      "label_en": "Crusades",
+      "group": "wars",
+      "axes": [
+        "christianity",
+        "islam",
+        "mideast",
+        "mongol",
+        "china"
+      ],
+      "yearStart": 1096,
+      "yearEnd": 1291
+    },
+    {
+      "id": "mongol-conquests",
+      "label": "蒙古征服",
+      "label_en": "Mongol Conquests",
+      "group": "wars",
+      "axes": [
+        "mongol",
+        "china",
+        "europe",
+        "mideast"
+      ],
+      "yearStart": 1206,
+      "yearEnd": 1368
+    },
+    {
+      "id": "thirty-years",
+      "label": "三十年戰爭",
+      "label_en": "Thirty Years' War",
+      "group": "wars",
+      "axes": [
+        "europe",
+        "taiwan",
+        "cross",
+        "china"
+      ],
+      "yearStart": 1618,
+      "yearEnd": 1648
+    },
+    {
+      "id": "seven-years",
+      "label": "七年戰爭",
+      "label_en": "Seven Years' War",
+      "group": "wars",
+      "axes": [
+        "europe",
+        "india",
+        "usa"
+      ],
+      "yearStart": 1756,
+      "yearEnd": 1763
+    },
+    {
+      "id": "american-revolution",
+      "label": "美國獨立戰爭",
+      "label_en": "American Revolution",
+      "group": "wars",
+      "axes": [
+        "usa",
+        "west",
+        "europe"
+      ],
+      "yearStart": 1775,
+      "yearEnd": 1783
+    },
+    {
+      "id": "napoleonic",
+      "label": "拿破崙戰爭",
+      "label_en": "Napoleonic Wars",
+      "group": "wars",
+      "axes": [
+        "europe",
+        "latin-america",
+        "modern-egypt",
+        "usa"
+      ],
+      "yearStart": 1803,
+      "yearEnd": 1815
+    },
+    {
+      "id": "american-civil",
+      "label": "美國南北戰爭",
+      "label_en": "American Civil War",
+      "group": "wars",
+      "axes": [
+        "americas",
+        "europe",
+        "usa",
+        "american-civil-war"
+      ],
+      "yearStart": 1859,
+      "yearEnd": 1865
+    },
+    {
+      "id": "ww1",
+      "label": "第一次世界大戰",
+      "label_en": "World War I",
+      "group": "wars",
+      "axes": [
+        "ww1-western",
+        "ww1-eastern",
+        "ww1-mideast",
+        "ww1-home",
+        "france",
+        "uk",
+        "germany",
+        "russia",
+        "italy",
+        "usa",
+        "ottoman",
+        "turkey",
+        "cross",
+        "europe",
+        "mideast",
+        "judaism"
+      ],
+      "yearStart": 1870,
+      "yearEnd": 1920
+    },
+    {
+      "id": "ww2",
+      "label": "第二次世界大戰",
+      "label_en": "World War II",
+      "group": "wars",
+      "axes": [
+        "ww2-europe",
+        "ww2-pacific",
+        "ww2-home",
+        "france",
+        "uk",
+        "italy",
+        "germany",
+        "russia",
+        "cross",
+        "japan",
+        "china-war",
+        "europe",
+        "usa",
+        "science"
+      ],
+      "yearStart": 1933,
+      "yearEnd": 1946
+    },
+    {
+      "id": "cold-war",
+      "label": "冷戰",
+      "label_en": "Cold War",
+      "group": "wars",
+      "axes": [
+        "cross",
+        "taiwan",
+        "mideast",
+        "science",
+        "iran",
+        "usa",
+        "europe",
+        "japan",
+        "korea"
+      ],
+      "yearStart": 1947,
+      "yearEnd": 1991
+    },
+    {
+      "id": "korean-war",
+      "label": "韓戰",
+      "label_en": "Korean War",
+      "group": "wars",
+      "axes": [
+        "korea",
+        "china-war",
+        "usa",
+        "japan"
+      ],
+      "yearStart": 1950,
+      "yearEnd": 1953
+    },
+    {
+      "id": "vietnam-war",
+      "label": "越戰",
+      "label_en": "Vietnam War",
+      "group": "wars",
+      "axes": [
+        "usa",
+        "mideast",
+        "taiwan",
+        "science",
+        "cross"
+      ],
+      "yearStart": 1955,
+      "yearEnd": 1975
+    },
+    {
+      "id": "art-history",
+      "label": "藝術史",
+      "label_en": "Art History",
+      "group": "topics",
+      "axes": [
+        "arts",
+        "china-literature",
+        "europe",
+        "mesopotamia",
+        "china"
+      ],
+      "yearStart": -30000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "music-history",
+      "label": "音樂史",
+      "label_en": "Music History",
+      "group": "topics",
+      "axes": [
+        "arts",
+        "china-literature"
+      ],
+      "yearStart": -3000,
+      "yearEnd": 2026
+    },
+    {
+      "id": "medical",
+      "label": "醫學史",
+      "label_en": "History of Medicine",
+      "group": "topics",
+      "axes": [
+        "science",
+        "china-science",
+        "greece",
+        "mideast",
+        "china"
+      ],
+      "yearStart": -2600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "space-exploration",
+      "label": "太空探索",
+      "label_en": "Space Exploration",
+      "group": "topics",
+      "axes": [
+        "solar-system",
+        "science",
+        "usa"
+      ],
+      "yearStart": 1942,
+      "yearEnd": 2026
+    },
+    {
+      "id": "pandemics",
+      "label": "瘟疫與流行病",
+      "label_en": "Pandemics & Epidemics",
+      "group": "events",
+      "axes": [
+        "cross"
+      ],
+      "yearStart": -430,
+      "yearEnd": 2026
+    },
+    {
+      "id": "exploration",
+      "label": "大航海時代",
+      "label_en": "Age of Exploration",
+      "group": "events",
+      "axes": [
+        "trade",
+        "china",
+        "europe",
+        "americas",
+        "africa",
+        "oceania",
+        "china-science"
+      ],
+      "yearStart": 1400,
+      "yearEnd": 1600
+    },
+    {
+      "id": "revolutions",
+      "label": "革命浪潮",
+      "label_en": "Revolutions",
+      "group": "events",
+      "axes": [
+        "europe",
+        "iran",
+        "science",
+        "cross",
+        "west",
+        "usa",
+        "india",
+        "latin-america"
+      ],
+      "yearStart": 1640,
+      "yearEnd": 2026
+    },
+    {
+      "id": "disasters",
+      "label": "重大災害",
+      "label_en": "Major Disasters",
+      "group": "events",
+      "axes": [
+        "life",
+        "cenozoic-life",
+        "earth",
+        "dinosaurs",
+        "human-evo",
+        "solar-system",
+        "cross",
+        "japan"
+      ],
+      "yearStart": -1600,
+      "yearEnd": 2026
+    },
+    {
+      "id": "akkadian",
+      "label": "阿卡德帝國",
+      "label_en": "Akkadian Empire",
+      "group": "empires",
+      "axes": [
+        "mesopotamia",
+        "egypt"
+      ],
+      "yearStart": -2334,
+      "yearEnd": -2154
+    },
+    {
+      "id": "ancient-egypt-empire",
+      "label": "古埃及帝國",
+      "label_en": "Ancient Egyptian Empire",
+      "group": "empires",
+      "axes": [
+        "egypt",
+        "mesopotamia",
+        "judaism",
+        "greece",
+        "china"
+      ],
+      "yearStart": -3100,
+      "yearEnd": -30
+    },
+    {
+      "id": "persian-empire",
+      "label": "波斯帝國",
+      "label_en": "Persian Empire",
+      "group": "empires",
+      "axes": [
+        "persia",
+        "greece",
+        "mesopotamia",
+        "judaism",
+        "india"
+      ],
+      "yearStart": -550,
+      "yearEnd": -330
+    },
+    {
+      "id": "alexander-empire",
+      "label": "亞歷山大帝國",
+      "label_en": "Alexander's Empire",
+      "group": "empires",
+      "axes": [
+        "greece",
+        "persia",
+        "egypt",
+        "india"
+      ],
+      "yearStart": -336,
+      "yearEnd": -323
+    },
+    {
+      "id": "roman-empire",
+      "label": "羅馬帝國",
+      "label_en": "Roman Empire",
+      "group": "empires",
+      "axes": [
+        "greece",
+        "christianity",
+        "judaism",
+        "china",
+        "europe"
+      ],
+      "yearStart": -27,
+      "yearEnd": 476
+    },
+    {
+      "id": "byzantine",
+      "label": "拜占庭帝國",
+      "label_en": "Byzantine Empire",
+      "group": "empires",
+      "axes": [
+        "byzantine",
+        "christianity",
+        "islam",
+        "ottoman"
+      ],
+      "yearStart": 330,
+      "yearEnd": 1453
+    },
+    {
+      "id": "tang-dynasty",
+      "label": "唐朝",
+      "label_en": "Tang Dynasty",
+      "group": "empires",
+      "axes": [
+        "china",
+        "japan",
+        "korea",
+        "islam",
+        "buddhism"
+      ],
+      "yearStart": 618,
+      "yearEnd": 907
+    },
+    {
+      "id": "arab-caliphate",
+      "label": "阿拉伯帝國",
+      "label_en": "Arab Caliphate",
+      "group": "empires",
+      "axes": [
+        "islam",
+        "mideast",
+        "christianity",
+        "china",
+        "europe",
+        "india"
+      ],
+      "yearStart": 632,
+      "yearEnd": 1258
+    },
+    {
+      "id": "mongol-empire",
+      "label": "蒙古帝國",
+      "label_en": "Mongol Empire",
+      "group": "empires",
+      "axes": [
+        "mongol",
+        "china",
+        "europe",
+        "mideast",
+        "korea"
+      ],
+      "yearStart": 1206,
+      "yearEnd": 1368
+    },
+    {
+      "id": "ottoman-empire",
+      "label": "鄂圖曼帝國",
+      "label_en": "Ottoman Empire",
+      "group": "empires",
+      "axes": [
+        "ottoman",
+        "mideast",
+        "europe",
+        "byzantine",
+        "taiwan"
+      ],
+      "yearStart": 1299,
+      "yearEnd": 1922
+    },
+    {
+      "id": "mughal-empire",
+      "label": "莫臥兒帝國",
+      "label_en": "Mughal Empire",
+      "group": "empires",
+      "axes": [
+        "india",
+        "hinduism",
+        "buddhism",
+        "europe",
+        "china"
+      ],
+      "yearStart": 1526,
+      "yearEnd": 1857
+    },
+    {
+      "id": "spanish-empire",
+      "label": "西班牙帝國",
+      "label_en": "Spanish Empire",
+      "group": "empires",
+      "axes": [
+        "latin-america",
+        "americas",
+        "europe",
+        "taiwan",
+        "west"
+      ],
+      "yearStart": 1492,
+      "yearEnd": 1975
+    },
+    {
+      "id": "british-empire",
+      "label": "大英帝國",
+      "label_en": "British Empire",
+      "group": "empires",
+      "axes": [
+        "uk",
+        "europe",
+        "india",
+        "usa",
+        "taiwan",
+        "china",
+        "mideast"
+      ],
+      "yearStart": 1583,
+      "yearEnd": 1997
+    },
+    {
+      "id": "russian-empire",
+      "label": "俄羅斯帝國/蘇聯",
+      "label_en": "Russian Empire / USSR",
+      "group": "empires",
+      "axes": [
+        "russia",
+        "europe",
+        "central-asia",
+        "china",
+        "mideast"
+      ],
+      "yearStart": 1721,
+      "yearEnd": 1991
+    },
+    {
+      "id": "qing-dynasty",
+      "label": "清朝",
+      "label_en": "Qing Dynasty",
+      "group": "empires",
+      "axes": [
+        "china",
+        "china-war",
+        "taiwan",
+        "korea",
+        "japan",
+        "mideast"
+      ],
+      "yearStart": 1636,
+      "yearEnd": 1912
+    },
+    {
+      "id": "japanese-empire",
+      "label": "大日本帝國",
+      "label_en": "Empire of Japan",
+      "group": "empires",
+      "axes": [
+        "japan",
+        "china",
+        "china-war",
+        "taiwan",
+        "korea",
+        "taiwan-colonial"
+      ],
+      "yearStart": 1868,
+      "yearEnd": 1947
+    },
+    {
+      "id": "confucius",
+      "label": "孔子",
+      "label_en": "Confucius",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -551,
+      "yearEnd": -479
+    },
+    {
+      "id": "alexander",
+      "label": "亞歷山大大帝",
+      "label_en": "Alexander the Great",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -356,
+      "yearEnd": -323
+    },
+    {
+      "id": "qin-shihuang",
+      "label": "秦始皇",
+      "label_en": "Qin Shi Huang",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -259,
+      "yearEnd": -210
+    },
+    {
+      "id": "caesar",
+      "label": "凱撒",
+      "label_en": "Julius Caesar",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": -100,
+      "yearEnd": -44
+    },
+    {
+      "id": "genghis-khan",
+      "label": "成吉思汗",
+      "label_en": "Genghis Khan",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1162,
+      "yearEnd": 1227
+    },
+    {
+      "id": "columbus",
+      "label": "哥倫布",
+      "label_en": "Christopher Columbus",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1451,
+      "yearEnd": 1506
+    },
+    {
+      "id": "napoleon",
+      "label": "拿破崙",
+      "label_en": "Napoleon Bonaparte",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1769,
+      "yearEnd": 1821
+    },
+    {
+      "id": "einstein",
+      "label": "愛因斯坦",
+      "label_en": "Albert Einstein",
+      "group": "biographies",
+      "axes": [],
+      "yearStart": 1879,
+      "yearEnd": 1955
+    },
+    {
+      "id": "cenozoic",
+      "label": "新生代生命演化",
+      "label_en": "Cenozoic Life Evolution",
+      "group": "nature-cosmos",
+      "axes": [
+        "life",
+        "cenozoic-epochs",
+        "cenozoic-life",
+        "earth",
+        "climate",
+        "human-evo"
+      ],
+      "yearStart": -66000000,
+      "yearEnd": -50000
     }
   ]
 }
