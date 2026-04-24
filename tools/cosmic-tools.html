@@ -1381,6 +1381,49 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 function sanitizeImageUrl(url){if(!url)return url;if(url.includes('.svg/')&&url.endsWith('.svg.png'))return url.replace(/\/\d+px-/,'/1280px-');if(url.includes('/thumb/')&&url.match(/\/\d+px-/)){const w=parseInt(url.match(/\/(\d+)px-/)[1]);if(w<640)return url.replace(/\/\d+px-/,'/1280px-');}return url;}
 function testImageLoad(url,timeoutMs=5000){return new Promise(resolve=>{if(!url){resolve(false);return;}const img=new Image();const timer=setTimeout(()=>{img.src='';resolve(false);},timeoutMs);img.onload=()=>{clearTimeout(timer);resolve(true);};img.onerror=()=>{clearTimeout(timer);resolve(false);};img.src=url;});}
 
+// ── 候選評分（避免 Wiki 首圖常為旗幟/國徽/stub）──
+const _FLAG_PAT=['flag_of_','coat_of_arms','seal_of_','banner_of_','royal_standard','emblem_of_','white_flag_','greater_coat'];
+const _STUB_PAT=['zh_conversion_icon','antistub','arrleft','wikisource-logo','wikimedia-logo','nobel_prize_medal','translation_to_','commons-logo','wiktionary'];
+const _MAP_PAT=['_map_','_map.','location_map','territory_','_atlas','locator','locmap','countries_','-map-'];
+const _BATTLE_PAT=['_battle_','battle_of','_siege_','_war_','campaign'];
+const _FOUND_ZH=['建立','成立','建國','建城','立國','獨立','開國'];
+const _FOUND_EN=['founded','proclaimed','established','independence','founding'];
+const _WAR_ZH=['戰役','戰爭','之戰','之役','會戰','海戰'];
+const _WAR_EN=['battle of',' war','campaign','siege of'];
+
+function scoreCandidate(c, ev){
+  const u=(c.url||'').toLowerCase();
+  const src=c.source||'';
+  let s=0;
+  // 來源基礎分
+  if(src.includes('Wiki-PageImage')||src.includes('Wiki-Orig')||src.includes('Wiki-Thumb')) s+=5;
+  else if(src.includes('Wikidata')) s+=4;
+  else if(src.includes('Wiki-Infobox')) s+=3;
+  else if(src.includes('Wiki-Search')) s+=2;
+  else if(src.includes('Commons')) s+=1;
+  // 檔案格式
+  if(/\.(jpe?g|png|webp)([?/]|$)/.test(u)) s+=2;
+  else if(u.includes('.svg')) s-=2;
+  // 黑名單
+  if(_FLAG_PAT.some(p=>u.includes(p))) s-=30;
+  if(_STUB_PAT.some(p=>u.includes(p))) s-=50;
+  // 正向
+  if(_MAP_PAT.some(p=>u.includes(p))) s+=8;
+  if(_BATTLE_PAT.some(p=>u.includes(p))) s+=5;
+  // 事件類型感知
+  const zh=ev.zh||'', en=(ev.en||'').toLowerCase();
+  const isFound=_FOUND_ZH.some(k=>zh.includes(k))||_FOUND_EN.some(k=>en.includes(k));
+  const isWar=_WAR_ZH.some(k=>zh.includes(k))||_WAR_EN.some(k=>en.includes(k));
+  if(isFound){
+    if(_FLAG_PAT.some(p=>u.includes(p))) s-=30;
+    if(_MAP_PAT.some(p=>u.includes(p))) s+=15;
+  }
+  if(isWar){
+    if(_FLAG_PAT.some(p=>u.includes(p))) s-=20;
+  }
+  return s;
+}
+
 async function fetchAllCandidates(ev,zhFirst){
   const wikiUrls=(zhFirst?[ev.wiki_zh,ev.wiki_en]:[ev.wiki_en,ev.wiki_zh]).filter(Boolean);
   const candidates=[]; const seen=new Set();
@@ -1397,6 +1440,9 @@ async function fetchAllCandidates(ev,zhFirst){
   if(ev.en) tasks.push(fetchCommonsCandidates(ev.en, 3).then(arr=>arr.forEach(add)));
   else if(ev.zh) tasks.push(fetchCommonsCandidates(ev.zh, 3).then(arr=>arr.forEach(add)));
   await Promise.allSettled(tasks);
+  // 評分並排序
+  candidates.forEach(c=>{c.score=scoreCandidate(c,ev);});
+  candidates.sort((a,b)=>b.score-a.score);
   return candidates;
 }
 
@@ -1418,7 +1464,18 @@ function showPicker(ev,candidates){
     document.getElementById('picker-status').textContent='';
     const grid=document.getElementById('picker-grid'); grid.innerHTML='';
     if(ev.image){const cur=document.createElement('div');cur.className='pick-item';cur.innerHTML=`<img src="${ev.image}" style="height:120px;object-fit:cover;width:100%"><div class="pick-label"><span style="color:var(--yellow)">★ 現有圖片</span><br><span class="pick-source">保留</span></div>`;cur.addEventListener('click',()=>selectPickerItem(cur,ev.image));grid.appendChild(cur);}
-    candidates.forEach(c=>{const item=document.createElement('div');item.className='pick-item';item.dataset.url=c.url;item.innerHTML=`<img src="${c.url}" onerror="this.parentElement.classList.add('img-broken')" style="height:120px;object-fit:cover;width:100%"><div class="pick-label"><span style="color:var(--text)">${c.label||c.source}</span><br><span class="pick-source">${c.source}</span></div>`;item.addEventListener('click',()=>selectPickerItem(item,c.url));grid.appendChild(item);});
+    candidates.forEach((c,idx)=>{
+      const item=document.createElement('div');
+      item.className='pick-item';
+      item.dataset.url=c.url;
+      const sc=(typeof c.score==='number')?c.score:null;
+      const scoreColor = sc===null?'var(--muted)' : (sc>=5?'#86efac' : sc>=0?'var(--yellow)' : 'var(--red)');
+      const scoreHtml = sc===null?'' : `<span style="color:${scoreColor};font-weight:600">${sc>=0?'+':''}${sc}</span> · `;
+      const topBadge = idx===0?'<span style="background:var(--accent);color:#000;padding:1px 4px;border-radius:3px;font-size:9px;margin-right:3px">TOP</span>':'';
+      item.innerHTML=`<img src="${c.url}" onerror="this.parentElement.classList.add('img-broken')" style="height:120px;object-fit:cover;width:100%"><div class="pick-label">${topBadge}<span style="color:var(--text)">${c.label||c.source}</span><br><span class="pick-source">${scoreHtml}${c.source}</span></div>`;
+      item.addEventListener('click',()=>selectPickerItem(item,c.url));
+      grid.appendChild(item);
+    });
     const none=document.createElement('div');none.className='pick-item pick-none';none.innerHTML='<span style="font-size:20px">🚫</span><span>略過</span>';none.addEventListener('click',()=>{selectPickerItem(none,null);document.getElementById('picker-confirm').textContent='✓ 確認略過';});grid.appendChild(none);
     document.getElementById('picker-overlay').classList.remove('hide');
     document.getElementById('picker-confirm').textContent='✓ 使用選取的圖片';
@@ -1527,10 +1584,13 @@ async function runUpdate(){
     log(`⏳ ${ev.zh} 抓取中...`,'log-info');
     const candidates=await fetchAllCandidates(ev,zhFirst);
     if(!candidates.length){statFail++;document.getElementById('stat-fail').textContent=statFail;log(`✗ ${ev.zh}（找不到圖片）`,'log-fail');results.push({ev,status:'fail',img:null});continue;}
-    if(candidates.length===1&&!ev.image){
-      ev.image=candidates[0].url; statOk++; document.getElementById('stat-ok').textContent=statOk;
-      log(`✓ ${ev.zh} <span style="color:#86efac;font-size:9px">[自動·${candidates[0].source}]</span>`,'log-auto');
-      logChange({type:'image-auto', zh:ev.zh, id:ev.id, source:candidates[0].source});
+    // 評分判定：top score >= 1 且 (單候選或領先 >= 10) → auto-pick
+    const best=candidates[0], second=candidates[1];
+    const clearWinner = best.score >= 1 && (candidates.length===1 || (best.score - (second?.score ?? -999)) >= 10);
+    if(clearWinner && !ev.image){
+      ev.image=best.url; statOk++; document.getElementById('stat-ok').textContent=statOk;
+      log(`✓ ${ev.zh} <span style="color:#86efac;font-size:9px">[自動·${best.source}·score=${best.score}]</span>`,'log-auto');
+      logChange({type:'image-auto', zh:ev.zh, id:ev.id, source:best.source});
       results.push({ev,status:'auto',img:ev.image});
     } else {
       if(smartMode){
@@ -1547,7 +1607,7 @@ async function runUpdate(){
           wiki_zh: ev.wiki_zh || '',
           wiki_en: ev.wiki_en || '',
           current_image: ev.image || null,
-          candidates: candidates.map(c=>({url:c.url, source:c.source, label:c.label||''}))
+          candidates: candidates.map(c=>({url:c.url, source:c.source, label:c.label||'', score:c.score ?? null}))
         });
         document.getElementById('pending-count').textContent=_pendingPicks.length;
         log(`📦 ${ev.zh} <span style="color:var(--accent);font-size:9px">[待挑·${candidates.length} 張]</span>`,'log-info');

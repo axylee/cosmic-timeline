@@ -282,6 +282,86 @@ def fetch_commons_search(query, limit=3):
 # ════════════════════════════════════════════
 # 彙整所有候選
 # ════════════════════════════════════════════
+# ════════════════════════════════════════════
+# 候選評分（避免旗幟/圖示/stub 佔掉第一名）
+# ════════════════════════════════════════════
+FLAG_PATTERNS = [
+    "flag_of_", "coat_of_arms", "seal_of_", "banner_of_",
+    "royal_standard", "emblem_of_", "white_flag_", "greater_coat",
+]
+STUB_PATTERNS = [
+    "zh_conversion_icon", "antistub", "arrleft", "wikisource-logo",
+    "wikimedia-logo", "nobel_prize_medal", "translation_to_",
+    "commons-logo", "wiktionary",
+]
+MAP_PATTERNS = [
+    "_map_", "_map.", "location_map", "territory_", "_atlas",
+    "locator", "locmap", "countries_", "-map-",
+]
+BATTLE_PATTERNS = [
+    "_battle_", "battle_of", "_siege_", "_war_", "campaign",
+]
+
+FOUND_ZH_KW = ["建立", "成立", "建國", "建城", "立國", "獨立", "開國"]
+FOUND_EN_KW = ["founded", "proclaimed", "established", "independence", "founding"]
+WAR_ZH_KW = ["戰役", "戰爭", "之戰", "之役", "會戰", "海戰"]
+WAR_EN_KW = ["battle of", " war", "campaign", "siege of"]
+
+
+def score_candidate(cand, ev):
+    """評分候選圖片，越高越好；避免旗幟/stub 誤選為首選。"""
+    url_lower = cand["url"].lower()
+    source = cand.get("source", "") or ""
+    score = 0
+
+    # 來源基礎分
+    if "Wiki-PageImage" in source:
+        score += 5
+    elif "Wikidata" in source:
+        score += 4
+    elif "Wiki-Infobox" in source:
+        score += 3
+    elif "Commons" in source:
+        score += 1
+
+    # 檔案格式（照片優於向量）
+    if re.search(r"\.(jpe?g|png|webp)([?/]|$)", url_lower):
+        score += 2
+    elif ".svg" in url_lower:
+        score -= 2
+
+    # 黑名單（旗幟/國徽/印章類）
+    if any(p in url_lower for p in FLAG_PATTERNS):
+        score -= 30
+    # stub / logo / 填充圖
+    if any(p in url_lower for p in STUB_PATTERNS):
+        score -= 50
+
+    # 正向特徵（地圖、戰役）
+    if any(p in url_lower for p in MAP_PATTERNS):
+        score += 8
+    if any(p in url_lower for p in BATTLE_PATTERNS):
+        score += 5
+
+    # 事件類型感知調整
+    zh = ev.get("zh", "") or ""
+    en = (ev.get("en") or "").lower()
+
+    if any(k in zh for k in FOUND_ZH_KW) or any(k in en for k in FOUND_EN_KW):
+        # 建國類：旗幟再重罰、地圖再加分
+        if any(p in url_lower for p in FLAG_PATTERNS):
+            score -= 30
+        if any(p in url_lower for p in MAP_PATTERNS):
+            score += 15
+
+    if any(k in zh for k in WAR_ZH_KW) or any(k in en for k in WAR_EN_KW):
+        # 戰役類：旗幟重罰
+        if any(p in url_lower for p in FLAG_PATTERNS):
+            score -= 20
+
+    return score
+
+
 def fetch_all_candidates(ev, zh_first=True):
     candidates = []
     seen = set()
@@ -324,6 +404,10 @@ def fetch_all_candidates(ev, zh_first=True):
         for c in fetch_commons_search(ev["zh"], 3):
             add(c)
 
+    # 5. 評分並排序（高分在前）
+    for c in candidates:
+        c["score"] = score_candidate(c, ev)
+    candidates.sort(key=lambda c: -c["score"])
     return candidates
 
 
@@ -506,20 +590,31 @@ def main():
 
         candidates = fetch_all_candidates(ev, zh_first=args.zh_first)
 
+        # 評分邏輯：top > 0 且 (單候選或領先 >= 10) → auto-pick
+        AUTO_MIN_SCORE = 1
+        AUTO_GAP = 10
+        best = candidates[0] if candidates else None
+        best_score = best["score"] if best else -999
+        second_score = candidates[1]["score"] if len(candidates) > 1 else -999
+        clear_winner = (best_score >= AUTO_MIN_SCORE
+                        and (len(candidates) == 1 or best_score - second_score >= AUTO_GAP))
+
         if not candidates:
             print(f"{prefix} ✗ {zh}（找不到圖片）")
             stat_fail += 1
             failed_list.append((ev["id"], zh, "no candidates"))
             pending.append({**ev_meta(ev), "candidates": [], "note": "no candidates — AI WebSearch needed"})
-        elif len(candidates) == 1:
-            new_url = candidates[0]["url"]
-            source = candidates[0]["source"]
+        elif clear_winner:
+            new_url = best["url"]
+            source = best["source"]
             fills.append((ev, new_url, source))
-            print(f"{prefix} ✓ {zh}  [自動·{source}]")
+            print(f"{prefix} ✓ {zh}  [自動·{source}·score={best_score}]")
             stat_auto += 1
         else:
+            # 有候選但無清晰贏家 → 進 pending（含評分排序供 AI/用戶判斷）
             multi_list.append((ev["id"], zh, len(candidates)))
-            print(f"{prefix} ⊝ {zh}（{len(candidates)} 張候選 → pending-picks）")
+            hint = f"best={best_score} next={second_score if len(candidates) > 1 else 'n/a'}"
+            print(f"{prefix} ⊝ {zh}（{len(candidates)} 張候選 → pending-picks · {hint}）")
             stat_multi += 1
             pending.append({**ev_meta(ev), "candidates": candidates})
 

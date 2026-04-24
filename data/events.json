@@ -33054,7 +33054,8 @@
         "korea"
       ],
       "amazon_asin": "0393340910",
-      "amazon_title": "The Coldest Winter: America and the Korean War"
+      "amazon_title": "The Coldest Winter: America and the Korean War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Battle_of_Inchon.png"
     },
     {
       "id": "korean-war-chinese-intervention",
@@ -33071,7 +33072,8 @@
       "crossRef": [
         "china",
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Battle_of_Triangle_Hill_Chinese_Infantrymen.jpg"
     },
     {
       "id": "korean-war-chosin",
@@ -33088,7 +33090,8 @@
       "crossRef": [
         "usa",
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Chosin.jpg/1280px-Chosin.jpg"
     },
     {
       "id": "korean-war-armistice",
@@ -33105,7 +33108,8 @@
       "crossRef": [
         "korea",
         "cold-war"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Korean_War_armistice_agreement_1953.jpg/1280px-Korean_War_armistice_agreement_1953.jpg"
     },
     {
       "id": "korean-war-dmz",
@@ -33122,7 +33126,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone",
       "crossRef": [
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/070401_Panmunjeom3.jpg"
     },
     {
       "id": "korean-war-un-resolution",
@@ -33139,7 +33144,8 @@
       "crossRef": [
         "cross",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Korean-War-june-aug-1950.png"
     },
     {
       "id": "korean-war-osan",
@@ -33155,7 +33161,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Osan",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Osan_Bazooka_Team.jpg"
     },
     {
       "id": "korean-war-pusan",
@@ -33173,7 +33180,8 @@
       "crossRef": [
         "korea",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/27th_Infantry_Regiment_soldiers_at_the_Pusan_Perimeter%2C_September_4%2C_1950.jpg"
     },
     {
       "id": "korean-war-seoul-3rd",
@@ -33190,7 +33198,8 @@
       "crossRef": [
         "china",
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Chinese_Third_Phase_Campaign_map.jpg"
     },
     {
       "id": "korean-war-macarthur-fired",
@@ -33206,7 +33215,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Relief_of_Douglas_MacArthur",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Truman_and_MacArthur.JPG"
     },
     {
       "id": "korean-war-kaesong-talks",
@@ -33222,7 +33232,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Korean_Armistice_Agreement",
       "crossRef": [
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Korean_Armistice_Ko-Text_1953.jpg"
     },
     {
       "id": "korean-war-eisenhower-visit",
@@ -33238,7 +33249,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Dwight_D._Eisenhower",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/December_4%2C_1952_-_Dwight_D._Eisenhower_%28left%29_reviews_troops_of_the_Republic_of_Korea%27s_Capitol_Division_77_18_867.jpg"
     },
     {
       "id": "korean-war-stalin-death",
@@ -33254,7 +33266,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Death_of_Joseph_Stalin",
       "crossRef": [
         "russia-soviet"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Stalin%27s_funeral_procession_entering_Manezhnaya_Square_from_Okhotny_Ryad.jpg"
     },
     {
       "id": "am-rev-lexington-concord",
@@ -33273,7 +33286,8 @@
         "usa"
       ],
       "amazon_asin": "0306819597",
-      "amazon_title": "American Creation"
+      "amazon_title": "American Creation",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/The_Battle_of_Lexington.jpg"
     },
     {
       "id": "am-rev-declaration",
@@ -33292,7 +33306,8 @@
         "cross"
       ],
       "amazon_asin": "1476728747",
-      "amazon_title": "1776"
+      "amazon_title": "1776",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/United_States_Declaration_of_Independence.jpg"
     },
     {
       "id": "am-rev-saratoga",
@@ -33309,7 +33324,8 @@
       "crossRef": [
         "france",
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Surrender_of_General_Burgoyne.jpg"
     },
     {
       "id": "am-rev-franco-american",
@@ -33326,7 +33342,8 @@
       "crossRef": [
         "france",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Franco_American_treaty_of_alliance_6_feb_1778.jpg"
     },
     {
       "id": "am-rev-yorktown",
@@ -33343,7 +33360,8 @@
       "crossRef": [
         "usa",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Surrender_of_Lord_Cornwallis.jpg"
     },
     {
       "id": "am-rev-paris-treaty",
@@ -33360,7 +33378,8 @@
       "crossRef": [
         "uk",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Treaty_of_Paris_%281783%29.jpg"
     },
     {
       "id": "am-rev-1st-congress",
@@ -33376,7 +33395,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/First_Continental_Congress",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flickr_-_USCapitol_-_The_First_Continental_Congress%2C_1774.jpg"
     },
     {
       "id": "am-rev-2nd-congress",
@@ -33389,7 +33409,8 @@
       "desc_zh": "1775/5/10 Lexington 之後，殖民地在費城再開會，設大陸軍、發行貨幣，實質成為戰時政府。",
       "desc_en": "Reconvened in Philadelphia (May 10, 1775) after Lexington, it established the Continental Army and issued currency, acting as de facto government.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%A4%A7%E9%99%B8%E6%9C%83%E8%AD%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Second_Continental_Congress"
+      "wiki_en": "https://en.wikipedia.org/wiki/Second_Continental_Congress",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Independence_Hall_10.jpg"
     },
     {
       "id": "am-rev-bunker-hill",
@@ -33402,7 +33423,8 @@
       "desc_zh": "1775/6/17 波士頓外圍戰役，雖英軍勝但傷亡慘重，民兵證明能正面對抗英正規軍。",
       "desc_en": "Near Boston on Jun 17, 1775, British forces took the hill but at heavy cost, proving militia could stand against regulars.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%82%A6%E5%85%8B%E5%B1%B1%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Bunker_Hill"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Bunker_Hill",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/The_Death_of_General_Warren_at_the_Battle_of_Bunker%27s_Hill.jpg"
     },
     {
       "id": "am-rev-washington-cmd",
@@ -33418,7 +33440,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/George_Washington_in_the_American_Revolution",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Washingtoncongress.jpg"
     },
     {
       "id": "am-rev-common-sense",
@@ -33434,7 +33457,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Common_Sense_(pamphlet)",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Commonsense.jpg"
     },
     {
       "id": "am-rev-long-island",
@@ -33447,7 +33471,8 @@
       "desc_zh": "1776/8/27 Howe 率大軍登陸 Long Island 大敗 Washington，夜間撤退避免全軍覆沒；紐約被英占領達 7 年。",
       "desc_en": "Howe's forces routed Washington on Long Island (Aug 27, 1776); a night withdrawal saved the army. British held NYC for 7 years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%95%B7%E5%B3%B6%E4%BD%9C%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Long_Island"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Long_Island",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Battle_of_Long_Island_by_Domenick_D%27Andrea.jpg/1280px-Battle_of_Long_Island_by_Domenick_D%27Andrea.jpg"
     },
     {
       "id": "am-rev-trenton",
@@ -33463,7 +33488,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Trenton",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Battle_of_Trenton_by_Charles_McBarron.jpg"
     },
     {
       "id": "am-rev-valley-forge",
@@ -33480,7 +33506,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Valley_Forge",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Washington_and_Lafayette_at_Valley_Forge.jpg"
     },
     {
       "id": "am-rev-spain-join",
@@ -33493,7 +33520,8 @@
       "desc_zh": "1779/6/21 西班牙對英宣戰，雖未正式承認美國，但夾擊直布羅陀、佛羅里達分散英軍兵力。",
       "desc_en": "Spain declared war on Britain (Jun 21, 1779); though not a formal US ally, its sieges at Gibraltar and Florida stretched British forces thin.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9B%BD%E9%9D%A9%E5%91%BD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Spain_in_the_American_Revolutionary_War"
+      "wiki_en": "https://en.wikipedia.org/wiki/Spain_in_the_American_Revolutionary_War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Cuadro_por_espa%C3%B1a_y_por_el_rey%2C_Galvez_en_America.jpg"
     },
     {
       "id": "am-rev-camden",
@@ -33506,7 +33534,8 @@
       "desc_zh": "1780/8/16 英將 Cornwallis 在 Camden 大敗 Gates 指揮的美軍，南方戰線告急。",
       "desc_en": "Cornwallis crushed Gates's Continental force at Camden (Aug 16, 1780)—a disaster for the Southern campaign.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E9%A6%AC%E6%96%AF%E6%A9%8B",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Camden"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Camden",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Battle_of_Camden.jpg"
     },
     {
       "id": "am-rev-cowpens",
@@ -33519,7 +33548,8 @@
       "desc_zh": "1781/1/17 Daniel Morgan 以雙重包圍戰術殲滅 Tarleton 部，重創英軍南方機動力量。",
       "desc_en": "Daniel Morgan used double envelopment at Cowpens (Jan 17, 1781) to destroy Tarleton's force, crippling British mobility in the South.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%BA%AB%E6%9C%AC%E6%96%AF%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Cowpens"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/The_Battle_of_Cowpens_by_Don_Troiani.jpg"
     },
     {
       "id": "am-rev-guilford",
@@ -33532,7 +33562,8 @@
       "desc_zh": "1781/3/15 Cornwallis 雖在戰術上勝，但傷亡近 1/4，戰略失利；此後放棄 Carolinas 北上 Virginia。",
       "desc_en": "Cornwallis won tactically at Guilford Courthouse (Mar 15, 1781) but lost a quarter of his force; he abandoned the Carolinas for Virginia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%90%89%E7%88%BE%E7%A6%8F%E7%B8%A3%E6%B3%95%E9%99%A2%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Battle_of_Guilford_Courthouse_15_March_1781.jpg"
     },
     {
       "id": "vn-war-geneva",
@@ -33549,7 +33580,8 @@
       "crossRef": [
         "france",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Gen-commons.jpg"
     },
     {
       "id": "vn-war-tonkin-incident",
@@ -33565,7 +33597,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Gulf_of_Tonkin_incident",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Tonkingunboats.jpg"
     },
     {
       "id": "vn-war-tet-offensive",
@@ -33583,7 +33616,8 @@
         "usa"
       ],
       "amazon_asin": "0140265473",
-      "amazon_title": "Vietnam: A History"
+      "amazon_title": "Vietnam: A History",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Tet_Offensive_map.png"
     },
     {
       "id": "vn-war-paris-accords",
@@ -33600,7 +33634,8 @@
       "crossRef": [
         "usa",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Vietnam_Peace_Treaty_1973.jpg"
     },
     {
       "id": "vn-war-fall-saigon",
@@ -33617,7 +33652,8 @@
       "crossRef": [
         "southeast-asia",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Fall_of_Saigon_map.jpg/1280px-Fall_of_Saigon_map.jpg"
     },
     {
       "id": "vn-war-viet-cong",
@@ -33630,7 +33666,8 @@
       "desc_zh": "1960/12/20 北越支持下，南越地下武裝力量統合為「民族解放陣線」，西方稱越共（Viet Cong）。",
       "desc_en": "Backed by Hanoi, Southern insurgents united as the National Liberation Front on Dec 20, 1960—known in the West as Viet Cong.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%B6%8A%E5%8D%97%E5%8D%97%E6%96%B9%E6%B0%91%E6%97%8F%E8%A7%A3%E6%94%BE%E9%99%A3%E7%B7%9A",
-      "wiki_en": "https://en.wikipedia.org/wiki/Viet_Cong"
+      "wiki_en": "https://en.wikipedia.org/wiki/Viet_Cong",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Achievement_of_the_National_Liberation_Front_of_Southern_Vietnam.svg/1280px-Achievement_of_the_National_Liberation_Front_of_Southern_Vietnam.svg.png"
     },
     {
       "id": "vn-war-diem-killed",
@@ -33646,7 +33683,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1963_South_Vietnamese_coup",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Ngo_Dinh_Diem_25_November_1954.jpg"
     },
     {
       "id": "vn-war-marines-danang",
@@ -33662,7 +33700,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Role_of_the_United_States_in_the_Vietnam_War",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bruce_Crandall%27s_UH-1D.jpg"
     },
     {
       "id": "vn-war-my-lai",
@@ -33675,7 +33714,8 @@
       "desc_zh": "1968/3/16 美軍 C 連在美萊村屠殺 300-500 名越南平民；1969 年曝光，重創美國道德正當性。",
       "desc_en": "US Army Company C killed 300-500 Vietnamese civilians at My Lai on Mar 16, 1968. Exposed in 1969, it devastated US moral standing.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%BE%8E%E8%90%8A%E6%9D%91%E5%B1%A0%E6%AE%BA",
-      "wiki_en": "https://en.wikipedia.org/wiki/My_Lai_massacre"
+      "wiki_en": "https://en.wikipedia.org/wiki/My_Lai_massacre",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/My_Lai_massacre.jpg"
     },
     {
       "id": "vn-war-cambodia-invasion",
@@ -33691,7 +33731,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cambodian_campaign",
       "crossRef": [
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/American_soldier_during_the_Cambodian_Campaign%2C_reading_the_Stars_and_Stripes.jpg/1280px-American_soldier_during_the_Cambodian_Campaign%2C_reading_the_Stars_and_Stripes.jpg"
     },
     {
       "id": "vn-war-linebacker-ii",
@@ -33704,7 +33745,8 @@
       "desc_zh": "1972/12/18-29 美 B-52 對河內、海防進行史上最密集轟炸，迫北越返 Paris 談判桌。",
       "desc_en": "US B-52s bombed Hanoi/Haiphong intensively Dec 18-29, 1972, forcing North Vietnam back to the Paris negotiating table.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A1%9B%E8%80%85%E4%BA%8C%E8%99%9F%E8%A1%8C%E5%8B%95",
-      "wiki_en": "https://en.wikipedia.org/wiki/Operation_Linebacker_II"
+      "wiki_en": "https://en.wikipedia.org/wiki/Operation_Linebacker_II",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/B-52_Guam_Linebacker_II_-_Copia.jpg"
     },
     {
       "id": "vn-war-us-withdrawal",
@@ -33720,7 +33762,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Vietnamization",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/President_Richard_Nixon_greets_a_U.S._Army_1st_Infantry_Division_Soldier.jpg"
     },
     {
       "id": "vn-war-tonkin-resolution",
@@ -33736,7 +33779,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Gulf_of_Tonkin_Resolution",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/President_Lyndon_B._Johnson_signs_Gulf_of_Tonkin_resolution_-_NARA_-_192484.jpg/1280px-President_Lyndon_B._Johnson_signs_Gulf_of_Tonkin_resolution_-_NARA_-_192484.jpg"
     },
     {
       "id": "vn-war-chicago-68",
@@ -33752,7 +33796,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1968_Democratic_National_Convention_protests",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/19680810_20_Anti-War_March.jpg/1280px-19680810_20_Anti-War_March.jpg"
     },
     {
       "id": "vn-war-vietnamization",
@@ -33768,7 +33813,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Vietnamization",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/President_Richard_Nixon_greets_a_U.S._Army_1st_Infantry_Division_Soldier.jpg"
     },
     {
       "id": "vn-war-dc-protest",
@@ -33784,7 +33830,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Moratorium_to_End_the_War_in_Vietnam",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Anti-war_Moratorium_March%2C_1969%2C_DC_%2833822244541%29.jpg/1280px-Anti-war_Moratorium_March%2C_1969%2C_DC_%2833822244541%29.jpg"
     },
     {
       "id": "vn-war-kent-state",
@@ -33800,7 +33847,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Kent_State_shootings",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Kent_State_shootings.jpg"
     },
     {
       "id": "vn-war-pentagon-papers",
@@ -33816,7 +33864,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Pentagon_Papers",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Dissident_Activities_in_Indochina.svg"
     },
     {
       "id": "vn-war-boat-people",
@@ -36293,7 +36342,7 @@
     },
     {
       "id": "cw-cuban-revolution",
-      "year": 1959.0,
+      "year": 1959,
       "axis": "cold-war-early",
       "level": 2,
       "category": "politics",
@@ -36445,7 +36494,7 @@
     },
     {
       "id": "cw-us-china-normalize",
-      "year": 1979.0,
+      "year": 1979,
       "axis": "cold-war-detente",
       "level": 2,
       "category": "politics",
@@ -37783,7 +37832,7 @@
     },
     {
       "id": "rev-haitian-1804",
-      "year": 1804.0,
+      "year": 1804,
       "axis": "cross",
       "level": 1,
       "category": "politics",
@@ -37850,7 +37899,7 @@
     },
     {
       "id": "rev-cuban-1959",
-      "year": 1959.0,
+      "year": 1959,
       "axis": "cross",
       "level": 1,
       "category": "politics",
@@ -40438,7 +40487,7 @@
     },
     {
       "id": "trd-wto-1995",
-      "year": 1995.0,
+      "year": 1995,
       "axis": "cross",
       "level": 1,
       "category": "trade",
@@ -40586,7 +40635,7 @@
     },
     {
       "id": "trd-c-beic-1600",
-      "year": 1601.0,
+      "year": 1601,
       "axis": "thm-trade-colonial",
       "level": 2,
       "category": "trade",
@@ -40715,7 +40764,7 @@
     },
     {
       "id": "trd-m-nafta-1994",
-      "year": 1994.0,
+      "year": 1994,
       "axis": "thm-trade-modern",
       "level": 3,
       "category": "trade",
