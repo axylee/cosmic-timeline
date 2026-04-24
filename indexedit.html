@@ -1030,7 +1030,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604171803</span>
+  <span id="version-label">v202604241445</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -2818,13 +2818,16 @@ function drawEvents(eventsInView) {
   // Only show when zoomed in enough (otherwise too cluttered)
   // Round 3: 即使本體軸線被 scope 過濾掉（AXES[ev.axis] 不存在），
   //          只要 crossRef 目標軸線可見，仍在目標軸線畫空心圓（不畫連接線）
+  // 2026-04-24: Level-gated 漸進揭露（主頁 zoom 0.55→0.75→0.95 逐步放行 L1→L1+2→全部）
   const crZoomThreshold = _activeViewId ? 0.30 : 0.55;
+  const maxLevelForCrossRef = zoom >= 0.95 ? 3 : (zoom >= 0.75 ? 2 : 1);
   if (zoom >= crZoomThreshold) {
     // Round 3 修正：直接遍歷所有事件（不用 sorted，因為 sorted 只含本軸可見的事件）
     // 要找「有 crossRef 到可見軸線」的事件，即使本體軸線不在 AXES 裡
     events.forEach(ev => {
       if (!ev._crossRefs || !ev._crossRefs.length) return;
       if (ev.endYear) return;  // only point events
+      if ((ev.level || 1) > maxLevelForCrossRef) return;  // level-gated progressive reveal
 
       const mainAxVisible = !!AXES[ev.axis];  // 本體軸線是否存在於 AXES（scope 過濾後）
       const mainAxHidden  = mainAxVisible && hiddenAxes.has(ev.axis);
@@ -2856,7 +2859,7 @@ function drawEvents(eventsInView) {
         if (y1 !== null && Math.abs(y1 - y2) < 4) return;
 
         ctx.save();
-        ctx.globalAlpha = catA * (isHov ? 0.7 : 0.35);
+        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.25);
 
         // Vertical dashed line (只在本體軸線可見時畫)
         if (y1 !== null) {
@@ -2864,8 +2867,8 @@ function drawEvents(eventsInView) {
           ctx.moveTo(x, Math.min(y1, y2) + r);
           ctx.lineTo(x, Math.max(y1, y2) - r);
           ctx.strokeStyle = color;
-          ctx.lineWidth   = isHov ? 1.5 : 1;
-          ctx.setLineDash([3, 4]);
+          ctx.lineWidth   = isHov ? 1.2 : 0.7;
+          ctx.setLineDash([2, 5]);
           ctx.stroke();
           ctx.setLineDash([]);
         }
@@ -3646,7 +3649,8 @@ function findEventsAt(mx, my) {
 
       // Also hit-test crossRef hollow circles on target axes
       const crZoomThreshold = _activeViewId ? 0.30 : 0.55;
-      if (ev._crossRefs && ev._crossRefs.length && zoom >= crZoomThreshold) {
+      const maxLevelForCrossRef = zoom >= 0.95 ? 3 : (zoom >= 0.75 ? 2 : 1);
+      if (ev._crossRefs && ev._crossRefs.length && zoom >= crZoomThreshold && (ev.level || 1) <= maxLevelForCrossRef) {
         ev._crossRefs.forEach(crId => {
           if (hiddenAxes.has(crId) || !getAxisYMap().has(crId)) return;
           const y2 = axisY(crId);

@@ -11,13 +11,13 @@
 
 | | |
 |---|---|
-| 事件數 | 972 |
-| 軸線數 | 69 |
+| 事件數 | 1,561 |
+| 軸線數 | 101 |
 | 視圖數 | 88 |
 | 群組數 | 6（自然 · 世界 · 地區 · 文明 · 宗教 · 國家） |
 | 視圖群組 | 8（自然宇宙 · 文明縱覽 · 國家 · 戰爭 · 主題 · 重大事件 · 王朝與帝國 · 人物傳記） |
 | 語言 | 中文 / English |
-| 書籍連結 | 30 個事件有 Amazon affiliate 連結 |
+| 書籍連結 | 1,549 個事件有 Amazon affiliate 連結 |
 
 ---
 
@@ -31,8 +31,9 @@ cosmic-timeline/
 ├── data/
 │   └── events.json         # 所有事件、軸線、時代、UI 設定資料
 ├── tools/
-│   ├── cosmic-tools.html     # 工具箱（新增事件/軸線 + 圖片管理）
-│   └── find-missing-images.py  # 本機補圖腳本（繞過瀏覽器 CORS 限制）
+│   ├── cosmic-tools.html         # 工具箱（新增事件/軸線 + 圖片管理 + 多候選 picker）
+│   ├── images-find-missing.py    # 本機補圖腳本（單候選自動 + 多/零候選產 pending-picks）
+│   └── images-check-dead.py      # 圖片死連結檢查腳本
 ├── images/                 # 事件圖片 + og-preview.png + kofi_symbol.svg
 ├── check.py                # 驗證 events.json 的 Python 腳本
 ├── add-events-*.py         # 修改 events.json 的 Python 腳本
@@ -92,7 +93,7 @@ python -m http.server 8080
       ↓
 5. 補圖（依量擇一）：
    ├─ 小量（< 20 個）→ cosmic-tools.html（瀏覽器）
-   └─ 大量（20+ 個）→ find-missing-images.py（本機 Python，推薦）
+   └─ 大量（20+ 個）→ images-find-missing.py（本機 Python，推薦）
       ↓
 6. 若有 pending-picks → 上傳給 AI 挑 → 出新的 add-events-xxx.py → 回步驟 3
       ↓
@@ -114,7 +115,7 @@ python check.py
 **成功輸出範例：**
 ```
 ✓ 新增 43 個事件（跳過 2 個）
-✓ 總事件數：972
+✓ 總事件數：1561
 完成！請執行 python check.py 驗證
 ```
 
@@ -125,7 +126,7 @@ python check.py
 在本機 Edge 開 `tools/cosmic-tools.html`，拖入 `data/events.json`，按「開始更新圖片」。
 適合事件少、需要視覺確認、或同時要編輯軸線/視圖的時候。
 
-#### 大量 → find-missing-images.py（推薦）
+#### 大量 → images-find-missing.py（推薦）
 
 本機 Python 腳本，**繞過瀏覽器 CORS 限制**，多一個「解析 Wikipedia 頁面 HTML 抓 infobox 圖」的能力，成功率比 cosmic-tools.html 高。
 
@@ -136,30 +137,41 @@ pip install requests
 
 **執行：**
 ```powershell
-python tools/find-missing-images.py              # 只補缺圖（image 為空）
-python tools/find-missing-images.py --overwrite  # 覆蓋所有事件圖片
+python tools/images-find-missing.py              # 只補缺圖（image 為空）
+python tools/images-find-missing.py --overwrite  # 覆蓋所有事件圖片
 ```
 
-**輸出（全部放在 tools/，不直接動 data/events.json）：**
-- `tools/events.json` — 更新後的資料
-- `tools/pending-picks-YYYYMMDDHHMM.json` — 多候選清單（若有）
+**雙軌輸出（都放在 tools/）：**
 
-**自動化邏輯：**
-- 找到 1 個候選 → 直接寫入 `tools/events.json`
-- 找到多個候選 → 寫入 `tools/pending-picks-xxx.json`
-- 0 個候選 → 失敗清單（log 印出，人工處理）
+| 情況 | 產出 | 後續 |
+|------|------|------|
+| 單候選 | `add-events-YYYYMMDDHHmm-fill-images.py` | 覆蓋到根目錄執行即補圖 |
+| 多候選 | `pending-picks-YYYYMMDDHHmm.json`（items[].candidates）| 上傳給 AI 挑 |
+| 零候選 | `pending-picks-YYYYMMDDHHmm.json`（candidates:[]）| 上傳給 AI WebSearch 補 |
 
-**驗收流程：**
-1. 檢視 `tools/events.json` 的變動
-2. 確認 OK → 手動將 `tools/events.json` 覆蓋到 `data/events.json`
-3. `python check.py` 驗證
+**pending-picks JSON 結構：**
+```json
+{
+  "meta": { "generated", "count", "multi_candidate", "zero_candidate", "note" },
+  "items": [
+    {
+      "id", "zh", "en", "axis", "year", "category",
+      "desc_zh", "desc_en", "current_image",
+      "wiki_zh", "wiki_en",
+      "candidates": [ { "url", "label", "source" }, ... ]
+    }
+  ]
+}
+```
 
 ### 步驟 6：AI 挑圖（若有 pending-picks）
 
-1. 把 `tools/pending-picks-YYYYMMDDHHMM.json` 上傳到 AI 對話介面
-2. AI 根據 candidates 挑最適合的圖
-3. AI 輸出新的 `add-events-YYYYMMDDHHMM.py`（內含 `EVENT_UPDATES` 只更新 image 欄位）
+1. 上傳 `tools/pending-picks-YYYYMMDDHHmm.json` 給 AI
+2. AI 依規則挑圖（例：**國家建立事件優先地圖而非旗幟**）；零候選事件 AI 可 WebSearch 補 URL
+3. AI 輸出新的 `add-events-YYYYMMDDHHmm-images.py`（含 `IMAGE_UPDATES` 只更新 image 欄位）
 4. 回步驟 3 執行
+
+**cosmic-tools.html 手動 picker 輔助：** 多候選 popup 顯示 Wiki 中/EN + Google 圖片連結，候選全不合用時可點連結自己找 URL 貼上。
 
 ### 步驟 7–8：驗證 + 上線
 
@@ -194,17 +206,17 @@ Netlify 自動部署，幾分鐘後 cosmichistorytimeline.com 更新。
 **正常輸出範例：**
 ```
 ==================================================
-  事件總數     : 802
-  有圖片       : 802
-  缺圖片       : 0
-  有 en 名稱   : 802  (缺 0)
-  有 desc_en   : 802  (缺 0)
-  定義軸線數   : 59
+  事件總數     : 1561
+  有圖片       : 1353
+  缺圖片       : 208
+  有 en 名稱   : 1561  (缺 0)
+  有 desc_en   : 1561  (缺 0)
+  定義軸線數   : 101
   axis_groups  : 6 組
   era_bands    : 11 段
   era_buttons  : 12 個
   filter_cats  : 15 類
-  views        : 24 個
+  views        : 88 個
 ==================================================
 
 ✓ 所有事件軸線正確
@@ -327,12 +339,12 @@ print("完成！請執行 python check.py 驗證")
 events.json
 ├── meta              # 專案基本資訊
 ├── axis_groups       # 軸線群組定義（6 組）
-├── axes              # 軸線定義（59 條）
+├── axes              # 軸線定義（101 條）
 ├── era_bands         # Canvas 背景時代色帶（11 段）
 ├── era_buttons       # 底部導航按鈕（12 個）
 ├── filter_cats       # 篩選分類（15 類）
-├── views             # 主題視圖（24 個）
-└── events            # 歷史事件（802 個）
+├── views             # 主題視圖（88 個）
+└── events            # 歷史事件（1,561 個）
 ```
 
 > 所有 UI 資料都從 JSON 動態載入，index.html 不寫死任何資料。
@@ -366,6 +378,35 @@ events.json
 | civilization | 30 ~ 49 |
 | religion | 50 ~ 59 |
 | nation | 60 ~ 99 |
+
+**「緊跟 parent」只在同 group 內適用。** 跨 group 的 scope 軸應回自己的 group 區間，不可為了挨著 parent 而越界。
+
+範例：
+- `italy-roman`(civilization) 不能用 66.21 緊跟 `italy`(nation)，應回 civilization 區間 40.5（near `greece`=38）
+- `modern-greece`(nation) 不能用 42.5，應回 nation 區間 66.0
+- `europe` 本質跨國，group=region order=21.5（不是 nation 66）
+
+**戰爭 scope 軸約定（region 群組 28.1–29.0）：**
+
+所有戰爭 scope 軸：`parent=cross`、`group=region`、order 依時代排序於 28.1–29.0：
+
+| order | 軸 |
+|-------|-----|
+| 28.1 | peloponnesian-war |
+| 28.2 | punic-wars |
+| 28.3 | crusades |
+| 28.4 | thirty-years-war |
+| 28.5 | seven-years-war |
+| 28.6 | american-revolution |
+| 28.7 | napoleonic-wars |
+| 28.8 | ww1 |
+| 28.9 | ww2 |
+| 29.0 | cold-war |
+
+**原則：單一 unified scope 軸 > 多 sub-scope 軸。**
+- 好例：`korean-war` / `vietnam-war` / `american-civil-war`（一軸裝主事件）
+- 壞例：`ww1-western/eastern/mideast`、`ww2-europe/pacific`（多軸切割讓國家 view 戰爭線爆炸）
+- theater sub-scope 保留給 war dedicated view 的戰役細節。
 
 ### events（事件）
 
@@ -421,7 +462,9 @@ persia 波斯 (civilization, -559 → endYear:1501)
 └─ iran 伊朗 (nation, 1501 → 至今)
 ```
 
-### 🌌 natural 自然（8 條）
+> 以下為**主軸代表**列表（共 101 條含 scope 子軸）。戰爭/國家/文明 sub-scope 軸隨資料成長，全量請見 `data/events.json`。
+
+### 🌌 natural 自然（12 條）
 
 ```
 cosmos 宇宙
@@ -443,7 +486,7 @@ cross 跨文明 ← human-evo
 └─ arts 藝術文化
 ```
 
-### 🗺 region 地區（9 條）
+### 🗺 region 地區（20 條，含 10 戰爭 scope 軸 28.1–29.0）
 
 ```
 east 東方 ← human-evo
@@ -457,7 +500,7 @@ arctic 北極 ← migration
 antarctic 南極 ← migration
 ```
 
-### 🏛 civilization 文明（15 條）
+### 🏛 civilization 文明（21 條）
 
 ```
 mideast 中東 ← east
@@ -488,7 +531,7 @@ hinduism 印度教 ← india
 taoism 道教 ← china
 ```
 
-### 🏳 nation 國家（17 條）
+### 🏳 nation 國家（38 條，含 country-scope 子軸）
 
 ```
 iran 伊朗 ← persia              ← 文明→國家接續
@@ -700,7 +743,14 @@ crossRef 最多 3 條，可同時連全域軸線和專題子軸線。
 | Round 2 | URL 路由 `?v=xxx` + scope 軸線過濾 | ✅ 已完成 |
 | Round 3 | crossRef 空心圓不依賴本體軸線可見性 | ✅ 已完成 |
 | Round 4 | 專題頁「全部顯示」→ 跳主頁帶 zoom 參數 | ✅ 已完成 |
-| Round 5 | 中國史範例（軸線 + 事件 + 驗證整套機制） | ✅ 進行中 |
+| Round 5 | 中國/台灣/恐龍/新生代範例（軸線 + 事件 + 驗證） | ✅ 已完成 |
+| Phase I | 戰爭 scope 軸架構（10 unified）+ 10 Phase 1 國家 view（france/germany/uk/italy/russia/egypt/greece/iran/turkey/usa）| ✅ 已完成（04-24）|
+| Phase II | 15 country-war 關係（歐美 6 REPLACE、亞洲 4 ADD、補齊歐洲中東覆蓋）| ✅ 已完成（04-24）|
+| Phase III | War dedicated view 事件細化（korean-war → cold-war 依短→長）| 🚧 進行中 |
+| Phase IV | Regional views（reg-europe / reg-mideast / reg-eastasia ...）戰爭覆蓋 | ⏳ 待做 |
+| Phase V | Empire views（16 個，依事件密度低→高）| ⏳ 待做 |
+| Phase VI | Biographies（8 人物，依生命短→長）| ⏳ 待做 |
+| Phase VII | 其他補強（pandemics / music-history / ancient-civ / exploration bug）| ⏳ 待做 |
 
 ### 新增其他國家的流程
 
@@ -799,3 +849,9 @@ crossRef 最多 3 條，可同時連全域軸線和專題子軸線。
 | 2026-04-17 | applyView zoom 改用 view yearStart/yearEnd（有定義優先，無定義用 axes 自動算，向下相容） |
 | 2026-04-17 | 新生代生命演化主題：2 軸（cenozoic-epochs/cenozoic-life）+ 35 事件（7 世 pill + 28 生命事件） |
 | 2026-04-17 | 人類演化補 4 個早期物種（查德沙赫人/千年始祖/始祖地猿 Ardi/巧人）|
+| 2026-04-18~21 | 國家 view pilot（Phase 1）：france/germany/uk/italy/russia 5 國歐洲試點，建立 country-view 升級通用流程（sub-scope 軸 + pills + crossRef 三管齊下）|
+| 2026-04-22~23 | Phase 1 續：egypt/greece/iran 加入；修正 Ottoman/Byzantine 覆蓋；Amazon ASIN 書庫累積至 10 國 100+ 本 |
+| 2026-04-24 | ★ 戰爭架構大重構：建 10 條 unified war scope 軸（region 28.1–29.0，parent=cross）、WW1/WW2 事件由 home/europe 遷移至 unified、刪空軸 |
+| 2026-04-24 | Phase 1 收尾：turkey/usa 完成（建 korean-war / vietnam-war 軸）；Phase 2：15 country view 加戰爭 scope 軸，歐美 6 國 REPLACE sub-scope→unified、亞洲 4 國 ADD unified |
+| 2026-04-24 | Order 規則釐清：「緊跟 parent」僅同 group 內；修正 italy-roman / modern-greece / europe 違規 order；events 達 1,561、axes 達 101、Amazon ASIN 1,549 |
+| 2026-04-24 | Tool 強化：cosmic-tools.html picker popup 加 Wiki 中/EN + Google 圖片連結；images-find-missing.py 改雙軌輸出（單候選 .py + 多/零候選 pending-picks.json）|

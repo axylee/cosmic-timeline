@@ -13,17 +13,18 @@
 
   產出（都放在 tools/）：
     tools/add-events-YYYYMMDDHHmm-fill-images.py
-      ← 可執行的 .py，執行後會更新 data/events.json
-      ← 每個成功找到替代圖的事件都會列出來
-      ← 多候選事件不會進此檔案（留空白由使用者在 tools.html 手動挑）
+      ← 單候選事件 → 自動寫入（執行即補圖）
+    tools/pending-picks-YYYYMMDDHHmm.json
+      ← 多候選 / 零候選事件 → 留給 AI 挑
+      ← 包含事件 meta + wiki 連結 + 全部 candidates（URL/label/source）
+      ← 零候選事件 candidates:[]，可由 AI WebSearch 補 URL
 
   驗收流程：
     1. python tools/images-find-missing.py
-    2. 看產出的 add-events-*.py 確認變動
-    3. 滿意就執行：
-       copy tools\add-events-YYYYMMDDHHmm-fill-images.py .
-       python add-events-YYYYMMDDHHmm-fill-images.py
-       python check.py
+    2. 看產出的 add-events-*.py 確認單候選變動
+    3. 上傳 pending-picks-*.json 給 AI 挑多候選
+    4. AI 產出另一支 add-events-*.py → 執行
+    5. python check.py
 ═══════════════════════════════════════════════════════
 """
 import argparse
@@ -471,9 +472,25 @@ def main():
     stat_auto = 0
     stat_multi = 0
     stat_fail = 0
-    fills = []          # 成功找到單一候選，會進 .py
-    multi_list = []     # 多候選，留空白（只記報告）
-    failed_list = []    # 找不到
+    fills = []          # 單候選，進 add-events-*.py
+    pending = []        # 多候選 / 零候選，進 pending-picks-*.json
+    multi_list = []     # for 報告
+    failed_list = []    # for 報告
+
+    def ev_meta(ev):
+        return {
+            "id": ev["id"],
+            "zh": ev.get("zh", ""),
+            "en": ev.get("en", ""),
+            "axis": ev.get("axis", ""),
+            "year": ev.get("year"),
+            "category": ev.get("category", ""),
+            "desc_zh": ev.get("desc_zh", ""),
+            "desc_en": ev.get("desc_en", ""),
+            "current_image": ev.get("image", ""),
+            "wiki_zh": ev.get("wiki_zh", ""),
+            "wiki_en": ev.get("wiki_en", ""),
+        }
 
     for i, ev in enumerate(targets, 1):
         zh = ev.get("zh", "?")
@@ -484,6 +501,7 @@ def main():
             print(f"{prefix} ⊘ {zh}（無可搜尋資訊）")
             stat_fail += 1
             failed_list.append((ev["id"], zh, "no search info"))
+            pending.append({**ev_meta(ev), "candidates": [], "note": "no search info"})
             continue
 
         candidates = fetch_all_candidates(ev, zh_first=args.zh_first)
@@ -492,6 +510,7 @@ def main():
             print(f"{prefix} ✗ {zh}（找不到圖片）")
             stat_fail += 1
             failed_list.append((ev["id"], zh, "no candidates"))
+            pending.append({**ev_meta(ev), "candidates": [], "note": "no candidates — AI WebSearch needed"})
         elif len(candidates) == 1:
             new_url = candidates[0]["url"]
             source = candidates[0]["source"]
@@ -499,10 +518,10 @@ def main():
             print(f"{prefix} ✓ {zh}  [自動·{source}]")
             stat_auto += 1
         else:
-            # 多候選 → 不處理（不產 pending-picks）
             multi_list.append((ev["id"], zh, len(candidates)))
-            print(f"{prefix} ⊝ {zh}（{len(candidates)} 張候選，留空白由 tools.html 手動挑）")
+            print(f"{prefix} ⊝ {zh}（{len(candidates)} 張候選 → pending-picks）")
             stat_multi += 1
+            pending.append({**ev_meta(ev), "candidates": candidates})
 
         time.sleep(DELAY_BETWEEN_EVENTS)
 
@@ -516,35 +535,60 @@ def main():
             f.write(generate_fill_py(fills, ts, mode))
         print(f"\n📄 產出: {py_path}")
 
+    pending_path = None
+    if pending:
+        pending_path = os.path.join(tools_dir, f"pending-picks-{ts}.json")
+        payload = {
+            "meta": {
+                "generated": datetime.now().isoformat(timespec="seconds"),
+                "timestamp": ts,
+                "mode": mode,
+                "count": len(pending),
+                "multi_candidate": stat_multi,
+                "zero_candidate": stat_fail,
+                "note": (
+                    "Multi / zero-candidate events awaiting AI pick. "
+                    "For each item, pick best candidates[].url OR supply a custom URL via WebSearch. "
+                    "Rule: country founding events → prefer maps over flags."
+                ),
+            },
+            "items": pending,
+        }
+        with open(pending_path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        print(f"📄 產出: {pending_path}")
+
     # 5. 總結
     print()
     print("═" * 50)
     print(f"  自動補圖  : {stat_auto}  (進 add-events-*.py)")
-    print(f"  多候選    : {stat_multi}  (留空白，用 tools.html 手動挑)")
-    print(f"  找不到    : {stat_fail}  (留空白)")
+    print(f"  多候選    : {stat_multi}  (進 pending-picks-*.json)")
+    print(f"  找不到    : {stat_fail}  (進 pending-picks-*.json，candidates:[])")
     print("═" * 50)
 
     if multi_list:
-        print(f"\n─── 多候選事件（留空白，請到 cosmic-tools.html 手動補）───")
+        print(f"\n─── 多候選事件（→ pending-picks）───")
         for eid, zh, n in multi_list[:10]:
             print(f"  ⊝ {eid:30s} {zh} ({n} 張候選)")
         if len(multi_list) > 10:
             print(f"  ... 還有 {len(multi_list)-10} 個")
 
     if failed_list:
-        print(f"\n─── 找不到候選（留空白）───")
+        print(f"\n─── 找不到候選（→ pending-picks，candidates:[]）───")
         for eid, zh, reason in failed_list[:10]:
             print(f"  ✗ {eid:30s} {zh} — {reason}")
         if len(failed_list) > 10:
             print(f"  ... 還有 {len(failed_list)-10} 個")
 
+    print(f"\n─── 下一步 ───")
     if fills:
-        print(f"\n─── 下一步 ───")
-        print(f"  1. 檢視 tools/add-events-{ts}-fill-images.py")
-        print(f"  2. 覆蓋並執行：")
+        print(f"  1. 檢視 tools/add-events-{ts}-fill-images.py，確認後：")
         print(f"     copy tools\\add-events-{ts}-fill-images.py .")
         print(f"     python add-events-{ts}-fill-images.py")
         print(f"     python check.py")
+    if pending_path:
+        print(f"  2. 上傳 tools/pending-picks-{ts}.json 給 AI 挑多候選")
+        print(f"     AI 會產出另一份 add-events-*.py")
 
 
 if __name__ == "__main__":

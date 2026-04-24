@@ -1,0 +1,2520 @@
+
+=== AXIS: uk (12 items) ===
+
+[uk-reform-act] 1832 改革法案·選舉現代化 | Great Reform Act (1832)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/46/Microcosm_of_London_Plate_021_-_House_of_Commons_%28alt%29
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/3/3c/Coat_of_Arms_of_the_United_Kingdom_%281816-1837%29.svg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Coat_of_Arms_of_the_United_Kingdom_%281816-1837%29.s
+  [3] Commons                | Birmingham - Reform Act Map 1831.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Birmingham_-_Reform_Act_Map_1831.png/1280px-Birmingh
+  [4] Commons                | Reform Act 1832 First Page.jpg
+      https://upload.wikimedia.org/wikipedia/commons/2/2f/Reform_Act_1832_First_Page.jpg
+  [5] Commons                | Stoneware Reform Bill spirit flats (Derb
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Stoneware_Reform_Bill_spirit_flats_%28Derbyshire%2C_
+
+[uk-victoria] 維多利亞女王即位 | Queen Victoria (1837)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/e3/Queen_Victoria_by_Bassano.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/1280px-Queen_Victoria_
+  [2] Commons                | Queen Victoria Monument, Birkenhead.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Queen_Victoria_Monument%2C_Birkenhead.jpg/1280px-Que
+  [3] Commons                | Queen Victoria by JJE Mayall, 1860.png
+      https://upload.wikimedia.org/wikipedia/commons/a/a6/Queen_Victoria_by_JJE_Mayall%2C_1860.png
+  [4] Commons                | Queen Victoria surrounded by her family 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Queen_Victoria_surrounded_by_her_family_-_Coburg%2C_
+
+[uk-crimean-war] 克里米亞戰爭 | Crimean War (1854)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/75/William_Simpson_-_Attack_on_the_Malakoff.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/ab/%D0%9E%D1%81%D0%B0%D0%B4%D0%B0_%D0%A1%D0%B8%D0%BB%D0%B8%D1
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/William_Simpson_-_Attack_on_the_Malakoff.jpg/1280px-
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%D0%9E%D1%81%D0%B0%D0%B4%D0%B0_%D0%A1%D0%B8%D0%BB%D0
+  [4] Commons                | The Crimean War, 1854-1856 Q69851.jpg
+      https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Crimean_War%2C_1854-1856_Q69851.jpg
+  [5] Commons                | The Crimean War Memorial.jpg
+      https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Crimean_War_Memorial.jpg
+
+[uk-suffrage-1918] 婦女投票權·1918 代表法 | Women's Suffrage — 1918 Act (1918)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/b3/Women_from_the_Swedish_National_Association_for_Women%27s_
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8f/Coat_of_arms_of_the_United_Kingdom_%281901%E2%80%931952%29
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Coat_of_arms_of_the_United_Kingdom_%281901%E2%80%931
+
+[uk-welfare-nhs] NHS·福利國家成立 | NHS & Welfare State (1948)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/35/NHS_NNUH_entrance.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/en/0/0e/NHS_Scotland_logo.svg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/National_Health_Service_%28England%29_logo.svg/1280p
+
+[uk-suez-crisis] 蘇伊士危機·英帝國終結象徵 | Suez Crisis (1956)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1d/Tanks_Destroyed_Sinai.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/d0/Port_Said_from_air.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tanks_Destroyed_Sinai.jpg/1280px-Tanks_Destroyed_Sin
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Port_Said_from_air.jpg/1280px-Port_Said_from_air.jpg
+  [4] Commons                | Suez blockade.jpg
+      https://upload.wikimedia.org/wikipedia/commons/9/9d/Suez_blockade.jpg
+  [5] Commons                | Suez crisis.jpg
+      https://upload.wikimedia.org/wikipedia/commons/d/da/Suez_crisis.jpg
+
+[uk-eec-joining] 英國加入歐洲共同體 | UK Joins EEC (1973)
+  cat: politics
+  ** ZERO candidates **
+  wiki_en: https://en.wikipedia.org/wiki/United_Kingdom_and_the_European_Communities
+  wiki_zh: https://zh.wikipedia.org/wiki/英國與歐洲聯盟
+
+[uk-thatcher] Thatcher 任首相·新自由主義 | Margaret Thatcher PM (1979)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/3/3d/Margaret_Thatcher_stock_portrait_%28cropped%29.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Margaret_Thatcher.png/1280px-Margaret_Thatcher.png
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Margaret_Thatcher_stock_portrait_%28cropped%29.jpg/1
+  [3] Commons                | Margaret Thatcher Strom Thurmond 1981.jp
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Margaret_Thatcher_Strom_Thurmond_1981.jpg/1280px-Mar
+  [4] Commons                | Rajiv Gandhi and Margaret Thatcher (1985
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Rajiv_Gandhi_and_Margaret_Thatcher_%281985%29.jpg/12
+  [5] Commons                | Thatcher-loc.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Thatcher-loc.jpg/1280px-Thatcher-loc.jpg
+
+[uk-falklands] 福克蘭戰爭 | Falklands War (1982)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f3/Land.ops.2.en.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8b/HMS_Broadsword_and_Hermes%2C_1982_%28IWM%29.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Land.ops.2.en.svg/1280px-Land.ops.2.en.svg.png
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/HMS_Broadsword_and_Hermes%2C_1982_%28IWM%29.jpg/1280
+  [4] Commons                | Falklands Conflict 1982 - geograph.org.u
+      https://upload.wikimedia.org/wikipedia/commons/2/2b/Falklands_Conflict_1982_-_geograph.org.uk_-_3086527.jpg
+  [5] Commons                | Mural of Malvinas War.png
+      https://upload.wikimedia.org/wikipedia/commons/1/10/Mural_of_Malvinas_War.png
+
+[uk-scottish-indyref] 蘇格蘭獨立公投 | Scottish Independence Referendum (2014)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/5a/2014_Scottish_Independence_Referendum_by_Council_Areas.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/1280px-Flag_of_Scotland.svg.png
+  [3] Commons                | Scottish independence referendum results
+      https://upload.wikimedia.org/wikipedia/commons/0/0b/Scottish_independence_referendum_results.png
+
+[uk-brexit] Brexit·英國脫歐公投 | Brexit Referendum (2016)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/b6/Location_map_of_the_United_Kingdom_and_the_European_Union.
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/EU-Austritt_%2847521165961%29.svg/1280px-EU-Austritt
+
+[uk-covid] COVID-19 與 Boris Johnson | COVID-19 Pandemic (2020)
+  cat: politics
+  [0] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/UK_Coronavirus_Cases_per_Local_Authority_as_of_the_2
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Coronavirus_Covid-19_Morrisons_empty_shelves_1.jpg/1
+  [2] Commons                | Covid-19 SP - UTI V. Nova Cachoeirinha.j
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Covid-19_SP_-_UTI_V._Nova_Cachoeirinha.jpg/1280px-Co
+  [3] Commons                | Covid-19 San Salvatore 09.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Covid-19_San_Salvatore_09.jpg/1280px-Covid-19_San_Sa
+  [4] Commons                | Pupil washes hands during COVID-19 pande
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pupil_washes_hands_during_COVID-19_pandemic_in_Ghana
+
+=== AXIS: italy-roman (15 items) ===
+
+[it-rome-founded] 羅馬建城傳說·Romulus | Founding of Rome (Legend) (-753)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/ea/Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg/128
+  [2] Commons                | 0 Lupa Capitolina (2).JPG
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/0_Lupa_Capitolina_%282%29.JPG/1280px-0_Lupa_Capitoli
+  [3] Commons                | Lupa Capitolina, Rome.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/1280px-Lupa_Capitolina%2
+  [4] Commons                | The Capitoline Wolf, Musei Capitolini, R
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/The_Capitoline_Wolf%2C_Musei_Capitolini%2C_Rome_%281
+
+[it-republic-founded] 羅馬共和國成立·驅逐塔克文 | Roman Republic Founded (-509)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/8e/Flag_of_the_Roman_Empire.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8b/Roman_republic%2C_territory_44_BC.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_of_the_Roman_Empire.svg/1280px-Flag_of_the_Roma
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Roman_republic%2C_territory_44_BC.svg/1280px-Roman_r
+  [4] Commons                | Garibaldi's defence of the Roman Republi
+      https://upload.wikimedia.org/wikipedia/commons/8/80/Garibaldi%27s_defence_of_the_Roman_Republic_%281907%29_%28
+  [5] Commons                | Garibaldi's defence of the Roman Republi
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Garibaldi%27s_defence_of_the_Roman_Republic_%281907%
+
+[it-twelve-tables] 十二銅表法·羅馬法源 | Twelve Tables — Foundation of Roman Law (-451)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/98/Roman_SPQR_banner.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Antistub.svg/1280px-Antistub.svg.png
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Roman_SPQR_banner.svg/1280px-Roman_SPQR_banner.svg.p
+  [3] Commons                | Early Roman Law, The Regal Period (Clark
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Early_Roman_Law%2C_The_Regal_Period_%28Clark%2C_1872
+  [4] Commons                | Gaii institutionum iuris civilis comment
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gaii_institutionum_iuris_civilis_commentarii_quattuo
+
+[it-cannae] 坎尼戰役·漢尼拔殲滅羅馬軍 | Battle of Cannae (-216)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/5/57/The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1a/The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae_%28Ya
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae
+  [4] Commons                | Battle of Cannae 215 BC - Initial Roman 
+      https://upload.wikimedia.org/wikipedia/commons/d/d8/Battle_of_Cannae_215_BC_-_Initial_Roman_attack-ar.png
+  [5] Commons                | Lodovico Pogliaghi - Roman women in the 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lodovico_Pogliaghi_-_Roman_women_in_the_temple_of_Ma
+
+[it-carthage-destroyed] 迦太基滅亡·第三次布匿戰爭 | Destruction of Carthage (-146)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/e/e6/Carthage_location.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/16/City_of_Carthage_circa_149_BC.png
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/City_of_Carthage_circa_149_BC.png/1280px-City_of_Car
+  [3] Commons                | Catapulta by Edward Poynter.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Catapulta_by_Edward_Poynter.jpg/1280px-Catapulta_by_
+  [4] Commons                | Richard Henry Brockː The siege of Cartha
+      https://upload.wikimedia.org/wikipedia/commons/e/e2/Richard_Henry_Brock%CB%90_The_siege_of_Carthage_146_BC_-_R
+  [5] Commons                | Ridpath's Universal history - an account
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ridpath%27s_Universal_history_-_an_account_of_the_or
+
+[it-spartacus] 斯巴達克斯起義 | Spartacus Slave Revolt (-73)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/e/e9/Tod_des_Spartacus_by_Hermann_Vogel.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/06/Italy_and_environs%2C_218_BC.gif
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tod_des_Spartacus_by_Hermann_Vogel.jpg/1280px-Tod_de
+  [3] Commons                | Spartacus by Sanesi.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Spartacus_by_Sanesi.jpg/1280px-Spartacus_by_Sanesi.j
+
+[it-rubicon] 凱撒跨魯比孔河·「骰子已擲」 | Caesar Crosses the Rubicon (-49)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%2
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cro
+  [2] Commons                | Julius Caesar en zijn leger trekken de R
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Julius_Caesar_en_zijn_leger_trekken_de_Rubicon_over_
+
+[it-actium] 阿克興海戰·屋大維勝 | Battle of Actium (-31)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1a/Medinaceli_Actium_reliefs_06.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Medinaceli_Actium_reliefs_06.jpg/1280px-Medinaceli_A
+  [2] Commons                | Actian dekanaia and the battle locations
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Actian_dekanaia_and_the_battle_locations_of_the_Batt
+  [3] Commons                | Castro Battle of Actium.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Castro_Battle_of_Actium.jpg/1280px-Castro_Battle_of_
+
+[it-pompeii] 維蘇威火山爆發·龐貝湮沒 | Vesuvius Erupts — Pompeii Destroyed (79)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1e/Vesuvio_da_mare_2.JPG
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/d1/Destruction_of_Pompeii_and_Herculaneum.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Vesuvio_da_mare_2.JPG/1280px-Vesuvio_da_mare_2.JPG
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Destruction_of_Pompeii_and_Herculaneum.jpg/1280px-De
+  [4] Commons                | Mount Vesuvius (48157510282).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mount_Vesuvius_%2848157510282%29.jpg/1280px-Mount_Ve
+  [5] Commons                | Vesuvius on fire ESA381063.gif
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Vesuvius_on_fire_ESA381063.gif/1280px-Vesuvius_on_fi
+
+[it-colosseum] 羅馬競技場落成 | Colosseum Inaugurated (80)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/97/RomaCircoMassimoDaNord1.JPG
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg
+  [3] Commons                | Colosseum Ses Titus 80AD.JPG
+      https://upload.wikimedia.org/wikipedia/commons/b/b5/Colosseum_Ses_Titus_80AD.JPG
+  [4] Commons                | Historical image of the Colosseum - Exte
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Historical_image_of_the_Colosseum_-_Exterior_-_Nov_1
+
+[it-trajan-peak] 圖拉真鼎盛·羅馬版圖最大 | Trajan — Empire at Greatest Extent (117)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/c3/Traianus_%28Museo_del_Prado%29_01.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/9d/Traianus_Glyptothek_Munich_336.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Traianus_Glyptothek_Munich_336.jpg/1280px-Traianus_G
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Traianus_%28Museo_del_Prado%29_01.jpg/1280px-Traianu
+  [4] Commons                | Decline and Fall of the Roman Empire vol
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Decline_and_Fall_of_the_Roman_Empire_vol_1_%281897%2
+  [5] Commons                | Roman Empire Trajan 117AD.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Roman_Empire_Trajan_117AD.png/1280px-Roman_Empire_Tr
+
+[it-marcus-aurelius] 馬可奧理略·哲學家皇帝 | Marcus Aurelius — Philosopher Emperor (161)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/80/MSR-ra-61-b-1-DM_%28cropped%29.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/ec/MSR-ra-61-b-1-DM.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/MSR-ra-61-b-1-DM_%28cropped%29.jpg/1280px-MSR-ra-61-
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/MSR-ra-61-b-1-DM.jpg/1280px-MSR-ra-61-b-1-DM.jpg
+  [4] Commons                | Marcus Aurelius Arch Tripoli Libya.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Marcus_Aurelius_Arch_Tripoli_Libya.jpg/1280px-Marcus
+  [5] Commons                | Marcus Aurelius Capitoline Hill Septembe
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Marcus_Aurelius_Capitoline_Hill_September_2015-1.jpg
+
+[it-edict-milan] 米蘭敕令·基督教合法化 | Edict of Milan (313)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/76/Constantine_Chiaramonti_Inv1749.jpg
+  [1] Commons                | IMG 6735 - Milano - S. Giorgio al Palazz
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/IMG_6735_-_Milano_-_S._Giorgio_al_Palazzo_-_Lapide_1
+  [2] Commons                | Lapide Editto di Milano (anno 313 d.C) a
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lapide_Editto_di_Milano_%28anno_313_d.C%29_affissa_i
+  [3] Commons                | ΑΝΤΙΓΡΑΦΟΝ ΒΑΣΙΛΙΚΩΝ ΔΙΑΤΑΞΕΩΝ ΕΚ ΡΩΜΑΙΚ
+      https://upload.wikimedia.org/wikipedia/commons/3/31/%CE%91%CE%9D%CE%A4%CE%99%CE%93%CE%A1%CE%91%CE%A6%CE%9F%CE%
+
+[it-constantinople-founded] 君士坦丁堡建·東遷新都 | Constantinople Founded (330)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/bb/Byzantine_Constantinople-en.png
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Byzantine_Constantinople-en.png/1280px-Byzantine_Con
+  [2] Commons                | 4KPARTITIO.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/4KPARTITIO.png/1280px-4KPARTITIO.png
+
+[it-leo-attila] 教宗利奧勸退阿提拉 | Pope Leo Turns Back Attila (452)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/e0/Pope_St._Leo_I_the_Great.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo.
+
+=== AXIS: italy (27 items) ===
+
+[it-venice-697] 威尼斯共和國·首位 Doge | Venice — First Doge (697)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/39/Venezianische_Kolonien.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/12/Variant_war_flag_of_the_Serene_Republic_of_Venice.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Republic_of_Venice_%281659-1675%29.svg/1280p
+  [3] Commons                | (Venice) (I) Progetti per il monumento f
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/%28Venice%29_%28I%29_Progetti_per_il_monumento_funeb
+  [4] Commons                | Frari (Venice) nave left - Monument to D
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Frari_%28Venice%29_nave_left_-_Monument_to_Doge_Giov
+  [5] Commons                | Frari (Venice) nave left - Monument to D
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frari_%28Venice%29_nave_left_-_Monument_to_Doge_Giov
+
+[it-papal-states] 教宗國成立·丕平贈土 | Papal States — Donation of Pepin (754)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/4e/Papal_States_1789.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/08/La_donacion_de_Pipino_el_Breve_al_Papa_Esteban_II.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_the_Papal_States_%28pre_1808%29.svg/1280px-F
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/La_donacion_de_Pipino_el_Breve_al_Papa_Esteban_II.jp
+
+[it-saracen-sicily] 薩拉森人征服西西里 | Arab Conquest of Sicily (827)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/95/Italy_1000_AD-zh.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/bc/Map_of_Islamic_Sicily_under_the_Kalbid_Dynasty_c.1000_AD.p
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Italy_1000_AD-zh.svg/1280px-Italy_1000_AD-zh.svg.png
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Map_of_Islamic_Sicily_under_the_Kalbid_Dynasty_c.100
+
+[it-norman-sicily] 諾曼西西里王國·Roger II 加冕 | Norman Kingdom of Sicily (1130)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/0a/Bandiera_del_Regno_di_Sicilia_4.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Bandiera_del_Regno_di_Sicilia_4.svg/1280px-Bandiera_
+
+[it-saint-francis] 聖方濟各創方濟會 | St. Francis Founds Franciscans (1209)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f8/San_Francesco.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/3/33/Philip_Fruytiers_-_St._Francis_of_Assisi.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/b/b4/Master_of_the_bardi_saint_francis_._St._Francis_and_scenes
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/San_Francesco.jpg/1280px-San_Francesco.jpg
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Philip_Fruytiers_-_St._Francis_of_Assisi.jpg/1280px-
+  [5] Commons                | New St. Francis Seminary Cincinnati 1926
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/New_St._Francis_Seminary_Cincinnati_1926.jpg/1280px-
+
+[it-vivaldi-seasons] 韋瓦第《四季》 | Vivaldi's Four Seasons (1725)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1b/Antonio_Vivaldi.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/27/Antonio_Vivaldi_2.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Antonio_Vivaldi_2.jpg/1280px-Antonio_Vivaldi_2.jpg
+
+[it-pompeii-discovered] 龐貝出土·考古學起點 | Pompeii Excavations Begin (1748)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/d4/Theathres_of_Pompeii.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Theathres_of_Pompeii.jpg/1280px-Theathres_of_Pompeii
+
+[it-napoleon-italy] 拿破崙征義·重塑半島 | Napoleon's Italian Campaign (1796)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/5f/Entr%C3%A9e_de_l%E2%80%99Arm%C3%A9e_fran%C3%A7aise_%C3%A0_
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Entr%C3%A9e_de_l%E2%80%99Arm%C3%A9e_fran%C3%A7aise_%
+  [2] Commons                | Detaille Bonaparte in Italy 1797.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Detaille_Bonaparte_in_Italy_1797.jpg/1280px-Detaille
+  [3] Commons                | France militaire 1836 TIII 157027.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/France_militaire_1836_TIII_157027.jpg/1280px-France_
+  [4] Commons                | Italian campaigns 1796.JPG
+      https://upload.wikimedia.org/wikipedia/commons/d/d6/Italian_campaigns_1796.JPG
+
+[it-mazzini-young-italy] 馬志尼·青年義大利運動 | Mazzini Founds Young Italy (1831)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1a/Giuseppe_Mazzini.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/98/233344387659986_Mazzini.Joseph.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Giuseppe_Mazzini.jpg/1280px-Giuseppe_Mazzini.jpg
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/233344387659986_Mazzini.Joseph.jpg/1280px-2333443876
+  [4] Commons                | Alex Young - Orlandina Basket 2013.JPG
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Alex_Young_-_Orlandina_Basket_2013.JPG/1280px-Alex_Y
+  [5] Commons                | Banner of Giovine Italia.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Banner_of_Giovine_Italia.png/1280px-Banner_of_Giovin
+
+[it-1848-italy] 1848 義大利革命·首次獨立戰爭 | 1848 Italian Revolutions (1848)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/92/Episodio_delle_cinque_giornate_%28Baldassare_Verazzi%29.jp
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Museo_Torre_di_San_Martino_della_Battaglia_-_affresc
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Episodio_delle_cinque_giornate_%28Baldassare_Verazzi
+  [3] Commons                | 1848 Events Collage V 1.0.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/1848_Events_Collage_V_1.0.jpg/1280px-1848_Events_Col
+  [4] Commons                | Johann Nepomuk Schönberg - Pius IX's esc
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Johann_Nepomuk_Sch%C3%B6nberg_-_Pius_IX%27s_escape_t
+
+[it-second-war-indep] 第二次獨立戰爭·薩丁尼亞奪倫巴底 | Second War of Italian Independence (1859)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/40/Yvon_Bataille_de_Solferino_Compiegne.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Napol%C3%A9on_III_%C3%A0_la_bataille_de_Solf%C3%A9ri
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Yvon_Bataille_de_Solferino_Compiegne.jpg/1280px-Yvon
+  [3] Commons                | Asigliano Vercellese, Comune.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Asigliano_Vercellese%2C_Comune.jpg/1280px-Asigliano_
+  [4] Commons                | Episode of the Second Italian War of Ind
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Episode_of_the_Second_Italian_War_of_Independence._R
+  [5] Commons                | Places of the 1859 Austro-Sardinian war.
+      https://upload.wikimedia.org/wikipedia/commons/6/60/Places_of_the_1859_Austro-Sardinian_war.png
+
+[it-garibaldi-thousand] Garibaldi 千人遠征·南義崛起 | Garibaldi's Expedition of the Thousand (1860)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/c3/Partenza_da_Quarto.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Partenza_da_Quarto.jpg/1280px-Partenza_da_Quarto.jpg
+  [2] Commons                | Expedition of the Thousand, Giuseppe Gar
+      https://upload.wikimedia.org/wikipedia/commons/0/08/Expedition_of_the_Thousand%2C_Giuseppe_Garibaldi_in_Pretor
+  [3] Commons                | Garibaldi departing on the Expedition of
+      https://upload.wikimedia.org/wikipedia/commons/b/b0/Garibaldi_departing_on_the_Expedition_of_the_Thousand_in_1
+  [4] Commons                | Nodari Giuseppe, I mille attraversano il
+      https://upload.wikimedia.org/wikipedia/commons/8/82/Nodari_Giuseppe%2C_I_mille_attraversano_il_ponte_Ammiragli
+
+[it-italy-unified] 義大利王國成立 | Kingdom of Italy Proclaimed (1861)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/00/Italian-unification.gif
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/92/Episodio_delle_cinque_giornate_%28Baldassare_Verazzi%29.jp
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Civil_Flag_and_Civil_Ensign_of_the_Kingdom_of_Sardin
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Episodio_delle_cinque_giornate_%28Baldassare_Verazzi
+  [4] Commons                | Bertoleoni photo.jpg
+      https://upload.wikimedia.org/wikipedia/commons/5/55/Bertoleoni_photo.jpg
+  [5] Commons                | Bertoleoni sketch.jpg
+      https://upload.wikimedia.org/wikipedia/commons/3/37/Bertoleoni_sketch.jpg
+
+[it-rome-capital] 義軍佔羅馬·教宗國終結 | Rome Becomes Italian Capital (1870)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7f/Ludovico_Tuminello_-_Veduta_delle_barricate_a_Porta_San_Gi
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ludovico_Tuminello_-_Veduta_delle_barricate_a_Porta_
+
+[it-march-on-rome] 向羅馬進軍·墨索里尼掌權 | March on Rome — Mussolini Takes Power (1922)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/3/31/Naples_Fascist_rally_on_24_October_1922_%282%29.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Naples_Fascist_rally_on_24_October_1922_%282%29.jpg/
+
+[it-lateran-pacts] 拉特蘭條約·梵蒂岡建國 | Lateran Pacts — Vatican City (1929)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/3b/Group_of_Vatican_and_Italian_government_notables_posing_at
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Group_of_Vatican_and_Italian_government_notables_pos
+
+[it-republic-1946] 義大利共和國成立·公投廢君主 | Italian Republic Founded (1946)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8c/Referendum-2-giugno_scheda_elettorale.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Italy_%281861-1946%29_crowned.svg/1280px-Fla
+  [2] Commons                | Arrival ceremony for Giulio Andreotti, P
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Arrival_ceremony_for_Giulio_Andreotti%2C_President_o
+  [3] Commons                | Arrival ceremony for Giulio Andreotti, P
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Arrival_ceremony_for_Giulio_Andreotti%2C_President_o
+  [4] Commons                | Prag, Nationalmuseum, Brunnen -- 2019 --
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Prag%2C_Nationalmuseum%2C_Brunnen_--_2019_--_6841.jp
+
+[it-treaty-rome] 羅馬條約·歐洲共同體成立 | Treaty of Rome — EEC Founded (1957)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/4a/EGKS.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/1/1a/%D0%A0%D0%B8%D0%BC%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%B4%D0
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/EGKS.png/1280px-EGKS.png
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/1280px-Wikisource-logo.svg.png
+
+[it-aldo-moro] Aldo Moro 綁架·鉛色年代 | Aldo Moro Kidnapped (1978)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/a/ae/Aldo_Moro.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/70/Aldo_Moro_br.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Aldo_Moro_br.jpg/1280px-Aldo_Moro_br.jpg
+  [3] Commons                | Aldo-moro-via-caetani-8001.jpg
+      https://upload.wikimedia.org/wikipedia/commons/1/16/Aldo-moro-via-caetani-8001.jpg
+  [4] Commons                | Aldo Moro br cropped.jpg
+      https://upload.wikimedia.org/wikipedia/commons/8/81/Aldo_Moro_br_cropped.jpg
+
+[it-tangentopoli] 淨手運動·第一共和倒台 | Mani Pulite — First Republic Collapses (1992)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/06/Echadas_de_Monedas.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Echadas_de_Monedas.jpg/1280px-Echadas_de_Monedas.jpg
+
+[it-euro] 義大利採用歐元·里拉退場 | Italy Adopts Euro (2002)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/48/Euro_banknotes_Europa_series.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/f5/Euro_Series_Banknotes_%282019%29_-_centered.png
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Euro_Series_Banknotes_%282019%29_-_centered.png/1280
+
+[it-ostrogothic-kingdom] 東哥德王國·Theodoric 統治 | Ostrogothic Kingdom (493)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/25/%28Ostrogothic%29_Kingdom_of_italy_-_508_to_534_AD.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/9f/Teodorico_re_dei_Goti_%28493-526%29_white.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%28Ostrogothic%29_Kingdom_of_italy_-_508_to_534_AD.p
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Teodorico_re_dei_Goti_%28493-526%29_white.jpg/1280px
+  [4] Commons                | Map of The Ostrogothic Kingdom in 523 AD
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Map_of_The_Ostrogothic_Kingdom_in_523_AD.png/1280px-
+  [5] Commons                | Map of the Ostrogothic kingdom.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Map_of_the_Ostrogothic_kingdom.png/1280px-Map_of_the
+
+[it-lombard-kingdom] 倫巴底王國·北義 200 年 | Lombard Kingdom (568)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/b5/Lombard_%28Kingdom_of%29_Italy.png
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lombard_%28Kingdom_of%29_Italy.png/1280px-Lombard_%2
+  [2] Commons                | Lombard Conquest of Italy.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Lombard_Conquest_of_Italy.png/1280px-Lombard_Conques
+
+[it-venice-republic-span] 威尼斯共和國·1100 年最長共和 | Republic of Venice (697-1797) (697)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/39/Venezianische_Kolonien.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/12/Variant_war_flag_of_the_Serene_Republic_of_Venice.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Republic_of_Venice_%281659-1675%29.svg/1280p
+  [3] Commons                | (Venice) Bocca di Leone in the Doge's Pa
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/%28Venice%29_Bocca_di_Leone_in_the_Doge%27s_Palace.j
+
+[it-papal-states-span] 教宗國·1100 年世俗領 | Papal States (754-1870) (754)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/4e/Papal_States_1789.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_the_Papal_States_%28pre_1808%29.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_the_Papal_States_%28pre_1808%29.svg/1280px-F
+
+[it-hre-italy] 神聖羅馬帝國名義義大利 | Imperial Italy (Holy Roman Empire) (962)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/dd/Banner_of_the_Holy_Roman_Emperor_with_haloes_%281430-1806%
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Banner_of_the_Holy_Roman_Emperor_with_haloes_%281430
+  [2] Commons                | C. 1512 Holy Roman Empire.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/C._1512_Holy_Roman_Empire.jpg/1280px-C._1512_Holy_Ro
+
+[it-two-sicilies] 兩西西里王國·南義 730 年 | Kingdom of Two Sicilies (1130-1861) (1130)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_the_Kingdom_of_the_Two_Sicilies_%281816%29.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_the_Kingdom_of_the_Two_Sicilies_%281816%29.s
+
+=== AXIS: italy-renaissance (13 items) ===
+
+[it-dante] 但丁《神曲》 | Dante's Divine Comedy (1308)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/69/%E3%80%8A%E4%BD%86%E4%B8%81%EF%BC%8C%E9%99%84%E5%85%8B%E9%
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7b/Dante_Domenico_di_Michelino.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Dante_Domenico_di_Michelino.jpg/1280px-Dante_Domenic
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [4] Commons                | Michelangelo Caetani, Overview of the Di
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Michelangelo_Caetani%2C_Overview_of_the_Divine_Comed
+  [5] Commons                | Michelangelo Caetani, The Divine Comedy 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Michelangelo_Caetani%2C_The_Divine_Comedy_Described_
+
+[it-petrarch] 佩脫拉克·人文主義之父 | Petrarch — Father of Humanism (1336)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/d9/Altichiero%2C_ritratto_di_Francesco_Petrarca.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/50/Petrarch%2C_Santa_Maria_Novella.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Altichiero%2C_ritratto_di_Francesco_Petrarca.jpg/128
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Petrarch%2C_Santa_Maria_Novella.jpg/1280px-Petrarch%
+
+[it-boccaccio] 薄伽丘《十日談》 | Boccaccio's Decameron (1349)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/00/Boccaccio_-_Decameron%2C_MCCCCLXXXXII_ad_di_XX_de_giugno_-
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/2/29/Andrea_del_Castagno_Giovanni_Boccaccio_c_1450.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Boccaccio_-_Decameron%2C_MCCCCLXXXXII_ad_di_XX_de_gi
+  [3] Commons                | Boccaccio - Decameron, MCCCCLXXXXII ad d
+      https://upload.wikimedia.org/wikipedia/commons/6/6b/Boccaccio_-_Decameron%2C_MCCCCLXXXXII_ad_di_XX_de_giugno_-
+  [4] Commons                | Decameron BNF Ms 12421 - J5.N5.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Decameron_BNF_Ms_12421_-_J5.N5.jpg/1280px-Decameron_
+  [5] Commons                | Ghita Locking out her Husband Tofano, fr
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ghita_Locking_out_her_Husband_Tofano%2C_from_The_Dec
+
+[it-medici-rise] 梅迪奇家族崛起·Cosimo 主政 | Medici Rise — Cosimo Returns to Florence (1434)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/49/Augmented_Arms_of_Medici.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/fa/Cosimo_di_Medici_%28Bronzino%29.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Augmented_Arms_of_Medici.svg/1280px-Augmented_Arms_o
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Cosimo_di_Medici_%28Bronzino%29.jpg/1280px-Cosimo_di
+
+[it-leonardo-milan] 達文西赴米蘭·盛期文藝復興 | Leonardo da Vinci Goes to Milan (1482)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/06/Francesco_Melzi_-_Portrait_of_LeonardoFXD2.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Francesco_Melzi_-_Portrait_of_LeonardoFXD2.jpg/1280p
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png/1280px-Fr
+  [4] Commons                | De Blasis - Leonardo da Vinci, 1872.djvu
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/De_Blasis_-_Leonardo_da_Vinci%2C_1872.djvu/page1-128
+
+[it-italian-wars] 義大利戰爭爆發·法王查理八世入侵 | Italian Wars Begin (1494)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/40/Italian_War_Battle.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_War_Battle.jpg/1280px-Italian_War_Battle.jpg
+  [2] Commons                | Commissions - Italy - Italian Commission
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Commissions_-_Italy_-_Italian_Commission_given_great
+  [3] Commons                | Covid-19 San Salvatore 02.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Covid-19_San_Salvatore_02.jpg/1280px-Covid-19_San_Sa
+  [4] Commons                | Plate 35- The Batavians Become Afraid an
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Plate_35-_The_Batavians_Become_Afraid_and_Begin_Peac
+
+[it-michelangelo-david] 米開朗基羅《大衛》 | Michelangelo's David (1504)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/26/Michelangelo%27s_David_2021_-_1.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/bb/%27David%27_by_Michelangelo_Fir_JBU004.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/%27David%27_by_Michelangelo_Fir_JBU004.jpg/1280px-%2
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Michelangelo%27s_David_2021_-_1.jpg/1280px-Michelang
+  [4] Commons                | Michelangelo's David (Foreground).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Michelangelo%27s_David_%28Foreground%29.jpg/1280px-M
+  [5] Commons                | Michelangelo's David - right view 2.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Michelangelo%27s_David_-_right_view_2.jpg/1280px-Mic
+
+[it-michelangelo-sistine] 米開朗基羅西斯汀禮拜堂天頂 | Sistine Chapel Ceiling (1512)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1d/Sistine_Chapel_ceiling_02_%28brightened%29.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Sistine_Chapel_ceiling_02_%28brightened%29.jpg/1280p
+  [2] Commons                | 'Sistine Chapel ceiling' by Michelangelo
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%27Sistine_Chapel_ceiling%27_by_Michelangelo_JBU21.J
+  [3] Commons                | CAPPELLA SISTINA Ceiling.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/CAPPELLA_SISTINA_Ceiling.jpg/1280px-CAPPELLA_SISTINA
+
+[it-machiavelli-prince] 馬基維利《君主論》 | Machiavelli's The Prince (1513)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/77/Machiavelli_Principe_Cover_Page.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Machiavelli_Principe_Cover_Page.jpg/1280px-Machiavel
+  [2] Commons                | The Prince.djvu
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/The_Prince.djvu/page1-1280px-The_Prince.djvu.jpg
+
+[it-sack-rome] 羅馬之劫·神聖羅馬帝國軍洗劫 | Sack of Rome (1527)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1f/Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_century.j
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_cen
+  [2] Commons                | Sack of Rome by Alaric - sacred vessels 
+      https://upload.wikimedia.org/wikipedia/commons/5/5f/Sack_of_Rome_by_Alaric_-_sacred_vessels_are_brought_to_a_c
+  [3] Commons                | Sack of Rome by the Visigoths on 24 Augu
+      https://upload.wikimedia.org/wikipedia/commons/a/a0/Sack_of_Rome_by_the_Visigoths_on_24_August_410_by_JN_Sylve
+  [4] Commons                | Siege of Rome by Alaric I, 410.png
+      https://upload.wikimedia.org/wikipedia/commons/9/9b/Siege_of_Rome_by_Alaric_I%2C_410.png
+
+[it-trent-council] 特利騰大公會議·反宗教改革 | Council of Trent — Counter-Reformation (1545)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7e/Concilio_Trento_Museo_Buonconsiglio.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Concilio_Trento_Museo_Buonconsiglio.jpg/1280px-Conci
+  [2] Commons                | Council of Trent (Chemnitz).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Council_of_Trent_%28Chemnitz%29.jpg/1280px-Council_o
+
+[it-galileo-telescope] 伽利略望遠鏡觀測·《星際信使》 | Galileo's Telescope Discoveries (1610)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/77/Sidereus_Nuncius_1610.Galileo.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/00/Houghton_IC6.G1333.610s_-_Sidereus_nuncius.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Houghton_IC6.G1333.610s_-_Sidereus_nuncius.jpg/1280p
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sidereus_Nuncius_1610.Galileo.jpg/1280px-Sidereus_Nu
+  [4] Commons                | Galileo offering his telescope to three 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Galileo_offering_his_telescope_to_three_women_%28pos
+  [5] Commons                | Parkes Radio Telescope (CSIRO).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Parkes_Radio_Telescope_%28CSIRO%29.jpg/1280px-Parkes
+
+[it-galileo-trial] 伽利略受審·宗教裁判所 | Galileo's Trial (1633)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/6b/Galileo_before_the_Holy_Office_-_Joseph-Nicolas_Robert-Fle
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Galileo_facing_the_Roman_Inquisition.jpg/1280px-Gali
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Translation_to_zh_arrow.svg/1280px-Translation_to_zh
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Galileo_before_the_Holy_Office_-_Joseph-Nicolas_Robe
+  [4] Commons                | Artur Grottger - Przesłuchanie Galileusz
+      https://upload.wikimedia.org/wikipedia/commons/e/ec/Artur_Grottger_-_Przes%C5%82uchanie_Galileusza.jpg
+  [5] Commons                | Galileo Galilei; Galileo Galilei at his 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Galileo_Galilei%3B_Galileo_Galilei_at_his_trial_at_t
+
+=== AXIS: russia (15 items) ===
+
+[ru-rurik] Rurik 建諾夫哥羅德·Kievan Rus 開端 | Rurik Founds Novgorod (862)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/27/1000_Rurik.JPG
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/b/b1/Rurik_titularnik.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/1000_Rurik.JPG/1280px-1000_Rurik.JPG
+  [3] Commons                | Danish Viking Rurik.jpg
+      https://upload.wikimedia.org/wikipedia/commons/f/f5/Danish_Viking_Rurik.jpg
+
+[ru-vladimir-baptism] 弗拉基米爾受洗·俄羅斯基督教化 | Baptism of Vladimir — Christianization of Rus (988)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/86/Coin_of_Volodymyr_the_Great_2.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/9f/Lebedev_baptism.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Coin_of_Volodymyr_the_Great_2.jpg/1280px-Coin_of_Vol
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Lebedev_baptism.jpg/1280px-Lebedev_baptism.jpg
+  [4] Commons                | Christianization of Rus and Baptism of V
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Christianization_of_Rus_and_Baptism_of_Vladimir_by_V
+  [5] Commons                | Christianization of Rus and Baptism of V
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Christianization_of_Rus_and_Baptism_of_Vladimir_by_V
+
+[ru-novgorod-school] 諾夫哥羅德·北方共和傳統 | Novgorod Republic Tradition (1010)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/63/Novgorod1400.png
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Banner_of_the_Novgorod_Republic_%28c._1385%29.svg/12
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Novgorod1400.png/1280px-Novgorod1400.png
+
+[ru-yaroslav] 智者雅羅斯拉夫·Kievan Rus 鼎盛 | Yaroslav the Wise (1019)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/29/YaroslavWiseSeal.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Yaroslav_I_of_Russia_%28Granovitaya_palata%2C_1881-2
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/YaroslavWiseSeal.jpg/1280px-YaroslavWiseSeal.jpg
+  [3] Commons                | Coin of Yaroslav the Wise with his lifet
+      https://upload.wikimedia.org/wikipedia/commons/1/1c/Coin_of_Yaroslav_the_Wise_with_his_lifetime_image.jpg
+  [4] Commons                | Yaroslav I the Wise - fresco of the Novo
+      https://upload.wikimedia.org/wikipedia/commons/0/06/Yaroslav_I_the_Wise_-_fresco_of_the_Novospassky_Monastery.
+  [5] Commons                | Yaroslav mudryi 5.jpg
+      https://upload.wikimedia.org/wikipedia/commons/7/7e/Yaroslav_mudryi_5.jpg
+
+[ru-kievan-rus-span] Kievan Rus·俄羅斯文明搖籃 | Kievan Rus (862-1240) (862)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f1/Location_of_Kyivan_Rus.png
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Coin_of_Vladimir_the_Great_%28reverse%29.svg/1280px-
+  [2] Commons                | Earthenware Fragment 07 Kyiv Poshtova Sq
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Earthenware_Fragment_07_Kyiv_Poshtova_Square_Archeol
+  [3] Commons                | Evgenia Kanaeva RUS Olympiasiegerin.JPG
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Evgenia_Kanaeva_RUS_Olympiasiegerin.JPG/1280px-Evgen
+  [4] Commons                | Kyiv principality Flag of Map (Kievan Ru
+      https://upload.wikimedia.org/wikipedia/commons/2/22/Kyiv_principality_Flag_of_Map_%28Kievan_Rus-Year-1054%29.p
+
+[ru-mongol-invasion] 蒙古滅基輔·韃靼桎梏開始 | Mongol Sack of Kiev (1240)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/35/1236-1242_Mongol_invasions_of_Europe.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/44/Siege_of_Kiev_%281240%29.png
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/1236-1242_Mongol_invasions_of_Europe.jpg/1280px-1236
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Siege_of_Kiev_%281240%29.png/1280px-Siege_of_Kiev_%2
+
+[ru-tatar-yoke-span] 韃靼桎梏·蒙古統治 240 年 | Tatar Yoke (1240-1480) (1240)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f7/Golden_Horde_flag_1339.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/3/35/1236-1242_Mongol_invasions_of_Europe.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Golden_Horde_flag_1339.svg/1280px-Golden_Horde_flag_
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/1236-1242_Mongol_invasions_of_Europe.jpg/1280px-1236
+
+[ru-alexander-nevsky] 亞歷山大·涅夫斯基冰湖戰役 | Alexander Nevsky — Battle on the Ice (1242)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/45/AlexanderNevski.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/c8/Facial_Chronicle_-_b.06%2C_page_085_-_Battle_of_the_Ice.jp
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/AlexanderNevski.jpg/1280px-AlexanderNevski.jpg
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Facial_Chronicle_-_b.06%2C_page_085_-_Battle_of_the_
+  [4] Commons                | Facial Chronicle - b.06, p.086 - Battle 
+      https://upload.wikimedia.org/wikipedia/commons/5/52/Facial_Chronicle_-_b.06%2C_p.086_-_Battle_of_the_Ice.jpg
+  [5] Commons                | Pskov attorney to A Seleznev 765-years v
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Pskov_attorney_to_A_Seleznev_765-years_victory_Alexa
+
+[ru-moscow-rise] 莫斯科崛起·伊凡一世「錢袋子」 | Rise of Moscow — Ivan I 'Kalita' (1325)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/3a/Ivan_Kalita.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ivan_Kalita.jpg/1280px-Ivan_Kalita.jpg
+
+[ru-kulikovo] 庫利科沃戰役·首次擊敗蒙古 | Battle of Kulikovo (1380)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/b5/Kulikovo_lubok.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/25/Dmitry_Donskoy_in_the_Battle_of_Kulikovo.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kulikovo_lubok.jpg/1280px-Kulikovo_lubok.jpg
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Dmitry_Donskoy_in_the_Battle_of_Kulikovo.jpg/1280px-
+  [4] Commons                | Banner of Dmitry Donskoy at the Battle o
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Banner_of_Dmitry_Donskoy_at_the_Battle_of_Kulikovo.p
+
+[ru-stand-ugra] 烏格拉河對峙·韃靼桎梏終結 | Great Stand on the Ugra River (1480)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/88/Facial_Chronicle_-_b.16%2C_p._462_-_Great_standing_on_the_
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Facial_Chronicle_-_b.16%2C_p._462_-_Great_standing_o
+  [2] Commons                | Great stand on the Ugra river 1480.jpg
+      https://upload.wikimedia.org/wikipedia/commons/d/d1/Great_stand_on_the_Ugra_river_1480.jpg
+  [3] Commons                | RR5111-0103R Дионисий.gif
+      https://upload.wikimedia.org/wikipedia/commons/4/46/RR5111-0103R_%D0%94%D0%B8%D0%BE%D0%BD%D0%B8%D1%81%D0%B8%D0
+
+[ru-ivan-iii] 伊凡三世·全俄羅斯君主 | Ivan III — Sovereign of All Russia (1462)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/5/52/Ivan_III_of_Russia.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7f/Ivan_III_of_Russia_3.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ivan_III_of_Russia_3.jpg/1280px-Ivan_III_of_Russia_3
+  [3] Commons                | 44 History of the Russian state in the i
+      https://upload.wikimedia.org/wikipedia/commons/1/18/44_History_of_the_Russian_state_in_the_image_of_its_sovere
+  [4] Commons                | 45 History of the Russian state in the i
+      https://upload.wikimedia.org/wikipedia/commons/5/5d/45_History_of_the_Russian_state_in_the_image_of_its_sovere
+  [5] Commons                | 45 History of the Russian state in the i
+      https://upload.wikimedia.org/wikipedia/commons/7/73/45_History_of_the_Russian_state_in_the_image_of_its_sovere
+
+[ru-ussr-collapse] 蘇聯解體·12 月 25 日 | Dissolution of the USSR (1991.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/d9/Coat_of_arms_of_the_Soviet_Union_%281956%E2%80%931991%29.s
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/50/Map_of_USSR_with_SSR_names.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/1280px-Flag_of_the_Sovi
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Map_of_USSR_with_SSR_names.svg/1280px-Map_of_USSR_wi
+  [4] Commons                | RIAN archive 140800 Signing of Protocol 
+      https://upload.wikimedia.org/wikipedia/commons/5/5e/RIAN_archive_140800_Signing_of_Protocol_on_Establishing_Co
+  [5] Commons                | USSR - Then and Now.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/USSR_-_Then_and_Now.png/1280px-USSR_-_Then_and_Now.p
+
+[ru-putin-rises] 普京任總統·普京時代開始 | Putin Becomes President (2000.25)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/63/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/6/65/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0
+  [4] Commons                | Putin - Son, Father, Husband, - Stop the
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Putin_-_Son%2C_Father%2C_Husband%2C_-_Stop_the_War_%
+  [5] Commons                | Putin Jail (51911025868).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Putin_Jail_%2851911025868%29.jpg/1280px-Putin_Jail_%
+
+[ru-ukraine-2022] 俄烏戰爭爆發·2 月 24 日 | Russian Invasion of Ukraine (2022.08)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/a/a0/2022_Russian_invasion_of_Ukraine_Photo_Montage.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4f/2022_Russian_invasion_of_Ukraine.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/2022_Russian_invasion_of_Ukraine_Photo_Montage.jpg/1
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/2022_Russian_invasion_of_Ukraine.svg/1280px-2022_Rus
+  [4] Commons                | Protest of the Russian invasion of Ukrai
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Protest_of_the_Russian_invasion_of_Ukraine_in_Times_
+  [5] Commons                | Protest of the Russian invasion of Ukrai
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Protest_of_the_Russian_invasion_of_Ukraine_in_Times_
+
+=== AXIS: russia-tsarist (15 items) ===
+
+[ru-ivan-iv-tsar] 伊凡四世「雷帝」加冕沙皇 | Ivan IV Crowned Tsar (1547.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1e/Ivan_IV_by_anonim_%2818th_c.%2C_GIM%29.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/cf/IoannIV_reconstruction_by_Gerasimov02.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/f/f4/Ivan_grozny_frame.jpg
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ivan_IV_by_anonim_%2818th_c.%2C_GIM%29.jpg/1280px-Iv
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/IoannIV_reconstruction_by_Gerasimov02.jpg/1280px-Ioa
+  [5] Commons                | Ivan IV by anonim (18th c., GIM) 2.jpg
+      https://upload.wikimedia.org/wikipedia/commons/0/04/Ivan_IV_by_anonim_%2818th_c.%2C_GIM%29_2.jpg
+
+[ru-time-troubles] 動盪時代·留里克王朝終 | Time of Troubles (1598)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8a/Appeal_of_Minin.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Appeal_of_Minin.jpg/1280px-Appeal_of_Minin.jpg
+  [2] Commons                | S. V. Ivanov. Time of Troubles. Moscow r
+      https://upload.wikimedia.org/wikipedia/commons/f/ff/S._V._Ivanov._Time_of_Troubles._Moscow_region._Impostor%27
+  [3] Commons                | Time of troubles by S.V.Ivanov (1897).jp
+      https://upload.wikimedia.org/wikipedia/commons/b/ba/Time_of_troubles_by_S.V.Ivanov_%281897%29.jpg
+
+[ru-romanov] 羅曼諾夫王朝建立 | Romanov Dynasty Founded (1613.17)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1e/House_of_Romanoff.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/House_of_Romanoff.svg/1280px-House_of_Romanoff.svg.p
+  [2] Commons                | Olga and Tatiana, Czar's daughters (LOC)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Olga_and_Tatiana%2C_Czar%27s_daughters_%28LOC%29.jpg
+  [3] Commons                | State Historical Museum (19344139404).jp
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/State_Historical_Museum_%2819344139404%29.jpg/1280px
+
+[ru-old-believers] 舊禮儀派分裂·尼孔改革 | Old Believers Schism — Nikon Reforms (1666)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/39/Boyaryna_Morozova_by_V.Surikov_%281884-1887%2C_Tretyakov_g
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/ee/Old_Believers_in_Alaska_7D58CCE1-1C6F-4882-923D-E27A39EBCF
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Old_Believers_in_Alaska_7D58CCE1-1C6F-4882-923D-E27A
+  [3] Commons                | Avvakum by Pyotr Yevgenyevich Myasoyedov
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Avvakum_by_Pyotr_Yevgenyevich_Myasoyedov.jpg/1280px-
+
+[ru-peter-great] 彼得大帝即位·俄羅斯西化 | Peter the Great Becomes Tsar (1682.42)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/d6/Inconnu_d%27apr%C3%A8s_J.-M._Nattier%2C_Portrait_de_Pierre
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Inconnu_d%27apr%C3%A8s_J.-M._Nattier%2C_Portrait_de_
+  [2] Commons                | Tsar-carpenter (monument in SPb).jpg
+      https://upload.wikimedia.org/wikipedia/commons/a/a9/Tsar-carpenter_%28monument_in_SPb%29.jpg
+
+[ru-saint-petersburg] 聖彼得堡建城·俄羅斯西望窗 | St. Petersburg Founded (1703.33)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/c9/Winter_Palace_Panorama_3.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/41/Spb_06-2017_img20_StMichael_Castle_%28cropped%29.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Winter_Palace_Panorama_3.jpg/1280px-Winter_Palace_Pa
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Spb_06-2017_img20_StMichael_Castle_%28cropped%29.jpg
+  [4] Commons                | NVCAF Art and Writing Exhibit, St. Peter
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/NVCAF_Art_and_Writing_Exhibit%2C_St._Petersburg_Flor
+  [5] Commons                | Patch of the St. Petersburg, Florida Pol
+      https://upload.wikimedia.org/wikipedia/commons/a/a5/Patch_of_the_St._Petersburg%2C_Florida_Police_Department.p
+
+[ru-russian-empire] 俄羅斯帝國成立·彼得稱皇帝 | Russian Empire Proclaimed (1721.75)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Russia_%281858%E2%80%931896%29.svg/1280px-Fl
+
+[ru-catherine-great] 凱薩琳大帝即位·啟蒙專制 | Catherine the Great (1762.5)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/25/Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kunsthist
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/72/Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kunsthist
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kun
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kun
+  [4] Commons                | Catherine the Great (Fabergé egg).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Catherine_the_Great_%28Faberg%C3%A9_egg%29.jpg/1280p
+  [5] Commons                | Double-Headed Eagle of Catherine II.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Double-Headed_Eagle_of_Catherine_II.jpg/1280px-Doubl
+
+[ru-pugachev] Pugachev 起義·俄史最大農民暴動 | Pugachev Rebellion (1773.75)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/78/Pugachev-1773%E2%80%941775.png
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/%D0%9F%D0%B5%D1%80%D0%BE%D0%B2_%D0%A1%D1%83%D0%B4_%D
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Pugachev-1773%E2%80%941775.png/1280px-Pugachev-1773%
+  [3] Commons                | Gorelov lynching 2.jpg
+      https://upload.wikimedia.org/wikipedia/commons/f/fb/Gorelov_lynching_2.jpg
+
+[ru-1812-napoleon] 拿破崙征俄·焦土與莫斯科火燒 | Napoleon's Russian Campaign (1812.5)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/c8/IV_corpo_durante_la_campagna_di_Russia.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/IV_corpo_durante_la_campagna_di_Russia.jpg/1280px-IV
+  [2] Commons                | French invasion of Russia collage.jpg
+      https://upload.wikimedia.org/wikipedia/commons/5/55/French_invasion_of_Russia_collage.jpg
+  [3] Commons                | Minard.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1280px-Minard.png
+
+[ru-decembrist] 十二月黨人起義 | Decembrist Revolt (1825.92)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/2e/Georg_Wilhelm_Timm_-_Dekabristen-Aufstand.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Kolman_decembrists.jpg/1280px-Kolman_decembrists.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Georg_Wilhelm_Timm_-_Dekabristen-Aufstand.jpg/1280px
+  [3] Commons                | The Soviet Union 1950 CPA 1591 stamp (12
+      https://upload.wikimedia.org/wikipedia/commons/a/ae/The_Soviet_Union_1950_CPA_1591_stamp_%28125th_anniversary_
+  [4] Commons                | Vladimir Raevsky (Rayevsky) Decembrist.p
+      https://upload.wikimedia.org/wikipedia/commons/2/24/Vladimir_Raevsky_%28Rayevsky%29_Decembrist.png
+
+[ru-emancipation] 亞歷山大二世解放農奴 | Emancipation of the Serfs (1861.17)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/16/Reading_of_the_Manifest_%28Liberation_of_peasants%29_-_Kus
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Reading_of_the_Manifest_%28Liberation_of_peasants%29
+  [2] Commons                | Emancipation of the serfs in 1861.jpg
+      https://upload.wikimedia.org/wikipedia/commons/f/fb/Emancipation_of_the_serfs_in_1861.jpg
+  [3] Commons                | Liberation of the serfs, 1861, Russia, b
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Liberation_of_the_serfs%2C_1861%2C_Russia%2C_by_F._P
+
+[ru-trans-siberian] 西伯利亞鐵路通車·世界最長 | Trans-Siberian Railway Completed (1916.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/05/VL_85-022_container_train.jpg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Vladivostok_distencemonument.JPG/1280px-Vladivostok_
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/VL_85-022_container_train.jpg/1280px-VL_85-022_conta
+  [3] Commons                | Map of Trans-Siberian Railway.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Map_of_Trans-Siberian_Railway.jpg/1280px-Map_of_Tran
+  [4] Commons                | Trans-Siberian railway map.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Trans-Siberian_railway_map.png/1280px-Trans-Siberian
+  [5] Commons                | Trans siberian railroad small.png
+      https://upload.wikimedia.org/wikipedia/commons/e/e9/Trans_siberian_railroad_small.png
+
+[ru-russo-japanese] 日俄戰爭·首次亞洲擊敗歐洲強國 | Russo-Japanese War (1904.17)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/dd/RUSSOJAPANESEWARIMAGE.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/RUSSOJAPANESEWARIMAGE.jpg/1280px-RUSSOJAPANESEWARIMA
+  [2] Commons                | Japanese soldiers near Chemulpo Korea Au
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Japanese_soldiers_near_Chemulpo_Korea_August_Septemb
+  [3] Commons                | Russian-howitzer-battery-defense-Port-Ar
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Russian-howitzer-battery-defense-Port-Arthur-Russo-J
+  [4] Commons                | Russo-Japanese War Shunga.jpg
+      https://upload.wikimedia.org/wikipedia/commons/e/eb/Russo-Japanese_War_Shunga.jpg
+
+[ru-1905-revolution] 1905 革命·血腥星期日 | 1905 Revolution — Bloody Sunday (1905.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/3c/Shestviye_u_Narvskikh_vorot.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/cc/Bloody_Sunday_in_1905_by_Wojciech_Kossak.png
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Shestviye_u_Narvskikh_vorot.jpg/1280px-Shestviye_u_N
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bloody_Sunday_in_1905_by_Wojciech_Kossak.png/1280px-
+  [4] Commons                | Bloody Sunday Russia 1905.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Bloody_Sunday_Russia_1905.png/1280px-Bloody_Sunday_R
+  [5] Commons                | Ivan Vladimirov bloody-sunday-shooting-w
+      https://upload.wikimedia.org/wikipedia/commons/2/2f/Ivan_Vladimirov_bloody-sunday-shooting-workers-near-the-wi
+
+=== AXIS: russia-soviet (11 items) ===
+
+[ru-civil-war] 俄國內戰·紅軍 vs 白軍 | Russian Civil War (1918.42)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/3b/CWRArticleImage.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/CWRArticleImage.jpg/1280px-CWRArticleImage.jpg
+  [2] Commons                | Russian Civil War montage.png
+      https://upload.wikimedia.org/wikipedia/commons/1/1a/Russian_Civil_War_montage.png
+
+[ru-ussr-founded] 蘇聯成立·12 月 30 日 | USSR Founded (1922.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/1280px-Flag_of_the_Sovi
+  [2] Commons                | Location of the Ukrainian Soviet Sociali
+      https://upload.wikimedia.org/wikipedia/commons/0/07/Location_of_the_Ukrainian_Soviet_Socialist_Republic_in_Eur
+
+[ru-stalin-power] Stalin 掌權·列寧逝世 | Stalin Consolidates Power (1924.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f7/Joseph_Stalin_official_portrait.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/5b/Joseph_Stalin_in_1932_%284%29_%28cropped%29%282%29.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Joseph_Stalin_official_portrait.jpg/1280px-Joseph_St
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Joseph_Stalin_in_1932_%284%29_%28cropped%29%282%29.j
+  [4] Commons                | Rustic brick walls of the Stalin house- 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Rustic_brick_walls_of_the_Stalin_house-_only_house_o
+  [5] Commons                | The Crimes of the Stalin Era (Khrushchev
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/The_Crimes_of_the_Stalin_Era_%28Khrushchev%2C_tr._Ni
+
+[ru-collectivization] 集體化·烏克蘭大饑荒 | Collectivization & Holodomor (1929.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/a/aa/%E2%80%9CStrengthen_working_discipline_in_collective_farms
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/27/HolodomorKharkiv_1933_Wienerberger.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/HolodomorKharkiv_1933_Wienerberger.jpg/1280px-Holodo
+  [3] Commons                | Forced collectivization USSR.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Forced_collectivization_USSR.jpg/1280px-Forced_colle
+  [4] Commons                | USSRspringsowntimes1932-1934.jpg
+      https://upload.wikimedia.org/wikipedia/commons/b/bd/USSRspringsowntimes1932-1934.jpg
+
+[ru-great-purge] 大清洗·公開審判 + Gulag | Great Purge & Show Trials (1936.67)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f5/Vinnycia16.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Vinnycia16.jpg/1280px-Vinnycia16.jpg
+  [2] Commons                | The Second Moscow Trial.jpg
+      https://upload.wikimedia.org/wikipedia/commons/0/00/The_Second_Moscow_Trial.jpg
+
+[ru-iron-curtain] 鐵幕演說·冷戰開端 | Iron Curtain Speech (1946.17)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4f/1946-03-05_Sinews_of_Peace_Speech.png
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Iron_Curtain_map.svg/1280px-Iron_Curtain_map.svg.png
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/1946-03-05_Sinews_of_Peace_Speech.png/1280px-1946-03
+  [3] Commons                | Iron Curtain as described by Churchill.P
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Iron_Curtain_as_described_by_Churchill.PNG/1280px-Ir
+  [4] Commons                | The Iron Curtain as described by Churchi
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/The_Iron_Curtain_as_described_by_Churchill.png/1280p
+
+[ru-cuban-missile] 古巴飛彈危機·人類最近核戰 | Cuban Missile Crisis (1962.83)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/9d/Soviet-R-12-nuclear-ballistic_missile.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8a/PGM-19A_Jupiter_missile-02.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Soviet-R-12-nuclear-ballistic_missile.jpg/1280px-Sov
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PGM-19A_Jupiter_missile-02.jpg/1280px-PGM-19A_Jupite
+  [4] Commons                | Cuban missiles.jpg
+      https://upload.wikimedia.org/wikipedia/commons/5/57/Cuban_missiles.jpg
+  [5] Commons                | GCHQ Cuban Missile Crisis Intercept.webp
+      https://upload.wikimedia.org/wikipedia/commons/d/d4/GCHQ_Cuban_Missile_Crisis_Intercept.webp
+
+[ru-prague-spring] 布拉格之春·華約軍鎮壓 | Prague Spring Crushed (1968.67)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/3c/10_Soviet_Invasion_of_Czechoslovakia_-_Flickr_-_The_Centra
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/10_Soviet_Invasion_of_Czechoslovakia_-_Flickr_-_The_
+
+[ru-afghan-war] 蘇聯入侵阿富汗·「蘇聯越戰」 | Soviet War in Afghanistan (1979.92)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/6/6c/Mortar_attack_on_Shigal_Tarna_garrison%2C_Kunar_Province%2
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mortar_attack_on_Shigal_Tarna_garrison%2C_Kunar_Prov
+  [2] Commons                | Afghan-Soviet war.png
+      https://upload.wikimedia.org/wikipedia/commons/6/6a/Afghan-Soviet_war.png
+  [3] Commons                | Halichenko Vasyl Ivanovych.png
+      https://upload.wikimedia.org/wikipedia/commons/6/62/Halichenko_Vasyl_Ivanovych.png
+  [4] Commons                | Soviet-Afghan War collage.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Soviet-Afghan_War_collage.jpg/1280px-Soviet-Afghan_W
+
+[ru-gorbachev] Gorbachev·改革開放(Perestroika) | Gorbachev — Glasnost & Perestroika (1985.17)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/5/57/RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Go
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nobel_prize_medal.svg/1280px-Nobel_prize_medal.svg.p
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/RIAN_archive_850809_General_Secretary_of_the_CPSU_CC
+  [3] Commons                | Elektrozavodskaya Street 21 2023-12 1702
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Elektrozavodskaya_Street_21_2023-12_1702130061.jpg/1
+  [4] Commons                | The Soviet Union 1988 CPA 5941 stamp (Pe
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/The_Soviet_Union_1988_CPA_5941_stamp_%28Perestroika_
+  [5] Commons                | The Soviet Union 1988 CPA 5942 stamp (Pe
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/The_Soviet_Union_1988_CPA_5942_stamp_%28Perestroika_
+
+[ru-chernobyl] Chernobyl 核災 | Chernobyl Disaster (1986.33)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/87/IAEA_02790015_%285613115146%29.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/IAEA_02790015_%285613115146%29.jpg/1280px-IAEA_02790
+  [2] Commons                | Chernobyl ship 2019 G3.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Chernobyl_ship_2019_G3.jpg/1280px-Chernobyl_ship_201
+
+=== AXIS: russia-science (25 items) ===
+
+[ru-lomonosov] Lomonosov·莫斯科大學成立 | Lomonosov & Moscow University (1755.42)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4d/M.V._Lomonosov_by_L.Miropolskiy_after_G.C.Prenner_%281787%
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/M.V._Lomonosov_by_L.Miropolskiy_after_G.C.Prenner_%2
+  [2] Commons                | Lomonosov Moscow State University on Mok
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Lomonosov_Moscow_State_University_on_Mokhovaya_-_202
+  [3] Commons                | Moscow State University.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Moscow_State_University.jpg/1280px-Moscow_State_Univ
+  [4] Commons                | Moscow State University crop.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Moscow_State_University_crop.jpg/1280px-Moscow_State
+
+[ru-lobachevsky] Lobachevsky 非歐幾何·數學革命 | Lobachevsky's Non-Euclidean Geometry (1830)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/c5/Nikolay_Ivanovich_Lobachevsky.jpeg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4d/Lobachevsky_03_crop.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lobachevsky_03_crop.jpg/1280px-Lobachevsky_03_crop.j
+  [3] Commons                | Hyperbolic geometry proof.png
+      https://upload.wikimedia.org/wikipedia/commons/e/e6/Hyperbolic_geometry_proof.png
+
+[ru-mendeleev] 門捷列夫週期表 | Mendeleev's Periodic Table (1869.17)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/c7/Periodic_table_zh-hans.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/af/Dmitri_Mendeleev.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Dmitri_Mendeleev.jpg/1280px-Dmitri_Mendeleev.jpg
+  [4] Commons                | Dmitri Mendeleev's hand drawn periodic t
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dmitri_Mendeleev%27s_hand_drawn_periodic_table.jpg/1
+
+[ru-tsiolkovsky] Tsiolkovsky 火箭方程式 | Tsiolkovsky Rocket Equation (1903)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/a8/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%
+  [2] Commons                | Tsiolkovsky Rocket Equation.png
+      https://upload.wikimedia.org/wikipedia/commons/3/3b/Tsiolkovsky_Rocket_Equation.png
+
+[ru-pavlov-nobel] Pavlov 諾貝爾·條件反射 | Pavlov's Nobel — Conditioned Reflex (1904.92)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/7d/Ivan_Pavlov_NLM3.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Ivan_Pavlov_NLM3.jpg/1280px-Ivan_Pavlov_NLM3.jpg
+
+[ru-t34-tank] T-34 戰車·史上最多產坦克 | T-34 Tank — Most Produced Tank in History (1940.75)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/88/Tank_monument_next_to_the_metro_station_Shulyavska.JPG
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/dd/Tank_T-34.JPG
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/%D0%A4%D0%BE%D1%82%D0%BE_%D0%A2-34-85_%D0%BE%D0%B1%D
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/1280px-Flag_of_the_Sovi
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tank_T-34.JPG/1280px-Tank_T-34.JPG
+
+[ru-ak47] AK-47·史上最多產火器 | AK-47 — Most Produced Firearm (1947.92)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/65/AK-47_type_II_noBG.png
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png
+
+[ru-lysenko-affair] Lysenko 偽科學·蘇聯生物學浩劫 | Lysenko Affair — Pseudoscience Triumphs (1948.67)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/5a/Lysenko_with_Stalin.gif
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Trofim_Lysenko_portrait.jpg/1280px-Trofim_Lysenko_po
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Weismann%27s_Germ_Plasm.svg/1280px-Weismann%27s_Germ
+
+[ru-sakharov-hbomb] Sakharov·蘇聯氫彈試爆 | Sakharov & Soviet H-Bomb (RDS-6) (1953.67)
+  cat: science
+  ** ZERO candidates **
+  wiki_en: https://en.wikipedia.org/wiki/RDS-6
+  wiki_zh: https://zh.wikipedia.org/wiki/RDS-6
+
+[ru-r7-rocket] R-7 火箭·史上首枚 ICBM | R-7 Rocket — First ICBM (1957.58)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/db/R-7_%287A%29_misil.svg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/R-7_%287A%29_misil.svg/1280px-R-7_%287A%29_misil.svg
+  [2] Commons                | USAF ICBM and NASA Launch Vehicle Flight
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/USAF_ICBM_and_NASA_Launch_Vehicle_Flight_Test_Succes
+  [3] Commons                | USAF ICBM and NASA Launch Vehicle Flight
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/USAF_ICBM_and_NASA_Launch_Vehicle_Flight_Test_Succes
+
+[ru-sputnik] Sputnik 1·史上首顆人造衛星 | Sputnik 1 — First Artificial Satellite (1957.75)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/b0/Sputnik_1.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/b7/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B9_%D0%B2_%D0%BC%D0%B8%D
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Sputnik.jpg/1280px-Sputnik.jpg
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sputnik_1.jpg/1280px-Sputnik_1.jpg
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B9_%D0%B2_%D0%BC%D
+  [5] Commons                | Monument to the first artificial Earth s
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Monument_to_the_first_artificial_Earth_satellite_%C2
+
+[ru-luna-3] Luna 3·首拍月球背面 | Luna 3 — First Photos of Far Side of Moon (1959.83)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/a5/%D0%9B%D1%83%D0%BD%D0%B0-3_%2814562265547%29.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/%D0%9B%D1%83%D0%BD%D0%B0-3_%2814562265547%29.jpg/128
+  [2] Commons                | Luna-3 (Memorial Museum of Astronautics)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Luna-3_%28Memorial_Museum_of_Astronautics%29.JPG/128
+  [3] Commons                | Luna-3 phototelegraph system at Tsiolkov
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Luna-3_phototelegraph_system_at_Tsiolkovsky_State_Mu
+  [4] Commons                | Luna 3 moon.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Luna_3_moon.jpg/1280px-Luna_3_moon.jpg
+
+[ru-gagarin] Gagarin·首位太空人 | Yuri Gagarin — First Human in Space (1961.25)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/e/e6/Yuri_Gagarin_with_awards.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/d8/Yuri_Gagarin_with_awards_%28cropped%29_2.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Yuri_Gagarin_portrait_%28colored%29.png/1280px-Yuri_
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Yuri_Gagarin_with_awards.jpg/1280px-Yuri_Gagarin_wit
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Yuri_Gagarin_with_awards_%28cropped%29_2.jpg/1280px-
+  [5] Commons                | (Man) Chest tattoo. Monument to Yuri Gag
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/%28Man%29_Chest_tattoo._Monument_to_Yuri_Gagarin_%28
+
+[ru-k19-accident] K-19 核潛艇反應爐熔毀 | K-19 Submarine Reactor Meltdown (1961.5)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/0c/K-19.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/K-19.jpg/1280px-K-19.jpg
+
+[ru-tsar-bomba] 沙皇炸彈·史上最大核彈 | Tsar Bomba — Largest Nuclear Weapon (1961.75)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsar_Bomba_Revised.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tsar_Bomba_Revised.jpg/1280px-Tsar_Bomba_Revised.jpg
+
+[ru-leonov-spacewalk] Leonov·首次太空漫步 | Leonov's First Spacewalk (1965.25)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/f8/Alexei_Leonov.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Alexei_Leonov.jpg/1280px-Alexei_Leonov.jpg
+  [2] Commons                | Pavel Belyayev and Alexey Leonov 2.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Pavel_Belyayev_and_Alexey_Leonov_2.jpg/1280px-Pavel_
+  [3] Commons                | Pavel Belyayev and Alexey Leonov 9.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Pavel_Belyayev_and_Alexey_Leonov_9.jpg/1280px-Pavel_
+
+[ru-soyuz] Soyuz 系列·至今最可靠載人飛船 | Soyuz Spacecraft Program (1967.33)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/bc/Soyuz_TMA-7_spacecraft2edit1.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/fa/Soyuz_MS.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Soyuz_TMA-7_spacecraft2edit1.jpg/1280px-Soyuz_TMA-7_
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Soyuz_MS.jpg/1280px-Soyuz_MS.jpg
+  [4] Commons                | Chart of Soyuz spacecraft models.png
+      https://upload.wikimedia.org/wikipedia/commons/d/d7/Chart_of_Soyuz_spacecraft_models.png
+  [5] Commons                | Inside the Soyuz spacecraft. -interstell
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Inside_the_Soyuz_spacecraft._-interstellar_today._%2
+
+[ru-tu144] Tu-144·史上首架超音速客機 | Tu-144 — First Supersonic Airliner (1968.92)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/88/RIAN_archive_566221_Tu-144_passenger_airliner.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/ba/Tupolev_TU-144_%286060104119%29.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/.00_0896_Supersonic_Airliner_Concorde.jpg/1280px-.00
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RIAN_archive_566221_Tu-144_passenger_airliner.jpg/12
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Tupolev_TU-144_%286060104119%29.jpg/1280px-Tupolev_T
+  [5] Commons                | Tupolev Tu-144, Aeroflot AN1085331.jpg
+      https://upload.wikimedia.org/wikipedia/commons/3/36/Tupolev_Tu-144%2C_Aeroflot_AN1085331.jpg
+
+[ru-venera-7] Venera 7·首次降落另一行星 | Venera 7 — First Soft Landing on Another Planet (1970.92)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/ca/Venera-7_spuskaemiy_apparat.jpg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/0/0a/1972_CPA_4166.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/1280px-Flag_of_the_Sovi
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Venera-7_spuskaemiy_apparat.jpg/1280px-Venera-7_spus
+
+[ru-salyut] Salyut 1·史上首座太空站 | Salyut 1 — First Space Station (1971.33)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1c/Salyut_program_insignia.svg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/6/61/1972_CPA_4112.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Salyut_program_insignia.svg/1280px-Salyut_program_in
+  [3] Commons                | Salyut 1 paper model.JPG
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Salyut_1_paper_model.JPG/1280px-Salyut_1_paper_model
+  [4] Commons                | Salyut paper model.JPG
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Salyut_paper_model.JPG/1280px-Salyut_paper_model.JPG
+
+[ru-typhoon-sub] Typhoon 級潛艇·史上最大 | Typhoon-class Submarine — Largest Sub Ever (1981.92)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/e1/Typhoon3.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Naval_Ensign_of_the_Soviet_Union_%281950%E2%80%93199
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Typhoon_class_SSBN.svg/1280px-Typhoon_class_SSBN.svg
+
+[ru-tetris] Tetris·史上最暢銷電玩 | Tetris — Best-selling Video Game (1984.5)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/9c/Typical_Tetris_Game.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/3/31/Tetris_logo_2019.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Typical_Tetris_Game.svg/1280px-Typical_Tetris_Game.s
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Tetris_logo_2019.svg/1280px-Tetris_logo_2019.svg.png
+  [4] Commons                | Video games that have sold over 30 milli
+      https://upload.wikimedia.org/wikipedia/commons/c/cb/Video_games_that_have_sold_over_30_million_copies_2015.png
+
+[ru-mir] Mir·長住太空站 | Mir Space Station (1986.08)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/09/Mir_Space_Station_viewed_from_Endeavour_during_STS-89.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/af/Mir_STS-91_Cropped.png
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mir_Space_Station_viewed_from_Endeavour_during_STS-8
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Mir_STS-91_Cropped.png/1280px-Mir_STS-91_Cropped.png
+  [4] Commons                | Atlantis docked to MIR - GPN-2000-001315
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Atlantis_docked_to_MIR_-_GPN-2000-001315.jpg/1280px-
+  [5] Commons                | Mir from STS-81.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mir_from_STS-81.jpg/1280px-Mir_from_STS-81.jpg
+
+[ru-buran] Buran 太空梭·單次任務 | Buran — Soviet Space Shuttle (1988.83)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/6/68/Buran_on_An-225_%28Le_Bourget_1989%29_1.JPEG
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Buran_on_An-225_%28Le_Bourget_1989%29_1.JPEG/1280px-
+  [2] Commons                | Antonov An-225 with Buran at Le Bourget 
+      https://upload.wikimedia.org/wikipedia/commons/a/aa/Antonov_An-225_with_Buran_at_Le_Bourget_1989_Manteufel.jpg
+  [3] Commons                | Buran on An-225 (Le Bourget 1989) (cropp
+      https://upload.wikimedia.org/wikipedia/commons/b/b2/Buran_on_An-225_%28Le_Bourget_1989%29_%28cropped%29.JPEG
+  [4] Commons                | Moskau Raumfähre Buran-20080601-RM-09472
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Moskau_Raumf%C3%A4hre_Buran-20080601-RM-094724.jpg/1
+
+[ru-an225] An-225 Mriya·史上最大飛機 | An-225 Mriya — Largest Aircraft Ever (1988.92)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/cc/Antonov_An-225_Beltyukov-1.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/b5/Antonov_Design_Bureau_Antonov_An-225_Mriya_at_Leipzig_Hall
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Antonov_An-225_Beltyukov-1.jpg/1280px-Antonov_An-225
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Antonov_Design_Bureau_Antonov_An-225_Mriya_at_Leipzi
+  [4] Commons                | CCCP-82060 Antonov AN-225 Antonov Design
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/CCCP-82060_Antonov_AN-225_Antonov_Design_Bureau_Farn
+
+=== AXIS: earth (2 items) ===
+
+[earth-tunguska] 通古斯大爆炸·史上最大隕石事件 | Tunguska Event (1908.42)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/9b/Ru200007310039.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/a4/Tunguska_Ereignis-1.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Tunguska_Ereignis-1.jpg/1280px-Tunguska_Ereignis-1.j
+  [3] Commons                | Moscow State University Tunguska event 2
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Moscow_State_University_Tunguska_event_2014-01_13895
+  [4] Commons                | Tunguska event effect areas 3.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tunguska_event_effect_areas_3.png/1280px-Tunguska_ev
+
+[earth-chelyabinsk] 車里雅賓斯克隕石·首次全球行車記錄器拍到 | Chelyabinsk Meteor (2013.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f9/Chelyabinsk_meteor_trace_15-02-2013.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/82/Meteorite_explosion_over_Chelyabinsk_on_February_15%2C_201
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Chelyabinsk_meteor_trace_15-02-2013.jpg/1280px-Chely
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Russia_administrative_location_map_and_Crimea_dashed
+  [4] Commons                | 2013 Chelyabinsk meteor trace.jpg
+      https://upload.wikimedia.org/wikipedia/commons/d/d4/2013_Chelyabinsk_meteor_trace.jpg
+  [5] Commons                | Ekaterinburg view of 2013 meteor event.j
+      https://upload.wikimedia.org/wikipedia/commons/e/ef/Ekaterinburg_view_of_2013_meteor_event.jpg
+
+=== AXIS: egypt (22 items) ===
+
+[egy-old-kingdom-span] 古王國·金字塔時代 | Old Kingdom — Age of Pyramids (-2686)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/4b/Ancient_Egypt_map-zh-hans.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/a2/4th_Dynasty_of_Egypt-03.png
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ancient_Egypt_map-zh-hans.svg/1280px-Ancient_Egypt_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/4th_Dynasty_of_Egypt-03.png/1280px-4th_Dynasty_of_Eg
+  [4] Commons                | Pyramids of Giza, Giza, GG, EGY (4698659
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Pyramids_of_Giza%2C_Giza%2C_GG%2C_EGY_%2846986591195
+  [5] Commons                | Pyramids of Giza, Giza, GG, EGY (4698659
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Pyramids_of_Giza%2C_Giza%2C_GG%2C_EGY_%2846986597135
+
+[egy-middle-kingdom-span] 中王國·古典復興 | Middle Kingdom (-2055)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/04/Ancient_Egyptian_old_and_middle_kingdom.svg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ancient_Egyptian_old_and_middle_kingdom.svg/1280px-A
+  [2] Commons                | Decorated bridge-spouted jar from Crete,
+      https://upload.wikimedia.org/wikipedia/commons/6/6f/Decorated_bridge-spouted_jar_from_Crete%2C_Middle_Kingdom%
+  [3] Commons                | Fragment of a Funerary limestone stela, 
+      https://upload.wikimedia.org/wikipedia/commons/3/3e/Fragment_of_a_Funerary_limestone_stela%2C_Middle_Kingdom%2
+  [4] Commons                | Stela of Ity, Middle Kingdom, 1951 BCE, 
+      https://upload.wikimedia.org/wikipedia/commons/f/f6/Stela_of_Ity%2C_Middle_Kingdom%2C_1951_BCE%2C_Abydos%2C_Br
+
+[egy-new-kingdom-span] 新王國·埃及帝國 | New Kingdom — Egyptian Empire (-1550)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/f3/Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pharaoh_t
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Map_of_the_new_kingdom_of_egypt_in_1453_bc_under_pha
+  [2] Commons                | Egyptian Empire, B.C. 1450 (2710782990).
+      https://upload.wikimedia.org/wikipedia/commons/6/6e/Egyptian_Empire%2C_B.C._1450_%282710782990%29.jpg
+  [3] Commons                | Egyptian Empire, B.C. 1450 (Bartholomew,
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Egyptian_Empire%2C_B.C._1450_%28Bartholomew%2C_J._G.
+  [4] Commons                | Jug with speckled decoration. Egyptian N
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Jug_with_speckled_decoration._Egyptian_New_Kingdom-M
+
+[egy-ptolemaic-span] 托勒密王朝·希臘化埃及 | Ptolemaic Kingdom (-332)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/9a/Zh_PtolemaicEmpire.png
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/6/68/Ptolemaic_Kingdom_III-II_century_BC_-_en.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Ptolemaic_eagle.png/1280px-Ptolemaic_eagle.png
+  [3] Commons                | Ptolemaic Kingdom.png
+      https://upload.wikimedia.org/wikipedia/commons/7/79/Ptolemaic_Kingdom.png
+
+[egy-roman-egypt-span] 羅馬埃及·帝國糧倉 | Roman Egypt — Imperial Breadbasket (-30)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg/1280px-Roma
+
+[egy-byzantine-egypt-span] 拜占庭埃及·基督教省 | Byzantine Egypt (395)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Roman_Empire_-_Aegyptus_%28125_AD%29.svg/1280px-Roma
+  [2] Commons                | Plaster Mummy Mask Roman Period Egypt 2n
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Plaster_Mummy_Mask_Roman_Period_Egypt_2nd_-_3rd_cent
+  [3] Commons                | Succincta Antiquioris Ægypti et Palæstin
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Succincta_Antiquioris_%C3%86gypti_et_Pal%C3%A6stin%C
+
+[egy-imhotep] Imhotep 設計階梯金字塔 | Imhotep — Step Pyramid of Djoser (-2680)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/9/95/Imhotep-Louvre.JPG
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/e6/Imhotep%2C_donated_by_Padisu_MET_DP164134.jpg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Imhotep-E_3639-IMG_4607-gradient.jpg/1280px-Imhotep-
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Imhotep%2C_donated_by_Padisu_MET_DP164134.jpg/1280px
+  [4] Commons                | Pyramid of Djoser (Step Pyramid) (146091
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Pyramid_of_Djoser_%28Step_Pyramid%29_%2814609165318%
+  [5] Commons                | Pyramid of Djoser (Step Pyramid) (146091
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Pyramid_of_Djoser_%28Step_Pyramid%29_%2814609166148%
+
+[egy-sphinx] 吉薩大人面獅身像 | Great Sphinx of Giza (-2500)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/42/Sphinx_with_the_third_pyramid.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Sphinx_with_the_third_pyramid.jpg/1280px-Sphinx_with
+  [2] Commons                | Egypt.Giza.Sphinx.01.jpg
+      https://upload.wikimedia.org/wikipedia/commons/c/c5/Egypt.Giza.Sphinx.01.jpg
+  [3] Commons                | Great Sphinx (أبو الهول).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Great_Sphinx_%28%D8%A3%D8%A8%D9%88_%D8%A7%D9%84%D9%8
+  [4] Commons                | Great Sphinx of Giza (أبو الهول).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Great_Sphinx_of_Giza_%28%D8%A3%D8%A8%D9%88_%D8%A7%D9
+
+[egy-hyksos] Hyksos 入侵·第 15 王朝 | Hyksos Invasion (-1650)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/cf/Painting_of_foreign_delegation_in_the_tomb_of_Khnumhotep_I
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Painting_of_foreign_delegation_in_the_tomb_of_Khnumh
+  [2] Commons                | Hyksos invasion as imagined in the 19th 
+      https://upload.wikimedia.org/wikipedia/commons/1/16/Hyksos_invasion_as_imagined_in_the_19th_century_by_Hermann
+  [3] Commons                | Rock Tombs at Benihasan.jpg
+      https://upload.wikimedia.org/wikipedia/commons/c/cc/Rock_Tombs_at_Benihasan.jpg
+  [4] Commons                | The story of the greatest nations; a com
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/The_story_of_the_greatest_nations%3B_a_comprehensive
+
+[egy-hatshepsut] Hatshepsut 女法老 | Hatshepsut — Female Pharaoh (-1479)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/13/Met_2_%288253498431%29.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7b/Seated_Statue_of_Hatshepsut_MET_Hatshepsut2012.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Met_2_%288253498431%29.jpg/1280px-Met_2_%28825349843
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Seated_Statue_of_Hatshepsut_MET_Hatshepsut2012.jpg/1
+  [4] Commons                | Hatshepsut-CollosalGraniteSphinx01 Metro
+      https://upload.wikimedia.org/wikipedia/commons/f/f6/Hatshepsut-CollosalGraniteSphinx01_MetropolitanMuseum.png
+  [5] Commons                | Hatshepsut-CollosalGraniteSphinx03 Metro
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Hatshepsut-CollosalGraniteSphinx03_MetropolitanMuseu
+
+[egy-thutmose-iii] Thutmose III·Megiddo 戰役 | Thutmose III — Battle of Megiddo (-1458)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/50/%D7%AA%D7%9C_%D7%9E%D7%92%D7%99%D7%93%D7%95.JPG
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/%D7%AA%D7%9C_%D7%9E%D7%92%D7%99%D7%93%D7%95.JPG/1280
+  [2] Commons                | Battle of Megiddo (15th century BC) - Ro
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Battle_of_Megiddo_%2815th_century_BC%29_-_Routes.jpg
+  [3] Commons                | Battle of Megiddo (15th century BC) - Ro
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Battle_of_Megiddo_%2815th_century_BC%29_-_Routes_Gra
+
+[egy-amarna-letters] 阿瑪納文書·古代外交檔案 | Amarna Letters (-1360)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/d3/Five_Amarna_letters_on_display_at_the_British_Museum%2C_Lo
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Five_Amarna_letters_on_display_at_the_British_Museum
+  [2] Commons                | Amarna Akkadian letter.png
+      https://upload.wikimedia.org/wikipedia/commons/a/ae/Amarna_Akkadian_letter.png
+  [3] Commons                | Amarna letter. Letter from Yapahu (ruler
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Amarna_letter._Letter_from_Yapahu_%28ruler_of_Gezer%
+
+[egy-tut] Tutankhamun·少年法老與 Carter 發現 | Tutankhamun — Boy King & 1922 Discovery (-1332)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/e/e5/TUT-Ausstellung_FFM_2012_47_%287117819557%29.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TUT-Ausstellung_FFM_2012_47_%287117819557%29.jpg/128
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg/1280px-Ca
+
+[egy-abu-simbel] Abu Simbel 神殿·Ramesses II | Abu Simbel Temples — Ramesses II (-1264)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/b5/Ramsis%2C_Aswan_Governorate%2C_Egypt_-_panoramio.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Abu_Simbel_Main_Temple_%282346939149%29.jpg/1280px-A
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ramsis%2C_Aswan_Governorate%2C_Egypt_-_panoramio.jpg
+  [3] Commons                | Templo de Ramsés II, Abu Simbel, Egipto,
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Templo_de_Rams%C3%A9s_II%2C_Abu_Simbel%2C_Egipto%2C_
+  [4] Commons                | Templo de Ramsés II, Abu Simbel, Egipto,
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Templo_de_Rams%C3%A9s_II%2C_Abu_Simbel%2C_Egipto%2C_
+  [5] Commons                | Templo de Ramsés II, Abu Simbel, Egipto,
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Templo_de_Rams%C3%A9s_II%2C_Abu_Simbel%2C_Egipto%2C_
+
+[egy-sea-peoples] 海上民族入侵·青銅時代崩潰 | Sea Peoples — Bronze Age Collapse (-1177)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/11/Seev%C3%B6lker.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/b6/Medinet_Habu_Ramses_III._Tempel_Nordostwand_Abzeichnung_01
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Medinet_Habu_Ramses_III._Tempel_Nordostwand_Abzeichn
+  [3] Commons                | Ludy Morza (Sea Peoples).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ludy_Morza_%28Sea_Peoples%29.jpg/1280px-Ludy_Morza_%
+  [4] Commons                | Sea Peoples ua.PNG
+      https://upload.wikimedia.org/wikipedia/commons/5/5a/Sea_Peoples_ua.PNG
+
+[egy-26th-dyn] 第 26 王朝·Saite 復興 | 26th Dynasty — Saite Revival (-664)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/73/Portrait_of_a_Pharaoh_of_the_Saite_Dynasty.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Portrait_of_a_Pharaoh_of_the_Saite_Dynasty.jpg/1280p
+
+[egy-persian-conquest] 波斯征服埃及·Cambyses | Persian Conquest — Cambyses (-525)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/2e/Illustrerad_Verldshistoria_band_I_Ill_058.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Illustrerad_Verldshistoria_band_I_Ill_058.jpg/1280px
+  [2] Commons                | Persian Empire ua.PNG
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Persian_Empire_ua.PNG/1280px-Persian_Empire_ua.PNG
+
+[egy-alexandria-founded] 亞歷山卓建城·地中海新都 | Alexandria Founded (-331)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/43/Corniche_of_Alexandria.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/79/San_Stefano_Grand_Plaza.JPG
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Corniche_of_Alexandria.jpg/1280px-Corniche_of_Alexan
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/San_Stefano_Grand_Plaza.JPG/1280px-San_Stefano_Grand
+  [4] Commons                | Alexandria, Egypt (4529).jpg
+      https://upload.wikimedia.org/wikipedia/commons/e/e2/Alexandria%2C_Egypt_%284529%29.jpg
+  [5] Commons                | EuthydemusI.jpg
+      https://upload.wikimedia.org/wikipedia/commons/a/aa/EuthydemusI.jpg
+
+[egy-library-alexandria] 亞歷山卓大圖書館 | Great Library of Alexandria (-295)
+  cat: science
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/6/64/Ancientlibraryalex.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ancientlibraryalex.jpg/1280px-Ancientlibraryalex.jpg
+  [2] Commons                | The Great Library of Alexandria, O. Von 
+      https://upload.wikimedia.org/wikipedia/commons/4/4f/The_Great_Library_of_Alexandria%2C_O._Von_Corven%2C_19th_c
+  [3] Commons                | The Great Library of Alexandria - Colori
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/The_Great_Library_of_Alexandria_-_Colorized.jpg/1280
+
+[egy-rosetta-stone] Rosetta 石碑刻製 | Rosetta Stone Carved (-196)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Rosetta_Stone_-_front_face_-_corrected_image.jpg/128
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Rosetta_Stone.JPG/1280px-Rosetta_Stone.JPG
+
+[egy-coptic-christianity] 科普特基督教·埃及本土教會 | Coptic Christianity (300)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/71/Coptic_cross.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/e/e9/CairoAbbasiyaMarkEntrance.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Coptic_cross.svg/1280px-Coptic_cross.svg.png
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CairoAbbasiyaMarkEntrance.jpg/1280px-CairoAbbasiyaMa
+  [4] Commons                | Bertha Müller - portrait d'une copte.web
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bertha_M%C3%BCller_-_portrait_d%27une_copte.webp/128
+  [5] Commons                | Circumcision. Coptic boy in traditional 
+      https://upload.wikimedia.org/wikipedia/commons/1/13/Circumcision._Coptic_boy_in_traditional_costume.jpg
+
+[egy-pyramid-texts] 金字塔經文·最早宗教典籍 | Pyramid Texts — Earliest Religious Texts (-2400)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4e/Hieroglyph_Text_from_Teti_I_pyramid.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hieroglyph_Text_from_Teti_I_pyramid.jpg/1280px-Hiero
+
+=== AXIS: egypt-islamic (4 items) ===
+
+[egy-fatimid-span] 法蒂瑪王朝·什葉派黃金期 | Fatimid Caliphate (969)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/bc/Fatimid_Caliphate.PNG
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/White_flag_3_to_2.svg/1280px-White_flag_3_to_2.svg.p
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Fatimid_Caliphate.PNG/1280px-Fatimid_Caliphate.PNG
+  [3] Commons                | Fatimid.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Fatimid.jpg/1280px-Fatimid.jpg
+  [4] Commons                | Fatimid Caliphate, Al-Musawwar fi al-Tar
+      https://upload.wikimedia.org/wikipedia/commons/7/76/Fatimid_Caliphate%2C_Al-Musawwar_fi_al-Tarikh.jpg
+  [5] Commons                | Fatimid Islamic Caliphate-ar.png
+      https://upload.wikimedia.org/wikipedia/commons/9/9e/Fatimid_Islamic_Caliphate-ar.png
+
+[egy-ayyubid-span] 阿尤布王朝·Saladin 後裔 | Ayyubid Dynasty (1171)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/15/Reconstruction_of_the_Standard_of_the_Sultan_Saladin.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1b/Ayyubid_Sultanate_1193_AD.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Reconstruction_of_the_Standard_of_the_Sultan_Saladin
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ayyubid_Sultanate_1193_AD.jpg/1280px-Ayyubid_Sultana
+  [4] Commons                | Ayyubid Dynasty ar.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ayyubid_Dynasty_ar.png/1280px-Ayyubid_Dynasty_ar.png
+  [5] Commons                | Ayyubid Sultanate 1220 CE.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ayyubid_Sultanate_1220_CE.png/1280px-Ayyubid_Sultana
+
+[egy-mamluk-span] 馬木路克蘇丹國·奴隸軍統治 | Mamluk Sultanate (1250)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/1f/Mameluke_Flag.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1d/Mamluk_Sultanate_of_Cairo_1317_AD.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mameluke_Flag.svg/1280px-Mameluke_Flag.svg.png
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mamluk_Sultanate_of_Cairo_1317_AD.jpg/1280px-Mamluk_
+  [4] Commons                | Flag of Mamluk Sultanate.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Flag_of_Mamluk_Sultanate.png/1280px-Flag_of_Mamluk_S
+  [5] Commons                | Mamluk Sultanate Flag of Map (Year-1413)
+      https://upload.wikimedia.org/wikipedia/commons/1/11/Mamluk_Sultanate_Flag_of_Map_%28Year-1413%29.png
+
+[egy-ottoman-span] 鄂圖曼埃及·省級統治 | Ottoman Egypt (1517)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Egypt_%281844%E2%80%931867%29.svg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Egypt_%281844%E2%80%931867%29.svg/1280px-Fla
+  [2] Commons                | Egypt Ottoman border 1906.jpg
+      https://upload.wikimedia.org/wikipedia/commons/a/a0/Egypt_Ottoman_border_1906.jpg
+  [3] Commons                | Ottoman Empire Detailed.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ottoman_Empire_Detailed.png/1280px-Ottoman_Empire_De
+  [4] Commons                | Square Ottoman-design carpet. Probably C
+      https://upload.wikimedia.org/wikipedia/commons/e/ef/Square_Ottoman-design_carpet._Probably_Cairo%2C_Egypt._Fir
+
+=== AXIS: modern-egypt (1 items) ===
+
+[egy-british-protectorate-span] 英國保護時代·70 年 | British Protectorate Era (1882)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/f4/Anglo-egyptian_war.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Anglo-egyptian_war.jpg/1280px-Anglo-egyptian_war.jpg
+
+=== AXIS: modern-greece (1 items) ===
+
+[grk-metapolitefsi] 民主回歸·Metapolitefsi | Metapolitefsi — Return to Democracy (1974.58)
+  cat: politics
+  ** ZERO candidates **
+  wiki_en: https://en.wikipedia.org/wiki/Metapolitefsi
+  wiki_zh: https://zh.wikipedia.org/wiki/希臘政體轉變
+
+=== AXIS: turkey (5 items) ===
+
+[tur-cyprus-invasion] 土耳其入侵 Cyprus·北塞浦路斯 | Turkish Invasion of Cyprus (1974.58)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/5/58/Cyprus_1973_ethnic_neutral.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/a1/Cyprus_1973_ethnic_en.svg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ethnographic_distribution_in_Cyprus_1960.jpg/1280px-
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Cyprus_1973_ethnic_neutral.svg/1280px-Cyprus_1973_et
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cyprus_1973_ethnic_en.svg/1280px-Cyprus_1973_ethnic_
+  [5] Commons                | Spy Satellite Image of Cyprus Invasion -
+      https://upload.wikimedia.org/wikipedia/commons/b/b4/Spy_Satellite_Image_of_Cyprus_Invasion_-_July_20%2C_1974_%
+
+[tur-pkk-begins] PKK 開始武裝·庫德族分離運動 | PKK Armed Insurgency Begins (1984.67)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_Kurdistan_Workers%27_Party.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Flag_of_H%C3%AAz%C3%AAn_Parastina_Gel.svg/1280px-Fla
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Kurdistan_Workers%27_Party.svg/1280px-Flag_o
+
+[tur-erdogan-pm] Erdoğan 任首相·AKP 時代開始 | Erdoğan Becomes Prime Minister (2003.17)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/bc/Recep_Tayyip_Erdo%C4%9Fan_2025_%28cropped%29.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/b/ba/Turkish_President_Recep_Tayyip_Erdo%C4%9Fan_in_January_202
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Recep_Tayyip_Erdo%C4%9Fan_2025_%28cropped%29.jpg/128
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Turkish_President_Recep_Tayyip_Erdo%C4%9Fan_in_Janua
+  [4] Commons                | Ilham Aliyev received delegation led by 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ilham_Aliyev_received_delegation_led_by_Turkish_mini
+  [5] Commons                | Ilham Aliyev received delegation led by 
+      https://upload.wikimedia.org/wikipedia/commons/3/3d/Ilham_Aliyev_received_delegation_led_by_Turkish_minister_o
+
+[tur-2016-coup-attempt] 2016 政變未遂·Erdoğan 大清洗 | 2016 Coup Attempt (2016.58)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8e/15_July_2016_coup_attempt_tanks-Ulus_%28cropped%29.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/15_July_2016_coup_attempt_tanks-Ulus_%28cropped%29.j
+  [2] Commons                | Funeral at Istanbul mosque for victim of
+      https://upload.wikimedia.org/wikipedia/commons/b/bb/Funeral_at_Istanbul_mosque_for_victim_of_2016_coup_attempt
+  [3] Commons                | June coup d'état attempt plan.png
+      https://upload.wikimedia.org/wikipedia/commons/4/4c/June_coup_d%27%C3%A9tat_attempt_plan.png
+
+[tur-2023-earthquake] Kahramanmaraş 大地震 | Kahramanmaraş Earthquake (2023.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/de/Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg/
+  [2] Commons                | Building in Kahramanmaraş after 7.8 magn
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Building_in_Kahramanmara%C5%9F_after_7.8_magnitude_e
+  [3] Commons                | Kahramanmaraş after 7.8 magnitude earthq
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Kahramanmara%C5%9F_after_7.8_magnitude_earthquake_in
+  [4] Commons                | Kahramanmaraş after 7.8 magnitude earthq
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kahramanmara%C5%9F_after_7.8_magnitude_earthquake_in
+
+=== AXIS: north-america (3 items) ===
+
+[us-colonial-span] 殖民地時代·13 個英屬殖民地 170 年 | Colonial America (1607)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/45/Interview_of_Samoset_with_the_Pilgrims.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/12
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Arrleft.svg/1280px-Arrleft.svg.png
+  [4] Commons                | Langs N.Amer.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Langs_N.Amer.png/1280px-Langs_N.Amer.png
+  [5] Commons                | The thirteen United Colonies 1781.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_thirteen_United_Colonies_1781.jpg/1280px-The_thi
+
+[us-french-indian-war] French-Indian War·北美七年戰爭 | French and Indian War (1754.5)
+  cat: war
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/9c/French_and_indian_war_map.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/French_and_indian_war_map.svg/1280px-French_and_indi
+  [2] Commons                | Major George Washington on a white horse
+      https://upload.wikimedia.org/wikipedia/commons/6/67/Major_George_Washington_on_a_white_horse_at_the_Battle_of_
+
+[us-boston-tea-party] Boston Tea Party·獨立前夕 | Boston Tea Party (1773.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/e/e6/Boston_Tea_Party_w.jpg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Boston_Tea_Party_Currier_colored.jpg/1280px-Boston_T
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Boston_Tea_Party_w.jpg/1280px-Boston_Tea_Party_w.jpg
+  [3] Commons                | Boston Tea Party, image from 1903.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Boston_Tea_Party%2C_image_from_1903.jpg/1280px-Bosto
+  [4] Commons                | The Boston Tea Party - geograph.org.uk -
+      https://upload.wikimedia.org/wikipedia/commons/0/06/The_Boston_Tea_Party_-_geograph.org.uk_-_4746534.jpg
+
+=== AXIS: usa (34 items) ===
+
+[us-antebellum-span] Antebellum·西進與奴隸制 58 年 | Antebellum Era & Westward Expansion (1803)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/86/United_States_evolution_fast.gif
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/U.S._Territorial_Acquisitions.png/1280px-U.S._Territ
+
+[us-gilded-age-span] Gilded Age·工業革命與鍍金時代 | Gilded Age — Industrialization (1865)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/d/d9/The_Breakers_Newport.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Arrleft.svg/1280px-Arrleft.svg.png
+  [2] Commons                | Manila Railroad 148.png
+      https://upload.wikimedia.org/wikipedia/commons/c/c7/Manila_Railroad_148.png
+
+[us-cold-war-span] 冷戰·美蘇對峙 44 年 | Cold War Era (1947)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/dc/NATO_vs._Warsaw_Pact_%281949-1990%29.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/NATO_vs._Warsaw_Pact_%281949-1990%29.svg/1280px-NATO
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Arrleft.svg/1280px-Arrleft.svg.png
+  [3] Commons                | Cold War-1975.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cold_War-1975.png/1280px-Cold_War-1975.png
+  [4] Commons                | Cold War Germany.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cold_War_Germany.png/1280px-Cold_War_Germany.png
+  [5] Commons                | Cold War era article.jpg
+      https://upload.wikimedia.org/wikipedia/commons/d/db/Cold_War_era_article.jpg
+
+[us-civil-rights-span] 民權運動·黑人爭平權 14 年 | Civil Rights Movement (1954)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/de/Rustin_Young_Ryan_Farmer_Lewis.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/4/4c/Civil_Rights_March_on_Washington%2C_D.C._%28Leaders_marchi
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Mart
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Rustin_Young_Ryan_Farmer_Lewis.jpg/1280px-Rustin_You
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Civil_Rights_March_on_Washington%2C_D.C._%28Leaders_
+  [5] Commons                | Civil rights demonstration at Fort Laude
+      https://upload.wikimedia.org/wikipedia/commons/7/7a/Civil_rights_demonstration_at_Fort_Lauderdale%27s_segregat
+
+[us-bill-of-rights] Bill of Rights·憲法首 10 修正案 | Bill of Rights (1791.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/79/Bill_of_Rights_Pg1of1_AC.jpg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Bill_of_Rights_Pg1of1_AC.jpg/1280px-Bill_of_Rights_P
+  [2] Commons                | English Bill of Rights of 1689.jpg
+      https://upload.wikimedia.org/wikipedia/commons/e/e3/English_Bill_of_Rights_of_1689.jpg
+  [3] Commons                | United-states-bill-of-rights 1-630x670.j
+      https://upload.wikimedia.org/wikipedia/commons/5/57/United-states-bill-of-rights_1-630x670.jpg
+
+[us-war-1812] 1812 戰爭·美英「第二次獨立戰爭」 | War of 1812 (1812.5)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/fc/War_of_1812_Montage.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/War_of_1812_Montage.jpg/1280px-War_of_1812_Montage.j
+  [2] Commons                | 1812 War Declaration.jpg
+      https://upload.wikimedia.org/wikipedia/commons/f/f5/1812_War_Declaration.jpg
+  [3] Commons                | American Colours War of 1812.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/American_Colours_War_of_1812.png/1280px-American_Col
+  [4] Commons                | War of 1812 plaque in Stonington, Connec
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/War_of_1812_plaque_in_Stonington%2C_Connecticut.jpg/
+
+[us-monroe-doctrine] Monroe 主義·美洲歸美洲人 | Monroe Doctrine (1823.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/2a/Jamesmonroe-npgallery.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/88/Uncle_Sam_Straddles_the_Americas_Cartoon.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Uncle_Sam_Straddles_the_Americas_Cartoon.jpg/1280px-
+  [4] Commons                | Monroe doctrine.jpg
+      https://upload.wikimedia.org/wikipedia/commons/a/ad/Monroe_doctrine.jpg
+
+[us-indian-removal] Indian Removal·血淚之路 | Indian Removal Act — Trail of Tears (1830.42)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/12
+  [2] Commons                | Major Ridge historical marker in front o
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Major_Ridge_historical_marker_in_front_of_the_Chieft
+
+[us-mexican-war] 美墨戰爭·美國奪半個墨西哥 | Mexican-American War (1846.33)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/80/Batalla_de_Sacramento.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7f/Nebel_Mexican_War_12_Scott_in_Mexico_City_%28cropped%29.jp
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/a/a1/Battle_Molino_del_Rey.jpg
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Batalla_de_Sacramento.jpg/1280px-Batalla_de_Sacramen
+  [4] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nebel_Mexican_War_12_Scott_in_Mexico_City_%28cropped
+  [5] Commons                | Mexican-American War collage.png
+      https://upload.wikimedia.org/wikipedia/commons/0/0e/Mexican-American_War_collage.png
+
+[us-gold-rush] California Gold Rush·「49 人」西進潮 | California Gold Rush (1849.08)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/04/1850_Woman_and_Men_in_California_Gold_Rush.jpg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/2/27/California_Gold_Rush_handbill.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/1850_Woman_and_Men_in_California_Gold_Rush.jpg/1280p
+  [3] Commons                | California Gold Rush Caricature.jpg
+      https://upload.wikimedia.org/wikipedia/commons/3/35/California_Gold_Rush_Caricature.jpg
+
+[us-reconstruction-end] 1877 妥協·Reconstruction 終結 | Compromise of 1877 — End of Reconstruction (1877.25)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8f/Keppler-Conkling-Mephistopheles.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Keppler-Conkling-Mephistopheles.jpg/1280px-Keppler-C
+
+[us-ellis-island] Ellis Island 開放·大移民潮 | Ellis Island Opens (1892)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/c/cc/Ellis_island_air_photo.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/c/c3/Aerial_view_of_Ellis_Island%2C_Jersey_City%2C_New_Jersey_L
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Ellis_island_air_photo.jpg/1280px-Ellis_island_air_p
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Aerial_view_of_Ellis_Island%2C_Jersey_City%2C_New_Je
+  [4] Commons                | Ellis Island hospital (01849).jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ellis_Island_hospital_%2801849%29.jpg/1280px-Ellis_I
+  [5] Commons                | Ellis Island hospital window mural (0189
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Ellis_Island_hospital_window_mural_%2801897%29.jpg/1
+
+[us-spanish-american-war] 美西戰爭·美國成全球帝國 | Spanish-American War (1898.33)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/a/ab/USS_Olympia_art_NH_91881-KN.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/84/Collage_infobox_for_Spanish-American_War.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/USS_Olympia_art_NH_91881-KN.jpg/1280px-USS_Olympia_a
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Collage_infobox_for_Spanish-American_War.jpg/1280px-
+  [4] Commons                | Soldiers in the Spanish American War 01.
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Soldiers_in_the_Spanish_American_War_01.jpg/1280px-S
+
+[us-19th-amendment] 19th 修正案·婦女投票權 | 19th Amendment — Women's Suffrage (1920.67)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/5/5b/Greater_coat_of_arms_of_the_United_States.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Greater_coat_of_arms_of_the_United_States.svg/1280px
+  [3] Commons                | 19th Amendment Voting Badge-Harding Cool
+      https://upload.wikimedia.org/wikipedia/commons/0/07/19th_Amendment_Voting_Badge-Harding_Coolidge_Ticket_1920.p
+  [4] Commons                | Special Session appeal for 19th Amendmen
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Special_Session_appeal_for_19th_Amendment_in_Vermont
+  [5] Commons                | Suffrage workers visit the Rhode Island 
+      https://upload.wikimedia.org/wikipedia/commons/0/0a/Suffrage_workers_visit_the_Rhode_Island_governor_at_state_
+
+[us-new-deal] New Deal·FDR 救經濟革命 | New Deal — FDR's Reforms (1933.17)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/28/Signing_Of_The_Social_Security_Act.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/f3/New_Deal_collage.jpg
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/New_Deal_collage.jpg/1280px-New_Deal_collage.jpg
+  [3] Commons                | Court reform plan hostile to Constitutio
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Court_reform_plan_hostile_to_Constitution._Washingto
+  [4] Commons                | Roosevelt Fireside Chat 1937.tif
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Roosevelt_Fireside_Chat_1937.tif/lossy-page1-1280px-
+  [5] Commons                | Roosevelt Fireside Chat 1937 cropped.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Roosevelt_Fireside_Chat_1937_cropped.jpg/1280px-Roos
+
+[us-hiroshima-nagasaki] 廣島長崎原爆·終結 WW2 | Hiroshima & Nagasaki Atomic Bombings (1945.58)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/5/54/Atomic_bombing_of_Japan.jpg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/1280px-Atomic_bombing_of
+  [2] Commons                | Atomic cloud over Hiroshima.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Atomic_cloud_over_Hiroshima.jpg/1280px-Atomic_cloud_
+
+[us-marshall-plan] Marshall Plan·美援歐洲重建 | Marshall Plan (1948.33)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/dc/Marshall_Plan.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/12
+  [4] Commons                | Marshall plan page 1.jpg
+      https://upload.wikimedia.org/wikipedia/commons/1/1e/Marshall_plan_page_1.jpg
+
+[us-mccarthy-era] McCarthy 時代·紅色恐慌 | McCarthy Era — Red Scare (1950.17)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f4/Anticommunist_Literature_1950s.png
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/f/f1/Welch-McCarthy-Hearings.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Anticommunist_Literature_1950s.png/1280px-Anticommun
+  [3] Commons                | Joana la negra.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Joana_la_negra.jpg/1280px-Joana_la_negra.jpg
+  [4] Commons                | Senator Joseph R. McCarthy, ca. 1954.png
+      https://upload.wikimedia.org/wikipedia/commons/0/08/Senator_Joseph_R._McCarthy%2C_ca._1954.png
+
+[us-watergate] Watergate·Nixon 辭職 | Watergate — Nixon Resigns (1974.58)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/7/77/WatergateFromAir.JPG
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/1/1f/Watergate_complex.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Watergate_complex.jpg/1280px-Watergate_complex.jpg
+  [4] Commons                | Nixon-depart.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Nixon-depart.png/1280px-Nixon-depart.png
+  [5] Commons                | Nixon-depart crop.png
+      https://upload.wikimedia.org/wikipedia/commons/8/8f/Nixon-depart_crop.png
+
+[us-reagan-elected] Reagan 當選·保守革命 | Reagan Elected — Conservative Revolution (1980.83)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Portrait_of_President_Reagan_1981.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/1280p
+
+[us-brown-v-board] Brown v Board·學校分離違憲 | Brown v. Board of Education (1954.42)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/f/f3/Seal_of_the_United_States_Supreme_Court.svg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_the_United_States_Supreme_Court.svg/1280px-S
+  [2] Commons                | 1954 Brown v. Board of Education 37c USA
+      https://upload.wikimedia.org/wikipedia/commons/a/aa/1954_Brown_v._Board_of_Education_37c_USA_stamp.gif
+  [3] Commons                | Brown v Board of Education.png
+      https://upload.wikimedia.org/wikipedia/commons/e/ed/Brown_v_Board_of_Education.png
+  [4] Commons                | Judgment, Brown v. Board of Education, 0
+      https://upload.wikimedia.org/wikipedia/commons/4/40/Judgment%2C_Brown_v._Board_of_Education%2C_05311955.gif
+
+[us-mlk-i-have-dream] MLK「I Have a Dream」演講 | MLK's 'I Have a Dream' (1963.67)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/81/Martin_Luther_King_-_March_on_Washington.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/8b/Martin_Luther_King_Jr_National_Historic_Site_%283623324912
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Martin_Luther_King_Jr_National_Historic_Site_%283623
+  [3] Commons                | I-have-a-dream-site crop.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/I-have-a-dream-site_crop.jpg/1280px-I-have-a-dream-s
+  [4] Commons                | Lincoln Memorial- I Have a Dream marker 
+      https://upload.wikimedia.org/wikipedia/commons/4/46/Lincoln_Memorial-_I_Have_a_Dream_marker_%289a3330db-d3a0-4
+  [5] Commons                | Lincoln Memorial I Have a Dream Marker 2
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Lincoln_Memorial_I_Have_a_Dream_Marker_2413.jpg/1280
+
+[us-1968-assassinations] 1968 MLK + RFK 刺殺·美國動盪年 | 1968 Assassinations (MLK, RFK) (1968.33)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/84/Martin_Luther_King_Jr_NYWTS.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Martin_Luther_King_Jr_NYWTS.jpg/1280px-Martin_Luther
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Martin_Luther_King_Jr_NYWTS_%283x4_close_cropped%29.
+
+[us-hollywood-golden] Hollywood 黃金期·Gone with Wind + Oz | Hollywood Golden Age (1939.92)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/4/46/Clark_Gable_and_Vivien_Leigh_-_Wind.jpg
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Clark_Gable_and_Vivien_Leigh_-_Wind.jpg/1280px-Clark
+  [2] Commons                | Golden Age of Hollywood Costume Ball at 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Golden_Age_of_Hollywood_Costume_Ball_at_the_Library_
+  [3] Commons                | Golden Age of Hollywood Costume Ball at 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Golden_Age_of_Hollywood_Costume_Ball_at_the_Library_
+  [4] Commons                | Golden Age of Hollywood Costume Ball at 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Golden_Age_of_Hollywood_Costume_Ball_at_the_Library_
+
+[us-elvis-rock] Elvis·Rock and Roll 全國爆紅 | Elvis & Rock and Roll Explosion (1956.33)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/be/Elvis_Presley%2C_Modern_Screen%2C_June_1958.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/9/99/Elvis_Presley_promoting_Jailhouse_Rock.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Elvis_Presley%2C_Modern_Screen%2C_June_1958.jpg/1280
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elvis_Presley_promoting_Jailhouse_Rock.jpg/1280px-El
+
+[us-arpanet] ARPANET·網際網路誕生 | ARPANET — Birth of the Internet (1969.83)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/b/bf/Arpanet_logical_map%2C_march_1977.png
+  [1] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Arpanet_logical_map%2C_march_1977.png/1280px-Arpanet
+  [2] Commons                | ARPANET TimeLine - ar.png
+      https://upload.wikimedia.org/wikipedia/commons/7/7f/ARPANET_TimeLine_-_ar.png
+  [3] Commons                | ARPANET TimeLine - en.png
+      https://upload.wikimedia.org/wikipedia/commons/5/5a/ARPANET_TimeLine_-_en.png
+  [4] Commons                | Internet Key Layers.png
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Internet_Key_Layers.png/1280px-Internet_Key_Layers.p
+
+[us-apple-founded] Apple 成立·Silicon Valley 時代 | Apple Founded — Silicon Valley (1976.25)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/e/eb/Apple_park_cupertino_2019.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg
+  [2] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Apple_park_cupertino_2019.jpg/1280px-Apple_park_cupe
+  [3] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1280px-Apple_logo_black.svg.png
+
+[us-iphone] iPhone·智慧型手機時代 | iPhone Launch (2007.5)
+  cat: science
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/d/d2/IPhone_16_Pro_Vector.svg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/a/ad/IPhone_1st_Gen.svg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/1280px-IPhone_16_Pro_Vector
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/IPhonelogo.svg/1280px-IPhonelogo.svg.png
+  [4] Commons                | IPhone 17 launch at Apple TRX Malaysia 1
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/IPhone_17_launch_at_Apple_TRX_Malaysia_10.jpg/1280px
+  [5] Commons                | IPhone 17 launch at Apple TRX Malaysia 2
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/IPhone_17_launch_at_Apple_TRX_Malaysia_22.jpg/1280px
+
+[us-gulf-war] 波灣戰爭·美軍解放科威特 | Gulf War (1991.08)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/3/35/WarGulf_photobox.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WarGulf_photobox.jpg/1280px-WarGulf_photobox.jpg
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/1280px
+  [4] Commons                | Gulf War Photobox.jpg
+      https://upload.wikimedia.org/wikipedia/commons/d/dd/Gulf_War_Photobox.jpg
+
+[us-iraq-war-2003] 伊拉克戰爭·美國霸權頂峰與反彈 | Iraq War (2003.25)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/0/07/Iraq_header_2.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/8/80/UStanks_baghdad_2003.JPEG
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/UStanks_baghdad_2003.JPEG/1280px-UStanks_baghdad_200
+  [3] Commons                | Iraq War montage.png
+      https://upload.wikimedia.org/wikipedia/commons/2/2e/Iraq_War_montage.png
+  [4] Commons                | The War in Iraq, Near Basra, Iraq, 2003 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/The_War_in_Iraq%2C_Near_Basra%2C_Iraq%2C_2003_%28Dis
+
+[us-financial-crisis] 2008 金融危機·Lehman 倒閉 | 2008 Financial Crisis (2008.75)
+  cat: politics
+  [0] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/5/53/Lehman_Brothers_Times_Square_by_David_Shankbone.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zh_conversion_icon_m.svg/1280px-Zh_conversion_icon_m
+  [2] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Lehman_Brothers_Times_Square_by_David_Shankbone.jpg/
+  [3] Commons                | 22 2007-2008 global financial crisis eff
+      https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/22_2007-2008_global_financial_crisis_effect_in_Brist
+  [4] Commons                | Iceland financial crisis.jpg
+      https://upload.wikimedia.org/wikipedia/commons/8/89/Iceland_financial_crisis.jpg
+
+[us-obama-elected] Obama 當選·首位黑人總統 | Obama Elected — First Black President (2008.83)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1280px-President_Barack_O
+  [2] Commons                | President Barack H. Obama, center, and f
+      https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/President_Barack_H._Obama%2C_center%2C_and_first_lad
+
+[us-trump-elected] Trump 當選·民粹民族主義復興 | Trump Elected (2016.83)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trum
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J
+  [2] Commons                | Donald Trump in 2024.jpg
+      https://upload.wikimedia.org/wikipedia/commons/c/ca/Donald_Trump_in_2024.jpg
+  [3] Commons                | Shinzō Abe met with President-elect Dona
+      https://upload.wikimedia.org/wikipedia/commons/7/7d/Shinz%C5%8D_Abe_met_with_President-elect_Donald_Trump_%281
+  [4] Commons                | Shinzō Abe met with President-elect Dona
+      https://upload.wikimedia.org/wikipedia/commons/7/7b/Shinz%C5%8D_Abe_met_with_President-elect_Donald_Trump_%284
+
+[us-covid] COVID-19·美國疫情與社會撕裂 | COVID-19 Pandemic (2020.25)
+  cat: politics
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/2/2f/COVID-19_outbreak_USA_per_capita_cases_map.svg
+  [1] Wikidata               | Wikidata P18
+      https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Donald_Trump_Coronavirus_briefing.jpg/1280px-Donald_
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/COVID-19_outbreak_USA_per_capita_cases_map.svg/1280p
+  [3] Commons                | Covid-19 SP - UTI V. Nova Cachoeirinha.j
+      https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Covid-19_SP_-_UTI_V._Nova_Cachoeirinha.jpg/1280px-Co
+  [4] Commons                | Covid-19 San Salvatore 09.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Covid-19_San_Salvatore_09.jpg/1280px-Covid-19_San_Sa
+  [5] Commons                | Pupil washes hands during COVID-19 pande
+      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pupil_washes_hands_during_COVID-19_pandemic_in_Ghana
+
+=== AXIS: korean-war (1 items) ===
+
+[us-korean-war-begins] 韓戰爆發·美軍介入 | Korean War Begins (1950.5)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/8/81/Battle_images_for_korea_war.jpg
+  [1] Wiki-PageImage(en)     | Wiki主圖(en)
+      https://upload.wikimedia.org/wikipedia/commons/7/7b/Chosin.jpg
+  [2] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Battle_images_for_korea_war.jpg/1280px-Battle_images
+  [3] Wiki-Infobox(en)       | Wiki頁面解析(en)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Chosin.jpg/1280px-Chosin.jpg
+  [4] Commons                | Lopez scaling seawall.jpg
+      https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lopez_scaling_seawall.jpg/1280px-Lopez_scaling_seawa
+  [5] Commons                | Memorial Hall to Resist U.S. Aggression 
+      https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Memorial_Hall_to_Resist_U.S._Aggression_and_Aid_Kore
+
+=== AXIS: vietnam-war (1 items) ===
+
+[us-vietnam-escalation] 越戰升級·Operation Rolling Thunder | Vietnam War Escalation (1965.17)
+  cat: war
+  [0] Wiki-PageImage(zh)     | Wiki主圖(zh)
+      https://upload.wikimedia.org/wikipedia/commons/6/67/U.S._Army_UH-1H_Hueys_insert_ARVN_troops_at_Kh%C3%A2m_%C4%
+  [1] Wiki-Infobox(zh)       | Wiki頁面解析(zh)
+      https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/U.S._Army_UH-1H_Hueys_insert_ARVN_troops_at_Kh%C3%A2
+  [2] Commons                | South Vietnam Map.jpg
+      https://upload.wikimedia.org/wikipedia/commons/7/73/South_Vietnam_Map.jpg

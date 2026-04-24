@@ -1406,7 +1406,13 @@ function showPicker(ev,candidates){
   return new Promise(resolve=>{
     _pickerResolve=resolve; _selectedPickerUrl=null;
     document.getElementById('picker-title').textContent=ev.zh+(ev.en?' — '+ev.en:'');
-    document.getElementById('picker-meta').textContent=`${ev.axis} · ${formatYear(ev.year)} · ${candidates.length} 張候選`;
+    const esc=s=>String(s).replace(/"/g,'&quot;');
+    const wikiLinks=[];
+    if(ev.wiki_zh) wikiLinks.push(`<a href="${esc(ev.wiki_zh)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline">🔗 Wiki 中</a>`);
+    if(ev.wiki_en) wikiLinks.push(`<a href="${esc(ev.wiki_en)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline">🔗 Wiki EN</a>`);
+    const searchQ=encodeURIComponent(ev.en||ev.zh);
+    wikiLinks.push(`<a href="https://www.google.com/search?q=${searchQ}&tbm=isch" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:underline">🔍 Google 圖片</a>`);
+    document.getElementById('picker-meta').innerHTML=`${ev.axis} · ${formatYear(ev.year)} · ${candidates.length} 張候選${wikiLinks.length?' · '+wikiLinks.join(' · '):''}`;
     document.getElementById('picker-url-input').value='';
     document.getElementById('picker-custom-preview').style.display='none';
     document.getElementById('picker-status').textContent='';
