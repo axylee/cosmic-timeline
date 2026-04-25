@@ -1,0 +1,18 @@
+# Cloudflare Pages cache 規則
+# no-cache：瀏覽器仍會存，但每次使用前都用 ETag 向 server 確認，
+# 沒變就回 304（極輕），有變就推新版 → 不用 Ctrl+F5
+
+/index.html
+  Cache-Control: no-cache, must-revalidate
+
+/about.html
+  Cache-Control: no-cache, must-revalidate
+
+/data/*
+  Cache-Control: no-cache, must-revalidate
+
+# 圖片檔名穩定，可長 cache（30 天）
+/images/*
+  Cache-Control: public, max-age=2592000
+
+# 其他靜態資源預設行為（Cloudflare Pages 預設 immutable assets）

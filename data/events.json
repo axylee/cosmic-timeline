@@ -33883,7 +33883,8 @@
       "crossRef": [
         "oceania",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/35_Vietnamese_boat_people_2.JPEG"
     },
     {
       "id": "napoleon-crowned",
@@ -33902,7 +33903,8 @@
         "cross"
       ],
       "amazon_asin": "0143127853",
-      "amazon_title": "Napoleon: A Life"
+      "amazon_title": "Napoleon: A Life",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Jacques-Louis_David_-_The_Coronation_of_Napoleon_%281805-1807%29.jpg"
     },
     {
       "id": "napoleon-trafalgar",
@@ -33919,7 +33921,8 @@
       "crossRef": [
         "uk",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/The_Battle_of_Trafalgar_by_William_Clarkson_Stanfield.jpg"
     },
     {
       "id": "napoleon-austerlitz",
@@ -33936,7 +33939,8 @@
       "crossRef": [
         "france",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/La_bataille_d%27Austerlitz._2_decembre_1805_%28Fran%C3%A7ois_G%C3%A9rard%29.jpg"
     },
     {
       "id": "napoleon-jena",
@@ -33953,7 +33957,8 @@
       "crossRef": [
         "france",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Battle_of_Jena-Auerstedt_-_Map01.jpg/1280px-Battle_of_Jena-Auerstedt_-_Map01.jpg"
     },
     {
       "id": "napoleon-tilsit",
@@ -33970,7 +33975,8 @@
       "crossRef": [
         "france",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Tilsitz_1807.JPG"
     },
     {
       "id": "napoleon-invade-russia",
@@ -33987,7 +33993,8 @@
       "crossRef": [
         "france",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/IV_corpo_durante_la_campagna_di_Russia.jpg"
     },
     {
       "id": "napoleon-leipzig",
@@ -34004,7 +34011,8 @@
       "crossRef": [
         "germany",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Battle_of_the_Nations_Monument_in_Leipzig%3B_Recording_in_May_2024.jpg/1280px-Battle_of_the_Nations_Monument_in_Leipzig%3B_Recording_in_May_2024.jpg"
     },
     {
       "id": "napoleon-abdicate-elba",
@@ -34020,7 +34028,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Treaty_of_Fontainebleau_(1814)",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Bouchot_-_Napol%C3%A9on_signe_son_abdication_%C3%A0_Fontainebleau_11_avril_1814.jpg"
     },
     {
       "id": "napoleon-waterloo",
@@ -34037,7 +34046,8 @@
       "crossRef": [
         "uk",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Battle_of_Waterloo_1815.PNG"
     },
     {
       "id": "napoleon-amiens-break",
@@ -34054,7 +34064,8 @@
       "crossRef": [
         "uk",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/La_Paix_d%27Amiens_de_Jules-Claude_Ziegler_%281853%29.jpg"
     },
     {
       "id": "napoleon-ulm",
@@ -34067,7 +34078,8 @@
       "desc_zh": "1805/10 Napoleon 包圍 Mack 奧軍於 Ulm，迫 3 萬人不戰而降，Trafalgar 前日完成。",
       "desc_en": "On Oct 20, 1805, Napoleon encircled Mack's Austrian army at Ulm, forcing 30,000 to surrender—one day before Trafalgar.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%83%8F%E7%88%BE%E5%A7%86%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Ulm"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Ulm",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ulm_campaign_-_Engagements_around_Ulm%2C_7-9_October_1805.jpg/1280px-Ulm_campaign_-_Engagements_around_Ulm%2C_7-9_October_1805.jpg"
     },
     {
       "id": "napoleon-berlin-decree",
@@ -34084,7 +34096,8 @@
       "crossRef": [
         "uk",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Gei%C3%9Fler_Leipziger_Kriegs-Scene_3.jpg/1280px-Gei%C3%9Fler_Leipziger_Kriegs-Scene_3.jpg"
     },
     {
       "id": "napoleon-friedland",
@@ -34097,7 +34110,8 @@
       "desc_zh": "1807/6/14 Napoleon 在 Friedland 大敗俄軍，俄皇 Alexander I 被迫數週後與法結盟。",
       "desc_en": "Napoleon crushed Russian forces at Friedland on Jun 14, 1807, forcing Tsar Alexander I to ally with France weeks later at Tilsit.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%BC%97%E9%87%8C%E5%BE%B7%E8%98%AD%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Friedland"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Friedland",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Battle_of_Friedland_-_Versailles.jpg/1280px-Battle_of_Friedland_-_Versailles.jpg"
     },
     {
       "id": "napoleon-peninsular-start",
@@ -34115,7 +34129,8 @@
       "crossRef": [
         "uk",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Peninsular_war_collage.jpg"
     },
     {
       "id": "napoleon-wagram",
@@ -34128,7 +34143,8 @@
       "desc_zh": "1809/7/6 Napoleon 在 Wagram 以 15 萬大軍對 Charles 大公的奧軍，勝後娶奧國 Marie Louise 鞏固聯姻。",
       "desc_en": "At Wagram (Jul 6, 1809), Napoleon defeated Archduke Charles; he later married Austrian Marie Louise to cement the alliance.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%93%A6%E6%A0%BC%E6%8B%89%E5%A7%86%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Wagram"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Wagram",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Battle_of_Wagram_-_Klenau_captures_Boudet%27s_artillery.png"
     },
     {
       "id": "napoleon-borodino",
@@ -34144,7 +34160,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Borodino",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Battle_of_Borodino.jpg"
     },
     {
       "id": "napoleon-moscow-retreat",
@@ -34161,7 +34178,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/French_invasion_of_Russia",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/IV_corpo_durante_la_campagna_di_Russia.jpg"
     },
     {
       "id": "napoleon-paris-falls",
@@ -34178,7 +34196,8 @@
       "crossRef": [
         "france",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/La_Barri%C3%A8re_de_Clichy._D%C3%A9fense_de_Paris%2C_le_30_mars_1814_-_Horace_Vernet_-_Mus%C3%A9e_du_Louvre_Peintures_RF_126.jpg"
     },
     {
       "id": "napoleon-hundred-days",
@@ -34195,7 +34214,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Hundred_Days",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/The_battles_of_Napoleon%27s_hundred_days.jpg"
     },
     {
       "id": "napoleon-st-helena",
@@ -34211,7 +34231,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Napoleon%27s_exile_on_Saint_Helena",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Exiled_on_Saint_Helena_Delaroche.jpg"
     },
     {
       "id": "pelop-outbreak",
@@ -34229,7 +34250,8 @@
         "greece"
       ],
       "amazon_asin": "0670032115",
-      "amazon_title": "The Peloponnesian War (Kagan)"
+      "amazon_title": "The Peloponnesian War (Kagan)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pelop_war_en.png"
     },
     {
       "id": "pelop-plague-athens",
@@ -34246,7 +34268,8 @@
       "crossRef": [
         "greece",
         "thm-pandemics-ancient"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Plague_in_an_Ancient_City_LACMA_AC1997.10.1_%281_of_2%29.jpg"
     },
     {
       "id": "pelop-nicias-peace",
@@ -34262,7 +34285,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Peace_of_Nicias",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Joachim_von_Sandrart_%281606-1688%29_-_Nicias_of_Athens.jpg"
     },
     {
       "id": "pelop-sicily-expedition",
@@ -34279,7 +34303,8 @@
       "crossRef": [
         "greece",
         "italy-roman"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Destruction_of_the_Athenian_army_at_Syracuse.jpg"
     },
     {
       "id": "pelop-syracuse-disaster",
@@ -34295,7 +34320,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Syracuse_(413_BC)",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Remembrance_Ceremony_at_the_Shaw_Quad%2C_in_front_of_the_Hendricks_Chapel%2C_Syracuse_University_%282023%29_02.jpg/1280px-Remembrance_Ceremony_at_the_Shaw_Quad%2C_in_front_of_the_Hendricks_Chapel%2C_Syracuse_University_%282023%29_02.jpg"
     },
     {
       "id": "pelop-aegospotami",
@@ -34311,7 +34337,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Aegospotami",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Battle_of_Aegospotami.png/1280px-Battle_of_Aegospotami.png"
     },
     {
       "id": "pelop-athens-surrenders",
@@ -34327,7 +34354,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Peloponnesian_War",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pelop_war_en.png"
     },
     {
       "id": "pelop-sparta-attica",
@@ -34340,7 +34368,8 @@
       "desc_zh": "前 431 年夏，Archidamus 率斯巴達軍侵雅典周邊農田；Pericles 策略性撤居民入城牆內。",
       "desc_en": "In summer 431 BC, King Archidamus invaded Attica's farmland; Pericles withdrew the population within the city walls.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%9F%BA%E9%81%94%E9%BE%8D%E6%88%B0%E7%88%AD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Archidamian_War"
+      "wiki_en": "https://en.wikipedia.org/wiki/Archidamian_War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pelop_war_en.png"
     },
     {
       "id": "pelop-funeral-oration",
@@ -34356,7 +34385,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Pericles%27_Funeral_Oration",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Discurso_funebre_pericles.PNG"
     },
     {
       "id": "pelop-pericles-dies",
@@ -34372,7 +34402,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Pericles",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Pericles_Pio-Clementino_Inv269_n4.jpg"
     },
     {
       "id": "pelop-pylos-sphacteria",
@@ -34385,7 +34416,8 @@
       "desc_zh": "前 425 雅典 Demosthenes 在 Pylos 設防，圍困 Sphacteria 島斯巴達 420 精銳，俘 292 人震驚希臘。",
       "desc_en": "In 425 BC at Pylos, Demosthenes trapped 420 Spartan elites on Sphacteria; capturing 292 shocked Greece (Spartans never surrendered).",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%9A%AE%E6%B4%9B%E6%96%AF%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Pylos"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Pylos",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Sphakteria.jpg"
     },
     {
       "id": "pelop-amphipolis",
@@ -34398,7 +34430,8 @@
       "desc_zh": "前 422 斯巴達 Brasidas 在 Amphipolis 大敗雅典軍，雙方主戰領袖 Brasidas / Cleon 同時陣亡，促 Nicias 和約。",
       "desc_en": "In 422 BC at Amphipolis, Spartan Brasidas defeated Athens; both hawks Brasidas and Cleon died, paving way for Peace of Nicias.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%AE%89%E8%8F%B2%E6%B3%A2%E5%88%A9%E6%96%AF%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Amphipolis"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Amphipolis",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Plan_of_the_battle_of_Amphopolis_%28422_BC%29.jpg/1280px-Plan_of_the_battle_of_Amphopolis_%28422_BC%29.jpg"
     },
     {
       "id": "pelop-alcibiades-defects",
@@ -34414,7 +34447,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Alcibiades",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Detail_of_Alcibiades_from_Alcibiades_Being_Taught_by_Socrates_%281776%29_by_Fran%C3%A7ois-Andr%C3%A9_Vincent.jpg"
     },
     {
       "id": "pelop-400-oligarchy",
@@ -34440,7 +34474,8 @@
       "desc_zh": "前 410 Alcibiades 復出率雅典艦隊在 Cyzicus 殲斯巴達艦隊，短暫復興雅典海權。",
       "desc_en": "Alcibiades returned and led Athens's fleet to annihilate the Spartan navy at Cyzicus (410 BC), briefly reviving Athenian sea power.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%89%BA%E9%BB%83%E5%BA%AB%E6%96%AF%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Cyzicus"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Cyzicus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trireme.jpg"
     },
     {
       "id": "pelop-arginusae",
@@ -34453,7 +34488,8 @@
       "desc_zh": "前 406/8 雅典慘勝斯巴達後，未救海難中的水手，歸國後 6 位將軍被民眾處決，元氣大傷。",
       "desc_en": "After a Pyrrhic victory at Arginusae (406 BC), 6 Athenian generals were executed for failing to rescue survivors—a self-inflicted wound.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%90%89%E8%89%BE%E7%BB%B4%E6%96%AF%E6%88%98%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Arginusae"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Arginusae",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Agean_Sea_map_geographical.jpg/1280px-Agean_Sea_map_geographical.jpg"
     },
     {
       "id": "pelop-thirty-tyrants",
@@ -34469,7 +34505,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Thirty_Tyrants",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Lysander-Sparta.jpg"
     },
     {
       "id": "punic-1st-outbreak",
@@ -34488,7 +34525,8 @@
         "north-africa"
       ],
       "amazon_asin": "0304366420",
-      "amazon_title": "The Fall of Carthage"
+      "amazon_title": "The Fall of Carthage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/First_Punic_War_264_BC_v3.png"
     },
     {
       "id": "punic-1st-ends",
@@ -34505,7 +34543,8 @@
       "crossRef": [
         "italy-roman",
         "north-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Stele_des_Polybios.jpg/1280px-Stele_des_Polybios.jpg"
     },
     {
       "id": "punic-hannibal-alps",
@@ -34522,7 +34561,8 @@
       "crossRef": [
         "italy-roman",
         "north-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Hannibal_Barca_bust_from_Capua_photo.jpg"
     },
     {
       "id": "punic-zama",
@@ -34539,7 +34579,8 @@
       "crossRef": [
         "italy-roman",
         "north-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Cornelis_Cort_-_The_Battle_of_Zama_-_1990.563_-_Art_Institute_of_Chicago.jpg/1280px-Cornelis_Cort_-_The_Battle_of_Zama_-_1990.563_-_Art_Institute_of_Chicago.jpg"
     },
     {
       "id": "punic-2nd-ends",
@@ -34556,7 +34597,8 @@
       "crossRef": [
         "italy-roman",
         "north-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Map_of_Rome_and_Carthage_at_the_start_of_the_Second_Punic_War-zh.svg/1280px-Map_of_Rome_and_Carthage_at_the_start_of_the_Second_Punic_War-zh.svg.png"
     },
     {
       "id": "punic-3rd-outbreak",
@@ -34573,7 +34615,8 @@
       "crossRef": [
         "italy-roman",
         "north-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/City_of_Carthage_circa_149_BC.png"
     },
     {
       "id": "punic-mylae",
@@ -34586,7 +34629,8 @@
       "desc_zh": "前 260 Duilius 率羅馬初建艦隊配「corvus」跳板登舷戰術，在 Mylae 首次海戰勝 Carthage。",
       "desc_en": "In 260 BC, Duilius led Rome's young navy (using 'corvus' boarding bridges) to its first naval victory over Carthage at Mylae.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%B1%B3%E7%88%BE%E7%88%BE%E6%B5%B7%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Mylae"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Mylae",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/The_story_of_the_greatest_nations%2C_from_the_dawn_of_history_to_the_twentieth_century_-_a_comprehensive_history%2C_founded_upon_the_leading_authorities%2C_including_a_complete_chronology_of_the_world%2C_and_%2814578958927%29.jpg"
     },
     {
       "id": "punic-ecnomus",
@@ -34599,7 +34643,8 @@
       "desc_zh": "前 256 雙方合計 680 艘戰船、近 30 萬水手，Rome 勝後登陸北非。",
       "desc_en": "In 256 BC, 680 ships and ~290,000 sailors clashed off Ecnomus—one of antiquity's largest naval battles. Rome won and invaded North Africa.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%9F%83%E5%85%8B%E8%AB%BE%E5%A7%86%E6%96%AF%E8%A7%92%E6%B5%B7%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Cape_Ecnomus"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Cape_Ecnomus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/The_Naval_Battle_Near_Ecnomus_%28256_BC%29.jpg"
     },
     {
       "id": "punic-regulus",
@@ -34612,7 +34657,8 @@
       "desc_zh": "前 255 羅馬執政 Regulus 登陸北非初勝，談判被拒後被 Xanthippus 指揮的 Carthage 軍擊潰俘虜。",
       "desc_en": "In 255 BC, Consul Regulus invaded North Africa; after refusing Carthage's terms, he was captured by Xanthippus's Carthaginian army.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%9B%B7%E5%90%89%E9%9B%A3%E6%96%AF",
-      "wiki_en": "https://en.wikipedia.org/wiki/Marcus_Atilius_Regulus"
+      "wiki_en": "https://en.wikipedia.org/wiki/Marcus_Atilius_Regulus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Lens%2C_Cornelis_-_Regulus_Returning_to_Carthage_-_1791.jpg"
     },
     {
       "id": "punic-aegates",
@@ -34625,7 +34671,8 @@
       "desc_zh": "前 241/3 Lutatius 率羅馬新艦隊在 Aegates 殲 Carthage 船團，逼 Carthage 求和終結 23 年戰爭。",
       "desc_en": "In March 241 BC, Lutatius's new Roman fleet destroyed Carthage's at the Aegates Islands, forcing peace and ending the 23-year war.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%9F%83%E8%8F%AF%E5%A1%94%E6%96%AF%E6%B5%B7%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_the_Aegates"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_the_Aegates",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Relief_map_of_Italy_Sicily.png/1280px-Relief_map_of_Italy_Sicily.png"
     },
     {
       "id": "punic-saguntum",
@@ -34638,7 +34685,8 @@
       "desc_zh": "前 219/8 Hannibal 圍攻 Rome 盟城 Saguntum 長達 8 個月破城，Rome 次年對 Carthage 宣戰。",
       "desc_en": "Hannibal besieged Rome's ally Saguntum for 8 months (219 BC); Rome declared war on Carthage the next year.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%9B%BB%E7%93%A6%E5%96%AE%E5%9C%8D%E5%9F%8E%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Saguntum"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Saguntum",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Castillo02_Sagunto.JPG"
     },
     {
       "id": "punic-trebia",
@@ -34651,7 +34699,8 @@
       "desc_zh": "前 218/12 Hannibal 誘羅馬軍渡冰冷 Trebia 河後設伏，殲 4 萬羅馬軍，入義大利首勝。",
       "desc_en": "In December 218 BC, Hannibal lured Romans across the freezing Trebia and ambushed them, destroying 40,000 troops.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%89%B9%E9%9B%B7%E6%AF%94%E4%BA%9E%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_the_Trebia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_the_Trebia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Battle_of_Trebbia_%28M._Merian%29_%28cropped%29.png"
     },
     {
       "id": "punic-trasimene",
@@ -34664,7 +34713,8 @@
       "desc_zh": "前 217/6 Hannibal 在 Trasimene 湖岸霧中伏擊 Flaminius 率羅馬軍，1.5 萬全殲，1.5 萬俘。",
       "desc_en": "In June 217 BC, Hannibal ambushed Flaminius in fog by Lake Trasimene; 15,000 Romans killed and 15,000 captured.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%89%B9%E6%8B%89%E8%A5%BF%E6%A2%85%E8%98%87%E6%B9%96%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Lake_Trasimene"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Lake_Trasimene",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Battle_of_Lake_Trasimene.jpg/1280px-Battle_of_Lake_Trasimene.jpg"
     },
     {
       "id": "punic-syracuse-falls",
@@ -34681,7 +34731,8 @@
       "crossRef": [
         "greece",
         "italy-roman"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Domenico-Fetti_Archimedes_1620.jpg"
     },
     {
       "id": "punic-capua-recovered",
@@ -34694,7 +34745,8 @@
       "desc_zh": "前 211 Rome 收復叛變盟邦 Capua，Hannibal 南義大利勢力瓦解，戰局逆轉。",
       "desc_en": "Rome recovered Capua (which had defected to Hannibal) in 211 BC, collapsing Hannibal's position in southern Italy.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%B8%95%E5%B2%9B",
-      "wiki_en": "https://en.wikipedia.org/wiki/Capua"
+      "wiki_en": "https://en.wikipedia.org/wiki/Capua",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Capua_%28ponte%29.jpg"
     },
     {
       "id": "punic-3rd-declared",
@@ -34707,7 +34759,8 @@
       "desc_zh": "前 149 Rome 在 Cato 鼓吹下對 Carthage 宣戰；Carthage 交質出武器後 Rome 仍要求拆城遷移，拒絕後圍城。",
       "desc_en": "In 149 BC, Rome declared war; despite Carthage surrendering weapons and hostages, Rome demanded the city be relocated—refused, siege began.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%B8%83%E5%8C%BF%E6%88%98%E7%88%AD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Third_Punic_War"
+      "wiki_en": "https://en.wikipedia.org/wiki/Third_Punic_War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/City_of_Carthage_circa_149_BC.png"
     },
     {
       "id": "punic-scipio-aemilianus",
@@ -34720,7 +34773,8 @@
       "desc_zh": "前 147 Scipio Aemilianus（Africanus 養孫）任執政官，接指揮圍城嚴密推進，次年破城。",
       "desc_en": "In 147 BC, Scipio Aemilianus (adopted grandson of Africanus) was elected consul, tightened the siege, and took Carthage next year.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%A7%91%E5%B0%94%E5%86%85%E5%88%A9%E4%B9%8C%E6%96%AF%C2%B7%E8%A5%BF%E7%9A%AE%E9%98%BF",
-      "wiki_en": "https://en.wikipedia.org/wiki/Scipio_Aemilianus"
+      "wiki_en": "https://en.wikipedia.org/wiki/Scipio_Aemilianus",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Bronze_statue_of_a_Hellenistic_prince%2C_1st_half_of_2nd_century_BC%2C_found_on_the_Quirinal_in_Rome%2C_Palazzo_Massimo_alle_Terme%2C_Rome_%2831479801364%29.jpg"
     },
     {
       "id": "30y-defenestration-prague",
@@ -34739,7 +34793,8 @@
         "cross"
       ],
       "amazon_asin": "0674062310",
-      "amazon_title": "Europe's Tragedy: A History of the Thirty Years War"
+      "amazon_title": "Europe's Tragedy: A History of the Thirty Years War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Prager_Fenstersturz_Wahrhafftige_Zeitung_aus_Prag.JPG"
     },
     {
       "id": "30y-white-mountain",
@@ -34755,7 +34810,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_White_Mountain",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/The_Battle_of_White_Mountain_%28by_Peter_Snayers%29.jpg"
     },
     {
       "id": "30y-denmark-enters",
@@ -34771,7 +34827,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Danish_intervention_in_the_Thirty_Years%27_War",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Industries_of_War_-_Canning_-_MANUFACTURING_CONDENSED_MILK_FOR_THE_GOVERNMENT%3B_DENMARK_CONDESSED_MILK_CO.%2C_DENMARK%2C_WISCONSIN_-_NARA_-_31486544.jpg/1280px-Industries_of_War_-_Canning_-_MANUFACTURING_CONDENSED_MILK_FOR_THE_GOVERNMENT%3B_DENMARK_CONDESSED_MILK_CO.%2C_DENMARK%2C_WISCONSIN_-_NARA_-_31486544.jpg"
     },
     {
       "id": "30y-gustavus-lands",
@@ -34788,7 +34845,8 @@
       "crossRef": [
         "germany",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Gustav_II_of_Sweden.jpg"
     },
     {
       "id": "30y-breitenfeld",
@@ -34804,7 +34862,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Breitenfeld_(1631)",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/29a_Gustave_Adolphe_%C3%A0_la_bataille_de_Breitenfeld%2C_1632.jpg"
     },
     {
       "id": "30y-lutzen",
@@ -34820,7 +34879,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_L%C3%BCtzen_(1632)",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Death_of_King_Gustav_II_Adolf_of_Sweden_at_the_Battle_of_L%C3%BCtzen_%28Carl_Wahlbom%29_-_Nationalmuseum_-_18031.tif"
     },
     {
       "id": "30y-france-enters",
@@ -34837,7 +34897,8 @@
       "crossRef": [
         "france",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/NH_121684_U.S._Destroyers_entering_Brest%2C_France_during_World_War_I.tif/lossy-page1-1280px-NH_121684_U.S._Destroyers_entering_Brest%2C_France_during_World_War_I.tif.jpg"
     },
     {
       "id": "30y-rocroi",
@@ -34853,7 +34914,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Rocroi",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Painting_-_The_Battle_of_Rocroi_by_Morelli_y_Sanchez_Gil_%281912%29.jpg"
     },
     {
       "id": "30y-westphalia",
@@ -34870,7 +34932,8 @@
       "crossRef": [
         "germany",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E4%B8%89%E5%8D%81%E5%B9%B4%E6%88%B0%E7%88%AD%E5%9C%96%E9%9B%86.png"
     },
     {
       "id": "30y-bohemian-revolt",
@@ -34884,7 +34947,8 @@
       "desc_zh": "1618-1620 波希米亞新教貴族廢 Ferdinand II、選 Frederick V 為王，直到 White Mountain 慘敗。",
       "desc_en": "Bohemian Protestants deposed Ferdinand II and elected Frederick V (1618-1620) until the disaster at White Mountain.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%B3%A2%E7%BE%8E%E4%BA%9E%E8%B5%B7%E7%BE%A9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Bohemian_Revolt"
+      "wiki_en": "https://en.wikipedia.org/wiki/Bohemian_Revolt",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Prager.Fenstersturz.1618.jpg"
     },
     {
       "id": "30y-winter-king",
@@ -34897,7 +34961,8 @@
       "desc_zh": "1619/8/26 波希米亞議會廢 Ferdinand 選 Palatinate 的 Frederick V 為王；僅在位一冬即敗故稱「冬王」。",
       "desc_en": "On Aug 26, 1619, the Bohemian Diet elected Frederick V of the Palatinate; his reign lasted only one winter—hence 'Winter King'.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%85%93%E7%89%B9%E7%B1%B3%E5%BE%B7%E5%88%97%E6%96%AF%E4%BA%94%E4%B8%96",
-      "wiki_en": "https://en.wikipedia.org/wiki/Frederick_V_of_the_Palatinate"
+      "wiki_en": "https://en.wikipedia.org/wiki/Frederick_V_of_the_Palatinate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Friedrich_V._von_der_Pfalz_bis.jpg"
     },
     {
       "id": "30y-mansfeld",
@@ -34910,7 +34975,8 @@
       "desc_zh": "1621-1626 Ernst von Mansfeld 率新教雇傭軍在 Rhineland 與 Netherlands 邊境游擊，無固定主君。",
       "desc_en": "From 1621, Ernst von Mansfeld led Protestant mercenaries across the Rhineland and Netherlands with no fixed master.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E4%BC%AF%E6%81%A9%E6%96%AF%E7%89%B9%C2%B7%E9%A6%AE%E6%96%AF%E8%8F%B2%E5%B0%94%E5%BE%B7",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ernst_von_Mansfeld"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ernst_von_Mansfeld",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/PeterErnstIIofMansfield02.jpg"
     },
     {
       "id": "30y-lutter",
@@ -34923,7 +34989,8 @@
       "desc_zh": "1626/8/27 帝國元帥 Tilly 在 Lutter 擊敗丹麥 Christian IV，迫其退守北方；1629 退出戰爭。",
       "desc_en": "On Aug 27, 1626, Imperial marshal Tilly crushed Denmark's Christian IV at Lutter, forcing him to retreat north; Denmark left the war in 1629.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E4%B8%89%E5%8D%81%E5%B9%B4%E6%88%B0%E7%88%AD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Lutter"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Lutter",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E4%B8%89%E5%8D%81%E5%B9%B4%E6%88%B0%E7%88%AD%E5%9C%96%E9%9B%86.png"
     },
     {
       "id": "30y-edict-restitution",
@@ -34936,7 +35003,8 @@
       "desc_zh": "1629/3/6 Ferdinand II 命所有 1552 後新教取得的教會財產歸還天主教，激化新教反彈，吸引瑞典介入。",
       "desc_en": "On Mar 6, 1629, Ferdinand II ordered all church property acquired by Protestants since 1552 returned—radicalizing the Protestants and drawing Sweden in.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%BE%A9%E5%8E%9F%E6%95%95%E4%BB%A4",
-      "wiki_en": "https://en.wikipedia.org/wiki/Edict_of_Restitution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Edict_of_Restitution",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Editto_di_restituzione_%281%29.JPG"
     },
     {
       "id": "30y-magdeburg",
@@ -34952,7 +35020,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Sack_of_Magdeburg",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/The_Siege_of_Magdeburg_%281631%29_%28Peeter_Meulener%29_-_Nationalmuseum_-_17230.tif"
     },
     {
       "id": "30y-wallenstein-killed",
@@ -34965,7 +35034,8 @@
       "desc_zh": "1634/2/25 帝國總司令 Wallenstein 因疑叛變被 Ferdinand II 派部下刺殺於 Cheb，結束其影響。",
       "desc_en": "On Feb 25, 1634, Imperial generalissimo Wallenstein was assassinated at Cheb on Ferdinand II's orders over suspicions of treason.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%8F%AF%E5%80%AB%E6%96%AF%E5%9D%A6",
-      "wiki_en": "https://en.wikipedia.org/wiki/Albrecht_von_Wallenstein"
+      "wiki_en": "https://en.wikipedia.org/wiki/Albrecht_von_Wallenstein",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Albrecht_von_Wallenstein.jpeg"
     },
     {
       "id": "30y-nordlingen",
@@ -34978,7 +35048,8 @@
       "desc_zh": "1634/9/6 西班牙+帝國聯軍在 Nördlingen 大勝瑞典-德意志聯軍，瑞典南德勢力瓦解，促法國翌年介入。",
       "desc_en": "On Sep 6, 1634, Spanish/Imperial forces crushed Swedish/German allies at Nördlingen, collapsing Sweden's south German position—and bringing France in.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%AB%BE%E5%BE%B7%E6%9E%97%E6%A0%B9%E6%88%B0%E5%BD%B9_(1634%E5%B9%B4)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_N%C3%B6rdlingen_(1634)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_N%C3%B6rdlingen_(1634)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Jan_van_der_Hoecke_-_The_Battle_of_N%C3%B6rdlingen%2C_1634.jpg"
     },
     {
       "id": "30y-prague-treaty",
@@ -34991,7 +35062,8 @@
       "desc_zh": "1635/5/30 Ferdinand II 與薩克森等帝國諸侯簽和，取消 Restitution 敕令，多數新教諸侯歸服；法國次日參戰破局。",
       "desc_en": "On May 30, 1635, Ferdinand II made peace with Saxony et al., suspending the Edict of Restitution; France's entry days later broke the deal.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%B8%83%E6%8B%89%E6%A0%BC%E5%92%8C%E7%BA%A6_(1635%E5%B9%B4)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Peace_of_Prague_(1635)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Peace_of_Prague_(1635)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Johann_Georg_I_Saxony.jpg"
     },
     {
       "id": "30y-corbie",
@@ -35007,7 +35079,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Corbie",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/French_map_of_corbie.jpg"
     },
     {
       "id": "30y-ferdinand-iii",
@@ -35020,7 +35093,8 @@
       "desc_zh": "1637/2/15 Ferdinand II 病逝，子 Ferdinand III 繼位；較務實，為 Westphalia 談判鋪路。",
       "desc_en": "Ferdinand II died Feb 15, 1637; his pragmatic son Ferdinand III succeeded him, eventually opening the door to the Westphalian negotiations.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%96%90%E8%BF%AA%E5%8D%97%E4%B8%89%E4%B8%96_(%E7%A5%9E%E8%81%96%E7%BE%85%E9%A6%AC%E5%B8%9D%E5%9C%8B)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Ferdinand_III,_Holy_Roman_Emperor"
+      "wiki_en": "https://en.wikipedia.org/wiki/Ferdinand_III,_Holy_Roman_Emperor",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Jan_van_den_Hoecke_-_Portrait_of_Emperor_Ferdinand_III.jpg"
     },
     {
       "id": "30y-brandenburg-leaves",
@@ -35046,7 +35120,8 @@
       "desc_zh": "1642/11/2 瑞典 Torstensson 於 Breitenfeld 再勝帝國軍，重振瑞典攻勢。",
       "desc_en": "On Nov 2, 1642, Swedish Torstensson again triumphed at Breitenfeld, reviving the Swedish offensive.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B8%83%E8%8E%B1%E7%89%B9%E8%8F%B2%E7%88%BE%E5%BE%B7%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Second_Battle_of_Breitenfeld"
+      "wiki_en": "https://en.wikipedia.org/wiki/Second_Battle_of_Breitenfeld",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/First_Battle_of_Leipzig_1642_on_the_Swedish_1927_Art_Deco_Medal_1st_Life_Grenadier_Regiment%2C_obverse.jpg/1280px-First_Battle_of_Leipzig_1642_on_the_Swedish_1927_Art_Deco_Medal_1st_Life_Grenadier_Regiment%2C_obverse.jpg"
     },
     {
       "id": "30y-jankau",
@@ -35059,7 +35134,8 @@
       "desc_zh": "1645/3/6 瑞典 Torstensson 在 Jankau 全殲帝國軍主力，進迫維也納；帝國無力再戰。",
       "desc_en": "On Mar 6, 1645, Sweden's Torstensson annihilated the Imperial main force at Jankau and threatened Vienna—the Empire could no longer fight on.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%9D%B0%E6%98%82%E7%A7%91%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Jankau"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Jankau",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Old_copper_engraving_of_the_Battle_of_Jankov.jpg"
     },
     {
       "id": "30y-munster-talks",
@@ -35077,7 +35153,8 @@
       "crossRef": [
         "germany",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E4%B8%89%E5%8D%81%E5%B9%B4%E6%88%B0%E7%88%AD%E5%9C%96%E9%9B%86.png"
     },
     {
       "id": "30y-zusmarshausen",
@@ -35090,7 +35167,8 @@
       "desc_zh": "1648/5/17 瑞法聯軍在 Zusmarshausen 擊敗帝國軍，為三十年戰爭最後大型戰役；4 個月後簽和。",
       "desc_en": "On May 17, 1648, Swedish/French forces defeated Imperial troops at Zusmarshausen—the war's last major battle; peace was signed 4 months later.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E4%B8%89%E5%8D%81%E5%B9%B4%E6%88%B0%E7%88%AD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Zusmarshausen"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Zusmarshausen",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E4%B8%89%E5%8D%81%E5%B9%B4%E6%88%B0%E7%88%AD%E5%9C%96%E9%9B%86.png"
     },
     {
       "id": "7y-britain-declares",
@@ -35109,7 +35187,8 @@
         "france"
       ],
       "amazon_asin": "0375706364",
-      "amazon_title": "Crucible of War"
+      "amazon_title": "Crucible of War",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Seven_Years%27_War_Collage.jpg"
     },
     {
       "id": "7y-prussia-invades-saxony",
@@ -35125,7 +35204,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Frederick_the_Great",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/The_campaign_in_Saxony-_or_Fleuron_T117031-3.png/1280px-The_campaign_in_Saxony-_or_Fleuron_T117031-3.png"
     },
     {
       "id": "7y-rossbach",
@@ -35142,7 +35222,8 @@
       "crossRef": [
         "germany",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Seydlitz_charge_at_the_battle_of_Rossbach%2C_1757.jpg"
     },
     {
       "id": "7y-leuthen",
@@ -35158,7 +35239,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Leuthen",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Battle_of_Leuthen_2.jpg"
     },
     {
       "id": "7y-annus-mirabilis",
@@ -35174,7 +35256,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Annus_Mirabilis_(1759)",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Seven_Years%27_War_Collage.jpg"
     },
     {
       "id": "7y-quebec-plains",
@@ -35191,7 +35274,8 @@
       "crossRef": [
         "uk",
         "north-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Image_from_page_117_of_%22The_siege_of_Quebec_and_the_battle_of_the_Plains_of_Abraham%22_%281901%29.jpg/1280px-Image_from_page_117_of_%22The_siege_of_Quebec_and_the_battle_of_the_Plains_of_Abraham%22_%281901%29.jpg"
     },
     {
       "id": "7y-peter-iii-withdraws",
@@ -35208,7 +35292,8 @@
       "crossRef": [
         "russia",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Snuffbox_by_Johann_Heinrich_Hamer_%281762%29.jpg"
     },
     {
       "id": "7y-paris-hubertusburg",
@@ -35225,7 +35310,8 @@
       "crossRef": [
         "uk",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/SevenYearsWar.png"
     },
     {
       "id": "7y-diplomatic-revolution",
@@ -35242,7 +35328,8 @@
       "crossRef": [
         "france",
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Carte_Guerre_de_Sept_Ans_Europe.PNG"
     },
     {
       "id": "7y-lobositz",
@@ -35255,7 +35342,8 @@
       "desc_zh": "1756/10/1 Frederick 在 Lobositz 勝奧軍，使薩克森軍 17,000 人被迫投降，歐陸戰場首戰勝。",
       "desc_en": "On Oct 1, 1756, Frederick defeated Austria at Lobositz, forcing 17,000 Saxon troops to surrender—the first battle of the Continental war.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%B4%9B%E5%B8%83%E7%B4%AF%E7%8C%AE%E6%96%AF%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Lobositz"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Lobositz",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Battle_of_Lobositz_%28G._P._Busch%29.png"
     },
     {
       "id": "7y-kolin",
@@ -35268,7 +35356,8 @@
       "desc_zh": "1757/6/18 奧地利 Daun 在 Kolín 擊敗 Frederick，為普軍首次重大敗仗，迫退出 Bohemia。",
       "desc_en": "On Jun 18, 1757, Austrian Daun defeated Frederick at Kolín—Prussia's first major defeat—forcing withdrawal from Bohemia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%A7%91%E6%9E%97%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Kolin"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Kolin",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Schlacht-Kolin-1.jpg"
     },
     {
       "id": "7y-zorndorf",
@@ -35281,7 +35370,8 @@
       "desc_zh": "1758/8/25 Frederick 與俄軍 Fermor 在 Zorndorf 互相重創，雙方合計 3 萬傷亡，戰術無決定性結果。",
       "desc_en": "On Aug 25, 1758, Frederick and Russian Fermor mauled each other at Zorndorf; 30,000 total casualties, no decisive result.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%90%90%E6%81%A9%E5%A4%AB%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Zorndorf"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Zorndorf",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Wojciech_Kossak_The_Battle_of_Zorndorf_%281758%29_1899.jpg/1280px-Wojciech_Kossak_The_Battle_of_Zorndorf_%281758%29_1899.jpg"
     },
     {
       "id": "7y-kunersdorf",
@@ -35297,7 +35387,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Kunersdorf",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Alexander_von_Kotzebue_-_Battle_of_Kunersdorf_on_1_August_1759.jpg"
     },
     {
       "id": "7y-silesia-struggle",
@@ -35311,7 +35402,8 @@
       "desc_zh": "1760-1762 普奧在 Silesia 與薩克森反覆拉鋸，Frederick 以少對多勉強守住東德領土。",
       "desc_en": "From 1760-1762, Prussia and Austria traded blows in Silesia and Saxony; Frederick held eastern territories against overwhelming odds.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%BC%97%E9%87%8C%E5%BE%B7%E9%87%8C%E5%B8%8C%E4%BA%8C%E4%B8%96",
-      "wiki_en": "https://en.wikipedia.org/wiki/Silesian_Wars"
+      "wiki_en": "https://en.wikipedia.org/wiki/Silesian_Wars",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Friedrich_der_Gro%C3%9Fe_%281781_or_1786%29_-_Google_Art_Project.jpg"
     },
     {
       "id": "7y-burkersdorf",
@@ -35324,7 +35416,8 @@
       "desc_zh": "1762/7/21 Frederick 在 Burkersdorf 小勝奧軍，鞏固 Silesia；俄國退盟後普軍得以集中兵力。",
       "desc_en": "On Jul 21, 1762, Frederick's small victory at Burkersdorf consolidated Silesia after Russia's exit from the war.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E4%B8%83%E5%B9%B4%E6%88%B0%E7%88%AD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Burkersdorf"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Burkersdorf",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Seven_Years%27_War_Collage.jpg"
     },
     {
       "id": "7y-braddock-defeat",
@@ -35341,7 +35434,8 @@
       "crossRef": [
         "north-america",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Braddock_1755.jpg"
     },
     {
       "id": "7y-plassey",
@@ -35358,7 +35452,8 @@
       "crossRef": [
         "uk",
         "india"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Lord_Clive_meeting_with_Mir_Jafar_after_the_Battle_of_Plassey.jpg"
     },
     {
       "id": "7y-louisbourg",
@@ -35376,7 +35471,8 @@
       "crossRef": [
         "uk",
         "north-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/British_burning_warship_Prudent_and_capturing_Bienfaisant._Siege_of_Louisbourg_1758._Maritime_Museum_of_the_Atlantic%2C_M55.7.1.jpg"
     },
     {
       "id": "7y-quebec-siege",
@@ -35393,7 +35489,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Quebec_(1759)",
       "crossRef": [
         "north-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Map_of_the_Siege_of_Quebec%2C_from_page_341_of_%22The_siege_of_Quebec_and_the_battle_of_the_Plains_of_Abraham%22_%281901%29.jpg/1280px-Map_of_the_Siege_of_Quebec%2C_from_page_341_of_%22The_siege_of_Quebec_and_the_battle_of_the_Plains_of_Abraham%22_%281901%29.jpg"
     },
     {
       "id": "7y-montreal-falls",
@@ -35410,7 +35507,8 @@
       "crossRef": [
         "uk",
         "north-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Capitulation_Montreal.jpg"
     },
     {
       "id": "7y-havana",
@@ -35423,7 +35521,8 @@
       "desc_zh": "1762/8/14 英軍破 Havana 要塞，奪西班牙加勒比重鎮，和約時換回 Florida。",
       "desc_en": "On Aug 14, 1762, British forces captured Havana from Spain; Britain later exchanged it for Florida in the peace treaty.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%93%88%E7%93%A6%E9%82%A3%E6%B2%BB%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Havana"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Havana",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/Dominic_Serres_-_The_Capture_of_Havana%2C_1762%2C_Taking_the_Town%2C_14_August.jpg"
     },
     {
       "id": "7y-manila",
@@ -35436,7 +35535,8 @@
       "desc_zh": "1762/10/5 英軍奪菲律賓 Manila，短暫佔領約 20 個月，和約交還西班牙。",
       "desc_en": "On Oct 5, 1762, British forces captured Manila; they held it for ~20 months before returning it to Spain at the peace.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E5%B0%BC%E6%8B%89%E6%88%B0%E5%BD%B9_(1762%E5%B9%B4)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Manila_(1762)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Manila_(1762)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/1748_Anson_Map_of_Baja_California_and_the_Pacific_with_Trade_Routes_from_Acapulco_to_Manila_-_Geographicus_-_Pacific-anson-1748.jpg/1280px-1748_Anson_Map_of_Baja_California_and_the_Pacific_with_Trade_Routes_from_Acapulco_to_Manila_-_Geographicus_-_Pacific-anson-1748.jpg"
     },
     {
       "id": "cr-clermont",
@@ -35455,7 +35555,8 @@
         "cross"
       ],
       "amazon_asin": "0060787295",
-      "amazon_title": "The Crusades: The Authoritative History"
+      "amazon_title": "The Crusades: The Authoritative History",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Passages_d%27outremer_Fr5594%2C_fol._19r%2C_Concile_de_Clermont.jpg"
     },
     {
       "id": "cr-jerusalem-taken",
@@ -35473,7 +35574,8 @@
         "christianity",
         "islam",
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Taking_of_Jerusalem_by_the_Crusaders%2C_15th_July_1099.jpg"
     },
     {
       "id": "cr-second-crusade",
@@ -35490,7 +35592,8 @@
       "crossRef": [
         "france",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/BattleOfInab.jpg"
     },
     {
       "id": "cr-hattin",
@@ -35507,7 +35610,8 @@
       "crossRef": [
         "islam",
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Battle_of_Cresson.jpg/1280px-Battle_of_Cresson.jpg"
     },
     {
       "id": "cr-saladin-jerusalem",
@@ -35524,7 +35628,8 @@
       "crossRef": [
         "islam",
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/BL_Siege_of_Jerusalem.jpg"
     },
     {
       "id": "cr-third-crusade",
@@ -35541,7 +35646,8 @@
       "crossRef": [
         "uk",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/The_Third_Crusade_%281189-1192%29.png"
     },
     {
       "id": "cr-sack-constantinople",
@@ -35558,7 +35664,8 @@
       "crossRef": [
         "byzantine",
         "italy"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Frammenti_di_mosaico_pavimentale_del_1213%2C_09.JPG"
     },
     {
       "id": "cr-frederick-jerusalem",
@@ -35575,7 +35682,8 @@
       "crossRef": [
         "germany",
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Frederick_II_and_eagle.jpg"
     },
     {
       "id": "cr-louis-ix-egypt",
@@ -35592,7 +35700,8 @@
       "crossRef": [
         "france",
         "egypt"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Seventh_crusade.jpg"
     },
     {
       "id": "cr-acre-falls",
@@ -35609,7 +35718,8 @@
       "crossRef": [
         "islam",
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/1291_si%C3%A8ge_d%27Acre.jpg"
     },
     {
       "id": "cr-peoples-crusade",
@@ -35625,7 +35735,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/People%27s_Crusade",
       "crossRef": [
         "judaism"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/PeoplesCrusadeMassacre.jpg"
     },
     {
       "id": "cr-antioch-siege",
@@ -35639,7 +35750,8 @@
       "desc_zh": "1097/10-1098/6 十字軍圍 Antioch 8 個月，守軍反圍攻再以「Holy Lance」精神勝，開路入敘利亞。",
       "desc_en": "From Oct 1097 to Jun 1098, the Crusaders besieged Antioch for 8 months; they were then besieged themselves until an inspired sally behind the 'Holy Lance' broke through.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%AE%89%E6%8F%90%E9%98%BF%E4%B9%8B%E5%9B%B4",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Antioch"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Antioch",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/SiegeofAntioch.jpeg"
     },
     {
       "id": "cr-jerusalem-siege-1099",
@@ -35653,7 +35765,8 @@
       "desc_zh": "1099/6/7-7/15 十字軍圍 Jerusalem 5 週，缺水情況下建攻城塔登城，7/15 破門；屠城次日。",
       "desc_en": "From Jun 7 to Jul 15, 1099, Crusaders besieged Jerusalem for 5 weeks, built siege towers despite water shortage, and breached on Jul 15; massacre followed.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%80%B6%E8%B7%AF%E6%92%92%E5%86%B7%E4%B9%8B%E5%9B%B4_(1099%E5%B9%B4)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(1099)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(1099)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Taking_of_Jerusalem_by_the_Crusaders%2C_15th_July_1099.jpg"
     },
     {
       "id": "cr-outremer",
@@ -35670,7 +35783,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Crusader_states",
       "crossRef": [
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CouncilofClermont.jpg"
     },
     {
       "id": "cr-templars",
@@ -35683,7 +35797,8 @@
       "desc_zh": "1119 Hugh de Payens 在 Jerusalem 創立聖殿騎士團保護朝聖者，成為中世紀最富軍事修道會。",
       "desc_en": "In 1119, Hugh de Payens founded the Knights Templar in Jerusalem to protect pilgrims—later the wealthiest medieval military order.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%81%96%E6%AE%BF%E9%A8%8E%E5%A3%AB%E5%9C%98",
-      "wiki_en": "https://en.wikipedia.org/wiki/Knights_Templar"
+      "wiki_en": "https://en.wikipedia.org/wiki/Knights_Templar",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Templarsign.jpg"
     },
     {
       "id": "cr-edessa-falls",
@@ -35696,7 +35811,8 @@
       "desc_zh": "1144/12/24 Zengi 攻破十字軍 Edessa 伯國，為十字軍 45 年內首個失國，觸發第二次十字軍。",
       "desc_en": "On Dec 24, 1144, Zengi captured the Crusader County of Edessa—the first Crusader state to fall, sparking the Second Crusade.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%84%9B%E5%BE%B7%E8%90%A8%E4%B9%8B%E5%9B%B4",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Edessa"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Edessa",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Decline_and_Fall_of_the_Roman_Empire_vol_4_%281897%29.djvu/page1-1280px-Decline_and_Fall_of_the_Roman_Empire_vol_4_%281897%29.djvu.jpg"
     },
     {
       "id": "cr-damascus-siege",
@@ -35709,7 +35825,8 @@
       "desc_zh": "1148/7/24-28 第二次十字軍圍 Damascus 僅 4 日即撤退，Louis VII + Conrad III 無功而返，慘敗告終。",
       "desc_en": "From Jul 24-28, 1148, the Second Crusade besieged Damascus only 4 days before retreating; Louis VII and Conrad III returned empty-handed.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E9%A9%AC%E5%A3%AB%E9%9D%A9%E4%B9%8B%E5%9B%B4",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Damascus_(1148)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Damascus_(1148)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Siege_of_Damascus%2C_second_crusade.jpg"
     },
     {
       "id": "cr-latin-empire",
@@ -35726,7 +35843,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Latin_Empire",
       "crossRef": [
         "byzantine"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/LatinEmpire2.png"
     },
     {
       "id": "cr-damietta-5th",
@@ -35742,7 +35860,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Fifth_Crusade",
       "crossRef": [
         "egypt"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Capturing_Damiate.jpg"
     },
     {
       "id": "cr-khwarezm-jerusalem",
@@ -35755,7 +35874,8 @@
       "desc_zh": "1244/7/11 逃難的 Khwarezm 突厥人在 Mamluk 協助下攻陷耶路撒冷，大屠城；基督教再未真正統治聖城。",
       "desc_en": "On Jul 11, 1244, displaced Khwarezmian Turks (with Mamluk aid) sacked Jerusalem and massacred its residents—Christians never truly ruled it again.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%8A%B9%E5%A4%AA%E6%95%99%E6%AD%B7%E5%8F%B2",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(1244)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(1244)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/%D7%94%D7%A8_%D7%94%D7%91%D7%99%D7%AA_%D7%9E%D7%93%D7%A8%D7%95%D7%9D_%D7%9E%D7%A2%D7%A8%D7%91.jpg"
     },
     {
       "id": "cr-damietta-7th",
@@ -35768,7 +35888,8 @@
       "desc_zh": "1249/6/6 Louis IX 率法軍登陸埃及，輕取 Damietta；次年兵敗 Fariskur 被俘，贖金震驚法國財政。",
       "desc_en": "On Jun 6, 1249, Louis IX's French forces landed in Egypt and easily took Damietta; they were defeated at Fariskur the next year.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%B7%AF%E6%98%93%E4%B9%9D%E4%B8%96",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Damietta_(1249)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Damietta_(1249)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Decreuse_-_Louis_IX_of_France.jpg"
     },
     {
       "id": "cr-fariskur",
@@ -35781,7 +35902,8 @@
       "desc_zh": "1250/4/6 Louis IX 率軍在 Fariskur 被 Mamluk 軍大敗並俘虜，贖金高達法國年收入 1/3。",
       "desc_en": "On Apr 6, 1250, Louis IX was defeated and captured by Mamluks at Fariskur; his ransom equaled one-third of France's annual revenue.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%B3%95%E9%87%8C%E6%96%AF%E5%BA%AB%E7%88%BE%E6%88%B0%E5%BD%B9",
-      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Fariskur"
+      "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Fariskur",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/C_croisade7_prisonnier1.jpg/1280px-C_croisade7_prisonnier1.jpg"
     },
     {
       "id": "cr-antioch-falls",
@@ -35794,7 +35916,8 @@
       "desc_zh": "1268/5/19 Mamluk Sultan Baibars 攻破 Antioch 城，屠城，建 170 年的 Antioch 公國覆滅。",
       "desc_en": "On May 19, 1268, Mamluk Sultan Baibars stormed Antioch and massacred its population—ending the 170-year-old Principality of Antioch.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%AE%89%E6%8F%90%E9%98%BF%E4%B9%8B%E5%9B%B4_(1268%E5%B9%B4)",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Antioch_(1268)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Antioch_(1268)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/LittleArmeniaPrincipality_of_AntiochTripoli-Arabic.jpg"
     },
     {
       "id": "cr-louis-dies-tunis",
@@ -35811,7 +35934,8 @@
       "crossRef": [
         "france",
         "north-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/SmrtLudvika91270.jpg"
     },
     {
       "id": "cr-edward-crusade",
@@ -35827,7 +35951,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Ninth_Crusade",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EdwardICrusadeMap.jpg/1280px-EdwardICrusadeMap.jpg"
     },
     {
       "id": "cr-tripoli-falls",
@@ -35840,7 +35965,8 @@
       "desc_zh": "1289/4/27 Mamluk Sultan Qalawun 攻破 Tripoli 伯國首府，為 Acre 陷前倒數第二個 Outremer 據點。",
       "desc_en": "On Apr 27, 1289, Mamluk Sultan Qalawun captured Tripoli, the County's capital—the second-to-last Outremer stronghold before Acre.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%9A%84%E9%BB%8E%E6%B3%A2%E4%B9%8B%E5%9B%B4",
-      "wiki_en": "https://en.wikipedia.org/wiki/Fall_of_Tripoli"
+      "wiki_en": "https://en.wikipedia.org/wiki/Fall_of_Tripoli",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Siege_of_Tripoli_Painting_%281289%29.jpg"
     },
     {
       "id": "cr-acre-siege",
@@ -35854,7 +35980,8 @@
       "desc_zh": "1291/4/6-5/18 Mamluk al-Ashraf Khalil 率 20 萬圍 Acre，6 週破城；拉丁東方正式終。",
       "desc_en": "From Apr 6 to May 18, 1291, Mamluk al-Ashraf Khalil besieged Acre with 200,000 troops, taking it in 6 weeks—ending Latin presence in the East.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%85%8B%E5%9F%8E%E6%B2%A6%E9%99%B7",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Acre_(1291)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Acre_(1291)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/1291_si%C3%A8ge_d%27Acre.jpg"
     },
     {
       "id": "ww1-marne-1",
@@ -35872,7 +35999,8 @@
         "france",
         "ww1-western",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/German_soldiers_Battle_of_Marne_WWI.jpg"
     },
     {
       "id": "ww1-gallipoli",
@@ -35891,7 +36019,8 @@
         "ww1-mideast",
         "uk",
         "ottoman"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/G.C._18_March_1915_Gallipoli_Campaign_Article.jpg"
     },
     {
       "id": "ww1-14-points",
@@ -35908,7 +36037,8 @@
       "crossRef": [
         "usa",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/William_Orpen_Woodrow_Wilson_cropped.jpg"
     },
     {
       "id": "ww1-versailles-signed",
@@ -35926,7 +36056,8 @@
         "germany",
         "france",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Treaty_of_Versailles%2C_English_version.jpg"
     },
     {
       "id": "ww2-atlantic-charter",
@@ -35944,7 +36075,8 @@
         "uk",
         "usa",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/President_Roosevelt_and_Winston_Churchill_seated_on_the_quarterdeck_of_HMS_PRINCE_OF_WALES_for_a_Sunday_service_during_the_Atlantic_Conference%2C_10_August_1941._A4816.jpg"
     },
     {
       "id": "ww2-bretton-woods",
@@ -35961,7 +36093,8 @@
       "crossRef": [
         "usa",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Price_of_gold.webp"
     },
     {
       "id": "ww2-casablanca",
@@ -35978,7 +36111,8 @@
       "crossRef": [
         "uk",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/80-G-38559_%2825601980716%29.jpg"
     },
     {
       "id": "ww2-dday",
@@ -35996,7 +36130,8 @@
         "ww2-europe",
         "usa",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg"
     },
     {
       "id": "ww2-ve-day",
@@ -36013,7 +36148,8 @@
       "crossRef": [
         "ww2-europe",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/Winston_Churchill_waves_to_crowds_in_Whitehall_in_London_as_they_celebrate_VE_Day%2C_8_May_1945._H41849.jpg"
     },
     {
       "id": "ww2-tokyo-trials",
@@ -36031,7 +36167,8 @@
       "crossRef": [
         "japan",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/IMTFE2.jpg"
     },
     {
       "id": "ww2-genocide-convention",
@@ -36048,7 +36185,8 @@
       "crossRef": [
         "cross",
         "judaism"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/We_Charge_Genocide_-_1951_-_Patterson.djvu/page1-1280px-We_Charge_Genocide_-_1951_-_Patterson.djvu.jpg"
     },
     {
       "id": "cw-truman-doctrine",
@@ -36065,7 +36203,8 @@
       "crossRef": [
         "usa",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Special_Message_to_Congress_on_Greece_and_Turkey_The_Truman_Doctrine.jpg"
     },
     {
       "id": "cw-nato-founded",
@@ -36082,7 +36221,8 @@
       "crossRef": [
         "usa",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/%D0%9D%D0%90%D0%A2%D0%9E_%D0%A1%D0%B0%D0%BC%D0%B8%D1%82_2021_NATO_Summit_2021_-14.06.2021-_%2851245988182%29.jpg/1280px-%D0%9D%D0%90%D0%A2%D0%9E_%D0%A1%D0%B0%D0%BC%D0%B8%D1%82_2021_NATO_Summit_2021_-14.06.2021-_%2851245988182%29.jpg"
     },
     {
       "id": "cw-warsaw-pact",
@@ -36099,7 +36239,8 @@
       "crossRef": [
         "russia",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Warsaw_Pact_Logo.svg/1280px-Warsaw_Pact_Logo.svg.png"
     },
     {
       "id": "cw-hungary-1956",
@@ -36116,7 +36257,8 @@
       "crossRef": [
         "russia",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hole_in_flag_-_Budapest_1956.jpg"
     },
     {
       "id": "cw-bay-of-pigs",
@@ -36133,7 +36275,8 @@
       "crossRef": [
         "usa",
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Attack_near_Playa_Giron._April_19%2C_1961._-_panoramio.jpg"
     },
     {
       "id": "cw-berlin-wall",
@@ -36151,7 +36294,8 @@
       "crossRef": [
         "germany",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Berlinermauer.jpg"
     },
     {
       "id": "cw-apollo-11",
@@ -36169,7 +36313,8 @@
         "usa",
         "science",
         "cosmos"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aldrin_Apollo_11_original.jpg"
     },
     {
       "id": "cw-nixon-china",
@@ -36186,7 +36331,8 @@
       "crossRef": [
         "usa",
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/President_Richard_Nixon_and_Premier_Chou_En-Lai_Shake_Hands_at_the_Nixons%27_Arrival_in_Peking%2C_China.jpg"
     },
     {
       "id": "cw-inf-treaty",
@@ -36203,7 +36349,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Reagan_and_Gorbachev_signing.jpg"
     },
     {
       "id": "cw-wall-falls",
@@ -36220,7 +36367,8 @@
       "crossRef": [
         "germany",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg"
     },
     {
       "id": "cw-czech-coup",
@@ -36237,7 +36385,8 @@
       "crossRef": [
         "europe",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Comunista.png"
     },
     {
       "id": "cw-berlin-blockade",
@@ -36255,7 +36404,8 @@
       "crossRef": [
         "germany",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/C-54_landing_at_Tempelhof.jpg"
     },
     {
       "id": "cw-joe-1",
@@ -36272,7 +36422,8 @@
       "crossRef": [
         "russia",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Joe-1_location_prediction_1949.jpg/1280px-Joe-1_location_prediction_1949.jpg"
     },
     {
       "id": "cw-east-german-uprising",
@@ -36288,7 +36439,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Uprising_of_1953_in_East_Germany",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/East_German_uprising_of_1953_collage.jpg"
     },
     {
       "id": "cw-castle-bravo",
@@ -36305,7 +36457,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Pacific_Ocean_laea_location_map.svg/1280px-Pacific_Ocean_laea_location_map.svg.png"
     },
     {
       "id": "cw-secret-speech",
@@ -36321,7 +36474,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/On_the_Cult_of_Personality_and_Its_Consequences",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/First_edition_of_Krushchev%27s_%22Secret_Speech%22.jpg/1280px-First_edition_of_Krushchev%27s_%22Secret_Speech%22.jpg"
     },
     {
       "id": "cw-berlin-ultimatum",
@@ -36338,7 +36492,8 @@
       "crossRef": [
         "germany",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/US_Army_tanks_face_off_against_Soviet_tanks%2C_Berlin_1961.jpg"
     },
     {
       "id": "cw-cuban-revolution",
@@ -36355,7 +36510,8 @@
       "crossRef": [
         "americas",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/CheyFidel.jpg"
     },
     {
       "id": "cw-u2-incident",
@@ -36372,7 +36528,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Wreckage_of_Lockheed_U-2C_%2856-6693%29_%2838901816671%29.jpg"
     },
     {
       "id": "cw-moscow-hotline",
@@ -36389,7 +36546,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/East_German_T63-SU12_1.jpg"
     },
     {
       "id": "cw-test-ban",
@@ -36406,7 +36564,8 @@
       "crossRef": [
         "usa",
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/PTBT_Participation.svg/1280px-PTBT_Participation.svg.png"
     },
     {
       "id": "cw-npt",
@@ -36422,7 +36581,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons",
       "crossRef": [
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NPT_Participation.svg/1280px-NPT_Participation.svg.png"
     },
     {
       "id": "cw-salt-i-start",
@@ -36439,7 +36599,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Richard_Nixon_and_Leonid_Brezhnev_sign_ABM_treaty_and_SALT_agreement_in_Moscow.jpg"
     },
     {
       "id": "cw-salt-i-signed",
@@ -36456,7 +36617,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Richard_Nixon_and_Leonid_Brezhnev_sign_ABM_treaty_and_SALT_agreement_in_Moscow.jpg"
     },
     {
       "id": "cw-helsinki-accords",
@@ -36473,7 +36635,8 @@
       "crossRef": [
         "europe",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Schlussakte_Helsinki_1975_%28KSZE%29.jpg"
     },
     {
       "id": "cw-camp-david",
@@ -36490,7 +36653,8 @@
       "crossRef": [
         "mideast",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Begin%2C_Carter_and_Sadat_at_Camp_David_1978.jpg"
     },
     {
       "id": "cw-us-china-normalize",
@@ -36508,7 +36672,8 @@
         "china",
         "usa",
         "taiwan"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/China_USA_Locator.svg/1280px-China_USA_Locator.svg.png"
     },
     {
       "id": "cw-solidarity",
@@ -36524,7 +36689,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Solidarity_(Polish_trade_union)",
       "crossRef": [
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/G%C5%82azy_narzutowe_na_Polu_Mokotowskim_%28Ochota%29_-_08.jpg"
     },
     {
       "id": "cw-poland-martial-law",
@@ -36540,7 +36706,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Martial_law_in_Poland",
       "crossRef": [
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/T-55A_Martial_law_Poland.jpg"
     },
     {
       "id": "cw-sdi",
@@ -36557,7 +36724,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sdilogo.svg/1280px-Sdilogo.svg.png"
     },
     {
       "id": "cw-kal-007",
@@ -36574,7 +36742,8 @@
       "crossRef": [
         "korea",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/20559-186-HL7442-B747-230B-ZRH-5%2780.jpg"
     },
     {
       "id": "cw-reykjavik",
@@ -36591,7 +36760,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/President_Ronald_Reagan_says_goodbye_to_Soviet_General_Secretary_Mikhail_Gorbachev.jpg"
     },
     {
       "id": "cw-tiananmen",
@@ -36608,7 +36778,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Ud%C3%A1losti_na_n%C3%A1m%C4%9Bst%C3%AD_Tian_an_men%2C_%C4%8C%C3%ADna_1989%2C_foto_Ji%C5%99%C3%AD_Tondl.jpg"
     },
     {
       "id": "cw-eastern-europe-1989",
@@ -36625,7 +36796,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Revolutions_of_1989",
       "crossRef": [
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg"
     },
     {
       "id": "cw-german-reunification",
@@ -36642,7 +36814,8 @@
       "crossRef": [
         "germany",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg"
     },
     {
       "id": "cw-start-i",
@@ -36659,7 +36832,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/George_Bush_and_Mikhail_Gorbachev_sign_the_START_1991.jpg"
     },
     {
       "id": "cw-moscow-coup",
@@ -36675,7 +36849,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Boris_Yeltsin_22_August_1991-1.jpg"
     },
     {
       "id": "mc-khwarezm-invasion",
@@ -36694,7 +36869,8 @@
         "mideast"
       ],
       "amazon_asin": "0609809644",
-      "amazon_title": "Genghis Khan and the Making of the Modern World"
+      "amazon_title": "Genghis Khan and the Making of the Modern World",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Map_Asia_physical_%28continental%29.png/1280px-Map_Asia_physical_%28continental%29.png"
     },
     {
       "id": "mc-genghis-dies",
@@ -36711,7 +36887,8 @@
       "crossRef": [
         "mongol",
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/YuanEmperorAlbumGenghisPortrait.jpg"
     },
     {
       "id": "mc-europe-invasion",
@@ -36728,7 +36905,8 @@
       "crossRef": [
         "europe",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/1236-1242_Mongol_invasions_of_Europe.jpg"
     },
     {
       "id": "mc-baghdad-sack",
@@ -36745,7 +36923,8 @@
       "crossRef": [
         "mideast",
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Bagdad1258.jpg"
     },
     {
       "id": "mc-ain-jalut",
@@ -36762,7 +36941,8 @@
       "crossRef": [
         "mideast",
         "egypt"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Campaign_of_the_Battle_of_Ain_Jalut_1260.svg/1280px-Campaign_of_the_Battle_of_Ain_Jalut_1260.svg.png"
     },
     {
       "id": "mc-yamen-song-fall",
@@ -36778,7 +36958,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Yamen",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Jingmen002.jpg"
     },
     {
       "id": "mc-khubilai-dies",
@@ -36795,7 +36976,8 @@
       "crossRef": [
         "mongol",
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/YuanEmperorAlbumKhubilaiPortrait.jpg"
     },
     {
       "id": "mc-e-xixia-submits",
@@ -36808,7 +36990,8 @@
       "desc_zh": "1209 Genghis 圍西夏都中興府，逼 Li Anquan 稱臣進貢，蒙古首次征服一個定居國家。",
       "desc_en": "In 1209, Genghis besieged the Western Xia capital Zhongxing; Li Anquan submitted and paid tribute—Mongols' first conquest of a settled state.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%92%99%E5%8F%A4%E6%94%BB%E6%BB%85%E8%A5%BF%E5%A4%8F%E4%B9%8B%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Western_Xia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Western_Xia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mongol_Invasion_of_China.png"
     },
     {
       "id": "mc-e-jin-campaign-first",
@@ -36821,7 +37004,8 @@
       "desc_zh": "1211 Genghis 親率 10 萬蒙古軍南下攻金，大敗金軍於野狐嶺；蒙古攻金戰爭持續 23 年。",
       "desc_en": "In 1211, Genghis led 100,000 Mongols south against Jin, winning at Yehuling; the Mongol-Jin war lasted 23 years.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%92%99%E9%87%91%E6%88%98%E4%BA%89",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Bataille_entre_mongols_%26_chinois_%281211%29.jpeg"
     },
     {
       "id": "mc-e-zhongdu-falls",
@@ -36837,7 +37021,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Zhongdu",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Si%C3%A8ge_de_Beijing_%281213-1214%29.jpeg"
     },
     {
       "id": "mc-e-xixia-destroyed",
@@ -36850,7 +37035,8 @@
       "desc_zh": "1227/9 Genghis 死後不久西夏末帝投降即被殺，都城屠城；190 年西夏徹底滅國。",
       "desc_en": "Shortly after Genghis's death in 1227, the last Xia emperor surrendered and was killed, the capital massacred—ending 190 years of Western Xia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%92%99%E5%8F%A4%E6%94%BB%E6%BB%85%E8%A5%BF%E5%A4%8F%E4%B9%8B%E6%88%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Western_Xia"
+      "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Western_Xia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mongol_Invasion_of_China.png"
     },
     {
       "id": "mc-e-korea-pill",
@@ -36867,7 +37053,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Korea",
       "crossRef": [
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/1235_mongol_invasion_of_korea.png"
     },
     {
       "id": "mc-e-jin-destroyed",
@@ -36883,7 +37070,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Caizhou",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Memorials_to_the_Throne_of_Our_Glorious_Dynasty_WDL4660.jpg/1280px-Memorials_to_the_Throne_of_Our_Glorious_Dynasty_WDL4660.jpg"
     },
     {
       "id": "mc-e-vietnam-first",
@@ -36899,7 +37087,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Vietnam",
       "crossRef": [
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Yuan_invasions_of_Southeast_Asia.jpg"
     },
     {
       "id": "mc-e-japan-1",
@@ -36916,7 +37105,8 @@
       "crossRef": [
         "japan",
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Mongol_invasions_of_Japan_1274%2C_1281.jpg"
     },
     {
       "id": "mc-e-japan-2",
@@ -36932,7 +37122,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Japan",
       "crossRef": [
         "japan"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Mongol_invasions_of_Japan_1274%2C_1281.jpg"
     },
     {
       "id": "mc-e-java-failure",
@@ -36948,7 +37139,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_invasion_of_Java",
       "crossRef": [
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Mongol_invasion_of_java_%28map%29.png"
     },
     {
       "id": "mc-w-otrar-incident",
@@ -36964,7 +37156,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Khwarazmian_Empire",
       "crossRef": [
         "central-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Map_Asia_physical_%28continental%29.png/1280px-Map_Asia_physical_%28continental%29.png"
     },
     {
       "id": "mc-w-khwarezm-pill",
@@ -36981,7 +37174,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Khwarazmian_Empire",
       "crossRef": [
         "central-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Map_Asia_physical_%28continental%29.png/1280px-Map_Asia_physical_%28continental%29.png"
     },
     {
       "id": "mc-w-samarkand-sack",
@@ -36994,7 +37188,8 @@
       "desc_zh": "1220/3 Genghis 攻破絲路明珠 Samarkand，屠工匠外之多數居民，震懾中亞。",
       "desc_en": "In March 1220, Genghis took the Silk Road jewel Samarkand, massacring most inhabitants (sparing artisans)—terrorizing Central Asia.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%92%92%E9%A6%AC%E7%88%BE%E7%BD%95",
-      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Samarkand"
+      "wiki_en": "https://en.wikipedia.org/wiki/Siege_of_Samarkand",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mosque_Bibi_Khanum_%285%29.JPG"
     },
     {
       "id": "mc-w-kalka",
@@ -37010,7 +37205,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Battle_of_the_Kalka_River_scheme.png"
     },
     {
       "id": "mc-w-rus-pill",
@@ -37027,7 +37223,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mongol_invasion_of_Rus%27",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/1236-1242_Mongol_invasions_of_Europe.jpg"
     },
     {
       "id": "mc-w-legnica",
@@ -37044,7 +37241,8 @@
       "crossRef": [
         "europe",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Battle_of_Legnica1241-From_Legend_of_Saint_Hedwig.jpg"
     },
     {
       "id": "mc-w-mohi",
@@ -37060,7 +37258,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Battle_of_Mohi",
       "crossRef": [
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Battle_of_Mohi_1241.PNG"
     },
     {
       "id": "mc-w-ogedei-dies-retreat",
@@ -37073,7 +37272,8 @@
       "desc_zh": "1241/12 Ögedei Khan 飲酒暴斃，消息 1242/3 傳至前線，諸王須回 Karakorum 選舉新大汗，歐洲戰事戛然而止。",
       "desc_en": "Ögedei Khan died suddenly in Dec 1241 (news reached the front in March 1242); princes had to return to Karakorum to elect a new Khan—Europe saved.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%AA%A9%E9%98%94%E5%8F%B0%E6%B1%97",
-      "wiki_en": "https://en.wikipedia.org/wiki/%C3%96gedei_Khan"
+      "wiki_en": "https://en.wikipedia.org/wiki/%C3%96gedei_Khan",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/YuanEmperorAlbumOgedeiPortrait.jpg"
     },
     {
       "id": "mc-w-mongke-elected",
@@ -37086,7 +37286,8 @@
       "desc_zh": "1251/7 經 Batu 支持，Möngke（Tolui 子）被推舉為大汗，Ögedei 系被清洗；蒙古帝國重啟擴張。",
       "desc_en": "In July 1251, backed by Batu, Möngke (son of Tolui) was elected Great Khan; the Ögedeid line was purged, and expansion resumed.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%92%99%E5%93%A5%E6%B1%97",
-      "wiki_en": "https://en.wikipedia.org/wiki/M%C3%B6ngke_Khan"
+      "wiki_en": "https://en.wikipedia.org/wiki/M%C3%B6ngke_Khan",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Audience_de_M%C3%B6ngke.jpeg"
     },
     {
       "id": "mc-w-hulegu-campaign",
@@ -37103,7 +37304,8 @@
       "crossRef": [
         "mideast",
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/HulaguAndDokuzKathun.JPG"
     },
     {
       "id": "mc-w-nizari-destroyed",
@@ -37120,7 +37322,8 @@
       "crossRef": [
         "iran",
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Assassins2-alamut.jpg"
     },
     {
       "id": "dst-lisbon-1755",
@@ -37137,7 +37340,8 @@
       "crossRef": [
         "europe",
         "earth"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1755_Lisbon_earthquake.jpg"
     },
     {
       "id": "dst-krakatoa-1883",
@@ -37154,7 +37358,8 @@
       "crossRef": [
         "southeast-asia",
         "earth"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/De_uitbarsting_van_de_Krakatau%2C_KITLV_5888.tiff"
     },
     {
       "id": "dst-kanto-1923",
@@ -37171,7 +37376,8 @@
       "crossRef": [
         "japan",
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/The_Great_Kanto_Earthquake_%283767766524%29_%28cropped%29.jpg"
     },
     {
       "id": "dst-tangshan-1976",
@@ -37188,7 +37394,8 @@
       "crossRef": [
         "china",
         "earth"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Tangshan_earthquake.jpg"
     },
     {
       "id": "dst-bhopal-1984",
@@ -37205,7 +37412,8 @@
       "crossRef": [
         "india",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Union_Carbide_pesticide_factory%2C_Bhopal%2C_India%2C_1985.jpg"
     },
     {
       "id": "dst-tsunami-2004",
@@ -37222,7 +37430,8 @@
       "crossRef": [
         "southeast-asia",
         "earth"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/US_Navy_050102-N-9593M-040_A_village_near_the_coast_of_Sumatra_lays_in_ruin_after_the_Tsunami_that_struck_South_East_Asia.jpg"
     },
     {
       "id": "dst-haiti-2010",
@@ -37238,7 +37447,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/2010_Haiti_earthquake",
       "crossRef": [
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ruins_of_Haiti_National_Palace_-_Port_au_Prince_2012.jpg"
     },
     {
       "id": "dst-tohoku-fukushima-2011",
@@ -37255,7 +37465,8 @@
       "crossRef": [
         "japan",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/SH-60B_helicopter_flies_over_Sendai.jpg"
     },
     {
       "id": "dst-g-minoan-thera",
@@ -37272,7 +37483,8 @@
       "crossRef": [
         "greece",
         "egypt"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Santorini_ASTER.jpg"
     },
     {
       "id": "dst-g-shaanxi-1556",
@@ -37288,7 +37500,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1556_Shaanxi_earthquake",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Shaanxi_1556_earthquake_map_of_provinces.png"
     },
     {
       "id": "dst-g-tambora-1815",
@@ -37304,7 +37517,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
       "crossRef": [
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/1815_tambora_explosion-2.png"
     },
     {
       "id": "dst-g-sf-1906",
@@ -37320,7 +37534,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1906_San_Francisco_earthquake",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Relief_map_of_California.png/1280px-Relief_map_of_California.png"
     },
     {
       "id": "dst-g-valdivia-1960",
@@ -37337,7 +37552,8 @@
       "crossRef": [
         "south-america",
         "japan"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Valdivia_after_earthquake%2C_1960.jpg"
     },
     {
       "id": "dst-g-st-helens-1980",
@@ -37353,7 +37569,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1980_eruption_of_Mount_St._Helens",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/MSH80_eruption_mount_st_helens_05-18-80-dramatic-edit.jpg"
     },
     {
       "id": "dst-c-no-summer-1816",
@@ -37370,7 +37587,8 @@
       "crossRef": [
         "europe",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/1000_Year_Temperature_Comparison.png"
     },
     {
       "id": "dst-c-india-famine-1876",
@@ -37388,7 +37606,8 @@
       "crossRef": [
         "india",
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/FaminesMapOfIndia1800-1885.jpg"
     },
     {
       "id": "dst-c-dust-bowl",
@@ -37405,7 +37624,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Dust_Bowl",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Farmer_walking_in_dust_storm_Cimarron_County_Oklahoma2.jpg"
     },
     {
       "id": "dst-c-bhola-1970",
@@ -37421,7 +37641,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1970_Bhola_cyclone",
       "crossRef": [
         "india"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/15B_1970-11-12_0956Z.png"
     },
     {
       "id": "dst-c-haiyan-2013",
@@ -37437,7 +37658,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Typhoon_Haiyan",
       "crossRef": [
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Haiyan_2013-11-07_1345Z_%28alternate%29.png"
     },
     {
       "id": "dst-c-australia-bushfires",
@@ -37455,7 +37677,8 @@
       "crossRef": [
         "oceania",
         "life"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/2019-20_Australia_Bushfires_season_montage.png"
     },
     {
       "id": "dst-h-london-smog-1952",
@@ -37471,7 +37694,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Great_Smog_of_London",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Nelson%27s_Column_during_the_Great_Smog_of_1952.jpg"
     },
     {
       "id": "dst-h-three-mile-1979",
@@ -37488,7 +37712,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Three_Mile_Island_%28color%29-2.jpg"
     },
     {
       "id": "dst-h-exxon-valdez-1989",
@@ -37504,7 +37729,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Exxon_Valdez_Aerial.jpg"
     },
     {
       "id": "dst-h-deepwater-2010",
@@ -37521,7 +37747,8 @@
       "crossRef": [
         "usa",
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Deepwater_Horizon_oil_spill_-_May_24%2C_2010_-_with_locator.jpg"
     },
     {
       "id": "dst-h-tianjin-2015",
@@ -37537,7 +37764,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/2015_Tianjin_explosions",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/2015_Tianjin_explosion_-_Crop.jpg"
     },
     {
       "id": "pnd-antonine",
@@ -37553,7 +37781,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Antonine_Plague",
       "crossRef": [
         "italy-roman"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Aurelius180AD.png"
     },
     {
       "id": "pnd-justinian",
@@ -37570,7 +37799,8 @@
       "crossRef": [
         "byzantine",
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Plaguet03.jpg"
     },
     {
       "id": "pnd-hiv-aids",
@@ -37588,7 +37818,8 @@
         "usa",
         "science"
       ],
-      "endYear": "__NOW__"
+      "endYear": "__NOW__",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Red_Ribbon.svg/1280px-Red_Ribbon.svg.png"
     },
     {
       "id": "pnd-sars",
@@ -37606,7 +37837,8 @@
         "china",
         "cross"
       ],
-      "endYear": 2004.344
+      "endYear": 2004.344,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/SARS_map.svg/1280px-SARS_map.svg.png"
     },
     {
       "id": "pnd-a-columbian-exchange",
@@ -37623,7 +37855,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Columbian_exchange",
       "crossRef": [
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/VegCorn_%28cropped%29.jpg"
     },
     {
       "id": "pnd-a-moscow-plague-1770",
@@ -37639,7 +37872,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Plague_of_1771",
       "crossRef": [
         "russia-tsarist"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Chumbunt.png"
     },
     {
       "id": "pnd-a-cholera-1817",
@@ -37657,7 +37891,8 @@
       "crossRef": [
         "india",
         "trade"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/First_cholera_pandemic-India.PNG"
     },
     {
       "id": "pnd-a-cholera-1852",
@@ -37675,7 +37910,8 @@
       "crossRef": [
         "uk",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Fedotov_cholera.jpg"
     },
     {
       "id": "pnd-a-russian-flu-1889",
@@ -37692,7 +37928,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1889%E2%80%931890_pandemic",
       "crossRef": [
         "russia-tsarist"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Everyone_has_Influenza_-_The_Round_of_Doctors_and_Druggists.jpg"
     },
     {
       "id": "pnd-m-asian-flu",
@@ -37709,7 +37946,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1957%E2%80%931958_influenza_pandemic",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Reported_cases_of_influenza_in_American_countries_for_the_period_1949-1958.png"
     },
     {
       "id": "pnd-m-hongkong-flu",
@@ -37726,7 +37964,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/1968_Hong_Kong_flu_pandemic",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Influenza_virus.png"
     },
     {
       "id": "pnd-m-smallpox-eradicated",
@@ -37743,7 +37982,8 @@
       "crossRef": [
         "science",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Child_with_Smallpox_Bangladesh.jpg"
     },
     {
       "id": "pnd-m-h5n1",
@@ -37759,7 +37999,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/A_%28H5N1%29_virion%2C_a_type_of_bird_flu_virus_which_is_a_subtype_of_avian_influenza_A.jpg"
     },
     {
       "id": "pnd-m-h1n1-2009",
@@ -37776,7 +38017,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/2009_swine_flu_pandemic",
       "crossRef": [
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/H1N1_map_by_confirmed_cases.svg/1280px-H1N1_map_by_confirmed_cases.svg.png"
     },
     {
       "id": "pnd-m-mers",
@@ -37793,7 +38035,8 @@
       "crossRef": [
         "mideast",
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/MERS-CoV_electron_micrograph3.jpg"
     },
     {
       "id": "pnd-m-ebola-2014",
@@ -37810,7 +38053,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Western_African_Ebola_epidemic",
       "crossRef": [
         "west-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/2014_ebola_virus_epidemic_in_West_Africa_simplified.svg/1280px-2014_ebola_virus_epidemic_in_West_Africa_simplified.svg.png"
     },
     {
       "id": "pnd-m-zika",
@@ -37828,7 +38072,8 @@
       "crossRef": [
         "latin-america",
         "brazil"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Zikamain_112116_930.jpg"
     },
     {
       "id": "rev-haitian-1804",
@@ -37845,7 +38090,8 @@
       "crossRef": [
         "americas",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Battle_for_Palm_Tree_Hill.jpg"
     },
     {
       "id": "rev-1848-springs",
@@ -37863,7 +38109,8 @@
       "crossRef": [
         "europe",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Europe_1848_map_de.png/1280px-Europe_1848_map_de.png"
     },
     {
       "id": "rev-russian-1917",
@@ -37879,7 +38126,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/October_Revolution",
       "crossRef": [
         "russia-soviet"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/After_the_capture_of_the_Winter_Palace_26_October_1917.jpg"
     },
     {
       "id": "rev-china-1949",
@@ -37895,7 +38143,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Proclamation_of_the_People%27s_Republic_of_China",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Mao_Proclaiming_New_China.JPG"
     },
     {
       "id": "rev-cuban-1959",
@@ -37912,7 +38161,8 @@
       "crossRef": [
         "americas",
         "cold-war-early"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/CheyFidel.jpg"
     },
     {
       "id": "rev-iranian-1979",
@@ -37929,7 +38179,8 @@
       "crossRef": [
         "iran",
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mass_demonstration_in_Iran%2C_date_unknown.jpg"
     },
     {
       "id": "rev-arab-spring",
@@ -37947,7 +38198,8 @@
       "crossRef": [
         "mideast",
         "modern-egypt"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Arab_Spring_map_07_2013.png"
     },
     {
       "id": "rev-sci-revolution-pill",
@@ -37965,7 +38217,8 @@
       "crossRef": [
         "science",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Libr0310.jpg"
     },
     {
       "id": "rev-p-glorious-1688",
@@ -37981,7 +38234,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Glorious_Revolution",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/William_of_Orange_III_and_his_Dutch_army_land_in_Brixham%2C_1688.jpg"
     },
     {
       "id": "rev-p-whiskey-1794",
@@ -37997,7 +38251,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Whiskey_Rebellion",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/WhiskeyRebellion.jpg"
     },
     {
       "id": "rev-p-paris-commune",
@@ -38014,7 +38269,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Paris_Commune",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Barricade18March1871_%28cropped%29.jpg"
     },
     {
       "id": "rev-p-xinhai-1911",
@@ -38031,7 +38287,8 @@
       "crossRef": [
         "china",
         "taiwan"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Opstanden%2C_revolutie%2C_SFA022823302.jpg"
     },
     {
       "id": "rev-p-velvet-1989",
@@ -38048,7 +38305,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Velvet_Revolution",
       "crossRef": [
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1989_sametova_revoluce_12.jpg"
     },
     {
       "id": "rev-p-orange-2004",
@@ -38062,7 +38320,8 @@
       "desc_zh": "2004/11-2005/1 烏克蘭總統選舉舞弊引發和平示威，Yushchenko 最終當選；親西方派勝，為 2014 Maidan 伏筆。",
       "desc_en": "The 2004 Ukrainian presidential election's rigging sparked peaceful protests; Yushchenko eventually won—a pro-West victory that presaged 2014 Maidan.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD",
-      "wiki_en": "https://en.wikipedia.org/wiki/Orange_Revolution"
+      "wiki_en": "https://en.wikipedia.org/wiki/Orange_Revolution",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Morning_first_day_of_Orange_Revolution.jpg"
     },
     {
       "id": "rev-p-maidan-2014",
@@ -38078,7 +38337,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Revolution_of_Dignity",
       "crossRef": [
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2016-08_Ukraine_Leaders_from_Maidan_Revolution_%2828915729420%29.jpg/1280px-2016-08_Ukraine_Leaders_from_Maidan_Revolution_%2828915729420%29.jpg"
     },
     {
       "id": "rev-i-watt-steam-1769",
@@ -38095,7 +38355,8 @@
       "crossRef": [
         "uk",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Watt_James_von_Breda.jpg"
     },
     {
       "id": "rev-i-bessemer-1856",
@@ -38112,7 +38373,8 @@
       "crossRef": [
         "uk",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Bessemer_converter.jpg"
     },
     {
       "id": "rev-i-ford-assembly-1913",
@@ -38128,7 +38390,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Assembly_line",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bundesarchiv_B_145_Bild-F001651-0041%2C_Weiden%2C_Porzellanfabrik_Seltmann.jpg"
     },
     {
       "id": "rev-i-eniac-1946",
@@ -38145,7 +38408,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
     },
     {
       "id": "rev-i-web-1991",
@@ -38162,7 +38426,8 @@
       "crossRef": [
         "europe",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Chrome_on_Linux.png"
     },
     {
       "id": "rev-i-4th-industrial",
@@ -38180,7 +38445,8 @@
       "crossRef": [
         "science",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Ocado_warehouse_bots.jpg"
     },
     {
       "id": "rev-s-newton-principia",
@@ -38197,7 +38463,8 @@
       "crossRef": [
         "uk",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Newton%27s_Principia_title_page.png"
     },
     {
       "id": "rev-s-lavoisier-1789",
@@ -38213,7 +38480,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/David_-_Portrait_of_Monsieur_Lavoisier_%28cropped%292.jpg"
     },
     {
       "id": "rev-s-mendel-1866",
@@ -38229,7 +38497,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mendelian_inheritance",
       "crossRef": [
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Gregor_Mendel.png"
     },
     {
       "id": "rev-s-einstein-sr-1905",
@@ -38245,7 +38514,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Annus_mirabilis_papers",
       "crossRef": [
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Einstein_patentoffice.jpg"
     },
     {
       "id": "rev-s-quantum-1925",
@@ -38262,7 +38532,8 @@
       "crossRef": [
         "germany",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Hydrogen_Density_Plots.png"
     },
     {
       "id": "rev-s-dna-1953",
@@ -38279,7 +38550,8 @@
       "crossRef": [
         "uk",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"
     },
     {
       "id": "exp-vasco-da-gama",
@@ -38296,7 +38568,8 @@
       "crossRef": [
         "india",
         "trade"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ignoto_portoghese%2C_ritratto_di_un_cavaliere_dell%27ordine_di_cristo%2C_1525-50_ca._02.jpg"
     },
     {
       "id": "exp-iss-1998",
@@ -38313,7 +38586,8 @@
       "crossRef": [
         "usa",
         "russia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/The_station_pictured_from_the_SpaceX_Crew_Dragon_5_%28cropped%29.jpg"
     },
     {
       "id": "exp-jwst-2021",
@@ -38330,7 +38604,8 @@
       "crossRef": [
         "science",
         "cosmos"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/JWST_spacecraft_model_3.png"
     },
     {
       "id": "exp-a-dias-1488",
@@ -38346,7 +38621,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Bartolomeu_Dias",
       "crossRef": [
         "africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Bartolomeu_Dias%2C_South_Africa_House_%28cut%29.JPG"
     },
     {
       "id": "exp-a-cabral-1500",
@@ -38362,7 +38638,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Pedro_%C3%81lvares_Cabral",
       "crossRef": [
         "brazil"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Pedro_%C3%81lvares_Cabral.jpg"
     },
     {
       "id": "exp-a-cortes-1519",
@@ -38378,7 +38655,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Aztec_Empire",
       "crossRef": [
         "latin-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Conquista-de-M%C3%A9xico-por-Cort%C3%A9s-Tenochtitlan-Painting.png"
     },
     {
       "id": "exp-a-pizarro-1531",
@@ -38394,7 +38672,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Inca_Empire",
       "crossRef": [
         "south-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/John_Everett_Millais_-_Pizarro_seizing_the_Inca_of_Peru.jpg"
     },
     {
       "id": "exp-a-drake-1580",
@@ -38411,7 +38690,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Francis_Drake",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Gheeraerts_Francis_Drake_1591.jpg"
     },
     {
       "id": "exp-p-franklin-1845",
@@ -38428,7 +38708,8 @@
       "crossRef": [
         "uk",
         "arctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Franklin%27s-Lost-Expedition.png"
     },
     {
       "id": "exp-p-nansen-1893",
@@ -38445,7 +38726,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Fridtjof_Nansen",
       "crossRef": [
         "arctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Fridtjof_Nansen_LOC_03377u-3.jpg"
     },
     {
       "id": "exp-p-peary-1909",
@@ -38462,7 +38744,8 @@
       "crossRef": [
         "usa",
         "arctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Robert_Peary_self-portrait%2C_1909.jpg"
     },
     {
       "id": "exp-p-amundsen-south",
@@ -38478,7 +38761,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Roald_Amundsen",
       "crossRef": [
         "antarctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Amundsen_in_fur_skins.jpg"
     },
     {
       "id": "exp-p-scott-1912",
@@ -38495,7 +38779,8 @@
       "crossRef": [
         "uk",
         "antarctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Scott_of_the_Antarctic_%28bw%29_%28cropped%29.jpg"
     },
     {
       "id": "exp-p-shackleton",
@@ -38513,7 +38798,8 @@
       "crossRef": [
         "uk",
         "antarctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Shackleton_Endurance_expedition_map_%28HUN%29.png"
     },
     {
       "id": "exp-s-glenn-1962",
@@ -38529,7 +38815,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mercury-Atlas_6",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Glenn62.jpg"
     },
     {
       "id": "exp-s-viking-mars",
@@ -38546,7 +38833,8 @@
       "crossRef": [
         "usa",
         "solar-system"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Viking_spacecraft.jpg"
     },
     {
       "id": "exp-s-voyager2-neptune",
@@ -38563,7 +38851,8 @@
       "crossRef": [
         "usa",
         "solar-system"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Voyager.jpg"
     },
     {
       "id": "exp-s-cassini-huygens",
@@ -38581,7 +38870,8 @@
       "crossRef": [
         "usa",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Cassini%2C_Titan%2C_%26_Saturn_%2815676229671%29.jpg"
     },
     {
       "id": "exp-s-new-horizons-pluto",
@@ -38598,7 +38888,8 @@
       "crossRef": [
         "usa",
         "solar-system"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/New_Horizons_spacecraft_model_1.png"
     },
     {
       "id": "rev-p-us-independence",
@@ -38615,7 +38906,8 @@
       "crossRef": [
         "usa",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/United_States_Declaration_of_Independence.jpg"
     },
     {
       "id": "rev-p-french-rev-decade",
@@ -38633,7 +38925,8 @@
       "crossRef": [
         "france",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Decade_volcanoes_map.png"
     },
     {
       "id": "rev-p-mexican-rev",
@@ -38650,7 +38943,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mexican_Revolution",
       "crossRef": [
         "latin-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_revoluci%C3%B3n_mexicana.jpg"
     },
     {
       "id": "rev-p-german-nov-1918",
@@ -38666,7 +38960,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/German_Revolution_of_1918%E2%80%931919",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Proclamation_of_Weimar_Republic_by_Philipp_Scheidemann%2C_9_November_1918_%28cropped%29.jpg"
     },
     {
       "id": "rev-p-may-fourth-1919",
@@ -38682,7 +38977,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/May_Fourth_Movement",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Chinese_protestors_march_against_the_Treaty_of_Versailles_%28May_4%2C_1919%29.jpg"
     },
     {
       "id": "rev-p-kemal-1923",
@@ -38717,7 +39013,8 @@
       "crossRef": [
         "india",
         "africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Colonization_1945.png"
     },
     {
       "id": "rev-i-industrial-1760",
@@ -38735,7 +39032,8 @@
       "crossRef": [
         "uk",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg"
     },
     {
       "id": "rev-i-2nd-industrial",
@@ -38753,7 +39051,8 @@
       "crossRef": [
         "usa",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Skglb_promo_1895.jpg"
     },
     {
       "id": "rev-i-info-revolution",
@@ -38771,7 +39070,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Cyberia_Internet_Cafe.png"
     },
     {
       "id": "rev-s-copernicus-1543",
@@ -38788,7 +39088,8 @@
       "crossRef": [
         "europe",
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/De_revolutionibus_1543.png"
     },
     {
       "id": "rev-s-galileo-telescope",
@@ -38805,7 +39106,8 @@
       "crossRef": [
         "italy",
         "cosmos"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Sidereus_Nuncius_1610.Galileo.jpg"
     },
     {
       "id": "rev-s-darwin-origin",
@@ -38822,7 +39124,8 @@
       "crossRef": [
         "uk",
         "life"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg"
     },
     {
       "id": "exp-a-henry-navigator",
@@ -38839,7 +39142,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Prince_Henry_the_Navigator",
       "crossRef": [
         "africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_Danish_Royal_Family_at_Amalienborg_-_Count_Henrik.jpg"
     },
     {
       "id": "exp-a-tordesillas-1494",
@@ -38856,7 +39160,8 @@
       "crossRef": [
         "christianity",
         "latin-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Treaty_of_Tordesillas.jpg"
     },
     {
       "id": "exp-a-diu-1509",
@@ -38873,7 +39178,8 @@
       "crossRef": [
         "india",
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Battle_of_Diu_1509_Diagram.png"
     },
     {
       "id": "exp-a-malacca-1511",
@@ -38889,7 +39195,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Capture_of_Malacca_(1511)",
       "crossRef": [
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Conquista_de_Malaca%2C_estudo_-_Ernesto_Condeixa_%28cropped%29.png"
     },
     {
       "id": "exp-a-manila-galleon-1565",
@@ -38906,7 +39213,8 @@
       "crossRef": [
         "southeast-asia",
         "latin-america"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Reception_of_the_Manila_Galleon_by_the_Chamorro_in_the_Ladrones_Islands%2C_ca._1590.jpg/1280px-Reception_of_the_Manila_Galleon_by_the_Chamorro_in_the_Ladrones_Islands%2C_ca._1590.jpg"
     },
     {
       "id": "exp-a-janszoon-1606",
@@ -38922,7 +39230,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Willem_Janszoon",
       "crossRef": [
         "oceania"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%28Australia_%26_New_Zealand%29_663_%28ca._1672%29.jpg/1280px-%28Australia_%26_New_Zealand%29_663_%28ca._1672%29.jpg"
     },
     {
       "id": "exp-a-tasman-1642",
@@ -38938,7 +39247,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Abel_Tasman",
       "crossRef": [
         "oceania"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Abel_Tasman_-_Cuyp_%28cropped%29_%28adjusted%29.jpg"
     },
     {
       "id": "exp-a-bering-1728",
@@ -38955,7 +39265,8 @@
       "crossRef": [
         "russia-tsarist",
         "arctic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Vitus_Bering_reconstruction.jpg"
     },
     {
       "id": "art-cave-chauvet",
@@ -38972,7 +39283,8 @@
       "crossRef": [
         "human-evo",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Paintings_from_the_Chauvet_cave_%28museum_replica%29.jpg"
     },
     {
       "id": "art-parthenon",
@@ -38988,7 +39300,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Parthenon",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/The_Parthenon_in_Athens.jpg"
     },
     {
       "id": "art-renaissance-begins",
@@ -39005,7 +39318,8 @@
       "crossRef": [
         "italy",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Michelangelo%27s_David_2015.jpg"
     },
     {
       "id": "art-impressionism-1874",
@@ -39021,7 +39335,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Impressionism",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Claude_Monet%2C_Impression%2C_soleil_levant%2C_1872.jpg"
     },
     {
       "id": "art-cubism-1907",
@@ -39037,7 +39352,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Cubism",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Juan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg"
     },
     {
       "id": "art-nft-2021",
@@ -39053,7 +39369,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Non-fungible_token",
       "crossRef": [
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/VeKings.png"
     },
     {
       "id": "art-c-venus-willendorf",
@@ -39066,7 +39383,8 @@
       "desc_zh": "約公元前 28,000 奧地利出土 11 cm 石灰石小雕像，誇大女性特徵，可能為生育象徵；舊石器藝術代表。",
       "desc_en": "Around 28,000 BC, an 11 cm limestone figurine from Austria—exaggerated female features, possibly a fertility symbol; iconic Paleolithic art.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%96%87%E5%BE%B7%E7%88%BE%E7%B6%AD%E7%B4%8D%E6%96%AF",
-      "wiki_en": "https://en.wikipedia.org/wiki/Venus_of_Willendorf"
+      "wiki_en": "https://en.wikipedia.org/wiki/Venus_of_Willendorf",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Venus_von_Willendorf_01.jpg"
     },
     {
       "id": "art-c-terracotta-army",
@@ -39082,7 +39400,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Terracotta_Army",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/51714-Terracota-Army.jpg"
     },
     {
       "id": "art-c-byzantine-icons",
@@ -39099,7 +39418,8 @@
       "crossRef": [
         "byzantine",
         "christianity"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Byzantine_church_in_Nahariya_-_Peacocks_Mosaic.jpg"
     },
     {
       "id": "art-c-gothic-cathedrals",
@@ -39117,7 +39437,8 @@
       "crossRef": [
         "france",
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wells_Cathedral_West_Front_Exterior%2C_UK_-_Diliff.jpg"
     },
     {
       "id": "art-c-mona-lisa",
@@ -39133,7 +39454,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Mona_Lisa",
       "crossRef": [
         "italy"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
     },
     {
       "id": "art-c-rembrandt-dutch",
@@ -39146,7 +39468,8 @@
       "desc_zh": "1642 Rembrandt 完成《夜巡》，光影戲劇化；荷蘭黃金時代（Vermeer、Hals 等）新興資產階級支持畫家。",
       "desc_en": "In 1642, Rembrandt completed The Night Watch, mastering dramatic light; the Dutch Golden Age (Vermeer, Hals) saw bourgeois patronage of art.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%9D%9C%E5%85%B0%E9%BB%83%E9%87%91%E6%99%82%E4%BB%A3",
-      "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Golden_Age_painting"
+      "wiki_en": "https://en.wikipedia.org/wiki/Dutch_Golden_Age_painting",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg"
     },
     {
       "id": "art-c-ukiyo-e-hokusai",
@@ -39162,7 +39485,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
       "crossRef": [
         "japan"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg"
     },
     {
       "id": "art-c-romanticism-delacroix",
@@ -39178,7 +39502,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg"
     },
     {
       "id": "art-m-van-gogh",
@@ -39191,7 +39516,8 @@
       "desc_zh": "1889/6 梵谷在 Saint-Rémy 精神病院繪《星夜》，筆觸漩渦式表達情緒；1890 自殺，死後才成傳奇。",
       "desc_en": "In Jun 1889 at Saint-Rémy asylum, Van Gogh painted Starry Night with swirling expressive strokes; he died in 1890, becoming posthumously legendary.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%98%9F%E5%A4%9C",
-      "wiki_en": "https://en.wikipedia.org/wiki/The_Starry_Night"
+      "wiki_en": "https://en.wikipedia.org/wiki/The_Starry_Night",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
     },
     {
       "id": "art-m-duchamp-fountain",
@@ -39207,7 +39533,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Fountain_(Duchamp)",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Marcel_Duchamp%2C_1917%2C_Fountain%2C_photograph_by_Alfred_Stieglitz.jpg"
     },
     {
       "id": "art-m-surrealism-dali",
@@ -39233,7 +39560,8 @@
       "desc_zh": "1937/6/4 Picasso 為西班牙共和國展繪《格爾尼卡》，回應德軍轟炸巴斯克小鎮；20 世紀最重要反戰畫。",
       "desc_en": "On Jun 4, 1937, Picasso unveiled Guernica for the Spanish Republic pavilion, responding to the German bombing of the Basque town—the century's greatest antiwar painting.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%A0%BC%E7%88%BE%E5%B0%BC%E5%8D%A1",
-      "wiki_en": "https://en.wikipedia.org/wiki/Guernica_(Picasso)"
+      "wiki_en": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Arbol_de_Gernika_d%C3%ADa.jpg/1280px-Arbol_de_Gernika_d%C3%ADa.jpg"
     },
     {
       "id": "art-m-pollock-drip",
@@ -39249,7 +39577,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Jackson_Pollock",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Jackson_Pollock%27s_passport_%28cropped%29.jpg"
     },
     {
       "id": "art-m-warhol-pop",
@@ -39265,7 +39594,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Campbell%27s_Soup_Cans",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Campbell%27s_Soup_Cans_by_Andy_Warhol.jpg"
     },
     {
       "id": "art-m-basquiat-80s",
@@ -39281,7 +39611,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Jean-Michel_Basquiat",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jean-Michel_Basquiat_passport_%28cropped%29.jpg"
     },
     {
       "id": "art-m-ai-art-2022",
@@ -39297,7 +39628,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Artificial_intelligence_art",
       "crossRef": [
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Th%C3%A9%C3%A2tre_D%E2%80%99op%C3%A9ra_Spatial.png"
     },
     {
       "id": "med-avicenna-canon",
@@ -39314,7 +39646,8 @@
       "crossRef": [
         "islam",
         "persia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/The_Canon_of_Medicine.jpg"
     },
     {
       "id": "med-vesalius-1543",
@@ -39331,7 +39664,8 @@
       "crossRef": [
         "europe",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Vesalius_Fabrica_fronticepiece.jpg"
     },
     {
       "id": "med-pasteur-germ",
@@ -39348,7 +39682,8 @@
       "crossRef": [
         "france",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Cholera_bacteria_SEM.jpg"
     },
     {
       "id": "med-penicillin-1928",
@@ -39365,7 +39700,8 @@
       "crossRef": [
         "uk",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Penicillin_core.svg/1280px-Penicillin_core.svg.png"
     },
     {
       "id": "med-dna-medicine-2003",
@@ -39382,7 +39718,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Vitruvian_man.jpg"
     },
     {
       "id": "med-mrna-vaccines-2020",
@@ -39399,7 +39736,8 @@
       "crossRef": [
         "usa",
         "science"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/RNA_vaccine_illustration_%28zh%29.jpg"
     },
     {
       "id": "med-a-edwin-smith",
@@ -39415,7 +39753,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Edwin_Smith_Papyrus",
       "crossRef": [
         "egypt"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Edwin_Smith_Papyrus_v2.jpg"
     },
     {
       "id": "med-a-sushruta",
@@ -39431,7 +39770,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Sushruta_Samhita",
       "crossRef": [
         "india"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/The_Susruta-Samhita_or_Sahottara-Tantra_%28A_Treatise_on_Ayurvedic_Medicine%29_LACMA_M.87.271a-g_%281_of_8%29.jpg"
     },
     {
       "id": "med-a-huangdi-neijing",
@@ -39447,7 +39787,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Huangdi_Neijing",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Koteidaikei_Myodo.jpg"
     },
     {
       "id": "med-a-galen",
@@ -39463,7 +39804,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Galen",
       "crossRef": [
         "italy-roman"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Galen_detail.jpg"
     },
     {
       "id": "med-a-rhazes",
@@ -39480,7 +39822,8 @@
       "crossRef": [
         "persia",
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Portrait_of_Rhazes_%28al-Razi%29_%28AD_865_-_925%29_Wellcome_L0005053_%28cropped%29.jpg/1280px-Portrait_of_Rhazes_%28al-Razi%29_%28AD_865_-_925%29_Wellcome_L0005053_%28cropped%29.jpg"
     },
     {
       "id": "med-a-al-zahrawi",
@@ -39496,7 +39839,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Al-Zahrawi",
       "crossRef": [
         "islam"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Al-Zahrawi.png"
     },
     {
       "id": "med-a-black-death-response",
@@ -39512,7 +39856,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Quarantine",
       "crossRef": [
         "italy"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Wards_32-33_EBH%2C_1978.jpg"
     },
     {
       "id": "med-a-jenner-smallpox",
@@ -39528,7 +39873,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Edward_Jenner",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Edward_Jenner.jpg"
     },
     {
       "id": "med-a-anesthesia-1846",
@@ -39544,7 +39890,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_general_anesthesia",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Preoxygenation_before_anesthetic_induction.jpg"
     },
     {
       "id": "med-m-lister-antisepsis",
@@ -39560,7 +39907,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Joseph_Lister",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Joseph_Lister_1902.jpg"
     },
     {
       "id": "med-m-rontgen-xray",
@@ -39576,7 +39924,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/X-ray",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Laprascopy-Roentgen.jpg"
     },
     {
       "id": "med-m-insulin-1921",
@@ -39589,7 +39938,8 @@
       "desc_zh": "1921/7/30 多倫多 Banting 與 Best 從狗胰臟萃取胰島素，1922 救治 14 歲糖尿病兒；1923 諾貝爾醫學獎。",
       "desc_en": "On Jul 30, 1921, Toronto's Banting and Best isolated insulin from dog pancreas; in 1922 they saved a 14-year-old diabetic—1923 Nobel Prize.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E8%83%B0%E5%B3%B6%E7%B4%A0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Insulin"
+      "wiki_en": "https://en.wikipedia.org/wiki/Insulin",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Insulin_struct.png"
     },
     {
       "id": "med-m-salk-polio",
@@ -39605,7 +39955,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Polio_vaccine",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Poliodrops.jpg"
     },
     {
       "id": "med-m-watson-dna",
@@ -39621,7 +39972,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/DNA",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"
     },
     {
       "id": "med-m-first-heart-tx",
@@ -39637,7 +39989,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Heart_transplantation",
       "crossRef": [
         "south-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/%D0%9F%D0%B5%D1%80%D0%B5%D1%81%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5_%D0%B2_%D0%B3%D1%80%D1%83%D0%B4%D0%BD%D0%BE%D0%B9_%D0%BA%D0%BB%D0%B5%D1%82%D0%BA%D0%B5_%D1%80%D0%B5%D1%86%D0%B8%D0%BF%D0%B8%D0%B5%D0%BD%D1%82%D0%B0.JPG"
     },
     {
       "id": "med-m-ivf-1978",
@@ -39653,7 +40006,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Louise_Brown",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Anna_Louise_Brown_%281919%29.png"
     },
     {
       "id": "med-m-crispr-2012",
@@ -39670,7 +40024,8 @@
       "crossRef": [
         "usa",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/4QYZ.png"
     },
     {
       "id": "med-m-covid-vaccines-2020",
@@ -39687,7 +40042,8 @@
       "crossRef": [
         "usa",
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Coronavirus._SARS-CoV-2.png"
     },
     {
       "id": "mus-notation-1000",
@@ -39704,7 +40060,8 @@
       "crossRef": [
         "italy",
         "christianity"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Guido_van_Arezzo.jpg"
     },
     {
       "id": "mus-bach-brandenburg",
@@ -39720,7 +40077,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Title_page_of_Brandenburg_Concertos.png"
     },
     {
       "id": "mus-beethoven-9th",
@@ -39736,7 +40094,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Symphony_No._9_(Beethoven)",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/The_Premiere_of_Symphony_No._9.jpg"
     },
     {
       "id": "mus-jazz-age-1920s",
@@ -39753,7 +40112,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Jazz_Age",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/CarterAndKingJazzingOrchestra.jpg"
     },
     {
       "id": "mus-beatles-1964",
@@ -39770,7 +40130,8 @@
       "crossRef": [
         "uk",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_4-3_crop.jpg"
     },
     {
       "id": "mus-streaming-era",
@@ -39786,7 +40147,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Spotify",
       "crossRef": [
         "europe"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Spotify_HK_Stockholm.jpg/1280px-Spotify_HK_Stockholm.jpg"
     },
     {
       "id": "mus-c-palestrina-1567",
@@ -39799,7 +40161,8 @@
       "desc_zh": "1567 Palestrina《教宗 Marcellus 彌撒》展現對位法典範；傳言救了教堂複音音樂免遭 Trent 大公會議禁止。",
       "desc_en": "In 1567, Palestrina's Missa Papae Marcelli showcased counterpoint mastery; legend says it saved church polyphony from the Council of Trent.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%B8%95%E5%8B%92%E6%96%AF%E7%89%B9%E9%87%8C%E7%B4%8D",
-      "wiki_en": "https://en.wikipedia.org/wiki/Giovanni_Pierluigi_da_Palestrina"
+      "wiki_en": "https://en.wikipedia.org/wiki/Giovanni_Pierluigi_da_Palestrina",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Giovanni_Pierluigi_da_Palestrina.jpg"
     },
     {
       "id": "mus-c-monteverdi-opera-1607",
@@ -39812,7 +40175,8 @@
       "desc_zh": "1607/2/24 Monteverdi 在 Mantua 首演《L'Orfeo》，音樂與戲劇融合，被視為首部真正意義的歌劇作品。",
       "desc_en": "On Feb 24, 1607, Monteverdi's L'Orfeo premiered in Mantua—its fusion of music and drama is considered the first true opera.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%A5%A5%E8%8F%B2%E6%97%A5",
-      "wiki_en": "https://en.wikipedia.org/wiki/L%27Orfeo"
+      "wiki_en": "https://en.wikipedia.org/wiki/L%27Orfeo",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cesare_Gennari_Orfeo.jpg"
     },
     {
       "id": "mus-c-vivaldi-seasons",
@@ -39825,7 +40189,8 @@
       "desc_zh": "1725 Vivaldi 出版《四季》小提琴協奏曲集，標題音樂模仿鳥鳴、風雨、冰雪；巴洛克協奏曲經典。",
       "desc_en": "In 1725, Vivaldi published the Four Seasons violin concertos with programmatic imitations of birds, storms, and ice—a Baroque classic.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%9B%9B%E5%AD%A3_(%E7%B6%AD%E7%93%A6%E7%AC%AC)",
-      "wiki_en": "https://en.wikipedia.org/wiki/The_Four_Seasons_(Vivaldi)"
+      "wiki_en": "https://en.wikipedia.org/wiki/The_Four_Seasons_(Vivaldi)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Antonio_Vivaldi_2.jpg"
     },
     {
       "id": "mus-c-mozart-1791",
@@ -39838,7 +40203,8 @@
       "desc_zh": "1791/9/30 Mozart《魔笛》維也納首演，融共濟會哲學、德語歌劇藝術；兩個月後 Mozart 病逝 35 歲。",
       "desc_en": "On Sep 30, 1791, Mozart's Magic Flute premiered in Vienna, blending Masonic philosophy and German singspiel; Mozart died 2 months later at 35.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%AD%94%E7%AC%9B",
-      "wiki_en": "https://en.wikipedia.org/wiki/The_Magic_Flute"
+      "wiki_en": "https://en.wikipedia.org/wiki/The_Magic_Flute",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Mozart_magic_flute.jpg"
     },
     {
       "id": "mus-c-chopin-1830s",
@@ -39854,7 +40220,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Frederic_Chopin_photo.jpeg"
     },
     {
       "id": "mus-c-wagner-ring-1876",
@@ -39867,7 +40234,8 @@
       "desc_zh": "1876/8/13-17 Wagner 為《Der Ring des Nibelungen》在 Bayreuth 建專屬劇院首演；4 日 16 小時連演。",
       "desc_en": "From Aug 13-17, 1876, Wagner premiered Der Ring des Nibelungen at his purpose-built Bayreuth theater—16 hours over 4 days.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E4%BC%AF%E9%BE%8D%E6%A0%B9%E6%8C%87%E7%92%B0",
-      "wiki_en": "https://en.wikipedia.org/wiki/Der_Ring_des_Nibelungen"
+      "wiki_en": "https://en.wikipedia.org/wiki/Der_Ring_des_Nibelungen",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Valkyrie_horseback.jpg"
     },
     {
       "id": "mus-c-tchaikovsky-1876",
@@ -39883,7 +40251,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Swan_Lake",
       "crossRef": [
         "russia-tsarist"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tschaikowsky_EBieber_1888.jpg"
     },
     {
       "id": "mus-c-debussy-1894",
@@ -39896,7 +40265,8 @@
       "desc_zh": "1894/12/22 Debussy《牧神之午後前奏曲》巴黎首演，非傳統和聲與調性，音樂印象派誕生。",
       "desc_en": "On Dec 22, 1894, Debussy's Prelude to the Afternoon of a Faun premiered in Paris—unconventional harmony birthing musical Impressionism.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%89%A7%E7%A5%9E%E7%9A%84%E5%8D%88%E5%BE%8C",
-      "wiki_en": "https://en.wikipedia.org/wiki/Pr%C3%A9lude_%C3%A0_l%27apr%C3%A8s-midi_d%27un_faune"
+      "wiki_en": "https://en.wikipedia.org/wiki/Pr%C3%A9lude_%C3%A0_l%27apr%C3%A8s-midi_d%27un_faune",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Debussy_nadar_1905.jpeg"
     },
     {
       "id": "mus-c-stravinsky-1913",
@@ -39909,7 +40279,8 @@
       "desc_zh": "1913/5/29 Stravinsky《春之祭》巴黎首演，原始節奏、不協和和聲引發劇院暴動；現代音樂起點。",
       "desc_en": "On May 29, 1913, Stravinsky's Rite of Spring premiered in Paris, its primal rhythms and dissonance triggering a theater riot—launching modern music.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%98%A5%E4%B9%8B%E7%A5%AD",
-      "wiki_en": "https://en.wikipedia.org/wiki/The_Rite_of_Spring"
+      "wiki_en": "https://en.wikipedia.org/wiki/The_Rite_of_Spring",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Roerich_Rite_of_Spring.jpg"
     },
     {
       "id": "mus-c-chinese-qin",
@@ -39925,7 +40296,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Guqin",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/ZhongNiShi.jpg"
     },
     {
       "id": "mus-m-elvis-1956",
@@ -39941,7 +40313,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Elvis_Presley",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Elvis_Presley_promoting_Jailhouse_Rock.jpg"
     },
     {
       "id": "mus-m-dylan-1963",
@@ -39957,7 +40330,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Bob_Dylan",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/DylanYoungKilkenny140719v2_%2850_of_52%29_%2852246124397%29_%28cropped%29.jpg"
     },
     {
       "id": "mus-m-woodstock-1969",
@@ -39974,7 +40348,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Woodstock",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Woodstock_poster.jpg"
     },
     {
       "id": "mus-m-hiphop-1973",
@@ -39990,7 +40365,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Hip_hop_music",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ambox_current_red_Asia_Australia.svg/1280px-Ambox_current_red_Asia_Australia.svg.png"
     },
     {
       "id": "mus-m-mtv-1981",
@@ -40006,7 +40382,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/MTV",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/1280px-MTV_2021_%28brand_version%29.svg.png"
     },
     {
       "id": "mus-m-thriller-1982",
@@ -40022,7 +40399,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Thriller_(album)",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Michael_Jackson%2C_Diana_Ross%2C_Quincy_Jones%2C_%22Diana%22_%281981_CBS_press_photo%29_%28cropped%29.jpg/1280px-Michael_Jackson%2C_Diana_Ross%2C_Quincy_Jones%2C_%22Diana%22_%281981_CBS_press_photo%29_%28cropped%29.jpg"
     },
     {
       "id": "mus-m-nirvana-1991",
@@ -40038,7 +40416,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Nevermind",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Butch_Vig_at_Smart_Studios%2C_Madison%2C_WI%2C_United_States_of_America.jpg/1280px-Butch_Vig_at_Smart_Studios%2C_Madison%2C_WI%2C_United_States_of_America.jpg"
     },
     {
       "id": "mus-m-napster-1999",
@@ -40070,7 +40449,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/BTS",
       "crossRef": [
         "korea"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/BTS_during_a_White_House_press_conference_May_31%2C_2022_%28cropped%29.jpg"
     },
     {
       "id": "mus-m-tiktok-viral",
@@ -40086,7 +40466,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/TikTok",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tiktok_logo_text.svg/1280px-Tiktok_logo_text.svg.png"
     },
     {
       "id": "sci-archimedes-method",
@@ -40102,7 +40483,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Archimedes",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Domenico-Fetti_Archimedes_1620.jpg"
     },
     {
       "id": "sci-arabic-numerals",
@@ -40119,7 +40501,8 @@
       "crossRef": [
         "islam",
         "india"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/AralSea_A2009169_0715_250m.jpg"
     },
     {
       "id": "sci-printing-press",
@@ -40135,7 +40518,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Printing_press",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg"
     },
     {
       "id": "sci-manhattan-1945",
@@ -40152,7 +40536,8 @@
       "crossRef": [
         "usa",
         "ww2"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Trinity_shot_color.jpg"
     },
     {
       "id": "sci-gpt-2022",
@@ -40168,7 +40553,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/ChatGPT",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/ChatGPT_5.2_Thinking_Wikipedia_historia_PDF_screenshot.png/1280px-ChatGPT_5.2_Thinking_Wikipedia_historia_PDF_screenshot.png"
     },
     {
       "id": "sci-a-pythagoras",
@@ -40184,7 +40570,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Pythagoras",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg"
     },
     {
       "id": "sci-a-aristotle-bio",
@@ -40200,7 +40587,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Aristotle",
       "crossRef": [
         "greece"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg"
     },
     {
       "id": "sci-a-hero-engine",
@@ -40213,7 +40601,8 @@
       "desc_zh": "約 70 年亞歷山卓 Hero 發明 aeolipile 汽轉球，蒸汽作動首例；當時作玩具，1700 年後才有蒸汽機。",
       "desc_en": "Around 70 AD in Alexandria, Hero invented the aeolipile, the first steam-powered device—a toy then; 1,700 years before the industrial steam engine.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E6%B1%BD%E8%BD%89%E7%90%83",
-      "wiki_en": "https://en.wikipedia.org/wiki/Aeolipile"
+      "wiki_en": "https://en.wikipedia.org/wiki/Aeolipile",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Aeolipile_illustration.png"
     },
     {
       "id": "sci-a-compass-song",
@@ -40229,7 +40618,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Shen_Kuo",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/%E5%A4%A2%E6%BA%AA%E7%AD%86%E8%AB%87.jpg"
     },
     {
       "id": "sci-a-gunpowder-song",
@@ -40245,7 +40635,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_gunpowder",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Black_Powder-1.JPG"
     },
     {
       "id": "sci-a-al-hazen-optics",
@@ -40262,7 +40653,8 @@
       "crossRef": [
         "islam",
         "egypt-islamic"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ibn_al-Haytham_crop.jpg"
     },
     {
       "id": "sci-r-kepler-laws",
@@ -40278,7 +40670,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kepler_laws_diagram.svg/1280px-Kepler_laws_diagram.svg.png"
     },
     {
       "id": "sci-r-harvey-circulation",
@@ -40294,7 +40687,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/De_Motu_Cordis",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/William_Harvey_%281578-1657%29_Venenbild.jpg"
     },
     {
       "id": "sci-r-boyle-1662",
@@ -40307,7 +40701,8 @@
       "desc_zh": "1662 Boyle 發表氣體定律：定溫下 PV=k；化學從煉金術脫離，Boyle 被稱「現代化學之父」。",
       "desc_en": "In 1662, Boyle published his gas law (PV=k at constant T); chemistry broke free from alchemy—Boyle called 'father of modern chemistry'.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E7%8E%BB%E8%80%B3%E5%AE%9A%E5%BE%8B",
-      "wiki_en": "https://en.wikipedia.org/wiki/Boyle%27s_law"
+      "wiki_en": "https://en.wikipedia.org/wiki/Boyle%27s_law",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Boyles_Law_animated.gif"
     },
     {
       "id": "sci-r-faraday-1831",
@@ -40323,7 +40718,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Electromagnetic_induction",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Electromagnetic_induction_-_solenoid_to_loop_-_animation.gif"
     },
     {
       "id": "sci-r-maxwell-1865",
@@ -40336,7 +40732,8 @@
       "desc_zh": "1865 Maxwell 發表 4 個方程式統一電、磁、光為電磁場理論；預言電磁波，成 Einstein 相對論思想前身。",
       "desc_en": "In 1865, Maxwell published 4 equations unifying electricity, magnetism, and light as electromagnetic fields—predicting EM waves and seeding relativity.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%B5%84",
-      "wiki_en": "https://en.wikipedia.org/wiki/Maxwell%27s_equations"
+      "wiki_en": "https://en.wikipedia.org/wiki/Maxwell%27s_equations",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/James_Clerk_Maxwell_Statue_Equations.jpg"
     },
     {
       "id": "sci-m-radioactivity-1896",
@@ -40352,7 +40749,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Radioactivity",
       "crossRef": [
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/NuclearReaction.svg/1280px-NuclearReaction.svg.png"
     },
     {
       "id": "sci-m-rutherford-atom",
@@ -40368,7 +40766,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Rutherford_model",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Geiger-Marsden_apparatus_CGI_mock-up.png"
     },
     {
       "id": "sci-m-penicillin-industrial",
@@ -40385,7 +40784,8 @@
       "crossRef": [
         "uk",
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Penicillin_core.svg/1280px-Penicillin_core.svg.png"
     },
     {
       "id": "sci-m-transistor-1947",
@@ -40401,7 +40801,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Transistor",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Transistorer_%28cropped%29.jpg"
     },
     {
       "id": "sci-m-moores-law-1965",
@@ -40417,7 +40818,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Moore%27s_law",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Moore%27s_Law_Transistor_Count_1970-2020.png"
     },
     {
       "id": "sci-m-cerngravwaves-2015",
@@ -40434,7 +40836,8 @@
       "crossRef": [
         "usa",
         "cosmos"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/LIGO_control.jpg"
     },
     {
       "id": "sci-m-alphafold-2020",
@@ -40450,7 +40853,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/AlphaFold",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Protein_folding_figure.png"
     },
     {
       "id": "sci-m-quantum-supremacy-2019",
@@ -40466,7 +40870,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Quantum_supremacy",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Marissa_Giustina_Demonstrating_Quantum_Supremacy.jpg/1280px-Marissa_Giustina_Demonstrating_Quantum_Supremacy.jpg"
     },
     {
       "id": "trd-voc-1602",
@@ -40483,7 +40888,8 @@
       "crossRef": [
         "europe",
         "southeast-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/VOC.svg/1280px-VOC.svg.png"
     },
     {
       "id": "trd-wto-1995",
@@ -40499,7 +40905,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/World_Trade_Organization",
       "crossRef": [
         "cross"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/World_Trade_Organization_%28logo_and_wordmark%29.svg/1280px-World_Trade_Organization_%28logo_and_wordmark%29.svg.png"
     },
     {
       "id": "trd-china-wto-2001",
@@ -40532,7 +40939,8 @@
       "crossRef": [
         "china",
         "central-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/%22Belt_and_Road%22_economic_corridor_and_its_path_city_topographic_map.jpg"
     },
     {
       "id": "trd-container-1956",
@@ -40548,7 +40956,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Containerization",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/Container_01_KMJ.jpg"
     },
     {
       "id": "trd-a-phoenician",
@@ -40564,7 +40973,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Phoenicia",
       "crossRef": [
         "mideast"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Phoenicia_map-zh.png"
     },
     {
       "id": "trd-a-silk-road-start",
@@ -40581,7 +40991,8 @@
       "crossRef": [
         "china",
         "central-asia"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zhangqian_Statue.jpg"
     },
     {
       "id": "trd-a-hanseatic-1356",
@@ -40597,7 +41008,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Hanseatic_League",
       "crossRef": [
         "germany"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ausbreitung_der_Hanse_um_das_Jahr_1400-Droysens_28.jpg"
     },
     {
       "id": "trd-a-indian-ocean",
@@ -40615,7 +41027,8 @@
       "crossRef": [
         "india",
         "east-africa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Austronesian_maritime_trade_network_in_the_Indian_Ocean.png/1280px-Austronesian_maritime_trade_network_in_the_Indian_Ocean.png"
     },
     {
       "id": "trd-a-song-trade",
@@ -40631,7 +41044,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Quanzhou",
       "crossRef": [
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/20230130_Old_City_of_Quanzhou_01.jpg"
     },
     {
       "id": "trd-c-beic-1600",
@@ -40648,7 +41062,8 @@
       "crossRef": [
         "uk",
         "india"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_Map_of_The_British_East_India_Company.png"
     },
     {
       "id": "trd-c-triangular",
@@ -40666,7 +41081,8 @@
       "crossRef": [
         "africa",
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Triangle_trade2.png"
     },
     {
       "id": "trd-c-south-sea-1720",
@@ -40682,7 +41098,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/South_Sea_Bubble",
       "crossRef": [
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/South_Sea_Bubble.jpg"
     },
     {
       "id": "trd-c-opium-wars",
@@ -40700,7 +41117,8 @@
       "crossRef": [
         "china",
         "uk"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg"
     },
     {
       "id": "trd-c-suez-1869",
@@ -40717,7 +41135,8 @@
       "crossRef": [
         "modern-egypt",
         "france"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Suez_Canal%2C_Egypt_%2831596166706%29.jpg"
     },
     {
       "id": "trd-m-gold-standard",
@@ -40731,7 +41150,8 @@
       "desc_zh": "1870-1914 國際金本位盛行，主要貨幣對黃金固定兌換；促跨國投資但缺乏貨幣政策彈性；WWI 崩潰。",
       "desc_en": "From 1870-1914, the classical gold standard fixed major currencies to gold—boosting international investment but limiting monetary flexibility; collapsed with WWI.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%87%91%E6%9C%AC%E4%BD%8D%E5%88%B6",
-      "wiki_en": "https://en.wikipedia.org/wiki/Gold_standard"
+      "wiki_en": "https://en.wikipedia.org/wiki/Gold_standard",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Government-Vedder-Highsmith-detail-1.jpeg"
     },
     {
       "id": "trd-m-gatt-1947",
@@ -40744,7 +41164,8 @@
       "desc_zh": "1947/10/30 23 國在日內瓦簽 GATT 關稅貿易總協定，戰後關稅自由化框架；8 輪談判後 1995 升級為 WTO。",
       "desc_en": "On Oct 30, 1947, 23 nations signed GATT in Geneva—the postwar tariff-reduction framework; after 8 rounds, it became the WTO in 1995.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/%E9%97%9C%E7%A8%85%E8%B2%BF%E6%98%93%E7%B8%BD%E5%8D%94%E5%AE%9A",
-      "wiki_en": "https://en.wikipedia.org/wiki/General_Agreement_on_Tariffs_and_Trade"
+      "wiki_en": "https://en.wikipedia.org/wiki/General_Agreement_on_Tariffs_and_Trade",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/FA-18_Hornet_breaking_sound_barrier_%287_July_1999%29.jpg/1280px-FA-18_Hornet_breaking_sound_barrier_%287_July_1999%29.jpg"
     },
     {
       "id": "trd-m-nixon-shock-1971",
@@ -40760,7 +41181,8 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Nixon_shock",
       "crossRef": [
         "usa"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Nixon_30-0316a.jpg"
     },
     {
       "id": "trd-m-nafta-1994",
@@ -40777,7 +41199,8 @@
       "crossRef": [
         "usa",
         "americas"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NAFTA_logo.svg/1280px-NAFTA_logo.svg.png"
     },
     {
       "id": "trd-m-us-china-trade-war",
@@ -40794,7 +41217,8 @@
       "crossRef": [
         "usa",
         "china"
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/China_United_States_of_America_Locator.svg/1280px-China_United_States_of_America_Locator.svg.png"
     }
   ]
 }

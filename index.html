@@ -1033,7 +1033,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604241445</span>
+  <span id="version-label">v202604251802</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -4130,6 +4130,8 @@ function resolvedParent(ev) {
 async function loadEvents() {
   try {
     const res  = await fetch('data/events.json');
+    // 記下初始 ETag，供 visibilitychange 偵測新版用
+    window._eventsEtag = res.headers.get('etag') || res.headers.get('last-modified') || null;
     const data = await res.json();
     // A3: Load axis_groups from JSON
     if (data.axis_groups) AXIS_GROUP_DEFS = data.axis_groups;
@@ -5061,6 +5063,30 @@ resize();
 })();
 
 loadEvents();
+
+// ── 自動偵測 events.json 更新並背景 reload ─────────────────────
+// 機制：使用者切回分頁時，HEAD 一下 events.json 比對 ETag。
+//       發現新版 → 直接 location.reload()，無需使用者確認。
+//       URL 的 ?v=<view-id> 會被保留，使用者回到原本的 view。
+(function setupAutoUpdateCheck() {
+  let stopped = false;
+
+  async function checkForUpdate() {
+    if (stopped || !window._eventsEtag) return;
+    try {
+      const res = await fetch('data/events.json', { method: 'HEAD', cache: 'no-store' });
+      const etag = res.headers.get('etag') || res.headers.get('last-modified');
+      if (etag && etag !== window._eventsEtag) {
+        stopped = true;            // 防止 reload 前再次觸發
+        location.reload();
+      }
+    } catch (_) { /* 離線/網路錯，忽略 */ }
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) checkForUpdate();
+  });
+})();
 </script>
 </body>
 </html>
