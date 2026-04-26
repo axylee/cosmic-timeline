@@ -1033,7 +1033,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604251802</span>
+  <span id="version-label">v202604261624</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -1822,6 +1822,7 @@ let mouseX = -1, mouseY = -1;
 let canvasW = 0, canvasH = 0;
 let dpr = window.devicePixelRatio || 1;
 let hiddenAxes = new Set();
+let _fadedAxisLabels = new Set();   // 點擊軸 label 後加入·渲染時 opacity 0.15
 let lastFrameTime = 0;
 let expandedEvents  = new Set();  // eventIds currently expanded
 let hoveredPillId   = null;       // id of pill being hovered (shows ℹ button)
@@ -1983,7 +1984,13 @@ function isSoloDimmed(axId) {
   return !_soloSet.has(axId);
 }
 
+// Label-fade dim：點擊 label 後·該軸 + events 全 fade 0.15
+function axisFadeMul(axId) {
+  return _fadedAxisLabels.has(axId) ? 0.15 : 1;
+}
+
 function categoryAlpha(ev) {
+  if (_fadedAxisLabels.has(ev.axis)) return 0.15;
   if (isSoloDimmed(ev.axis)) return _soloDimAlpha;
   if (isFilterDimmed(ev)) return 0.08;
   if (!highlightedCategory) return 1;
@@ -2143,7 +2150,7 @@ function drawAxisLines() {
     const startX  = yearToX(ax.startYear);
     if (startX > canvasW + 60) return;
 
-    const alpha   = subAxisAlpha(ax) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    const alpha   = subAxisAlpha(ax) * (isSoloDimmed(id) ? _soloDimAlpha : 1) * axisFadeMul(id);
     const color   = axisEffectiveColor(id);
     const forkX   = Math.max(-80, startX);
     const dy      = y - parentY;
@@ -2218,7 +2225,7 @@ function drawAxisLines() {
     const lineTo = Math.min(canvasW + 20, endX);
 
     // Alpha — sub-axis fade in, human-evo fade out, ended civilisations fade out
-    let alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    let alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1) * axisFadeMul(id);
     if (id === 'human-evo') alpha *= humanEvoAlpha();
 
     ctx.save();
@@ -2275,31 +2282,7 @@ function drawAxisLines() {
       }
     }
     ctx.restore();
-
-    // ── Label badge — always pinned to left edge for readability ──
-    // When axis starts off-screen right, label still shows on left
-    const labelX    = 4;
-    const label     = T(ax.label, ax.label_en || ax.label);
-    const fontSize  = ax.zoomMin > 0 ? 9 : 10;
-    const pad       = 5;
-    const labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
-    if (labelAlpha < 0.05) return;
-
-    ctx.save();
-    ctx.globalAlpha = labelAlpha;
-    ctx.font = `500 ${fontSize}px "Noto Sans TC", sans-serif`;
-    const tw = ctx.measureText(label).width;
-    ctx.fillStyle = 'rgba(5,8,16,0.88)';
-    ctx.beginPath();
-    ctx.roundRect(labelX, y - 10, tw + pad * 2, 13, 3);
-    ctx.fill();
-    ctx.strokeStyle = color + '66';
-    ctx.lineWidth = 0.5;
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.textAlign = 'left';
-    ctx.fillText(label, labelX + pad, y - 1);
-    ctx.restore();
+    // Label badge 已搬到 drawAxisLabels()·在所有 pass 之後渲染（avoid events overlap）
   });
 
   // ── End clip mask ──
@@ -2312,7 +2295,7 @@ function drawAxisLines() {
     if (!hasFutureEvents) return;
     const y     = yMap.get(id);
     const color = axisEffectiveColor(id);
-    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    const alpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) * 0.8 : 0.65) * (isSoloDimmed(id) ? _soloDimAlpha : 1) * axisFadeMul(id);
     const endX  = yearToX(FUTURE_END);
     if (nowXf >= canvasW || endX < nowXf) return;
     ctx.save();
@@ -2556,7 +2539,7 @@ function drawPill(ev, y, opts = {}) {
   ctx.save();
 
   // ── Pill fill ──
-  const soloMul = (isSoloDimmed(ev.axis)) ? _soloDimAlpha : isFilterDimmed(ev) ? 0.08 : 1;
+  const soloMul = ((isSoloDimmed(ev.axis)) ? _soloDimAlpha : isFilterDimmed(ev) ? 0.08 : 1) * axisFadeMul(ev.axis);
   ctx.beginPath();
   ctx.roundRect(rx1, y - pillH, w, pillH * 2, r);
   ctx.fillStyle = color;
@@ -2800,7 +2783,7 @@ function drawEvents(eventsInView) {
     // Label — only when zoomed in enough and not a cluster
     if (!isCluster && labelVisible(rep)) {
       ctx.save();
-      const evSoloMul = (isSoloDimmed(rep.axis)) ? _soloDimAlpha : isFilterDimmed(rep) ? 0.08 : 1;
+      const evSoloMul = ((isSoloDimmed(rep.axis)) ? _soloDimAlpha : isFilterDimmed(rep) ? 0.08 : 1) * axisFadeMul(rep.axis);
       const fs = rep.level === 1 ? 11 : 10;
       ctx.font = rep.level === 1 ? '500 11px "Noto Sans TC", sans-serif' : '10px "Noto Sans TC", sans-serif';
       const tw  = ctx.measureText(T(rep.zh, rep.en)).width;
@@ -2862,8 +2845,11 @@ function drawEvents(eventsInView) {
         const y2 = axisY(crId);
         if (y1 !== null && Math.abs(y1 - y2) < 4) return;
 
+        // Target axis fade：space target 軸 fade 時 crossRef hollow circle 也跟著 fade
+        const targetFadeMul = axisFadeMul(crId);
+
         ctx.save();
-        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.25);
+        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.25) * targetFadeMul;
 
         // Vertical dashed line (只在本體軸線可見時畫)
         if (y1 !== null) {
@@ -2878,7 +2864,7 @@ function drawEvents(eventsInView) {
         }
 
         // Hollow circle on target axis (不論本體軸線是否可見都畫)
-        ctx.globalAlpha = catA * (isHov ? 0.9 : 0.55);
+        ctx.globalAlpha = catA * (isHov ? 0.9 : 0.55) * targetFadeMul;
         ctx.beginPath();
         ctx.arc(x, y2, r * 0.85, 0, Math.PI * 2);
         ctx.strokeStyle = color;
@@ -2889,7 +2875,7 @@ function drawEvents(eventsInView) {
         ctx.beginPath();
         ctx.arc(x, y2, r * 0.3, 0, Math.PI * 2);
         ctx.fillStyle  = color;
-        ctx.globalAlpha = catA * (isHov ? 0.9 : 0.5);
+        ctx.globalAlpha = catA * (isHov ? 0.9 : 0.5) * targetFadeMul;
         ctx.fill();
 
         ctx.restore();
@@ -2901,6 +2887,50 @@ function drawEvents(eventsInView) {
 // ════════════════════════════════════════════
 //  DRAW FUTURE ZONE  (NOW → NOW+500)
 // ════════════════════════════════════════════
+// ════════════════════════════════════════════
+//  DRAW AXIS LABELS  (left-edge sticky·always on top)
+//  Hit-test 用·_axisLabelRects 紀錄各 label 矩形 for click 偵測
+// ════════════════════════════════════════════
+let _axisLabelRects = [];   // [{id, x, y, w, h}]
+
+function drawAxisLabels() {
+  _axisLabelRects = [];
+  const yMap = getAxisYMap();
+  const visAxes = Object.entries(AXES).filter(([id]) => yMap.has(id));
+
+  visAxes.forEach(([id, ax]) => {
+    const y = yMap.get(id);
+    const color = axisEffectiveColor(id);
+    const labelX    = 4;
+    const label     = T(ax.label, ax.label_en || ax.label);
+    const fontSize  = ax.zoomMin > 0 ? 9 : 10;
+    const pad       = 5;
+    let labelAlpha = (ax.zoomMin > 0 ? subAxisAlpha(ax) : 1) * (isSoloDimmed(id) ? _soloDimAlpha : 1);
+    if (_fadedAxisLabels.has(id)) labelAlpha *= 0.15;
+    if (labelAlpha < 0.03) return;
+
+    ctx.save();
+    ctx.globalAlpha = labelAlpha;
+    ctx.font = `500 ${fontSize}px "Noto Sans TC", sans-serif`;
+    const tw = ctx.measureText(label).width;
+
+    // 紀錄 hit-rect (full alpha for hit-test)
+    _axisLabelRects.push({ id, x: labelX, y: y - 10, w: tw + pad * 2, h: 13 });
+
+    ctx.fillStyle = 'rgba(5,8,16,0.95)';
+    ctx.beginPath();
+    ctx.roundRect(labelX, y - 10, tw + pad * 2, 13, 3);
+    ctx.fill();
+    ctx.strokeStyle = color + 'BB';
+    ctx.lineWidth = 0.7;
+    ctx.stroke();
+    ctx.fillStyle = color;
+    ctx.textAlign = 'left';
+    ctx.fillText(label, labelX + pad, y - 1);
+    ctx.restore();
+  });
+}
+
 function drawFutureZone() {
   const x1 = yearToX(NOW);
   const x2 = yearToX(FUTURE_END);
@@ -2978,6 +3008,7 @@ function draw() {
   drawRuler();
   drawCursorLine();
   drawEraBanners();  // era banners drawn last — always on top
+  drawAxisLabels();  // axis labels 最後·永遠在 events 之上
 
   // Time display
   const midYear = (viewStart + viewEnd) / 2;
@@ -3785,6 +3816,17 @@ function getPillY(ev) {
 
 function handleClick(mx, my) {
   hideOverlapMenu();
+
+  // ── 軸 label 點擊偵測：toggle fade ──
+  for (const r of _axisLabelRects) {
+    if (mx >= r.x && mx <= r.x + r.w && my >= r.y && my <= r.y + r.h) {
+      if (_fadedAxisLabels.has(r.id)) _fadedAxisLabels.delete(r.id);
+      else                            _fadedAxisLabels.add(r.id);
+      draw();
+      return;
+    }
+  }
+
   const hits = findEventsAt(mx, my);
   if (hits.length === 0) return;
 
@@ -4829,6 +4871,7 @@ function applyView(v) {
   hiddenAxes.clear();
   _soloSet.clear();
   _setSoloCtrl(false);
+  _fadedAxisLabels.clear();   // 切 view 時清除 label fade 狀態
 
   const viewSet = new Set(v.axes);
   Object.keys(AXES).forEach(id => {
