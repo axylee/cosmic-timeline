@@ -1,495 +1,742 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cosmichistorytimeline.com/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://cosmichistorytimeline.com/views.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views.html?lang=en"/>
+  </url>
+  <url>
     <loc>https://cosmichistorytimeline.com/about.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cosmichistorytimeline.com/privacy-policy.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=cenozoic</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=dinosaurs</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=nat-cosmos</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=nat-earth</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=nat-human</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=nat-iceages</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=thm-climate</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=thm-migration</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=civ-africa</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=civ-all</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=civ-americas</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=civ-east</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=civ-west</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=china</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/akkadian.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/akkadian.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/akkadian.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/akkadian.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=egypt</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/alexander-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/alexander-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/alexander-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/alexander-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=france</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/american-civil.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/american-civil.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/american-civil.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/american-civil.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=germany</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/american-revolution.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/american-revolution.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/american-revolution.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/american-revolution.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=greece</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/ancient-egypt-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/ancient-egypt-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/ancient-egypt-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/ancient-egypt-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=india</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/arab-caliphate.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/arab-caliphate.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/arab-caliphate.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/arab-caliphate.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=iran</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/art-history.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/art-history.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/art-history.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/art-history.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=italy</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/british-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/british-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/british-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/british-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=japan</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/byzantine.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/byzantine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/byzantine.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/byzantine.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=korea</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/cenozoic.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/cenozoic.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/cenozoic.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/cenozoic.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-africa</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/china.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/china.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/china.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/china.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-americas</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/civ-africa.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/civ-africa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/civ-africa.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/civ-africa.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-centralas</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/civ-all.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/civ-all.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/civ-all.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/civ-all.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-eastasia</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/civ-americas.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/civ-americas.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/civ-americas.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/civ-americas.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-europe</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/civ-east.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/civ-east.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/civ-east.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/civ-east.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-mideast</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/civ-west.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/civ-west.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/civ-west.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/civ-west.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-oceania</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/cold-war.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/cold-war.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/cold-war.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/cold-war.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-polar</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/crusades.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/crusades.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/crusades.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/crusades.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-sea</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/dinosaurs.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/dinosaurs.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/dinosaurs.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/dinosaurs.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=reg-southasia</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/disasters.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/disasters.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/disasters.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/disasters.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=russia</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/egypt.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/egypt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/egypt.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/egypt.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=taiwan</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/exploration.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/exploration.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/exploration.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/exploration.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=turkey</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/france.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/france.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/france.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/france.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=uk</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/germany.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/germany.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/germany.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/germany.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=usa</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/greece.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/greece.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/greece.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/greece.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=american-civil</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=american-revolution</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=cold-war</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=crusades</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=korean-war</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=mongol-conquests</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=napoleonic</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=peloponnesian</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=punic-wars</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=seven-years</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=thirty-years</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=vietnam-war</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=ww1</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=ww2</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cosmichistorytimeline.com/?v=art-history</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/india.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/india.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/india.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/india.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=medical</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/iran.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/iran.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/iran.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/iran.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=music-history</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/italy.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/italy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/italy.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/italy.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=space-exploration</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/japan.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/japan.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/japan.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/japan.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=thm-religion</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/japanese-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/japanese-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/japanese-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/japanese-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=thm-science</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/korea.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/korea.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/korea.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/korea.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=thm-trade</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/korean-war.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/korean-war.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/korean-war.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/korean-war.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=disasters</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/medical.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/medical.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/medical.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/medical.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=exploration</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/mongol-conquests.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/mongol-conquests.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/mongol-conquests.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/mongol-conquests.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=pandemics</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/mongol-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/mongol-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/mongol-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/mongol-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=revolutions</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/mughal-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/mughal-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/mughal-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/mughal-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=akkadian</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/music-history.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/music-history.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/music-history.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/music-history.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=alexander-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/napoleonic.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/napoleonic.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/napoleonic.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/napoleonic.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=ancient-egypt-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/nat-cosmos.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/nat-cosmos.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/nat-cosmos.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/nat-cosmos.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=arab-caliphate</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/nat-earth.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/nat-earth.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/nat-earth.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/nat-earth.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=british-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/nat-human.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/nat-human.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/nat-human.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/nat-human.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=byzantine</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/nat-iceages.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/nat-iceages.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/nat-iceages.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/nat-iceages.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=japanese-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/ottoman-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/ottoman-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/ottoman-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/ottoman-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=mongol-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/pandemics.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/pandemics.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/pandemics.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/pandemics.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=mughal-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/peloponnesian.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/peloponnesian.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/peloponnesian.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/peloponnesian.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=ottoman-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/persian-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/persian-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/persian-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/persian-empire.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=persian-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/punic-wars.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/punic-wars.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/punic-wars.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/punic-wars.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=qing-dynasty</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/qing-dynasty.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/qing-dynasty.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/qing-dynasty.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/qing-dynasty.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=roman-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/reg-africa.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-africa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-africa.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-africa.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=russian-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/reg-americas.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-americas.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-americas.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-americas.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=spanish-empire</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/reg-centralas.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-centralas.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-centralas.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-centralas.html?lang=en"/>
   </url>
   <url>
-    <loc>https://cosmichistorytimeline.com/?v=tang-dynasty</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://cosmichistorytimeline.com/views/reg-eastasia.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-eastasia.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-eastasia.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-eastasia.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/reg-europe.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-europe.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-europe.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/reg-mideast.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-mideast.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-mideast.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-mideast.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/reg-oceania.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-oceania.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-oceania.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-oceania.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/reg-polar.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-polar.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-polar.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-polar.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/reg-sea.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-sea.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-sea.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-sea.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/reg-southasia.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/reg-southasia.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/reg-southasia.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/reg-southasia.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/revolutions.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/revolutions.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/revolutions.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/revolutions.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/roman-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/roman-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/roman-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/roman-empire.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/russia.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/russia.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/russia.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/russia.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/russian-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/russian-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/russian-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/russian-empire.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/seven-years.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/seven-years.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/seven-years.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/seven-years.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/space-exploration.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/space-exploration.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/space-exploration.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/space-exploration.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/spanish-empire.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/spanish-empire.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/spanish-empire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/spanish-empire.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/taiwan.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/taiwan.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/taiwan.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/taiwan.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/tang-dynasty.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/tang-dynasty.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/tang-dynasty.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/tang-dynasty.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/thirty-years.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/thirty-years.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/thirty-years.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/thirty-years.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/thm-climate.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/thm-climate.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/thm-climate.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/thm-climate.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/thm-migration.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/thm-migration.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/thm-migration.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/thm-migration.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/thm-religion.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/thm-religion.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/thm-religion.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/thm-religion.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/thm-science.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/thm-science.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/thm-science.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/thm-science.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/thm-trade.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/thm-trade.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/thm-trade.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/thm-trade.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/turkey.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/turkey.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/turkey.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/turkey.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/uk.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/uk.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/uk.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/usa.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/usa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/usa.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/usa.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/vietnam-war.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/vietnam-war.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/vietnam-war.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/vietnam-war.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/ww1.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/ww1.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/ww1.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/ww1.html?lang=en"/>
+  </url>
+  <url>
+    <loc>https://cosmichistorytimeline.com/views/ww2.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmichistorytimeline.com/views/ww2.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://cosmichistorytimeline.com/views/ww2.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cosmichistorytimeline.com/views/ww2.html?lang=en"/>
   </url>
 </urlset>

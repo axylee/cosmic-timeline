@@ -197,7 +197,40 @@ body {
 .view-item-axes {
   font-size: 9px; color: rgba(221,216,200,0.25);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  max-width: 110px; text-align: right;
+  max-width: 90px; text-align: right;
+}
+.view-item-read {
+  margin-left: 8px; padding: 2px 6px; border-radius: 3px;
+  font-size: 11px; color: rgba(221,216,200,0.4); text-decoration: none;
+  border: 1px solid rgba(221,216,200,0.15);
+  flex-shrink: 0;
+}
+.view-item-read:hover {
+  color: #a78bfa; border-color: rgba(167,139,250,0.5);
+  background: rgba(167,139,250,0.1);
+}
+/* Reading Index banner at top of view popup */
+.view-popup-banner {
+  display: block; margin: 0 0 6px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(167,139,250,0.06));
+  border: 1px solid rgba(167,139,250,0.4);
+  border-radius: 4px;
+  color: #d4c4ff; text-decoration: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  transition: background .15s, border-color .15s;
+}
+.view-popup-banner:hover {
+  background: linear-gradient(135deg, rgba(167,139,250,0.28), rgba(167,139,250,0.12));
+  border-color: rgba(167,139,250,0.7);
+  color: #fff;
+}
+.view-popup-banner-title {
+  display: block; font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+}
+.view-popup-banner-sub {
+  display: block; font-size: 10.5px; color: rgba(212,196,255,0.7);
+  margin-top: 2px; letter-spacing: 0.3px;
 }
 
 /* ── SEARCH BOX ── */
@@ -969,6 +1002,25 @@ body {
   .edit-input { padding: 10px 12px; font-size: 15px; }
   .edit-save-btn, .edit-export-btn { padding: 12px 16px; font-size: 13px; }
 }
+
+/* ─── EMBED MODE: hide chrome for iframe embedding (?embed=1) ─── */
+body.embed-mode #header,
+body.embed-mode #legend,
+body.embed-mode #right-panel,
+body.embed-mode #bottom-bar,
+body.embed-mode #time-display,
+body.embed-mode #version-label,
+body.embed-mode #view-popup,
+body.embed-mode #filter-popup,
+body.embed-mode #search-results,
+body.embed-mode #tips-popup,
+body.embed-mode #landscape-hint,
+body.embed-mode #ad-slot,
+body.embed-mode #edit-panel,
+body.embed-mode #popup-edit-btn,
+body.embed-mode #popup-export-btn,
+body.embed-mode #edit-modified-badge { display: none !important; }
+body.embed-mode #timeline-canvas { top: 0 !important; bottom: 0 !important; left: 0 !important; right: 0 !important; }
 </style>
 </head>
 <body>
@@ -1030,7 +1082,7 @@ body {
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604261624</span>
+  <span id="version-label">v202604262313</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -1286,11 +1338,29 @@ body {
 // ════════════════════════════════════════════
 //  LANGUAGE SYSTEM
 // ════════════════════════════════════════════
-let lang = localStorage.getItem('cosmic-lang') || 'zh';
+// Lang state: URL ?lang= (highest priority) > localStorage > default 'zh'
+let lang = (function() {
+  try {
+    const urlLang = new URLSearchParams(location.search).get('lang');
+    if (urlLang === 'zh' || urlLang === 'en') return urlLang;
+  } catch(e) {}
+  return localStorage.getItem('cosmic-lang') || 'zh';
+})();
+
+function _syncLangUrl() {
+  if (typeof history.replaceState !== 'function') return;
+  try {
+    const url = new URL(location.href);
+    url.searchParams.set('lang', lang);
+    history.replaceState(history.state, '', url.toString());
+  } catch(e) {}
+}
+_syncLangUrl();
 
 function toggleLang() {
   lang = lang === 'zh' ? 'en' : 'zh';
   localStorage.setItem('cosmic-lang', lang);
+  _syncLangUrl();
   applyLang();
   buildLegend();
   buildFilterPopup();
@@ -1377,6 +1447,45 @@ function getCurrentView() {
   const params = new URLSearchParams(location.search);
   return params.get('v') || 'main';
 }
+
+// ─── URL 同步：點擊 view → 更新 URL；back/forward → 還原 view ───
+let _suppressUrlPush = false;
+function _pushViewUrl(viewId) {
+  if (typeof history.pushState !== 'function') return;
+  try {
+    const cur = new URLSearchParams(location.search);
+    const next = new URLSearchParams();
+    if (viewId) next.set('v', viewId);
+    if (cur.get('embed') === '1') next.set('embed', '1');
+    const search = next.toString();
+    const url = location.pathname + (search ? '?' + search : '') + location.hash;
+    if (url === location.pathname + location.search + location.hash) return;
+    history.pushState({ v: viewId || null }, '', url);
+  } catch (e) { /* file:// 等情境忽略 */ }
+}
+
+window.addEventListener('popstate', () => {
+  const v = getCurrentView();
+  _suppressUrlPush = true;
+  try {
+    if (v && v !== 'main') {
+      const def = (typeof _viewDefs !== 'undefined' ? _viewDefs : []).find(d => d.id === v);
+      if (def) applyView(def);
+    } else {
+      if (typeof _origShowAllAxes === 'function') _origShowAllAxes();
+      _activeViewId = null;
+      const btn = document.getElementById('view-btn');
+      if (btn) { btn.textContent = T('主題','Events'); btn.classList.remove('active'); }
+      if (typeof buildViewPopup === 'function') buildViewPopup();
+      if (typeof _filterSet !== 'undefined') { _filterSet.clear(); }
+      if (typeof _updateFilterBtn === 'function') _updateFilterBtn();
+      if (typeof updateMetaForView === 'function') updateMetaForView(null);
+      if (typeof draw === 'function') draw();
+    }
+  } finally {
+    _suppressUrlPush = false;
+  }
+});
 
 // 判斷軸線是否應在當前頁面顯示
 // scope 欄位：
@@ -4234,10 +4343,27 @@ async function loadEvents() {
   if (requestedView && requestedView !== 'main') {
     const v = _viewDefs.find(d => d.id === requestedView);
     if (v) {
-      // 延遲執行讓 UI 先初始化完成
-      setTimeout(() => applyView(v), 50);
+      _suppressUrlPush = true;
+      setTimeout(() => { applyView(v); _suppressUrlPush = false; }, 50);
     } else {
       console.warn(`[URL Route] view "${requestedView}" not found in views. Fallback to main.`);
+    }
+  }
+
+  // ?embed=1 → 隱藏 chrome（給 agg 頁 iframe 嵌入用）
+  if (new URLSearchParams(location.search).get('embed') === '1') {
+    document.body.classList.add('embed-mode');
+  }
+
+  // ?year=<n> → view 套用後再縮放到該年附近（給 agg 頁「在主時間軸定位」用）
+  const _yrParam = new URLSearchParams(location.search).get('year');
+  if (_yrParam) {
+    const _yrNum = parseFloat(_yrParam);
+    if (isFinite(_yrNum)) {
+      setTimeout(() => {
+        const span = Math.max(20, (viewEnd - viewStart) * 0.3);
+        animateToView(_yrNum - span/2, _yrNum + span/2, null);
+      }, 700);
     }
   }
 
@@ -4790,6 +4916,21 @@ function buildViewPopup() {
   if (!popup) return;
   popup.innerHTML = '';
 
+  // Reading Index banner at top (links to views.html — full text reading version)
+  const banner = document.createElement('a');
+  banner.className = 'view-popup-banner';
+  banner.href = `views.html?lang=${lang}`;
+  banner.target = '_blank';
+  banner.rel = 'noopener';
+  if (lang === 'en') {
+    banner.innerHTML = '<span class="view-popup-banner-title">📖 Reading Index — Full Text Version</span>' +
+                       '<span class="view-popup-banner-sub">79 curated topic timelines · click any view\'s 📖 below for its reading page</span>';
+  } else {
+    banner.innerHTML = '<span class="view-popup-banner-title">📖 完整文字版總覽</span>' +
+                       '<span class="view-popup-banner-sub">79 個主題時間軸 · 各 view 旁的 📖 直接開該主題文字版</span>';
+  }
+  popup.appendChild(banner);
+
   // Group by v.group (new structure with view_groups)
   // Fallback: if view has old 'category' field (backward compat), treat as group label
   const grouped = {};
@@ -4839,8 +4980,15 @@ function buildViewPopup() {
       const el = document.createElement('div');
       el.className = 'view-item' + (_activeViewId === v.id ? ' active' : '');
       el.dataset.viewId = v.id;
-      el.innerHTML = `<span>${T(v.label,v.label_en)}</span><span class="view-item-axes">${v.axes.join(', ')}</span>`;
-      el.addEventListener('click', () => applyView(v));
+      const aggHref = `views/${encodeURIComponent(v.id)}.html?lang=${lang}`;
+      const readTitle = lang === 'en' ? 'Open reading version' : '開啟文字版';
+      el.innerHTML = `<span>${T(v.label,v.label_en)}</span>` +
+                     `<span class="view-item-axes">${v.axes.join(', ')}</span>` +
+                     `<a class="view-item-read" href="${aggHref}" target="_blank" rel="noopener" title="${readTitle}">📖</a>`;
+      el.addEventListener('click', (e) => {
+        if (e.target.classList.contains('view-item-read')) return;
+        applyView(v);
+      });
       popup.appendChild(el);
     });
   });
@@ -4873,6 +5021,9 @@ function applyView(v) {
   });
 
   _activeViewId = v.id;
+
+  // URL 同步：切 view 時更新瀏覽器網址
+  if (!_suppressUrlPush) _pushViewUrl(v.id);
 
   // 2. Auto zoom
   // 優先使用 view 定義的 yearStart/yearEnd（精確控制初始 zoom）
@@ -4969,32 +5120,19 @@ function updateMetaForView(v) {
   if (link) link.setAttribute('href', canonical);
 }
 
-// Hook into showAllAxes to also clear active view
-// Round 4: 若在專題頁（?v=<not-main>），「全部顯示」改為跳轉到主頁並帶 zoom 參數
+// Hook into showAllAxes: inline 重置 + URL push（不再 reload）
+// 改進：保留當前 zoom（更平順），URL 同步移除 ?v= 參數
 const _origShowAllAxes = showAllAxes;
 showAllAxes = function() {
-  const currentView = getCurrentView();
-  if (currentView && currentView !== 'main') {
-    // 專題頁：計算當前視野中心年份 + 當前 zoom，跳主頁
-    const centerYear = Math.round((viewStart + viewEnd) / 2);
-    const zoom = currentZoom();
-    // 保留當前檔案名（indexedit.html 或 index.html）
-    const page = location.pathname.split('/').pop() || '';
-    location.href = `${page}?center=${centerYear}&zoom=${zoom.toFixed(3)}`;
-    return;
-  }
-  // 主頁：原本的行為
   _origShowAllAxes();
   _activeViewId = null;
   const btn = document.getElementById('view-btn');
-  btn.textContent = T('主題','Events');
-  btn.classList.remove('active');
+  if (btn) { btn.textContent = T('主題','Events'); btn.classList.remove('active'); }
   buildViewPopup();
-  // 同時清除 filter
   _filterSet.clear();
   _updateFilterBtn();
-  // 還原主頁 meta（清除 view 狀態）
   if (typeof updateMetaForView === 'function') updateMetaForView(null);
+  if (!_suppressUrlPush) _pushViewUrl(null);
 };
 
 // ════════════════════════════════════════════

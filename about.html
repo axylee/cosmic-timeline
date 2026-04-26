@@ -3,106 +3,682 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Cosmic History Timeline</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<title>About — Cosmic History Timeline · 13.8 Billion Years on One Canvas</title>
+<meta name="description" content="Cosmic History Timeline is an interactive visualization spanning 13.8 billion years — from the Big Bang through galaxy formation, life on Earth, human civilizations, religions, empires, wars, and modern nations. 2,700+ curated events across 257 axes, with 79 in-depth reading pages and bilingual descriptions.">
+<meta property="og:title" content="About — Cosmic History Timeline">
+<meta property="og:description" content="13.8 billion years of cosmic and human history on a single zoomable canvas. 2,700+ events. 79 topic timelines. Free to read, no signup.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.cosmichistorytimeline.com/about.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9386529087603046" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { background:#fff; }
   body {
-    background: #050810; color: #ddd8c8;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 15px; line-height: 1.8;
-    min-height: 100vh;
-    padding: 40px 20px 60px;
+    background:#fff; color:#121212;
+    font-family:'Noto Sans TC','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
   }
-  .container {
-    max-width: 680px; margin: 0 auto;
+  .container { max-width:740px; margin:0 auto; padding:24px 20px 80px; }
+  a { color:#052962; text-decoration:none; border-bottom:1px solid #052962; }
+  a:hover { color:#c70000; border-bottom-color:#c70000; }
+
+  .crumb {
+    font-size:12px; color:#707070; font-weight:700;
+    text-transform:uppercase; letter-spacing:1px;
+    padding-bottom:10px; margin-bottom:24px;
+    border-bottom:2px solid #c70000;
   }
-  a { color: #a78bfa; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .back {
-    display: inline-block; margin-bottom: 30px;
-    font-size: 13px; color: rgba(221,216,200,0.5);
+  .crumb a { color:#707070; border:none; }
+  .crumb a:hover { color:#c70000; }
+
+  header h1 {
+    font-size:46px; font-weight:900; color:#121212;
+    line-height:1.08; letter-spacing:-0.8px;
+    margin-bottom:12px;
   }
-  .back:hover { color: #a78bfa; }
-  h1 {
-    font-size: 22px; font-weight: 500;
-    letter-spacing: 2px; margin-bottom: 8px;
-    color: #f5f1e6;
+  header .subtitle {
+    display:block; font-size:19px; font-weight:500;
+    color:#444; margin-bottom:32px; line-height:1.4;
   }
-  .subtitle {
-    font-size: 13px; color: rgba(221,216,200,0.4);
-    margin-bottom: 40px;
+
+  .lead {
+    font-size:20px; font-weight:500; line-height:1.55;
+    color:#222; margin:0 0 24px;
+    padding-left:16px; border-left:3px solid #c70000;
   }
+  .lead-secondary {
+    font-size:18px; line-height:1.55; color:#444; margin:0 0 32px;
+  }
+
+  /* TOC */
+  .toc {
+    margin:36px 0 48px; padding:18px 0;
+    border-top:1px solid #ddd; border-bottom:1px solid #ddd;
+  }
+  .toc-title {
+    font-size:11px; font-weight:700; color:#c70000;
+    text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;
+  }
+  .toc ul {
+    list-style:none; display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:6px 18px;
+  }
+  .toc li { font-size:14.5px; font-weight:600; }
+  .toc li a { color:#121212; border:none; }
+  .toc li a:hover { color:#c70000; }
+
   h2 {
-    font-size: 16px; font-weight: 500;
-    color: #a78bfa; margin-top: 36px; margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid rgba(167,139,250,0.15);
+    font-size:30px; font-weight:900; color:#121212;
+    margin:64px 0 18px; padding:14px 0 0;
+    border-top:2px solid #121212;
+    letter-spacing:-0.4px; line-height:1.18;
   }
-  p { margin-bottom: 12px; color: rgba(221,216,200,0.75); }
-  ul {
-    margin: 8px 0 12px 20px;
-    color: rgba(221,216,200,0.65);
+  h2 .lead-num {
+    display:inline-block; font-size:13px; font-weight:700;
+    color:#c70000; vertical-align:middle; margin-right:10px;
+    text-transform:uppercase; letter-spacing:1.5px;
   }
-  li { margin-bottom: 4px; }
-  .footer {
-    margin-top: 50px; padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    font-size: 11px; color: rgba(221,216,200,0.25);
-    text-align: center;
+  h3 {
+    font-size:21px; font-weight:800; color:#121212;
+    margin:28px 0 10px; line-height:1.3;
+  }
+
+  p { margin:0 0 18px; color:#222; }
+  p strong { color:#121212; font-weight:700; }
+  ul { margin:8px 0 22px 22px; }
+  li { margin-bottom:6px; color:#222; }
+  li strong { color:#121212; font-weight:700; }
+
+  .stats-grid {
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
+    gap:0; margin:24px 0 28px;
+    border-top:1px solid #eaeaea; border-left:1px solid #eaeaea;
+  }
+  .stat {
+    padding:18px 16px;
+    border-bottom:1px solid #eaeaea; border-right:1px solid #eaeaea;
+  }
+  .stat-num {
+    display:block; font-size:32px; font-weight:900;
+    color:#c70000; letter-spacing:-1px; line-height:1;
+  }
+  .stat-label {
+    display:block; font-size:12px; color:#707070;
+    text-transform:uppercase; letter-spacing:0.8px; margin-top:6px;
+  }
+
+  .topic-group {
+    margin:24px 0 28px; padding:18px 20px;
+    background:#f9f5ec; border-left:3px solid #c70000;
+  }
+  .topic-group-title {
+    font-size:13px; font-weight:800; color:#c70000;
+    text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;
+  }
+  .topic-group-list {
+    font-size:15px; color:#222; line-height:1.65;
+  }
+  .topic-group-list .pending {
+    color:#999; font-style:italic;
+  }
+  .topic-group-list .count {
+    color:#707070; font-size:12px; margin-left:3px;
+  }
+
+  .feature-table {
+    width:100%; border-collapse:collapse; margin:18px 0 28px;
+    font-size:15px;
+  }
+  .feature-table th {
+    text-align:left; padding:10px 12px;
+    background:#f5f5f5; font-weight:800;
+    border-bottom:2px solid #121212;
+  }
+  .feature-table td {
+    padding:10px 12px; border-bottom:1px solid #eaeaea;
+    vertical-align:top;
+  }
+  .feature-table td:first-child {
+    font-weight:700; white-space:nowrap;
+  }
+
+  .callout {
+    margin:24px 0; padding:16px 20px;
+    background:#fff7e0; border-left:3px solid #d4a017;
+    font-size:15px; color:#444; line-height:1.65;
+  }
+
+  .ad-slot {
+    margin:48px 0; padding:8px 0; min-height:90px;
+    display:flex; align-items:center; justify-content:center;
+    border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0;
+  }
+  .ad-slot::before {
+    content:'Advertisement';
+    position:absolute; transform:translateY(-22px);
+    font-size:9px; color:#aaa; letter-spacing:1.5px; text-transform:uppercase;
+  }
+
+  .cta-block {
+    margin:32px 0; padding:22px 24px;
+    background:linear-gradient(135deg, #f9f5ec, #fff);
+    border:1px solid #d4a017;
+    text-align:center;
+  }
+  .cta-btn {
+    display:inline-block; margin-top:12px;
+    padding:11px 22px; background:#c70000;
+    color:#fff !important; font-size:14px; font-weight:700;
+    border-radius:9999px; border:none !important;
+  }
+  .cta-btn:hover { background:#052962; text-decoration:none; }
+
+  footer {
+    margin-top:80px; padding-top:24px;
+    border-top:1px solid #ddd;
+    font-size:12px; color:#707070; line-height:1.7;
+  }
+  footer a {
+    color:#707070; border-bottom:1px solid #ccc;
+  }
+  footer a:hover { color:#c70000; border-bottom-color:#c70000; }
+
+  @media (max-width:600px) {
+    .container { padding:16px 16px 60px; }
+    header h1 { font-size:32px; }
+    header .subtitle { font-size:16px; }
+    .lead { font-size:18px; }
+    h2 { font-size:24px; }
+    h3 { font-size:18px; }
+    .stat-num { font-size:26px; }
   }
 </style>
 </head>
 <body>
 <div class="container">
-  <a href="index.html" class="back">← Back to Timeline</a>
 
-  <h1>COSMIC HISTORY TIMELINE</h1>
-  <div class="subtitle">An interactive timeline covering 13.8 billion years of cosmic history</div>
+<nav class="crumb">
+  <a href="index.html">← Main Timeline</a>
+  &nbsp;|&nbsp;
+  <a href="views.html">Reading Index</a>
+  &nbsp;|&nbsp;
+  <a href="privacy-policy.html">Privacy</a>
+</nav>
 
-  <h2>About</h2>
-  <p>
-    Cosmic History Timeline is an interactive visualization that spans from the Big Bang to the present day.
-    It covers the formation of the universe, galaxies, our solar system, the evolution of life on Earth,
-    the rise of human civilizations, religions, and modern nations — all on a single, zoomable canvas.
-  </p>
-  <p>
-    Built as a lightweight single-page application with vanilla JavaScript and Canvas rendering.
-    No frameworks, no backend, no tracking — just data and code.
-  </p>
+<header>
+  <h1>About Cosmic History Timeline</h1>
+  <span class="subtitle">13.8 billion years on a single zoomable canvas. From the Big Bang to today, in one place, free to read.</span>
+</header>
 
-  <h2>Contact</h2>
-  <p>
-    For feedback, suggestions, or questions, please visit our
-    <a href="https://ko-fi.com/universetimeline" target="_blank">Ko-fi page</a>.
-    You can leave a message there or support the project with a tip.
-  </p>
+<p class="lead">
+  Cosmic History Timeline is a free, interactive visualization that places the entire history of the universe — from the moment of the Big Bang, through galaxy formation, the rise of life on Earth, the great civilizations, religions, empires, wars, and modern nations — on a single, zoomable timeline you can explore in your browser. No signup. No tracking. No paywall.
+</p>
 
-  <h2>Privacy</h2>
-  <p>
-    We do not collect personal data. Editing preferences are stored in your browser's
-    localStorage and never transmitted. This site displays Google AdSense ads, which may
-    set third-party cookies for advertising purposes.
-  </p>
-  <p>
-    For the full policy — including cookies, Google AdSense details, GDPR (EEA/UK), and
-    CCPA (California) rights — see our dedicated
-    <a href="privacy-policy.html">Privacy Policy</a>.
-  </p>
+<p class="lead-secondary">
+  We believe scale matters. A textbook can show you the Roman Empire in chapter four and the cosmic microwave background in chapter twelve, but it cannot show them <em>at the same time</em> — at proportional distances, on the same number line, where 700 years of Pax Romana sits as a thin sliver next to 380,000 years of cosmic recombination. That comparison, that proportion, is what this site exists to make possible.
+</p>
 
-  <h2>Copyright</h2>
-  <p>
-    &copy; 2025–2026 Cosmic History Timeline. All rights reserved.
-  </p>
-  <p>
-    The timeline data, code, and design are original works. Event descriptions are written for educational purposes.
-    Historical images are sourced from Wikimedia Commons and other public domain or freely licensed sources.
-    Wikipedia links are provided for further reading and are subject to their respective licenses.
-  </p>
+<nav class="toc">
+  <div class="toc-title">On this page</div>
+  <ul>
+    <li><a href="#what-you-see">What you see</a></li>
+    <li><a href="#what-you-compare">What you can compare</a></li>
+    <li><a href="#scope">Scope &amp; coverage</a></li>
+    <li><a href="#sections">The eight sections</a></li>
+    <li><a href="#reading-pages">Reading pages</a></li>
+    <li><a href="#bilingual">Bilingual content</a></li>
+    <li><a href="#features">Interactive features</a></li>
+    <li><a href="#editorial">Editorial approach</a></li>
+    <li><a href="#sources">Sources &amp; attribution</a></li>
+    <li><a href="#design">Design philosophy</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#affiliate">Affiliate disclosure</a></li>
+    <li><a href="#copyright">Copyright</a></li>
+    <li><a href="#tech">Technology</a></li>
+    <li><a href="#support">Support &amp; contact</a></li>
+  </ul>
+</nav>
 
-  <div class="footer">
-    Cosmic History Timeline · <a href="https://ko-fi.com/universetimeline">Ko-fi</a>
+<h2 id="what-you-see"><span class="lead-num">§1</span>What You See</h2>
+
+<p>
+  Open the main canvas and you are looking at <strong>13.8 billion years</strong> compressed into a horizontal axis. The leftmost edge is the Big Bang, marked at year &minus;13,800,000,000. The rightmost edge is today, with a soft "future zone" extending five hundred years past the present so you can see history unfinished, still in motion.
+</p>
+
+<p>
+  Stacked vertically along this axis are <strong>more than 250 timeline tracks</strong>, each one carrying the events of a single thread: a country, a civilization, a religion, a war, a scientific discipline, a geological eon. The tracks are organized into six groups — natural systems at the top (cosmos, galaxies, the solar system, Earth, life), then global themes, regions, civilizations, religions, and individual nations at the bottom. Colors follow each group's character: cool blues and purples for the cosmic and natural; warm reds and oranges for wars and certain region clusters; deep crimsons and umbers for ancient empires; the green family for world religions; flag-derived hues for modern countries.
+</p>
+
+<p>
+  On every track you find <strong>events</strong>, drawn either as single points or as horizontal pills covering a span. A point is a moment — the founding of a city, a battle, a coronation. A pill is a span — a dynasty, a war, an ice age. Click any event and a panel opens with a curated description in both Chinese and English, an image (almost always with full attribution to its Wikimedia Commons source), a Wikipedia link in each language for further reading, and where appropriate, a recommended book. Some events also draw thin curved lines from one track to another: these are <strong>cross-references</strong>, the visualization saying "this event matters here too." A meteor strike that ends the dinosaurs draws a curve from the geology track to the life track. The Mongol invasions draw curves from a central conquest band into Russia, Persia, China, and Eastern Europe simultaneously.
+</p>
+
+<p>
+  Zoom out to the maximum and you see <strong>cosmic time at its full scale</strong>: the universe expanding, galaxies forming, the solar system condensing, life crawling onto land. Zoom in and the canvas resolves into smaller and smaller intervals — first centuries, then decades, then individual years and months. Where the same year holds many events, they cluster automatically; click the cluster and a small menu lets you choose which one to read. The level system controls density: at low zoom you see only the most important (level&nbsp;1) events; zoom past 0.55 and the next tier (level&nbsp;2) appears; zoom past 0.95 and every detail is visible. This way the canvas never overwhelms — it reveals progressively as you focus in.
+</p>
+
+<h2 id="what-you-compare"><span class="lead-num">§2</span>What You Can Compare</h2>
+
+<p>
+  This is where a single zoomable canvas does what a textbook cannot.
+</p>
+
+<h3>Across civilizations, at the same instant</h3>
+<p>
+  Set the time window to <strong>500 BCE</strong>. On the Greek track you find the Peloponnesian War brewing and the early career of Socrates; directly above it on the Persian track, the Achaemenid Empire is at its fullest extent; on the Chinese track, the Warring States period is producing Confucius's first generation of disciples; on the Indian track, the Buddha is teaching; on the Hebrew track, the Second Temple has just been rebuilt. Five world traditions, all alive at once, each shaped by what was happening on the others' tracks. The canvas places them at the same vertical line so the simultaneity is visual, not paragraph-by-paragraph.
+</p>
+
+<h3>Across orders of magnitude</h3>
+<p>
+  Pull the zoom out to see human civilization — every empire, every war, every dynasty — collapse into the rightmost <strong>one-twentieth of one percent</strong> of the total timeline. Most of the canvas, by area, is the early universe and Earth's deep geological eras. The visualization makes the asymmetry impossible to ignore.
+</p>
+
+<h3>Cause and consequence across tracks</h3>
+<p>
+  When the Western Roman Empire falls (track: <em>Roman Empire</em>), trace the cross-reference curve and you'll see it lights up the Byzantine track, the Christianity track, and the Germanic-tribes track — three institutions whose centuries-long divergence begins from a single moment of dissolution. Black Death events cross-reference into trade, into demographic collapse, into religious upheaval. The canvas treats history as networked, not siloed.
+</p>
+
+<h3>Country versus country, side by side</h3>
+<p>
+  Through the country views you can pull up <strong>Japan and Korea</strong>, or <strong>Britain and France</strong>, or <strong>Egypt and Iran</strong> as parallel tracks. Their conflicts, treaties, dynastic intermarriages, and parallel revolutions become a visual pattern instead of two unrelated reading lists.
+</p>
+
+<h3>Long durations against short ones</h3>
+<p>
+  Display the <strong>Five Ice Ages</strong> view alongside the <strong>20th-century wars</strong>. The Cryogenian glaciation pill spans tens of millions of years; World War II spans six. They share the same horizontal axis. The canvas refuses to flatter human time.
+</p>
+
+<div class="ad-slot">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9386529087603046"
+       data-ad-slot="8876685027"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<h2 id="scope"><span class="lead-num">§3</span>Scope &amp; Coverage</h2>
+
+<p>
+  As of late April 2026, the dataset is roughly the size of a small encyclopedia and growing weekly. Every number below reflects what is currently in the live <code>events.json</code>; the figures rise as new events are added.
+</p>
+
+<div class="stats-grid">
+  <div class="stat"><span class="stat-num">13.8B</span><span class="stat-label">Years covered</span></div>
+  <div class="stat"><span class="stat-num">2,722</span><span class="stat-label">Curated events</span></div>
+  <div class="stat"><span class="stat-num">257</span><span class="stat-label">Timeline axes</span></div>
+  <div class="stat"><span class="stat-num">88</span><span class="stat-label">Themed views</span></div>
+  <div class="stat"><span class="stat-num">79</span><span class="stat-label">Reading pages</span></div>
+  <div class="stat"><span class="stat-num">2,230</span><span class="stat-label">Images</span></div>
+  <div class="stat"><span class="stat-num">2,204</span><span class="stat-label">With full credit</span></div>
+  <div class="stat"><span class="stat-num">2,236</span><span class="stat-label">Book references</span></div>
+</div>
+
+<p>
+  Each of the 2,700+ events carries: a year (or a year range, for spans); a primary track; a level of importance from one (canonical) to three (detailed); titles and 50&ndash;200-word descriptions in both Chinese and English; usually an image with full author and license attribution; usually a Wikipedia link in each language; and frequently a recommended book with full title and ASIN. About <strong>99.6%</strong> of images include explicit author and license metadata — fetched from Wikimedia Commons via its public API and stored alongside the event so the credit shows on every page where the image appears.
+</p>
+
+<p>
+  The dataset is curated, not exhaustive. We do not aim to list every event; we aim to choose the events that, taken together, give a faithful proportional picture of each thread. Each new addition is reviewed for source quality, period balance, and visual coherence on the canvas.
+</p>
+
+<h2 id="sections"><span class="lead-num">§4</span>The Eight Sections</h2>
+
+<p>
+  Events are organized into <strong>eight thematic sections</strong>, accessible from the main menu. Each section contains multiple "views" — preset combinations of tracks, year ranges, and zoom settings — designed for a particular kind of comparison or narrative. Numbers in parentheses are current event counts.
+</p>
+
+<div class="topic-group">
+  <div class="topic-group-title">1 · Nature &amp; Cosmos</div>
+  <div class="topic-group-list">
+    Cosmic History <span class="count">(114)</span> ·
+    Earth &amp; Life <span class="count">(84)</span> ·
+    Climate &amp; Environment <span class="count">(65)</span> ·
+    Cenozoic Life Evolution <span class="count">(61)</span> ·
+    Human Migration <span class="count">(60)</span> ·
+    Human Evolution <span class="count">(55)</span> ·
+    Dinosaurs <span class="count">(47)</span> ·
+    Five Ice Ages <span class="count">(7)</span>
   </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">2 · Civilizations</div>
+  <div class="topic-group-list">
+    All Civilizations <span class="count">(222)</span> ·
+    Eastern Civilizations <span class="count">(113)</span> ·
+    Western Civilizations <span class="count">(65)</span> ·
+    African Civilizations <span class="count">(33)</span> ·
+    Americas Civilizations <span class="count">(11)</span> ·
+    <span class="pending">Ancient Civilizations (in progress)</span>
+  </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">3 · Countries (25 views)</div>
+  <div class="topic-group-list">
+    European History <span class="count">(253)</span> ·
+    British History <span class="count">(142)</span> ·
+    Chinese History <span class="count">(139)</span> ·
+    East Asia History <span class="count">(114)</span> ·
+    American History <span class="count">(107)</span> ·
+    Italian History <span class="count">(88)</span> ·
+    Russian History <span class="count">(86)</span> ·
+    German History <span class="count">(79)</span> ·
+    Iranian/Persian History <span class="count">(76)</span> ·
+    Egyptian History <span class="count">(75)</span> ·
+    Americas History <span class="count">(74)</span> ·
+    Middle East History <span class="count">(71)</span> ·
+    Greek History <span class="count">(61)</span> ·
+    Turkish History <span class="count">(59)</span> ·
+    French History <span class="count">(57)</span> ·
+    Taiwan History <span class="count">(55)</span> ·
+    African History <span class="count">(40)</span> ·
+    Southeast Asia History <span class="count">(34)</span> ·
+    Japanese History <span class="count">(25)</span> ·
+    Central Asia History <span class="count">(24)</span> ·
+    Indian History <span class="count">(24)</span> ·
+    South Asia History <span class="count">(22)</span> ·
+    Oceania <span class="count">(16)</span> ·
+    Korean History <span class="count">(14)</span> ·
+    Polar Regions <span class="count">(12)</span>
+  </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">4 · Wars (14 views)</div>
+  <div class="topic-group-list">
+    World War II <span class="count">(80)</span> ·
+    World War I <span class="count">(51)</span> ·
+    Cold War <span class="count">(50)</span> ·
+    Mongol Conquests <span class="count">(41)</span> ·
+    Crusades <span class="count">(28)</span> ·
+    Thirty Years' War <span class="count">(26)</span> ·
+    Seven Years' War <span class="count">(22)</span> ·
+    Napoleonic Wars <span class="count">(19)</span> ·
+    Punic Wars <span class="count">(18)</span> ·
+    American Revolution <span class="count">(18)</span> ·
+    Peloponnesian War <span class="count">(17)</span> ·
+    Vietnam War <span class="count">(14)</span> ·
+    American Civil War <span class="count">(11)</span> ·
+    Korean War <span class="count">(10)</span>
+  </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">5 · Dynasties &amp; Empires (16 views)</div>
+  <div class="topic-group-list">
+    British Empire <span class="count">(51)</span> ·
+    Ottoman Empire <span class="count">(45)</span> ·
+    Ancient Egyptian Empire <span class="count">(33)</span> ·
+    Russian Empire / USSR <span class="count">(33)</span> ·
+    Empire of Japan <span class="count">(32)</span> ·
+    Mongol Empire <span class="count">(29)</span> ·
+    Persian Empire <span class="count">(28)</span> ·
+    Roman Empire <span class="count">(28)</span> ·
+    Alexander's Empire <span class="count">(27)</span> ·
+    Byzantine Empire <span class="count">(25)</span> ·
+    Arab Caliphate <span class="count">(25)</span> ·
+    Qing Dynasty <span class="count">(25)</span> ·
+    Tang Dynasty <span class="count">(18)</span> ·
+    Spanish Empire <span class="count">(18)</span> ·
+    Akkadian Empire <span class="count">(12)</span> ·
+    Mughal Empire <span class="count">(9)</span>
+  </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">6 · Topics</div>
+  <div class="topic-group-list">
+    Science &amp; Technology <span class="count">(106)</span> ·
+    World Religions <span class="count">(73)</span> ·
+    Art History <span class="count">(50)</span> ·
+    History of Medicine <span class="count">(48)</span> ·
+    Trade &amp; Globalization <span class="count">(32)</span> ·
+    Music History <span class="count">(26)</span> ·
+    Space Exploration <span class="count">(11)</span>
+  </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">7 · Major Events</div>
+  <div class="topic-group-list">
+    Revolutions <span class="count">(37)</span> ·
+    Age of Exploration <span class="count">(35)</span> ·
+    Major Disasters <span class="count">(24)</span> ·
+    Pandemics &amp; Epidemics <span class="count">(22)</span>
+  </div>
+</div>
+
+<div class="topic-group">
+  <div class="topic-group-title">8 · Biographies (in progress)</div>
+  <div class="topic-group-list">
+    <span class="pending">
+      Confucius · Alexander the Great · Qin Shi Huang · Julius Caesar · Genghis Khan · Christopher Columbus · Napoleon Bonaparte · Albert Einstein
+    </span>
+  </div>
+</div>
+
+<p>
+  The biographies section is the next major area under development: each figure will receive a curated personal timeline plus references back into the political, military, and cultural tracks they shaped.
+</p>
+
+<h2 id="reading-pages"><span class="lead-num">§5</span>Reading Pages</h2>
+
+<p>
+  In addition to the interactive canvas, every view with substantial content has a corresponding <strong>reading page</strong> — a long-form, scrollable, magazine-style version of the same data. The reading page lists every event in chronological order, with image, full description, related axes, Wikipedia link, and a "📍 locate on main timeline" link that will jump you back to the canvas at the exact moment of that event.
+</p>
+
+<p>
+  Each reading page also embeds the live interactive canvas at the top, scoped to that view's tracks. So you can scroll-read the events and, if a particular era catches your attention, scroll up and explore that era visually without leaving the page.
+</p>
+
+<p>
+  Currently <strong>79 reading pages</strong> are generated, covering all eight sections except the in-progress biographies. The full list lives at <a href="views.html">views.html — the Reading Index</a>, also accessible from the main canvas via the prominent banner at the top of the section menu.
+</p>
+
+<div class="cta-block">
+  <strong>Browse all topic timelines →</strong><br>
+  <a class="cta-btn" href="views.html">📖 Open Reading Index</a>
+</div>
+
+<h2 id="bilingual"><span class="lead-num">§6</span>Bilingual Content</h2>
+
+<p>
+  Every event description is written in <strong>both Traditional Chinese and English</strong>. The two versions are not machine translations of each other; they are written separately, and each tries to use idiomatic phrasing in its own language. Place names, person names, and historical terms follow each language's standard transliteration (e.g., 凱撒 / Caesar, 鄂圖曼 / Ottoman).
+</p>
+
+<p>
+  The interactive canvas has a single <strong>中 / EN</strong> toggle in the header. Clicking it swaps the entire UI and every event description between languages. The reading pages have the same toggle in their top-right corner. The choice is remembered across pages and visits via your browser's local storage, and is also reflected in the URL (<code>?lang=zh</code> or <code>?lang=en</code>) so you can share a link in the language the recipient prefers.
+</p>
+
+<p>
+  When you switch languages, the <code>&lt;html lang&gt;</code> attribute updates accordingly, telling search engines and accessibility tools which language they're reading. Reading pages additionally publish hreflang annotations in the sitemap, so search engines surface the right-language version to the right audience.
+</p>
+
+<h2 id="features"><span class="lead-num">§7</span>Interactive Features</h2>
+
+<p>
+  Beyond pan-and-zoom, the main canvas has a generous set of features for navigating the dataset. None of them require an account; everything works in your browser.
+</p>
+
+<table class="feature-table">
+  <thead>
+    <tr><th>Feature</th><th>What it does</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Search</td><td>Type any name, place, or year. Instant dropdown of matches; clicking jumps the canvas to that event with the popup open. Searches both Chinese and English titles.</td></tr>
+    <tr><td>Filter by category</td><td>Toggle categories on or off (war, science, religion, culture, politics, etc.) to focus on one kind of event.</td></tr>
+    <tr><td>Era jumps</td><td>Twelve era buttons across the bottom — Big Bang, Earth &amp; Life, Dinosaurs, Human Origins, Prehistory, Antiquity, Classical, Medieval, Renaissance, Industrial, Modern — instantly zoom to that period.</td></tr>
+    <tr><td>View selector</td><td>The "Events" button in the header opens a categorized list of all 88 views. The Reading Index banner at the top opens the long-form text version of every topic.</td></tr>
+    <tr><td>Solo &amp; toggle on legend</td><td>Single-click any axis label in the right-hand legend to hide/show that track; double-click to enter solo mode (only that track stays at full opacity, others dim). Click an axis-group title to toggle the whole group.</td></tr>
+    <tr><td>Click-to-fade on canvas labels</td><td>Click an axis label on the canvas itself (the sticky labels on the left edge) to fade just that track — useful when something below the label is hidden by it.</td></tr>
+    <tr><td>Pill expand</td><td>Some pills (like the geological eons) contain nested child pills — click the parent to expand them.</td></tr>
+    <tr><td>Cross-reference popups</td><td>The hollow circles drawn on remote tracks indicate that an event from elsewhere references this track at this moment. Click the circle and the originating event's popup opens.</td></tr>
+    <tr><td>URL deep-linking</td><td>Every view has a permalink: <code>/?v=ww2</code>, <code>/?v=japan</code>, etc. Add <code>&amp;year=1945</code> to land at a specific year. Add <code>&amp;lang=en</code> to force a language. Bookmarkable, shareable.</td></tr>
+    <tr><td>Mobile &amp; touch</td><td>Pinch to zoom; one-finger drag to pan; tap for popups. The canvas reflows for smaller screens; reading pages are mobile-first.</td></tr>
+    <tr><td>Auto-update</td><td>If you leave the tab open and come back later, the page silently checks for new data and reloads itself if there's been an update. You'll always be looking at the latest events.</td></tr>
+    <tr><td>Era band overlay</td><td>Soft horizontal color bands behind the tracks indicate named historical eras (Renaissance, Enlightenment, Industrial Age) so you have a visual at-a-glance sense of "where in history" any vertical slice falls.</td></tr>
+    <tr><td>Future zone</td><td>The 500-year band past the present is rendered with a gentle hatch, marking it as the "not yet written" portion of the timeline. Some events are projected here (e.g., known asteroid flybys, scheduled space missions).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="editorial"><span class="lead-num">§8</span>Editorial Approach</h2>
+
+<p>
+  The site is one author's curatorial project: every event is hand-selected, every description is hand-written. There is no committee and no automated content generation; the writing voice is consistent because one person did all of it.
+</p>
+
+<p>
+  Selection follows three rules: <strong>(1)</strong> if a topic appears in any standard secondary-school or university-level world-history textbook, it should appear here; <strong>(2)</strong> events that link two or more tracks (cross-civilization influence, cause-and-effect across continents) take priority over events that stay within a single thread; <strong>(3)</strong> within a single track, the rhythm should feel proportional — no decade overflowing while the next century is empty. The result is a deliberate, opinionated dataset rather than an exhaustive one.
+</p>
+
+<p>
+  Description writing follows two more rules: <strong>(4)</strong> each description should answer "who, where, what, and why does it matter," in roughly that order, in 50&ndash;200 words; <strong>(5)</strong> the phrasing should be writeable as a paragraph, not as a bullet list — readers should be able to actually read the event, not skim a bullet.
+</p>
+
+<p>
+  Where the curatorial decisions become harder — for instance, which events from a country's full canvas history to include on its dedicated reading page when the canvas has 250+ candidates — we use a <strong>large-language-model assist</strong> to score topical relevance. The LLM does not write any of the prose. It does not select novel events. It only makes inclusion judgments on a candidate set the curator has already approved, by reading the event's pre-written description and answering "would a reader expecting the topic of this page expect to see this event?" The judgments are stored in the dataset (<code>relevant_views</code>) and reviewed; clear errors are corrected with manual overrides. This kept the reading pages focused without restricting the canvas itself.
+</p>
+
+<h2 id="sources"><span class="lead-num">§9</span>Sources &amp; Attribution</h2>
+
+<p>
+  The factual scaffolding for events comes primarily from <strong>Wikipedia</strong> in both Chinese and English. Each event has a Wikipedia link in each language, surfaced in its popup and on its reading-page entry. Where Wikipedia disagrees with itself across language editions (which it does, for many topics), we cross-check against published historical surveys before deciding the version we tell.
+</p>
+
+<p>
+  Images come almost entirely from <strong>Wikimedia Commons</strong>, the free-media repository sister-site to Wikipedia. Every Commons image we display has been resolved through the Commons API to obtain its author of record, the license under which it is shared (Public Domain, CC0, CC&nbsp;BY, CC&nbsp;BY-SA, etc.), and a direct link to the file's Commons page. This metadata is shown beneath every image on every reading page, in the format:
+</p>
+
+<div class="callout">
+  <strong>Image:</strong> [author] · [license short name] · <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>
+</div>
+
+<p>
+  A small minority of images come from <strong>NASA</strong>, which produces them as part of its public mission and releases them into the public domain. NASA images are individually credited where used.
+</p>
+
+<p>
+  We do not host or rehost images on our own infrastructure. Every image is hot-linked to its original Commons (or NASA) URL. This means the image you see is the same image you would see by visiting the source page, and that any later edits, corrections, or takedowns on the source side propagate to us automatically.
+</p>
+
+<p>
+  Recommended-reading book references use Amazon's product pages. The book and its ASIN are stored alongside the event description so we can show the actual title an author. We do not display book covers or scrape any content from Amazon; the link simply leads to the Amazon product page where the reader can decide whether to buy. See the <a href="#affiliate">affiliate disclosure</a> below for what happens when you click through.
+</p>
+
+<p>
+  Event prose itself — the 50- to 200-word descriptions in Chinese and English — is original editorial work, written by Cosmic History Timeline. It is informed by Wikipedia and other published sources, but it is not a translation, copy, or close paraphrase of any one of them. Reuse of our event descriptions is governed by the copyright section below.
+</p>
+
+<h2 id="design"><span class="lead-num">§10</span>Design Philosophy</h2>
+
+<p>
+  The site is built as a <strong>single-page application</strong> with vanilla JavaScript and the HTML5 Canvas API. No frontend framework. No bundler. No backend server. No database. The entire dataset is one JSON file (<code>events.json</code>) loaded once at page open; everything subsequently happens in your browser. This deliberate simplicity has consequences:
+</p>
+
+<ul>
+  <li><strong>Fast to load.</strong> No code-splitting, no lazy-loaded modules, no waterfall of API calls. The first paint is the canvas drawing; the second is the events appearing.</li>
+  <li><strong>Free to host.</strong> Static files only — they live on Cloudflare Pages, which serves them globally at no cost.</li>
+  <li><strong>Easy to fork.</strong> The whole site is small enough to read in an evening. If you wanted to make a similar site for a different domain (history of mathematics, history of music, history of one country in detail), the codebase is small enough to start from.</li>
+  <li><strong>Open-data-shaped.</strong> Every event is a JSON object with the same fields. You could write your own scripts against it.</li>
+  <li><strong>Resilient.</strong> If the JavaScript fails for any reason — old browser, blocked script, network glitch — the reading pages still work as plain HTML. The interactive canvas is an enhancement layered on top of readable text.</li>
+</ul>
+
+<p>
+  We use no analytics that follow you across sites, no behavioral tracking pixels, no fingerprinting. The only third-party JavaScript on the page is Google AdSense — a single ad slot at the bottom of the canvas, and one or two slots on each reading page. AdSense sets its own cookies, which is disclosed in the privacy policy and discussed in the next section.
+</p>
+
+<h2 id="privacy"><span class="lead-num">§11</span>Privacy</h2>
+
+<p>
+  We do not collect personal information. We do not require an account. We do not use server-side analytics; there is no server-side at all.
+</p>
+
+<p>
+  Your <strong>language preference</strong> (Chinese or English) and any local edits you make using the optional editor (a separate page) are stored in your browser's <code>localStorage</code>. They never leave your device.
+</p>
+
+<p>
+  This site displays Google AdSense ads. AdSense may set <strong>third-party cookies</strong> for advertising purposes, including personalization based on your prior browsing if you have allowed Google to do so on other sites. You can review and manage Google's ad personalization settings in your <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google account ad settings</a>. EEA, UK, California, and other regional rights are explained in our full <a href="privacy-policy.html">Privacy Policy</a>.
+</p>
+
+<h2 id="affiliate"><span class="lead-num">§12</span>Affiliate Disclosure</h2>
+
+<p>
+  Some "further reading" links lead to Amazon product pages and include our Amazon Associates affiliate identifier. If you click such a link and subsequently make a purchase on Amazon, we earn a small referral fee at no extra cost to you. The presence or absence of an affiliate identifier has no influence on our choice of book; books are selected on editorial merit.
+</p>
+
+<p>
+  We never receive payment, discount, or any other consideration from any author, publisher, or vendor for inclusion. No book has ever been added to the recommendation list because of a paid relationship.
+</p>
+
+<h2 id="copyright"><span class="lead-num">§13</span>Copyright</h2>
+
+<p>
+  <strong>Original event descriptions, the editorial selection of events, the organization of events into views and sections, the canvas layout system, and the source code</strong> are &copy; 2025&ndash;2026 Cosmic History Timeline. All rights reserved.
+</p>
+
+<p>
+  <strong>Images displayed on this site</strong> are the work of their respective creators and are reproduced under the licenses indicated beneath each image. Most are Wikimedia Commons content available under one of the Creative Commons licenses or as Public Domain. Reuse of these images is governed by their original license, not by ours; click through to the Commons file page to see exact terms.
+</p>
+
+<p>
+  <strong>Wikipedia text</strong> linked from event popups is the work of its respective contributors and is licensed under <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Linking is permitted; reproduction is governed by Wikipedia's terms.
+</p>
+
+<p>
+  If you wish to reuse our original prose (event descriptions in Chinese or English) for non-commercial educational or research use, you may do so with attribution back to this site. For commercial use, please reach out via the contact link below.
+</p>
+
+<h2 id="tech"><span class="lead-num">§14</span>Technology</h2>
+
+<p>
+  For curious readers and prospective contributors:
+</p>
+
+<ul>
+  <li><strong>Frontend:</strong> Hand-written HTML, CSS, and JavaScript. No React, no Vue, no jQuery. The canvas rendering uses the standard HTML5 2D context.</li>
+  <li><strong>Data:</strong> A single <code>events.json</code> file with sections for axes, views, view groups, eras, era buttons, filter categories, and events. Loaded once on page open.</li>
+  <li><strong>Reading pages:</strong> Generated by a Python script (<code>generate-pages.py</code>) that consumes <code>events.json</code> and emits one HTML file per view. Re-runs in about ten seconds; output is checked into the same git repository as the canvas.</li>
+  <li><strong>Image attribution:</strong> Fetched once via the Wikimedia Commons API (<code>fetch-image-credits.py</code>) and cached into <code>events.json</code> alongside each event. Re-fetchable on demand.</li>
+  <li><strong>Topic relevance:</strong> Where reading pages need a tighter event selection than the canvas, a separate Python script (<code>fetch-relevance.py</code>) calls a small language model with each event's existing description and the topic of the target page, and stores the per-event answer in <code>events.json</code> as <code>relevant_views</code>.</li>
+  <li><strong>Sitemap:</strong> Auto-generated by the same <code>generate-pages.py</code> with <code>hreflang</code> annotations for the bilingual reading pages.</li>
+  <li><strong>Hosting:</strong> Cloudflare Pages, which serves the static files from a global CDN.</li>
+  <li><strong>Cache strategy:</strong> Aggressive on the canvas page (so revisits are instant), with an active "is there a new version?" check on tab focus, and a forced revalidation on the editor page.</li>
+  <li><strong>Editor:</strong> A separate page (<code>indexedit.html</code>) that mirrors the reader page but adds inline-edit affordances. The editor exports updates as JSON which can be merged back into the dataset via Python patch scripts.</li>
+</ul>
+
+<h2 id="support"><span class="lead-num">§15</span>Support &amp; Contact</h2>
+
+<p>
+  This site is maintained as a labor of love. If you have a correction (a wrong year, a missing event, a mistranslation), a suggestion (a country we should add, a topic we're missing), or just a question, the best place to reach us is via our Ko-fi page:
+</p>
+
+<div class="cta-block">
+  <strong>Get in touch — or support the project →</strong><br>
+  <a class="cta-btn" href="https://ko-fi.com/universetimeline" target="_blank" rel="noopener">☕ Ko-fi page</a>
+</div>
+
+<p>
+  You can leave a comment, send a message, or, if you've found the site useful, leave a small tip. Tips help cover hosting and the time spent on data curation; everything beyond that goes back into adding more content. There is no commercial entity behind this; just one person and a long, slow weekend project.
+</p>
+
+<p>
+  Thank you for reading, and welcome to thirteen-point-eight billion years of history on a single canvas.
+</p>
+
+<footer>
+  Cosmic History Timeline · 13.8 billion years on one canvas ·
+  <a href="index.html">Main Timeline</a> ·
+  <a href="views.html">Reading Index</a> ·
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <br>
+  &copy; 2025&ndash;2026 Cosmic History Timeline. All rights reserved. Original editorial content. Images: Wikimedia Commons (per-image author and license shown). Wikipedia text rights belong to original contributors.
+</footer>
+
 </div>
 </body>
 </html>
