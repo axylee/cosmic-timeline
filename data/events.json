@@ -3817,7 +3817,9 @@
       ],
       "label_en": "Cosmic History",
       "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
+      "group": "nature-cosmos",
+      "intro_zh": "138 億年前，無中生有的一聲巨響。從第一縷光線到星系碰撞，宇宙用暴力重塑自己。",
+      "intro_en": "138 billion years: a bang that made nothing into everything. From the first light to galactic collisions, the cosmos rebuilt itself through violence."
     },
     {
       "id": "nat-earth",
@@ -3829,7 +3831,9 @@
       ],
       "label_en": "Earth & Life",
       "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
+      "group": "nature-cosmos",
+      "intro_zh": "四十億年前，岩漿冷卻，海洋浮現，化學變成了生命。從此以後，地球再也不是死的。",
+      "intro_en": "Four billion years ago, magma cooled, oceans formed, chemistry became life. The planet was never inert again."
     },
     {
       "id": "nat-human",
@@ -3840,7 +3844,9 @@
       ],
       "label_en": "Human Evolution",
       "category_en": "Nature & Universe",
-      "group": "nature-cosmos"
+      "group": "nature-cosmos",
+      "intro_zh": "七百萬年前,一隻猿分開了兩條演化之路。之後的故事是骨頭、火焰、遷徙——以及一個物種如何征服了整個世界。",
+      "intro_en": "Seven million years ago, an ape split into two evolutionary paths. What followed was bones, fire, migration—and how one species came to dominate the world."
     },
     {
       "id": "civ-all",
@@ -3861,7 +3867,9 @@
       ],
       "label_en": "All Civilizations",
       "category_en": "Civilizations",
-      "group": "civilization"
+      "group": "civilization",
+      "intro_zh": "人類在非洲誕生,遍佈各大陸。然後他們停下來,在肥沃的土地上蓋起城市、發明文字、創造了我們現在的文明。",
+      "intro_en": "Humanity scattered from Africa to every continent. Then they stopped, built cities on fertile ground, and invented the foundations of everything we know."
     },
     {
       "id": "civ-east",
@@ -3877,7 +3885,9 @@
       ],
       "label_en": "Eastern Civilizations",
       "category_en": "Civilizations",
-      "group": "civilization"
+      "group": "civilization",
+      "intro_zh": "人類文明在兩河流域和黃河谷地同時亮起。一邊發明了楔形文字，一邊正在築造金字塔——東方世界從此改寫了人類的故事。",
+      "intro_en": "Civilization ignited in two river valleys at once. Cuneiform and hieroglyphics, city-states and dynasties — the East rewrote what humanity could build."
     },
     {
       "id": "civ-west",
@@ -3889,7 +3899,9 @@
       ],
       "label_en": "Western Civilizations",
       "category_en": "Civilizations",
-      "group": "civilization"
+      "group": "civilization",
+      "intro_zh": "古希臘點燃火焰，羅馬帝國火焰蔓延全境，西羅馬帝國在476年灰飛煙滅，留下一個疑問：文明會永遠消亡嗎？查理曼和神聖羅馬帝國的答案是不——它們不斷重生。",
+      "intro_en": "Greece lit the fire, Rome spread it across continents, then the Western Empire collapsed in 476 and vanished into ash. Charlemagne and the Holy Romans offered an answer: it would rise again and again."
     },
     {
       "id": "civ-africa",
@@ -3900,7 +3912,9 @@
       ],
       "label_en": "African Civilizations",
       "category_en": "Civilizations",
-      "group": "civilization"
+      "group": "civilization",
+      "intro_zh": "人類在非洲誕生,然後建立了金字塔、帝國和鐵器文明。三千年的埃及、麥羅埃、阿克蘇姆,每一個都改變了世界。",
+      "intro_en": "Humanity was born in Africa, then built pyramids, empires, and iron-working civilizations. Three thousand years of Egypt, Meroë, Aksumite—each one changed the world."
     },
     {
       "id": "civ-americas",
@@ -3911,7 +3925,9 @@
       ],
       "label_en": "Americas",
       "category_en": "Civilizations",
-      "group": "civilization"
+      "group": "civilization",
+      "intro_zh": "獵人跨越冰橋來到新大陸,建立了金字塔、帝國和文明。直到哥倫布降臨,一切都在三十年內崩毀。",
+      "intro_en": "Hunters crossed the ice bridge into a new world and built pyramids, empires, civilizations. Then Columbus arrived, and everything collapsed in thirty years."
     },
     {
       "id": "thm-religion",
@@ -3938,7 +3954,9 @@
         "hinduism",
         "buddhism",
         "taoism"
-      ]
+      ],
+      "intro_zh": "五千年間,四大信仰從零星的啟示發展成改造世界的力量。從亞伯拉罕到釋迦,從摩西到老子,一切都在重新定義人類的靈魂。",
+      "intro_en": "Five thousand years of revelation, then dominion. Abraham, Moses, Buddha, Laozi — four traditions that started in fragments and remade what it means to believe."
     },
     {
       "id": "thm-science",
@@ -3963,7 +3981,9 @@
       ],
       "core_id_prefixes": [
         "sci-"
-      ]
+      ],
+      "intro_zh": "中國人用青銅打造了文明的骨架，用紙張、火藥和活字改寫了世界。從商代到啟蒙時代，科技的故事就是權力的故事。",
+      "intro_en": "The Chinese built civilization with bronze, rewrote the world with paper, gunpowder, and movable type. From the Shang dynasty to the Enlightenment, the story of science is the story of power."
     },
     {
       "id": "thm-trade",
@@ -3989,7 +4009,9 @@
       ],
       "core_event_ids": [
         "silk-road"
-      ]
+      ],
+      "intro_zh": "從絲綢之路到蘇伊士運河，人類用了兩千年來連接世界。每一條新航線都帶來了財富、帝國與血。",
+      "intro_en": "From the Silk Road to the Suez Canal: two millennia of humans stitching the world together. Each new trade route brought wealth, empire, and blood."
     },
     {
       "id": "thm-climate",
@@ -4000,7 +4022,9 @@
       ],
       "label_en": "Climate & Environment",
       "category_en": "Themes",
-      "group": "nature-cosmos"
+      "group": "nature-cosmos",
+      "intro_zh": "45億年前地球在混沌中誕生,液態水和生命隨之而來。從此,這顆星球的氣候就在搖晃,決定了每一個生物的命運。",
+      "intro_en": "Earth formed in chaos 4.5 billion years ago; oceans and life followed. Since then, the climate has never stopped shifting—and every creature has paid the price."
     },
     {
       "id": "nat-iceages",
@@ -4021,7 +4045,9 @@
         "quaternary-glaciation",
         "last-ice-age",
         "climate-holocene"
-      ]
+      ],
+      "intro_zh": "地球誕生時是一個熾熱的岩石，現在卻被冰雪籠罩了五次。每一次冰河期都改變了生命的規則，直到最後一次，複雜生命才得以爆發。",
+      "intro_en": "Earth emerged as molten rock and froze solid five times over. Each ice age rewrote the rules of life—until the last one broke them wide open."
     },
     {
       "id": "thm-migration",
@@ -4036,7 +4062,9 @@
       ],
       "label_en": "Human Migration",
       "category_en": "Themes",
-      "group": "nature-cosmos"
+      "group": "nature-cosmos",
+      "intro_zh": "七萬年前,人類踏出非洲大陸。之後的每一次遠航、每一次草原征服,都改寫了世界的版圖和命運。",
+      "intro_en": "Seventy thousand years ago, humans left Africa. Every subsequent voyage, every grassland conquest, remade the world's map and fate."
     },
     {
       "id": "reg-mideast",
@@ -4060,7 +4088,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1700,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "帝國衰落,石油崛起。三百年間,中東從鄂圖曼和薩法維的廢墟裡站起來,卻被英俄瓜分、被英國石油牽著走。",
+      "intro_en": "Empires fell, oil rose. Three centuries that saw the Middle East rebuild from Ottoman and Safavid ruins only to be carved up by Britain and Russia, then tethered to petroleum."
     },
     {
       "id": "reg-eastasia",
@@ -4080,7 +4110,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": -200,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "漢武帝揮軍西域，司馬遷用筆記錄歷史。兩千年後，東亞的帝國、詩人、征服者們仍在塑造這個世界。",
+      "intro_en": "Emperor Wu pushed west; Sima Qian put it all in writing. Two millennia of empires, poets, and conquerors that still shape the world."
     },
     {
       "id": "reg-europe",
@@ -4114,7 +4146,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 800,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從基輔羅斯的初現到現代歐洲的成形，1200年間帝國興衰、瘟疫肆虐、火藥改寫戰場。文藝復興點燃思想之光，印刷術將知識散向四方。",
+      "intro_en": "From Kievan Rus to the modern continent: 1200 years of empires, plague, and powder. The Renaissance ignited the mind. The printing press scattered knowledge everywhere."
     },
     {
       "id": "reg-southasia",
@@ -4132,7 +4166,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1700,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "英國人來了,用商人的帳本征服了次大陸。三個世紀後,南亞還在清算那場掠奪留下的傷痛。",
+      "intro_en": "The British arrived as merchants and conquered a continent with ledgers. Three centuries later, South Asia is still reckoning with what that plunder left behind."
     },
     {
       "id": "reg-africa",
@@ -4158,7 +4194,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1500,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "五百年來,非洲被瓜分、掠奪、分裂。從阿爾及利亞到盧旺達,這塊大陸付出鮮血換來獨立,卻從未真正安寧。",
+      "intro_en": "Five centuries of invasion, extraction, division. From Algeria to Rwanda, Africa bought independence in blood—but never found peace."
     },
     {
       "id": "reg-americas",
@@ -4182,7 +4220,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1492,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "哥倫布登陸到特朗普就職，美洲經歷了五個世紀的征服、革命與帝國擴張。每一次劇變都重塑了這片大陸，從阿茲特克帝國的灰燼到現代超級大國的誕生。",
+      "intro_en": "Columbus to Trump: five centuries of conquest, revolution, and empire. The Americas rose from indigenous collapse to global dominance, remaking itself with each upheaval."
     },
     {
       "id": "reg-oceania",
@@ -4198,7 +4238,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1700,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "一個失放流刑地成了帝國。從第一艦隊的囚犯到澳洲聯邦，再到廢除白澳政策，大洋洲在三百年間改寫了種族與民族的定義。",
+      "intro_en": "A penal dumping ground became an empire. From convict colonies to federation to dismantling the White Australia Policy, Oceania spent three centuries rewriting who belonged."
     },
     {
       "id": "reg-centralas",
@@ -4216,7 +4258,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1700,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "三百年來,中亞從未屬於自己。俄羅斯、蘇聯、美國輪流統治,直到今天它們仍在爭奪這片大地。",
+      "intro_en": "For three centuries, Central Asia belonged to everyone but itself. Russia, the Soviet Union, America—each empire came, conquered, and left the region forever changed."
     },
     {
       "id": "reg-sea",
@@ -4239,7 +4283,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1500,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "五百年間，殖民者來了又走，火山灰降落，獨立者奪回槍桿子。東南亞在戰火、革命與金融危機中，一次次把自己重新發明。",
+      "intro_en": "Colonizers came and left; volcanoes erupted; independence fighters seized the gun. In five centuries, Southeast Asia remade itself through war, revolution, and financial ruin."
     },
     {
       "id": "reg-polar",
@@ -4254,7 +4300,9 @@
       "category_en": "Regions",
       "group": "countries",
       "yearStart": 1500,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "五百年來,人類執著於抵達極地。卻在發現那裡其實在崩壞後,才明白自己也在陪著崩壞。",
+      "intro_en": "Five centuries of obsession with reaching the poles. Only to discover, too late, that the poles were already collapsing—and taking the world with them."
     },
     {
       "id": "china",
@@ -4276,7 +4324,9 @@
         "cold-war"
       ],
       "yearStart": -3000,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "黃帝到現代,5000年的朝代興衰、戰亂分裂、思想革命。每一次文明的躍進,都留下了刀鋒與墨跡。",
+      "intro_en": "From the Yellow Emperor to today. Five millennia of dynasties, wars, philosophies — each epoch carved into bronze, bone, and paper before it burned."
     },
     {
       "id": "dinosaurs",
@@ -4291,7 +4341,9 @@
         "climate"
       ],
       "yearStart": -260000000,
-      "yearEnd": -60000000
+      "yearEnd": -60000000,
+      "intro_zh": "二疊紀末一場浩劫殺死了地球上的大多數生命，倖存者中有一群小型蜥蜴。兩億三千萬年後，牠們的子孫主宰了整個星球，直到六千萬年前的隕石終結了一切。",
+      "intro_en": "A cataclysm at the Permian's end wiped out most life on Earth; among the survivors, a clutch of small reptiles. Two hundred million years later, their descendants ruled the planet—until a space rock ended it all."
     },
     {
       "id": "ancient-civ",
@@ -4318,7 +4370,9 @@
         "cold-war"
       ],
       "yearStart": -5000,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "五千年前南島民族在此起源，他們的語言最終傳遍太平洋。此後台灣經歷了荷蘭、鄭氏、清朝、日本的統治，直到被捲入 20 世紀的戰爭漩渦。",
+      "intro_en": "Five millennia ago Austronesian seafarers launched from these shores and scattered their language across the Pacific. Taiwan then passed through the hands of the Dutch, the Ming-Zheng, the Qing, and the Japanese—until the 20th century's wars caught it entirely."
     },
     {
       "id": "japan",
@@ -4337,7 +4391,9 @@
         "cold-war"
       ],
       "yearStart": -2000,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從彌生人的稻田到明治的槍砲。兩千年間,日本從邊陲小島躍成帝國,再從廢墟爬起成為奇蹟。",
+      "intro_en": "From Yayoi rice farmers to Meiji guns. Two millennia saw Japan leap from island backwater to empire, then claw back from ashes to miracle."
     },
     {
       "id": "korea",
@@ -4355,7 +4411,9 @@
         "cross"
       ],
       "yearStart": -2333,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從檀君建國到板門店停火，韓國走過 4000 年的朝代興衰。一個半島，被瓜分、被占領、被分裂成兩個敵國。",
+      "intro_en": "From Dangun's mythic founding to the Panmunjom armistice, Korea traversed 4,000 years of dynasties and upheaval. One peninsula, carved up, occupied, split in two."
     },
     {
       "id": "india",
@@ -4374,7 +4432,9 @@
         "cold-war"
       ],
       "yearStart": -3300,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從吠陀聖火到蒙兀兒的尖塔,印度寫了一部5000年的帝國史。每個朝代都留下了神廟、經典和一個新信仰。",
+      "intro_en": "From Vedic fire to Mughal spires: India's 5,000-year empire of dynasties, doctrines, and gods. Each age left temples, texts, and a transformed faith."
     },
     {
       "id": "usa",
@@ -4398,7 +4458,9 @@
         "cross"
       ],
       "yearStart": 1492,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從哥倫布的船隊到21世紀的華盛頓。534年,13個殖民地變成全球超強,一次內戰撕裂了它,工業與戰爭把它推向世界。",
+      "intro_en": "From Columbus's ships to twenty-first-century Washington. 534 years, 13 colonies becoming a superpower, one civil war tearing it apart, industry and war pushing it onto the world stage."
     },
     {
       "id": "uk",
@@ -4425,7 +4487,9 @@
         "korean-war"
       ],
       "yearStart": -3000,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從大憲章到工業革命,英國把中世紀的城堡改成了現代世界的工廠。三千年的權力遊戲,一個島國學會了統治世界。",
+      "intro_en": "From Magna Carta to the Industrial Revolution, Britain turned medieval castles into the factories of the modern world. Three millennia of power, one island that learned to rule it all."
     },
     {
       "id": "france",
@@ -4448,7 +4512,9 @@
         "cold-war"
       ],
       "yearStart": -600,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "查理曼到拿破崙,法國重塑了歐洲三次。大革命那一槍響起,整個舊世界就開始崩裂。",
+      "intro_en": "From Charlemagne to Napoleon, France remade Europe three times over. When the Revolution's gun fired in 1789, the old world began to crack."
     },
     {
       "id": "germany",
@@ -4470,7 +4536,9 @@
         "cold-war"
       ],
       "yearStart": -100,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從查理曼到希特勒，德國反覆重塑歐洲。每次崛起都改變了大陸的命運，也付出了血的代價。",
+      "intro_en": "From Charlemagne to Hitler, Germany repeatedly remade Europe. Each rise reset the continent's fate—and exacted a terrible price."
     },
     {
       "id": "russia",
@@ -4497,7 +4565,9 @@
         "cold-war"
       ],
       "yearStart": 862,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從基輔羅斯的光芒到蘇聯的瓦解。一千多年裡,俄羅斯掌控了歐亞大陸,也被它吞沒過。",
+      "intro_en": "From Kievan Rus to Soviet collapse. Over a millennium, Russia conquered half the world—then watched it slip away."
     },
     {
       "id": "egypt",
@@ -4527,7 +4597,9 @@
         "cold-war"
       ],
       "yearStart": -3100,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "尼羅河谷孕育了人類最古老的文明。從金字塔到托勒密，五千年的埃及見證了帝國的榮耀與衰落。",
+      "intro_en": "The Nile Valley birthed humanity's most enduring civilization. From pyramids to pharaohs, five millennia of Egypt remade the ancient world—then watched empires eclipse it."
     },
     {
       "id": "turkey",
@@ -4555,7 +4627,9 @@
         "korean-war"
       ],
       "yearStart": 1000,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "君士坦丁堡從基督教堡壘變成伊斯蘭帝國的首都。此後八百年，鄂圖曼帝國重塑了整個東地中海，直到歐洲瓜分了它的遺産。",
+      "intro_en": "Constantinople fell to the Ottomans and remade itself as an Islamic capital. For the next eight centuries the empire sprawled across three continents—until the West carved it up."
     },
     {
       "id": "iran",
@@ -4583,7 +4657,9 @@
         "cold-war"
       ],
       "yearStart": -3200,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從居魯士大帝到伊斯蘭革命。2500年,波斯帝國三度興衰,每次都重新定義了世界權力的面貌。",
+      "intro_en": "From Cyrus the Great to the Islamic Revolution. Twenty-five centuries of Persian empire rising and falling, each time reshaping how power worked."
     },
     {
       "id": "italy",
@@ -4609,7 +4685,9 @@
         "napoleonic-wars"
       ],
       "yearStart": -800,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "羅馬征服了地中海,然後分裂成千個碎片。從布匿戰爭的勝利到教宗國的統治,義大利花了 1000 年才再次團結。",
+      "intro_en": "Rome conquered the Mediterranean, then shattered into a thousand pieces. From Punic victory to papal rule, Italy spent a millennium finding itself again."
     },
     {
       "id": "greece",
@@ -4638,7 +4716,9 @@
         "cold-war"
       ],
       "yearStart": -3000,
-      "yearEnd": 2026
+      "yearEnd": 2026,
+      "intro_zh": "從米諾斯宮殿到帕德嫩神廟，再到民主雅典的衰落。三千年裡，希臘人發明了西方文明，也親眼看著它自我毀滅。",
+      "intro_en": "From Minoan palaces to the Parthenon, then the collapse of democratic Athens. Three millennia in which Greeks invented Western civilization, then watched it destroy itself."
     },
     {
       "id": "peloponnesian",
@@ -4653,7 +4733,9 @@
         "cross"
       ],
       "yearStart": -431,
-      "yearEnd": -404
+      "yearEnd": -404,
+      "intro_zh": "雅典與斯巴達的衝突引爆了希臘世界。27年的戰爭、瘟疫、背叛與慘敗,民主制度在西西里的沙灘上走向末日。",
+      "intro_en": "Athens and Sparta collided; all of Greece burned. Twenty-seven years of plague, treachery, and ruin—a democracy undone on a Sicilian beach."
     },
     {
       "id": "punic-wars",
@@ -4670,7 +4752,9 @@
         "cross"
       ],
       "yearStart": -264,
-      "yearEnd": -146
+      "yearEnd": -146,
+      "intro_zh": "羅馬與迦太基爭奪地中海三次開戰，每一場都更慘烈。到了第三次，迦太基不再存在。",
+      "intro_en": "Rome and Carthage fought three times for the Mediterranean; each war more brutal than the last. By the third, Carthage was gone."
     },
     {
       "id": "crusades",
@@ -4689,7 +4773,9 @@
         "cross"
       ],
       "yearStart": 1096,
-      "yearEnd": 1291
+      "yearEnd": 1291,
+      "intro_zh": "教宗一聲令下，歐洲貴族扶老攜幼奔向聖地。兩百年的廝殺後，十字軍一無所有，伊斯蘭世界反而更強大了。",
+      "intro_en": "A pope's call sent European nobles and peasants flooding toward the Holy Land. Two centuries of slaughter later, the Crusaders had nothing to show for it—and Islam emerged stronger."
     },
     {
       "id": "mongol-conquests",
@@ -4710,7 +4796,9 @@
         "cross"
       ],
       "yearStart": 1206,
-      "yearEnd": 1368
+      "yearEnd": 1368,
+      "intro_zh": "一個草原上的戰士統一了蒙古各部，然後用了 162 年征服了從中國到匈牙利的整個世界。到 1368 年他的帝國崩解時，地球上沒有任何地方倖免於他的鐵騎。",
+      "intro_en": "A steppe warrior unified the Mongol clans, then spent 162 years conquering everything from China to Hungary. By 1368, when his empire collapsed, nowhere on Earth had escaped his horsemen."
     },
     {
       "id": "thirty-years",
@@ -4729,7 +4817,9 @@
         "cross"
       ],
       "yearStart": 1618,
-      "yearEnd": 1648
+      "yearEnd": 1648,
+      "intro_zh": "一扇窗戶被砸碎,三十年的歐洲陷入火海。從布拉格到西班牙,宗教戰爭最後演變成權力爭奪,留下百萬具屍體和一張新地圖。",
+      "intro_en": "A window shattered in Prague; Europe burned for thirty years. From religious schism to ruthless power, the continent remade itself in blood and ashes."
     },
     {
       "id": "seven-years",
@@ -4749,7 +4839,9 @@
         "cross"
       ],
       "yearStart": 1756,
-      "yearEnd": 1763
+      "yearEnd": 1763,
+      "intro_zh": "普魯士國王腓特烈賭上全國,對法奧俄同時宣戰。七年後,他活著回來了,歐洲的權力版圖也徹底改變。",
+      "intro_en": "Frederick of Prussia gambled the state itself, fighting France, Austria, and Russia all at once. Seven years later he survived, and Europe's power map was redrawn forever."
     },
     {
       "id": "american-revolution",
@@ -4768,7 +4860,9 @@
         "cross"
       ],
       "yearStart": 1775,
-      "yearEnd": 1783
+      "yearEnd": 1783,
+      "intro_zh": "一聲槍響在列克星頓,十三個殖民地決定脫離英國。八年戰火,華盛頓的軍隊從谷鍛營的絕望翻身到約克鎮的勝利。",
+      "intro_en": "A shot fired at Lexington echoed across thirteen colonies. Eight years of war, Washington's ragged army rising from Valley Forge's despair to Yorktown's surrender."
     },
     {
       "id": "napoleonic",
@@ -4788,7 +4882,9 @@
         "cross"
       ],
       "yearStart": 1803,
-      "yearEnd": 1815
+      "yearEnd": 1815,
+      "intro_zh": "一個科西嘉小兵加冕自己為皇帝,用砲火重組了歐洲。從 Austerlitz 的勝利到莫斯科的灰燼,他贏遍天下,直到 Leipzig 的槍聲宣告了終局。",
+      "intro_en": "A Corsican gunner crowned himself emperor and remade Europe with artillery. From Austerlitz's triumph to Moscow's ashes, he conquered all—until Leipzig's cannons announced the end."
     },
     {
       "id": "american-civil",
@@ -4803,7 +4899,9 @@
         "europe"
       ],
       "yearStart": 1859,
-      "yearEnd": 1865
+      "yearEnd": 1865,
+      "intro_zh": "一個國家分裂成兩個敵人。620萬人死傷,奴隸制灰飛煙滅,但林肯沒活著看到和平。",
+      "intro_en": "A nation split in two. Six million casualties, slavery abolished, but Lincoln never saw the peace."
     },
     {
       "id": "ww1",
@@ -4829,7 +4927,9 @@
         "judaism"
       ],
       "yearStart": 1870,
-      "yearEnd": 1920
+      "yearEnd": 1920,
+      "intro_zh": "一場暗殺引爆了歐洲的火藥桶。十月革命推翻了沙皇，凡爾賽條約的屈辱埋下了下一場戰爭的種子。",
+      "intro_en": "An assassination lit Europe's powder keg. Revolution toppled the Tsar, and Versailles's humiliation seeded the next war."
     },
     {
       "id": "ww2",
@@ -4878,7 +4978,9 @@
         "cross"
       ],
       "yearStart": 1947,
-      "yearEnd": 1991
+      "yearEnd": 1991,
+      "intro_zh": "兩個超級大國瓜分了世界，用核武器互相威脅了 44 年。直到柏林圍牆倒塌，才發現冷戰早已無聲地輸給了歷史。",
+      "intro_en": "Two superpowers carved up the world and threatened each other with nuclear annihilation for 44 years. The Cold War ended not with a bang but with a wall crumbling into dust."
     },
     {
       "id": "korean-war",
@@ -4897,7 +4999,9 @@
         "cross"
       ],
       "yearStart": 1950,
-      "yearEnd": 1953
+      "yearEnd": 1953,
+      "intro_zh": "三年內,韓半島從分裂到更深的分裂。MacArthur 的大迂迴遇上中國的寒冬,美國夢碎在長津湖。",
+      "intro_en": "Three years that deepened a peninsula's divide. MacArthur's audacious landing met China's winter offensive, and American dominance froze at Chosin."
     },
     {
       "id": "vietnam-war",
@@ -4916,7 +5020,9 @@
         "cross"
       ],
       "yearStart": 1955,
-      "yearEnd": 1975
+      "yearEnd": 1975,
+      "intro_zh": "一場代理人戰爭,一個大國的執念。20 年,58 萬美軍喪生,200 萬越南人死去,西貢最終還是陷落了。",
+      "intro_en": "A proxy war, a superpower's obsession. Twenty years, 58,000 American dead, two million Vietnamese, and Saigon fell anyway."
     },
     {
       "id": "art-history",
@@ -4940,7 +5046,9 @@
       ],
       "core_id_prefixes": [
         "art-"
-      ]
+      ],
+      "intro_zh": "從山洞壁畫到數位藝術，三萬年的人類創意濃縮成 45 個時刻。每一次筆觸都改變了我們看世界的方式。",
+      "intro_en": "From cave paintings to digital art, 30,000 years of human creativity compressed into 45 moments. Each brushstroke rewired how we see."
     },
     {
       "id": "music-history",
@@ -4961,7 +5069,9 @@
       ],
       "core_id_prefixes": [
         "mus-"
-      ]
+      ],
+      "intro_zh": "從古琴到 TikTok，音樂每次革命都推翻上一個時代。莫札特、貓王、麥可傑克遜，都是他們年代的終結者。",
+      "intro_en": "From the guqin to TikTok, music's every revolution killed the era before it. Mozart, Elvis, Michael Jackson—each one was their age's executioner."
     },
     {
       "id": "medical",
@@ -4984,7 +5094,9 @@
       ],
       "core_id_prefixes": [
         "med-"
-      ]
+      ],
+      "intro_zh": "從甲骨文到 DNA 雙螺旋,中國古人用竹簡和銅器寫下了醫學的密碼。兩千多年裡,他們建構的知識體系還在治療今日的病人。",
+      "intro_en": "From oracle bones to the DNA double helix, ancient China wrote medicine's code in bamboo and bronze. Two millennia later, the knowledge they built still heals."
     },
     {
       "id": "space-exploration",
@@ -5006,7 +5118,9 @@
       "core_id_prefixes": [
         "exp-space-",
         "space-"
-      ]
+      ],
+      "intro_zh": "從地球到火星,從冥王星回頭看。人類用 84 年把手臂伸向宇宙的每個角落,也在這過程中改變了對自己的想像。",
+      "intro_en": "From Earth to Mars, from Pluto looking back. Humanity spent 84 years reaching into every corner of space—and rewrote its own story in the process."
     },
     {
       "id": "pandemics",
@@ -5035,7 +5149,9 @@
         "crs-015",
         "crs-019",
         "med-mrna-vaccines-2020"
-      ]
+      ],
+      "intro_zh": "從雅典瘟疫到 COVID。每一次大流行都改寫了世界,也都被遺忘了一次。",
+      "intro_en": "From the Plague of Athens to COVID. Every pandemic rewrote the world, then was forgotten."
     },
     {
       "id": "exploration",
@@ -5061,7 +5177,9 @@
       ],
       "core_id_prefixes": [
         "exp-"
-      ]
+      ],
+      "intro_zh": "葡萄牙人繞過非洲,西班牙人征服了帝國,然後極地探險家互相競賽死亡。四百年間,世界被繪製完成,但代價是帝國、失蹤的探險隊,和無數的屍體。",
+      "intro_en": "Portuguese sailors rounded Africa, Spanish conquistadors toppled empires, polar explorers raced each other to death. Four centuries of mapmaking paid in conquest, disappearance, and bodies in the ice."
     },
     {
       "id": "revolutions",
@@ -5084,7 +5202,9 @@
       ],
       "core_id_prefixes": [
         "rev-"
-      ]
+      ],
+      "intro_zh": "從牛頓的蘋果到達爾文的雀鳥，從工業烈火到巴黎街壘。386 年間，30 場革命顛覆了科學、政治和人類生活的根基。",
+      "intro_en": "From Newton's apple to Darwin's finches, from factory fires to Paris barricades. In 386 years, 30 revolutions overturned science, politics, and human life itself."
     },
     {
       "id": "disasters",
@@ -5108,7 +5228,9 @@
       ],
       "core_id_prefixes": [
         "dst-"
-      ]
+      ],
+      "intro_zh": "從陝西地震到澳洲野火，人類在四百年間一再被自然擊倒。每場災難都改變了某個地方，也都被下一場災難遺忘了。",
+      "intro_en": "From Shaanxi to Australia, nature has hammered humanity relentlessly across four centuries. Each catastrophe remade a corner of the world, then faded when the next one struck."
     },
     {
       "id": "akkadian",
@@ -5124,7 +5246,9 @@
         "egypt"
       ],
       "yearStart": -2400,
-      "yearEnd": -1900
+      "yearEnd": -1900,
+      "intro_zh": "薩貢一世從侍臣到帝國之主。180 年間,阿卡德人用刀劍和文字征服了兩河世界,也用一場乾旱和蠻族入侵失去了一切。",
+      "intro_en": "Sargon rose from cupbearer to empire-builder. For 180 years the Akkadians ruled Mesopotamia with sword and script, until drought and invasion erased them."
     },
     {
       "id": "ancient-egypt-empire",
@@ -5141,7 +5265,9 @@
         "greece"
       ],
       "yearStart": -3100,
-      "yearEnd": 50
+      "yearEnd": 50,
+      "intro_zh": "一個蘇丹農民統一了上下埃及，象形文字應運而生。三千年之後，羅馬人接管了尼羅河。",
+      "intro_en": "A Sudanese farmer unified Upper and Lower Egypt. Three millennia later, Rome took the Nile."
     },
     {
       "id": "persian-empire",
@@ -5158,7 +5284,9 @@
         "greece"
       ],
       "yearStart": -559,
-      "yearEnd": 700
+      "yearEnd": 700,
+      "intro_zh": "居魯士大帝創建了有史以來最龐大的帝國，把波斯從邊陲變成了中東的心臟。千年間三個朝代興衰更替，直到最後被阿拉伯人的劍風刮平。",
+      "intro_en": "Cyrus the Great built the ancient world's largest empire and remade Persia from periphery to centre. Three dynasties rose and fell across a thousand years, until Arab conquest ended it all."
     },
     {
       "id": "alexander-empire",
@@ -5175,7 +5303,9 @@
         "india"
       ],
       "yearStart": -340,
-      "yearEnd": -30
+      "yearEnd": -30,
+      "intro_zh": "一個馬其頓少年花了十年征服了已知世界,從埃及到印度。他死時帝國還在,他死後帝國碎成了四塊。",
+      "intro_en": "A Macedonian teenager conquered the known world in a decade, from Egypt to India. He died with empire intact; he left it shattered into four kingdoms."
     },
     {
       "id": "roman-empire",
@@ -5191,7 +5321,9 @@
         "greece"
       ],
       "yearStart": -50,
-      "yearEnd": 500
+      "yearEnd": 500,
+      "intro_zh": "奧古斯都用和平換取帝國。500年後,基督教和蠻族終結了羅馬。",
+      "intro_en": "Augustus traded the republic for peace. Five centuries later, Christianity and barbarians ended Rome."
     },
     {
       "id": "byzantine",
@@ -5208,7 +5340,9 @@
         "ottoman"
       ],
       "yearStart": 330,
-      "yearEnd": 1500
+      "yearEnd": 1500,
+      "intro_zh": "君士坦丁堡一夜建城，1000年屹立東方。直到鄂圖曼炮火落下，這座帝國才從歷史退場。",
+      "intro_en": "Constantine built a city that lasted a thousand years. Then Ottoman cannons brought it down, and an empire vanished from history."
     },
     {
       "id": "tang-dynasty",
@@ -5224,7 +5358,9 @@
         "islam"
       ],
       "yearStart": 580,
-      "yearEnd": 980
+      "yearEnd": 980,
+      "intro_zh": "唐朝三百年，從貞觀之治到開元盛世，中國在詩、藝術、武力上登頂。安史之亂撕裂了這個帝國，終於被一位篡位者埋葬了。",
+      "intro_en": "Three centuries of Tang: from Taizong's statecraft to Xuanzong's golden age, China at its cultural and military peak. The An Lushan Rebellion tore it apart; a usurper's coup ended it."
     },
     {
       "id": "arab-caliphate",
@@ -5240,7 +5376,9 @@
         "christianity"
       ],
       "yearStart": 610,
-      "yearEnd": 1258
+      "yearEnd": 1258,
+      "intro_zh": "穆罕默德的啟示點燃了一場文明之火，650年間阿拉伯帝國吞並了三大洲。從麥加的一個商人到巴格達的學者之城，伊斯蘭帝國重塑了世界的宗教、政治與文化版圖。",
+      "intro_en": "A merchant's revelation ignited a civilization. In 650 years, the Arab Caliphate swallowed three continents, rewrote the map of faith and power, and built the world's greatest library — until the Mongols burned it down."
     },
     {
       "id": "mongol-empire",
@@ -5257,7 +5395,9 @@
         "russia"
       ],
       "yearStart": 1180,
-      "yearEnd": 1500
+      "yearEnd": 1500,
+      "intro_zh": "一個草原上的孤兒統一了蒙古各部。三十年後,他的帝國橫跨亞歐,改變了世界的樣貌。",
+      "intro_en": "An orphan from the steppes unified the Mongol tribes. Within three decades, his empire stretched across continents and remade the world."
     },
     {
       "id": "ottoman-empire",
@@ -5273,7 +5413,9 @@
         "christianity"
       ],
       "yearStart": 1299,
-      "yearEnd": 1922
+      "yearEnd": 1922,
+      "intro_zh": "一個遊牧民族的小部隊，在 1299 年建立了跨越三洲的帝國。623 年後，它在廢墟中死去，留下的邊界至今仍在流血。",
+      "intro_en": "A nomadic band founded an empire spanning three continents in 1299. Six centuries later it died in the rubble, its borders still bleeding today."
     },
     {
       "id": "mughal-empire",
@@ -5289,7 +5431,9 @@
         "hinduism"
       ],
       "yearStart": 1526,
-      "yearEnd": 1857
+      "yearEnd": 1857,
+      "intro_zh": "一個中亞騎兵用火槍打敗了印度的舊秩序。接下來 300 年,蒙兀兒帝國建造了泰姬陵、統治了次大陸,然後在納迪爾·沙阿的掠奪中崩潰了。",
+      "intro_en": "A Central Asian horseman used gunpowder to shatter India's old order. For three centuries the Mughals built the Taj Mahal, ruled the subcontinent, then collapsed into Nadir Shah's plunder."
     },
     {
       "id": "spanish-empire",
@@ -5305,7 +5449,9 @@
         "christianity"
       ],
       "yearStart": 1492,
-      "yearEnd": 1898
+      "yearEnd": 1898,
+      "intro_zh": "一個航海者在西洋找到新大陸，西班牙帝國就此誕生。四個世紀後，它在美洲的最後一塊領土也消失了。",
+      "intro_en": "A navigator found a new world across the Atlantic, and Spain built an empire on it. Four centuries later, the last piece crumbled in the Caribbean."
     },
     {
       "id": "british-empire",
@@ -5323,7 +5469,9 @@
         "europe"
       ],
       "yearStart": 1583,
-      "yearEnd": 1997
+      "yearEnd": 1997,
+      "intro_zh": "從伊麗莎白一世到香港交還。414 年間,英國建造了最大的帝國,也親眼看著它瓦解。",
+      "intro_en": "From Elizabeth I to Hong Kong's handover. 414 years of building the largest empire on earth, then watching it crumble."
     },
     {
       "id": "russian-empire",
@@ -5340,7 +5488,9 @@
         "central-asia"
       ],
       "yearStart": 1689,
-      "yearEnd": 1991
+      "yearEnd": 1991,
+      "intro_zh": "彼得大帝西化,葉卡捷琳娜擴張,史達林鐵血統治。302 年間,俄羅斯從邊陲躍上世界舞台,又在核對峙中走向瓦解。",
+      "intro_en": "Peter the Great Westernized; Catherine expanded; Stalin ruled with an iron fist. Three centuries later, Russia had remade itself as a superpower—then collapsed under the weight of its own contradictions."
     },
     {
       "id": "qing-dynasty",
@@ -5358,7 +5508,9 @@
         "japan"
       ],
       "yearStart": 1636,
-      "yearEnd": 1912
+      "yearEnd": 1912,
+      "intro_zh": "一個滿族政權入主中原,建立了中國最後一個帝國。從康乾盛世的榮光到辛亥革命的槍聲,276年間帝制走向了終結。",
+      "intro_en": "A Manchu conquest became China's last empire. From Kangxi and Qianlong's golden age to the gunshots of 1911, 276 years that ended imperial rule."
     },
     {
       "id": "japanese-empire",
@@ -5376,7 +5528,9 @@
         "korea"
       ],
       "yearStart": 1868,
-      "yearEnd": 1947
+      "yearEnd": 1947,
+      "intro_zh": "一個落後的島國在 80 年間躍升為亞洲霸主,直到原子彈讓它跌落谷底。明治到終戰,帝國的野心改寫了整個太平洋。",
+      "intro_en": "A backward island nation became Asia's master in 80 years, then fell to the atomic bomb. From Meiji to surrender, the empire's ambition remade the Pacific."
     },
     {
       "id": "confucius",
@@ -5464,7 +5618,9 @@
         "human-evo"
       ],
       "yearStart": -66000000,
-      "yearEnd": -50000
+      "yearEnd": -50000,
+      "intro_zh": "恐龍死後，哺乳動物突然爆炸性地演化。在六千六百萬年裡，牠們從縮小的毛茸動物變成了鯨魚、始祖馬、巨犀——以及最終的我們。",
+      "intro_en": "The dinosaurs died; mammals exploded. In 66 million years, they became whales, dawn horses, and giant rhinos—reshaping every ecosystem on Earth."
     }
   ],
   "view_groups": [
@@ -5769,7 +5925,7 @@
       "wiki_en": "https://en.wikipedia.org/wiki/Huronian_glaciation",
       "category": "geology",
       "category_broad": "natural",
-      "image": "https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/cosmos_9035489_001_72dpi.jpg",
+      "image": "",
       "amazon_asin": "B0067LR4WS",
       "amazon_title": "Life: An Unauthorised Biography — Richard Fortey",
       "relevant_views": []
@@ -13729,10 +13885,16 @@
       "desc_en": "Picasso founds Cubism, completely breaking perspective conventions and launching the revolutionary wave of 20th-century modern art.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/立體主義",
       "wiki_en": "https://en.wikipedia.org/wiki/Cubism",
-      "image": "https://upload.wikimedia.org/wikipedia/en/1/1c/Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Albert_Gleizes%2C_1910%2C_Femme_aux_Phlox%2C_oil_on_canvas%2C_81_x_100_cm%2C_exhibited_Armory_Show%2C_New_York%2C_1913%2C_The_Museum_of_Fine_Arts%2C_Houston..jpg",
       "amazon_asin": "0714832472",
       "amazon_title": "The Story of Art — E.H. Gombrich",
-      "relevant_views": []
+      "relevant_views": [],
+      "image_credit": {
+        "author": "w:Albert Gleizes",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Albert_Gleizes%2C_1910%2C_Femme_aux_Phlox%2C_oil_on_canvas%2C_81_x_100_cm%2C_exhibited_Armory_Show%2C_New_York%2C_1913%2C_The_Museum_of_Fine_Arts%2C_Houston..jpg"
+      }
     },
     {
       "id": "bering-migration",
@@ -19021,11 +19183,17 @@
       "level": 1,
       "category": "civilization",
       "wiki_en": "https://en.wikipedia.org/wiki/History_of_writing",
-      "image": "https://upload.wikimedia.org/wikipedia/en/timeline/alj66kvil4trh47heba9eeff7ucg5s6.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Writing_system_survey.svg",
       "desc_en": "Cuneiform in Sumer and hieroglyphics in Egypt mark the birth of written records ~3,200 BC.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/文字的歷史",
       "amazon_asin": "1394218192",
-      "amazon_title": "The Writing Revolution: Cuneiform to the Internet — Amalia E. Gnanadesikan"
+      "amazon_title": "The Writing Revolution: Cuneiform to the Internet — Amalia E. Gnanadesikan",
+      "image_credit": {
+        "author": "Ian Remsen",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Writing_system_survey.svg"
+      }
     },
     {
       "id": "sci-016",
@@ -22683,7 +22851,7 @@
       "desc_en": "Third military coup reshapes Turkish political landscape.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/1980年土耳其政变",
       "wiki_en": "https://en.wikipedia.org/wiki/1980_Turkish_coup_d%27%C3%A9tat",
-      "image": "https://image.hurimg.com/i/hurriyet/75/0x0/5d7a2002d3806c0b800b0b07.jpg",
+      "image": "",
       "amazon_asin": "0465023975",
       "amazon_title": "Osman's Dream: The History of the Ottoman Empire — Caroline Finkel",
       "relevant_views": [
@@ -22882,7 +23050,7 @@
       "desc_en": "Peaceful democratic revolution ends one-party rule.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/1990年蒙古民主革命",
       "wiki_en": "https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1990",
-      "image": "https://upload.wikimedia.org/wikipedia/en/5/5b/Hunger_strikers_in_Mongolia.png",
+      "image": "",
       "amazon_asin": "0609809644",
       "amazon_title": "Genghis Khan and the Making of the Modern World — Jack Weatherford",
       "relevant_views": [
@@ -23355,10 +23523,16 @@
       "desc_en": "Humans begin making clothing with bone needles, a key adaptation for cold environments.",
       "wiki_zh": "https://zh.wikipedia.org/wiki/縫紉",
       "wiki_en": "https://en.wikipedia.org/wiki/Sewing#History",
-      "image": "https://www.science.org/do/10.1126/science.zx9o355/full/_20240618_on_stone_needles_lede.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Syende_fiskerpige.jpeg",
       "amazon_asin": "B0067LR4WS",
       "amazon_title": "Life: An Unauthorised Biography — Richard Fortey",
-      "relevant_views": []
+      "relevant_views": [],
+      "image_credit": {
+        "author": "Anna Ancher",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Syende_fiskerpige.jpeg"
+      }
     },
     {
       "id": "hevo-014",
@@ -44849,7 +45023,7 @@
       "category": "politics",
       "desc_zh": "4 月 21 日凌晨 Papadopoulos 等上校以坦克政變奪權，國王 Constantine II 流亡。軍政府禁政黨、審查新聞、拷問異議者 7 年。1973 雅典理工學院學生抗議被血腥鎮壓，1974 Cyprus 政變引土耳其入侵，軍政府跨台。",
       "desc_en": "At dawn on April 21, Papadopoulos and colleagues seized power with tanks; King Constantine II fled. The junta banned parties, censored press, and tortured dissidents for 7 years. The 1973 Athens Polytechnic student revolt was crushed; the 1974 Cyprus coup provoked Turkish invasion, toppling the junta.",
-      "image": "https://upload.wikimedia.org/wikipedia/en/d/d0/21april1967.png",
+      "image": "",
       "crossRef": [
         "usa",
         "europe",
