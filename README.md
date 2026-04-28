@@ -403,10 +403,9 @@ events.json
 | 28.9 | ww2 |
 | 29.0 | cold-war |
 
-**原則：單一 unified scope 軸 > 多 sub-scope 軸。**
-- 好例：`korean-war` / `vietnam-war` / `american-civil-war`（一軸裝主事件）
-- 壞例：`ww1-western/eastern/mideast`、`ww2-europe/pacific`（多軸切割讓國家 view 戰爭線爆炸）
-- theater sub-scope 保留給 war dedicated view 的戰役細節。
+**原則：單一 unified scope 軸 + 必要時搭配 theater sub-scope。**
+- unified 例：`korean-war` / `vietnam-war` / `american-civil-war`（一軸裝主事件）
+- theater 例：`ww1-western/eastern/mideast`、`ww2-europe/pacific`（war dedicated view 的戰場細節）
 
 ### events（事件）
 
@@ -749,7 +748,7 @@ crossRef 最多 3 條，可同時連全域軸線和專題子軸線。
 | Phase III | War dedicated view 事件細化（korean-war → cold-war 依短→長）| 🚧 進行中 |
 | Phase IV | Regional views（reg-europe / reg-mideast / reg-eastasia ...）戰爭覆蓋 | ⏳ 待做 |
 | Phase V | Empire views（16 個，依事件密度低→高）| ⏳ 待做 |
-| Phase VI | Biographies（8 人物，依生命短→長）| ⏳ 待做 |
+| Phase VI | Biographies（8 人物起，依生命短→長；見「人物傳記 view SOP」section）| 🚧 進行中 |
 | Phase VII | 其他補強（pandemics / music-history / ancient-civ / exploration bug）| ⏳ 待做 |
 
 ### 新增其他國家的流程
@@ -801,6 +800,126 @@ crossRef 最多 3 條，可同時連全域軸線和專題子軸線。
 - JSON-LD 結構化資料（WebApplication / Education）
 - `sitemap.xml` + `robots.txt`
 - Google Search Console 已註冊 + sitemap 已提交
+
+---
+
+## 人物傳記 view (Phase VI) SOP
+
+### Order 區段（biographies 專屬）
+
+人物 bio-* 軸全 scope（全景看不到、legend 不被人物塞爆），order 配置在 emp-* 結束後（56-59 區段）。
+
+19 人按時序排：
+
+```
+56.00-56.19  alexander       (-356~-323)
+56.20-56.39  qin-shihuang    (-259~-210)
+56.40-56.59  napoleon        (1769~1821)
+56.60-56.79  caesar          (-100~-44)
+56.80-56.99  columbus        (1451~1506)
+57.00-57.19  genghis-khan    (1162~1227)
+57.20-57.39  confucius       (-551~-479)
+57.40-57.59  einstein        (1879~1955)
+57.60-57.79  da-vinci        (1452~1519)
+57.80-57.99  darwin          (1809~1882)
+58.00-58.19  tesla           (1856~1943)
+58.20-58.39  michelangelo    (1475~1564)
+58.40-58.59  galileo         (1564~1642)
+58.60-58.79  curie           (1867~1934)
+58.80-58.99  joan-of-arc     (1412~1431)
+59.00-59.19  mozart          (1756~1791)
+59.20-59.39  beethoven       (1770~1827)
+59.40-59.59  cleopatra       (-69~-30)
+59.60-59.79  hannibal        (-247~-183)
+```
+
+每人 0.20 區段：主軸 .x0、sub-scope .x05/.x10/.x15。
+
+### 軸結構（每個 bio view 的 axes 列表）
+
+| 軸類型 | scope | group | 數量 |
+|---|---|---|---|
+| 1. bio 主軸 `bio-<id>` | `[<bio-id>]` | civ | **必 1 條**（pill 生卒年 + 主要事件 marker）|
+| 2. bio sub-scope `bio-<id>-<sub>` | `[<bio-id>]` | civ | **0-3 條彈性**（依人物特性切；事件少可不切）|
+| 3. cross 軸 | — | global | **必 1 條**（同時代世界對比）|
+| 4. 相關 global 軸（trade/science/arts）| — | global | 0-2 條彈性 |
+| 5. 相關 civ/nation/帝國軸 | — | civ/nation | 0-5 條彈性（**只用既有不新建**）|
+
+**何時切 sub-scope（決策樹）**：
+- 事件 < 8 → 不切
+- 事件 8-12 主題集中 → 不切
+- 事件 8-12 主題分明 → 切 1-2 條（如 alexander conquest/aftermath）
+- 事件 12+ 或跨領域 → 切 2-3 條（如 einstein physics/pacifism；達文西 art/science）
+
+### 事件規格（人物 view 不限事件數，越精彩越好，最少 8 條）
+
+| 類型 | 軸 |
+|---|---|
+| 出生 point | bio-主軸 |
+| 生卒 pill | bio-主軸 |
+| 早年/教育 point | bio-主軸 |
+| 關鍵時期 pill | bio-主軸或 sub-scope |
+| 高峰時刻 point | bio-主軸或 sub-scope / 既有時代軸 |
+| 死亡 point | bio-主軸 |
+| 後世影響 point | bio-主軸或 sub-scope |
+
+**重用既有事件**：先在 events.json 找已有的人物相關事件（如 julius-caesar、emp-alex-conquest 區段事件），直接 `crossRef` 加 `bio-<name>` 即可，**不重建**。bio-only 事件才新建（出生/教育/死亡場景/私人軼事）。
+
+### CrossRef 規則
+- bio-only 事件 → crossRef 到時代主軸（greece, persia, cross 等）
+- 既有重大事件 → 在原本軸上新增 `crossRef: ["bio-<name>"]`，雙向連動
+
+### Agg 頁過濾邏輯（generate-pages.py 已支援）
+
+bio view 用 `view.core_axes = ["bio-<id>", "bio-<id>-<sub>", ...]`。
+generate-pages.py 的 manual focus 模式會抓兩種事件：
+1. `event.axis ∈ core_axes`（直接放在 bio 軸的事件）
+2. `event.crossRef ∩ core_axes ≠ ∅`（其他軸 crossRef 回 bio 軸的既有歷史事件）
+
+→ Agg 頁含完整人物相關事件全集（不限事件數）。
+
+### 配套元件
+
+| 元件 | 工具 |
+|---|---|
+| `view.intro_zh / intro_en` | `fetch-intros.py` LLM 跑 |
+| `view.yearStart / yearEnd` | 手寫（生卒 ±20 年）|
+| `event.desc_zh / desc_en` | 手寫（必要時 LLM 草稿輔助）|
+| `event.amazon_asin` | 1-3 本高銷量傳記書 |
+| `event.image` | `fetch-images-best.py` LLM scoring |
+| `event.image_credit` | `fetch-image-credits.py` |
+| `view.core_axes` | 寫 patch 時設 |
+| sitemap | `generate-pages.py --all` 自動 |
+
+bio view **不跑** `fetch-relevance.py`（用 core_axes 擴充過濾即可，比 LLM 精準）。
+
+### 命名規則
+
+| 元件 | 格式 | 範例 |
+|---|---|---|
+| bio 主軸 id | `bio-<lowercase-name>` | `bio-alexander` |
+| bio 主軸 label | 中文人名 | `亞歷山大` |
+| bio sub-scope id | `bio-<name>-<topic>` | `bio-alexander-conquest` |
+| bio sub-scope label | 中文人名·主題 | `亞歷山大·征服` |
+| bio 事件 id | `bio-<name>-<eventslug>` | `bio-alexander-birth` |
+| patch 檔名 | `add-events-YYYYMMDDHHmm-bio-<name>.py` | — |
+
+### 每人物執行流程
+
+```bash
+python add-events-YYYYMMDDHHmm-bio-<name>.py
+python check.py
+ANTHROPIC_API_KEY="..." python fetch-intros.py <bio-id>
+python fetch-images-best.py
+python fetch-image-credits.py
+python generate-pages.py <bio-id>
+# review → 進下一人
+```
+
+8 人全做完後一次性：
+```bash
+python generate-pages.py --all
+```
 
 ---
 

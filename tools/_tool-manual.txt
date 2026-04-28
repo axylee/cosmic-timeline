@@ -71,4 +71,5 @@
 
 
 下次只要改 events.json 後跑：
-python generate-pages.py --all
+python fetch-image-credits.py（自動抓作者 / license / Wikimedia Commons 連結）
+python generate-pages.py --all 重生

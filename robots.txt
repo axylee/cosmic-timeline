@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
 Disallow: /data/events.json
+Disallow: /indexedit.html
+Disallow: /tools/
+
+# 注意：?v=xxx 與 ?embed=1 故意不在 robots.txt 中 Disallow ——
+# 因為 index.html 已用 <meta name="robots" content="noindex,follow">
+# + canonical 指向 /views/<id>.html 處理。
+# 若這裡也 Disallow，Google 連頁面都不爬就讀不到 canonical 與 noindex 訊號，
+# 會看到 GSC「已找到，未建立索引」(因為連抓都不能抓而無從判斷)。
 
 Sitemap: https://cosmichistorytimeline.com/sitemap.xml

@@ -7,6 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cosmic History Timeline</title>
 <meta name="description" content="An interactive timeline covering 13.8 billion years of cosmic history — from the Big Bang to the present day. Explore the universe, galaxies, solar system, life evolution, civilizations, religions, and nations on a single zoomable canvas.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://cosmichistorytimeline.com">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -407,7 +408,7 @@ body {
   cursor: default; transition: background .12s;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: rgba(221,216,200,0.5); user-select: none;
+  color: rgba(221,216,200,0.78); user-select: none;
   justify-content: flex-end;
   border-top: 1px solid rgba(255,255,255,0.06);
   margin-top: 2px;
@@ -447,7 +448,7 @@ body {
   display: flex; align-items: center; gap: 4px;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 9px; letter-spacing: 0.03em;
-  color: rgba(221,216,200,0.85); opacity: 0.6;
+  color: rgba(232,228,215,0.95); opacity: 0.88;
   cursor: pointer; transition: opacity .15s;
   white-space: nowrap; flex-direction: row-reverse;
   padding: 1px 4px; border-radius: 4px;
@@ -459,7 +460,7 @@ body {
 .leg.hidden-axis { opacity: 0.2; text-decoration: line-through; }
 .leg.solo-active { opacity: 1; color: #fff; background: rgba(255,255,255,0.08); }
 .leg.solo-dimmed { opacity: 0.18; }
-.leg-sub { font-size: 9px; opacity: 0.6; }
+.leg-sub { font-size: 9px; opacity: 0.85; }
 .leg-sub.hidden-axis { opacity: 0.15; text-decoration: line-through; }
 .leg-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
 .leg-sub .leg-dot { width: 5px; height: 5px; }
@@ -1081,7 +1082,7 @@ body.embed-mode #timeline-canvas { top: 0 !important; bottom: 0 !important; left
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604262313</span>
+  <span id="version-label">v202604271323</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -1338,13 +1339,14 @@ body.embed-mode #timeline-canvas { top: 0 !important; bottom: 0 !important; left
 // ════════════════════════════════════════════
 //  LANGUAGE SYSTEM
 // ════════════════════════════════════════════
-// Lang state: URL ?lang= (highest priority) > localStorage > default 'zh'
+// Lang state: URL ?lang= (highest priority) > localStorage > default 'en'
+// (Default switched to 'en' since target audience is mostly English readers.)
 let lang = (function() {
   try {
     const urlLang = new URLSearchParams(location.search).get('lang');
     if (urlLang === 'zh' || urlLang === 'en') return urlLang;
   } catch(e) {}
-  return localStorage.getItem('cosmic-lang') || 'zh';
+  return localStorage.getItem('cosmic-lang') || 'en';
 })();
 
 // Helper: sync current lang to URL (so links to agg pages inherit correct lang)
@@ -2914,9 +2916,42 @@ function drawEvents(eventsInView) {
   // Round 3: 即使本體軸線被 scope 過濾掉（AXES[ev.axis] 不存在），
   //          只要 crossRef 目標軸線可見，仍在目標軸線畫空心圓（不畫連接線）
   // 2026-04-24: Level-gated 漸進揭露（主頁 zoom 0.55→0.75→0.95 逐步放行 L1→L1+2→全部）
+  // 2026-04-27: 加 density-adaptive alpha — 視窗內 crossRef ≤20 全亮、≥60 暗到 40%
   const crZoomThreshold = _activeViewId ? 0.30 : 0.55;
   const maxLevelForCrossRef = zoom >= 0.95 ? 3 : (zoom >= 0.75 ? 2 : 1);
+  let _crDensityMul = 1;  // computed below if zoom passes threshold
   if (zoom >= crZoomThreshold) {
+    const _yMap = getAxisYMap();
+
+    // Pre-pass: count visible crossRefs (passing zoom + level + scope + viewport gates)
+    let _crCount = 0;
+    events.forEach(ev => {
+      if (!ev._crossRefs || !ev._crossRefs.length) return;
+      if (ev.endYear) return;
+      if ((ev.level || 1) > maxLevelForCrossRef) return;
+      const _x = yearToX(ev.year);
+      if (_x < -20 || _x > canvasW + 20) return;
+      const _mainVis = !!AXES[ev.axis];
+      const _mainHid = _mainVis && hiddenAxes.has(ev.axis);
+      if (_mainVis) {
+        if (!eventVisible(ev)) return;
+        if ((_soloSet.size === 0) && _mainHid) return;
+      }
+      ev._crossRefs.forEach(crId => {
+        if (!AXES[crId]) return;
+        if ((_soloSet.size === 0) && hiddenAxes.has(crId)) return;
+        if (!_yMap.has(crId)) return;
+        _crCount++;
+      });
+    });
+    // Density mapping: ≤ 60 = full alpha 0.35, 100+ = floor 0.175
+    _crDensityMul = Math.max(0.5, Math.min(1, 1 - (_crCount - 60) / 40));
+    // DEBUG (remove after tuning): log count + alpha
+    if (window._lastCrLog !== _crCount) {
+      window._lastCrLog = _crCount;
+      console.log(`[crossRef] visible=${_crCount}  densityMul=${_crDensityMul.toFixed(2)}  alpha=${(0.35 * _crDensityMul).toFixed(3)}`);
+    }
+
     // Round 3 修正：直接遍歷所有事件（不用 sorted，因為 sorted 只含本軸可見的事件）
     // 要找「有 crossRef 到可見軸線」的事件，即使本體軸線不在 AXES 裡
     events.forEach(ev => {
@@ -2957,7 +2992,8 @@ function drawEvents(eventsInView) {
         const targetFadeMul = axisFadeMul(crId);
 
         ctx.save();
-        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.25) * targetFadeMul;
+        // 2026-04-27: alpha 0.25→0.35（還原），加 density-adaptive 倍率（hover 不受影響）
+        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.35 * _crDensityMul) * targetFadeMul;
 
         // Vertical dashed line (只在本體軸線可見時畫)
         if (y1 !== null) {
@@ -2965,8 +3001,9 @@ function drawEvents(eventsInView) {
           ctx.moveTo(x, Math.min(y1, y2) + r);
           ctx.lineTo(x, Math.max(y1, y2) - r);
           ctx.strokeStyle = color;
-          ctx.lineWidth   = isHov ? 1.2 : 0.7;
-          ctx.setLineDash([2, 5]);
+          // 2026-04-27: 還原 lineWidth (0.7→1.0) + dash ([2,5]→[3,4]) 提升能見度
+          ctx.lineWidth   = isHov ? 1.5 : 1.0;
+          ctx.setLineDash([3, 4]);
           ctx.stroke();
           ctx.setLineDash([]);
         }
@@ -5100,7 +5137,9 @@ function updateMetaForView(v) {
     } else {
       desc = `在宇宙歷史時間軸探索「${label}」— 跨軸對照 ${axisLabels} 等歷史脈絡，可縮放、可對比。`;
     }
-    canonical = `${baseUrl}/?v=${encodeURIComponent(v.id)}`;
+    // ?v= 是 SPA 路由狀態，不應自我索引——
+    // canonical 指向 agg 頁（真正獨立內容版本，已在 sitemap.xml）
+    canonical = `${baseUrl}/views/${encodeURIComponent(v.id)}.html`;
   } else {
     // 主頁（無 view）
     title = baseTitle;
@@ -5126,6 +5165,10 @@ function updateMetaForView(v) {
   // 更新 canonical
   const link = document.querySelector('link[rel="canonical"]');
   if (link) link.setAttribute('href', canonical);
+
+  // 更新 robots：?v= 狀態 noindex（避免 GSC「已找到、未索引」），主頁 index
+  // (canonical 已宣告 agg 頁是真版本，noindex 進一步明確不要索引這個 SPA 狀態)
+  setMeta('meta[name="robots"]', (v && v.id) ? 'noindex,follow' : 'index,follow');
 }
 
 // Hook into showAllAxes: inline 重置 + URL push（不再 reload）
@@ -5250,23 +5293,45 @@ resize();
 
 loadEvents();
 
-// ── 自動偵測 events.json 更新並背景 reload ─────────────────────
-// 機制：使用者切回分頁時，HEAD 一下 events.json 比對 ETag。
-//       發現新版 → 直接 location.reload()，無需使用者確認。
-//       URL 的 ?v=<view-id> 會被保留，使用者回到原本的 view。
+// ── 自動偵測 events.json + HTML 本身更新並背景 reload ───────────
+// 兩條檢查並行：
+//   (a) events.json 改了 → 資料變了
+//   (b) index.html 本身改了 → 程式碼變了（CF 部署新版）
+// 任一條觸發都直接 location.reload()，URL ?v=、?lang= 會保留。
 (function setupAutoUpdateCheck() {
   let stopped = false;
+  let _pageEtag = null;
+
+  // 載入後立刻 HEAD 自己抓 baseline ETag
+  fetch(location.href, { method: 'HEAD', cache: 'no-store' })
+    .then(r => { _pageEtag = r.headers.get('etag') || r.headers.get('last-modified'); })
+    .catch(() => {});
 
   async function checkForUpdate() {
-    if (stopped || !window._eventsEtag) return;
-    try {
-      const res = await fetch('data/events.json', { method: 'HEAD', cache: 'no-store' });
-      const etag = res.headers.get('etag') || res.headers.get('last-modified');
-      if (etag && etag !== window._eventsEtag) {
-        stopped = true;            // 防止 reload 前再次觸發
-        location.reload();
-      }
-    } catch (_) { /* 離線/網路錯，忽略 */ }
+    if (stopped) return;
+    // (a) events.json 檢查
+    if (window._eventsEtag) {
+      try {
+        const res = await fetch('data/events.json', { method: 'HEAD', cache: 'no-store' });
+        const etag = res.headers.get('etag') || res.headers.get('last-modified');
+        if (etag && etag !== window._eventsEtag) {
+          stopped = true;
+          location.reload();
+          return;
+        }
+      } catch (_) {}
+    }
+    // (b) HTML 本身檢查
+    if (_pageEtag) {
+      try {
+        const res = await fetch(location.href, { method: 'HEAD', cache: 'no-store' });
+        const etag = res.headers.get('etag') || res.headers.get('last-modified');
+        if (etag && etag !== _pageEtag) {
+          stopped = true;
+          location.reload();
+        }
+      } catch (_) {}
+    }
   }
 
   document.addEventListener('visibilitychange', () => {

@@ -7,6 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cosmic History Timeline</title>
 <meta name="description" content="An interactive timeline covering 13.8 billion years of cosmic history — from the Big Bang to the present day. Explore the universe, galaxies, solar system, life evolution, civilizations, religions, and nations on a single zoomable canvas.">
+<meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://cosmichistorytimeline.com">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -1082,7 +1083,7 @@ body.embed-mode #timeline-canvas { top: 0 !important; bottom: 0 !important; left
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604262313</span>
+  <span id="version-label">v202604271323</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -2911,9 +2912,40 @@ function drawEvents(eventsInView) {
   // Round 3: 即使本體軸線被 scope 過濾掉（AXES[ev.axis] 不存在），
   //          只要 crossRef 目標軸線可見，仍在目標軸線畫空心圓（不畫連接線）
   // 2026-04-24: Level-gated 漸進揭露（主頁 zoom 0.55→0.75→0.95 逐步放行 L1→L1+2→全部）
+  // 2026-04-27: 加 density-adaptive alpha — 視窗內 crossRef ≤20 全亮、≥60 暗到 40%
   const crZoomThreshold = _activeViewId ? 0.30 : 0.55;
   const maxLevelForCrossRef = zoom >= 0.95 ? 3 : (zoom >= 0.75 ? 2 : 1);
+  let _crDensityMul = 1;
   if (zoom >= crZoomThreshold) {
+    const _yMap = getAxisYMap();
+
+    // Pre-pass: count visible crossRefs (passing zoom + level + scope + viewport gates)
+    let _crCount = 0;
+    events.forEach(ev => {
+      if (!ev._crossRefs || !ev._crossRefs.length) return;
+      if (ev.endYear) return;
+      if ((ev.level || 1) > maxLevelForCrossRef) return;
+      const _x = yearToX(ev.year);
+      if (_x < -20 || _x > canvasW + 20) return;
+      const _mainVis = !!AXES[ev.axis];
+      const _mainHid = _mainVis && hiddenAxes.has(ev.axis);
+      if (_mainVis) {
+        if (!eventVisible(ev)) return;
+        if ((_soloSet.size === 0) && _mainHid) return;
+      }
+      ev._crossRefs.forEach(crId => {
+        if (!AXES[crId]) return;
+        if ((_soloSet.size === 0) && hiddenAxes.has(crId)) return;
+        if (!_yMap.has(crId)) return;
+        _crCount++;
+      });
+    });
+    _crDensityMul = Math.max(0.5, Math.min(1, 1 - (_crCount - 60) / 40));
+    if (window._lastCrLog !== _crCount) {
+      window._lastCrLog = _crCount;
+      console.log(`[crossRef] visible=${_crCount}  densityMul=${_crDensityMul.toFixed(2)}  alpha=${(0.35 * _crDensityMul).toFixed(3)}`);
+    }
+
     // Round 3 修正：直接遍歷所有事件（不用 sorted，因為 sorted 只含本軸可見的事件）
     // 要找「有 crossRef 到可見軸線」的事件，即使本體軸線不在 AXES 裡
     events.forEach(ev => {
@@ -2954,7 +2986,8 @@ function drawEvents(eventsInView) {
         const targetFadeMul = axisFadeMul(crId);
 
         ctx.save();
-        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.25) * targetFadeMul;
+        // 2026-04-27: alpha 0.25→0.35（還原），加 density-adaptive 倍率
+        ctx.globalAlpha = catA * (isHov ? 0.6 : 0.35 * _crDensityMul) * targetFadeMul;
 
         // Vertical dashed line (只在本體軸線可見時畫)
         if (y1 !== null) {
@@ -2962,8 +2995,9 @@ function drawEvents(eventsInView) {
           ctx.moveTo(x, Math.min(y1, y2) + r);
           ctx.lineTo(x, Math.max(y1, y2) - r);
           ctx.strokeStyle = color;
-          ctx.lineWidth   = isHov ? 1.2 : 0.7;
-          ctx.setLineDash([2, 5]);
+          // 2026-04-27: 還原 lineWidth (0.7→1.0) + dash ([2,5]→[3,4]) 提升能見度
+          ctx.lineWidth   = isHov ? 1.5 : 1.0;
+          ctx.setLineDash([3, 4]);
           ctx.stroke();
           ctx.setLineDash([]);
         }
@@ -5092,7 +5126,9 @@ function updateMetaForView(v) {
     } else {
       desc = `在宇宙歷史時間軸探索「${label}」— 跨軸對照 ${axisLabels} 等歷史脈絡，可縮放、可對比。`;
     }
-    canonical = `${baseUrl}/?v=${encodeURIComponent(v.id)}`;
+    // ?v= 是 SPA 路由狀態，不應自我索引——
+    // canonical 指向 agg 頁（真正獨立內容版本，已在 sitemap.xml）
+    canonical = `${baseUrl}/views/${encodeURIComponent(v.id)}.html`;
   } else {
     // 主頁（無 view）
     title = baseTitle;
@@ -5118,6 +5154,8 @@ function updateMetaForView(v) {
   // 更新 canonical
   const link = document.querySelector('link[rel="canonical"]');
   if (link) link.setAttribute('href', canonical);
+
+  // indexedit.html 本身就 noindex (head meta)，這裡不需動 robots
 }
 
 // Hook into showAllAxes: inline 重置 + URL push（不再 reload）
