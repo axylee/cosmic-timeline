@@ -1083,7 +1083,7 @@ body.embed-mode #timeline-canvas { top: 0 !important; bottom: 0 !important; left
     </div>
     <div id="scale-label">— —</div>
   </div>
-  <span id="version-label">v202604271323</span>
+  <span id="version-label">v202604301033</span>
   <a id="coffee-btn" href="https://ko-fi.com/universetimeline" target="_blank" title="Support on Ko-fi">
     <img src="images/kofi_symbol.svg" alt="☕" onerror="this.style.display='none';this.nextElementSibling.style.maxWidth='140px';this.nextElementSibling.style.marginLeft='0'">
     <span>Support on Ko-fi</span>
@@ -1102,7 +1102,7 @@ body.embed-mode #timeline-canvas { top: 0 !important; bottom: 0 !important; left
   <span id="legend-zoom-hint">zoom in to expand ↓</span>
   <div id="legend-solo-ctrl" class="disabled">
     <span>Dim</span>
-    <input type="range" id="solo-dim-slider" min="1" max="30" value="7"
+    <input type="range" id="solo-dim-slider" min="1" max="70" value="7"
       oninput="updateSoloDim(this.value)">
     <span id="solo-dim-val">7%</span>
   </div>
@@ -1593,6 +1593,7 @@ function blendHex(hex1, hex2, t) {
 let _soloSet       = new Set();   // axisId set — 唯一 solo 狀態，size>0 = solo active
 let _soloDimAlpha  = 0.07;
 let _collapsedGroups = new Set();
+let _legendInitDone = false;
 
 function updateSoloDim(val) {
   _soloDimAlpha = val / 100;
@@ -1611,6 +1612,10 @@ function buildLegend() {
   legend.querySelectorAll('.leg, .leg-group, .leg-group-items').forEach(el => el.remove());
 
   const groupOrder = Object.keys(AXIS_GROUP_DEFS);
+  if (!_legendInitDone) {
+    groupOrder.forEach(gk => _collapsedGroups.add(gk));
+    _legendInitDone = true;
+  }
   const sortedAxes = Object.entries(AXES).sort((a,b) => a[1].order - b[1].order);
 
   // Build groupKey → [axisId] map
@@ -1664,7 +1669,7 @@ function buildLegend() {
       } else {
         _soloSet = new Set(ids);
         _setSoloCtrl(true);
-        updateLegendState(); draw();
+        focusOnAxes(ids);                      // solo + 群組年份 union zoom + 垂直置中
       }
     });
     labelEl.addEventListener('click', e => {
@@ -1716,7 +1721,7 @@ function buildLegend() {
         } else {
           _soloSet = new Set([id]);
           _setSoloCtrl(true);
-          updateLegendState(); draw();
+          focusOnAxes(id);                     // solo + 軸年份 zoom + 垂直置中
         }
       });
       div.addEventListener('click', e => {
@@ -1818,7 +1823,7 @@ function updateLegendState() {
     const id = el.dataset.axis;
     const ax = AXES[id];
     if (!ax) return;
-    el.style.display = (ax.zoomMin === 0 || zoom >= ax.zoomMin) ? '' : 'none';
+    el.style.display = '';
     // Round 2: scope 不匹配的軸線在 Legend 裡完全隱藏（不是暗淡）
     if (ax.scope && Array.isArray(ax.scope) && ax.scope.length > 0) {
       // 檢查：是否有 active view 且該 view 的 axes 包含這條軸線
@@ -1862,7 +1867,9 @@ function getVisibleAxes() {
 
   return Object.entries(AXES)
     .filter(([id, ax]) => {
-      if ((_soloSet.size === 0) && hiddenAxes.has(id)) return false;
+      // Solo 啟動時仍保 hiddenAxes 過濾，但允許 solo set 內的軸顯示
+      // (修正 scope-restricted 軸如 emp-* 在 solo 模式意外跳出來的 bug)
+      if (hiddenAxes.has(id) && !_soloSet.has(id)) return false;
       if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
       if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
       return true;
@@ -2004,7 +2011,7 @@ function eventVisible(ev) {
   const ax = AXES[ev.axis];
   if (!ax) return false;
   // Solo 模式下所有事件仍可見（只有 alpha 降低）
-  if ((_soloSet.size === 0) && hiddenAxes.has(ev.axis)) return false;
+  if (hiddenAxes.has(ev.axis) && !_soloSet.has(ev.axis)) return false;
   if (ax.zoomMin > 0 && zoom < ax.zoomMin) return false;
   const checkEnd = zoom >= 0.58;
   if (checkEnd && ax.endYear != null && viewStart > ax.endYear + 50) return false;
@@ -2935,7 +2942,7 @@ function drawEvents(eventsInView) {
       }
       ev._crossRefs.forEach(crId => {
         if (!AXES[crId]) return;
-        if ((_soloSet.size === 0) && hiddenAxes.has(crId)) return;
+        if (hiddenAxes.has(crId) && !_soloSet.has(crId)) return;
         if (!_yMap.has(crId)) return;
         _crCount++;
       });
@@ -2976,7 +2983,7 @@ function drawEvents(eventsInView) {
       ev._crossRefs.forEach(crId => {
         const targetAx = AXES[crId];
         if (!targetAx) return;
-        if ((_soloSet.size === 0) && hiddenAxes.has(crId)) return;
+        if (hiddenAxes.has(crId) && !_soloSet.has(crId)) return;
         if (!yMap.has(crId)) return;
 
         const y2 = axisY(crId);
@@ -4874,6 +4881,46 @@ function animateToView(targetStart, targetEnd, onDone) {
   requestAnimationFrame(step);
 }
 
+// ── Legend dblclick zoom-and-focus helpers ──
+function _axesYearRange(axisIds) {
+  let lo = +Infinity, hi = -Infinity;
+  for (const id of axisIds) {
+    const ax = AXES[id]; if (!ax) continue;
+    if (ax.startYear == null) continue;
+    const e = (ax.endYear != null) ? ax.endYear : NOW;
+    if (ax.startYear < lo) lo = ax.startYear;
+    if (e > hi) hi = e;
+  }
+  return (lo === +Infinity) ? null : { start: lo, end: hi };
+}
+
+function focusOnAxes(axisIds) {
+  const ids = Array.isArray(axisIds) ? axisIds : [axisIds];
+  const rng = _axesYearRange(ids);
+  if (!rng) {
+    updateLegendState(); draw();
+    return;
+  }
+  const span = Math.max(1, rng.end - rng.start);
+  const pad = span * 0.15;
+  animateToView(rng.start - pad, rng.end + pad, () => {
+    _axisYFrame = -1;
+    let yPos;
+    if (ids.length === 1) {
+      yPos = getAxisY(ids[0]);
+    } else {
+      const ys = ids.map(getAxisY).filter(v => v != null);
+      yPos = ys.length ? (ys.reduce((a, b) => a + b, 0) / ys.length) : null;
+    }
+    if (yPos != null) {
+      yOffset += (canvasH / 2) - yPos;
+      clampYOffset();
+      _axisYFrame = -1;
+    }
+    draw();
+  });
+}
+
 function closeSearch() {
   document.getElementById('search-input').value = '';
   document.getElementById('search-results').classList.remove('show');
@@ -5009,6 +5056,11 @@ function buildViewPopup() {
     }
     catEl.textContent = lang === 'en' ? labelEn : labelZh;
     popup.appendChild(catEl);
+
+    // 人物傳記按生卒年（yearStart）排序——其他 group 保持 events.json 原順序
+    if (gid === 'biographies') {
+      items.sort((a, b) => (a.yearStart || 0) - (b.yearStart || 0));
+    }
 
     items.forEach(v => {
       const el = document.createElement('div');

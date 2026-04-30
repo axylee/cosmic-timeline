@@ -53,6 +53,10 @@ def _dedupe_for_view(out, view):
     one event tagged on 2+ axes for canvas cross-display (e.g. 凱撒遇刺
     has julius-caesar on greece axis AND julius-caesar-emp-rome on emp-rome-early).
 
+    Also drops "begin point + pill" pairs (same year + one title is substring of
+    another, e.g. "百年戰爭爆發" 1337 + "百年戰爭" pill 1337-1453).
+    Prefers the pill (more informative).
+
     Picks the event whose axis appears earliest in view.axes (most specific to this view)."""
     view_ax = view.get('axes') or []
     ax_priority = {a: i for i, a in enumerate(view_ax)}
@@ -64,6 +68,7 @@ def _dedupe_for_view(out, view):
                 return ax_priority[ax]
         return 9999
 
+    # Phase 1: exact (title, year) dedup as before
     best = {}  # key: (zh title, int year) -> best event so far
     for e in out:
         title = (e.get('zh', '') or '').strip()
@@ -74,8 +79,44 @@ def _dedupe_for_view(out, view):
         key = (title, int(year))
         if key not in best or specificity(e) < specificity(best[key]):
             best[key] = e
-    chosen = {id(v) for v in best.values()}
-    return [e for e in out if id(e) in chosen]
+    phase1 = [e for e in out if id(e) in {id(v) for v in best.values()}]
+
+    # Phase 2: substring dedup — same int year + one title substring of another.
+    # Prefer pill (has endYear) over point (more context); else prefer more specific axis.
+    by_year = {}
+    for e in phase1:
+        y = e.get('year')
+        if y is None: continue
+        by_year.setdefault(int(y), []).append(e)
+
+    drop_ids = set()
+    for y, group in by_year.items():
+        if len(group) < 2: continue
+        for i, a in enumerate(group):
+            if id(a) in drop_ids: continue
+            ta = (a.get('zh', '') or '').strip()
+            if not ta: continue
+            for b in group[i+1:]:
+                if id(b) in drop_ids: continue
+                tb = (b.get('zh', '') or '').strip()
+                if not tb or ta == tb: continue
+                # Substring match: one title contains the other (both directions)
+                if ta in tb or tb in ta:
+                    # Prefer event with endYear (pill); tie-break by specificity
+                    a_pill = a.get('endYear') is not None
+                    b_pill = b.get('endYear') is not None
+                    if a_pill and not b_pill:
+                        drop_ids.add(id(b))
+                    elif b_pill and not a_pill:
+                        drop_ids.add(id(a)); break  # a dropped, no need to compare further
+                    else:
+                        # Both pill or both point — drop the less specific
+                        if specificity(a) <= specificity(b):
+                            drop_ids.add(id(b))
+                        else:
+                            drop_ids.add(id(a)); break
+
+    return [e for e in phase1 if id(e) not in drop_ids]
 
 
 def filter_events(events, view):
@@ -92,7 +133,16 @@ def filter_events(events, view):
     yr_start = view.get('yearStart', -1e18)
     yr_end = view.get('yearEnd', 1e18)
 
+    # If view uses manual focus (core_axes/prefixes/ids), skip year-bound limits.
+    # Lets bio views include legacy events (e.g. da-vinci's 2017 Salvator auction,
+    # genghis's 2003 DNA study) without forcing yearEnd to be artificially long
+    # — yearEnd then only controls canvas default zoom range, not agg-page filter.
+    has_focus_year_skip = bool(
+        view.get('core_axes') or view.get('core_id_prefixes') or view.get('core_event_ids')
+    )
+
     def _in_year(e):
+        if has_focus_year_skip: return True
         y = e.get('year')
         return y is not None and yr_start <= y <= yr_end
 
@@ -121,6 +171,14 @@ def filter_events(events, view):
         eid = e.get('id', '') or ''
         if axset and any(a in axset for a in event_axes(e)):
             out.append(e); continue
+        # Bio-view friendly: also include events whose crossRef points back to a core axis.
+        # Lets historical events (Battle of Gaugamela on emp-alex axis) appear in alexander
+        # agg page when they crossRef to bio-alexander.
+        if axset:
+            xr = e.get('crossRef') or []
+            if isinstance(xr, str): xr = [xr]
+            if any(a in axset for a in xr):
+                out.append(e); continue
         if prefixes and eid.startswith(prefixes):
             out.append(e); continue
         if ids and eid in ids:
@@ -370,10 +428,14 @@ def render_event(e, in_page_axes_to_view, axes_by_id, view):
 
     # External links
     links = [canvas_anchor]
+    # Wiki link 語言邏輯：
+    #   中文模式 → 同時顯示「中」與「EN」(雙語讀者方便對照)
+    #   英文模式 → 只顯示 EN (英文讀者不看中文 wiki)
+    # 實作：wiki_zh 用 zh-only(只在中文模式顯示)、wiki_en 不限制(兩種模式都顯示)
     if wiki_zh:
         links.append(f'<a class="zh-only" href="{h(wiki_zh)}" target="_blank" rel="noopener">Wikipedia (中)</a>')
     if wiki_en:
-        links.append(f'<a class="en-only" href="{h(wiki_en)}" target="_blank" rel="noopener">Wikipedia (EN)</a>')
+        links.append(f'<a href="{h(wiki_en)}" target="_blank" rel="noopener">Wikipedia (EN)</a>')
     if asin:
         links.append(f'<a href="https://www.amazon.com/dp/{h(asin)}?tag=universetimel-20" target="_blank" rel="noopener sponsored">'
                      f'<span class="zh-only">延伸閱讀 ↗</span>'
@@ -640,9 +702,9 @@ def render_view(view, axes, events, views, filter_cats=None):
 
   .event-img {{ margin:18px 0 18px; }}
   .event-img img {{
-    width:100%; max-height:380px; height:auto;
+    width:100%; max-height:500px; height:auto;
     display:block; border-radius:0;
-    background:#f0f0f0; object-fit:cover;
+    background:#f0f0f0; object-fit:contain;
   }}
   .event-img figcaption {{
     margin-top:6px; font-size:12px;
@@ -935,6 +997,23 @@ def render_view(view, axes, events, views, filter_cats=None):
     setLang(cur === 'en' ? 'zh' : 'en', true);
   }});
 }})();
+
+// ── Auto-reload when this HTML file itself is updated on the server ──
+(function() {{
+  let _pageEtag = null;
+  let stopped = false;
+  fetch(location.href, {{ method: 'HEAD', cache: 'no-store' }})
+    .then(r => {{ _pageEtag = r.headers.get('etag') || r.headers.get('last-modified'); }})
+    .catch(() => {{}});
+  document.addEventListener('visibilitychange', async () => {{
+    if (document.hidden || stopped || !_pageEtag) return;
+    try {{
+      const r = await fetch(location.href, {{ method: 'HEAD', cache: 'no-store' }});
+      const cur = r.headers.get('etag') || r.headers.get('last-modified');
+      if (cur && cur !== _pageEtag) {{ stopped = true; location.reload(); }}
+    }} catch (_) {{}}
+  }});
+}})();
 </script>
 </body>
 </html>
@@ -1172,6 +1251,23 @@ def render_index_page(views, view_groups, generated_ids, events, axes_by_id):
   if (btn) btn.addEventListener('click', () => {{
     const cur = document.body.classList.contains('lang-en') ? 'en' : 'zh';
     setLang(cur==='en' ? 'zh' : 'en');
+  }});
+}})();
+
+// ── Auto-reload when this HTML file itself is updated on the server ──
+(function() {{
+  let _pageEtag = null;
+  let stopped = false;
+  fetch(location.href, {{ method: 'HEAD', cache: 'no-store' }})
+    .then(r => {{ _pageEtag = r.headers.get('etag') || r.headers.get('last-modified'); }})
+    .catch(() => {{}});
+  document.addEventListener('visibilitychange', async () => {{
+    if (document.hidden || stopped || !_pageEtag) return;
+    try {{
+      const r = await fetch(location.href, {{ method: 'HEAD', cache: 'no-store' }});
+      const cur = r.headers.get('etag') || r.headers.get('last-modified');
+      if (cur && cur !== _pageEtag) {{ stopped = true; location.reload(); }}
+    }} catch (_) {{}}
   }});
 }})();
 </script>
