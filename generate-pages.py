@@ -558,7 +558,7 @@ def render_view(view, axes, events, views, filter_cats=None):
 <meta property="og:title" content="{h(title_full)}">
 <meta property="og:description" content="{h(desc_meta)}">
 <meta property="og:type" content="article">
-<link rel="canonical" href="https://www.cosmichistorytimeline.com/views/{h(vid)}.html">
+<link rel="canonical" href="https://cosmichistorytimeline.com/views/{h(vid)}.html">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9386529087603046" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -1082,7 +1082,7 @@ def render_index_page(views, view_groups, generated_ids, events, axes_by_id):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reading Index · 完整文字版總覽 — Cosmic History Timeline</title>
 <meta name="description" content="Cosmic History Timeline reading index: {len(generated_ids)} curated topic timelines covering 13.8 billion years of history. 完整文字版總覽。">
-<link rel="canonical" href="https://www.cosmichistorytimeline.com/views.html">
+<link rel="canonical" href="https://cosmichistorytimeline.com/views.html">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9386529087603046" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
